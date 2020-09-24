@@ -16,6 +16,4 @@ And script contributions from Rayman1103 and Daroot Leafstorm
 
 Special thanks to Sir and Wicket for the sourced ZoneMod 1.9.8 ladders
 
-New Propper models in active use:
-
 Thanks to all playtesters and everyone on the L4D2 Community Update Team!
