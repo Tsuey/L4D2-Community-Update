@@ -74,7 +74,7 @@ MrFailzz' Coop/speedrunner-focused changelog with navmesh changes:
 
 https://hackmd.io/@MrFailzz/rJ5S7EZHw
 
-Development thread:
+Valve development thread:
 
 https://steamcommunity.com/app/550/discussions/1/1651043320659915818/
 
