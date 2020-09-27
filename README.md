@@ -12,7 +12,7 @@ Alternatively, if you're a server admin already settled with your Stripper:Sourc
 
 # Resources
 
-Community Update Testing Initiative (Workshop)
+Community Update Testing Initiative (Workshop sync)
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=1959405608
 
