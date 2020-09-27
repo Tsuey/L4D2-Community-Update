@@ -8,7 +8,7 @@ Kerry Davis has approved sharing of the non-encrypted VScript files. You can do 
 
 However, if you intend to use these files as a template for your own mods (deleting everything in "anv_mapfixes.nut" and "anv_versus.nut"), please rename "mapspawn.nut" to "mapspawn_addon.nut" which will allow you to not override the base game fixes.
 
-Alternatively, if you're a server admin already settled with your Stripper:Source files, create an empty "mapspawn.nut" file to opt-out of all these changes!
+Alternatively, if you're a server admin already settled with your Stripper:Source files, create an empty "mapspawn.nut" file to opt-out!
 
 # Contributors
 
