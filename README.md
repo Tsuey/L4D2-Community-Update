@@ -28,7 +28,7 @@ With further entity contributions from NF, ReneTM, JAiZ, CircleSquared, and Tabb
 
 And script contributions from Rayman1103 and Daroot Leafstorm
 
-Special thanks to Sir and Wicket for the sourced ZoneMod 1.9.8 ladders
+Special thanks to https://github.com/SirPlease/ and Wicket for the sourced ZoneMod 1.9.8 ladders
 
 New Propper models in active use:
 
