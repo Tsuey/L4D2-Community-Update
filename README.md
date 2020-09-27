@@ -20,7 +20,7 @@ Tsuey:
 
 	Framework and functions, pre-QA Infected ladders, Clipping rework, exploit and logic fixes
 
-Jacob:
+Jacob https://github.com/jacob404:
 
 	R&D, Versus balance tweaks and extensive QA work and polish, LOS fix brushes, Tank warp fixes
 
