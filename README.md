@@ -2,6 +2,8 @@
 
 Help us shape the potential future of L4D2 vanilla.
 
+Exploit fixes and PvP enhancements for the original 13 campaigns were done using VScript files.
+
 # Caution
 
 Kerry Davis has approved sharing of the non-encrypted VScript files. You can do whatever you want with them.
