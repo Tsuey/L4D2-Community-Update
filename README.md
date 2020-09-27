@@ -40,4 +40,5 @@ Special thanks to Sir and Wicket for the sourced ZoneMod 1.9.8 ladders
 Thanks to all playtesters and everyone on the L4D2 Community Update Team!
 
 https://www.l4d.com/laststand/
+
 https://steamcommunity.com/groups/l4d2cut
