@@ -18,8 +18,7 @@ Tsuey:
 
 Jacob:
 
-	R&D, Versus balance tweaks and extensive QA work and polish, LOS fix brushes, Tank warp fixes
-	All-around amazingness
+	R&D, Versus balance tweaks and extensive QA work and polish, LOS fix brushes, Tank warp fixes, all-around amazingness
 
 With further entity contributions from NF, ReneTM, JAiZ, CircleSquared, and Tabbernaut
 
