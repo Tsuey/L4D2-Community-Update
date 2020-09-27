@@ -13,12 +13,15 @@ Alternatively, if you're a server admin already settled with your Stripper:Sourc
 # Resources
 
 Community Update Testing Initiative (Workshop)
+
 https://steamcommunity.com/sharedfiles/filedetails/?id=1959405608
 
 ShowUpdate() guide and changelog links:
+
 https://steamcommunity.com/workshop/filedetails/discussion/1959405608/2841165820087455557/
 
 Development thread:
+
 https://steamcommunity.com/app/550/discussions/1/1651043320659915818/
 
 # Contributors
