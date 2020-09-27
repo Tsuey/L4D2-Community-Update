@@ -133,17 +133,17 @@ Almost everything is a String:
 
 	? Denotes user-friendly String options
 
-	"Clips who?"	= Everyone | Survivors | SI Players | SI Players and AI | All and Physics
-	"Team blocked?"	= Everyone | Survivors | Infected
-	"Start state?"	= Apply | Remove
-	"Push what?"	= Everything | Survivor | Infected | Physics
-	"Hurt who?"	= Everyone | Survivor | Infected | Ghost
-	"Option?"	= Duck | Walk | Jump
-	"Prop type?"	= dynamic | dynamic_ovr | physics | physics_ovr
-	"Shadows?"	= shadow_yes | shadow_no
-	"Solidity?"	= solid_yes | solid_no
-	"Team climb?"	= 0 (Both) | 1 (Survivor) | 2 (Infected)
-	"Axis?"		= x+ | x- | y+ | y-
+		"Clips who?"	= Everyone | Survivors | SI Players | SI Players and AI | All and Physics
+		"Team blocked?"	= Everyone | Survivors | Infected
+		"Start state?"	= Apply | Remove
+		"Push what?"	= Everything | Survivor | Infected | Physics
+		"Hurt who?"	= Everyone | Survivor | Infected | Ghost
+		"Option?"	= Duck | Walk | Jump
+		"Prop type?"	= dynamic | dynamic_ovr | physics | physics_ovr
+		"Shadows?"	= shadow_yes | shadow_no
+		"Solidity?"	= solid_yes | solid_no
+		"Team climb?"	= 0 (Both) | 1 (Survivor) | 2 (Infected)
+		"Axis?"		= x+ | x- | y+ | y-
 
 	make_clip		Targetname	Clips who?	^Init state	Box mins	Box maxs	Origin		*Angles
 
