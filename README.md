@@ -6,7 +6,9 @@ Exploit fixes and PvP enhancements for the original 13 campaigns were done using
 
 # Caution
 
-Kerry Davis has approved sharing of the non-encrypted VScript files. You can do whatever you want with them.
+Kerry Davis has approved sharing of the non-encrypted VScript files.
+
+You can do whatever you want with them.
 
 However, if you intend to use these files as a template for your own mods (replacing "anv_mapfixes.nut" and "anv_versus.nut" entirely), please rename "mapspawn.nut" to "mapspawn_addon.nut" which will allow you to not override the base game fixes.
 
