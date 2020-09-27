@@ -70,10 +70,6 @@ ShowUpdate() guide and changelog links:
 
 https://steamcommunity.com/workshop/filedetails/discussion/1959405608/2841165820087455557/
 
-L4D2 Map Fix and PvP Changelog (Sept 24th 2020):
-
-https://pastebin.com/EXkuvEc8
-
 MrFailzz' Coop/speedrunner-focused changelog with navmesh changes:
 
 https://hackmd.io/@MrFailzz/rJ5S7EZHw
