@@ -471,6 +471,10 @@ make_trigduck( "_duckqol_carouselroof", "-30 1 0", "30 3 1", "-2240 -5259 303" )
 patch_nav_checkpoint( "1737 2712 4" );
 patch_nav_checkpoint( "-4337 -5511 -64" );
 
+// Manually fix the 2009 forklift since it is spawned after anv_mapfixes runs
+NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_iMinHealthDmg", 400 );
+NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_takedamage", 3 );
+
 		break;
 	}
 
