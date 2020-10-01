@@ -43,9 +43,9 @@ Does not support maps with more than 1 tank spawn (ie finales) - but could in th
 					case "c2m3_coaster":
 					{
 						// move tank spawn in the swan room to the next room forward (~25% boss flow)
-						if( CheckToWarpTank( hndTank, [-10, 4190, 720, 4830] ) )
+						if( CheckToWarpTank( hndTank, [-300, 4100, 720, 4850] ) )
 						{
-							hndTank.SetOrigin( Vector( -312, 4140, 128.1 ) );
+							hndTank.SetOrigin( Vector( -312, 4155, 128.1 ) );
 						}
 						// move tank spawn after the coaster one way drop to the button area (76-79% boss flow)
 						else if( CheckToWarpTank( hndTank, [-3700, 400, -3100, 1775] ) )
@@ -62,17 +62,17 @@ Does not support maps with more than 1 tank spawn (ie finales) - but could in th
 					case "c5m5_bridge":
 					{
 						// move all bridge tank spawns a bit further down the bridge to discourage rushing
-						if( CheckToWarpTank( hndTank, [-1225, 5955, -100, 6705] ) )
+						if( CheckToWarpTank( hndTank, [-1450, 5955, -100, 6705] ) )
 						{
-							hndTank.SetOrigin( Vector( 1960, 6275, 456.1 ) );
+							hndTank.SetOrigin( Vector( 830, 6328, 792 ) );
 						}
 						else if( CheckToWarpTank( hndTank, [-100, 5955, 2000, 6705] ) )
 						{
-							hndTank.SetOrigin( Vector( 2720, 6338, 790.1 ));
+							hndTank.SetOrigin( Vector( 2720, 6338, 792 ));
 						}
 						else if( CheckToWarpTank( hndTank, [2000, 5955, 4740, 6705] ) )
 						{
-							hndTank.SetOrigin( Vector( 4285, 6325, 790.1 ) );
+							hndTank.SetOrigin( Vector( 4285, 6325, 792 ) );
 						}
 						break;
 					}
