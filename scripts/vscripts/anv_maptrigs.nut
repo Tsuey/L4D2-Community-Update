@@ -21,7 +21,7 @@ switch( g_MapName )
 
 		// Teamwork shortcut. Will only patch for Coop if the Community wills so for parkour-esque shortcuts.
 
-			if ( g_BaseMode == "coop" ) { break; }
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" ) { break; }
 
 		con_comment( "TRIG:\tAnti-shortcut \"_shortcut_balcrail_trigonce\" deletes trighurt at lower floor." );
 		con_comment( "INFO:\tFire particle \"_shortcut_balcrail_particle\" acts as visual deterrent." );
@@ -62,7 +62,7 @@ switch( g_MapName )
 
 		// Doesn't skip an event. Will only patch for Coop if the Community wills so for similar commonhop shortcuts.
 
-			if ( g_BaseMode == "coop" ) { break; }
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" ) { break; }
 
 		// Survivalists will never exit the barns to touch this trigger; thus don't spawn the clip.
 
@@ -214,6 +214,10 @@ switch( g_MapName )
 	case "c13m3_memorialbridge":
 	{
 		// FIX: Prevent using water (or ladder) as a cushion to shortcut jump off bridge.
+
+		// Un-patch for Coop because this isn't an out of bounds or softlock.
+
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" ) { break; }
 
 		// Between you and me, I almost accidentally insta-killed all Survivalists.
 

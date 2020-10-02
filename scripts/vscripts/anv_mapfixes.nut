@@ -65,6 +65,11 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 **  will have already loaded in allowing for direct AddOutputs to modify logic.
 **  Elaborate fixes are put in separate files and RunScriptFile'd here.
 **
+**  Note that basemode "coop" does not include "realism", but if base "realism"
+**  the player experience will always be equivalent to that of Coop -- so check
+**  for both, and don't worry about "VS Realism" because that's base "versus".
+**  Resolves issue with Versus-only fixes undesirably existing for Realism Coop.
+**
 **  Speedy code goes in, speedy fix comes out.
 *****************************************************************************/
 
@@ -111,10 +116,10 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 	// Map fixes for Valve.
 	// Dev Thread: https://steamcommunity.com/app/550/discussions/1/1651043320659915818/
 
-	
 	// Fix forklifts so they can start obstructed but still be destroyed.
-	
+
 	local forklift = null;
+
 	while ( forklift = Entities.FindByModel( forklift, "models/props/cs_assault/forklift.mdl" ) )
 	{
 		if ( forklift.IsValid() )
@@ -150,7 +155,7 @@ make_clip(	"_cliphang_window",		"Survivors",	1,	"-72 -123 -12",		"127 14 44",		"
 make_clip(	"_cliphang_ledge",		"Survivors",	1,	"-450 -8 0",		"1130 8 216",		"1222 6232 2912" );
 make_clip(	"_barricadefire_bypass",	"Survivors",	1,	"-17 -96 -64",		"17 96 64",		"1326 5624 2528" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -199,7 +204,6 @@ make_clip(	"_barricadefire_bypass",	"Survivors",	1,	"-17 -96 -64",		"17 96 64",	
 
 make_clip(	"_mindthegap_lolvalve",		"SI Players",	1,	"-32 -4 -64",		"32 4 64",		"-2472 137 64" );
 make_clip(	"_stuckwarpassist_walltovoid",	"SI Players",	1,	"-1536 -476 -5",	"0 500 0",		"-5056 1500 1344" );
-make_clip(	"_booster_mallroof",		"Survivors",	1,	"0 -130 -377",		"2150 136 448",		"-9218 -4415 1024" );
 make_clip( "_nav_cedaramp_in", "SI Players and AI", 1, "0 -18 -14", "10 21 51", "-4268 2566 75", "-50 -35 0" );
 make_clip( "_nav_cedaramp_out", "SI Players and AI", 1, "-95 -20 4", "38 17 11", "-4322 2567 102", "-8 0 0" );
 make_clip( "_colastore_clipgap", "Survivors", 1, "-8 -97 0", "8 75 856", "-6792 -3215 616" );
@@ -217,7 +221,7 @@ make_clip( "_booster_bridgestairsa", "Survivors", 1, "-4 -84 0", "4 84 700", "-5
 make_clip( "_booster_bridgestairsb", "Survivors", 1, "-56 -8 0", "56 8 700", "-5512 1016 832" );
 make_clip( "_booster_building", "Survivors", 1, "-8 -384 0", "8 384 128", "-5064 1408 1344" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -230,6 +234,8 @@ make_clip( "_booster_building", "Survivors", 1, "-8 -384 0", "8 384 128", "-5064
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_booster_mallroof",		"Survivors",	1,	"0 -130 -377",		"2150 136 448",		"-9218 -4415 1024" );
 
 				break;
 			}
@@ -272,7 +278,16 @@ make_clip( "_cliprework_skylightb", "Survivors", 1, "-541 -189 -1", "547 195 32"
 make_clip( "_cliprework_skylightc", "Survivors", 1, "-194 -544 -1", "190 544 32", "2274 -672 793" );
 make_clip( "_cliprework_skylightd", "Survivors", 1, "-1017 -167 0", "1018 149 32", "1465 -3418 794", "0 45 0" );
 
-			if ( g_BaseMode == "coop" )
+con_comment( "FIX:\tMoved an exposed stairwell hurt trigger down inside a vending machine." );
+
+local hndHurtStairwell = Entities.FindByName( null, "hurt_stairwell" );
+
+if ( SafelyExists( hndHurtStairwell ) )
+{
+	hndHurtStairwell.SetOrigin( Vector( 683.5, -583, 307 ) );
+}
+
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -334,7 +349,7 @@ make_clip( "_booster_highbalcony", "Survivors", 1, "-260 -162 0", "260 162 520",
 make_clip( "_booster_glassbalcony", "Survivors", 1, "-128 -82 0", "128 0 1", "-3688 -4334 791" );
 make_clip( "_nav_ladyshoes", "Survivors", 1, "-103 -3 0", "70 3 56", "-4971 -4461 432" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -431,7 +446,7 @@ make_clip( "_clipextend_umbrella1", "Survivors", 1, "-48 -50 0", "50 48 522", "2
 make_clip( "_clipextend_umbrella2", "Survivors", 1, "-48 -50 0", "50 48 522", "2483 3989 -773" );
 make_clip( "_clipextend_umbrella3", "Survivors", 1, "-48 -52 0", "50 50 522", "2243 4047 -773" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -499,8 +514,6 @@ make_clip(	"_booster_unattackable",	"Survivors",	1,	"-100 -17 0",		"700 17 512",
 make_clip(	"_forklift_roof",		"Survivors",	1,	"-7 -128 0",		"10 128 575",		"1750 -1660 193" );
 make_clip(	"_commonhop_whitefence",	"Survivors",	1,	"-77 -5 0",		"77 5 777",		"-3903 -1141 -15" );
 make_clip(	"_commonhop_carouselroofs",	"Survivors",	1,	"-230 -5 0",		"302 1142 666",		"-990 -5501 192" );
-make_clip(	"_booster_uppertrackb",		"Survivors",	1,	"-64 -448 -320",	"64 448 320",		"-1536 -2368 448" );
-make_clip(	"_booster_uppertracka",		"Survivors",	1,	"-57 -313 -208.5",	"57 313 208.5",		"-2721 -825 337" );
 make_clip(	"_void_filler",			"Everyone",	1,	"-222 0 -125",		"222 16 55",		"-1792 -7311 250" );
 make_clip(	"_charger_smoother",		"Everyone",	1,	"-56 -256 -6",		"56 256 6",		"-3119 -896 152",	"-40 0 0" );
 make_clip( "_cliprework_unattackable", "Survivors", 1, "-8 -1009 0", "8 1007 128", "-504 -1535 128" );
@@ -516,11 +529,10 @@ make_clip( "_cliprework_wrongwayb", "Survivors", 1, "-8 -866 0", "8 799 578", "-
 make_clip( "_cliprework_wrongwayc", "Survivors", 1, "-2113 -10 0", "1219 5 578", "-1471 -7166 192" );
 make_clip( "_nav_exitsign", "Survivors", 1, "-8 -11 0", "11 12 120", "1048 -1269 128" );
 make_clip( "_cliprework_blockergap", "Survivors", 1, "-121 -8 0", "123 8 384", "-4235 -3968 384" );
-make_clip( "_clipextend_carouselboost", "Survivors", 1, "-234 -4 0", "234 4 666", "-1446 -5248 192" );
 make_clip( "_unattackable_traintunnel", "Survivors", 1, "-324 -1040 -171", "220 1040 342", "-604 -1536 428" );
 make_clip( "_dispcollision_fairgrounds", "All and Physics", 1, "-1400 -1700 -2", "1400 1700 0", "-1903 -142 -128" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -533,6 +545,10 @@ make_clip( "_dispcollision_fairgrounds", "All and Physics", 1, "-1400 -1700 -2",
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_booster_uppertrackb",		"Survivors",	1,	"-64 -448 -320",	"64 448 320",		"-1536 -2368 448" );
+make_clip(	"_booster_uppertracka",		"Survivors",	1,	"-57 -313 -208.5",	"57 313 208.5",		"-2721 -825 337" );
+make_clip( "_clipextend_carouselboost", "Survivors", 1, "-234 -4 0", "234 4 666", "-1446 -5248 192" );
 
 // Piggyback on Survivor-filtered trigger just beyond the carousel off switch.
 
@@ -575,7 +591,6 @@ DoEntFire( "!self", "AddOutput", "OnTrigger anv_mapfixes_tol_clip_brush*:Kill::-
 
 			// FIXES_ALL
 
-make_clip(	"_shortcut_supports",		"Survivors",	1,	"-86 -10 -137",		"86 10 32",		"-3904 2062 96" );
 make_clip(	"_smokerinfamya",		"SI Players",	1,	"-4000 -80 -1337",	"0 1600 0",		"-4450 2525 309" );
 make_clip(	"_smokerinfamyb",		"SI Players",	1,	"-4000 0 0",		"160 1111 1337",	"-4450 3005 309" );
 make_clip(	"_smokerinfamyc",		"SI Players",	1,	"-4000 -289 0",		"0 271 1337",		"-5119 2734 309" );
@@ -583,19 +598,11 @@ make_clip(	"_shortcut_commonhopa",		"Survivors",	1,	"-10 -10 -64",		"10 10 216",
 make_clip(	"_shortcut_commonhopb",		"Survivors",	1,	"-10 -10 -56",		"10 10 232",		"-3720 1352 72" );
 make_clip(	"_shortcut_commonhopc",		"Survivors",	1,	"-10 -10 -52",		"10 10 227",		"-3720 1768 77" );
 make_clip(	"_stuckwarp_gatearm",		"Everyone",	1,	"-31 -36 -54",		"31 36 54",		"-3799 1100 82" );
-make_clip(	"_cliprework_scaffnuke_skipa",	"Survivors",	1,	"-120 -111 -48",	"150 88 310",		"-3044 3000 177" );
-make_clip(	"_cliprework_scaffnuke_skipb",	"Survivors",	1,	"-90 -211 -48",		"82 0 310",		"-2788 2760 177" );
-make_clip(	"_cliprework_scaffnuke_skipc",	"Survivors",	1,	"-120 -111 -48",	"20 -73 1545",		"-3044 3000 177" );
-make_clip(	"_cliprework_scaffnuke_skipd",	"Survivors",	1,	"-90 -211 -48",		"-61 0 1545",		"-2788 2760 177" );
 make_clip(	"_cliprework_tunnelb",		"Survivors",	1,	"-777 -110 -108",	"82 360 1100",		"-3418 3460 652" );
-make_clip(	"_cliprework_roofa",		"Survivors",	1,	"-108 -224 -320",	"108 224 1100",		"-3596 1560 640" );
 make_clip(	"_cliprework_tunnela",		"Survivors",	1,	"-300 -80 -108",	"82 360 1100",		"-3902 3021 655" );
-make_clip(	"_cliprework_roofb",		"Survivors",	1,	"-295 -444 -280",	"295 444 1100",		"-3970 1558 640" );
-make_clip(	"_cliprework_sign",		"Survivors",	1,	"-307 -70 0",		"307 70 1320",		"-3902 2321 431" );
 make_clip( "_nav_extinguisher", "Survivors", 1, "-16 -4 0", "16 4 44", "-325 4116 244" );
 make_clip( "_commonhop_curvedrail", "Survivors", 1, "-5 -120 0", "17 260 25", "-3498 2060 250" );
 make_clip( "_cliprework_fourvents", "Survivors", 1, "-223 -1 0", "225 4 64", "239 3676 272" );
-make_clip( "_chargerassist_container", "Survivors", 1, "-207 -62 0", "182 66 832", "-718 590 128" );
 make_clip( "_cliprework_semipermstuck", "Everyone", 1, "-20 -50 0", "19 22 32", "-3254 2792 0", "0 -15 0" );
 make_clip( "_cliprework_culdesaca", "Survivors", 1, "-95 -4 0", "98 4 206", "-3917 2979 152", "0 25 0" );
 make_clip( "_cliprework_culdesacb", "Survivors", 1, "-176 -4 0", "142 4 1603", "-3659 3066 152", "0 15 0" );
@@ -604,11 +611,7 @@ make_clip( "_cliprework_culdesacd", "Survivors", 1, "-4 -280 0", "4 106 1387", "
 make_clip( "_shortcut_commonhopd", "Survivors", 1, "-10 -10 -56", "10 10 227", "-3512 1352 77" );
 make_clip( "_shortcut_commonhope", "Survivors", 1, "-10 -10 -56", "10 10 227", "-3512 1768 77" );
 make_clip( "_shortcut_commonhopf", "Survivors", 1, "-10 -10 -56", "10 10 263", "-3720 1976 57" );
-make_clip( "_shortcut_commonhopg", "Survivors", 1, "-10 -10 -56", "10 10 103", "-3848 1976 57" );
-make_clip( "_shortcut_supportdropa", "Survivors", 1, "-28 -55 0", "35 35 1150", "-3260 2854 576" );
-make_clip( "_shortcut_supportdropb", "Survivors", 1, "-28 -216 0", "35 35 1150", "-3300 2810 576" );
 make_clip( "_cliprework_shrubgap", "Survivors", 1, "-112 -80 0", "112 80 286", "-3072 128 152" );
-make_clip( "_shortcut_finally_done", "Survivors", 1, "-8 -146 0", "0 146 255", "-2894 2609 253", "9 0 0" );
 make_clip( "_onewaybreakwall_elecbox", "Everyone", 1, "-64 -4 0", "64 4 236", "-64 3524 100" );
 make_clip( "_endbridge_shiftsmoother1", "Everyone", 1, "-1 -42 0", "1 38 2", "-4183 2320 272" );
 make_clip( "_endbridge_shiftsmoother2", "Everyone", 1, "-42 -1 0", "38 1 2", "-4729 2277 164" );
@@ -622,8 +625,6 @@ make_clip( "_recompilepls_pillar4", "Survivors", 1, "-10 -10 0", "10 10 272", "-
 make_clip( "_recompilepls_pillar5", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2360 0" );
 make_clip( "_recompilepls_pillar6", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2280 0" );
 make_clip( "_cliprework_permstuck", "Survivors", 1, "-93 -81 -55", "108 47 88", "-3266 3057 413" );
-make_clip( "_booster_eventskip1", "Survivors", 1, "-253 -16 -459", "332 23 32", "-3106 3081 960" );
-make_clip( "_booster_eventskip2", "Survivors", 1, "-253 -72 -459", "-246 23 32", "-3106 3081 960" );
 make_clip( "_stuckwarp_swanstairs", "Everyone", 1, "-52 0 0", "143 3 37", "298 4192 43", "-34.5 0 0" );
 make_brush( "_permstuck_swanroom_dead", "-54 -20 0", "58 29 108", "510 4084 -7" );
 make_trigduck( "_duckqol_swanhole", "-5 -32 -32", "5 32 32", "1348 4096 32" );
@@ -637,7 +638,7 @@ make_prop( "dynamic", "_onewayhole_blockpipe", "models/props_pipes/pipeset08d_12
 //EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger anv_mapfixes_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 //EntFire( "relay_panicevent", "AddOutput", "OnTrigger anv_mapfixes_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -652,6 +653,22 @@ make_prop( "dynamic", "_onewayhole_blockpipe", "models/props_pipes/pipeset08d_12
 				// FIXES
 
 make_clip(	"_shortcut_longjump",		"Survivors",	1,	"-17 -216 0",		"17 216 1580",		"-4240 2616 171" );
+
+make_clip(	"_shortcut_supports",		"Survivors",	1,	"-86 -10 -137",		"86 10 32",		"-3904 2062 96" );
+make_clip(	"_cliprework_scaffnuke_skipa",	"Survivors",	1,	"-120 -111 -48",	"150 88 310",		"-3044 3000 177" );
+make_clip(	"_cliprework_scaffnuke_skipb",	"Survivors",	1,	"-90 -211 -48",		"82 0 310",		"-2788 2760 177" );
+make_clip(	"_cliprework_scaffnuke_skipc",	"Survivors",	1,	"-120 -111 -48",	"20 -73 1545",		"-3044 3000 177" );
+make_clip(	"_cliprework_scaffnuke_skipd",	"Survivors",	1,	"-90 -211 -48",		"-61 0 1545",		"-2788 2760 177" );
+make_clip(	"_cliprework_roofa",		"Survivors",	1,	"-108 -224 -320",	"108 224 1100",		"-3596 1560 640" );
+make_clip(	"_cliprework_roofb",		"Survivors",	1,	"-295 -444 -280",	"295 444 1100",		"-3970 1558 640" );
+make_clip(	"_cliprework_sign",		"Survivors",	1,	"-307 -70 0",		"307 70 1320",		"-3902 2321 431" );
+make_clip( "_chargerassist_container", "Survivors", 1, "-207 -62 0", "182 66 832", "-718 590 128" );
+make_clip( "_shortcut_commonhopg", "Survivors", 1, "-10 -10 -56", "10 10 103", "-3848 1976 57" );
+make_clip( "_shortcut_supportdropa", "Survivors", 1, "-28 -55 0", "35 35 1150", "-3260 2854 576" );
+make_clip( "_shortcut_supportdropb", "Survivors", 1, "-28 -216 0", "35 35 1150", "-3300 2810 576" );
+make_clip( "_shortcut_finally_done", "Survivors", 1, "-8 -146 0", "0 146 255", "-2894 2609 253", "9 0 0" );
+make_clip( "_booster_eventskip1", "Survivors", 1, "-253 -16 -459", "332 23 32", "-3106 3081 960" );
+make_clip( "_booster_eventskip2", "Survivors", 1, "-253 -72 -459", "-246 23 32", "-3106 3081 960" );
 
 				break;
 			}
@@ -713,7 +730,7 @@ make_clip( "_ladder_askewhedgeshared_base", "Everyone", 1, "-2 -336 0", "4 195 1
 patch_spawninfront( "-596 2312 -256", "-76 -8 0", "76 8 160" );
 patch_spawninfront( "-508 2503 -256", "-8 -51 0", "8 51 160" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -797,11 +814,11 @@ make_clip( "_smoother_windows", "SI Players and AI", 1, "-250 -32 0", "298 32 8"
 make_clip( "_missing_staircase_clip", "Everyone", 1, "-40 -40 -1", "40 40 40", "-922 1933 173", "0 315 0" );
 make_clip( "_booster_lightleft", "Survivors", 1, "-8 -104 0", "8 29 725", "-2472 3148 278" );
 make_clip( "_booster_lightright", "Survivors", 1, "-8 -104 0", "8 29 725", "-2152 3148 278" );
-make_clip( "_commentary_replace_01", "Survivors", 1, "-40 -84 -256", "40 84 944", "-1248 3316 80" );
+//make_clip( "_commentary_replace_01", "Survivors", 1, "-40 -84 -256", "40 84 944", "-1248 3316 80" );
 make_clip( "_backstairs_left", "Survivors", 1, "-8 -160 0", "8 160 760", "-4086 2688 264" );
 make_clip( "_backstairs_right", "Survivors", 1, "-8 -158 0", "8 197 760", "-951 2073 264", "0 -45 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -867,7 +884,6 @@ make_clip(	"_hedge_behindtrains",		"Survivors",	1,	"-532 -120 0",		"800 58 701",
 make_clip(	"_commonhop_crossing",		"Survivors",	1,	"-99 -260 0",		"99 426 691",		"-1025 4859 332" );
 make_clip(	"_clipgap_fence",		"Survivors",	1,	"-4 -124 -155",		"4 124 155",		"-11084 7220 428" );
 make_clip(	"_permstuck_coolingtank",	"Everyone",	1,	"-62 -58 -56",		"21 21 56",		"-10754 8610 216" );
-make_clip(	"_cliprework_jonesroof",	"Survivors",	1,	"-276 -296 -396",	"276 296 396",		"-8304 7216 628" );
 make_clip( "_commonhop_coolingtank", "Survivors", 1, "-74 -236 0", "70 156 880", "-6806 7572 144" );
 make_clip( "_booster_treetop", "Survivors", 1, "-108 -186 0", "108 174 717", "-5696 7348 247" );
 make_clip( "_chargerassist_trainwheel", "Survivors", 1, "-133 -444 -130", "28 131 765", "-12379 8416 259", "0 -19 0" );
@@ -882,7 +898,7 @@ make_clip( "_booster_powerpole", "Survivors", 1, "-9 -8 0", "9 10 582", "-7630 6
 
 make_prop( "dynamic", "_keepcalmgator", "models/props_fairgrounds/alligator.mdl", "-5274 7386 -19", "0 150 0", "shadow_no", "solid_no" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -895,6 +911,8 @@ make_prop( "dynamic", "_keepcalmgator", "models/props_fairgrounds/alligator.mdl"
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_cliprework_jonesroof",	"Survivors",	1,	"-276 -296 -396",	"276 296 396",		"-8304 7216 628" );
 
 				break;
 			}
@@ -940,7 +958,7 @@ make_clip( "_nav_trailertree", "Survivors", 1, "-48 -26 0", "78 36 742", "-7742 
 
 make_clip( "_boat_smoother", "Everyone", 1, "-16 -24 0", "16 24 30", "-7863 5391 -8", "-10 -30 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1005,7 +1023,7 @@ make_clip( "_skyboxshield_endsafehouse", "SI Players", 1, "-185 -50 -40", "183 5
 make_prop( "dynamic", "_permstuck_cratebot", "models/props_crates/static_crate_40.mdl", "-3749.85 -183.67 -3.164", "0 0 0" );
 make_prop( "dynamic", "_permstuck_cratetop", "models/props_crates/static_crate_40.mdl", "-3749.85 -182.67 36.837", "0 -30 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1079,7 +1097,7 @@ con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is sta
 make_clip( "_point_of_no_return", "Survivors", 0, "-168 -164 12", "128 92 196", "2064 -412 396" );
 EntFire( "trigger_finale", "AddOutput", "FinaleStart anv_mapfixes_point_of_no_return:Enable::0:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1162,7 +1180,7 @@ make_trigduck( "_duckqol_greenposts1", "-60 -97 0", "60 97 142", "-2021 5568 98"
 make_trigduck( "_duckqol_greenposts2", "-60 -97 0", "60 97 142", "1069 6976 224" );
 make_trigduck( "_duckqol_playground", "-156 -1 0", "156 1 77", "-1442 6968 119" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1264,7 +1282,7 @@ EntFire( "button_inelevator", "AddOutput", "OnPressed anv_mapfixes_instakill_ele
 make_clip( "_ladderqol_millladder", "Everyone", 1, "-48 -1 0", "90 0 128", "1392 -5564 228" );
 patch_ladder( "1454 -5565.5 292.25", "0 2 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1362,7 +1380,7 @@ make_clip( "_rubble_smoother4", "Everyone", 1, "-138 -26 0", "79 16 11", "1966 -
 make_clip( "_ladderqol_millladder", "Everyone", 1, "-48 -1 0", "90 0 128", "1392 -5564 228" );
 patch_ladder( "1454 -5565.5 292.25", "0 2 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1422,7 +1440,7 @@ make_trigduck( "_duckqol_playground", "-156 -1 0", "156 1 77", "-1442 6968 119" 
 
 make_clip( "_permstuck_highuptree", "Everyone", 1, "-32 -54 0", "24 24 10", "-3312 7326 315" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1496,7 +1514,7 @@ con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is sta
 make_clip( "_point_of_no_return", "Survivors", 0, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
 EntFire( "trigger_finale", "AddOutput", "FinaleStart anv_mapfixes_point_of_no_return:Enable::0:-1", 1 );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1576,7 +1594,7 @@ make_clip( "_cliprework_unattackable", "Survivors", 1, "-802 -203 0", "558 213 8
 make_clip( "_ledgehang_startfenceleft", "Survivors", 1, "-16 -48 0", "10 48 379", "589 -142 -251", "0 29 0" );
 make_clip( "_ledgehang_startfenceright", "Survivors", 1, "-8 -24 0", "8 24 360", "599 45 -232", "0 -15 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1641,7 +1659,7 @@ make_clip( "_ladderqol_purpleclip3", "SI Players", 1, "-96 -2 -4", "129 -1 29", 
 make_clip( "_permstuck_longbarricade", "Everyone", 1, "-491 -16 0", "54 26 168", "-6390 -8479 -247" );
 make_clip( "_cliprework_missingno", "Survivors", 1, "-164 -272 0", "172 240 1626", "-10092 -5520 48" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1719,7 +1737,7 @@ make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469
 make_clip( "_nav_opencrypt", "Survivors", 1, "-26 -47 0", "7 49 1000", "9604 -6659 344" );
 make_clip( "_nav_cornertree", "Survivors", 1, "-83 -116 0", "97 180 935", "10459 -4981 409" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1803,7 +1821,7 @@ con_comment( "FIX:\tTotal of 13 out of 13 traffic cones need to be made non-soli
 
 unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1864,9 +1882,6 @@ DoEntFire( "!self", "AddOutput", "OnTrigger anv_mapfixes_shortcut_fence_TMP:Kill
 
 make_clip(	"_antiboost_finaleskip",	"Survivors",	1,	"-216 -295 -96",	"216 330 9001",		"-12017 6306 779" );
 make_clip(	"_permstuck_semiwheels",	"Everyone",	1,	"-45 -30 -75",		"45 30 75",		"5929 6072 475" );
-make_clip(	"_bunnyhop_girder",		"Survivors",	1,	"-610 -17 -101",	"40 24 256",		"-5528 6568 860" );
-make_clip(	"_solidify_girderleft",		"Survivors",	1,	"-500 0 0",		"0 40 50",		"4544 6600 750" );
-make_clip(	"_solidify_girderright",	"Survivors",	1,	"-500 -40 0",		"0 0 50",		"4544 6050 750" );
 make_clip(	"_endfence_curvejump",		"Survivors",	1,	"-112 -80 -180",	"112 80 2400",		"9552 6640 556" );
 make_clip(	"_endfence_commonhop",		"Survivors",	1,	"-24 -240 -55",		"24 240 17",		"9480 6320 705" );
 make_clip(	"_bunnyhop_fence",		"Survivors",	1,	"-68 -71 -163",		"68 80 163",		"-11827 6526 611" );
@@ -1900,21 +1915,11 @@ make_clip(	"_booster_generatorb",		"Survivors",	1,	"-32 -32 -17",		"32 32 2121",
 make_clip(	"_booster_generatorc",		"Survivors",	1,	"-32 -32 -17",		"32 32 2121",		"8245 3460 485.8" );
 make_clip(	"_booster_tree",		"Survivors",	1,	"-110 -170 -17",	"120 140 2121",		"7975 2389 434" );
 make_clip( "_cliprework_jeepbean", "Survivors", 1, "-339 -243 0", "528 260 1258", "8967 6328 790" );
-make_clip( "_solidify_stuckwarp1", "Survivors", 1, "-26 -10 -37", "61 11 32", "4152 6617 729" );
-make_clip( "_solidify_stuckwarp2", "Survivors", 1, "-26 -10 -37", "61 11 32", "4152 6034 729" );
-make_clip( "_solidify_stuckwarp3", "Survivors", 1, "-86 -10 -37", "15 11 32", "4502 6034 729" );
-make_clip( "_solidify_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32", "4502 6617 729" );
 make_clip( "_endrubble_smoother", "Everyone", 1, "-8 -41 0", "8 38 8", "8209 6208 456", "45 0 0" );
 make_clip( "_ramp_smoother", "Everyone", 1, "-6 -42 0", "3 42 2", "8041 4102 180", "-30 -30 0" );
 make_clip( "_clipextend_endchopper", "Survivors", 1, "-125 -506 0", "135 299 1852", "7383 3797 1199", "0 25 0" );
-make_clip(	"_solidify_alt_girderleft",	"Survivors",	1,	"-500 0 0",		"0 40 50",		"7187 6600 750" );
-make_clip(	"_solidify_alt_girderright",	"Survivors",	1,	"-500 -40 0",		"0 0 50",		"7187 6050 750" );
-make_clip( "_solidify_alt_stuckwarp1", "Survivors", 1, "-26 -10 -37", "61 11 32", "6795 6617 729" );
-make_clip( "_solidify_alt_stuckwarp2", "Survivors", 1, "-26 -10 -37", "61 11 32", "6795 6034 729" );
-make_clip( "_solidify_alt_stuckwarp3", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6034 729" );
-make_clip( "_solidify_alt_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6617 729" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -1927,6 +1932,20 @@ make_clip( "_solidify_alt_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32"
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_bunnyhop_girder",		"Survivors",	1,	"-610 -17 -101",	"40 24 256",		"-5528 6568 860" );
+make_clip(	"_solidify_girderleft",		"Survivors",	1,	"-500 0 0",		"0 40 50",		"4544 6600 750" );
+make_clip(	"_solidify_girderright",	"Survivors",	1,	"-500 -40 0",		"0 0 50",		"4544 6050 750" );
+make_clip( "_solidify_stuckwarp1", "Survivors", 1, "-26 -10 -37", "61 11 32", "4152 6617 729" );
+make_clip( "_solidify_stuckwarp2", "Survivors", 1, "-26 -10 -37", "61 11 32", "4152 6034 729" );
+make_clip( "_solidify_stuckwarp3", "Survivors", 1, "-86 -10 -37", "15 11 32", "4502 6034 729" );
+make_clip( "_solidify_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32", "4502 6617 729" );
+make_clip(	"_solidify_alt_girderleft",	"Survivors",	1,	"-500 0 0",		"0 40 50",		"7187 6600 750" );
+make_clip(	"_solidify_alt_girderright",	"Survivors",	1,	"-500 -40 0",		"0 0 50",		"7187 6050 750" );
+make_clip( "_solidify_alt_stuckwarp1", "Survivors", 1, "-26 -10 -37", "61 11 32", "6795 6617 729" );
+make_clip( "_solidify_alt_stuckwarp2", "Survivors", 1, "-26 -10 -37", "61 11 32", "6795 6034 729" );
+make_clip( "_solidify_alt_stuckwarp3", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6034 729" );
+make_clip( "_solidify_alt_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6617 729" );
 
 				break;
 			}
@@ -2020,11 +2039,15 @@ make_prop( "dynamic_ovr", "_cosmetic_right_cab3", "models/props/cs_office/file_c
 make_prop( "dynamic", "_cosmetic_right_plywood", "models/props_highway/plywood_02.mdl", "1450 1615 621", "-3 0 90", "shadow_no", "solid_no" );
 make_clip( "_cosmetic_right_collision", "SI Players and AI", 1, "-17 -18 -30", "73 14 6", "1400 1637 542" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
 				// FIXES
+
+con_comment( "KILL:\tOut of bounds fences unpatched for Coop (popular request)." );
+
+EntFire( g_UpdateName + "_fence*", "Kill" );
 
 				break;
 			}
@@ -2121,7 +2144,7 @@ make_trigduck( "_duckqol_missingpipe", "-117 -40 -28", "117 40 28", "1824 1528 -
 
 make_prop( "dynamic", "_permstuck_gasmeter", "models/props_urban/gas_meter.mdl", "2202 1859.8 -70.5", "0 0 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2220,7 +2243,7 @@ con_comment( "FIX:\tTotal of 2 out of 2 traffic cones need to be made non-solid 
 
 unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2287,7 +2310,7 @@ make_clip( "_cliprework_ventshafts", "Survivors", 1, "-814 -79 -16", "1010 65 80
 make_clip( "_commonhop_endwindows", "Survivors", 1, "-459 -16 0", "453 16 128", "2563 2560 336" );
 make_clip( "_clipextend_rubblecar", "Survivors", 1, "-418 -326 -223", "382 253 932", "11026 -1196 90" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2361,7 +2384,7 @@ make_clip( "_booster_fenceledge", "Survivors", 1, "-345 -139 0", "311 89 1152", 
 make_clip( "_booster_gravelacun", "Survivors", 1, "-33 -60 0", "29 61 947", "-6495 1144 333" );
 make_clip( "_booster_solidify_windows", "Survivors", 1, "-152 -270 0", "152 270 168", "11032 606 336" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2458,7 +2481,7 @@ make_clip( "_bridgerail_thinledge", "Survivors", 1, "-19 -5 0", "19 -1 223", "28
 make_clip( "_bridge_curbsmoother1", "Everyone", 1, "-128 -267 0", "-127 182 8", "-1 -1014 -8" );
 make_clip( "_bridge_curbsmoother2", "Everyone", 1, "127 -267 0", "128 182 8", "1 -1014 -8" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2543,7 +2566,7 @@ con_comment( "FIX:\tFans will now rotate. Server-side entities used to have Clie
 
 EntFire( "fanblade*", "AddOutput", "spawnflags 129" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2603,8 +2626,6 @@ make_clip(	"_booster_beamc",		"Survivors",	1,	"-17 -474 -24",		"9 686 192",		"75
 make_clip(	"_booster_beamd",		"Survivors",	1,	"-17 -474 -24",		"10 686 192",		"7754 3138 424" );
 make_clip(	"_booster_beame",		"Survivors",	1,	"-9 -474 -24",		"10 686 192",		"7943 3138 424" );
 make_clip(	"_booster_boxrow",		"Survivors",	1,	"-370 -4 0",		"290 4 216",		"7827 3816 381" );
-make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
-make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
 make_clip( "_stuckwarp_underspawn", "Everyone", 1, "-11 -7 0", "-3 10 70", "3111 2775 -70" );
 make_clip( "_stuckwarp_tunnelend", "Everyone", 1, "-12 -24 -14", "137 73 70", "4182 2831 -70", "0 -1 0" );
 make_clip( "_tankwarp_solidify", "SI Players and AI", 1, "-26 -30 0", "98 6 100", "5977 4742 -335", "0 -22 0" );
@@ -2627,7 +2648,7 @@ con_comment( "FIX:\tGenerator Room has 13 hanging lights and 9 need to be made n
 
 unsolidify_model( "models/props/de_nuke/IndustrialLight01.mdl" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2643,6 +2664,9 @@ unsolidify_model( "models/props/de_nuke/IndustrialLight01.mdl" );
 
 make_clip( "_nav_backlightleft", "Survivors", 1, "6 -13 -61", "9 15 84", "5249 4124 -265" );
 make_clip( "_nav_backlightright", "Survivors", 1, "6 -13 -61", "9 15 84", "5243 4210 -265" );
+
+make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
+make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
 
 				break;
 			}
@@ -2682,8 +2706,6 @@ make_clip(	"_survival_vendors",		"Survivors",	1,	"-80 -32 0",		"80 55 284",		"74
 make_clip(	"_commonhop_trashbags",		"Survivors",	1,	"-256 -670 0",		"4 95 1190",		"10693 5279 17" );
 make_clip(	"_clipextend_roofandfence",	"Survivors",	1,	"-4 -1010 0",		"4 420 1200",		"10525 6365 24" );
 make_clip(	"_filecabinet_hole",		"Survivors",	1,	"-32 -32 -4",		"32 32 4",		"10928 8208 292" );
-make_clip(	"_window_ricky",		"Survivors",	1,	"-368 0 0",		"144 4 80",		"13680 11132 208" );
-make_clip(	"_commonhop_trimescape",	"Survivors",	1,	"-288 -1 0",		"312 5 525",		"14240 11137 208" );
 make_clip(	"_permstuck_semitrailer",	"SI Players",	1,	"-24 -10 0",		"24 17 171",		"13349 11144 24" );
 make_clip(	"_booster_escapeladder",	"Survivors",	1,	"-47 -88 0",		"42 112 929",		"14680 13819 255" );
 make_clip( "_nav_garagewindow1", "Everyone", 1, "-5 -36 0", "5 36 32", "12044 5900 19" );
@@ -2717,7 +2739,7 @@ EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_s
 EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:AddOutput:origin 12687 7170 200:10:-1" );
 EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:Kill::12:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2730,6 +2752,9 @@ EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_s
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_window_ricky",		"Survivors",	1,	"-368 0 0",		"144 4 80",		"13680 11132 208" );
+make_clip(	"_commonhop_trimescape",	"Survivors",	1,	"-288 -1 0",		"312 5 525",		"14240 11137 208" );
 
 con_comment( "LOGIC:\tTMP shortcut booster clips will be deleted when Scissor Lift is started.\n"
 	   + "\tCaution: Do not delete this logic otherwise the clips are gamebreakers." );
@@ -2794,7 +2819,7 @@ con_comment( "FIX:\tUpper generator prop made immovable until Survivors reach to
 EntFire( "generator01",		"DisableMotion" );
 EntFire( "elevator",		"AddOutput",	"OnReachedTop generator01:EnableMotion::0:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2870,7 +2895,7 @@ make_clip( "_charger_smoother_26", "Everyone", 1, "-4 -90 -17",	"8 113 1",	"7861
 make_clip( "_railing_rampright", "Everyone", 1, "-1 -78 0", "1 140 32", "5473 8478 6000", "0 0 45" );
 make_clip( "_railing_rampleft", "Everyone", 1, "-1 -78 0", "1 125 32", "5567 8478 6000", "0 0 45" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2938,8 +2963,6 @@ make_clip( "_dispcollision_rooftop", "All and Physics", 1, "-101 -64 0", "160 64
 
 			// FIXES_ALL
 
-make_clip(	"_allmodes_griefrooma",		"Survivors",	1,	"0 0 0",		"530 126 950",		"156 -6648 -22" );
-make_clip(	"_allmodes_griefroomb",		"Survivors",	1,	"0 -770 0",		"130 0 950",		"28 -6652 -22" );
 make_clip(	"_cliprework_rooftop01",	"Survivors",	1,	"-10 -340 0",		"10 340 600",		"-5434 -9392 336" );
 make_clip(	"_cliprework_rooftop02",	"Survivors",	1,	"-580 -10 -130",	"580 10 576",		"-4864 -9722 352" );
 make_clip(	"_commonhop_window",		"Survivors",	1,	"-32 -8 0",		"32 8 88",		"-4480 -10632 144" );
@@ -2973,7 +2996,7 @@ EntFire( "zombie_breakwall09", "AddOutput", "minhealthdmg 2147483647" );
 EntFire( "fire_howitzer", "AddOutput", "OnPressed zombie_breakwall01:AddOutput:minhealthdmg 0:0:-1" );
 EntFire( "fire_howitzer", "AddOutput", "OnPressed zombie_breakwall09:AddOutput:minhealthdmg 0:0:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -2986,6 +3009,9 @@ EntFire( "fire_howitzer", "AddOutput", "OnPressed zombie_breakwall09:AddOutput:m
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_allmodes_griefrooma",		"Survivors",	1,	"0 0 0",		"530 126 950",		"156 -6648 -22" );
+make_clip(	"_allmodes_griefroomb",		"Survivors",	1,	"0 -770 0",		"130 0 950",		"28 -6652 -22" );
 
 				break;
 			}
@@ -3054,7 +3080,7 @@ con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale switch
 make_clip( "_point_of_no_return", "Survivors", 0, "-16 -169 -168", "58 169 784", "5750 7177 368" );
 EntFire( "finaleswitch_initial", "AddOutput", "OnTimeUp anv_mapfixes_point_of_no_return:Enable::0:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3135,7 +3161,7 @@ make_clip( "_dispcrouch_endrockparkour", "Everyone", 1, "-8 -116 0", "8 56 115",
 make_prop( "dynamic", "_crashcourse_armoredvan_glass", "models/props_vehicles/deliveryvan_armored_glass.mdl", "-11274 -15292 -150.2", "14.32 90 -5.15", "shadow_no" );
 make_prop( "dynamic", "_crashcourse_armoredvan", "models/props_vehicles/deliveryvan_armored.mdl", "-11274 -15292 -150.2", "14.32 90 -5.15" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3185,12 +3211,9 @@ make_prop( "dynamic", "_crashcourse_armoredvan", "models/props_vehicles/delivery
 make_clip(	"_commonhop_cisterntunnela",	"Survivors",	1,	"-17 -80 0",		"17 80 164",		"-9477 -7279 -308" );
 make_clip(	"_commonhop_cisterntunnelb",	"Survivors",	1,	"-80 -17 0",		"80 17 164",		"-9872 -6886 -308" );
 make_clip(	"_commonhop_bagstoroof",	"Survivors",	1,	"-420 -1600 -100",	"420 171 920",		"-7118 -6111 351" );
-make_clip(	"_bunnyhop_endwindow",		"Survivors",	1,	"-606 -7 0",		"100 7 128",		"-7998 -6007 -48" );
-make_clip(	"_commonhop_pipe",		"Survivors",	1,	"-4 -104 -56",		"4 104 56",		"-8044 -7280 -408" );
 make_clip(	"_unattackable_pipea",		"Survivors",	1,	"-80 -4 -56",		"80 669 88",		"-7790 -8110 -388" );
 make_clip(	"_unattackable_pipeb",		"Survivors",	1,	"-4 -80 -56",		"669 80 88",		"-8339 -9043 -388" );
 make_clip(	"_unattackable_pipec",		"Survivors",	1,	"-4 -80 -56",		"669 80 88",		"-9144 -9043 -388" );
-make_clip( "_cliprework_commonhop", "Survivors", 1, "-172 -8 -44", "172 8 44", "-6452 -6008 136" );
 make_clip( "_nav_electricalbox", "Survivors", 1, "-6 -30 0", "3 27 172", "-10806 -8537 -347", "0 -45 0" );
 make_clip( "_unattackable_debrisfall", "Survivors", 1, "-119 -137 0", "74 113 12", "-9870 -8168 -180" );
 make_clip( "_cliprework_cisternroof", "Survivors", 1, "-124 -136 12", "132 120 22", "-9860 -7288 -98" );
@@ -3215,7 +3238,7 @@ make_clip( "_chargerassist_footlocker", "Survivors", 1, "-64 -82 0", "8 82 100",
 make_clip( "_grating_smoothera", "Everyone", 1, "-326 -450 -2", "0 0 1", "-8642 -7855 -528.613" );
 make_clip( "_grating_smootherb", "Everyone", 1, "-326 -495 -2", "-45 -450 1", "-8642 -7855 -528.613" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3230,6 +3253,10 @@ make_clip( "_grating_smootherb", "Everyone", 1, "-326 -495 -2", "-45 -450 1", "-
 				// FIXES
 
 make_clip( "_shortcut_commonhop", "Survivors", 1, "-25 69 -89", "-22 73 91", "-8050 -8422 -487" );
+
+make_clip(	"_bunnyhop_endwindow",		"Survivors",	1,	"-606 -7 0",		"100 7 128",		"-7998 -6007 -48" );
+make_clip(	"_commonhop_pipe",		"Survivors",	1,	"-4 -104 -56",		"4 104 56",		"-8044 -7280 -408" );
+make_clip( "_cliprework_commonhop", "Survivors", 1, "-172 -8 -44", "172 8 44", "-6452 -6008 136" );
 
 				break;
 			}
@@ -3295,7 +3322,6 @@ make_clip( "_cliprework_corner2", "Survivors", 1, "-550 -60 -17", "711 4 784", "
 make_clip( "_tankpunch_booster", "Survivors", 1, "-8 -302 -110", "158 960 1322", "-8838 -4633 124", "0 51 0" );
 make_clip( "_permstuck_triplerock", "Everyone", 1, "-78 -86 -80", "88 96 32", "-9539 -4313 16", "0 41 0" );
 make_clip( "_cliprework_vulnerable", "Survivors", 1, "-1085 -16 -90", "1048 16 1192", "-8709 -3352 269", "0 34 0" );
-make_clip( "_cliprework_smokertrolling", "Survivors", 1, "-207 -21 0", "219 8 259", "-11857 -5323 85" );
 make_clip( "_cliprework_churchwindows", "Survivors", 1, "-4 -120 0", "4 120 100", "-2372 192 194" );
 make_clip( "_clipextend_padlockgate", "Survivors", 1, "-14 -311 0", "14 405 1102", "-8594 -5033 344" );
 make_clip( "_permstuck_openedrockcliff", "SI Players", 1, "-17 -17 0", "17 17 32", "-9247 -3950 412" );
@@ -3304,7 +3330,7 @@ make_clip( "_permstuck_fatcliffladder2", "SI Players", 1, "-17 -34 0", "17 17 32
 make_clip( "_chargerassist_brokenwall", "Survivors", 1, "-128 0 0", "128 64 275", "-2480 1104 221" );
 make_clip( "_booster_watertowerclip", "Survivors", 1, "-538 -16 0", "348 66 900", "-6472 -871 1024", "0 15 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3317,6 +3343,8 @@ make_clip( "_booster_watertowerclip", "Survivors", 1, "-538 -16 0", "348 66 900"
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip( "_cliprework_smokertrolling", "Survivors", 1, "-207 -21 0", "219 8 259", "-11857 -5323 85" );
 
 				break;
 			}
@@ -3365,14 +3393,10 @@ make_clip( "_cliprework_electricalbox", "Survivors", 1, "-6 -33 0", "5 25 406", 
 make_clip( "_cliprework_windows", "Survivors", 1, "-16 -304 -20", "0 288 68", "2688 -2136 372" );
 make_clip( "_cliprework_balcony", "Survivors", 1, "-86 -50 0", "84 46 1392", "2822 -1694 336" );
 make_clip( "_cliprework_awning", "Survivors", 1, "-68 -103 -68", "43 107 1431", "2885 -1580 297" );
-make_clip( "_cliprework_eventskip1", "Survivors", 1, "-55 -1 0", "58 1 1588", "852 -2433 140" );
-make_clip( "_cliprework_eventskip2", "Survivors", 1, "-209 -2 0", "192 2 1588", "661 -2569 140", "0 45 0" );
-make_clip( "_cliprework_eventskip3", "Survivors", 1, "-156 -1 0", "141 1 1588", "372 -2717 140" );
-make_clip( "_cliprework_eventskip4", "Survivors", 1, "-26 -59 0", "-24 41 1588", "242 -2757 140" );
 make_trighurt( "_instakill_deathcharger", "Survivor", "-256 -453 -17", "256 453 0", "-2449 122 -43" );
 patch_spawninfront( "288 -5284 93", "0 -96 0", "544 96 17" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3387,6 +3411,11 @@ patch_spawninfront( "288 -5284 93", "0 -96 0", "544 96 17" );
 				// FIXES
 
 make_clip( "_cliprework_trucknuke", "Survivors", 1, "-180 -60 -2", "115 60 1624", "693 -1867 105", "0 43 0" );
+
+make_clip( "_cliprework_eventskip1", "Survivors", 1, "-55 -1 0", "58 1 1588", "852 -2433 140" );
+make_clip( "_cliprework_eventskip2", "Survivors", 1, "-209 -2 0", "192 2 1588", "661 -2569 140", "0 45 0" );
+make_clip( "_cliprework_eventskip3", "Survivors", 1, "-156 -1 0", "141 1 1588", "372 -2717 140" );
+make_clip( "_cliprework_eventskip4", "Survivors", 1, "-26 -59 0", "-24 41 1588", "242 -2757 140" );
 
 				break;
 			}
@@ -3481,7 +3510,7 @@ function c10m5_rockslide()
 
 EntFire( "trigger_finale", "AddOutput", "UseStart worldspawn:CallScriptFunction:c10m5_rockslide:0:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3541,7 +3570,6 @@ make_clip( "_survival_docksrocks", "Survivors", 1, "-78 -161 0", "87 153 1462", 
 
 			// FIXES_ALL
 
-make_clip(	"_commonhop_greenhouse",	"Survivors",	1,	"0 -320 -176",		"3 240 690",		"5226 -752 1023" );
 make_clip(	"_oddhang_electricalbox",	"Survivors",	1,	"-8 -376 -466",		"0 0 174",		"3338 1147 466" );
 make_clip(	"_ladderqol_electricalbox",	"SI Players",	1,	"-6 -60 -536",		"0 6 104",		"3340 1151 536" );
 make_clip(	"_cliprework_stunfall",		"Survivors",	1,	"-96 -8 -400",		"96 8 1337",		"2464 784 409" );
@@ -3552,10 +3580,9 @@ make_clip(	"_cliprework_nopedocks02",	"Survivors",	1,	"-8 -64 0",		"8 64 1818",	
 make_clip(	"_cliprework_unattackable",	"Survivors",	1,	"-160 -600 0",		"160 600 1818",		"7188.6 -601.2 16" );
 make_clip( "_stunfall_lamp", "Survivors", 1, "-888 0 0", "979 17 1724", "5549 1313 8" );
 make_clip( "_outtabounds_ledge", "Survivors", 1, "-148 -145 0", "100 141 1100", "2700 649 640" );
-make_clip( "_cliprework_endpassage", "Survivors", 1, "-6 -224 0", "6 224 78", "4858 2552 274" );
 make_trighurt( "_instakill_thankyoufailzz", "Survivor", "-2828 -46 -149", "1881 225 0", "5148 -1121 165" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3568,6 +3595,9 @@ make_trighurt( "_instakill_thankyoufailzz", "Survivor", "-2828 -46 -149", "1881 
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_commonhop_greenhouse",	"Survivors",	1,	"0 -320 -176",		"3 240 690",		"5226 -752 1023" );
+make_clip( "_cliprework_endpassage", "Survivors", 1, "-6 -224 0", "6 224 78", "4858 2552 274" );
 
 				break;
 			}
@@ -3611,16 +3641,7 @@ make_trighurt( "_instakill_semitrailer", "Survivor", "-269 -117 0", "273 121 8",
 make_prop( "dynamic", "_omg_valve_wrongwayc", "models/props_vehicles/van.mdl", "8815 2888 10", "0 45 3", "shadow_no" );
 make_prop( "dynamic", "_omg_valve_wrongwayg", "models/props_vehicles/van_glass.mdl", "8815 2888 10", "0 45 3", "shadow_no" );
 
-// Piggyback on Survivor-filtered trigger that ready-ups end car alarm.
-
-con_comment( "LOGIC:\tAnti-shortcut trighurts will be deleted when a Survivor exits final office stairwell." );
-
-make_trighurt( "_finalstreet_trighurta", "Survivor", "-879 -112 0", "603 48 17", "9071 3888 196" );
-make_trighurt( "_finalstreet_trighurtb", "Survivor", "-1753 -823 0", "59 935 32", "8261 4759 196" );
-make_trighurt( "_finalstreet_trighurtc", "Survivor", "-781 -361 0", "359 599 32", "9101 4969 196" );
-DoEntFire( "!self", "AddOutput", "OnTrigger anv_mapfixes_finalstreet_trighurt*:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( 8616, 4320, 140 ), 1 ) );
-
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3633,6 +3654,15 @@ DoEntFire( "!self", "AddOutput", "OnTrigger anv_mapfixes_finalstreet_trighurt*:K
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+// Piggyback on Survivor-filtered trigger that ready-ups end car alarm.
+
+con_comment( "LOGIC:\tAnti-shortcut trighurts will be deleted when a Survivor exits final office stairwell." );
+
+make_trighurt( "_finalstreet_trighurta", "Survivor", "-879 -112 0", "603 48 17", "9071 3888 196" );
+make_trighurt( "_finalstreet_trighurtb", "Survivor", "-1753 -823 0", "59 935 32", "8261 4759 196" );
+make_trighurt( "_finalstreet_trighurtc", "Survivor", "-781 -361 0", "359 599 32", "9101 4969 196" );
+DoEntFire( "!self", "AddOutput", "OnTrigger anv_mapfixes_finalstreet_trighurt*:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( 8616, 4320, 140 ), 1 ) );
 
 				break;
 			}
@@ -3672,8 +3702,6 @@ make_clip( "_survival_electricgod", "Survivors", 1, "-40 -28 0", "79 43 273", "8
 make_clip(	"_dispcrouch_rubblepipes",	"Everyone",	1,	"-32 -420 0",		"32 420 216",		"-6060 758 -125" );
 make_clip(	"_clipgap_roof",		"Survivors",	1,	"-17 -54 0",		"18 54 1000",		"-2226 5494 825" );
 make_clip(	"_permstuck_processortanks",	"Everyone",	1,	"-64 -32 -84",		"64 0 10",		"-3000 2129 103" );
-make_clip(	"_booster_windows",		"Survivors",	1,	"-6 -80 0",		"6 80 128",		"-3082 3152 160" );
-make_clip(	"_bunnyhop_windows",		"Survivors",	1,	"-6 -180 0",		"6 180 128",		"-2954 1393 160" );
 make_clip(	"_cliprework_construction01",	"Survivors",	1,	"-666 -32 -176",	"780 8 1150",		"-6885 -2488 712" );
 make_clip(	"_cliprework_construction02",	"Survivors",	1,	"-32 -32 -176",		"8 345 1150",		"-7518 -2488 712" );
 make_clip(	"_cliprework_construction03",	"Survivors",	1,	"-386 -32 -176",	"460 8 741",		"-5645 -884 1118" );
@@ -3689,7 +3717,7 @@ con_comment( "FIX:\tTanks prevented from being able to punch barricade gascans t
 
 NetProps.SetPropInt( Entities.FindByName( null, "barricade_gas_can" ), "m_Collision.m_usSolidFlags", 2 );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3702,6 +3730,9 @@ NetProps.SetPropInt( Entities.FindByName( null, "barricade_gas_can" ), "m_Collis
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip(	"_booster_windows",		"Survivors",	1,	"-6 -80 0",		"6 80 128",		"-3082 3152 160" );
+make_clip(	"_bunnyhop_windows",		"Survivors",	1,	"-6 -180 0",		"6 180 128",		"-2954 1393 160" );
 
 				break;
 			}
@@ -3763,7 +3794,7 @@ con_comment( "LIGHTS:\tMetal detector spotlight was never moved for L4D2's port 
 EntFire( "securityrotator1",	"AddOutput",	"origin 1025.7 1750.9 125.456",		0 );
 EntFire( "securityspotlight1",	"AddOutput",	"origin 1025.7 1750.9 125.456",		1 );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3824,7 +3855,7 @@ make_clip( "_planecrash_concreteramp", "SI Players", 1, "-290 -10 0", "345 10 18
 make_prop( "dynamic", "_terry", "models/deadbodies/dead_male_civilian_body.mdl", "-4154 9350 -140", "0 -111 0", "shadow_no", "solid_no" );
 EntFire( "relay_outro_start", "AddOutput", "OnTrigger anv_mapfixes_terry:Kill::2:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3883,7 +3914,6 @@ EntFire( "relay_outro_start", "AddOutput", "OnTrigger anv_mapfixes_terry:Kill::2
 make_clip(	"_curvejump_fence",		"Survivors",	1,	"-1024 -51 -90",	"120 51 777",		"-10342 -8897 517" );
 make_clip(	"_cliprework_unattackable",	"Survivors",	1,	"-112 -192 -335",	"0 274 1024",		"-8080 -8448 880.6" );
 make_clip( "_permstuck_treeandrock", "Everyone", 1, "-19 -22 0", "26 32 46", "-11270 -9471 447" );
-make_clip( "_nav_quarrybeams", "Survivors", 1, "-152 -7 0", "152 1 288", "-7808 -9481 512" );
 make_clip( "_tankpunch_deflector", "Survivors", 1, "-434 -46 0", "288 -19 1481", "-11503 -10981 375" );
 make_clip( "_dispcrouch_smoker", "Everyone", 1, "4 -200 -64", "61 70 58", "-10650 -15068 -46", "0 -19 0" );
 
@@ -3892,7 +3922,7 @@ make_trighurt( "_instakill_longperimeter2", "Survivor", "-868 -1895 0", "508 214
 make_trighurt( "_instakill_fallrevivefence", "Survivor", "-17 -337 0", "17 367 17", "-8883 -8543 87" );
 make_trighurt( "_instakill_fallrevivenoper", "Survivor", "-744 -527 0", "1304 877 96", "-9496 -7665 -96" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3905,6 +3935,8 @@ make_trighurt( "_instakill_fallrevivenoper", "Survivor", "-744 -527 0", "1304 87
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+make_clip( "_nav_quarrybeams", "Survivors", 1, "-152 -7 0", "152 1 288", "-7808 -9481 512" );
 
 				break;
 			}
@@ -3949,7 +3981,7 @@ make_clip( "_stuckwarp_rocketdude", "Everyone", 1, "-24 -48 0", "24 48 71", "-54
 make_clip( "_rubble_smoother", "Everyone", 1, "-38 -166 0", "20 190 32", "-1777 -9480 -25", "33 23 28" );
 make_trigduck( "_duckqol_ventduct", "-5 -26 -28", "5 26 28", "-8728 -7494 92" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -3973,7 +4005,7 @@ make_trigduck( "_duckqol_ventduct", "-5 -26 -28", "5 26 28", "-8728 -7494 92" );
 
 make_clip( "_nav_wareshelf", "Survivors", 1, "-25 -85 -234", "44 80 252", "-8740 -6996 170" );
 
-make_navblock( "_survival_navblock_stairs", "Everyone", "Apply", "-4 -101 0", "4 25 32", "-6688 -7700 -80" );
+make_navblock( "_survival_navblock_stairs", "Everyone", "Apply", "-4 -101 0", "4 0 32", "-6688 -7711 -80" );
 
 				break;
 			}
@@ -4015,7 +4047,7 @@ con_comment( "MOVER:\tClip \"_bridge_dynamic_clip\" simulated to move when bridg
 make_clip( "_bridge_dynamic_clip", "Survivors", 1, "-69 -926 0", "69 6 1450", "5932 -13314 272" );
 EntFire( "train_engine_button", "AddOutput", "OnPressed anv_mapfixes_bridge_dynamic_clip:AddOutput:origin 5932 -13784 272:0:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4072,8 +4104,6 @@ make_clip( "_missing_tree_4", "Survivors", 1, "-23 -23 0", "23 23 1302", "3730 -
 
 			// FIXES_ALL
 
-make_clip(	"_shortcut_warehouse",		"Survivors",	1,	"0 -32 -32",		"8 64 256",		"10272 -7848 152" );
-make_clip(	"_commonhop_traintruss",	"Survivors",	1,	"-160 -120 -55",	"160 120 1545",		"10879 -7463 116" );
 make_clip(	"_dispcrouch_traintracka",	"Everyone",	1,	"-420 -355 -16",	"16 64 555",		"10250 -10145 -78" );
 make_clip(	"_dispcrouch_traintrackb",	"Everyone",	1,	"-420 -255 -16",	"16 99 555",		"10120 -10600 -78" );
 make_clip(	"_curvejump_bridgeend",		"Survivors",	1,	"-70 -6 -218",		"70 6 218",		"10230 -486 154" );
@@ -4097,7 +4127,7 @@ patch_spawninfront( "10454 -1032 -64", "-142 -8 0", "142 8 420" );
 
 make_prop( "dynamic", "_solidify_survivorchimney", "models/props/cs_militia/fireplacechimney01.mdl", "10862.2 -6085.53 120.492", "0 135 0", "shadow_no" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4117,6 +4147,9 @@ EntFire( g_UpdateName + "_eventskip_commonhop*", "Kill", null, 4 );
 
 make_clip( "_commonhop_roadsidefence", "Survivors", 1, "-3 -29 0", "5 27 1608", "10647 -7547 84" );
 make_clip( "_clipextend_traintruss", "Survivors", 1, "-204 -4 0", "208 128 1462", "10444 -7516 232" );
+
+make_clip(	"_shortcut_warehouse",		"Survivors",	1,	"0 -32 -32",		"8 64 256",		"10272 -7848 152" );
+make_clip(	"_commonhop_traintruss",	"Survivors",	1,	"-160 -120 -55",	"160 120 1545",		"10879 -7463 116" );
 
 				break;
 			}
@@ -4180,7 +4213,7 @@ con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is sta
 make_clip( "_point_of_no_return", "Survivors", 0, "-148 -16 0", "148 26 1660", "9017 3511 202" );
 EntFire( "trigger_finale", "AddOutput", "FinaleStart anv_mapfixes_point_of_no_return:Enable::0:-1" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4241,7 +4274,7 @@ make_clip(	"_sneaky_hunter",		"SI Players",	1,	"-963 -450 -256",	"1160 360 0",		
 make_clip( "_permstuck_cornercabin", "Everyone", 1, "-11 -12 -38", "14 12 32", "1465 3478 540" );
 make_clip( "_dispcrouch_spawn", "Everyone", 1, "-32 -131 -147", "16 386 108", "-3244 54 151", "0 11 0" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4311,7 +4344,7 @@ make_clip( "_permstuck_tree_j", "Everyone", 1, "-17 -17 -32", "17 17 0", "1153 5
 make_clip( "_stuckwarp_yellowbarrels", "Everyone", 1, "-108 -16 0", "59 13 128", "4861 2732 608", "0 -17 0" );
 patch_spawninfront( "78 8574 -405", "-70 -8 0", "70 8 256" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4385,12 +4418,7 @@ make_clip( "_clipextend_bridgeright3", "Survivors", 1, "0 -30 0", "1376 29 317",
 make_clip( "_cliprework_enddumpsters", "Survivors", 1, "-77 -130 0", "77 130 768", "5964 -3954 494" );
 make_clip( "_bridge_collision", "All and Physics", 1, "-45 -473 0", "46 463 4", "1004 -4091 586" );
 
-con_comment( "LOGIC:\tAnti-shortcut tanker clip will be deleted upon its destruction." );
-
-make_clip( "_shortcut_tanker", "Survivors", 1, "-58 -577 0", "58 271 527", "1092 -3999 1328", "0 27 0" );
-EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger anv_mapfixes_shortcut_tanker:Kill::0:-1" );
-
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4405,6 +4433,11 @@ patch_ladder( "-410.09 -4121.79 1386", "15 15 10" );
 				devchap( "BASE VERSUS" );
 
 				// FIXES
+
+con_comment( "LOGIC:\tAnti-shortcut tanker clip will be deleted upon its destruction." );
+
+make_clip( "_shortcut_tanker", "Survivors", 1, "-58 -577 0", "58 271 527", "1092 -3999 1328", "0 27 0" );
+EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger anv_mapfixes_shortcut_tanker:Kill::0:-1" );
 
 				break;
 			}
@@ -4463,7 +4496,7 @@ make_clip( "_cliprework_dispcrouch12", "SI Players", 1, "-8 -171 -42", "8 188 10
 make_clip( "_dispcrouch_waterfall", "Everyone", 1, "-64 -188 -64", "18 263 272", "-2184 -1700 -288", "0 -10 0" );
 make_clip( "_permstuck_umheymatt", "Everyone", 1, "-16 -128 0", "16 128 142", "13 5280 -117" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4544,7 +4577,7 @@ while ( wep_spawners = Entities.FindByClassname( wep_spawners, "weapon_*" ) )
 }
 			}
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4614,7 +4647,7 @@ while ( wep_spawners = Entities.FindByClassname( wep_spawners, "weapon_*" ) )
 }
 			}
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4674,7 +4707,7 @@ con_comment( "FIX:\tTotal of 4 out of 5 traffic cones need to be made non-solid 
 
 unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4721,7 +4754,7 @@ unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
 			// FIXES_ALL
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4768,7 +4801,7 @@ unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
 			// FIXES_ALL
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4815,7 +4848,7 @@ unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
 			// FIXES_ALL
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
@@ -4862,7 +4895,7 @@ unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
 			// FIXES_ALL
 
-			if ( g_BaseMode == "coop" )
+			if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 			{
 				devchap( "BASE COOP" );
 
