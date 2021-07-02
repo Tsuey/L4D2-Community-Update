@@ -21,13 +21,6 @@ make_clip( "_cliprework_awning", "Survivors", 1, "-68 -103 -68", "43 107 1431", 
 make_trighurt( "_instakill_deathcharger", "Survivor", "-256 -453 -17", "256 453 0", "-2449 122 -43" );
 patch_spawninfront( "288 -5284 93", "0 -96 0", "544 96 17" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -49,12 +42,5 @@ if ( g_BaseMode == "survival" )
 	// FIXES
 
     make_clip( "_booster_eatsign", "Survivors", 1, "-10 -64 -48", "10 69 1442", "-1649 -3723 293" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

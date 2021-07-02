@@ -23,13 +23,6 @@ make_clip( "_booster_bridgestairsa", "Survivors", 1, "-4 -84 0", "4 84 700", "-5
 make_clip( "_booster_bridgestairsb", "Survivors", 1, "-56 -8 0", "56 8 700", "-5512 1016 832" );
 make_clip( "_booster_building", "Survivors", 1, "-8 -384 0", "8 384 128", "-5064 1408 1344" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -46,12 +39,5 @@ if ( g_BaseMode == "survival" )
 	// FIXES
 
     make_clip( "_tanker_blowfish", "Survivors", 1, "-85 -435 -6", "33 331 791", "-6740 -758 681", "0 328 0" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

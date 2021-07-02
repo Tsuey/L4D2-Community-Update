@@ -51,13 +51,6 @@ make_prop( "dynamic", "_onewayhole_blockpipe", "models/props_pipes/pipeset08d_12
 //EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger anv_mapfixes_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 //EntFire( "relay_panicevent", "AddOutput", "OnTrigger anv_mapfixes_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -81,19 +74,5 @@ if ( g_BaseMode == "versus" )
     make_clip( "_shortcut_finally_done", "Survivors", 1, "-8 -146 0", "0 146 255", "-2894 2609 253", "9 0 0" );
     make_clip( "_booster_eventskip1", "Survivors", 1, "-253 -16 -459", "332 23 32", "-3106 3081 960" );
     make_clip( "_booster_eventskip2", "Survivors", 1, "-253 -72 -459", "-246 23 32", "-3106 3081 960" );
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }
