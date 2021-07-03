@@ -42,6 +42,50 @@
 **  before then will be missed -- but not if it's manual!
 *****************************************************************************/
 
+/* New changes/additions:
+**	- TODO:
+**		-> Update above comment block with any changes, update tutorial messages
+**		-> Add more filter options for props
+**		-> Optional range cut off for rendering debug draw boxes and text
+**		-> Check if prop is glowing/not glowing in prop redraw loop to prevent unneccessary EntFire calls
+**		-> Highlight/glow additional entities in some way - Might be possible to fire a glow input on them
+**			-> func_clip_vphysics
+**			-> func_playerinfected_clip, func_playerghostinfected_clip
+**		-> Optimize fire time for DebugRedraw()
+**	- DONE:
+**	- Various performance improvements
+**		-> Reduced repeated function calls
+**		-> Optimized order of execution and removed some statements from loops that only needed to be called or checked once
+**		-> g_arrayFixHandles is now dynamically resized and cleared when not in use, which also fixes script from failing if >200 entities are indexed
+**		-> Used switch cases in place of many if else statements
+**	- Fixed some issues with glows not being removed from props consistently
+** 	- Added optional arguments for ShowUpdate() to change which entities are highlighted, text arguments must be enclosed in "quotes", invalid or blank argument will call ShowUpdate()
+**		-> ShowUpdate()			- Only highlights entities prefixed with "anv_mapfixes" and commentary blockers, unchanged
+**		-> ShowUpdate("all")	- Highlights all valid entities regardless of targetname - ShowUpdateAll() can be used instead
+**		-> ShowUpdate("other")	- Highlights all entities without the "anv_mapfixes" prefix - ShowUpdateOther can be used instead
+**	- Added SetFilter function, usage: function SetFilter( entityGroup, value ), text arguments must be enclosed in "quotes", invalid or blank arguments will result in default values
+**		-> Allows user to filter out different groups of entities, allowing us to massively extend the functionality of ShowUpdate() to see (almost) exactly the entities we want at any time
+**		-> Full description of filters is found just above the function
+**	- Created new function for drawing text on highlighted entities
+**		-> Index of the entity is show at the end of the string, indicating the order it was added and acting as a unique ID
+**		-> Now labels non-anv_mapfixes clips
+**	- Fixed text on rotated ladders being displaced from the actual model, leaving them unlabelled
+*	- Fixed ladder clone source text being duplicated for each ladder that clones from it, now it only draws the text once per ladder source
+**	- When the appropriate settings to highlight them are on, ladders that have been moved (or added with no targetname) are highlighted in purple
+**		-> Ladders that are not new and haven't been moved are highlighted in light orange
+**	- Added trigger_teleport to potential triggers to highlight
+**	- Allowed commentary blockers, lump blockers, and any blockers added by mods etc to be highlighted with the full functionality that anv_mapfixes blockers are given
+**	- Invalid or deleted entities are removed from the drawing index before attempting to draw them
+**		-> This removes the need to toggle ShowUpdate()/HideUpdate() when an entity is deleted
+**	- Adjusted func_brush color to help distinguish it from infected clips better
+**	- Text will stop being rendered if it is off-screen for 10 seconds
+**	- Made ShowUpdate() instantly call DebugRedraw(), instead of waiting 1 second for worldspawn to fire the script
+**	- ShowUpdate() now skips over all entity types that won't be highlighted
+**	- Number of entities indexed is printed to console
+**	- Changed some if statements to switch case for optimization
+**	- Defines entity highlight colors at initialization instead of calling them within draw loop
+*/
+
 // Call to cease and desist DebugRedraw(). Technically fires "StopGlowing" to all blockers,
 // too, but only props will process that Input and it's more efficient than another loop.
 
@@ -54,21 +98,81 @@ function HideUpdate()
 	DebugDrawClear();
 	EntFire( "worldspawn", "RunScriptCode", "DebugDrawClear()", 0.1 );
 	EntFire( g_UpdateName + "*", "StopGlowing" );
+	
+	// Disable glows on props highlighted by ShowUpdate without with g_UpdateName prefixed.
+	
+	if ( g_TutorialShown )
+	{
+		
+		for ( local index = 0;
+			  g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
+			  index++ )
+		{
+			if ( ! g_arrayFixHandles[index].IsValid() )
+			{
+				g_arrayFixHandles.remove( index );	// Entity is not valid, remove from array and skip.
+				printl( "Invalid entity '" + index + "' removed from drawing index." );
+				break;
+			}
+			
+			EntFire( g_arrayFixHandles[index].GetName(), "StopGlowing" );
+		}
+	
+		// Clean up global arrays.
+		
+		g_arrayFixHandles.clear();
+		g_arrayLadderSources.clear();
+		g_arrayFixHandles <- array( 1, null );
+		g_arrayLadderSources <- array( 1, null);
+	}
+	
 }
 
 // Opacity override for DebugDrawBox's (default 37).
 
 g_BoxOpacity <- 37;
 
+// Define "constants" for colors used with DebugDrawBox.
+// Constants and enums cannot be vectors, so make do with variables.
+
+COLOR_CLIP_RED			<- Vector( 255,   0,   0 );
+COLOR_CLIP_PINK			<- Vector( 185,   0, 185 );
+COLOR_CLIP_GREEN		<- Vector(   0, 255,   0 );
+COLOR_CLIP_BLUE			<- Vector(   0,   0, 255 );
+COLOR_CLIP_LTBLUE		<- Vector(   0, 128, 255 );
+COLOR_CLIP_BLACK		<- Vector(   0,   0,   0 );
+COLOR_BRUSH_LTGREEN		<- Vector( 108, 200,  64 );
+COLOR_NAV_ORANGE		<- Vector( 255,  45,   0 );
+COLOR_TRIGGER_YELLOW	<- Vector( 255, 255,   0 );
+COLOR_LADDER_WHITE		<- Vector( 255, 255, 255 );
+COLOR_LADDER_PURPLE		<- Vector( 134,  60, 218 );
+COLOR_LADDER_ORANGE		<- Vector( 255, 128,  64 );
+
 // Only show CLIP (blocker) color coding tutorial once per load session.
 
 g_TutorialShown <- false;
 
+// Wrapper functions for ShowUpdate to allow the arguments to be used with key binds.
+
+function ShowUpdateAll()
+{
+	ShowUpdate( "all" )
+}
+
+function ShowUpdateOther()
+{
+	ShowUpdate( "other" )
+}
+
 // Call to create a logic_timer as 1/10th of a Think to start DebugRedraw(). This Timer
 // is named "anv_mapfixes_DebugRedraw_timer" and only exists if it's manually created.
 
-function ShowUpdate()
+function ShowUpdate( showGroup = "anv" )
 {
+	
+	// Ignore case sensitivity for arguments.
+	showGroup = showGroup.tolower();
+	
 	// Print a quick tutorial to console for CLIP (blocker) color coding and binds.
 
 	if ( ! g_TutorialShown )
@@ -106,24 +210,85 @@ function ShowUpdate()
 	// The "find" returns the earliest character index where 0 means it's a match.
 	// The Timer (and any "helper entities") have no reason to be in this array.
 
-	g_arrayFixHandles <- array( 200, null );	// We'll never need all 200 fix entities.
+	// Initialize global arrays.
+	
+	g_arrayFixHandles <- array( 1, null );
+	g_arrayLadderSources <- array( 1, null);
 
-	local entity = Entities.First();		// Start looping from "worldspawn".
+	local entity = Entities.First();	// Start looping from "worldspawn".
 
-	local index = 0;				// Increment not on loop but rather confirmed matches.
+	local index = 0;					// Increment not on loop but rather confirmed matches.
 
 	while( ( entity = Entities.Next( entity ) ) != null )
 	{
-		if ( entity.GetName().find( g_UpdateName ) == 0
-		  && entity.GetName() != "anv_mapfixes_DebugRedraw_timer" )
+		
+		// Store entity properties.
+		
+		local strEntityName = entity.GetName();
+		local strClassname = entity.GetClassname();
+		
+		// Skip entities that we don't care about.
+		
+		switch ( strClassname )
+		{
+			case "env_physics_blocker":
+			case "env_player_blocker":
+			case "func_brush":
+			case "func_nav_blocker":
+			case "trigger_multiple":
+			case "trigger_once":
+			case "trigger_push":
+			case "trigger_hurt":
+			case "trigger_hurt_ghost":
+			case "trigger_auto_crouch":
+			case "trigger_playermovement":
+			case "trigger_teleport":
+			case "func_simpleladder":
+				break;
+			case "prop_dynamic":
+			case "prop_dynamic_override":
+			case "prop_physics":
+			case "prop_physics_override":
+				EntFire( strEntityName, "StopGlowing" ); // Reset glows on all models.
+				break;
+			default:
+				continue; // Not any of the above entities, skip.
+				break;
+		}
+		
+		// Determine which entities to index based on argument given in ShowUpdate().
+		
+		local anvUpdateEntity = strEntityName.find( g_UpdateName );
+		local validEntity = 0;
+		
+		switch( showGroup )
+		{
+			case "all":
+				break;
+			case "other":
+				if ( anvUpdateEntity == 0 ) continue; // Found g_UpdateName at start of name, skip entity.
+				break;
+			default:
+				if ( strClassname == "env_player_blocker" ) break; // Entity is a commentary blocker, index it.
+				if ( anvUpdateEntity != 0 ) continue; // Did not find g_UpdateName at start of name, skip entity.
+				break;
+		}
+		
+		if ( strEntityName != "anv_mapfixes_DebugRedraw_timer" )
 		{
 			// Confirmed to be a fix entity so add it to array.
-
+			
 			g_arrayFixHandles[index] = entity;
-
+			
 			index++;
+			
+			// Resize array for next entity.
+			
+			g_arrayFixHandles.resize( index + 1 , null );
 		}
 	}
+	
+	printl( "\nIndexed "+ index + " entities!\n" );
 
 	// Timer that DebugRedraw()'s every 1 second, better than AddThinkToEnt() because it
 	// runs 1/10th as often and still looks good. Only make if one doesn't already exist.
@@ -143,257 +308,678 @@ function ShowUpdate()
 			}
 		} );
 	}
+	
+	DebugRedraw()
 }
 
 // Declare function that houses the redraw loop the above Timer runs every 1 second.
-// The IsValid() avoids "Accessed null instance" error if an entity within Handle array
-// is deleted -- this will still break redraws, hence "TUTORIAL" to explain Hide/Show toggle.
 
 function DebugRedraw()
 {
-	// Draw all "anv_mapfixes"-prefixed entities.
+	local index = 0;
+	
+	// Clear ladder model sources array at the start of a redraw.
+	
+	g_arrayLadderSources.clear()
+	
+	// Clear debug overlay info before starting a new redraw.
+	// Props don't need to be "redrawn" since the one "StartGlowing" is sufficient.
+	
+	DebugDrawClear();
+	
+	// Draw all indexed entities.
 
-	for ( local index = 0;
-	      g_arrayFixHandles[index] != null && g_arrayFixHandles[index].IsValid();
+	for ( index = 0;
+	      g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
 	      index++ )
 	{
-		// Only clear for 1st redrawn entity. If absent, only last-most blocker is drawn.
-		// Props don't need to be "redrawn" since the one "StartGlowing" is sufficient.
-
-		if ( index == 0 )
+		// Remove invalid or deleted entities from array before drawing.
+		
+		if ( ! g_arrayFixHandles[index].IsValid() )
 		{
-			DebugDrawClear();
+			g_arrayFixHandles.remove( index );	// Entity is not valid, remove from array and skip.
+			printl( "Invalid entity '" + index + "' removed from drawing index." );
+			break;
 		}
-
-		// Variables for readability. GetOrigin() and GetName() read well without them.
-
-		local strClassname = g_arrayFixHandles[index].GetClassname();
+		
+		// Store entity handles and values.
+		
 		local hndFixHandle = g_arrayFixHandles[index];
-
-		// Restore Keyvalues from make_clip() to draw visible box for invisible blocker.
-
-		if ( strClassname == "env_physics_blocker" )
+		local strClassname = hndFixHandle.GetClassname();
+		local strTargetname = hndFixHandle.GetName();
+		local vecOrigin = hndFixHandle.GetOrigin();
+		local vecAngles = hndFixHandle.GetAngles();
+		
+		// Evaulate classname and apply debug draw.
+		
+		switch ( strClassname )
 		{
-			local intBlockType = NetProps.GetPropInt( hndFixHandle, "m_nBlockType" );
+			
+			// Restore Keyvalues from make_clip() to draw visible box for invisible blocker.
+			
+			case "env_physics_blocker":
+			case "env_player_blocker":
+				
+				local intBlockType = NetProps.GetPropInt( hndFixHandle, "m_nBlockType" );
+				local blockerIsAngled = false;
+				
+				// Post-fix " (ANGLED)" to all blockers that have non-"0 0 0" rotation. This is
+				// warned in ShowUpdate()'s tutorial. Engine forces rotated clips to block Physics!
+				// NetProp "m_angRotation" used instead of GetAngles() because it returns a Vector.
+				if ( NetProps.GetPropVector( hndFixHandle, "m_angRotation" ).tostring() != Vector( 0, 0, 0 ).tostring() )
+				{
+					blockerIsAngled = true;
+					strTargetname = strTargetname + " (ANGLED)";
+				}
+				
+				// See SetFilter function for values.
+				
+				switch( g_SetFilterClip )
+				{
+					case 0:
+						continue;
+						break;
+					case 1:
+						break;
+					case 2:
+						if ( strClassname == "env_player_blocker" ) continue;
+						break;
+					case 3:
+						if ( strClassname == "env_physics_blocker" ) continue;
+						break;
+					case 4:
+						if ( blockerIsAngled == false ) continue;
+						break;
+				}
+				
+				if ( g_SetFilterBlockType != -1 )
+				{
+					if ( g_SetFilterBlockType != intBlockType ) continue;
+				}
+				
+				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
+				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
+				local vecBoxColor = null;
+				
+				// Color debug box by BlockType.
 
-			local vecBoxColor = null;
+				switch( intBlockType )
+				{
+					case 0:	vecBoxColor = COLOR_CLIP_RED;		break;	// "Everyone" (RED)
+					case 1:	vecBoxColor = COLOR_CLIP_PINK;		break;	// "Survivors" (PINK)
+					case 2:	vecBoxColor = COLOR_CLIP_GREEN;		break;	// "SI Players" (GREEN)
+					case 3:	vecBoxColor = COLOR_CLIP_BLUE;		break;	// "SI Players and AI" (BLUE)
+					case 4:	vecBoxColor = COLOR_CLIP_LTBLUE;	break;	// "All and Physics" (LT BLUE)
+					default: vecBoxColor = COLOR_CLIP_BLACK;	break;	// Invalid block type (BLACK)
+				}
 
-			switch( intBlockType )
-			{
-				case 0:	vecBoxColor = Vector( 255,   0,   0 );	break;	// "Everyone" (RED)
-				case 1:	vecBoxColor = Vector( 185,   0, 185 );	break;	// "Survivors" (PINK)
-				case 2:	vecBoxColor = Vector(   0, 255,   0 );	break;	// "SI Players" (GREEN)
-				case 3:	vecBoxColor = Vector(   0,   0, 255 );	break;	// "SI Players and AI" (BLUE)
-				case 4:	vecBoxColor = Vector(   0, 128, 255 );	break;	// "All and Physics" (LT BLUE)
-			}
+				// Note DebugDrawBoxDirection() with GetForwardVector() only supports Y (yaw).
+				// X/pitch and Z/roll don't show. Kerry added DebugDrawBoxAngles() to fix this.
+				// DebugDrawBoxAngles() requires a QAngle which GetAngles() returns!
 
-			local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
-			local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
+				DebugDrawBoxAngles( vecOrigin, vecMins, vecMaxs,
+							vecAngles, vecBoxColor,
+							g_BoxOpacity, 99999999 );
+				
+				// Label env_player_blocker separately, we assume they are always from _commentary.txt
+				
+				local clipType = "";
+				switch( strClassname )
+				{
+					case "env_physics_blocker":	clipType =	"CLIP";  break;
+					case "env_player_blocker":	clipType =	"PCLIP"; break;
+				}
+				
+				// Draw text to identify entity.
+				
+				DebugRedrawName( vecOrigin, strTargetname, clipType, index);
+				
+				break;
+			
+			// Restore Keyvalues from make_brush() to draw visible box for invisible brush.
+			
+			case "func_brush":
+			
+				// See SetFilter function for values.
+				
+				switch( g_SetFilterBrush )
+				{
+					case 0:
+						continue;
+						break;
+					case 1:
+						if ( NetProps.GetPropInt( hndFixHandle, "m_nModelIndex" ) != 0 ) continue; // Brushes from scripts won't have a model.
+						break;
+					case 2:
+						break;
+				}
+				
+				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
+				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
+				local vecBoxColor = COLOR_BRUSH_LTGREEN;	// LT GREEN
 
-			// Note DebugDrawBoxDirection() with GetForwardVector() only supports Y (yaw).
-			// X/pitch and Z/roll don't show. Kerry added DebugDrawBoxAngles() to fix this.
-			// DebugDrawBoxAngles() requires a QAngle which GetAngles() returns!
+				// Brush rotation unsupported so GetAngles() does nothing.
 
-			DebugDrawBoxAngles( hndFixHandle.GetOrigin(), vecMins, vecMaxs,
-					    hndFixHandle.GetAngles(), vecBoxColor,
-					    g_BoxOpacity, 99999999 );
+				DebugDrawBoxAngles( vecOrigin, vecMins, vecMaxs,
+							vecAngles, vecBoxColor,
+							g_BoxOpacity, 99999999 );
 
-			// Post-fix " (ANGLED)" to all blockers that have non-"0 0 0" rotation. This is
-			// warned in ShowUpdate()'s tutorial. Engine forces rotated clips to block Physics!
-			// NetProp "m_angRotation" used instead of GetAngles() because it returns a Vector.
+				// Draw text to identify entity.
+				
+				DebugRedrawName( vecOrigin, strTargetname, "BRUSH", index);
 
-			local strPseudonym = hndFixHandle.GetName();
+				break;
+			
+			// Restore Keyvalues from make_navblock() to draw visible box for navblocked region.
+			
+			case "func_nav_blocker":
+			
+				// See SetFilter function for values.
+				
+				switch( g_SetFilterNav )
+				{
+					case 0:
+						continue;
+						break;
+					case 1:
+						if ( NetProps.GetPropInt( hndFixHandle, "m_nModelIndex" ) != 0 ) continue; // Brushes from scripts won't have a model.
+						break;
+					case 2:
+						break;
+				}
 
-			if ( NetProps.GetPropVector( hndFixHandle, "m_angRotation" ).tostring() != Vector( 0, 0, 0 ).tostring() )
-			{
-				strPseudonym = strPseudonym + " (ANGLED)";
-			}
+				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
+				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
+				local vecBoxColor = COLOR_NAV_ORANGE;	// ORANGE
 
-			// Slice "anv_mapfixes" out of name by using lengths and prefix "CLIP: " instead.
+				// Rotation on navblockers is especially unsupported and always 0's.
 
-			DebugDrawText( hndFixHandle.GetOrigin(),
-				       "CLIP: " + strPseudonym.slice( g_UpdateName.len(), strPseudonym.len() ),
-				       false, 99999999 );
-		}
+				DebugDrawBoxAngles( vecOrigin, vecMins, vecMaxs,
+							vecAngles, vecBoxColor,
+							g_BoxOpacity, 99999999 );
 
-		// Restore Keyvalues from make_brush() to draw visible box for invisible brush.
+				// Draw text to identify entity.
+				
+				DebugRedrawName( vecOrigin, strTargetname, "NAVBLOCK", index);
+				
+				break;
+			
+			// Restore Keyvalues from several "trigger_" entities to draw visible boxes for them.
+			
+			case "trigger_multiple":
+			case "trigger_once":
+			case "trigger_push":
+			case "trigger_hurt":
+			case "trigger_hurt_ghost":
+			case "trigger_auto_crouch":
+			case "trigger_playermovement":
+			case "trigger_teleport":
+			
+				// See SetFilter function for values.
+				
+				switch( g_SetFilterTrigger )
+				{
+					case 0:
+						continue;
+						break;
+					case 1:
+						if ( NetProps.GetPropInt( hndFixHandle, "m_nModelIndex" ) != 0 ) continue; // Brushes from scripts won't have a model.
+						break;
+					case 2:
+						break;
+				}
+				
+				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
+				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
+				local vecBoxColor = COLOR_TRIGGER_YELLOW;	// YELLOW
 
-		if ( strClassname == "func_brush" )
-		{
-			local vecBoxColor = Vector( 32, 255, 64 );	// LT GREEN
+				// Triggers are a wildcard but try to draw Angles just in case they're non-0.
+				// Note that "trigger_push" rotation has unknown mild influence on Push Direction
+				// that's only noticeable with Death Toll 5's Rockslide RNG. Angles definitely don't
+				// impact actual collidability and is why "trigger_hurt" fails entirely with them.
 
-			local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
-			local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
+				DebugDrawBoxAngles( vecOrigin, vecMins, vecMaxs,
+							vecAngles, vecBoxColor,
+							g_BoxOpacity, 99999999 );
 
-			// Brush rotation unsupported so GetAngles() does nothing.
+				// Draw text to identify entity.
+				
+				DebugRedrawName( vecOrigin, strTargetname, "TRIGGER", index);
+				
+				break;
+			
+			// Extract vecMins/vecMaxs from make_ladder() to draw visible box around cloned Infected Ladder.
+			
+			case "func_simpleladder":
+			
+				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
+				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
+				local vecBoxColor = COLOR_LADDER_WHITE;	// WHITE
+				
+				// Draw moved non-update-named ladders in purple.
+				
+				if ( strTargetname.find( g_UpdateName ) == null)
+				{
+					vecBoxColor = COLOR_LADDER_PURPLE;		// PURPLE
+				}
+				
+				// See SetFilter function for values.
+				
+				switch( g_SetFilterLadder )
+				{
+					case 0:
+						continue;
+						break;
+					case 1:
+						if ( vecOrigin.tostring() == Vector( 0, 0, 0 ).tostring() )	// Ladders from scripts won't be at (0,0,0). Also draws ladders that are not new but have been moved.
+						{
+							continue;
+						}
+						break;
+					case 2:
+						if ( vecOrigin.tostring() == Vector( 0, 0, 0 ).tostring() )	// Draws built in ladders.
+						{
+							vecBoxColor = COLOR_LADDER_ORANGE;	// LIGHT ORANGE
+						}
+						break;
+				}
+				
+				// Draw text at the SOURCE ladder's location for inspection/comparison.
+				// For fun, sprinkle in its modelindex-turned-model so that it
+				// can at least be compared with "developer 1" Table dumps!
+				
+				local modelName = hndFixHandle.GetModelName();
+				
+				DebugRedrawCloneSource(vecMins, modelName)
 
-			DebugDrawBoxAngles( hndFixHandle.GetOrigin(), vecMins, vecMaxs,
-					    hndFixHandle.GetAngles(), vecBoxColor,
-					    g_BoxOpacity, 99999999 );
+				// By the grace of GabeN with a sparkle of luck from Kerry ladders can be rotated.
 
-			// Slice "anv_mapfixes" out of name by using lengths and prefix "BRUSH: " instead.
+				// Salt the opacity with + 24 so it stands out a bit more.
 
-			DebugDrawText( hndFixHandle.GetOrigin(),
-				       "BRUSH: " + hndFixHandle.GetName().slice( g_UpdateName.len(), hndFixHandle.GetName().len() ),
-				       false, 99999999 );
-		}
+				DebugDrawBoxAngles( vecOrigin, vecMins, vecMaxs,
+							vecAngles, vecBoxColor,
+							g_BoxOpacity + 24, 99999999 );
 
-		// Restore Keyvalues from make_navblock() to draw visible box for navblocked region.
+				// Draw text to identify entity.
+				
+				DebugRedrawName( vecOrigin + MathLadderOrigin(vecMins, vecMaxs, vecAngles), strTargetname, "LADDER", index);
+				
+				break;
+			
+			// Keyvalues from make_prop() don't need restoration as attributes can be visually assessed.
+			
+			case "prop_dynamic":
+			case "prop_dynamic_override":
+			case "prop_physics":
+			case "prop_physics_override":
+			
+				// See SetFilter function for values.
+				
+				switch( g_SetFilterProp )
+				{
+					case 0:
+						EntFire( strTargetname, "StopGlowing" );
+						continue;
+						break;
+					case 1:
+						break;
+					case 2:
+						if ( strClassname == "prop_physics" || strClassname == "prop_physics_override" ) continue;
+						break;
+					case 3:
+						if ( strClassname == "prop_dynamic" || strClassname == "prop_dynamic_override" ) continue;
+						break;
+				}
+				
+				EntFire( strTargetname, "StartGlowing" );
 
-		if ( strClassname == "func_nav_blocker" )
-		{
-			local vecBoxColor = Vector( 255, 45, 0 );	// ORANGE
-
-			local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
-			local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
-
-			// Rotation on navblockers is especially unsupported and always 0's.
-
-			DebugDrawBoxAngles( hndFixHandle.GetOrigin(), vecMins, vecMaxs,
-					    hndFixHandle.GetAngles(), vecBoxColor,
-					    g_BoxOpacity, 99999999 );
-
-			// Slice "anv_mapfixes" out of name by using lengths and prefix "NAVBLOCK: " instead.
-
-			DebugDrawText( hndFixHandle.GetOrigin(),
-				       "NAVBLOCK: " + hndFixHandle.GetName().slice( g_UpdateName.len(), hndFixHandle.GetName().len() ),
-				       false, 99999999 );
-		}
-
-		// Restore Keyvalues from several "trigger_" entities to draw visible boxes for them.
-
-		if ( strClassname == "trigger_multiple"
-		  || strClassname == "trigger_once"
-		  || strClassname == "trigger_push"
-		  || strClassname == "trigger_hurt"
-		  || strClassname == "trigger_hurt_ghost"
-		  || strClassname == "trigger_auto_crouch"
-		  || strClassname == "trigger_playermovement" )
-		{
-			local vecBoxColor = Vector( 255, 255, 0 );	// YELLOW
-
-			local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
-			local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
-
-			// Triggers are a wildcard but try to draw Angles just in case they're non-0.
-			// Note that "trigger_push" rotation has unknown mild influence on Push Direction
-			// that's only noticeable with Death Toll 5's Rockslide RNG. Angles definitely don't
-			// impact actual collidability and is why "trigger_hurt" fails entirely with them.
-
-			DebugDrawBoxAngles( hndFixHandle.GetOrigin(), vecMins, vecMaxs,
-					    hndFixHandle.GetAngles(), vecBoxColor,
-					    g_BoxOpacity, 99999999 );
-
-			// Slice "anv_mapfixes" out of name by using lengths and prefix "TRIGGER: " instead.
-
-			DebugDrawText( hndFixHandle.GetOrigin(),
-				       "TRIGGER: " + hndFixHandle.GetName().slice( g_UpdateName.len(), hndFixHandle.GetName().len() ),
-				       false, 99999999 );
-		}
-
-		// Extract vecMins/vecMaxs from make_ladder() to draw visible box around cloned Infected Ladder.
-
-		if ( strClassname == "func_simpleladder" )
-		{
-			local vecBoxColor = Vector( 255, 255, 255 );	// WHITE
-
-			local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
-			local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
-
-			// By the grace of GabeN with a sparkle of luck from Kerry ladders can be rotated.
-
-			// Salt the opacity with + 24 so it stands out a bit more.
-
-			DebugDrawBoxAngles( hndFixHandle.GetOrigin(), vecMins, vecMaxs,
-					    hndFixHandle.GetAngles(), vecBoxColor,
-					    g_BoxOpacity + 24, 99999999 );
-
-			// Slice "anv_mapfixes" out of name by using lengths and prefix "LADDER: " instead.
-
-			// LADDERS ONLY:
-			//
-			//	The math here is a bit confusing but comes down to this, an example
-			//	extracted from Parish 2's new "_ladder_farcorner_cloned_horsehedge":
-			//
-			//		-5703.076172 -4246.962891 -246.501984		Where the tester sees drawn box
-			//		-6441.002441 -3077.000000 -257.000000		vecMins far away b/c cloned brush
-			//		-6359.000000 -3059.000000 -127.000000		vecMaxs, also misleading
-			//		  695.000000 -1186.000000  -16.000000		GetOrigin(), source ladder shift/offset
-			//
-			//	There's no crazy math needed here. While just how DebugDrawBox()
-			//	still works so perfectly is a bit of a mystery, simply adding
-			//	vecMins to GetOrigin() will produce the final, visible location
-			//	of the cloned ladder. The fact NetProp "m_vecSpecifiedSurroundingMaxs"
-			//	is not populated for clones requires this to determine location
-			//	(and isn't worth risking the game crashing if the VSSM is force-set).
-			//	Without adding them the text is placed towards the map's origin.
-			//////////////////////////////////////////////////////////////////////////////
-
-			// Draw the CLONED ladder's targetname where DebugDrawBox is / players actually use it.
-
-			DebugDrawText( vecMins + hndFixHandle.GetOrigin(),
-				       "LADDER: " + hndFixHandle.GetName().slice( g_UpdateName.len(), hndFixHandle.GetName().len() ),
-				       false, 99999999 );
-
-			// Draw text at the SOURCE ladder's location for inspection/comparison. Given that several
-			// of these will often overlap because the same source was used, they'd be unreadable, so
-			// the text is simple here. For fun, sprinkle in its modelindex-turned-model so that it
-			// can at least be compared with "developer 1" Table dumps!
-
-			DebugDrawText( vecMins, "LADDER CLONE SOURCE (" + hndFixHandle.GetModelName() + ")", false, 99999999 );
-		}
-
-		// Keyvalues from make_prop() don't need restoration as attributes can be visually assessed.
-
-		if ( strClassname == "prop_dynamic"
-		  || strClassname == "prop_dynamic_override"
-		  || strClassname == "prop_physics"
-		  || strClassname == "prop_physics_override" )
-		{
-			EntFire( hndFixHandle.GetName(), "StartGlowing" );
-
-			// Slice "anv_mapfixes" out of name by using lengths and prefix "PROP: " instead.
-
-			DebugDrawText( hndFixHandle.GetOrigin(),
-				       "PROP: " + hndFixHandle.GetName().slice( g_UpdateName.len(), hndFixHandle.GetName().len() ),
-				       false, 99999999 );
+				// Draw text to identify entity.
+				
+				DebugRedrawName( vecOrigin, strTargetname, "PROP", index);
+				
+				break;
+				
+			default:
+				break;
 		}
 	}
+}
 
-	// To be complete, draw in BLACK all player and physics blockers that are NOT
-	// "anv_mapfixes"-prefixed. This reveals lump and _commentary.txt blockers.
+// Function to handle the drawing of text on highlighted entities.
 
-	local hndPlay = null;
-
-	while( ( hndPlay = Entities.FindByClassname( hndPlay, "env_player_blocker" ) ) != null )
+function DebugRedrawName( origin, name, entityType, index )
+{
+	
+	// See SetFilter function for values.
+	
+	local UseViewCheck = false;
+	
+	if ( g_SetFilterText == 0 )
 	{
-		if ( hndPlay.GetName().find( "anv_mapfixes" ) != 0 )
-		{
-			local mins = NetProps.GetPropVector( hndPlay, "m_Collision.m_vecMins" );
-			local maxs = NetProps.GetPropVector( hndPlay, "m_Collision.m_vecMaxs" );
-
-			local vecBoxColor = Vector( 0, 0, 0 );
-
-			DebugDrawBoxAngles( hndPlay.GetOrigin(), mins, maxs,
-					    hndPlay.GetAngles(), vecBoxColor,
-					    g_BoxOpacity + 61, 99999999 );
-		}
+		return;
 	}
-
-	local hndPhys = null;
-
-	while( ( hndPhys = Entities.FindByClassname( hndPhys, "env_physics_blocker" ) ) != null )
+	else if ( g_SetFilterText == 2 )
 	{
-		if ( hndPhys.GetName().find( "anv_mapfixes" ) != 0 )
+		UseViewCheck = true;
+	}
+	
+	local namePrefix = entityType + ": ";
+	local additionalPrefix = "";
+	
+	// Rules by entity type.
+	
+	switch( entityType )
+	{
+		case "CLIP":
+			additionalPrefix = "(LUMP)"			// Prefix for non-anv_mapfixes entities.
+			break;
+		case "PCLIP":
+			additionalPrefix = "(COMMENTARY)"	// Prefix for commentary blocker entities (env_player_blocker).
+			break;
+		default:
+			break;
+	}
+	
+	// Entity does not have a targetname.
+	
+	if ( name == "" )
+	{
+		name = "unnamed";
+	}
+	
+	// Build display text and check for g_UpdateName string within entity name.
+	
+	if ( name.find( g_UpdateName ) == null )
+	{
+		namePrefix = additionalPrefix + " " + namePrefix;		// g_UpdateName was not found, mark as non-anv_mapfixes entity.
+	}
+	else
+	{
+		name = name.slice( g_UpdateName.len(), name.len() );	// g_UpdateName string was found, remove it.
+	}
+	
+	DebugDrawText( origin, namePrefix + name + " (" + index + ")", UseViewCheck, 10 );
+}
+
+// Function to handle the drawing of text on cloned ladder models.
+
+function DebugRedrawCloneSource( origin, modelName )
+{
+
+	// See SetFilter function for values.
+	
+	local UseViewCheck = false;
+	
+	if ( g_SetFilterText == 0 )
+	{
+		return;
+	}
+	else if ( g_SetFilterText == 2 )
+	{
+		UseViewCheck = true;
+	}
+	
+	// Build list of used ladder sources to avoid duplicating text.
+	
+	if ( g_arrayLadderSources.find( modelName ) == null )
+	{
+		DebugDrawText( origin, "LADDER CLONE SOURCE (" + modelName + ")", UseViewCheck, 10 );
+		g_arrayLadderSources.resize( g_arrayLadderSources.len() + 1 , null );
+		g_arrayLadderSources.append( modelName );
+	}
+}
+
+// Calculate correct position to display text at with MathLadderOrigin, otherwise labels for rotated ladders will be displaced.
+
+function MathLadderOrigin( vecMins, vecMaxs, vecAngles )
+{
+
+	// Position of ladder mins and maxs to transform.
+	
+	local vectorX = ( vecMins.x + vecMaxs.x ) / 2;
+	local vectorY = ( vecMins.y + vecMaxs.y ) / 2;
+	local vectorZ = ( vecMins.z + vecMaxs.z ) / 2;
+
+	// Angle ladder is rotated by, in radians.
+
+	local angleX = ( vecAngles.z * PI ) / 180;
+	local angleY = ( vecAngles.x * PI ) / 180;
+	local angleZ = ( vecAngles.y * PI ) / 180;
+
+	// Store trig calculations.
+
+	local cosX = cos( angleX );
+	local cosY = cos( angleY );
+	local cosZ = cos( angleZ );
+	local sinX = sin( angleX );
+	local sinY = sin( angleY );
+	local sinZ = sin( angleZ );
+
+	// Mid-calculation variables.
+
+	local transformedX = 0;
+	local transformedY = 0;
+	local transformedZ = 0;
+
+	// 3D rotation matrix.
+
+	transformedY = ( cosX * vectorY ) - ( sinX * vectorZ );
+	transformedZ = ( cosX * vectorZ ) + ( sinX * vectorY );
+	vectorY = transformedY;
+	vectorZ = transformedZ;
+
+	transformedX = ( cosY * vectorX ) + ( sinY * vectorZ );
+	transformedZ = ( cosY * vectorZ ) - ( sinY * vectorX );
+	vectorX = transformedX;
+	vectorZ = transformedZ;
+
+	transformedX = ( cosZ * vectorX ) - ( sinZ * vectorY );
+	transformedY = ( cosZ * vectorY ) + ( sinZ * vectorX );
+	vectorX = transformedX;
+	vectorY = transformedY;
+
+	// Final result is the offset of the ladder from the world's origin (0,0,0), but corrected for rotation.
+	// GetOrigin gives us the offset of the ladder from its cloned model.
+	// Adding them together produces the actual position of the ladder in the world.
+	
+	return Vector( vectorX, vectorY, vectorZ );
+}
+
+// Function to change settings for groups of entities to be highlighted.
+// Entering "all" for the value argument will default to 1, except for blocktype where it defaults to -1 (no filter).
+
+// Initialize SetFilter settings.
+
+g_SetFilterClip <- 1;
+g_SetFilterBlockType <- -1;
+g_SetFilterBrush <- 1;
+g_SetFilterNav <- 1;
+g_SetFilterTrigger <- 1;
+g_SetFilterLadder <- 1;
+g_SetFilterProp <- 1;
+g_SetFilterText <- 1;
+
+/*
+** Entity Filters:
+** all
+**		- Entities:	All below entities
+**		- Values:	0 = Hides all entity groups, 1 = Shows all entity groups (Default)
+** clip
+** 		- Entities:	env_physics_blocker, env_player_blocker
+**		- Values:	0 = Hide all clips, 1 = Show all clips (Default), 2 = Only env_physics_blocker, 3 = Only env_player_blocker, 4 = Only angled blockers
+** blocktype
+**		- Entities:	env_physics_blocker, env_player_blocker - Filters by BlockType key value
+**		- Values:	all (-1) = All block types (Default), 0 = Everyone, 1 = Survivors, 2 = Player Infected,
+**					3 = All Special Infected (Player and AI), 4 = All players and physics objects (env_physics_blocker only)
+** brush
+** 		- Entities:	func_brush
+**		- Values:	0 = Hide all brushes, 1 = Show all brushes with "model" key value set to "0" (Default), 2 = Shows all brushes
+** nav
+** 		- Entities:	func_nav_blocker
+**		- Values:	0 = Hide all nav blockers, 1 = Show all nav blockers with "model" key value set to "0" (Default), 2 = Shows all nav blockers
+** trigger
+** 		- Entities:	trigger_multiple, trigger_once, trigger_push, trigger_hurt, trigger_hurt_ghost, trigger_auto_crouch,
+**					trigger_playermovement, trigger_teleport
+**		- Values:	0 = Hide all triggers, 1 = Show all triggers with "model" key value set to "0" (Default), 2 = Shows all triggers
+** ladder
+** 		- Entities:	func_simpleladders
+**		- Values:	0 = Hide all ladders, 1 = Show all ladders with non-zero "origin" key value (Default), 2 = Shows all ladders
+** prop
+** 		- Entities:	prop_dynamic, prop_dynamic_override, prop_physics, prop_physics_override
+**		- Values:	0 = Hide all props, 1 = Shows all props (Default), 2 = Show dynamic props only, 3 = Show physics props only
+** text
+**		- Entities: Debug text
+**		- Values:	0 = Hides all text, 1 = Shows all text (Default), 2 = Shows text only if there is a direct line of sight
+*/
+
+function SetFilter( entityGroup = null, value = null )
+{
+	
+	// Ignore case sensitivity for arguments.
+	
+	entityGroup = entityGroup.tolower();
+	
+	// Process value argument to ensure it's valid for the entityGroup switch.
+	
+	switch( value )
+	{
+		case null:
+			if ( entityGroup == "blocktype" )
+			{
+				value = -1;
+			}
+			else
+			{
+				value = 1;
+			}
+			break;
+		case "all":
+			if ( entityGroup == "blocktype" )
+			{
+				value = -1;
+			}
+			else
+			{
+				value = 1;
+			}
+			break;
+		default:
+			try
+			{
+				value = value.tointeger();
+			}
+			catch ( err )
+			{
+				value = 1;
+				printl("\nValue: '" + value + "' is not valid, using default value.\n");
+			}
+			break;
+	}
+	
+	// Change filter settings to parsed arguments.
+	// Catch if value provided is outside the possible range, set to default if it is.
+	
+	switch( entityGroup )
+	{
+		case "all":
+			if (value < 0 || value > 1)
+			{
+				value = 1;
+			}
+			
+			// Clip Block Type is a special case and has a different default.
+			
+			/*
+			if ( value == 1 )
+			{
+				g_SetFilterBlockType <- -1;
+			}
+			else
+			{
+				g_SetFilterBlockType <- value;
+			}
+			*/
+			
+			g_SetFilterClip <- value;
+			g_SetFilterBrush <- value;
+			g_SetFilterNav <- value;
+			g_SetFilterTrigger <- value;
+			g_SetFilterLadder <- value;
+			g_SetFilterProp <- value;
+			break;
+		case "clip":
+			if (value < 0 || value > 4)
+			{
+				value = 1;
+			}
+			g_SetFilterClip <- value;
+			break;
+		case "blocktype":
+			if (value < -1 || value > 4)
+			{
+				value = -1;
+			}
+			g_SetFilterBlockType <- value;
+			break;
+		case "brush":
+			if (value < 0 || value > 2)
+			{
+				value = 1;
+			}
+			g_SetFilterBrush <- value;
+			break;
+		case "nav":
+			if (value < 0 || value > 2)
+			{
+				value = 1;
+			}
+			g_SetFilterNav <- value;
+			break;
+		case "trigger":
+			if (value < 0 || value > 2)
+			{
+				value = 1;
+			}
+			g_SetFilterTrigger <- value;
+			break;
+		case "ladder":
+			if (value < 0 || value > 2)
+			{
+				value = 1;
+			}
+			g_SetFilterLadder <- value;
+			break;
+		case "prop":
+			if (value < 0 || value > 3)
+			{
+				value = 1;
+			}
+			g_SetFilterProp <- value;
+			break;
+		case "text":
+			if (value < 0 || value > 2)
+			{
+				value = 1;
+			}
+			g_SetFilterText <- value;
+			break;
+		default:
+			printl("\nEntity group: '" + entityGroup + "' is not valid, or no entity group was specified.\n");
+			return;
+			break;
+	}
+	
+	// Disable glows on props highlighted by ShowUpdate without with g_UpdateName prefixed.
+	
+	if ( g_TutorialShown )
+	{
+		for ( local index = 0;
+			  g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
+			  index++ )
 		{
-			local mins = NetProps.GetPropVector( hndPhys, "m_Collision.m_vecMins" );
-			local maxs = NetProps.GetPropVector( hndPhys, "m_Collision.m_vecMaxs" );
-
-			local vecBoxColor = Vector( 0, 0, 0 );
-
-			DebugDrawBoxAngles( hndPhys.GetOrigin(), mins, maxs,
-					    hndPhys.GetAngles(), vecBoxColor,
-					    g_BoxOpacity + 61, 99999999 );
+			EntFire( g_arrayFixHandles[index].GetName(), "StopGlowing" );
 		}
 	}
+	
+	printl("\nShowing Group: '" + entityGroup + "', with filter: '" + value + "'.\n");
 }

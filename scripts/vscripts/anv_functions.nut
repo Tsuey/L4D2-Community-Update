@@ -993,6 +993,12 @@ function find_ladder( strDesiredVSSM, flRadius = 1.4 )
 
 	while( ( hndLadder = Entities.FindByClassname( hndLadder, "func_simpleladder" ) ) != null )
 	{
+		// TODO: Replace with GetCenter(). The vecMaxs/vecMins approach
+		// replaced the "VSSM", and now the replacement is obsolete since
+		// this has been added to get "true origins". Low-priority, isn't
+		// going to noticeably boost efficiency and I fear rare edge cases
+		// of broken ladders if before/after spawn counts aren't verified.
+
 		// Instead of using NetProp "m_vecSpecifiedSurroundingMaxs" which requires a
 		// dynamic delay and reveals the exact center origin of the ladder, derive it
 		// directly from its vecMins/vecMaxs so that it can be spawned instantly!
@@ -1430,7 +1436,7 @@ function patch_spawninfront( strOrigin, strMins, strMaxs )
 		{
 			OnStartTouch =
 			{
-				cmd1 = "!selfRunScriptCodeg_MapScript.LocalScript.DirectorOptions.PreferredMobDirection = -101"
+				cmd1 = "!selfRunScriptCodeg_MapScript.LocalScript.DirectorOptions.PreferredMobDirection <- -101"
 			}
 		}
 	} );
