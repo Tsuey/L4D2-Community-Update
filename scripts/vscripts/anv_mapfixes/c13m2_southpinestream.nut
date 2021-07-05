@@ -27,13 +27,6 @@ make_clip( "_permstuck_tree_j", "Everyone", 1, "-17 -17 -32", "17 17 0", "1153 5
 make_clip( "_stuckwarp_yellowbarrels", "Everyone", 1, "-108 -16 0", "59 13 128", "4861 2732 608", "0 -17 0" );
 patch_spawninfront( "78 8574 -405", "-70 -8 0", "70 8 256" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -43,19 +36,5 @@ if ( g_BaseMode == "versus" )
     make_clip( "_shortcut_easybigskip1", "Survivors", 1, "-8 -56 0", "8 56 2442", "506 4983 253", "0 46 0" );
     make_clip( "_shortcut_easybigskip2", "Survivors", 1, "-64 -66 0", "8 260 2442", "503 4713 253", "0 -10 0" );
     make_clip( "_shortcut_easybigskip3", "Survivors", 1, "-64 -316 0", "8 96 2442", "483 4553 253", "0 -4 0" );
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

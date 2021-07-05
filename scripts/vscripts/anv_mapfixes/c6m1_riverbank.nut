@@ -59,13 +59,6 @@ if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
     EntFire( g_UpdateName + "_fence*", "Kill" );
 
 }
-if ( g_BaseMode == "versus" )
-{
-	devchap( "BASE VERSUS" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "survival" )
 {
 	devchap( "BASE SURVIVAL" );
@@ -96,12 +89,5 @@ if ( g_BaseMode == "survival" )
     make_clip( "_survival_tree_22", "Survivors", 1, "-189 -188 0", "188 188 2288", "800 -64 747" );
     make_clip( "_survival_tree_23", "Survivors", 1, "-80 -80 0", "80 80 2288", "-1502 -606 850" );
     make_clip( "_survival_tree_tent", "Survivors", 1, "-18 -171 0", "95 97 2205", "-2633 222 963" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

@@ -48,17 +48,3 @@ if ( g_BaseMode == "versus" )
     EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger anv_mapfixes_shortcut_tanker:Kill::0:-1" );
 
 }
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
-
-}

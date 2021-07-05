@@ -43,13 +43,6 @@ make_clip( "_endrubble_smoother", "Everyone", 1, "-8 -41 0", "8 38 8", "8209 620
 make_clip( "_ramp_smoother", "Everyone", 1, "-6 -42 0", "3 42 2", "8041 4102 180", "-30 -30 0" );
 make_clip( "_clipextend_endchopper", "Survivors", 1, "-125 -506 0", "135 299 1852", "7383 3797 1199", "0 25 0" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -82,12 +75,5 @@ if ( g_BaseMode == "survival" )
     make_clip(	"_booster_helipada",		"Survivors",	1,	"-1640 -17 -240",	"32 17 2882",		"7481 2202 175" );
     make_clip(	"_booster_helipadb",		"Survivors",	1,	"-17 -1800 -240",	"17 1240 2882",		"5856 4019 176" );
     make_clip(	"_booster_helipadc",		"Survivors",	1,	"-1640 -17 -240",	"1240 17 2882",		"7479 5276 176" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

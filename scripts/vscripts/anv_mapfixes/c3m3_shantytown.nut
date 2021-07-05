@@ -13,13 +13,6 @@ make_clip( "_skyboxshield_endsafehouse", "SI Players", 1, "-185 -50 -40", "183 5
 make_prop( "dynamic", "_permstuck_cratebot", "models/props_crates/static_crate_40.mdl", "-3749.85 -183.67 -3.164", "0 0 0" );
 make_prop( "dynamic", "_permstuck_cratetop", "models/props_crates/static_crate_40.mdl", "-3749.85 -182.67 36.837", "0 -30 0" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -28,19 +21,5 @@ if ( g_BaseMode == "versus" )
 
     make_clip(	"_shortcut_window",		"Survivors",	1,	"-6 -66 -64",		"6 66 110",		"-4120 -2232 38" );
     make_clip( "_shortcut_barricadetarp", "Survivors", 1, "-107 -114 -1", "103 82 742", "-4786 1014 298" );
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

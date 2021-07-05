@@ -25,13 +25,6 @@ make_trigduck( "_duckqol_greenposts1", "-60 -97 0", "60 97 142", "-2021 5568 98"
 make_trigduck( "_duckqol_greenposts2", "-60 -97 0", "60 97 142", "1069 6976 224" );
 make_trigduck( "_duckqol_playground", "-156 -1 0", "156 1 77", "-1442 6968 119" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -48,12 +41,5 @@ if ( g_BaseMode == "survival" )
 	// FIXES
 
     make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1742 -907 0", "1706 1757 32", "-5802 7499 1248" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

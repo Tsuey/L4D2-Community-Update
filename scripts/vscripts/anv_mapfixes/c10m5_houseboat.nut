@@ -62,13 +62,6 @@ function c10m5_rockslide()
 
 EntFire( "trigger_finale", "AddOutput", "UseStart worldspawn:CallScriptFunction:c10m5_rockslide:0:-1" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -85,12 +78,5 @@ if ( g_BaseMode == "survival" )
 	// FIXES
 
     make_clip( "_survival_docksrocks", "Survivors", 1, "-78 -161 0", "87 153 1462", "2201 -4720 -174", "0 24 0" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

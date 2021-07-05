@@ -16,13 +16,6 @@ make_clip( "_stunfall_lamp", "Survivors", 1, "-888 0 0", "979 17 1724", "5549 13
 make_clip( "_outtabounds_ledge", "Survivors", 1, "-148 -145 0", "100 141 1100", "2700 649 640" );
 make_trighurt( "_instakill_thankyoufailzz", "Survivor", "-2828 -46 -149", "1881 225 0", "5148 -1121 165" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -31,19 +24,5 @@ if ( g_BaseMode == "versus" )
 
     make_clip(	"_commonhop_greenhouse",	"Survivors",	1,	"0 -320 -176",		"3 240 690",		"5226 -752 1023" );
     make_clip( "_cliprework_endpassage", "Survivors", 1, "-6 -224 0", "6 224 78", "4858 2552 274" );
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

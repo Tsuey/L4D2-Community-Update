@@ -32,32 +32,3 @@ make_trighurt( "_instakill_griefroom", "Survivor", "-512 -1080 0", "384 1080 125
 con_comment( "FIX:\tFans will now rotate. Server-side entities used to have Client-side Animation spawnflag." );
 
 EntFire( "fanblade*", "AddOutput", "spawnflags 129" );
-
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "versus" )
-{
-	devchap( "BASE VERSUS" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
-
-}

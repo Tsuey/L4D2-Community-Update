@@ -47,13 +47,6 @@ make_clip( "_rubble_smoother4", "Everyone", 1, "-138 -26 0", "79 16 11", "1966 -
 make_clip( "_ladderqol_millladder", "Everyone", 1, "-48 -1 0", "90 0 128", "1392 -5564 228" );
 patch_ladder( "1454 -5565.5 292.25", "0 2 0" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -62,19 +55,5 @@ if ( g_BaseMode == "versus" )
 
     make_clip( "_truck_fence1", "Survivors", 1, "-3 -128 -1546", "3 128 1546", "4292 -2990 1641.5" );
     make_clip( "_truck_fence2", "Survivors", 1, "-92 -3 -1546", "92 3 1546", "4388 -2865 1642" );
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

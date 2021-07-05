@@ -18,32 +18,3 @@ if ( SafelyExists( hndHurtStairwell ) )
 {
 	hndHurtStairwell.SetOrigin( Vector( 683.5, -583, 307 ) );
 }
-
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "versus" )
-{
-	devchap( "BASE VERSUS" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
-
-}

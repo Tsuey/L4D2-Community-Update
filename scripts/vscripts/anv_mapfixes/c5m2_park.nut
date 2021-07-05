@@ -20,20 +20,6 @@ make_clip( "_ladderqol_purpleclip3", "SI Players", 1, "-96 -2 -4", "129 -1 29", 
 make_clip( "_permstuck_longbarricade", "Everyone", 1, "-491 -16 0", "54 26 168", "-6390 -8479 -247" );
 make_clip( "_cliprework_missingno", "Survivors", 1, "-164 -272 0", "172 240 1626", "-10092 -5520 48" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "versus" )
-{
-	devchap( "BASE VERSUS" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "survival" )
 {
 	devchap( "BASE SURVIVAL" );

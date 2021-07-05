@@ -44,20 +44,6 @@ if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
     make_ladder( "_ladder_saferoomlulz_cloned_rooftopmain", "5924 8561.1 6018", "13896 2362 -447", "0 90 0", "0 1 0", 0 );
 
 }
-if ( g_BaseMode == "versus" )
-{
-	devchap( "BASE VERSUS" );
-
-	// FIXES
-
-}
-if ( g_BaseMode == "survival" )
-{
-	devchap( "BASE SURVIVAL" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "scavenge" )
 {
 	devchap( "BASE SCAVENGE" );

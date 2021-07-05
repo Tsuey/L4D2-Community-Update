@@ -39,13 +39,6 @@ con_comment( "FIX:\tGenerator Room has 13 hanging lights and 9 need to be made n
 
 unsolidify_model( "models/props/de_nuke/IndustrialLight01.mdl" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -66,12 +59,5 @@ if ( g_BaseMode == "survival" )
 	// FIXES
 
     make_clip(	"_survival_vendors",		"Survivors",	1,	"-80 -32 0",		"80 55 284",		"7406 3769 381.4" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }

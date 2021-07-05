@@ -55,13 +55,6 @@ EntFire( "button_inelevator", "AddOutput", "OnPressed anv_mapfixes_instakill_ele
 make_clip( "_ladderqol_millladder", "Everyone", 1, "-48 -1 0", "90 0 128", "1392 -5564 228" );
 patch_ladder( "1454 -5565.5 292.25", "0 2 0" );
 
-if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-{
-	devchap( "BASE COOP" );
-
-	// FIXES
-
-}
 if ( g_BaseMode == "versus" )
 {
 	devchap( "BASE VERSUS" );
@@ -82,12 +75,5 @@ if ( g_BaseMode == "survival" )
     make_clip( "_survival_extendpipe", "Survivors", 1, "-77 -203 -260", "67 302 2032", "-703 -8229 511" );
     make_clip( "_nav_semitrailer", "Survivors", 1, "-274 -63 0", "263 53 2262", "70 -8187 261" );
     make_clip( "_nav_jumptotree", "Survivors", 1, "-78 -66 0", "128 46 2202", "-1250 -7925 331" );
-
-}
-if ( g_BaseMode == "scavenge" )
-{
-	devchap( "BASE SCAVENGE" );
-
-	// FIXES
 
 }
