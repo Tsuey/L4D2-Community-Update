@@ -92,7 +92,7 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 	// is true. Includes new Infected ladders and any supporting props i.e. pipes.
 	// Exclude VS Survival (mutation15) from only overtly obvious new props.
 
-	if ( HasPlayerControlledZombies() == true )
+	if ( HasPlayerControlledZombies() )
 	{
 		EntFire( "worldspawn", "RunScriptFile", "anv_versus" );
 

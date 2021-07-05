@@ -42,7 +42,7 @@ switch( g_MapName )
 
 con_comment( "LOGIC:\tAnti-doorbreak trighurt will be deleted 4 seconds after elevator starts." );
 
-make_trighurt( "_elevator_exploit_bean", "Ghost", "-55 -2 0", "55 2 111", "2169 5713 2352" );
+make_trighurt( "_elevator_exploit_bean", "Ghost", "-55 -2 0", "55 2 111", "2169 5713 2344" );
 EntFire( "elevator_button", "AddOutput", "OnPressed anv_mapfixes_elevator_exploit_bean:Kill::4:-1" );
 
 con_comment( "QOL:\tThe 2nd fire door is open immediately for Versus-only QoL." );
@@ -284,6 +284,7 @@ make_ladder( "_ladder_columnfallbanner_cloned_columnbusystairs", "-4948 -4181 31
 
 kill_entity( Entities.FindByClassnameNearest( "env_player_blocker", Vector( 1388, 5660, -649 ), 1 ) );
 kill_entity( Entities.FindByClassnameNearest( "env_player_blocker", Vector( 2972, 3724, -649 ), 1 ) );
+make_navblock( "_nav_motelfencejump", "Survivors", "Apply", "-24 -108 -24", "24 24 24", "2105 3700 -820" );
 make_brush( "_losfix_bush",		"-10 -190 -60",	"10 200 35",	"8224 8378 -536" );
 make_brush( "_losfix_end_fence",	"-254 -1 -5",	"254 0 5",	"-522 -2416 -1083" );
 make_brush( "_losfix_highway_bus1",		"-40 -1 -10",	"100 1 14",	"7035 7874 -641" );
@@ -552,6 +553,7 @@ make_clip( "_ladder_askewhedgeshared_clip", "SI Players and AI", 1, "-3 -279 -7"
 make_clip( "_ladder_barnoverhang_clip", "Survivors", 1, "-24 -4 -10", "24 4 188", "-731 56 -86" );
 make_clip( "_ladder_barnsarearight_clip", "Everyone", 1, "1 -232 0", "2 16 85", "263 2288 -192" );
 make_clip( "_ladder_startroof_clip", "Everyone", 1, "-16 -17 -5", "16 20 175", "3362.5 3216 -187" );
+make_clip( "_ladder_startfoodcart_clip", "Everyone", 1, "-2 -8 0", "2 8 124", "2450 3348 -192", "0 -45 0" );
 make_ladder( "_ladder_askewhedgebotr1_cloned_askewhedgebotl", "610 1209.88 -123.984", "0 26 0" );
 make_ladder( "_ladder_askewhedgebotr2_cloned_askewhedgebotl", "610 1209.88 -123.984", "0 52 0" );
 make_ladder( "_ladder_askewhedgetopl1_cloned_askewhedgetopr", "594 1262 -24", "0 -26 0" );
@@ -574,7 +576,7 @@ make_ladder( "_ladder_lightticketsbackT_cloned_lightapplesback", "-208 856 -120"
 make_ladder( "_ladder_lightticketsfrontB_cloned_lightapplesback", "-208 856 -120", "-1307 1127 0", "0 90 0", "0 1 0" );
 make_ladder( "_ladder_lightticketsfrontT_cloned_lightapplesback", "-208 856 -120", "-1307 1127 128", "0 90 0", "0 1 0" );
 make_ladder( "_ladder_redtentmid_cloned_redtentstart", "2848 2074 -140", "-3787.5 -1225.5 1" );
-make_ladder( "_ladder_startfoodcart_cloned_colddrinkfence", "1710 2272 -124", "741 1088 -13" );
+make_ladder( "_ladder_startfoodcart_cloned_bumpsidemid", "1462 2296 -124", "992 1073 -13" );
 make_ladder( "_ladder_starthedge_cloned_startfence", "2384 2462 -124", "-295 84 -7" );
 make_ladder( "_ladder_startroof_cloned_elecbox", "1907 894 -64", "1455.5 2307 -68" );
 make_prop( "dynamic", "_barn_overhang_floor", "models/props_update/c2m4_barn_overhang.mdl", "-608 162 28", "0 90 0", "shadow_no" );
@@ -649,7 +651,7 @@ make_ladder( "_ladder_fireworksR_cloned_scaffoldsinglefork", "-2980 3298 -152", 
 make_ladder( "_ladder_leftchopperwindowl_cloned_leftchopperwindowr", "-763.5005 2285.4995 240", "263 263 0" );
 make_ladder( "_ladder_startfenceback_cloned_fencecoverfront", "-3444 3528 -188", "3838 2073 5", "0 43.5 0", "0.7 0.7 0" );
 make_ladder( "_ladder_startfencefront_cloned_fencecoverback", "-3468 3592 -188", "3857 2072 5", "0 43.5 0", "-0.7 -0.7 0" );
-make_prop( "dynamic", "_missing_staircase", "models/props_interiors/stair_metal_02.mdl", "-840 1792 136", "0 315 0", "shadow_no" );
+make_prop( "dynamic", "_missing_staircase", "models/props_interiors/stair_metal_02.mdl", "-840 1792 136", "0 315 0", "shadow_yes" );
 make_prop( "dynamic", "_yesdraw_infecteddoorway", "models/props_update/c2m5_infectedroom_doorway.mdl", "-3200 3972 0", "0 90 0", "shadow_yes" );
 make_prop( "dynamic", "_yesdraw_infectedroom", "models/props_update/c2m5_infectedroom.mdl", "-3200 3727 0", "0 -90 0", "shadow_yes" );
 make_prop( "physics", "_hittable_dumpleft", "models/props_junk/dumpster_2.mdl", "-1551 3682 -255", "0 270 0" );
@@ -1205,8 +1207,9 @@ make_prop( "dynamic", "_solidify_flatawningend1", "models/props_street/awning_sh
 make_prop( "dynamic", "_solidify_flatawningend2", "models/props_street/awning_short.mdl", "-8537 -8320 -108.921", "0 0 0", "shadow_no" );
 make_prop( "dynamic", "_solidify_flatawningmid", "models/props_street/awning_short.mdl", "-9216 -3712 -78.4492", "0 270 0", "shadow_no" );
 make_prop( "dynamic", "_yesdraw_billboard_nodraw", "models/props_update/c5m2_billboard_nodraw.mdl", "-9152 -6938 92", "0 -90 0", "shadow_no", "solid_no" );
-make_prop( "physics", "_hittable_dumpster",	"models/props_junk/dumpster_2.mdl",	"-8095 -600 -246", "0 0 0", "shadow_no" );
-patch_ladder( "-9260 -5130 -152", "0 14 0" );
+make_prop( "dynamic", "_solidify_chimney007", "models/props_urban/chimney007.mdl", "-9076 -4300 150.405", "0 180 0", "shadow_no" );
+make_prop( "physics", "_hittable_dumpster", "models/props_junk/dumpster_2.mdl", "-8095 -600 -246", "0 0 0", "shadow_no" );
+patch_ladder( "-9260 -5130 -152", "1 14 0" );
 
 		break;
 	}
@@ -1623,6 +1626,7 @@ make_clip( "_yesdraw_dairy_clipb", "SI Players", 1, "-17 -142 0", "17 142 3952",
 make_clip( "_yesdraw_farcorner_clip", "SI Players", 1, "-216 -215 -256", "168 233 3952", "216 5303 528" );
 make_clip( "_yesdraw_start_clipa", "SI Players", 1, "-300 -447 0", "0 449 1120", "3052 959 800" );
 make_clip( "_yesdraw_start_clipb", "SI Players", 1, "-158 -10 -580", "42 312 549", "2710 508 1370" );
+make_clip( "_ladder_crushedescape_clip", "Survivors", 1, "-20 -3 0", "20 3 1745", "2478 769 173" );
 make_ladder( "_ladder_alleywindow_cloned_tankerwindow", "1720 3959.5 120", "820 -1590 0" );
 make_ladder( "_ladder_commvignette_cloned_trashorange", "2428 3204.5 255.9905", "-1800 97 -144" );
 make_ladder( "_ladder_crushedescape_cloned_tankerwindow", "1720 3959.5 120", "4198 4729 -51", "0 180 0", "0 1 0" );
@@ -2760,7 +2764,7 @@ patch_ladder( "-4322 -8715 32", "71 0 21" );
 patch_ladder( "-5991 -8719 32", "247 0 21" );
 
 make_prop( "dynamic", "_easter_dorykcir", "models/weapons/melee/w_crowbar.mdl", "-8690 -7340 201", "0 -45 90", "shadow_no" );
-make_prop( "dynamic_ovr", "_easter_yofffej", "models/props_junk/gnome.mdl", "-8695 -7340 211", "0 45 0", "shadow_no" );
+make_prop( "dynamic_ovr", "_easter_yofffej", "models/props_junk/gnome.mdl", "-8695.10 -7340.17 210.7719", "0 45 0", "shadow_no" );
 EntFire( g_UpdateName + "_easter_dorykcir", "skin", "1" );
 
 con_comment( "QOL:\tDeleted blockers to allow ghost infected to pass through the event door for Versus-only QoL." );
@@ -2889,6 +2893,7 @@ make_prop( "dynamic", "_ladder_atlanticroofleft_pipe", "models/props_rooftop/Gut
 make_prop( "dynamic", "_ladder_finalrooftop_pipe", "models/props_mill/PipeSet08d_256_001a.mdl", "10842 -4603 84", "90 90 0", "shadow_no" );
 make_prop( "dynamic", "_solidify_finalchimney1", "models/props/cs_militia/fireplacechimney01.mdl", "11020 -4586 329", "0 135 0", "shadow_no" );
 make_prop( "dynamic", "_solidify_finalchimney2", "models/props/cs_militia/fireplacechimney01.mdl", "11020 -4073 329", "0 135 0", "shadow_no" );
+patch_ladder( "11314.7 -4535 -259.108", "0 -22 9" );
 
 		break;
 	}
@@ -3120,6 +3125,8 @@ patch_ladder( "195 4845.5 -18.624", "-17 0 0" );
 	case "c14m2_lighthouse":
 	{
 		// ENTITIES FOR HUMAN-CONTROLLED SI MODES ONLY
+
+make_clip( "_dispcrouch_cliffside", "SI Players", 1, "-120 -8 -80", "120 8 80", "127 -818 428", "0 8 -10" );
 
 		break;
 	}

@@ -20,6 +20,12 @@ printl( "VSCRIPT: Running mapspawn.nut" );
 **	Community Servers/Groups  ->  Dev Thread: Map fixes for Valve
 **	https://steamcommunity.com/app/550/discussions/1/1651043320659915818/
 **
+**	Help us shape the potential future of L4D2 vanilla.
+**	https://github.com/Tsuey/L4D2-Community-Update
+**
+**	Community Update Testing Initiative (Workshop mirror)
+**	https://steamcommunity.com/sharedfiles/filedetails/?id=1959405608
+**
 **  This work is dedicated to two lost brothers and all those tragically lost
 **  in these horrific times of COVID-19. Somehow we'll survive together.
 *****************************************************************************/

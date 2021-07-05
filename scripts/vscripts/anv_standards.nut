@@ -1,5 +1,8 @@
 // TUTORIAL_STANDARDS_VS
 
+//	NOTE: See "mapspawn.nut" for links to more information, such as the
+//	development team's Github, Steam Workshop, guides, etc.
+
 // Every map has been modified with care. Tutorial Standards VS offers a brief
 // opportunity to explain the standards applied to every map to improve Versus.
 // When this map is loaded, use "ShowUpdate()" to visualize these changes.
