@@ -48,3 +48,31 @@ if ( g_BaseMode == "versus" )
     EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger anv_mapfixes_shortcut_tanker:Kill::0:-1" );
 
 }
+
+// FIX: Prevent using water (or ladder) as a cushion to shortcut jump off bridge.
+
+// Un-patch for Coop because this isn't an out of bounds or softlock.
+
+// Between you and me, I almost accidentally insta-killed all Survivalists.
+
+if ( g_BaseMode != "coop" && g_BaseMode != "realism" && g_BaseMode != "survival" )
+{
+    con_comment( "TRIG:\tAnti-shortcut \"_watercushion_trigonce\" deletes trighurt at stair descent." );
+
+    make_trighurt( "_watercushion_trighurt", "Survivor", "-2470 -1486 -128", "480 858 32", "2441 -4194 270" );
+
+    SpawnEntityFromTable( "trigger_once",
+    {
+        targetname	= g_UpdateName + "_watercushion_trigonce",
+        StartDisabled	= 0,
+        spawnflags	= 1,
+        filtername	= "anv_globalfixes_filter_survivor",
+        origin		= Vector( 912, -4537, 575 )
+    } );
+
+    EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "mins -148 -103 -319" );
+    EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "maxs 139 985 401" );
+    EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "solid 2" );
+
+    EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "OnStartTouch anv_mapfixes_watercushion_trighurt:Kill::0:-1" );
+}

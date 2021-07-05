@@ -70,3 +70,31 @@ if ( g_BaseMode == "survival" )
     make_ladder( "_ladder_askewhedgetopl2_cloned_askewhedgetopr", "594 1262 -24", "0 -52 0" );
 
 }
+
+// FIX: Prevent various common hops straight to barns roof with a large clip.
+
+// Doesn't skip an event. Will only patch for Coop if the Community wills so for similar commonhop shortcuts.
+
+// Survivalists will never exit the barns to touch this trigger; thus don't spawn the clip.
+
+if ( g_BaseMode != "coop" && g_BaseMode != "realism" && g_BaseMode != "survival" )
+{
+    con_comment( "TRIG:\tAnti-shortcut \"_barnsroof_trigonce\" deletes clip at barns exit." );
+
+    make_clip( "_barnsroof_commonhop", "Survivors", 1, "-1070 -8 -208", "1070 16 844", "-1312 256 180" );
+
+    SpawnEntityFromTable( "trigger_once",
+    {
+        targetname	= g_UpdateName + "_barnsroof_trigonce",
+        StartDisabled	= 0,
+        spawnflags	= 1,
+        filtername	= "anv_globalfixes_filter_survivor",
+        origin		= Vector( -260, -32, -192 )
+    } );
+
+    EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "mins -4 -32 0" );
+    EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "maxs 4 32 112" );
+    EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "solid 2" );
+
+    EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "OnStartTouch anv_mapfixes_barnsroof_commonhop:Kill::0:-1" );
+}

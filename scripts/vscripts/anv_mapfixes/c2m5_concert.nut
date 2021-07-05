@@ -27,6 +27,49 @@ make_clip( "_booster_lightright", "Survivors", 1, "-8 -104 0", "8 29 725", "-215
 make_clip( "_backstairs_left", "Survivors", 1, "-8 -160 0", "8 160 760", "-4086 2688 264" );
 make_clip( "_backstairs_right", "Survivors", 1, "-8 -158 0", "8 197 760", "-951 2073 264", "0 -45 0" );
 
+
+// FIX: Prevent interior stadium trigger from deleting players by re-creating it.
+
+con_comment( "TRIG:\tPlayer-deleting trigger_multiple replaced with trigger_hurt." );
+
+// When "stadium_entrance_door_relay" fires, "stadium_entrance_door_killtrigger"
+// is Enabled with 1 second delay and Disabled with 5 second delay. This is a
+// trigger_multiple that is not filtered and will delete players standing in it.
+// It uses model "*61" and "spawnflags 3" (Client/bots + NPC/Commons) and has
+// "allowincap 0" with "allowghost 0". Its "OnStartTouch" fires !activator Kill.
+
+// "Disconnect: Kicked by Console : CBaseEntity::InputKill()" is the exact kick
+// message. The replacement is named the same to use existing I/O. We don't want
+// to damage Ghost Infected since they can simply tap E. Cloning is required as
+// the original is massive and irregularly shaped. Beyond damaging the player to
+// kill them, Director would de-spawn Commons anyway so trigger is still overkill.
+// In the mapper's defense, "SetHealth 0" doesn't work with "infected" entities.
+
+local hndBadTrigger = Entities.FindByName( null, "stadium_entrance_door_killtrigger" );
+
+if ( SafelyExists( hndBadTrigger ) )
+{
+	local strModel = hndBadTrigger.GetModelName();
+
+	if ( IsModelPrecached( strModel ) )
+	{
+		SpawnEntityFromTable( "trigger_hurt",
+		{
+			targetname	=	"stadium_entrance_door_killtrigger",
+			model		=	strModel,
+			StartDisabled	=	1,
+			spawnflags	=	3,
+			nodmgforce	=	1,
+			damage		=	10000,
+			damagecap	=	10000,
+			origin		=	Vector( -3920, 3152, -192 )
+		} );
+	}
+}
+
+kill_entity( hndBadTrigger );
+
+
 if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 {
 	devchap( "BASE COOP" );

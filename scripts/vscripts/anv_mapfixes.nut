@@ -80,14 +80,6 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 
 	SpawnGlobalFilters();
 
-	// Fixes requiring new trigger_multiple and trigger_once entity spawns
-	// are pooled separately. While anv_mapfixes.nut is designed for high
-	// density with "make_" functions or modifying logic by piggybacking on
-	// existing I/O, anv_maptrigs.nut houses all lengthy one-off fixes in
-	// a standalone switch-case. Only console logs if it's a matching map.
-
-	EntFire( "worldspawn", "RunScriptFile", "anv_maptrigs" );
-
 	// Versus-specific content which only spawns if HasPlayerControlledZombies()
 	// is true. Includes new Infected ladders and any supporting props i.e. pipes.
 	// Exclude VS Survival (mutation15) from only overtly obvious new props.
