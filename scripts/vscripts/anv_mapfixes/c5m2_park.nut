@@ -27,7 +27,7 @@ if ( g_BaseMode == "survival" )
 	// FIXES
 
     make_clip(	"_nav_eventsign",		"Survivors",	1,	"-4 -10 -908",		"4 10 908",		"-8552 -6310 756" );
-    patch_ladder( "-9260 -5130 -152", "0 14 0" );
+    patch_ladder( "-9260 -5130 -152", "1 14 0" );
 
 }
 if ( g_BaseMode == "scavenge" )

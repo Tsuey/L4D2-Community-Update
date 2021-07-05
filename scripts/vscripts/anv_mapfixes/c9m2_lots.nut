@@ -27,6 +27,7 @@ make_clip( "_booster_ventpipe", "Survivors", 1, "-13 -14 -80", "17 14 657", "753
 make_clip( "_nav_jump_semitrailer", "Survivors", 1, "-4 -94 0", "4 188 288", "5756 1062 -32" );
 make_clip( "_nav_jump_cargowindow", "Survivors", 1, "-5 -85 0", "4 89 86", "2044 3030 49" );
 make_clip( "_booster_armoredtop", "Survivors", 1, "-158 -65 0", "172 59 63", "7838 6366 449" );
+make_clip( "_collisionqol_finalebuses", "All and Physics", 1, "-236 -32 0", "236 32 108", "6675 6470 65" );
 make_trigmove( "_duckqol_finalevent", "Duck", "0 -32 0", "8 32 1", "7568 7392 447" );
 
 con_comment( "LOGIC:\tFinale switch will re-Lock when all Survivors aren't inside trigger." );

@@ -18,3 +18,10 @@ make_clip( "_booster_hardhatsb", "Survivors", 1, "-42 -14 0", "42 14 512", "-337
 make_clip( "_booster_highbalcony", "Survivors", 1, "-260 -162 0", "260 162 520", "-4695 -4336 792" );
 make_clip( "_booster_glassbalcony", "Survivors", 1, "-128 -82 0", "128 0 1", "-3688 -4334 791" );
 make_clip( "_nav_ladyshoes", "Survivors", 1, "-103 -3 0", "70 3 56", "-4971 -4461 432" );
+make_clip( "_collision_atrium", "All and Physics", 1, "-2400 -3200 -2", "2400 3200 0", "-4452 -3208 0" );
+make_clip( "_kiosk_qol_1", "Everyone", 1, "-44 -44 -1", "44 44 0", "-3208 -3864 94" );
+make_clip( "_kiosk_qol_2a", "Everyone", 1, "-44 -44 -1", "44 44 0", "-4080 -4005 94" );
+make_clip( "_kiosk_qol_2b", "Everyone", 1, "-100 -1 -1", "100 1 0", "-4081 -3949 94" );
+make_clip( "_kiosk_qol_3a", "Everyone", 1, "-44 -44 -1", "44 44 0", "-4848 -3935 94" );
+make_clip( "_kiosk_qol_3b", "Everyone", 1, "-1 -100 -1", "1 100 0", "-4796 -3936 94" );
+make_trigduck( "_duckqol_informationbooth", "-96 -8 0", "96 8 64", "-4448 -3865 44" );

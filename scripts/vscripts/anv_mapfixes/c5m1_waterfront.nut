@@ -9,7 +9,7 @@ make_clip(	"_vuln_balconyb",		"Survivors",	1,	"-48 -256 -253",	"48 256 253",		"-
 make_clip(	"_vuln_balconyc",		"Survivors",	1,	"0 0 0",		"65 256 150",		"-737 -2048 -208" );
 make_clip(	"_vuln_balconyd",		"Survivors",	1,	"-518 -64 0",		"0 0 320",		"-687 -2304 -176" );
 //make_clip(	"_phonebooth_hopandnav",	"Survivors",	1,	"-37 -14 -153",		"37 14 555",		"-1731 -2370 -224" );
-make_clip(	"_skybox_shielda",		"SI Players",	1,	"-176 -5.5 22",		"-175 6.5 94",		"-272 -2055 50" );
+make_clip(	"_skybox_shielda",		"SI Players",	1,	"-64 -6 0",		"64 6 20",		"-384 -2054 124" );
 make_clip(	"_skybox_shieldd",		"SI Players",	1,	"-21 -252.5 -147",	"21 252.5 147",		"-3948 257 130" );
 make_clip(	"_skybox_shieldb",		"SI Players",	1,	"-277 -115 -138",	"283 115 100",		"-1543.5 -1855.5 249.6" );
 make_clip(	"_skybox_shieldc",		"SI Players",	1,	"-145 -212 -19",	"165 212 77",		"-2971 -1264 125" );

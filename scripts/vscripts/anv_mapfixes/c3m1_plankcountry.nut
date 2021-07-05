@@ -19,8 +19,27 @@ make_clip( "_fallenlog_shrub_infected", "SI Players and AI", 1, "-182 -383 -99",
 make_clip( "_chargerassist_commonhop1", "Survivors", 1, "-155 -16 0", "117 5 864", "-7093 6280 160" );
 make_clip( "_chargerassist_commonhop2", "Survivors", 1, "-49 -170 0", "63 134 864", "-7093 6452 160", "0 -3 0" );
 make_clip( "_booster_powerpole", "Survivors", 1, "-9 -8 0", "9 10 582", "-7630 6718 444" );
+patch_ladder( "-6084.5 6272 90", "6 0 0" );
 
-make_prop( "dynamic", "_keepcalmgator", "models/props_fairgrounds/alligator.mdl", "-5274 7386 -19", "0 150 0", "shadow_no", "solid_no" );
+// Tsuey's note: Special thanks to the person who originally complained
+// on the Steam Forums that there weren't any gators -- I'm unable to
+// re-find your thread. Special thanks to Rise for naming him Fred; we
+// can't spell Friend without it. Left4Facts Discord btw. :fred:
+
+make_prop( "dynamic", "_fred", "models/props_fairgrounds/alligator.mdl", "-5274 7386 -19", "0 150 0", "shadow_no", "solid_no" );
+
+// Allow only SI Players to stand on it while maintaining its non-solidity
+// because it'd be inhumane for Survivors to put bullet holes on him. Also
+// prevents Fred from becoming a godspot.
+
+make_clip( "_fred_collision", "SI Players", 1, "-3.6 -17 0", "3.6 16 3", "-5274 7386 -17", "0 150 0" );
+
+// Incrementally "bites" both Spawned and Ghost SI. Doesn't damage Survivors
+// but it's difficult to even reach it without hanging and we dare not move
+// him. Does 120 DPS, 60 per hit, or something. It's a trigger_hurt_ghost.
+
+make_trighurt( "_fred_pain_cuddles", "Ghost", "-4 -4 -4", "4 4 4", "-5280 7375 -12" );
+EntFire( g_UpdateName + "_fred_pain_cuddles", "SetDamage", 120 );
 
 if ( g_BaseMode == "versus" )
 {

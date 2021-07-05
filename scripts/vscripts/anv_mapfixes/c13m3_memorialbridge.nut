@@ -8,7 +8,7 @@ make_clip(	"_permstuck_treea",		"Everyone",	1,	"-18 -17 -446",		"18 17 446",		"-
 make_clip(	"_permstuck_treeb",		"Everyone",	1,	"-30 -75 -476.5",	"30 75 476.5",		"-3343 -5975 854" );
 make_clip(	"_permstuck_treed",		"Everyone",	1,	"-22 -20.5 -91.5",	"22 20.5 91.5",		"-3310 -3600 405" );
 make_clip(	"_permstuck_treec",		"Everyone",	1,	"-30 -16 -110",		"30 16 110",		"-3305 -4815 442" );
-make_clip(	"_permstuck_jaynjer",		"Everyone",	1,	"-42 -42 -32",		"42 42 10",		"-4495 -4584 719" );
+make_clip(	"_permstuck_jaynjer",		"Everyone",	1,	"-42 -52 -32",		"42 42 90",		"-4495 -4584 719" );
 make_clip( "_hangcancel_perimeter", "Survivors", 1, "-25 -44 0", "28 94 1484", "13 -3620 896", "0 -8 0" );
 make_clip( "_sneaky_hunter", "SI Players", 1, "-19 -1242 0", "37 615 112", "5666 -5383 272" );
 make_clip( "_permstuck_shrubtreea", "Everyone", 1, "-17 -17 -17", "17 17 17", "-5080 -5712 970" );

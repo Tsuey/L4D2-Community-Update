@@ -19,6 +19,7 @@ make_clip(	"_booster_pipeb",		"Survivors",	1,	"-12 -7 -32",		"24 29 216",		"302 
 make_clip( "_chairbodypile_smoother", "Everyone", 1, "-50 -25 0", "25 40 8", "500 5301 295", "10 0 -15" );
 make_clip( "_hallwayguard_right", "Everyone", 1, "-14 15 0", "9 16 128", "693 5566.3 296", "0 45 0" );
 make_clip( "_hallwayguard_left", "Everyone", 1, "-9 16 0", "14 15 128", "667.5 5679.3 296", "0 -45 0" );
+make_clip( "_permstuck_endrubble", "SI Players and AI", 1, "-34 -17 0", "17 17 64", "2742 989 152" );
 
 make_prop( "dynamic", "_cosmetic_wallpaper", "models/props_unique/zombiebreakwallexteriorairport01_main.mdl", "2507.95 3263.99 216", "0 180 0", "shadow_no" );
 make_prop( "dynamic", "_cosmetic_wallblock", "models/props_unique/zombiebreakwallhospitalexterior01_main.mdl", "2507.99 3263.99 252", "0 180 0", "shadow_no" );

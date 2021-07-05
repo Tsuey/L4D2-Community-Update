@@ -25,6 +25,7 @@ make_clip( "_permstuck_tree_h", "Everyone", 1, "-17 -17 -32", "17 17 0", "984 66
 make_clip( "_permstuck_tree_i", "Everyone", 1, "-17 -17 -32", "17 17 0", "1151 6258 932" );
 make_clip( "_permstuck_tree_j", "Everyone", 1, "-17 -17 -32", "17 17 0", "1153 5929 981" );
 make_clip( "_stuckwarp_yellowbarrels", "Everyone", 1, "-108 -16 0", "59 13 128", "4861 2732 608", "0 -17 0" );
+make_clip( "_permstuck_taito_ftw", "Everyone", 1, "-8 -8 -8", "28 24 28", "2552 2292 460" );
 patch_spawninfront( "78 8574 -405", "-70 -8 0", "70 8 256" );
 
 if ( g_BaseMode == "versus" )

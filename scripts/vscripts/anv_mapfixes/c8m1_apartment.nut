@@ -27,7 +27,7 @@ make_clip( "_cliprework_subwayupper", "Survivors", 1, "-201 -94 0", "215 90 4322
 make_clip( "_cliprework_subwayledge", "Survivors", 1, "-218 -18 132", "233 3 4322", "3014 4017 156" );
 make_clip( "_cliprework_subwayfence", "Survivors", 1, "-5 -143 0", "4 149 3926", "3268 4141 552", "0 -8 0" );
 make_clip( "_subwins_smoother", "Everyone", 1, "-120 -9 0", "120 9 3", "2968 4103 48" );
-make_trighurt( "_instakill_griefroom", "Survivor", "-512 -1080 0", "384 1080 125", "1152 936 8" );
+make_trighurt( "_instakill_griefroom", "Survivor", "-512 -1080 0", "384 1080 17", "1152 936 202" );
 
 con_comment( "FIX:\tFans will now rotate. Server-side entities used to have Client-side Animation spawnflag." );
 

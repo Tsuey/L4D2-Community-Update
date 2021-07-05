@@ -29,6 +29,7 @@ make_clip( "_booster_enginecar", "Survivors", 1, "-180 -88 -180", "114 94 463", 
 make_clip( "_booster_telepole1", "Survivors", 1, "-8 -8 -80", "8 8 234", "-1111 -6480 694" );
 make_clip( "_booster_telepole2", "Survivors", 1, "-8 -8 -80", "8 8 464", "50 -5432 464" );
 make_clip( "_clipgap_survivoronly", "Survivors", 1, "-100 -24 -80", "108 40 1072", "1428 -4936 -144" );
+make_clip( "_permstuck_boxwreck_weird", "Everyone", 1, "-1 -1 0", "1 1 1", "-2836.7 -7030 128" );
 
 con_comment( "LOGIC:\tBile anti-skip made 2 breakwalls indestructible until howitzer fires." );
 

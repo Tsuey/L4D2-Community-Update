@@ -11,7 +11,7 @@ make_clip(	"_commonhop_safehouse",		"Survivors",	1,	"-280 -456 0",		"280 456 110
 make_clip(	"_booster_burgertankpole",	"Survivors",	1,	"-12 -12 -170",		"12 12 1000",		"-5800 7496 603" );
 make_clip(	"_booster_burgertankspin",	"Survivors",	1,	"-216 -216 -170",	"216 216 640",		"-5800 7496 915" );
 make_clip( "_booster_ginnytop", "Survivors", 1, "-22 -29 0", "17 29 1150", "-5425 6789 385", "0 45 0" );
-make_clip( "_booster_ginnyjon", "Survivors", 1, "6 -4 -284", "-10 4 0", "-5425 6789 385", "0 45 0" );
+make_clip( "_booster_ginnyjon", "Survivors", 1, "-6 -4 -284", "10 4 0", "-5425 6789 385", "0 45 0" );
 make_clip( "_booster_gasextend", "Survivors", 1, "-41 -196 0", "528 164 1250", "-4624 7952 284" );
 make_clip( "_booster_blueframe", "Survivors", 1, "-17 -70 0", "17 76 1100", "-4641 7618 479", "0 -7 0" );
 make_clip( "_booster_roofwedge", "Survivors", 1, "-17 -24 0", "47 64 1200", "-5711 6528 416" );
@@ -24,6 +24,19 @@ make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "
 make_trigduck( "_duckqol_greenposts1", "-60 -97 0", "60 97 142", "-2021 5568 98" );
 make_trigduck( "_duckqol_greenposts2", "-60 -97 0", "60 97 142", "1069 6976 224" );
 make_trigduck( "_duckqol_playground", "-156 -1 0", "156 1 77", "-1442 6968 119" );
+
+// Prevent Survivor bots from picking up items inside c4m4's saferoom.
+
+local item = null;
+
+while ( item = Entities.FindInSphere( item, Vector( -3140, 7815, 175 ), 80 ) )
+{
+	if ( item.IsValid() )
+	{
+		if ( item.GetClassname().find("weapon_") != null )
+			NetProps.SetPropInt( item, "m_fEffects", 32 );
+	}
+}
 
 if ( g_BaseMode == "versus" )
 {
