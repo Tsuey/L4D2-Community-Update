@@ -91,3 +91,40 @@ if ( g_BaseMode == "survival" )
     make_clip( "_survival_tree_tent", "Survivors", 1, "-18 -171 0", "95 97 2205", "-2633 222 963" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_bus",		"-1 -124 -9",	"1 124 9",	"-3624 101 713" );
+    make_brush( "_losfix_van",		"-1 -72 -10",	"1 72 10",	"3897 1356 148" );
+    make_clip( "_endsaferoof_wrongway_clip", "SI Players", 1, "-287 -174 -140", "220 130 1759", "-4128 350 1337" );
+    make_clip( "_semiperm_endsaferoof", "SI Players", 1, "-8 0 0", "104 270 144", "-4344 482 1192" );
+    make_clip( "_ladder_startalternativeB_clipleft", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4025 96", "0 -45 0" );
+    make_clip( "_ladder_startalternativeB_clipright", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4071 96", "0 45 0" );
+    make_clip( "_ladder_upperbalconynear_clip", "Everyone", 1, "-3 0 0", "3 16 372", "3968 1822 199", "0 11 0" );
+    make_clip( "_infected_mapescape", "SI Players", 1, "-40 -350 -20", "40 440 245", "-1997 1497 192" );
+    make_ladder( "_ladder_brideentryleft_cloned_brideentryright", "196 422 574", "1199 -13 -20" );
+    make_ladder( "_ladder_elecbox_cloned_bluebin", "2528 1030 342", "-2652 -253 42" );
+    make_ladder( "_ladder_elecboxsafehouse_cloned_bluebin", "2528 1030 342", "-6434 498 516" );
+    make_ladder( "_ladder_endfencefront_cloned_endfenceback", "-3879.68 1645.6 787", "-7751 3326 -2", "0 180 0", "1 0 0" );
+    make_ladder( "_ladder_endsafehouse_cloned_windowtallright", "1664 2662 228", "-6535 2676 610", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_endshorthouse_cloned_windowshortleft", "1136 2662 212", "-6567 1760 608", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_endtallbrickleft_cloned_bluebin", "2528 1030 342", "-4866 2127 480", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_endtallbrickright_cloned_bluebin", "2528 1030 342", "-4866 2383 480", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_endtransitfence_cloned_dispcrouchfence", "4673 994 239.551", "-6991 -432 470" );
+    make_ladder( "_ladder_startalternativeB_cloned_windowtallright", "1664 2662 228", "-1947 5712 -16", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_startalternativeT_cloned_starttallangled", "684.191 3062 368", "1365 7121 0", "0 180 0", "0 1 0" );
+    make_ladder( "_ladder_startpermstuck_cloned_endleftfence", "-3575 -1142 777.5", "4159 3762 -608" );
+    make_ladder( "_ladder_tankfenceback_cloned_startfence", "527 2940 162.12", "-1927 -1661 107" );
+    make_ladder( "_ladder_tankfencefront_cloned_dispcrouchfence", "4673 994 239.551", "-6066 228 26" );
+    make_ladder( "_ladder_upperbalconynear_cloned_upperbalconyfar", "3078 1644 376", "890 161 10" );
+    make_ladder( "_ladder_witchentryfrontleft_cloned_witchentryback", "-1356.6 412.195 698.459", "-2713 805 0", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_witchentryfrontright_cloned_witchentryback", "-1356.6 412.195 698.459", "-2016 805 0", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_witchfarbackL_cloned_witchentryback", "-1356.6 412.195 698.459", "-3434 -730 65", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_witchfarbackM_cloned_witchentryback", "-1356.6 412.195 698.459", "-2669 -730 65", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_witchfarbackR_cloned_witchentryback", "-1356.6 412.195 698.459", "-1905 -730 65", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_witchtentsleft_cloned_witchhedgeleft", "-1594 -920 700", "-1462 536 0", "0 90 0", "0 1 0" );
+    make_ladder( "_ladder_witchtentsright_cloned_witchhedgeleft", "-1594 -920 700", "-2232 536 0", "0 90 0", "0 1 0" );
+    make_prop( "dynamic", "_solidify_endacvent", "models/props_rooftop/acvent04.mdl", "-3920 1027 1056.8", "0 180 0", "shadow_no" );
+    make_prop( "dynamic", "_solidify_endchimney", "models/props_urban/chimney007.mdl", "-4027.48 830.86 1056", "2 270 0", "shadow_no" );
+    make_prop( "dynamic", "_tankfence_wrongway", "models/props_misc/wrongway_sign01_optimized.mdl", "-2025 1527 259", "0 326.5 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
+}

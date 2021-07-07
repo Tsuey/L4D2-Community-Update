@@ -64,3 +64,68 @@ if ( g_BaseMode == "survival" )
     make_clip( "_nav_trailertree", "Survivors", 1, "-48 -26 0", "78 36 742", "-7742 7721 287" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    kill_funcinfclip( 1167.82 );		// UNDESIRABLY delete (matching value) unrelated clip but re-make exactly
+    EntFire( "worldspawn", "RunScriptCode", "kill_funcinfclip( 1167.82 )", 1 );		// Delete clip to left above end trains
+    kill_funcinfclip( 405.151 );		// Delete clip above middle of end trains
+    kill_funcinfclip( 699.27 );		// Delete clip to right above end trains
+    make_axiswarp( "_axiswarp_startspawn", "x+", 64, "0 -2020 0", "1 2000 128", "-13026 9199 191" );
+    make_brush( "_losfix_start_fence1",	"-32 -1 -5",	"32 1 5",	"-10968 9586 164" );
+    make_brush( "_losfix_start_fence2",	"-128 -1 -5",	"128 1 5",	"-11264 9665 164" );
+    make_brush( "_losfix_start_gen1",	"-1 -28 -8",	"1 28 8",	"-11817 9724 175" );
+    make_brush( "_losfix_start_gen2",	"-15 -1 -8",	"14 1 8",	"-11801 9723 175" );
+    make_brush( "_losfix_start_semi",	"-1 -56 -20",	"1 40 23",	"-11314 9748 181" );
+    make_brush( "_losfix_start_train1",	"-230 -2 -12",	"272 2 12",	"-11574 11024 210" );
+    make_brush( "_losfix_start_train2a",	"-78 -2 -12",	"78 2 12",	"-12154 10858 210" );
+    make_brush( "_losfix_start_train2b",	"-2 -45 -12",	"2 45 12",	"-12075 10905 210" );
+    make_brush( "_losfix_start_train3a",	"-4 -30 -12",	"4 62 12",	"-12658 10287 210" );
+    make_brush( "_losfix_start_train3b",	"-45 -2 -12",	"45 2 12",	"-12609 10351 210" );
+    make_brush( "_losfix_start_train3c",	"-2 -79 -12",	"2 79 12",	"-12566 10432 210" );
+    make_brush( "_losfix_start_train3d",	"-2 -79 -12",	"2 79 12",	"-12476 10590 210" );
+    make_brush( "_losfix_start_train3e",	"-45 -2 -12",	"45 2 12",	"-12519 10509 210" );
+    make_brush( "_losfix_start_train4a",	"-4 -128 -12",	"4 95 12",	"-12725 10059 210" );
+    make_brush( "_losfix_start_train4b",	"-4 -95 -12",	"4 139 12",	"-12815 9792 210" );
+    make_brush( "_losfix_start_train4c",	"-45 -2 -12",	"45 2 12",	"-12766 9929 210" );
+    make_brush( "_losfix_start_train5a",	"-2 -139 -12",	"2 95 12",	"-12844 9464 210" );
+    make_brush( "_losfix_start_train5b",	"-45 -2 -12",	"45 2 12",	"-12795 9327 210" );
+    make_brush( "_losfix_start_train5c",	"-2 -128 -12",	"2 128 12",	"-12754 9197 210" );
+    make_clip( "_ladder_earlsgatorvillage_clip", "Everyone", 1, "-5 -2 0", "2 32 222", "-7462 7696 32" );
+    make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-1053 -17 -123", "1029 17 935", "-484 9840 90" );
+    make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-733 -8 0", "640 8 768", "-2668 416 256" );
+    make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-198 -16 0", "198 16 961", "-3516 543 61", "0 -50 0" );
+    make_clip( "_meticulous_funcinfclip04", "SI Players", 1, "-198 -16 0", "1375 16 961", "-1846 433 61", "0 10 0" );
+    make_clip( "_starttrains_badredclip", "SI Players", 1, "-64 -36 -24", "64 36 -17", "-12728 9028 216", "0 -48 0" );
+    make_ladder( "_ladder_bridgetunnelleft_cloned_shacklegback", "-427 7088 76", "-505 -2151 116" );
+    make_ladder( "_ladder_bridgetunnelright_cloned_shacklegfront", "-579 7088 76", "-537 -2151 116" );
+    make_ladder( "_ladder_earlsgatorvillage_cloned_goodbuyautoparts", "-11522 8784 286", "4059 -1114 -117" );
+    make_ladder( "_ladder_endtrainsB_cloned_boardwalkleg", "-824 6181 74", "-1651 -4774 -2541", "0 0 25" );
+    make_ladder( "_ladder_endtrainsT_cloned_boardwalkleg", "-824 6181 74", "-1635 -5533 266" );
+    make_ladder( "_ladder_endtrainsback_cloned_boardwalkleg", "-824 6181 74", "-3494 6691 267", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_gaschainlinkin_cloned_gaschainlinkout", "-10946 9152 228", "-577 480 0" );
+    make_ladder( "_ladder_jonescar_cloned_goodbuyautoparts", "-6496 6202 170", "-14704 13713 -6", "0 180 0", "0 1 0" );
+    make_ladder( "_ladder_jonesvines_cloned_railroadgate", "-11658 10272 255.354", "3079 -2960 -120" );
+    make_ladder( "_ladder_rightafterchains_cloned_railroadgate", "-11658 10272 255.354", "1539 -1572 -24" );
+    make_ladder( "_ladder_startsemirear_cloned_boardwalkhole", "-551 7596 74", "-9373 2500 172" );
+    make_ladder( "_ladder_startsemitire_cloned_boardwalkhole", "-551 7596 74", "-16047 4401 168", "0 -46 0", "0.69 -0.72 0" );
+    make_ladder( "_ladder_starttrainfront1_cloned_boardwalkhole", "-551 7596 74", "-15700 3747 209", "0 -30 0", "0.87 -0.5 0" );
+    make_ladder( "_ladder_starttrainfront2_cloned_boardwalkhole", "-551 7596 74", "-11159 2086 209", "0 8 0", "1 0.16 0" );
+    make_ladder( "_ladder_starttrainvalve_cloned_starttrainyellow", "-12837 9094 299.0643", "2575 13964 0", "0 49 0", "-0.5 -0.86 0" );
+    make_navblock( "_nav_startshrubwall1", "Everyone", "Apply", "-24 -24 -24", "24 24 24", "-12524 10074 161" );
+    make_navblock( "_nav_startshrubwall2", "Everyone", "Apply", "-48 -16 -32", "48 16 32", "-12588 9075 168" );
+    make_navblock( "_nav_oldtree1", "Everyone", "Apply", "-24 -16 -32", "24 16 32", "-3447 8260 0" );
+    make_navblock( "_nav_oldtree2", "Everyone", "Apply", "-24 -16 -32", "24 16 32", "-4225 8490 0" );
+    make_prop( "dynamic", "_cosmetic_shruba",	"models/props_foliage/swamp_shrubwall_512_deep.mdl", "-2695 280 250", "0 90 0", "shadow_no", "solid_no" );
+    make_prop( "dynamic", "_cosmetic_shrubb",	"models/props_foliage/swamp_shrubwall_512_deep.mdl", "-3153 295 250", "0 86 0", "shadow_no", "solid_no" );
+    make_prop( "dynamic", "_cosmetic_shrubc",	"models/props_foliage/swamp_shrubwall_512_deep.mdl", "-2242 295 250", "0 94 0", "shadow_no", "solid_no" );
+    make_prop( "dynamic",		"_propladder_plank",		"models/props_swamp/plank001b_192.mdl",		"-6791 7712 200",		"0 270 -25.5" );
+    make_prop( "dynamic", "_losblocker_oldtree1", "models/props_foliage/old_tree01.mdl", "-3447 8298 -12", "0 -2 0", "shadow_no" );
+    make_prop( "dynamic", "_losblocker_oldtree2", "models/props_foliage/old_tree01.mdl", "-4212 8550 -12", "0 -2 0", "shadow_no" );
+    make_prop( "dynamic", "_endsaferoom_wrongwaya", "models/props_misc/wrongway_sign01_optimized.mdl", "-3415 430 320", "0 0 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
+    make_prop( "dynamic", "_endsaferoom_wrongwayb", "models/props_misc/wrongway_sign01_optimized.mdl", "-3510 535 485", "0 0 0", "shadow_no", "solid_no", "255 255 255", "17", "270" );
+    make_prop( "dynamic", "_solidify_startshrubwall1", "models/props_foliage/swamp_shrubwall_block_128_deep.mdl", "-12543.6 10072.5 181.932", "-5 180 3", "shadow_no" );
+    make_prop( "dynamic", "_solidify_startshrubwall2", "models/props_foliage/swamp_shrubwall_block_128_deep.mdl", "-12550.2 9119.21 148.872", "0 90 0", "shadow_no" );
+    make_prop( "dynamic", "_start_fencea",	"models/props_urban/fence_cover001_256.mdl", "-11265 9665 167.25", "0 270 0", "shadow_no" );
+    make_prop( "dynamic", "_start_fenceb",	"models/props_urban/fence_cover001_64.mdl", "-10968 9586.1 167.25", "0 270 0", "shadow_no" );
+}

@@ -37,3 +37,35 @@ if ( g_BaseMode == "versus" )
     make_clip( "_commonhop_endshortcut", "Survivors", 1, "-94 -35 -153", "93 -29 1437", "-693 4555 35", "0 5 0" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	kill_entity( Entities.FindByClassnameNearest( "prop_physics", Vector( -521.5, -1260.25, -399.53125 ), 8 ) );
+	make_clip(	"_ladder_startstreamL_clip",	"SI Players",	1,	"0 -30 -8",	"120 60 8",	"-4028 -5137 345", "0 90 31" );
+	make_clip(	"_ladder_littlecliff_qola",	"SI Players",	1,	"-60 0 -8",	"40 50 8",	"-3685 -1397 312", "0 20 45" );
+	make_clip(	"_ladder_littlecliff_qolb",	"SI Players",	1,	"-60 -24 -8",	"44 20 12",	"-3706 -1352 366", "0 20 45" );
+	make_brush( "_losfix_gen1",		"-1 -24 -8",	"1 24 8",	"-821 5675.32 -110" );
+	make_brush( "_losfix_gen2",		"-24 -1 -8",	"24 1 8",	"-838 4598 -110" );
+	make_ladder( "_ladder_cornerlowroofl_cloned_endbackarea", "-1 5304 -43.124", "-1245 660 107" );
+	make_ladder( "_ladder_cornerlowroofr_cloned_endbackarea", "-1 5304 -43.124", "-1245 692 107" );
+	make_ladder( "_ladder_enddumpsterL_cloned_endstackback", "-38 5888 -55.124", "-6748 5750 -30", "0 -90 0", "0 -1 0" );
+	make_ladder( "_ladder_enddumpsterR_cloned_endstackback", "-38 5888 -55.124", "-6469 5752 -30", "0 -90 0", "0 -1 0" );
+	make_ladder( "_ladder_endstackfront_cloned_endstackback", "-38 5888 -55.124", "-1302 11213 -4", "0 -168 0", "-0.98 -0.2 0" );
+	make_ladder( "_ladder_endwarehouseR_cloned_endwarehouseL", "178 4845.5 -18.624", "0 -685 0" );
+	make_ladder( "_ladder_fourthstream_cloned_secondstream", "-4184 -3448.5 244", "-27 1450 -100" );
+	make_ladder( "_ladder_littlecliff_cloned_waterfall", "-2164 -1760 -112", "-573 -1861 460", "-6 -48.11 0", "0.67 -0.74 0" );
+	make_ladder( "_ladder_thirdstream_cloned_secondstream", "-4184 -3448.5 244", "-8270 -4977 -88", "0 168 0", "-0.98 0.2 0" );
+	make_ladder( "_ladder_stairsfence_cloned_backfence", "-898 1668.5 -49.1", "684 730 0" );
+	make_ladder( "_ladder_startstreamL_cloned_startstreamR", "-3559.5 -4536.5 185", "-7540 -9590 8", "0 180 0", "1 0 0" );
+	make_navblock( "_losblocker_startshrubnavblock", "Everyone", "Apply", "-64 -64 -64", "64 64 64", "-3400 -7300 360" );
+	make_prop( "dynamic",		"_losblocker_startshrubwall",	"models/props_foliage/swamp_shrubwall_block_256_deep.mdl",	"-3388 -7294 335",		"0 231 0",		"shadow_no" );
+	make_prop( "dynamic", "_solidify_startcluster1", "models/props_foliage/urban_trees_cluster01.mdl", "-3130 -6492 366.443", "0 0 0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_startcluster2", "models/props_foliage/urban_trees_cluster01.mdl", "-3168 -5984 317.023", "0 0 0", "shadow_no" );
+	make_prop( "physics", "_hittable_replacement", "models/props_foliage/tree_trunk_fallen.mdl", "-714 -863 -385", "0 100 0", "shadow_yes", "solid_yes", "255 255 255", -1, 0, 1.5 );
+	patch_ladder( "-1 5304 -43.124", "50 0 0" );
+	patch_ladder( "-202.0005 -1483.2271 -224", "0 0 10" );
+	patch_ladder( "145 4845.5 202", "-15 0 0" );
+	patch_ladder( "159 4845.5 159", "-15 0 0" );
+	patch_ladder( "178 4845.5 109.5", "-17 0 0" );
+	patch_ladder( "195 4845.5 -18.624", "-17 0 0" );
+}

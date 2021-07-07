@@ -80,3 +80,66 @@ if ( g_BaseMode == "survival" )
     make_clip( "_survival_docksrocks", "Survivors", 1, "-78 -161 0", "87 153 1462", "2201 -4720 -174", "0 24 0" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	make_brush( "_losfix_van",		"-1 -70 -8",	"1 70 8",	"3736 753 -181" );
+	make_clip( "_ladder_middlehouse_clip", "Everyone", 1, "-10 -7 0", "10 -4 160", "3488 -3063 -84", "0 -34 0" );
+	make_clip( "_rock_infected_clipqol", "SI Players", 1, "-140 -135 -105", "140 135 105", "3340 -5010 -324" );
+	make_clip( "_rock_survivor_clipright", "Survivors", 1, "-195 -240 -216", "50 183 1700", "3255 -4984 -253" );
+	make_clip( "_rock_survivor_clipleft", "Survivors", 1, "0 -240 -216", "200 105 1700", "3255 -4984 -253" );
+	make_clip( "_rock_survivor_clipwedge", "Survivors", 1, "-255 -120 -216", "100 150 1700", "3255 -4984 -253" );
+	make_clip( "_solidify_permstuck1", "SI Players", 1, "-17 -17 -17", "17 17 17", "2100 253 -112" );
+	make_clip( "_solidify_permstuck2", "SI Players", 1, "-17 -17 -17", "17 17 17", "3141 387 -168" );
+	make_clip( "_solidify_permstuck3", "SI Players", 1, "-17 -17 -17", "17 17 17", "5463 220 222" );
+	make_clip( "_solidify_permstuck4", "SI Players", 1, "-17 -17 -17", "17 17 17", "6736 -2753 207" );
+	make_clip( "_solidify_permstuck5", "SI Players", 1, "-17 -17 -17", "17 17 17", "2914 -1462 213" );
+	make_clip( "_solidify_railposta", "Everyone", 1, "-6 -2 0", "6 2 33.8", "3924 -4516 -24" );
+	make_clip( "_solidify_railpostb", "Everyone", 1, "-6 -2 0", "6 2 33.8", "4020 -4516 -24" );
+	make_clip( "_solidify_railpostc", "Everyone", 1, "-2 -6 0", "2 6 33.8", "4116 -4228 -24" );
+	make_clip( "_solidify_railpostd", "Everyone", 1, "-2 -6 0", "2 6 33.8", "4116 -4132 -24" );
+	make_clip( "_solidify_railposte", "Everyone", 1, "-2 -6 0", "2 6 33.8", "4116 -4036 -24" );
+	make_clip( "_solidify_railpostf", "Everyone", 1, "-6 -2 0", "6 2 33.8", "4020 -3940 -24" );
+	make_ladder( "_ladder_firebarrelarea_cloned_eventperimloner", "6406.5 -2736 -31", "1374 -7828 1500", "13 90 0", "0 -1 0" );
+	make_ladder( "_ladder_middlehouse_cloned_docksinwater", "3518 -4704.5 -205.5", "-16 1630 201" );
+	make_ladder( "_ladder_tankfightcorner_cloned_eventperimloner", "6406.5 -2736 -31", "-1460 -7078 1500", "13 77 0", "-0.24 -0.97 0" );
+	make_navblock( "_rock_navblock_outabounds", "Everyone", "Apply", "-32 -32 -216", "700 0 216", "2951 -5211 -295" );
+	make_navblock( "_rock_navblock_underneath", "Everyone", "Apply", "-128 -128 -216", "0 0 216", "3198 -4848 -295" );
+	make_prop( "dynamic", "_losblocker_tallladder", "models/props/cs_militia/militiarock01.mdl", "5639 -419 292", "-35.6616 352.555 -19.0887", "shadow_no" );
+	make_prop( "dynamic", "_propladder_back", "models/props/cs_militia/militiarock02.mdl", "5205 -2 -118", "-3.36983 12.0544 17.6989", "shadow_no" );
+	make_prop( "dynamic", "_propladder_front", "models/props/cs_militia/militiarock03.mdl", "4521 370 -250", "29.7193 155.282 23.7211", "shadow_no" );
+	make_prop( "dynamic", "_rock_nav", "models/props_foliage/rock_coast02f.mdl", "3050 -5000 -438", "90 190 0", "191 191 191" );
+	make_prop( "dynamic", "_rock_rene", "models/props_foliage/rock_coast02f.mdl", "3250 -4977 -242", "-5 177 3", "191 191 191" );
+	make_prop( "dynamic", "_solidify_tree01", "models/props_foliage/trees_cluster02.mdl", "6115.44 -1254.23 254.159", "0.0 144.5 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree02", "models/props_foliage/trees_cluster01.mdl", "5840.49 -1231.82 262.096", "0.0 185.5 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree03", "models/props_foliage/trees_cluster02.mdl", "5674.99 -173.235 286.403", "5.75837 274.813 12.6214", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree04", "models/props_foliage/trees_cluster01.mdl", "5482.81 241.228 132.695", "-12.1912 25.172 7.18842", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree05", "models/props_foliage/trees_cluster02.mdl", "5140.97 482.588 161.3", "-5.34185 52.754 5.27212", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree06", "models/props_foliage/trees_cluster01.mdl", "4947.63 841.389 177.102", "-15.3542 25.5395 5.64541", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree07", "models/props_foliage/trees_cluster02.mdl", "4596 -847.291 46.5099", "-10.7147 193.235 -2.50372", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree08", "models/props_foliage/trees_cluster01.mdl", "4472.11 -1332.35 92.7903", "3.1137 10.7052 10.6639", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree09", "models/props_foliage/trees_cluster02.mdl", "3330.26 -1363.53 109.319", "0.0 173.5 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree10", "models/props_foliage/trees_cluster01.mdl", "2913.72 -1441.18 125.267", "-6.93085 51.3826 10.6265", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree11", "models/props_foliage/trees_cluster02.mdl", "2806.21 -1397.96 136.034", "-5.62152 106.407 -2.15325", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree12", "models/props_foliage/trees_cluster02.mdl", "6591.85 -1674.72 249.755", "5.97716 272.278 -1.19737", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree13", "models/props_foliage/trees_cluster01.mdl", "6860.31 -1957.59 260.658", "4.82922 217.555 1.29717", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree14", "models/props_foliage/trees_cluster02.mdl", "6936.06 -2695.45 140.336", "-9.40842 32.8524 -16.7709", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree15", "models/props_foliage/trees_cluster01.mdl", "6743.79 -2761.88 140.372", "-7.2427 336.942 -0.575684", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree16", "models/props_foliage/old_tree01.mdl", "6754.94 -3134.69 175.772", "3.99839 219.252 11.5523", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree17", "models/props_foliage/trees_cluster02.mdl", "6691.45 -3321.24 167.145", "-5.27616 263.338 11.0332", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree18", "models/props_foliage/old_tree01.mdl", "3392 -87.0611 -192", "0.295558 271.978 -8.4949", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree19", "models/props_foliage/trees_cluster02.mdl", "3343.3 304.445 -195.784", "-2.83356 324.754 -6.57611", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree20", "models/props_foliage/trees_cluster01.mdl", "3135.65 343.649 -172.46", "4.82922 270.055 1.29717", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree21", "models/props_foliage/trees_cluster02.mdl", "3004 -49.16 -159.143", "0.0 193.0 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree22", "models/props_foliage/old_tree01.mdl", "2800 176.84 -175", "0.0 152.0 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree23", "models/props_foliage/trees_cluster02.mdl", "2600 166.84 -176", "0.0 197.0 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree24", "models/props_foliage/trees_cluster02.mdl", "2472.84 354 -191", "0.0 342.0 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree25", "models/props_foliage/trees_cluster01.mdl", "2103.88 254.77 -193.143", "0.0 43.0 0.0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree26", "models/props_foliage/trees_cluster02.mdl", "2236.99 768.711 -202.778", "-6.18811 116.848 12.0217", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree27", "models/props_foliage/old_tree01.mdl", "2157.68 1276.4 -199.196", "-2.87053 121.382 4.69345", "shadow_no" );
+	make_prop( "dynamic", "_solidify_tree28", "models/props_foliage/trees_cluster02.mdl", "5416.34 565.308 209.588", "0.0 268.0 0.0", "shadow_no" );
+	make_prop( "physics",		"_hittable_log",		"models/props_foliage/tree_trunk_fallen.mdl",		"5405 -2480 -103",		"0 0 2", "shadow_no" );
+	make_prop( "physics_ovr", "_hittable_rock", "models/props/cs_militia/militiarock01.mdl", "1721 -1971 -4", "10.6 49.1 10.9", "shadow_no" );
+	patch_nav_obscured( "5298 328 153" );
+	patch_nav_obscured( "5020 664 190" );
+}

@@ -55,3 +55,35 @@ if ( g_BaseMode == "versus" )
     DoEntFire( "!self", "AddOutput", "OnTrigger anv_mapfixes_shortcut_fence_TMP:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -1540, -1604, 314 ), 1 ) );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_bus1",		"-1 -75 -12",	"1 75 12",	"-87 2569 76" );
+    make_brush( "_losfix_bus2",		"-1 -76 -12",	"1 75 12",	"-228 2780 74" );
+    make_brush( "_losfix_bus3",		"-54 -1 -12",	"54 1 12",	"-176 2703 74" );
+    make_brush( "_losfix_memefence", "-80 0 0", "80 1 96", "-2512 2443 64" );
+    make_brush( "_losfix_van",		"-1 -85 -10",	"1 85 10",	"-2513 2807 72" );
+    make_clip( "_ladder_busjazzclub_balconystep", "SI Players", 1, "-316 2 0", "326 5 6", "-324 2590 218" );
+    make_clip( "_ladder_billiards_clip", "Survivors", 1, "-160 0 -252", "24 1 60", "-848 1999.1 316" );
+    make_clip( "_ladder_billiardsqol_clip", "Everyone", 1, "0 0 -154", "4 18 0", "-832 1999.1 218" );
+    make_clip( "_ladder_endtriplewindow_clip", "SI Players", 1, "-4 -96 0", "4 96 2", "-2 -2304 298" );
+    make_clip( "_ladder_fountainvinesB_clip", "Everyone", 1, "-8 -126 0", "0 130 179", "-3200 4158 64" );
+    make_clip( "_ladder_garagerooftops_clipbot", "SI Players", 1, "-23 -19 0", "19 2 16", "-1346 2958 64" );
+    make_clip( "_ladder_garagerooftops_cliptop", "SI Players", 1, "-47 -19 0", "66 2 44", "-1346 2974 64" );
+    make_ladder( "_ladder_balconygutter_cloned_eventacvent", "-1414 1288 592", "830 -984 -96" );
+    make_ladder( "_ladder_billiards_cloned_billiardsdrop", "-1392 2489 240", "545 -493.9 -120" );
+    make_ladder( "_ladder_busjazzclub_cloned_startwhitefence", "-3296 3698 134", "-1427 -2032 -3", "0 -54.6 0", "-0.82 -0.58 0" );
+    make_ladder( "_ladder_endsemifront_cloned_endsemiback", "1122.36 -2274.4004 146.7381", "2144 -4483 0", "0 180 0", "-0.96 0.28 0" );
+    make_ladder( "_ladder_endtriplewindow_cloned_firstgutterladder", "-3706 4400 170", "3706 -6704 22" );
+    make_ladder( "_ladder_floatfarcorner_cloned_floatreartall", "-1722 -288 248", "-62 1265 -16" );
+    make_ladder( "_ladder_floatfronttall_cloned_floatreartall", "-1722 -288 248", "0 400 0" );
+    make_ladder( "_ladder_fountainvinesB_cloned_firstgutterladder", "-3706 4400 170", "-6911 8598 -29", "0 -180 0", "-1 0 0" );
+    make_ladder( "_ladder_fountainvinesT_cloned_startrightpicket", "-3424 3458 126", "387 7583 224", "0 90 0", "-1 0 0" );
+    make_ladder( "_ladder_garagerooftops_cloned_startwhitefence", "-3296 3698 134", "1950 -707 16" );
+    make_ladder( "_ladder_laststreetextend_cloned_floatpointyfence", "-1600 -382 124", "212 -264 352" );
+    make_ladder( "_ladder_poolhallinleft_cloned_poolhalloutright", "-384 1598 144", "-769 3218 9", "0 180 0", "0 1 0" );
+    make_ladder( "_ladder_poolhallinright_cloned_poolhalloutleft", "-640 1598 144", "-1281 3218 9", "0 180 0", "0 1 0" );
+    make_ladder( "_ladder_postfloatlowroof_cloned_eventscaffoldright", "-1152 454 170", "-1472 569 244" );
+    make_ladder( "_ladder_prefloatalley_cloned_unusedwrongway", "-26 1728 234", "-1852 1566 -4", "0 -90 0", "0 -1 0" );
+    make_ladder( "_ladder_unusedareain_cloned_onewayvanfence", "-2512 2434 144", "270 765 0" );
+}

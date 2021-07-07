@@ -51,3 +51,18 @@ make_clip( "_booster_fireescape", "Survivors", 1, "-78 -67 0", "89 20 864", "359
 make_clip( "_bridgerail_thinledge", "Survivors", 1, "-19 -5 0", "19 -1 223", "288 -1275 414" );
 make_clip( "_bridge_curbsmoother1", "Everyone", 1, "-128 -267 0", "-127 182 8", "-1 -1014 -8" );
 make_clip( "_bridge_curbsmoother2", "Everyone", 1, "127 -267 0", "128 182 8", "1 -1014 -8" );
+
+if ( HasPlayerControlledZombies() )
+{
+	make_brush( "_losfix_dynamic_car",	"-80 -1 -10",	"80 1 10",	"89 -1532 176" );
+	make_brush( "_losfix_dynamic_van",	"-100 -1 -10",	"100 1 10",	"-86 -1551 176" );
+	make_brush( "_losfix_gen1",			"-20 -1 -8",	"20 1 8",	"-460 -572 11" );
+	make_brush( "_losfix_gen2",			"-1 -20 -8",	"1 20 8",	"-1151 921 168" );
+	make_ladder( "_ladder_fencec6mirr_cloned_concbarrfront", "-274 1408 228", "39 -2127 -163" );
+	make_ladder( "_ladder_pillarc6mirr_cloned_dumpsterhedge", "2047 256 0", "-3089 44 64" );
+
+	con_comment( "MOVER:\tLOS dynamic car and van parented to move with bridge." );
+
+	EntFire( g_UpdateName + "_losfix_dynamic_car", "SetParent", "bridge_elevator" );
+	EntFire( g_UpdateName + "_losfix_dynamic_van", "SetParent", "bridge_elevator" );
+}

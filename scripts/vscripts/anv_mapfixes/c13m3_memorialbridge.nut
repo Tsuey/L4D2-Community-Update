@@ -76,3 +76,23 @@ if ( g_BaseMode != "coop" && g_BaseMode != "realism" && g_BaseMode != "survival"
 
     EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "OnStartTouch anv_mapfixes_watercushion_trighurt:Kill::0:-1" );
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_bus",		"-1 -204 -8",	"1 204 8",	"1782 -4004 1335" );
+    make_brush( "_losfix_gastruck",		"-36 -1 -12",	"36 1 12",	"-2933 -3970 1340" );
+    make_ladder( "_ladder_endbrick_cloned_shortbase", "830 -3760 192", "9493 -5323 188", "0 -90 0", "0 1 0" );
+    make_ladder( "_ladder_shrubwall1_cloned_shortbase", "830 -3760 192", "-5443 -1047 601" );
+    make_ladder( "_ladder_shrubwall2_cloned_shortbase", "830 -3760 192", "-5373 -542 614" );
+    make_ladder( "_ladder_sosemerge_cloned_shortbase", "830 -3760 192", "-4989 -1291 352" );
+    make_ladder( "_ladder_supertallstart_cloned_samespot", "-3391 -4804 975", "0 305 0" );
+    make_prop( "dynamic",		"_losblocker_acvent",		"models/props_rooftop/acvent04.mdl",		"6027 -6087 542",		"0 90 0",		"shadow_no" );
+    make_prop( "dynamic",		"_propladder_bricka",		"models/props_industrial/brickpallets.mdl",	"5797.57 -6183.4 412.857",	"0 0 0",		"shadow_no" );
+    make_prop( "dynamic",		"_propladder_brickb",		"models/props_industrial/brickpallets.mdl",	"5733 -6184 412.857",		"0 0 0",		"shadow_no" );
+    make_prop( "dynamic",		"_propladder_brickc",		"models/props_industrial/brickpallets.mdl",	"5797.48 -6183.82 476.857",	"0 180 0",		"shadow_no" );
+    make_prop( "dynamic",		"_propladder_brickd",		"models/props_industrial/brickpallets.mdl",	"5796.57 -6248.4 445.857",	"0 0 0",		"shadow_no" );
+    make_prop( "dynamic",		"_propladder_bricke",		"models/props_industrial/brickpallets.mdl",	"5797.48 -6248.82 412.857",	"0 180 0",		"shadow_no" );
+    make_prop( "dynamic",		"_propladder_brickf",		"models/props_industrial/brickpallets.mdl",	"5732.91 -6249.42 412.857",	"0 180 0",		"shadow_no" );
+    make_prop( "dynamic",		"_propladder_brickg",		"models/props_industrial/brickpallets.mdl",	"5754 -6439 396.857",		"0 180 0",		"shadow_no" );
+    patch_ladder( "-410.09 -4121.79 1386", "15 15 10" );
+}

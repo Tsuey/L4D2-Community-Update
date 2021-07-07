@@ -33,3 +33,19 @@ if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
     EntFire( "tankdoorin_button", "AddOutput", "OnTimeUp tankdoorinnavblocker:UnblockNav::0:-1" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_clip( "_ladder_tankwinleft_clip", "SI Players", 1, "-26 0 0", "26 1 6", "7335 944 224" );
+    make_clip( "_ladder_tankwinright_clip", "SI Players", 1, "-26 0 0", "26 1 6", "7591 944 224" );
+    make_ladder( "_ladder_brickyardleft1_cloned_brickyard2nd", "4712 193 224", "-72 -639 1" );
+    make_ladder( "_ladder_brickyardleft2_cloned_brickyard3rd", "3713 352 192", "4576 -4096 1", "0 90 0", "0 1 0" );
+    make_ladder( "_ladder_brickyardleft3_cloned_brickyard1st", "5441 -418 224", "-1730 64 1" );
+    make_ladder( "_ladder_brickyardright1_cloned_brickyard3rd", "3713 352 192", "5569 -3458 1", "0 90 0", "0 1 0" );
+    make_ladder( "_ladder_brickyardright2_cloned_brickyard3rd", "3713 352 192", "4545 -3457 1", "0 90 0", "0 1 0" );
+    make_ladder( "_ladder_midfencefar_cloned_midstreetnear", "11391 2256 204.538", "-778 -311 0" );
+    make_ladder( "_ladder_midfencenear_cloned_midstreetfar", "10621 2064 204.5", "782 0 0" );
+    make_ladder( "_ladder_parkourvent_cloned_roofshortest", "5559 1168 352", "10439 2848 -48", "0 180 0", "1 0 0" );
+    make_ladder( "_ladder_tankwinleft_cloned_brickoffice", "5944 823 256", "1390 105 -136" );
+    make_ladder( "_ladder_tankwinright_cloned_brickoffice", "5944 823 256", "1646 105 -136" );
+}

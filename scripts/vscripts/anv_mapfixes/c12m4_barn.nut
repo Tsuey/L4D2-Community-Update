@@ -95,3 +95,43 @@ if ( g_BaseMode == "versus" )
     make_clip(	"_commonhop_traintruss",	"Survivors",	1,	"-160 -120 -55",	"160 120 1545",		"10879 -7463 116" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	make_brush( "_losfix_semia",		"-1 -30 -15",	"1 30 15",	"11440 -7078 -56" );
+	make_brush( "_losfix_semib",		"-50 -1 -15",	"30 1 15",	"11440 -7048 -56" );
+	make_clip( "_ladder_barnhousedoor_clip", "Everyone", 1, "-2 -112 9", "2 112 21", "8994 -9312 471" );
+	make_clip( "_ladder_finalrooftop_permstuck", "Everyone", 1, "-53 -19 0", "21 31 100", "10827 -4563 -62" );
+	make_clip( "_ladder_siloleft_clip1", "SI Players", 1, "-50 -24 0", "50 24 1", "8556 -7849 1035", "0 -52 0" );
+	make_clip( "_ladder_siloleft_clip2", "SI Players", 1, "-50 -24 0", "50 24 1", "8541 -7849 1052", "0 -52 0" );
+	make_clip( "_ladder_siloright_clip1", "SI Players", 1, "-50 -24 0", "50 24 1", "8909 -7849 1035", "0 -52 0" );
+	make_clip( "_ladder_siloright_clip2", "SI Players", 1, "-50 -24 0", "50 24 1", "8894 -7849 1052", "0 -52 0" );
+	make_clip( "_ladder_siloshared_clip", "SI Players", 1, "-170 -136 -72", "183 76 64", "8608 -7937 1001" );
+	make_clip( "_ladder_upperplanks_clipleft", "Everyone", 1, "-16 -5 0", "1 4 179", "10743 -9075 -11", "0 -33 0" );
+	make_clip( "_ladder_upperplanks_clipright", "Everyone", 1, "-46 -5 0", "25 4 179", "10678 -9067 -11" );
+	make_ladder( "_ladder_atlanticdiesel_cloned_trussfenceback", "10528 -7510 10", "436 -211 250" );
+	make_ladder( "_ladder_atlanticroofback_cloned_atlanticpipe", "11150 -9016 104.5", "447 1011 -40" );
+	make_ladder( "_ladder_atlanticroofleftB_cloned_bridgetower", "10321 -1894 162.5", "304 -5778 -282" );
+	make_ladder( "_ladder_atlanticroofleftT_cloned_bridgetower", "10321 -1894 162.5", "304 -5778 -90" );
+	make_ladder( "_ladder_barnhousedoor_cloned_atlanticpipe", "11150 -9016 104.5", "-2157 -216 327" );
+	make_ladder( "_ladder_crashedback_cloned_trussfencefront", "10384 -7522 10", "-64 -2804 -52", "0 0.5 0" );
+	make_ladder( "_ladder_crashedfront_cloned_trussfenceback", "10528 -7510 10", "-226.425 -2677 -37" );
+	make_ladder( "_ladder_elevatedhome_cloned_trussfencefront", "10384 -7522 10", "-1016 -72 16", "0 9 0", "0.16 -0.98 0" );
+	make_ladder( "_ladder_finalrooftopB_cloned_bridgetower", "10321 -1894 162.5", "504 -2712 -251" );
+	make_ladder( "_ladder_finalrooftopT_cloned_bridgetower", "10321 -1894 162.5", "504 -2712 -59" );
+	make_ladder( "_ladder_rocklobboxcar_cloned_trussfencefront", "10384 -7522 10", "23 -1461 27" );
+	make_ladder( "_ladder_shortfenceL_cloned_trussfencefront", "10384 -7522 10", "-860 -555 240" );
+	make_ladder( "_ladder_shortfenceR_cloned_backbarnshortfence", "8042 -9584 338", "1104 -485 48" );
+	make_ladder( "_ladder_siloleft_cloned_atlanticpipe", "11150 -9016 104.5", "-5753 -7451 420", "0 37.5 0", "0.78 0.62 0" );
+	make_ladder( "_ladder_siloleft_cloned_atlanticpipe", "11150 -9016 104.5", "-5753 -7451 740", "0 37.5 0", "0.78 0.62 0" );
+	make_ladder( "_ladder_siloright_cloned_atlanticpipe", "11150 -9016 104.5", "-5401 -7452 420", "0 37.5 0", "0.78 0.62 0" );
+	make_ladder( "_ladder_siloright_cloned_atlanticpipe", "11150 -9016 104.5", "-5401 -7452 740", "0 37.5 0", "0.78 0.62 0" );
+	make_ladder( "_ladder_upperplanks_cloned_bridgetower", "10321 -1894 162.5", "12612 1256 -89", "0 -90 0", "0 1 0" );
+	make_ladder( "_ladder_wreckedboxcar_cloned_trussfencefront", "10384 -7522 10", "-1619 -10047 -14", "0 57.72 0", "0.85 -0.52 0" );
+	make_prop( "dynamic", "_ladder_atlanticroofback_pipe", "models/props_mill/PipeSet08d_256_001a.mdl", "11590 -8002 77", "-90 90 180", "shadow_no" );
+	make_prop( "dynamic", "_ladder_atlanticroofleft_pipe", "models/props_rooftop/Gutter_Pipe_256.mdl", "10632 -7672 168", "0 -90 0", "shadow_no" );
+	make_prop( "dynamic", "_ladder_finalrooftop_pipe", "models/props_mill/PipeSet08d_256_001a.mdl", "10842 -4603 84", "90 90 0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_finalchimney1", "models/props/cs_militia/fireplacechimney01.mdl", "11020 -4586 329", "0 135 0", "shadow_no" );
+	make_prop( "dynamic", "_solidify_finalchimney2", "models/props/cs_militia/fireplacechimney01.mdl", "11020 -4073 329", "0 135 0", "shadow_no" );
+	patch_ladder( "11314.7 -4535 -259.108", "0 -22 9" );
+}

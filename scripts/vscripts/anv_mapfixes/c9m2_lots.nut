@@ -38,3 +38,41 @@ con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale switch
 
 make_clip( "_point_of_no_return", "Survivors", 0, "-16 -169 -168", "58 169 784", "5750 7177 368" );
 EntFire( "finaleswitch_initial", "AddOutput", "OnTimeUp anv_mapfixes_point_of_no_return:Enable::0:-1" );
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_gen1a",		"-1 -24 -8",	"1 24 8",	"6853 5881 50" );
+    make_brush( "_losfix_gen1b",		"-14 -1 -8",	"15 1 8",	"6837 5885 50" );
+    make_brush( "_losfix_gen2a",		"-1 -28 -8",	"1 28 8",	"7498 6786 55" );
+    make_brush( "_losfix_gen2b",		"-12 -1 -8",	"13 1 8",	"7484 6779 55" );
+    make_brush( "_losfix_semi1a",		"-1 -32 -13",	"1 32 13",	"4519 -91 -206" );
+    make_brush( "_losfix_semi1b",		"-40 -1 -13",	"41 1 13",	"4477 -121 -206" );
+    make_brush( "_losfix_semi2",		"-1 -50 -15",	"1 50 15",	"3560 4539 10" );
+    make_ladder( "_ladder_armybusfront_cloned_finalebus", "6547.86 6579 107.421", "623 -9374 -262", "0 34.7 0", "-0.57 0.82 0" );
+    make_ladder( "_ladder_backfenceright_cloned_backfenceleft", "4631 4016 76", "18 579 0" );
+    make_ladder( "_ladder_bluecontainerplus_cloned_bluecontainer", "3952 2421 -55.5", "1464 6691 11", "0 -90 0", "-1 0 0" );
+    make_ladder( "_ladder_buggycullfix_cloned_bluecontainer", "3952 2421 -55.5", "1810 4245 -124", "0 -144.2 0", "-0.58 0.81 0" );
+    make_ladder( "_ladder_containeryardsemi_cloned_metalsupplysemi", "4388 2361 -33.3145", "5405 -1211 2", "0 90 0", "0 -1 0" );
+    make_ladder( "_ladder_crashedbus_cloned_finalebus", "6547.86 6579 107.421", "7859 -9216 -265", "0 61.75 0", "-0.9 0.44 0" );
+    make_ladder( "_ladder_finaleshelffront_cloned_finaleshelfback", "8724 6143 320", "2369 14507 0", "0 -90 0", "-1 0 0" );
+    make_ladder( "_ladder_permstuck_cloned_finalecornerfence", "5920 7375 124", "-130 752 1" );
+    make_ladder( "_ladder_startareasemi_cloned_metalsupplysemi", "4388 2361 -33.3145", "-1583 4005 -114", "0 -93.25 0", "0 1 0" );
+    make_ladder( "_ladder_startfenceright_cloned_startfenceleft", "1456 -1675 -148", "-370 0 0" );
+    make_ladder( "_ladder_startroofbrick_cloned_startroofpipe", "1788.5 -1545 -60", "-697 -3531 -24", "0 90 0", "1 0 0" );
+    make_ladder( "_ladder_warehousesemi_cloned_metalsupplysemi", "4388 2361 -33.3145", "-538 7796 115", "0 -70.42 0", "-0.34 0.94 0" );
+    make_ladder( "_ladder_whitecontainer_cloned_bluecontainer", "3952 2421 -55.5", "625 7652 24", "0 -96.9 0", "-1 0.1 0" );
+    make_prop( "dynamic", "_solidify_startacvent1", "models/props_rooftop/acvent01.mdl", "-99.0076 -574.692 310.902", "18.5 0 0", "shadow_no" );
+    make_prop( "dynamic", "_solidify_startacvent2", "models/props_rooftop/acvent01.mdl", "-99.2042 -750.692 310.934", "18.5 0 0", "shadow_no" );
+
+    con_comment( "KILL:\tDeleted 7 func_brush wooden planks and 7 func_brush entry blockers." );
+
+    EntFire( "versus_doorblockers", "Kill" );
+
+    kill_funcinfclip( 149.409 );		// Delete clip in 1st closet
+    kill_funcinfclip( 150.29 );		// Delete clip in 2nd closet
+    kill_funcinfclip( 142.109 );		// Delete clip in 3rd closet
+    kill_funcinfclip( 137.706 );		// Delete clip in 4th closet
+    kill_funcinfclip( 149.676 );		// Delete clip in 5th closet
+    kill_funcinfclip( 159.458 );		// Delete clip in 6th closet
+    EntFire( "worldspawn", "RunScriptCode", "kill_funcinfclip( 159.458 )", 1 );		// Delete clip in 7th closet (same)
+}

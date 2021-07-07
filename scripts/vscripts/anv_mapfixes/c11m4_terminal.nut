@@ -52,3 +52,33 @@ if ( g_BaseMode == "versus" )
     make_clip( "_altpath_escalator", "Survivors", 1, "-37 -6 -35", "25 6 175", "2289 1737 51", "0 0 -2.5" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	make_brush( "_losfix_chairs1",		"-50 -1 -10",	"50 1 10",	"2976 2257 162" );
+	make_brush( "_losfix_chairs2",		"-50 -1 -9",	"50 1 9",	"3022 3230 161" );
+	make_brush( "_losfix_chairs3",		"-50 -1 -10",	"50 1 10",	"2967 3931 162" );
+	make_brush( "_losfix_chairs_long1",	"-102 -1 -10",	"102 1 10",	"2969 3383 162" );
+	make_brush( "_losfix_chairs_long2",	"-102 -1 -10",	"102 1 10",	"2968 3760 162" );
+	make_brush( "_losfix_chairs_long3",	"-102 -1 -10",	"102 1 10",	"2970 4924 162" );
+	make_brush( "_losfix_chairs_long4",	"-102 -1 -10",	"102 1 10",	"2971 5097 162" );
+	make_brush( "_losfix_chairs_long5",	"-102 -1 -10",	"102 1 10",	"2970 5457 162" );
+	make_clip( "_collision_terminaltruss1", "SI Players", 1, "-273 -16 0", "272 16 32", "-202 4742 670" );
+	make_clip( "_collision_terminaltruss2", "SI Players", 1, "-189 -16 0", "245 16 32", "128 4230 582", "-17 0 0" );
+	make_clip( "_collision_terminaltruss3", "SI Players", 1, "-78 -16 0", "161 16 32", "-400 4230 630", "4 0 0" );
+	make_clip( "_ladder_baggageclaim_rampclip", "SI Players", 1, "0 -31 0", "128 128 64", "640 4417 305", "40 90 0" );
+	make_clip( "_ladderqol_vaneventarea_left", "SI Players", 1, "-9 -66 -56", "41 66 32", "306 5104 264", "0 45 0" );
+	make_clip( "_ladderqol_vaneventarea_right", "SI Players", 1, "-13 -69 -56", "41 69 32", "306 3811 264", "0 -45 0" );
+	make_clip( "_losblocker_finalrun_clip", "Survivors", 1, "-102 -62 0", "52 61 76", "3032 3925 320" );
+	make_ladder( "_ladder_baggageclaim_cloned_farluggageback", "560 2727 353.403", "70 1684 -16" );
+	make_ladder( "_ladder_exploitventB_cloned_basheddoors", "397 1534 74", "322.495 -606.022 -4" );
+	make_ladder( "_ladder_exploitventT_cloned_givebloodrubble", "-24 1798 60", "-1159 905 232", "0 -90 0", "1 0 0" );
+	make_ladder( "_ladder_farluggagefront_cloned_farluggageback", "560 2727 353.403", "1115 5575 0", "0 180 0", "0 1 0" );
+	make_ladder( "_ladder_midluggagefront_cloned_midluggageback", "560 1519 353.403", "1101 3158 0", "0 180 0", "0 1 0" );
+	make_ladder( "_ladder_midventfront_cloned_midventback", "482 2082 329", "961 4155 0", "0 -180 0", "0 -1 0" );
+	make_navblock( "_losblocker_finalrun_navblock", "Everyone", "Apply", "-18 -36 -32", "18 36 32", "3050 3925 153" );
+	make_prop( "dynamic",		"_losblocker_finalrun_screen",	"models/props_unique/airportdeparturescreen01.mdl",	"2983 3925 151.25",		"0 180 0",		"shadow_no" );
+	make_trigduck( "_duckqol_missingvent", "-5 -32 -32", "5 32 32", "716 928 160" );
+	make_trigmove( "_duckqol_vanfence", "Duck", "-11 -8 0", "11 8 17", "-285 3524 191" );
+	patch_nav_checkpoint( "3175 4562 152" );
+}

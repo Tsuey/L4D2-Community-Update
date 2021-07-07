@@ -53,3 +53,22 @@ if ( g_BaseMode == "survival" )
     // MESS == make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1093 -3406 -40", "1759 2002 382", "581 3150 387" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	make_brush( "_losfix_crates",	"-2 -30 -3",	"2 30 3",	"1820 4757 -115" );
+	make_brush( "_losfix_strangebalcony",	"-400 -2 -8",	"240 2 8",	"1552 1854 344" );
+	make_brush( "_losfix_van1",		"-72 -1 -8",	"72 1 8",	"535 4275 -153" );
+	make_brush( "_losfix_van2",		"-72 -1 -8",	"72 1 8",	"1592 4299 -153" );
+	make_ladder( "_ladder_barplankqolB_cloned_barelecbox", "421 1994 136", "2394 2455 -256", "0 90 0", "0 1 0" );
+	make_ladder( "_ladder_barplankqolT_cloned_barelecbox", "421 1994 136", "2394 2455 0", "0 90 0", "0 1 0" );
+	make_ladder( "_ladder_crawfishelecbox_cloned_sucktheheads", "2080 -836 168", "4138 -1342 0", "0 180 0", "0 1 0" );
+	make_ladder( "_ladder_forkliftvines_cloned_startfenceback", "2408 -1284 -64", "-1130 4196 -48" );
+	make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
+	make_ladder( "_ladder_pipesfencefront_cloned_pipesfenceback", "2384 1566 1", "4757 3130 0", "0 180 0", "-1 0 0" );
+	make_ladder( "_ladder_poolhalldropleft_cloned_poolhalldropright", "1113 1308 -94.8019", "250 0 0" );
+	make_ladder( "_ladder_stanleydoor_cloned_sewerdropleft", "1627.5 5554 -1132", "12817 4901 46", "0 90 0", "0 -1 0" );
+	make_ladder( "_ladder_startfenceback_cloned_startfence", "2408 -1284 -64", "719 -3792 160", "0 90 0", "1 0 0" );
+	make_ladder( "_ladder_startfencefront_cloned_startfenceback", "2408 -1284 -64", "4820 -2566 0", "0 180 0", "0 1 0" );
+	make_prop( "dynamic", "_solidify_ventlarge", "models/props_rooftop/vent_large1.mdl", "1312.21 1963.61 334.677", "0 270 0", "shadow_no" );
+}

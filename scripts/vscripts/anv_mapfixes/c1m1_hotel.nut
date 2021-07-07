@@ -44,3 +44,17 @@ if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
         effect_name	= "fire_window_hotel"
     } );
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    // Simulates getting squished. Requires 2 Ghost Infected constantly stuck-warping.
+
+    con_comment( "LOGIC:\tAnti-doorbreak trighurt will be deleted 4 seconds after elevator starts." );
+
+    make_trighurt( "_elevator_exploit_bean", "Ghost", "-55 -2 0", "55 2 111", "2169 5713 2344" );
+    EntFire( "elevator_button", "AddOutput", "OnPressed anv_mapfixes_elevator_exploit_bean:Kill::4:-1" );
+
+    con_comment( "QOL:\tThe 2nd fire door is open immediately for Versus-only QoL." );
+
+    DoEntFire( "!self", "Break", "", 0.0, null, Entities.FindByClassnameNearest( "prop_door_rotating", Vector( 1828, 6620, 2464 ), 1 ) );
+}

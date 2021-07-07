@@ -39,3 +39,13 @@ if ( g_BaseMode == "versus" )
     make_clip( "_shortcut_easybigskip3", "Survivors", 1, "-64 -316 0", "8 96 2442", "483 4553 253", "0 -4 0" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_gastruck1",	"-45 -1 -18",	"45 1 18",	"4992 2301 617" );
+    make_brush( "_losfix_gastruck2",	"-1 -40 -18",	"1 40 18",	"4082 2256 524" );
+    make_ladder( "_ladder_eventphysfence_cloned_endfencefront", "-1401.11 5244.2798 344", "1045 469 9" );
+    make_ladder( "_ladder_posttanksecret_cloned_cliffstraightwide", "6914.6465 2713.7744 601", "14585 5833 1212", "10 -176.74 0", "-0.69 0.72 0" );
+    make_ladder( "_ladder_pretankleft_cloned_cliffstraightwide", "6914.6465 2713.7744 601", "15420 1150 17", "0 141.65 0", "0 1 0" );
+    make_ladder( "_ladder_pretankright_cloned_cliffstraightwide", "6914.6465 2713.7744 601", "5680 -3340 1200", "10 52.84 0", "1 0.1 0" );
+}

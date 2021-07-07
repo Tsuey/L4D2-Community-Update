@@ -49,3 +49,43 @@ make_clip( "_booster_coolingtanks", "Survivors", 1, "-117 -56 -120", "117 56 80"
 con_comment( "FIX:\tTotal of 2 out of 2 traffic cones need to be made non-solid -- c7m3 already OK." );
 
 unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_gen1",		"-20 -1 -8",	"20 1 8",	"-476 -577 11" );
+    make_brush( "_losfix_gen2",		"-1 -20 -8",	"1 20 8",	"-1152 920 168" );
+    make_brush( "_losfix_van1",		"-72 -1 -9",	"72 1 9",	"-318 5 5" );
+    make_brush( "_losfix_van2",		"-64 -1 -9",	"64 1 9",	"379 703 168" );
+    make_clip( "_ladder_c7mirrconcretecar_clipleft", "Everyone", 1, "-2 -6 0", "2 6 138", "251 493 30", "2 -45 -2" );
+    make_clip( "_ladder_c7mirrconcretecar_clipright", "Everyone", 1, "-2 -6 0", "2 6 138", "252 452 30", "2 45 2" );
+    make_clip( "_ladder_c7mirrstonewallcar_clipleft", "Everyone", 1, "6 13 0", "8 16 152", "1214 -143 -105", "0 45 0" );
+    make_clip( "_ladder_c7mirrstonewallcar_clipright", "Everyone", 1, "6 13 0", "8 16 152", "1158 -133 -105", "0 -45 0" );
+    make_ladder( "_ladder_backleftc6only_cloned_generatorvines", "-686 -408 160", "-1860 237 -16" );
+    make_ladder( "_ladder_backmidc6only_cloned_generatorvines", "-686 -408 160", "-1867 1068 -16" );
+    make_ladder( "_ladder_backrightc6only_cloned_starttinyvan", "-1872 -658 54", "-1869 -710 156", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_c7mirracventfront_cloned_acventback", "-960 -514 391", "-1914 -1013 0", "0 180 0", "0 1 0" );
+    make_ladder( "_ladder_c7mirrbarricaderoof_cloned_elevatorvines", "-686 -408 160", "470 1410 96" );
+    make_ladder( "_ladder_c7mirrbrickstep_cloned_startshortest", "-1872 -658 54", "-1311 2911 308", "0 90 0", "-1 0 0" );
+    make_ladder( "_ladder_c7mirrbridgeright_cloned_stonewallstairs", "1154 -304 80", "-451 919 0" );
+    make_ladder( "_ladder_c7mirrconcretecar_cloned_acventback", "-960 -514 391", "745 -487 -318", "0 -90 -3", "-1 0 0" );
+    make_ladder( "_ladder_c7mirrconcretestep_cloned_startshortest", "-1872 -658 54", "909 -2818 -106", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_c7mirrelecboxfence_cloned_elevatorvines", "-686 -408 160", "437 -582 3" );
+    make_ladder( "_ladder_c7mirrfireescapeback_cloned_burgerbillboard", "-528 798 240", "992 -1574 -65" );
+    make_ladder( "_ladder_c7mirrpoolhalldoorway_cloned_picketbridgefar", "-1368 -254 115", "1193 -1662 158", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_c7mirrprivateparking_cloned_stonewallstairs", "1154 -304 80", "2175 866 132", "0 -180 0", "-1 0 0" );
+    make_ladder( "_ladder_c7mirrstonewallcar_cloned_stonewallstairs", "1154 -304 80", "887 -1283 -114", "0 90 0", "0 1 0" );
+    make_ladder( "_ladder_c7mirrstonewalltree_cloned_softdrinks", "272 1746 283.95", "3435 -631 -79", "0 90 -4", "1 0 0" );
+    make_ladder( "_ladder_c7mirrtentlinkfar_cloned_acventback", "-960 -514 391", "18 -940 -162", "0 180 0", "0 1 0" );
+    make_ladder( "_ladder_c7mirrtentlinknear_cloned_acventback", "-960 -514 391", "555 261 -162", "0 90 0", "1 0 0" );
+    make_ladder( "_ladder_c7mirrvinestohedge_cloned_burgerbillboard", "-528 798 240", "227 -1467 -128", "0 -90 0", "-1 0 0" );
+    make_ladder( "_ladder_c7mirrwhitetable_cloned_picketbridge", "-992 -254 160", "711 -618 3" );
+    make_ladder( "_ladder_c7mirrwindowdoor_cloned_burgerbillboard", "-528 798 240", "126 549 -65", "0 180 0", "0 1 0" );
+    make_ladder( "_ladder_starthighc6only_cloned_generatorvines", "-686 -408 160", "-1528 93 0" );
+    make_ladder( "_ladder_startlowc6only_cloned_generatorvines", "-686 -408 160", "-1356 -299 -240" );
+    make_prop( "dynamic", "_ladder_c7mirrbarricaderoof", "models/props_downtown/gutter_downspout_straight02.mdl", "-224 1001 412", "0 0 0", "shadow_no", "solid_no" );
+    make_prop( "dynamic", "_ladder_c7mirrelecboxfence", "models/props_downtown/gutter_downspout_straight02.mdl", "-256 -998 304", "0 0 0", "shadow_no", "solid_no" );
+    make_prop( "dynamic", "_ladder_c7mirrfireescapeback", "models/props_downtown/gutter_downspout_straight02.mdl", "463 -768 347", "0 -90 0", "shadow_no", "solid_no" );
+    make_prop( "dynamic", "_ladder_c7mirrpoolhalldoorway", "models/props_downtown/gutter_downspout_straight02.mdl", "928 -294 370", "0 0 0", "shadow_no", "solid_no" );
+    make_prop( "dynamic", "_ladder_c7mirrwindowdoor", "models/props_downtown/gutter_downspout_straight02.mdl", "654 -256 347", "0 90 0", "shadow_no", "solid_no" );
+    patch_nav_checkpoint( "-2227 -362 -256" );
+}

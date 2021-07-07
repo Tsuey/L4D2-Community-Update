@@ -57,3 +57,40 @@ if ( g_BaseMode == "versus" )
     make_clip( "_truck_fence2", "Survivors", 1, "-92 -3 -1546", "92 3 1546", "4388 -2865 1642" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_gas_truck",	"-1 -75 -12",	"1 75 12",	"-572 -13262.9 133" );
+    make_brush( "_losfix_gen",		"-1 -20 -8",	"1 20 8",	"-1390 -13156 125" );
+    make_brush( "_losfix_trailer1",		"-1 -81 -20",	"1 80 15",	"1219 -4171 120" );
+    make_brush( "_losfix_trailer2",		"-72 -1 -20",	"72 1 18",	"1149 -4253 116" );
+    make_brush( "_losfix_trailer3",		"-72 -1 -20",	"72 1 20",	"1074 -4342 116" );
+    make_brush( "_losfix_truck",		"-1 -70 -12",	"1 70 12",	"4106 -2935 115" );
+    make_ladder( "_ladder_ducatelelecbox_cloned_ducateldumpsters", "-1586.2 -13843.5 218.25", "11911 -15404 0", "0 -90 0", "-1 0 0" );
+    make_ladder( "_ladder_ducatelroofl_cloned_brokenlocker", "2756 -3833.5 392.25", "-5049 -16360 0", "0 90 0", "-1 0 0" );
+    make_ladder( "_ladder_ducatelroofr_cloned_brokenlocker", "2756 -3833.5 392.25", "-5049 -16410 0", "0 90 0", "-1 0 0" );
+    make_ladder( "_ladder_grindergirder_cloned_bricksemitrailer", "4319.5 -3675.85 264.25", "-1856 -1939 -23" );
+    make_ladder( "_ladder_jaggedchainlinkback1_cloned_stacksfenceback", "258 -4883.67 156.145", "4269 -10900 -19", "0 180 0", "0 0 1" );
+    make_ladder( "_ladder_jaggedchainlinkback2_cloned_stacksfenceback", "258 -4883.67 156.145", "4269 -10550 -19", "0 180 0", "0 0 1" );
+    make_ladder( "_ladder_jaggedchainlinkfront_cloned_stacksfenceback", "258 -4883.67 156.145", "3750 -1083 -19" );
+    make_ladder( "_ladder_parkourouthouse_cloned_rubbleshortpipe", "1988.06 -4910.53 164.268", "-2152 -260 -33", "0 14.76 0", "0.26 -0.97 0" );
+    make_ladder( "_ladder_parkoursiloleft_cloned_marshtrailer", "-74.9665 -7000.47 202.25", "-728 -10692 139", "0 162.42 0", "-0.94 -0.34 0" );
+    make_ladder( "_ladder_parkoursiloright_cloned_marshtrailer", "-74.9665 -7000.47 202.25", "-717 -10720 139", "0 162.42 0", "-0.94 -0.34 0" );
+    make_ladder( "_ladder_pipeyardsemi_cloned_millgrinder", "2001.5 -5712 273.75", "9997 -1842 -98", "0 -90 0" "0 -1 0" );
+    make_ladder( "_ladder_saferoofpipe_cloned_bricksemitrailer", "4319.5 -3675.85 264.25", "7776 -5566 -8", "0 180 0", "-1 0 0" );
+    make_ladder( "_ladder_siloplatform_cloned_grinderwheel", "1080.5 -6085.5 237.133", "1839 -12326.5 -2", "0 180 0", "1 0 0" );
+    make_ladder( "_ladder_silosemirearleft_cloned_millgrinder", "2001.5 -5712 273.75", "-3643 -11764 -75", "0 128 0" "-0.6 0.8 0" );
+    make_ladder( "_ladder_silosemirearright_cloned_millgrinder", "2001.5 -5712 273.75", "-3946 -11936 -75", "0 128 0" "-0.6 0.8 0" );
+    make_ladder( "_ladder_stacksfencefront_cloned_stacksfenceback", "258 -4883.67 156.145", "524 -9863 0", "0 180 0" "0 0 1" );
+    make_ladder( "_ladder_talleventpillar1_cloned_talleventpipe", "-1497 -9117.13 400.25", "-10269 -7652 0", "0 90 0" "0 1 0" );
+    make_ladder( "_ladder_talleventpillar2_cloned_talleventpipe", "-1497 -9117.13 400.25", "7965 -10268 0", "0 -90 0" "0 -1 0" );
+    make_ladder( "_ladder_tallspoolsroofleft_cloned_bigwindowspipe", "2369.33 -4846.5 302.25", "-1722 -2626 -76" );
+    make_ladder( "_ladder_tallspoolsroofright_cloned_bigwindowspipe", "2369.33 -4846.5 302.25", "3017 -13262 -71", "0 -180  0", "0 -1 0" );
+    make_ladder( "_ladder_tallvinereturn_cloned_brokenlocker", "2756 -3833.5 392.25", "3907 -9165 19", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_tankescape_cloned_bricksemitrailer", "4319.5 -3675.85 264.25", "-3231 -9632 -64", "0 90 0", "0 1 0" );
+    make_ladder( "_ladder_tankreturn_cloned_bricksemitrailer", "4319.5 -3675.85 264.25", "4730 -9078 -23", "0 -180 0", "-1 0 0" );
+    make_ladder( "_ladder_thimblesemi_cloned_millgrinder", "2001.5 -5712 273.75", "5981 -6400 -98", "0 -91.48 0" "0 -1 0" );
+    make_ladder( "_ladder_truckfencereturn_cloned_stacksfenceback", "258 -4883.67 156.145", "4551 -7959 1", "0 180 0" "1 0 0" );
+    make_prop( "dynamic", "_ladder_saferoofpipe_pipe", "models/props_mill/PipeSet08d_512_001a.mdl", "3466 -1891 158", "90 90 0", "shadow_no" );
+    patch_ladder( "1143.5 -5515.5 226", "0 5 0" );
+}

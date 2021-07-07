@@ -26,3 +26,8 @@ if ( g_BaseMode != "versus" )
         }
     }
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_clip( "_dispcrouch_cliffside", "SI Players", 1, "-120 -8 -80", "120 8 80", "127 -818 428", "0 8 -10" );
+}

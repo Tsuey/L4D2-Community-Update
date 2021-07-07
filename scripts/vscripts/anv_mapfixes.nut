@@ -86,7 +86,10 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 
 	if ( HasPlayerControlledZombies() )
 	{
-		EntFire( "worldspawn", "RunScriptFile", "anv_versus" );
+		if( g_MapName == "tutorial_standards_vs" )
+		{
+			EntFire( "worldspawn", "RunScriptFile", "anv_standards" );
+		}
 
 		// If it's VS Survival (mutation15), delete new props that obstruct
 		// Survivor movement since their play space is already limited. This
@@ -103,6 +106,17 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 			EntFire( g_UpdateName + "_hittable_log",	"Kill", null, 0.1 );
 			EntFire( g_UpdateName + "_hittable_rock",	"Kill", null, 0.1 );
 		}
+	}
+
+	// Only run if it's Versus and not Taaannnk!! Mutation. Instantly warps
+	// Tanks that spawn unreasonably far away from Survivors or exposed.
+	// Note this runs even for all "COMMUNITY" maps and other Mutations so
+	// requires unique scope to not overwrite their "tank_spawn" events.
+	// Needs to run for both rounds or else both teams won't get warped.
+
+	if ( g_BaseMode == "versus" && g_MutaMode != "mutation19" )
+	{
+		EntFire( "worldspawn", "RunScriptFile", "anv_tankwarps" );
 	}
 
 	// Map fixes for Valve.

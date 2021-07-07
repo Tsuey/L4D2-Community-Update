@@ -90,3 +90,55 @@ if ( g_BaseMode == "versus" )
     make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	kill_funcinfclip( 130.518 );		// Delete clip inside sodapop 1a
+	kill_funcinfclip( 151.678 );		// Delete clip inside sodapop 1b
+	kill_funcinfclip( 369.219 );		// Delete clip inside anvilcase a
+	kill_funcinfclip( 226.475 );		// Delete clip inside anvilcase b
+	kill_funcinfclip( 425.096 );		// Delete clip inside NODRAW triplewindow
+	EntFire( "worldspawn", "RunScriptCode", "kill_funcinfclip( 130.518 )", 1 );		// Delete clip inside sodapop 2a (same)
+	EntFire( "worldspawn", "RunScriptCode", "kill_funcinfclip( 151.678 )", 1 );		// Delete clip inside sodapop 2b (same)
+	make_atomizer( "_atomizer_bsp_forklift", "-3527 3008 -256", "models/props\\cs_assault\\forklift_brokenlift.mdl", 60 );
+	make_axiswarp( "_axiswarp_anvilcase", "y+", 64, "-64 0 -128", "64 1 0", "-2304 2455 -96" );
+	make_axiswarp( "_axiswarp_sodapop1", "x+", 34, "0 -56 -184", "1 56 0", "-1400 1920 288" );
+	make_axiswarp( "_axiswarp_sodapop2", "x-", 34, "0 -56 -184", "1 56 0", "-3209 1920 288" );
+	make_brush( "_losfix_lightpanel",	"-100 -15 -2",	"90 15 2",	"-2299 2124 130" );
+	make_brush( "_losfix_plywood1",		"-1 -52 -5",	"1 52 5",	"-2846 2934 -255" );
+	make_brush( "_losfix_plywood2",		"-1 -52 -3",	"1 52 3",	"-1303 3098 -253" );
+	make_brush( "_losfix_scaffolding1a",		"-1 -74 -30",	"1 36 30",	"-1988 2489 -83" );
+	make_brush( "_losfix_scaffolding1b",		"-1 -60 -30",	"1 36 30",	"-1804 2489 -83" );
+	make_brush( "_losfix_scaffolding1c",		"-84 -1 -30",	"98 1 0",	"-1903 2524 -83" );
+	make_brush( "_losfix_scaffolding2a",		"-1 -74 -30",	"1 36 30",	"-2668 2489 -83" );
+	make_brush( "_losfix_scaffolding2b",		"-1 -60 -30",	"1 36 30",	"-2852 2489 -83" );
+	make_brush( "_losfix_scaffolding2c",		"-84 -1 -30",	"98 1 0",	"-2767 2524 -83" );
+	make_brush( "_losfix_start_trailer1",	"-104 -1 -8",	"104 1 8",	"-3740 3292 -248" );
+	make_brush( "_losfix_start_trailer2",	"-104 -1 -8",	"104 1 8",	"-4097 3304 -248" );
+	make_clip( "_axiswarp_anvilcase_clip", "SI Players", 1, "-64 0 0", "64 1 128", "-2304 2456 -224" );
+	make_clip( "_axiswarp_sodapop1_clip", "SI Players", 1, "0 -56 0", "1 56 184", "-1399 1920 104" );
+	make_clip( "_axiswarp_sodapop2_clip", "SI Players", 1, "0 -56 0", "1 56 184", "-3210 1920 104" );
+	make_clip( "_missing_staircase_clip", "Everyone", 1, "-40 -40 -1", "40 40 40", "-922 1933 173", "0 315 0" );
+	make_clip( "_smoother_windows", "SI Players and AI", 1, "-250 -32 0", "298 32 8", "-609 2387 329", "0 45 30" );
+	make_ladder( "_ladder_fencedperch_cloned_scaffoldsingle", "-2976 3198 -152", "-910 259 304" );
+	make_ladder( "_ladder_fireworksL_cloned_scaffoldsinglefork", "-2980 3298 -152", "771 -834 4" );
+	make_ladder( "_ladder_fireworksR_cloned_scaffoldsinglefork", "-2980 3298 -152", "581 -834 4" );
+	make_ladder( "_ladder_leftchopperwindowl_cloned_leftchopperwindowr", "-763.5005 2285.4995 240", "263 263 0" );
+	make_ladder( "_ladder_startfenceback_cloned_fencecoverfront", "-3444 3528 -188", "3838 2073 5", "0 43.5 0", "0.7 0.7 0" );
+	make_ladder( "_ladder_startfencefront_cloned_fencecoverback", "-3468 3592 -188", "3857 2072 5", "0 43.5 0", "-0.7 -0.7 0" );
+	make_prop( "dynamic", "_missing_staircase", "models/props_interiors/stair_metal_02.mdl", "-840 1792 136", "0 315 0", "shadow_yes" );
+	make_prop( "dynamic", "_yesdraw_infecteddoorway", "models/props_update/c2m5_infectedroom_doorway.mdl", "-3200 3972 0", "0 90 0", "shadow_yes" );
+	make_prop( "dynamic", "_yesdraw_infectedroom", "models/props_update/c2m5_infectedroom.mdl", "-3200 3727 0", "0 -90 0", "shadow_yes" );
+	make_prop( "physics", "_hittable_dumpleft", "models/props_junk/dumpster_2.mdl", "-1551 3682 -255", "0 270 0" );
+	make_prop( "physics", "_hittable_dumpright", "models/props_junk/dumpster_2.mdl", "-3296 3682 -255", "0 270 0" );
+
+	con_comment( "KILL:\tLeft and right defibrillators deleted for Versus. See: https://www.l4d.com/blog/post.php?id=3935" );
+
+	kill_entity( Entities.FindByClassnameNearest( "weapon_defibrillator_spawn", Vector( -2667.81, 2358.75, 80.28 ), 8 ) );
+	kill_entity( Entities.FindByClassnameNearest( "weapon_defibrillator_spawn", Vector( -1812.16, 2326.31, 80.28 ), 8 ) );
+
+	con_comment( "KILL:\tExtra pills which are meant to be killed OnVersus but still spawn on 2nd round deleted for Versus." );
+
+	kill_entity( Entities.FindByClassnameNearest( "weapon_pain_pills_spawn", Vector( -2534, 3449, -105 ), 6 ) );
+	kill_entity( Entities.FindByClassnameNearest( "weapon_pain_pills_spawn", Vector( -2526, 3449, -105 ), 6 ) );
+}

@@ -52,3 +52,52 @@ if ( g_BaseMode == "versus" )
     make_clip( "_cliprework_smokertrolling", "Survivors", 1, "-207 -21 0", "219 8 259", "-11857 -5323 85" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	kill_funcinfclip( 889.728 );		// Delete HERSCH SHIPPING clip
+	kill_funcinfclip( 421.059 );		// Delete clip above rooftop ramp
+	make_brush( "_losfix_ambulance1",	"-1 -100 -7",	"1 100 7",	"-5924 -1034 -39" );
+	make_brush( "_losfix_ambulance2",	"-1 -40 -8",	"1 40 8",	"-5965 -1134 -38" );
+	make_brush( "_losfix_bus1",		"-1 -100 -14",	"1 100 14",	"-9815 -3582 -43" );
+	make_brush( "_losfix_bus2",		"-1 -50 -14",	"1 50 14",	"-9782 -3864 -43" );
+	make_brush( "_losfix_bus3",		"-50 -1 -14",	"41 1 14",	"-9857 -3507 -43" );
+	make_brush( "_losfix_van",		"-60 -1 -9",	"100 1 9",	"-9414 -2952 -42" );
+	make_brush( "_losfix_watertank",	"-2 -132 -6",	"2 132 6",	"-10456 -6456 -58" );
+	make_clip(	"_solidify_permstuck01",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-6606 -722 -58" );
+	make_clip(	"_solidify_permstuck02",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-6243 -697 -48" );
+	make_clip(	"_solidify_permstuck03",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-6067 -585 -31" );
+	make_clip(	"_solidify_permstuck04",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-6001 -266 -30" );
+	make_clip(	"_solidify_permstuck05",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-5620.3 -301.3 -50.5" );
+	make_clip(	"_solidify_permstuck06",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-9674 -1131 -10" );
+	make_clip(	"_solidify_permstuck07",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-8918 -860 -42" );
+	make_clip(	"_solidify_permstuck08",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-8570 -994 -66" );
+	make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-508 -290 -72", "1134 46 402", "-9348 -7694 584" );
+	make_ladder( "_ladder_brokenwallL_cloned_graveshort", "-4808 706 6", "2295 383 193" );
+	make_ladder( "_ladder_brokenwallM_cloned_graveshort", "-4808 706 6", "2327 383 193" );
+	make_ladder( "_ladder_brokenwallR_cloned_graveshort", "-4808 706 6", "2359 383 193" );
+	make_ladder( "_ladder_churchcampperimeter_cloned_churchtallninety", "-4024 -520.5 53.5", "-321 2305 119", "0 30 0", "0.5 -0.86 0" );
+	make_ladder( "_ladder_churchfarperimeter_cloned_churchsandbags", "-2791.83 600.5 236.126", "-296 504 8" );
+	make_ladder( "_ladder_concretebags_cloned_acunitcorner", "-11120 -7697 0", "-1639 229 0" );
+	make_ladder( "_ladder_mountaincrawl_cloned_fatcliffladder", "-7808 -2686 110.235", "-14382.5 -10536.8 1636", "0 -131.9 34", "0.81 -0.58 0" );
+	make_ladder( "_ladder_ramptohersch_cloned_lightsignalfence", "-11841 -5314.5 13", "2967 -2079 670" );
+	make_ladder( "_ladder_shedelectricbox_cloned_hellcade", "-4543.5 -1344 -14", "-10635 1854 19", "0 90 0", "0 1 0" );
+	make_ladder( "_ladder_stationfencebackL_cloned_stationfencebackR", "-12819.5 -8032 12.5", "0 1328 0" );
+	make_ladder( "_ladder_stationfencebackM_cloned_stationfencebackR", "-12819.5 -8032 12.5", "0 629 0" );
+	make_ladder( "_ladder_stationfencefrontL_cloned_stationfencefrontR", "-12792.5 -6685.7598 11.5", "0 -618 0" );
+	make_ladder( "_ladder_trainsignalleftB_cloned_sandtowerbest", "-11178 -5312.5 54.5", "-351 -2020 -101" );
+	make_ladder( "_ladder_trainsignalleftT_cloned_sandtowerbest", "-11178 -5312.5 54.5", "-351 -2020 27" );
+	make_ladder( "_ladder_trainsignalrightB_cloned_sandtowerbest", "-11178 -5312.5 54.5", "-832 -2020 -101" );
+	make_ladder( "_ladder_trainsignalrightT_cloned_sandtowerbest", "-11178 -5312.5 54.5", "-832 -2020 27" );
+	make_prop( "dynamic",		"_losblocker_rock",		"models/props/cs_militia/militiarock03.mdl",	"-5921 -453 19",		"2 277 -120",			"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree01",		"models/props_foliage/trees_cluster01.mdl",	"-6608 -712 -84",		"-3.50638 167.38 -6.41996",	"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree02",		"models/props_foliage/trees_cluster01.mdl",	"-6240 -704 -36",		"0.0 332.0 0.0",		"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree03",		"models/props_foliage/trees_cluster01.mdl",	"-6064 -584 -84",		"-1.16862 16.961 3.82575",	"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree04",		"models/props_foliage/trees_cluster01.mdl",	"-6000 -272 -84",		"-1.16862 331.961 3.82575",	"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree05",		"models/props_foliage/trees_cluster01.mdl",	"-5622 -298 -84",		"-1.16862 106.961 3.82575",	"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree06",		"models/props_foliage/trees_cluster01.mdl",	"-9678.08 -1120 11.46",		"-15.8186 151.677 -1.38363",	"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree07",		"models/props_foliage/trees_cluster01.mdl",	"-8914.98 -852.481 -26.4875",		"0 317 0",	"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree08",		"models/props_foliage/trees_cluster01.mdl",	"-8568 -984 -52", "1.17358 181.777 -6.60183",	"shadow_no" );
+	//make_prop( "dynamic",		"_solidify_tree09",		"models/props_foliage/trees_cluster02.mdl",	"-7168 -880 -91.8731", "-6.18811 26.8478 12.0217",	"shadow_no" );
+	make_prop( "dynamic",		"_solidify_tree10",		"models/props_foliage/trees_cluster02.mdl",	"-9664 -1400 -36.5395", "-15.8186 151.677 -1.38363",	"shadow_no" );
+}

@@ -28,3 +28,26 @@ con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is sta
 
 make_clip( "_point_of_no_return", "Survivors", 0, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
 EntFire( "trigger_finale", "AddOutput", "FinaleStart anv_mapfixes_point_of_no_return:Enable::0:-1", 1 );
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_burger_gen",	"-24 -1 -8",	"24 1 8",	"-5448 6765 107" );
+    make_brush( "_losfix_dock_truck",	"-2 -75 -10",	"2 80 16",	"-6538 7550 105" );
+    make_brush( "_losfix_semia",		"-40 -1 -15",	"40 1 15",	"-4771 7156 113" );
+    make_brush( "_losfix_semib",		"-1 -34 -15",	"1 40 15",	"-4790 7180 113" );
+    make_clip( "_burgertank_windowsmoother1", "Everyone", 1, "-5 -120 0", "6 120 4", "-5663 7268 135" );
+    make_clip( "_burgertank_windowsmoother2", "Everyone", 1, "-90 -5 0", "90 6 4", "-5798 7505 135" );
+    make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "-6022 7777 135" );
+    make_clip( "_dockm5only_smoother", "Everyone", 1, "0 -376 0", "8 820 32", "-7039 7701 91", "-45 0 0" );
+    make_clip( "_ladder_sweetrelief_clip", "Everyone", 1, "-8 -16 0", "8 9 212", "-5746 6595 96", "0 53 0" );
+    make_ladder( "_ladder_autosalvagefront_cloned_playgroundroof", "-2041.58 7141.5 215.154", "-4077 930 8" );
+    make_ladder( "_ladder_classyjimboblue_cloned_garagesalehouse", "2468 2634 184", "-6814 4053 0" );
+    make_ladder( "_ladder_cullingsub_cloned_cullingbuddy", "-4083 7580 170", "-11738 3696 -9", "0 -90 0", "0 -1 0" );
+    make_ladder( "_ladder_gaselecbox_cloned_autosalvageback", "-5876.19 8673.97 236.888", "4059 13901 -58", "0 90 0", "-1 0 0" );
+    make_ladder( "_ladder_grocerypillar_cloned_garagesalehouse", "2468 2634 184", "-8299 8596 5", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_sweetrelief_cloned_autosalvageback", "-5876.19 8673.97 236.888", "112 -2069 -56" );
+    make_prop( "dynamic", "_ladder_grocerypillar_bust", "models/props_interiors/concretepillar01_dm_base.mdl", "-5680 6576 160.2", "0 0 0", "shadow_no" );
+    make_prop( "dynamic", "_ladder_grocerypillar_prop", "models/props_interiors/concretepillar01.mdl", "-5680 6128 163.8", "0 0 0", "shadow_no" );
+
+    EntFire( g_UpdateName + "_ladder_grocerypillar_prop", "AddOutput", "OnBreak anv_mapfixes_ladder_grocerypillar_cloned_garagesalehouse:Kill::0:-1" );
+}

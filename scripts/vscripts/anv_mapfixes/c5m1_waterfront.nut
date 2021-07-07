@@ -37,3 +37,35 @@ if ( g_BaseMode == "versus" )
     make_clip(	"_clipgap_fence",		"Survivors",	1,	"-32 -12 -82",		"32 12 82",		"-1740 -1284 -134" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+	make_brush( "_losfix_bus",		"-1 -96 -14",	"1 128 14",	"-868 -1515 -363" );
+	make_brush( "_losfix_van",		"-100 -1 -12",	"100 1 12",	"-918 -1852 -365" );
+	make_clip( "_ladder_endbluehouse_clipleft", "Everyone", 1, "3 -3 0", "8 16 336", "-3751 -4 -376", "0 55 0" );
+	make_clip( "_ladder_endbluehouse_clipwall", "Everyone", 1, "-1 -208 0", "7 304 331", "-3807 208 -376" );
+	make_clip( "_ladder_endgutterm2mirr_clip", "Everyone", 1, "-4.09 -13 0", "0 23 338", "-3196 -1079 -376" );
+	make_ladder( "_ladder_backpropladder_cloned_waterfrontfence", "-920 438 -304", "-367 -2821 -8" );
+	make_ladder( "_ladder_bienville_cloned_brickgutter", "-2086 -1984 -216", "1428 1278 -93" );
+	make_ladder( "_ladder_boothwindow_cloned_whitetablepath", "-2566 -1272 -284", "-572 -4931 0", "0 -90 0", "0 1 0" );
+	make_ladder( "_ladder_endbluehouse_cloned_waterfrontbrick", "-192 78.0956 -216", "-3580 -68 17" );
+	make_ladder( "_ladder_endgutterm2mirr_cloned_telephonegutter", "-1236 -1274 -213.5", "-4452 -2337 -24", "0 -180 0", "0 -1 0" );
+	make_ladder( "_ladder_kitchenelecbox_cloned_telephonegutter", "-1236 -1274 -213.5", "-3305 550 -109", "0 90 0", "-1 0 0" );
+	make_ladder( "_ladder_kitchenwindow_cloned_telephonegutter", "-1236 -1274 -213.5", "-1282 -1900 -135", "0 -90 0", "1 0 0" );
+	make_ladder( "_ladder_startroofqol_cloned_whitetablepath", "-2566 -1272 -284", "1853 -2855 -5", "0 -90 0", "0 1 0" );
+	make_ladder( "_ladder_startwtflongright_cloned_startwtflongleft", "118 912 -392", "3 -661 0" );
+	make_ladder( "_ladder_tankwaterfront_cloned_telephonegutter", "-1236 -1274 -213.5", "-1936 888 0", "0 90 0", "-1 0 0" );
+	make_ladder( "_ladder_yellowbarriersroof_cloned_alleygutter", "-2086 -1984 -216", "-2639 27 18", "0 90 0", "0 -1 0" );
+	make_prop( "dynamic",		"_losblocker_boxes",		"models/props/cs_militia/boxes_garage_lower.mdl",	"-26 -1108 -375.742",		"0 135.5 0",		"shadow_no" );
+	make_prop( "dynamic",		"_propladder_planka",		"models/props_highway/plywood_01.mdl",		"-167 -48 -195.766",		"-34 0.6025 -0.3587" );
+	make_prop( "dynamic",		"_propladder_plankb",		"models/props_swamp/plank001b_192.mdl",		"-2176 -2538 -320",		"0 0 35" );
+	make_prop( "dynamic", "_ladder_endgutterm2mirr_pipe", "models/props_downtown/gutter_downspout_straight01.mdl", "-3216 -1056 -89", "0 270 0", "shadow_no" );
+	make_prop( "dynamic", "_ladder_startroofqol_pipe", "models/props_downtown/gutter_downspout_straight01.mdl", "580 -308 -222", "0 90 0", "shadow_no" );
+	patch_ladder( "-2592 -1030 -208", "12 -3 0" );
+	patch_nav_checkpoint( "-3764 -1224 -344" );
+
+	con_comment( "PROP:\tTrashbin near \"_ladder_endbluehouse\" moved to improve accessibility." );
+
+	kill_entity( Entities.FindByClassnameNearest( "prop_physics", Vector( -3785, 22, -375.624 ), 8 ) );
+	make_prop( "physics", "_replacement_trashbin", "models/props_street/trashbin01.mdl", "-3781 118 -376", "0 17 0" );
+}

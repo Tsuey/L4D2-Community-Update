@@ -47,3 +47,36 @@ if ( g_BaseMode == "versus" )
     make_clip( "_cliprework_commonhop", "Survivors", 1, "-172 -8 -44", "172 8 44", "-6452 -6008 136" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_losfix_bridge_base1",	"-19 -1 -78",	"19 1 78",	"-8693 -8517 -498" );
+    make_brush( "_losfix_bridge_base2",	"-53 -1 -35",	"53 1 35",	"-8404 -8517 -541" );
+    make_brush( "_losfix_bridge_base3",	"-19 -1 -78",	"19 1 78",	"-8115 -8517 -498" );
+    make_brush( "_losfix_bridge_base4",		"-18 -40 -1",	"20 42 1",	"-8693 -8568 -400" );
+    make_brush( "_losfix_bridge_base5",		"-18 -40 -1",	"20 42 1",	"-8117 -8568 -400" );
+    make_brush( "_losfix_dynamic_bridge1",		"-107 -1 -84",	"107 1 84",	"-8566 -8525 -289" );
+    make_brush( "_losfix_dynamic_bridge2",		"-107 -1 -84",	"107 1 84",	"-8243 -8525 -289" );
+    make_brush( "_losfix_dynamic_bridge_floor1",	"-134 -43 -1",	"134 43 1",	"-8538 -8566 -196" );
+    make_brush( "_losfix_dynamic_bridge_floor2",	"-134 -43 -1",	"134 43 1",	"-8270 -8566 -196" );
+    make_brush( "_losfix_van",		"-1 -108 -14",	"1 108 14",	"-7071 -5218 -30" );
+    make_clip( "_ladder_quickstairwell_clip", "SI Players", 1, "-8 -1 0", "8 1 28", "-6394 -7264.7 89", "0 -20 0" );
+    make_clip( "_ladder_starttriplebig_clip", "Everyone", 1, "-48 -16 -22", "66 16 1", "-11632 -8168 -231" );
+    make_ladder( "_ladder_endtrainbox_cloned_endchainlink", "-6592 -5341 5.2833", "-1659 -382 -6" );
+    make_ladder( "_ladder_quickstairwell_cloned_wrongturn", "-6592 -5313 14.2833", "218 -1949 -2" );
+    make_ladder( "_ladder_starttriplebig_cloned_startcoolingtanks", "-11639 -8492 -350", "84 246 0" );
+    make_ladder( "_ladder_warewinright_cloned_wrongturn", "-6592 -5313 14.2833", "0 -687 0" );
+
+    con_comment( "MOVER:\tLOS dynamic fixes parented to move with bridge." );
+
+    EntFire( g_UpdateName + "_losfix_dynamic_bridge1", "SetParent", "platform_01" );
+    EntFire( g_UpdateName + "_losfix_dynamic_bridge2", "SetParent", "platform_02" );
+    EntFire( g_UpdateName + "_losfix_dynamic_bridge_floor1", "SetParent", "platform_01" );
+    EntFire( g_UpdateName + "_losfix_dynamic_bridge_floor2", "SetParent", "platform_02" );
+
+    con_comment( "PROP:\tBarrels at end of sewers moved to reduce stuck-warp obligation." );
+
+    Entities.FindByClassnameNearest( "prop_physics", Vector( -7055, -6681, -205 ), 8 ).SetOrigin( Vector( -7055, -6731, -208 ) );
+    Entities.FindByClassnameNearest( "prop_physics", Vector( -7016, -6697, -206 ), 8 ).SetOrigin( Vector( -7016, -6747, -209 ) );
+    Entities.FindByClassnameNearest( "prop_physics", Vector( -7000, -6674, -205 ), 8 ).SetOrigin( Vector( -7000, -6724, -208 ) );
+}

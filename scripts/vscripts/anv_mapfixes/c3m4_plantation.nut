@@ -41,3 +41,30 @@ if ( g_BaseMode == "survival" )
     EntFire( g_UpdateName + "_point_of_no_return", "Enable" );
 
 }
+
+if ( HasPlayerControlledZombies() )
+{
+    make_brush( "_brickhome_chimney1_losblock", "-11 -19 0", "11 19 77", "-1779 -3712 454" );
+    make_brush( "_brickhome_chimney2_losblock", "-11 -19 0", "11 19 77", "-1298 -3712 454" );
+    make_brush( "_losfix_start_truck1",	"-54 -1 -12",	"54 1 12",	"-1733 -2751 10" );
+    make_brush( "_losfix_start_truck2",	"-1 -55 -12",	"1 54 12",	"-1785 -2695 10" );
+    make_clip( "_brickhome_chimney1_collision", "Everyone", 1, "-11 -19 0", "11 19 77", "-1779 -3712 454" );
+    make_clip( "_brickhome_chimney2_collision", "Everyone", 1, "-11 -19 0", "11 19 77", "-1298 -3712 454" );
+    make_clip( "_ladder_houselow_clipl", "Everyone", 1, "-8 -2 0", "12 4 136", "-2054 -1026 1", "0 -45 0" );
+    make_clip( "_ladder_houselow_clipr", "Everyone", 1, "-3 -2 0", "16 4 136", "-2012 -1032 1", "0 45 0" );
+    make_ladder( "_ladder_backwhitefence_cloned_brickhomeB", "-1036 -3438 84", "565 368 -42" );
+    make_ladder( "_ladder_brickhomeT_cloned_brickhomeB", "-1036 -3438 84", "2166 -4668 255", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_brickhomeside_cloned_brickhomeB", "-1036 -3438 84", "2501 -4927 -32", "0 -90 0", "1 0 0" );
+    make_ladder( "_ladder_campscaffold_cloned_brickhomeB", "-1036 -3438 84", "1752 3509 248" );
+    make_ladder( "_ladder_dumpsterscaffold_cloned_brickhomeB", "-1036 -3438 84", "1418 -4324 224", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_enclosedhedges_cloned_brickhomeB", "-1036 -3438 84", "775 -322 -32" );
+    make_ladder( "_ladder_escapepillar_cloned_escapeback", "1880 2058 192", "3688 4089.5 2", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_househigh_cloned_cornerwhite", "3082 1856 192", "-5251 -2782 90" );
+    make_ladder( "_ladder_houselow_cloned_treeright", "2368 1516 188", "-4398 -2547 -111" );
+    make_ladder( "_ladder_logpileup_cloned_brickhomeB", "-1036 -3438 84", "-1656 -6509 40", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_mansionchoose_cloned_brickhomeB", "-1036 -3438 84", "244 -4594 135", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_moundhole_cloned_minigunleft", "1948 466 296", "4194 443 64", "0 -180 0", "0 -1 0" );
+    make_ladder( "_ladder_parkourattic_cloned_shortesthedge", "1984 1618 160", "-277 -1860 424" );
+    make_ladder( "_ladder_shelfpileleft_cloned_minigunleft", "1948 466 296", "-721 -1018 48" );
+    make_ladder( "_ladder_shelfpileright_cloned_minigunright", "1376 466 296", "2598 515 48", "0 -180 0", "0 -1 0" );
+}

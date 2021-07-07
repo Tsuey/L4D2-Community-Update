@@ -25,3 +25,14 @@ make_clip( "_kiosk_qol_2b", "Everyone", 1, "-100 -1 -1", "100 1 0", "-4081 -3949
 make_clip( "_kiosk_qol_3a", "Everyone", 1, "-44 -44 -1", "44 44 0", "-4848 -3935 94" );
 make_clip( "_kiosk_qol_3b", "Everyone", 1, "-1 -100 -1", "1 100 0", "-4796 -3936 94" );
 make_trigduck( "_duckqol_informationbooth", "-96 -8 0", "96 8 64", "-4448 -3865 44" );
+
+if ( HasPlayerControlledZombies() )
+{
+    make_ladder( "_ladder_plywoodback_cloned_plywoodfront", "-3311 -4299 588", "-6627 -8597 0", "0 180 0", "-1 0 0" );
+    make_ladder( "_ladder_columnfarcorner_cloned_columngibbs", "-5044 -3531 443.893", "-1008.53 0 0" );
+    make_ladder( "_ladder_columnbooth_cloned_columngibbs", "-5044 -3531 443.893", "-8255 1902 -220", "0 90 0", "1 0 0" );
+    make_ladder( "_ladder_columnplywood_cloned_columnbusystairs", "-4948 -4181 310.5", "-504 0 0" );
+    make_ladder( "_ladder_columnstairsright_cloned_columnbusystairs", "-4948 -4181 310.5", "1008 0 -216" );
+    make_ladder( "_ladder_columnstairsleft_cloned_columnbusystairs", "-4948 -4181 310.5", "1512 0 -216" );
+    make_ladder( "_ladder_columnfallbanner_cloned_columnbusystairs", "-4948 -4181 310.5", "2016 0 0" );
+}
