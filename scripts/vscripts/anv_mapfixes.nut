@@ -80,28 +80,20 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 
 	SpawnGlobalFilters();
 
-	// Versus-specific content which only spawns if HasPlayerControlledZombies()
-	// is true. Includes new Infected ladders and any supporting props i.e. pipes.
-	// Exclude VS Survival (mutation15) from only overtly obvious new props.
+	// If it's VS Survival (mutation15), delete new props that obstruct
+	// Survivor movement since their play space is already limited. This
+	// includes c2m5's hittable dumpsters, c3m3's hittable log, & c10m5's
+	// LOS blocker props/clips/navblocks and its log/rock hittables.
 
-	if ( HasPlayerControlledZombies() )
+	if ( g_MutaMode == "mutation15" )
 	{
+		EntFire( g_UpdateName + "_hittable_dump*",	"Kill", null, 0.1 );
 
-		// If it's VS Survival (mutation15), delete new props that obstruct
-		// Survivor movement since their play space is already limited. This
-		// includes c2m5's hittable dumpsters, c3m3's hittable log, & c10m5's
-		// LOS blocker props/clips/navblocks and its log/rock hittables.
+		EntFire( g_UpdateName + "_hittable_fallentree",	"Kill", null, 0.1 );
 
-		if ( g_MutaMode == "mutation15" )
-		{
-			EntFire( g_UpdateName + "_hittable_dump*",	"Kill", null, 0.1 );
-
-			EntFire( g_UpdateName + "_hittable_fallentree",	"Kill", null, 0.1 );
-
-			EntFire( g_UpdateName + "_rock*",		"Kill", null, 0.1 );
-			EntFire( g_UpdateName + "_hittable_log",	"Kill", null, 0.1 );
-			EntFire( g_UpdateName + "_hittable_rock",	"Kill", null, 0.1 );
-		}
+		EntFire( g_UpdateName + "_rock*",		"Kill", null, 0.1 );
+		EntFire( g_UpdateName + "_hittable_log",	"Kill", null, 0.1 );
+		EntFire( g_UpdateName + "_hittable_rock",	"Kill", null, 0.1 );
 	}
 
 	// Only run if it's Versus and not Taaannnk!! Mutation. Instantly warps
