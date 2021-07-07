@@ -86,10 +86,6 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 
 	if ( HasPlayerControlledZombies() )
 	{
-		if( g_MapName == "tutorial_standards_vs" )
-		{
-			EntFire( "worldspawn", "RunScriptFile", "anv_standards" );
-		}
 
 		// If it's VS Survival (mutation15), delete new props that obstruct
 		// Survivor movement since their play space is already limited. This
