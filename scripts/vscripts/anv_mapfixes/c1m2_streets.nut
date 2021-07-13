@@ -180,3 +180,12 @@ if ( HasPlayerControlledZombies() )
 	con_comment( "FIX/ANTI-GRIEF:\tRemoved trigger which disables common infected spawns in Save 4 Less area for Versus only." );
 	kill_entity( Entities.FindByClassnameNearest( "trigger_once", Vector( -5128, -992, 548 ), 1 ) );
 }
+
+function DoTankWarp( hndTank )
+{
+	// move tank spawn at ceda truck drop to the top of the stairs (~44% boss flow)
+	if( anv_tankwarps.CheckToWarpTank( hndTank, [-4755, 555, -4295, 1110] ) )
+	{
+		hndTank.SetOrigin( Vector( -5025, 725, 384.1 ) );
+	}
+}

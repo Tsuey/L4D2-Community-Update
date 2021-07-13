@@ -159,3 +159,12 @@ if ( HasPlayerControlledZombies() )
     NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_iMinHealthDmg", 400 );
     NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_takedamage", 3 );
 }
+
+function DoTankWarp( hndTank )
+{
+    // move tank spawn inside carousel fence to behind the carousel (~80% boss flow)
+	if( anv_tankwarps.CheckToWarpTank( hndTank, [-2750, -5450, -1450, -4925] ) )
+	{
+		hndTank.SetOrigin( Vector( -1725, -5900, 68.0 ) );
+	}
+}

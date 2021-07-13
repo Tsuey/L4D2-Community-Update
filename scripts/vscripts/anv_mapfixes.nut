@@ -73,12 +73,25 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 **  Speedy code goes in, speedy fix comes out.
 *****************************************************************************/
 
+g_FixScriptTable <- {};
+
 ::Apply_Quadmode_Map_Specific_Fixes <- function()
 {
 	// Add reliably-named Survivor and Infected team filters to every map.
 	// These are deleted if it's a "COMMUNITY" (unknown) map.
 
 	SpawnGlobalFilters();
+
+	// Only run if it's Versus and not Taaannnk!! Mutation. Instantly warps
+	// Tanks that spawn unreasonably far away from Survivors or exposed.
+	// Note this runs even for all "COMMUNITY" maps and other Mutations so
+	// requires unique scope to not overwrite their "tank_spawn" events.
+	// Needs to run for both rounds or else both teams won't get warped.
+
+	if ( g_BaseMode == "versus" && g_MutaMode != "mutation19" )
+	{
+		EntFire( "worldspawn", "RunScriptFile", "anv_tankwarps" );
+	}
 
 	// If it's VS Survival (mutation15), delete new props that obstruct
 	// Survivor movement since their play space is already limited. This
@@ -94,17 +107,6 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 		EntFire( g_UpdateName + "_rock*",		"Kill", null, 0.1 );
 		EntFire( g_UpdateName + "_hittable_log",	"Kill", null, 0.1 );
 		EntFire( g_UpdateName + "_hittable_rock",	"Kill", null, 0.1 );
-	}
-
-	// Only run if it's Versus and not Taaannnk!! Mutation. Instantly warps
-	// Tanks that spawn unreasonably far away from Survivors or exposed.
-	// Note this runs even for all "COMMUNITY" maps and other Mutations so
-	// requires unique scope to not overwrite their "tank_spawn" events.
-	// Needs to run for both rounds or else both teams won't get warped.
-
-	if ( g_BaseMode == "versus" && g_MutaMode != "mutation19" )
-	{
-		EntFire( "worldspawn", "RunScriptFile", "anv_tankwarps" );
 	}
 
 	// Map fixes for Valve.
@@ -123,7 +125,7 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 		}
 	}
 
-	if( !IncludeScript( "anv_mapfixes/" + g_MapName ) )
+	if( !IncludeScript( "anv_mapfixes/" + g_MapName, g_FixScriptTable ) )
 	{
 		/*==============================
 		||                            ||

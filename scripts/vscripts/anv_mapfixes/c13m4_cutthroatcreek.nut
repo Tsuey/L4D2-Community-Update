@@ -69,3 +69,16 @@ if ( HasPlayerControlledZombies() )
 	patch_ladder( "178 4845.5 109.5", "-17 0 0" );
 	patch_ladder( "195 4845.5 -18.624", "-17 0 0" );
 }
+
+function DoTankWarp( hndTank )
+{
+	// move tank spawns back a bit to discourage rushing
+	if( anv_tankwarps.CheckToWarpTank( hndTank, [-1910, -2100, -470, -850] ) )
+	{
+		hndTank.SetOrigin( Vector( -488, -516, -374.9 ) );
+	}
+	else if( anv_tankwarps.CheckToWarpTank( hndTank, [-960, -850, -195, 50] ) )
+	{
+		hndTank.SetOrigin( Vector( -672, 362, -381.8 ) );
+	}
+}

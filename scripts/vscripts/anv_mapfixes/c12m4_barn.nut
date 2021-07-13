@@ -135,3 +135,12 @@ if ( HasPlayerControlledZombies() )
 	make_prop( "dynamic", "_solidify_finalchimney2", "models/props/cs_militia/fireplacechimney01.mdl", "11020 -4073 329", "0 135 0", "shadow_no" );
 	patch_ladder( "11314.7 -4535 -259.108", "0 -22 9" );
 }
+
+function DoTankWarp( hndTank )
+{
+	// move tank spawn from hillside before event area to top of trains (~60% boss flow)
+	if( anv_tankwarps.CheckToWarpTank( hndTank, [10535, -5508, 11360, -4625] ) )
+	{
+		hndTank.SetOrigin( Vector( 10492, -4633, 57.9 ) );
+	}
+}

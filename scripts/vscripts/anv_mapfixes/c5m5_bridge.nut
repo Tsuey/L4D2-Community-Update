@@ -89,3 +89,20 @@ if ( HasPlayerControlledZombies() )
     make_prop( "dynamic", "_solidify_finalsidehouse_acvent", "models/props_rooftop/acvent03.mdl", "10185.5 4360.08 594", "0 150 0", "shadow_no" );
     patch_ladder( "9271.145 4057.18 273.355", "0 0 0", "-1 0 0" );
 }
+
+function DoTankWarp( hndTank )
+{
+    // move all bridge tank spawns a bit further down the bridge to discourage rushing
+	if( anv_tankwarps.CheckToWarpTank( hndTank, [-1450, 5955, -100, 6705] ) )
+	{
+		hndTank.SetOrigin( Vector( 830, 6328, 792 ) );
+	}
+	else if( anv_tankwarps.CheckToWarpTank( hndTank, [-100, 5955, 2000, 6705] ) )
+	{
+		hndTank.SetOrigin( Vector( 2720, 6338, 792 ));
+	}
+	else if( anv_tankwarps.CheckToWarpTank( hndTank, [2000, 5955, 4740, 6705] ) )
+	{
+		hndTank.SetOrigin( Vector( 4285, 6325, 792 ) );
+	}
+}

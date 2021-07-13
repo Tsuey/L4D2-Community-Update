@@ -118,3 +118,22 @@ if ( HasPlayerControlledZombies() )
     patch_ladder( "-484 506 160", "0 -3 0" );
     patch_nav_checkpoint( "3852 2037 -64" );
 }
+
+function DoTankWarp( hndTank )
+{
+    // move tank spawn in the swan room to the next room forward (~25% boss flow)
+	if( anv_tankwarps.CheckToWarpTank( hndTank, [-300, 4100, 720, 4850] ) )
+	{
+		hndTank.SetOrigin( Vector( -312, 4155, 128.1 ) );
+	}
+	// move tank spawn after the coaster one way drop to the button area (76-79% boss flow)
+	else if( anv_tankwarps.CheckToWarpTank( hndTank, [-3700, 400, -3100, 1775] ) )
+	{
+    	hndTank.SetOrigin( Vector( -3810, 1845, 160.1 ) );
+	}
+	// additional warp for the coaster one way drop area (80-83% boss flow)
+	else if( anv_tankwarps.CheckToWarpTank( hndTank, [-3700, 1775, -3100, 2850] ) )
+	{
+		hndTank.SetOrigin( Vector( -3423, 3480, 368.1 ) );
+	}
+}
