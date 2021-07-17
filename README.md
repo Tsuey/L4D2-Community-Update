@@ -64,6 +64,18 @@ https://www.l4d.com/laststand/
 
 https://steamcommunity.com/groups/l4d2cut
 
+# Videos
+
+Because sometimes watching is just better than reading:
+
+[![IMAGE ALT TEXT]
+(https://i.ytimg.com/vi/27lFQod69X4/maxresdefault.jpg)]
+(https://www.youtube.com/watch?v=27lFQod69X4 "L4D2 Last Stand VS: Directors' Commentary Part 1 (Dead Center 2)")
+
+[![IMAGE ALT TEXT]
+(https://i.ytimg.com/vi/eKrOtGaLWAs/maxresdefault.jpg)]
+(https://www.youtube.com/watch?v=eKrOtGaLWAs "Tutorial: See all the Versus Changes in L4D2 Last Stand Update!")
+
 # Resources
 
 Community Update Testing Initiative (Workshop mirror):
@@ -76,7 +88,7 @@ https://steamcommunity.com/workshop/filedetails/discussion/1959405608/2841165820
 
 MrFailzz' Coop/speedrunner-focused changelog with navmesh changes:
 
-https://hackmd.io/@MrFailzz/rJ5S7EZHw
+https://hackmd.io/@failzz/rJ5S7EZHw
 
 Valve development thread:
 
