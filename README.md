@@ -68,13 +68,8 @@ https://steamcommunity.com/groups/l4d2cut
 
 Because sometimes watching is just better than reading:
 
-[![IMAGE ALT TEXT]
-(https://i.ytimg.com/vi/27lFQod69X4/maxresdefault.jpg)]
-(https://www.youtube.com/watch?v=27lFQod69X4 "L4D2 Last Stand VS: Directors' Commentary Part 1 (Dead Center 2)")
-
-[![IMAGE ALT TEXT]
-(https://i.ytimg.com/vi/eKrOtGaLWAs/maxresdefault.jpg)]
-(https://www.youtube.com/watch?v=eKrOtGaLWAs "Tutorial: See all the Versus Changes in L4D2 Last Stand Update!")
+[![Alt text](https://i.ytimg.com/vi/27lFQod69X4/hqdefault.jpg)](https://www.youtube.com/watch?v=27lFQod69X4)
+[![Alt text](https://i.ytimg.com/vi/eKrOtGaLWAs/hqdefault.jpg)](https://www.youtube.com/watch?v=eKrOtGaLWAs)
 
 # Resources
 
