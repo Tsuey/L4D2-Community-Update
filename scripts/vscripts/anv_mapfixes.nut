@@ -141,6 +141,11 @@ g_FixScriptTable <- {};
 		return;
 	}
 
+	if( g_FixScriptTable != null && "DoRoundFixes" in g_FixScriptTable )
+	{
+		g_FixScriptTable["DoRoundFixes"]();
+	}
+
 	// Now that we know it's a vanilla map, all of them will reach this code so
 	// instead of calling these separately for each map, call both just once here.
 	//
