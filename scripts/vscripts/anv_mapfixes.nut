@@ -73,7 +73,7 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 **  Speedy code goes in, speedy fix comes out.
 *****************************************************************************/
 
-g_FixScriptTable <- {};
+::g_FixScriptTable <- {};
 
 ::Apply_Quadmode_Map_Specific_Fixes <- function()
 {
