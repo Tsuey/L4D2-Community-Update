@@ -67,48 +67,11 @@ if ( developer() > 0 && Convars.GetStr( "sv_cheats" ) == "1" )
 	IncludeScript( "z_developer_showupdate" );
 }
 
-/*****************************************************************************
-**  Apply new infodecals to the world immediately to persist player rejoins
-**  to the server. If "Late precache of" logs at all even if on some maps it
-**  still produces the decal, it's too late -- any efforts with RunScriptFile
-**  and especially "round_start" will all fail. An example of decals that
-**  persist forever are No Mercy 5's wall outlets. Infected breakwalls across
-**  several maps have unfixable decals given engine constraints.
-**
-**  All of these provide visual support for new Infected ladders.
-*****************************************************************************/
+local fixScriptTable = {};
 
-switch( g_MapName )
+IncludeScript( "anv_mapfixes/" + g_MapName, fixScriptTable );
+
+if( "DoMapSpawnFixes" in fixScriptTable )
 {
-	case "c1m3_mall":
-	{
-		make_decal( "decals/vent01",			"1279 -2411 280" );
-
-		break;
-	}
-
-	case "c4m1_milltown_a":
-	{
-		make_decal( "decals/rollermine_crater",		"-5671 6579 225" );
-
-		break;
-	}
-
-	case "c4m5_milltown_escape":
-	{
-		make_decal( "decals/rollermine_crater",		"-5671 6579 225" );
-
-		break;
-	}
-
-	case "c8m5_rooftop":
-	{
-		make_decal( "decals/decalstain002a",		"6480 8794 6161" );
-		make_decal( "decals/prodconcrete05",		"7281 8960 6191" );
-		make_decal( "decals/debris_concrete001a",	"7283 8926 6088" );
-		make_decal( "decals/prodconcrete04",		"5942 9424 5983" );
-		make_decal( "decals/infstains",			"6188 7616 5967" );
-
-		break;
-	}
+	fixScriptTable["DoMapSpawnFixes"]();
 }
