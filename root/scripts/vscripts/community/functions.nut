@@ -1836,6 +1836,6 @@ function devchap( mode )
 	else if ( mode == "TUTORIAL" )
 	{
 		printl( "Anniversary Map Fixes: Restart with Launch Option -dev to reveal verbose entity debug dumps." );
-		printl( "Anniversary Demo Mode: Run \"script_execute z_developer_showupdate\" >> \"script ShowUpdate()\"." );
+		printl( "Anniversary Demo Mode: Run \"script_execute community/z_developer_showupdate\" >> \"script ShowUpdate()\"." );
 	}
 }

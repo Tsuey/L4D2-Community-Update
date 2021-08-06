@@ -90,7 +90,7 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 
 	if ( g_BaseMode == "versus" && g_MutaMode != "mutation19" )
 	{
-		EntFire( "worldspawn", "RunScriptFile", "anv_tankwarps" );
+		EntFire( "worldspawn", "RunScriptFile", "community/tankwarps" );
 	}
 
 	// If it's VS Survival (mutation15), delete new props that obstruct
@@ -125,7 +125,7 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 		}
 	}
 
-	if( !IncludeScript( "anv_mapfixes/" + g_MapName, g_FixScriptTable ) )
+	if( !IncludeScript( "community/maps/" + g_MapName, g_FixScriptTable ) )
 	{
 		/*==============================
 		||                            ||

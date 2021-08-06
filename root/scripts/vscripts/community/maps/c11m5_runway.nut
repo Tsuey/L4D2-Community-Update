@@ -14,7 +14,7 @@ function DoRoundFixes()
 
     if ( HasPlayerControlledZombies() )
     {
-        EntFire( "worldspawn", "RunScriptFile", "c11m5_versus_planecrash" );
+        EntFire( "worldspawn", "RunScriptFile", "community/c11m5_versus_planecrash" );
 
         make_brush( "_losfix_lowthinwing",	"-8 -116 -30",	"8 111 32",	"-6057 9725 -12" );
         make_brush( "_losfix_truck1",		"-56 -1 -12",	"71 1 28",	"-5039 8665 -180" );

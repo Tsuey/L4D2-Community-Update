@@ -4,7 +4,7 @@ devchap( "ALL MODES" );
 
 function DoRoundFixes()
 {
-    EntFire( "worldspawn", "RunScriptFile", "c8m4_elevatorfix" );
+    EntFire( "worldspawn", "RunScriptFile", "community/c8m4_elevatorfix" );
 
     make_clip(	"_permstuck_cabinetchair",	"Everyone",	1,	"-15 -15 -24",		"15 15 10",		"11935 13061 312" );
     make_clip(	"_witch_windows",		"Survivors",	1,	"3 -440 0",		"9 424 64",		"12909 12360 320" );
