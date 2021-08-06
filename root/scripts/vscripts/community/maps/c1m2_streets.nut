@@ -175,7 +175,7 @@ function DoRoundFixes()
 
 		con_comment( "LOGIC:\tLOS tanker fixes will be deleted upon its destruction." );
 
-		EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger anv_mapfixes_losfix_tanker*:Kill::0:-1" );
+		EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_losfix_tanker*:Kill::0:-1" );
 
 		con_comment( "FIX/ANTI-GRIEF:\tRemoved trigger which disables common infected spawns in Save 4 Less area for Versus only." );
 		kill_entity( Entities.FindByClassnameNearest( "trigger_once", Vector( -5128, -992, 548 ), 1 ) );

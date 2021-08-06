@@ -26,7 +26,7 @@ function DoRoundFixes()
     con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is started." );
 
     make_clip( "_point_of_no_return", "Survivors", 0, "-168 -164 12", "128 92 196", "2064 -412 396" );
-    EntFire( "trigger_finale", "AddOutput", "FinaleStart anv_mapfixes_point_of_no_return:Enable::0:-1" );
+    EntFire( "trigger_finale", "AddOutput", "FinaleStart " + g_UpdateName + "_point_of_no_return:Enable::0:-1" );
 
     if ( g_BaseMode == "survival" )
     {

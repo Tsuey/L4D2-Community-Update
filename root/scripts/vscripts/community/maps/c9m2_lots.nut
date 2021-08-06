@@ -37,7 +37,7 @@ function DoRoundFixes()
     con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale switch is full." );
 
     make_clip( "_point_of_no_return", "Survivors", 0, "-16 -169 -168", "58 169 784", "5750 7177 368" );
-    EntFire( "finaleswitch_initial", "AddOutput", "OnTimeUp anv_mapfixes_point_of_no_return:Enable::0:-1" );
+    EntFire( "finaleswitch_initial", "AddOutput", "OnTimeUp " + g_UpdateName + "_point_of_no_return:Enable::0:-1" );
 
     if ( HasPlayerControlledZombies() )
     {

@@ -31,7 +31,7 @@ function DoRoundFixes()
     con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is started." );
 
     make_clip( "_point_of_no_return", "Survivors", 0, "-148 -16 0", "148 26 1660", "9017 3511 202" );
-    EntFire( "trigger_finale", "AddOutput", "FinaleStart anv_mapfixes_point_of_no_return:Enable::0:-1" );
+    EntFire( "trigger_finale", "AddOutput", "FinaleStart " + g_UpdateName + "_point_of_no_return:Enable::0:-1" );
 
     if ( HasPlayerControlledZombies() )
     {
@@ -108,7 +108,7 @@ function DoRoundFixes()
 
         con_comment( "LOGIC:\tBarricade ladders will be deleted 17 seconds into \"relay_outro_start\"." );
 
-        EntFire( "relay_outro_start", "AddOutput", "OnTrigger anv_mapfixes_ladder_barricade*:Kill::17:-1" );
+        EntFire( "relay_outro_start", "AddOutput", "OnTrigger " + g_UpdateName + "_ladder_barricade*:Kill::17:-1" );
 
         con_comment( "EASTER_EGG:\tChair deleted, replaced with bumper car, SetModel to chair, clipped, parented and OnHitByTank I/O'd." );
 
@@ -117,6 +117,6 @@ function DoRoundFixes()
         Entities.FindByName( null, g_UpdateName + "_replacement_chair" ).SetModel( "models/props_interiors/sofa_chair02.mdl" );
         make_clip( "_replacement_chair_clip", "Everyone", 1, "-16 -22 0", "30 22 40", "6922 1059 238" );
         EntFire( g_UpdateName + "_replacement_chair_clip", "SetParent", g_UpdateName + "_replacement_chair" );
-        EntFire( g_UpdateName + "_replacement_chair", "AddOutput", "OnHitByTank anv_mapfixes_replacement_chair_clip:Kill:0:-1" );
+        EntFire( g_UpdateName + "_replacement_chair", "AddOutput", "OnHitByTank " + g_UpdateName + "_replacement_chair_clip:Kill:0:-1" );
     }
 }

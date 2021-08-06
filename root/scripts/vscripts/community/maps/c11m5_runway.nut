@@ -10,7 +10,7 @@ function DoRoundFixes()
     make_clip( "_planecrash_concreteramp", "SI Players", 1, "-290 -10 0", "345 10 185", "-4127 11223 -128", "0 -56 45" );
 
     make_prop( "dynamic", "_terry", "models/deadbodies/dead_male_civilian_body.mdl", "-4154 9350 -140", "0 -111 0", "shadow_no", "solid_no" );
-    EntFire( "relay_outro_start", "AddOutput", "OnTrigger anv_mapfixes_terry:Kill::2:-1" );
+    EntFire( "relay_outro_start", "AddOutput", "OnTrigger " + g_UpdateName + "_terry:Kill::2:-1" );
 
     if ( HasPlayerControlledZombies() )
     {
@@ -38,9 +38,9 @@ function DoRoundFixes()
         make_ladder( "_ladder_wreckedrear_cloned_escapeplaneleft", "-4354 9230 -96", "-2781 246 -12", "0 -5.65 0", "-1 0.1 0" );
         make_prop( "dynamic",		"_losblocker_fireline_tractor",	"models/props_vehicles/airport_baggage_tractor.mdl",	"-2980.23 10393 -141",		"70 180 -10",		"shadow_no" );
 
-        DoEntFire( "!self", "AddOutput", "OnBreak anv_mapfixes_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5913.99, 10371.6, 162.64 ), 1 ) );
-        DoEntFire( "!self", "AddOutput", "OnBreak anv_mapfixes_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5727.82, 10368.7, 143.43 ), 1 ) );
-        DoEntFire( "!self", "AddOutput", "OnBreak anv_mapfixes_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5611.89, 10356, 143.21 ), 1 ) );
+        DoEntFire( "!self", "AddOutput", "OnBreak " + g_UpdateName + "_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5913.99, 10371.6, 162.64 ), 1 ) );
+        DoEntFire( "!self", "AddOutput", "OnBreak " + g_UpdateName + "_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5727.82, 10368.7, 143.43 ), 1 ) );
+        DoEntFire( "!self", "AddOutput", "OnBreak " + g_UpdateName + "_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5611.89, 10356, 143.21 ), 1 ) );
 
         con_comment( "PROP:\tBaggage cart under the plane wing moved closer to the ring of fire to give infected better spawn points" );
 

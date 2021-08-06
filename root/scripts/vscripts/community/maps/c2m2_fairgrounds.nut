@@ -43,7 +43,7 @@ function DoRoundFixes()
 
         make_clip( "_tol_clip_brush_a", "Survivors", 1, "-818 -16 0", "82 599 572", "-3530 -5162 192" );
         make_clip( "_tol_clip_brush_b", "Survivors", 1, "-9 -263 0", "488 -1 572", "-3439 -5178 192" );
-        DoEntFire( "!self", "AddOutput", "OnTrigger anv_mapfixes_tol_clip_brush*:Kill::-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -2496, -6544, 4 ), 1 ) );
+        DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_tol_clip_brush*:Kill::-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -2496, -6544, 4 ), 1 ) );
 
     }
 
@@ -155,7 +155,7 @@ function DoRoundFixes()
         patch_nav_checkpoint( "1737 2712 4" );
         patch_nav_checkpoint( "-4337 -5511 -64" );
 
-        // Manually fix the 2009 forklift since it is spawned after anv_mapfixes runs
+        // Manually fix the 2009 forklift since it is spawned after mapfixes runs
         NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_iMinHealthDmg", 400 );
         NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_takedamage", 3 );
     }

@@ -57,10 +57,10 @@ function DoRoundFixes()
 	// is touched first then delete original. New trigger deletes the blockers. Note that
 	// original uses "OnTrigger" instead of "OnStartTouch".
 
-	EntFire( "window_trigger", "AddOutput", "OnTrigger anv_mapfixes_eventskip_commonhop*:Kill::0:-1" );
-	EntFire( "window_trigger", "AddOutput", "OnTrigger anv_mapfixes_eventskip_fence_trigonce:Kill::0:-1" );
+	EntFire( "window_trigger", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_commonhop*:Kill::0:-1" );
+	EntFire( "window_trigger", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_fence_trigonce:Kill::0:-1" );
 
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger anv_mapfixes_eventskip_commonhop*:Kill::0:-1" );
+	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_commonhop*:Kill::0:-1" );
 	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger window_trigger:Kill::0:-1" );
 
 	// Replicate the original trigger_once's "OnTrigger" Outputs to the new trigger.

@@ -17,7 +17,7 @@ function DoRoundFixes()
     con_comment( "MOVER:\tClip \"_bridge_dynamic_clip\" simulated to move when bridge collapses." );
 
     make_clip( "_bridge_dynamic_clip", "Survivors", 1, "-69 -926 0", "69 6 1450", "5932 -13314 272" );
-    EntFire( "train_engine_button", "AddOutput", "OnPressed anv_mapfixes_bridge_dynamic_clip:AddOutput:origin 5932 -13784 272:0:-1" );
+    EntFire( "train_engine_button", "AddOutput", "OnPressed " + g_UpdateName + "_bridge_dynamic_clip:AddOutput:origin 5932 -13784 272:0:-1" );
 
     if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
     {

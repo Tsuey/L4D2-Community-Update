@@ -103,7 +103,7 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_ladder_safehouse_pipe", "models/props_pipes/PipeSet02d_512_001a.mdl", "3726 -1560 160", "-90 90 0", "shadow_no", "solid_no" );
 		make_prop( "dynamic", "_ladder_saferoofpipe_pipe", "models/props_mill/PipeSet08d_512_001a.mdl", "3726 -1765 158", "90 90 0", "shadow_no" );
 
-		EntFire( g_UpdateName + "_ladder_grocerypillar_prop", "AddOutput", "OnBreak anv_mapfixes_ladder_grocerypillar_cloned_garagesalehouse:Kill::0:-1" );
+		EntFire( g_UpdateName + "_ladder_grocerypillar_prop", "AddOutput", "OnBreak " + g_UpdateName + "_ladder_grocerypillar_cloned_garagesalehouse:Kill::0:-1" );
 	}
 }
 

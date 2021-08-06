@@ -33,7 +33,7 @@ function DoRoundFixes()
         EntFire( g_UpdateName + "_shortcut_balcrail_trigonce", "AddOutput", "maxs 185 2052 104" );
         EntFire( g_UpdateName + "_shortcut_balcrail_trigonce", "AddOutput", "solid 2" );
 
-        EntFire( g_UpdateName + "_shortcut_balcrail_trigonce", "AddOutput", "OnStartTouch anv_mapfixes_shortcut_balcrail_*:Kill::0:-1" );
+        EntFire( g_UpdateName + "_shortcut_balcrail_trigonce", "AddOutput", "OnStartTouch " + g_UpdateName + "_shortcut_balcrail_*:Kill::0:-1" );
 
         SpawnEntityFromTable( "info_particle_system",
         {
@@ -52,7 +52,7 @@ function DoRoundFixes()
         con_comment( "LOGIC:\tAnti-doorbreak trighurt will be deleted 4 seconds after elevator starts." );
 
         make_trighurt( "_elevator_exploit_bean", "Ghost", "-55 -2 0", "55 2 111", "2169 5713 2344" );
-        EntFire( "elevator_button", "AddOutput", "OnPressed anv_mapfixes_elevator_exploit_bean:Kill::4:-1" );
+        EntFire( "elevator_button", "AddOutput", "OnPressed " + g_UpdateName + "_elevator_exploit_bean:Kill::4:-1" );
 
         con_comment( "QOL:\tThe 2nd fire door is open immediately for Versus-only QoL." );
 

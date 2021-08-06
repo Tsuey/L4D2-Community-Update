@@ -37,16 +37,16 @@ EntFire( "trigger_nojump", "Kill" );
 // delay ensure gravity was reset. To thwart DoS Attacks delete the teleport triggers
 // after a substantial 5 second delay.
 
-EntFire( "elevator_button",	"AddOutput",	"OnPressed anv_mapfixes_elevator_trigmult:Enable::0:-1" );
-EntFire( "elevator_button",	"AddOutput",	"OnPressed anv_mapfixes_faller_trigmult:Enable::0:-1" );
-EntFire( "elevator_button",	"AddOutput",	"OnPressed anv_mapfixes_skybox_trigmult:Enable::0:-1" );
-EntFire( "elevator_button",	"AddOutput",	"OnPressed anv_mapfixes_elevator_infectdump:Enable::5:-1" );
-EntFire( "elevator",		"AddOutput",	"OnReachedTop anv_mapfixes_elevator_tabbernaut:Kill::5:-1" );
-EntFire( "elevator",		"AddOutput",	"OnReachedTop anv_mapfixes_elevator_infectdump:Kill::0:-1" );
-EntFire( "elevator",		"AddOutput",	"OnReachedTop anv_mapfixes_elevator_trigmult:Kill::0:-1" );
+EntFire( "elevator_button",	"AddOutput",	"OnPressed " + g_UpdateName + "_elevator_trigmult:Enable::0:-1" );
+EntFire( "elevator_button",	"AddOutput",	"OnPressed " + g_UpdateName + "_faller_trigmult:Enable::0:-1" );
+EntFire( "elevator_button",	"AddOutput",	"OnPressed " + g_UpdateName + "_skybox_trigmult:Enable::0:-1" );
+EntFire( "elevator_button",	"AddOutput",	"OnPressed " + g_UpdateName + "_elevator_infectdump:Enable::5:-1" );
+EntFire( "elevator",		"AddOutput",	"OnReachedTop " + g_UpdateName + "_elevator_tabbernaut:Kill::5:-1" );
+EntFire( "elevator",		"AddOutput",	"OnReachedTop " + g_UpdateName + "_elevator_infectdump:Kill::0:-1" );
+EntFire( "elevator",		"AddOutput",	"OnReachedTop " + g_UpdateName + "_elevator_trigmult:Kill::0:-1" );
 EntFire( "elevator",		"AddOutput",	"OnReachedTop worldspawn:RunScriptCode:c8m4_TeamGravity(1.0):1:-1" );
-EntFire( "elevator",		"AddOutput",	"OnReachedTop anv_mapfixes_faller_trigmult:Kill::5:-1" );
-EntFire( "elevator",		"AddOutput",	"OnReachedTop anv_mapfixes_skybox_trigmult:Kill::5:-1" );
+EntFire( "elevator",		"AddOutput",	"OnReachedTop " + g_UpdateName + "_faller_trigmult:Kill::5:-1" );
+EntFire( "elevator",		"AddOutput",	"OnReachedTop " + g_UpdateName + "_skybox_trigmult:Kill::5:-1" );
 
 // Survivor-only default-Enabled blocker that helps Survivors not fall through but
 // is not perfect -- it's required that its top is exactly flush with elevator floor

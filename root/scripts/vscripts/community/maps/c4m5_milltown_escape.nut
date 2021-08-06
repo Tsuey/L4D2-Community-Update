@@ -27,7 +27,7 @@ function DoRoundFixes()
     con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is started." );
 
     make_clip( "_point_of_no_return", "Survivors", 0, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
-    EntFire( "trigger_finale", "AddOutput", "FinaleStart anv_mapfixes_point_of_no_return:Enable::0:-1", 1 );
+    EntFire( "trigger_finale", "AddOutput", "FinaleStart " + g_UpdateName + "_point_of_no_return:Enable::0:-1", 1 );
 
     if ( HasPlayerControlledZombies() )
     {
@@ -49,7 +49,7 @@ function DoRoundFixes()
         make_prop( "dynamic", "_ladder_grocerypillar_bust", "models/props_interiors/concretepillar01_dm_base.mdl", "-5680 6576 160.2", "0 0 0", "shadow_no" );
         make_prop( "dynamic", "_ladder_grocerypillar_prop", "models/props_interiors/concretepillar01.mdl", "-5680 6128 163.8", "0 0 0", "shadow_no" );
 
-        EntFire( g_UpdateName + "_ladder_grocerypillar_prop", "AddOutput", "OnBreak anv_mapfixes_ladder_grocerypillar_cloned_garagesalehouse:Kill::0:-1" );
+        EntFire( g_UpdateName + "_ladder_grocerypillar_prop", "AddOutput", "OnBreak " + g_UpdateName + "_ladder_grocerypillar_cloned_garagesalehouse:Kill::0:-1" );
     }
 }
 

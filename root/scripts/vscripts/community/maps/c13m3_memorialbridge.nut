@@ -45,7 +45,7 @@ function DoRoundFixes()
         con_comment( "LOGIC:\tAnti-shortcut tanker clip will be deleted upon its destruction." );
 
         make_clip( "_shortcut_tanker", "Survivors", 1, "-58 -577 0", "58 271 527", "1092 -3999 1328", "0 27 0" );
-        EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger anv_mapfixes_shortcut_tanker:Kill::0:-1" );
+        EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_shortcut_tanker:Kill::0:-1" );
 
     }
 
@@ -74,7 +74,7 @@ function DoRoundFixes()
         EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "maxs 139 985 401" );
         EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "solid 2" );
 
-        EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "OnStartTouch anv_mapfixes_watercushion_trighurt:Kill::0:-1" );
+        EntFire( g_UpdateName + "_watercushion_trigonce", "AddOutput", "OnStartTouch " + g_UpdateName + "_watercushion_trighurt:Kill::0:-1" );
     }
 
     if ( HasPlayerControlledZombies() )

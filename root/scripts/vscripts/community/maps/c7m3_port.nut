@@ -19,14 +19,14 @@ function DoRoundFixes()
 	con_comment( "LOGIC:\tTMP shortcut booster clips will be deleted on trigger_finale FinaleEscapeStarted.\n"
 		+ "\tNot a gamebreaker if absent and only for Sacrifice 3 to avoid players bumping their head." );
 
-	EntFire( "trigger_finale", "AddOutput", "FinaleEscapeStarted anv_mapfixes_booster_bridge_TMP*:Kill::0:-1" );
+	EntFire( "trigger_finale", "AddOutput", "FinaleEscapeStarted " + g_UpdateName + "_booster_bridge_TMP*:Kill::0:-1" );
 
 	make_clip(	"_anti_finaleskip_TMP",		"Survivors",	1,	"-21 -420 0",		"88 88 888",		"230 -849 216" );
 
 	con_comment( "LOGIC:\tTMP finale skip clip will be deleted after bridge is almost fully raised.\n"
 		+ "\tAllows sacrificer to use stairs. Incompatible with Passing 3 because of Louis." );
 
-	EntFire( "bridge_start_button", "AddOutput", "OnPressed anv_mapfixes_anti_finaleskip_TMP:Kill::8.1:-1" );
+	EntFire( "bridge_start_button", "AddOutput", "OnPressed " + g_UpdateName + "_anti_finaleskip_TMP:Kill::8.1:-1" );
 
 	make_clip(	"_booster_tankwindows",		"Survivors",	1,	"-132 -8 -24",		"132 8 64",		"-1280 -1016 216" );
 	make_clip(	"_cliprework_semitrailer",	"Survivors",	1,	"-8 -194 -256",		"8 194 759",		"1727 2883 285" );

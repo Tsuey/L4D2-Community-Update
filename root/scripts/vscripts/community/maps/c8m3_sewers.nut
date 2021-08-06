@@ -29,16 +29,16 @@ function DoRoundFixes()
 
     con_comment( "LOGIC:\tTMP Gas Station roof clip will be deleted when it explodes." );
 
-    EntFire( "gas_explosion_sound_relay", "AddOutput", "OnTrigger anv_mapfixes_gasstationroof_TMP:Kill::0:-1" );
+    EntFire( "gas_explosion_sound_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_gasstationroof_TMP:Kill::0:-1" );
 
     con_comment( "MOVER:\tClip \"_ladderqol_scissorlift\" simulated to move up with Scissor Lift." );
 
-    EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:Enable::2:-1" );
-    EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:AddOutput:origin 12687 7170 62:4:-1" );
-    EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:AddOutput:origin 12687 7170 108:6:-1" );
-    EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:AddOutput:origin 12687 7170 154:8:-1" );
-    EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:AddOutput:origin 12687 7170 200:10:-1" );
-    EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_ladderqol_scissorlift:Kill::12:-1" );
+    EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:Enable::2:-1" );
+    EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:AddOutput:origin 12687 7170 62:4:-1" );
+    EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:AddOutput:origin 12687 7170 108:6:-1" );
+    EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:AddOutput:origin 12687 7170 154:8:-1" );
+    EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:AddOutput:origin 12687 7170 200:10:-1" );
+    EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:Kill::12:-1" );
 
 
     if ( g_BaseMode == "versus" )
@@ -56,7 +56,7 @@ function DoRoundFixes()
         make_clip(	"_shortcut_booster_TMP1",	"Survivors",	1,	"-126 -19 0",		"127 20 1048",		"10897 6764 176" );
         make_clip(	"_shortcut_booster_TMP2",	"Survivors",	1,	"-24 -303 0",		"24 304 972",		"11032 7048 252" );
 
-        EntFire( "washer_lift_button2", "AddOutput", "OnPressed anv_mapfixes_shortcut_booster_TMP*:Kill::0:-1" );
+        EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_shortcut_booster_TMP*:Kill::0:-1" );
 
     }
     if ( g_BaseMode == "survival" )

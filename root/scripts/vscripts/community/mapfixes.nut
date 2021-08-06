@@ -1,4 +1,4 @@
-printl( "VSCRIPT: Running anv_mapfixes.nut" );
+printl( "VSCRIPT: Running mapfixes.nut" );
 
 /*****************************************************************************
 **  This file is RunScriptFile'd on "worldspawn" by mapspawn.nut and its function
@@ -162,7 +162,7 @@ __CollectEventCallbacks( this, "OnGameEvent_", "GameEventCallbacks", RegisterScr
 	devchap( "TUTORIAL" );
 
 	// We've run once so set mapspawn.nut's global variable to "true". This allows
-	// anv_mapfixes.nut and other RunScriptFile'd *.nut's to only declare functions
+	// mapfixes.nut and other RunScriptFile'd *.nut's to only declare functions
 	// once (outside of mapspawn.nut's natural doing so). Also to only patch NAV once.
 	// If 0 second delay it'd be set "true" before switch-case RunScriptFile's ran.
 

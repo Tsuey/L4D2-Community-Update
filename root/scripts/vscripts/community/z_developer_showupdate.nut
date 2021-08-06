@@ -1,7 +1,7 @@
 /*****************************************************************************
 **  SHOW UPDATE DEMO  ( DEVELOPER MODE ONLY )
 **
-**  File "anv_mapfixes.nut" will have already explained "script ShowUpdate()"
+**  File "mapfixes.nut" will have already explained "script ShowUpdate()"
 **  with 'devchap( "TUTORIAL" )' if it's an Official Valve map -- Community maps
 **  have no updates and do nothing. Everything here requires "developer 1" or 2
 **  and manual running of HideUpdate() or ShowUpdate().
@@ -11,10 +11,10 @@
 **  ShowUpdate() creates the Timer Think, displays a tutorial regarding CLIP
 **  (blocker) color coding which correspond with "r_drawclipbrushes 2" or 1,
 **  then draws all new blockers and glows new props. Also useful to force a
-**  re-catalog of any created/deleted "anv_mapfixes"-prefixed entities.
+**  re-catalog of any created/deleted "mapfixes"-prefixed entities.
 **
 **  DebugRedraw() is only called programmatically and isn't manual like the
-**  others. It loops through all "anv_mapfixes"-prefixed blockers and props
+**  others. It loops through all "mapfixes"-prefixed blockers and props
 **  and uses DebugDrawBox() or "StartGlowing" on them accordingly, also drawing
 **  their names as overlays with DebugDrawText(). DebugDrawText() has a couple
 **  limitations: (1) "useViewCheck" parameter as "false" is the best setting
@@ -60,21 +60,21 @@
 **		-> Used switch cases in place of many if else statements
 **	- Fixed some issues with glows not being removed from props consistently
 ** 	- Added optional arguments for ShowUpdate() to change which entities are highlighted, text arguments must be enclosed in "quotes", invalid or blank argument will call ShowUpdate()
-**		-> ShowUpdate()			- Only highlights entities prefixed with "anv_mapfixes" and commentary blockers, unchanged
+**		-> ShowUpdate()			- Only highlights entities prefixed with "mapfixes" and commentary blockers, unchanged
 **		-> ShowUpdate("all")	- Highlights all valid entities regardless of targetname - ShowUpdateAll() can be used instead
-**		-> ShowUpdate("other")	- Highlights all entities without the "anv_mapfixes" prefix - ShowUpdateOther can be used instead
+**		-> ShowUpdate("other")	- Highlights all entities without the "mapfixes" prefix - ShowUpdateOther can be used instead
 **	- Added SetFilter function, usage: function SetFilter( entityGroup, value ), text arguments must be enclosed in "quotes", invalid or blank arguments will result in default values
 **		-> Allows user to filter out different groups of entities, allowing us to massively extend the functionality of ShowUpdate() to see (almost) exactly the entities we want at any time
 **		-> Full description of filters is found just above the function
 **	- Created new function for drawing text on highlighted entities
 **		-> Index of the entity is show at the end of the string, indicating the order it was added and acting as a unique ID
-**		-> Now labels non-anv_mapfixes clips
+**		-> Now labels non-mapfixes clips
 **	- Fixed text on rotated ladders being displaced from the actual model, leaving them unlabelled
 *	- Fixed ladder clone source text being duplicated for each ladder that clones from it, now it only draws the text once per ladder source
 **	- When the appropriate settings to highlight them are on, ladders that have been moved (or added with no targetname) are highlighted in purple
 **		-> Ladders that are not new and haven't been moved are highlighted in light orange
 **	- Added trigger_teleport to potential triggers to highlight
-**	- Allowed commentary blockers, lump blockers, and any blockers added by mods etc to be highlighted with the full functionality that anv_mapfixes blockers are given
+**	- Allowed commentary blockers, lump blockers, and any blockers added by mods etc to be highlighted with the full functionality that mapfixes blockers are given
 **	- Invalid or deleted entities are removed from the drawing index before attempting to draw them
 **		-> This removes the need to toggle ShowUpdate()/HideUpdate() when an entity is deleted
 **	- Adjusted func_brush color to help distinguish it from infected clips better
@@ -91,7 +91,7 @@
 
 function HideUpdate()
 {
-	EntFire( "anv_mapfixes_DebugRedraw_timer", "Kill" );
+	EntFire( g_UpdateName + "_DebugRedraw_timer", "Kill" );
 
 	// Fail-safe 2nd DebugDrawClear to resolve a rare use timing of it not clearing.
 
@@ -206,7 +206,7 @@ function ShowUpdate( showGroup = "anv" )
 		g_TutorialShown = true;
 	}
 
-	// Catalog all "anv_mapfixes"-prefixed entities by populating a Handle array.
+	// Catalog all "mapfixes"-prefixed entities by populating a Handle array.
 	// The "find" returns the earliest character index where 0 means it's a match.
 	// The Timer (and any "helper entities") have no reason to be in this array.
 
@@ -274,7 +274,7 @@ function ShowUpdate( showGroup = "anv" )
 				break;
 		}
 		
-		if ( strEntityName != "anv_mapfixes_DebugRedraw_timer" )
+		if ( strEntityName != g_UpdateName + "_DebugRedraw_timer" )
 		{
 			// Confirmed to be a fix entity so add it to array.
 			
@@ -293,11 +293,11 @@ function ShowUpdate( showGroup = "anv" )
 	// Timer that DebugRedraw()'s every 1 second, better than AddThinkToEnt() because it
 	// runs 1/10th as often and still looks good. Only make if one doesn't already exist.
 
-	if ( Entities.FindByName( null, "anv_mapfixes_DebugRedraw_timer" ) == null )
+	if ( Entities.FindByName( null, g_UpdateName + "_DebugRedraw_timer" ) == null )
 	{
 		SpawnEntityFromTable( "logic_timer",
 		{
-			targetname	=	"anv_mapfixes_DebugRedraw_timer",
+			targetname	=	g_UpdateName + "_DebugRedraw_timer",
 			RefireTime	=	1,
 			connections =
 			{
@@ -671,7 +671,7 @@ function DebugRedrawName( origin, name, entityType, index )
 	switch( entityType )
 	{
 		case "CLIP":
-			additionalPrefix = "(LUMP)"			// Prefix for non-anv_mapfixes entities.
+			additionalPrefix = "(LUMP)"			// Prefix for non-mapfixes entities.
 			break;
 		case "PCLIP":
 			additionalPrefix = "(COMMENTARY)"	// Prefix for commentary blocker entities (env_player_blocker).
@@ -691,7 +691,7 @@ function DebugRedrawName( origin, name, entityType, index )
 	
 	if ( name.find( g_UpdateName ) == null )
 	{
-		namePrefix = additionalPrefix + " " + namePrefix;		// g_UpdateName was not found, mark as non-anv_mapfixes entity.
+		namePrefix = additionalPrefix + " " + namePrefix;		// g_UpdateName was not found, mark as non-mapfixes entity.
 	}
 	else
 	{

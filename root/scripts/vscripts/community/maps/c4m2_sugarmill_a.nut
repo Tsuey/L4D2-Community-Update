@@ -48,7 +48,7 @@ function DoRoundFixes()
 
     make_trighurt( "_instakill_elevatora", "Survivor", "-196 -691 0", "1460 61 8", "-1204 -9549 394" );
     make_trighurt( "_instakill_elevatorb", "Survivor", "-372 -691 0", "644 -65 8", "-2044 -9549 394" );
-    EntFire( "button_inelevator", "AddOutput", "OnPressed anv_mapfixes_instakill_elevator*:Kill::0:-1" );
+    EntFire( "button_inelevator", "AddOutput", "OnPressed " + g_UpdateName + "_instakill_elevator*:Kill::0:-1" );
 
     // All-mode QoL clip for a Valve ladder and move it 2 units so players don't get caught on critpath anymore.
 

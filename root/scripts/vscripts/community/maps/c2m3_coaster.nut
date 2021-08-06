@@ -48,8 +48,8 @@ function DoRoundFixes()
     //con_comment( "LOGIC:\tBeta Coaster Rubble restored for Campaign and Survival relays." );
 
     //make_prop( "dynamic", "_dynamic_coaster_rubble", "models/rollercoaster/coaster_debris.mdl", "0 0 -8", "0 0 0", "shadow_no", "solid_no" );
-    //EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger anv_mapfixes_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
-    //EntFire( "relay_panicevent", "AddOutput", "OnTrigger anv_mapfixes_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
+    //EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
+    //EntFire( "relay_panicevent", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 
     if ( g_BaseMode == "versus" )
     {

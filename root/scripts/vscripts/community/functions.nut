@@ -973,7 +973,7 @@ function kill_funcinfclip( flDesiredRadius )
 //	parking lot fence ladder is close but has 3x+ this wiggle room.
 //
 //	Radius of 1.4 supports a shift of up to 0.47 on all 3 axis -- never round
-//	VSSM's more than 0.1 (anv_mapfixes.nut rounds to nearest 0.01 or less).
+//	VSSM's more than 0.1 (mapfixes.nut rounds to nearest 0.01 or less).
 //
 // Function patch_ladder() tweaks ladders found with this and make_ladder()
 // passes the found ladder to clone_model() to get its "model" Keyvalue so it
@@ -1219,7 +1219,7 @@ function InfectedLadders_Spawn()
 
 	EntFire( "worldspawn", "CallScriptFunction", "InfectedLadders" );
 
-//	// Required global function so anv_mapfixes.nut InfectedLadders_Spawn() call
+//	// Required global function so mapfixes.nut InfectedLadders_Spawn() call
 //	// can find it -- if not global, its logic_timer will stall and do nothing.
 //
 //	::RetryThink <- function()
@@ -1281,7 +1281,7 @@ function InfectedLadders_Spawn()
 **  Function runs for all those plus future unknowns.
 **
 **  Some maps like Death Toll 3 and 5 have non-solid trees that'd otherwise
-**  be useful for SI Players to spawn behind. File anv_mapfixes.nut declares
+**  be useful for SI Players to spawn behind. File mapfixes.nut declares
 **  an "ALL MODES" function InfectedHumEnts() then runs InfectedHumEnts_Spawn()
 **  which produces them on gamemodes with Human-controlled SI.
 **
@@ -1298,7 +1298,7 @@ function InfectedHumEnts_Spawn()
 {
 	if ( HasPlayerControlledZombies() )
 	{
-		// Simply spawn all anv_mapfixes.nut-declared entities.
+		// Simply spawn all mapfixes.nut-declared entities.
 
 		EntFire( "worldspawn", "CallScriptFunction", "InfectedHumEnts" );
 	}
@@ -1355,7 +1355,7 @@ function patch_nav_obscured( user_strOrigin )
 **
 **  This is how each map is exploitable, standing up against door in each case:
 **
-**	mapname			which door?	"anv_mapfixes.nut" call
+**	mapname			which door?	"mapfixes.nut" call
 **
 **	c2m2_fairgrounds	start		patch_nav_checkpoint( "1737 2712 4" );
 **	c2m2_fairgrounds	end		patch_nav_checkpoint( "-4337 -5511 -64" );
@@ -1504,8 +1504,8 @@ function make_atomizer( user_strTargetname,
 		{
 			OnTimer =
 			{
-				cmd1 = "anv_mapfixes_atomizer_monitoredStartGlowing0-1"
-				cmd2 = "anv_mapfixes_atomizer_monitoredKill5-1"
+				cmd1 = g_UpdateName + "_atomizer_monitoredStartGlowing0-1"
+				cmd2 = g_UpdateName + "_atomizer_monitoredKill5-1"
 				cmd3 = "!selfDisable0-1"
 				cmd4 = "!selfResetTimer0-1"
 			}
@@ -1523,7 +1523,7 @@ function make_atomizer( user_strTargetname,
 			OnStartTouch =
 			{
 				cmd1 = g_UpdateName + user_strTargetname + "_timer" + "Enable0-1"
-				cmd2 = "!activatorAddOutputtargetname anv_mapfixes_atomizer_monitored0-1"
+				cmd2 = "!activatorAddOutputtargetname " + g_UpdateName + "_atomizer_monitored0-1"
 				cmd3 = "!selfAddOutputspawnflags 00-1"
 			}
 			OnEndTouch =
@@ -1781,7 +1781,7 @@ function VectorToString_Valve( vector )
 
 //////////////////////////////////////////////////////////////////////////////
 // Equivalent to built-in printl() but only outputs anything if DEVELOPER MODE.
-// This is used in "anv_mapfixes.nut" to have code comments in-game for fixes
+// This is used in "mapfixes.nut" to have code comments in-game for fixes
 // that require logic or trigger injection. Accompanies entity dumps.
 //////////////////////////////////////////////////////////////////////////////
 
@@ -1800,7 +1800,7 @@ function con_comment( strComment )
 **  Confirms that even maps/modes without fixes are still running their case. An
 **  example of output: "MAP FIXES :: LAST STAND - THE LIGHTHOUSE ( ALL MODES )".
 **
-**  File "anv_mapfixes.nut" runs this when "BASE COOP / VERSUS / SURVIVAL / SCAVENGE"
+**  File "mapfixes.nut" runs this when "BASE COOP / VERSUS / SURVIVAL / SCAVENGE"
 **  (here simplified to just != "TUTORIAL") for only the Official Valve maps.
 **  After all entities have been spawned (and dumped if DEVELOPER MODE) if it's
 **  an Official Valve map 'devchap( "TUTORIAL" )' then runs to inform testers
@@ -1823,13 +1823,13 @@ function devchap( mode )
 	}
 
 	// Ensure the tutorial is only shown once per "round_start" and always show "developer 1" notice.
-	// Function is called with 'devchap( "TUTORIAL" )' at end of "anv_mapfixes.nut".
+	// Function is called with 'devchap( "TUTORIAL" )' at end of "mapfixes.nut".
 
 	if ( developer() > 0 && mode == "TUTORIAL" )
 	{
 		printl( "Anniversary Map Fixes: Run or bind \"script ShowUpdate()\" and \"script HideUpdate()\"" );
 		printl( "to draw new blockers and glow new props. They are named according to purpose and" );
-		printl( "you can see entity definitions above. If you make/delete \"anv_mapfixes\"-prefixed" );
+		printl( "you can see entity definitions above. If you make/delete \"mapfixes\"-prefixed" );
 		printl( "entities, toggle Hide/Show to apply changes. Please report all issues and concerns" );
 		printl( "to Tsuey's Workshop https://steamcommunity.com/sharedfiles/filedetails/?id=1959405608\n" );
 	}

@@ -96,7 +96,7 @@ function DoRoundFixes()
         EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "maxs 4 32 112" );
         EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "solid 2" );
 
-        EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "OnStartTouch anv_mapfixes_barnsroof_commonhop:Kill::0:-1" );
+        EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "OnStartTouch " + g_UpdateName + "_barnsroof_commonhop:Kill::0:-1" );
     }
 
     if ( HasPlayerControlledZombies() )
