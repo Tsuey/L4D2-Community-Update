@@ -2,6 +2,10 @@ g_Chapter = "DEAD AIR - THE TERMINAL";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorairport01_main.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallhospitalexterior01_main.mdl" );
+PrecacheModel( "models/props_unique/airportdeparturescreen01.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_conveyorvent_upper",		"Survivors",	1,	"-8 -32 -32",		"8 32 32",		"632 928 368" );
@@ -80,6 +84,13 @@ function DoRoundFixes()
 		make_prop( "dynamic",		"_losblocker_finalrun_screen",	"models/props_unique/airportdeparturescreen01.mdl",	"2983 3925 151.25",		"0 180 0",		"shadow_no" );
 		make_trigduck( "_duckqol_missingvent", "-5 -32 -32", "5 32 32", "716 928 160" );
 		make_trigmove( "_duckqol_vanfence", "Duck", "-11 -8 0", "11 8 17", "-285 3524 191" );
+	}
+}
+
+function DoMapSpawnFixes()
+{
+	if ( HasPlayerControlledZombies() )
+	{
 		patch_nav_checkpoint( "3175 4562 152" );
 	}
 }

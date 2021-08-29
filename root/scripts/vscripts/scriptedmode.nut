@@ -71,6 +71,11 @@ function ScriptMode_Init( modename, mapname )
 	
 	IncludeScript( "sm_utilities", g_MapScript )  // so we have constants and such when we load the map...
 	IncludeScript( "sm_spawn", g_MapScript )      // and the spawning system
+	
+	if ( "CommunityUpdate" in getroottable() )
+	{
+		CommunityUpdate().OnScriptMode_Init()
+	}
 
 	// printl("In scripted Init, gonna try with for map " + mapname + " in mode " + modename )
 	

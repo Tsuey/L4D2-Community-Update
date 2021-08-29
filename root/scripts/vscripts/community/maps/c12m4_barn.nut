@@ -2,6 +2,10 @@ g_Chapter = "BLOOD HARVEST - THE TRAIN STATION";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props/cs_militia/fireplacechimney01.mdl" );
+PrecacheModel( "models/props_mill/PipeSet08d_256_001a.mdl" );
+PrecacheModel( "models/props_rooftop/Gutter_Pipe_256.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_dispcrouch_traintracka",	"Everyone",	1,	"-420 -355 -16",	"16 64 555",		"10250 -10145 -78" );
@@ -140,7 +144,7 @@ function DoRoundFixes()
 function DoTankWarp( hndTank )
 {
 	// move tank spawn from hillside before event area to top of trains (~60% boss flow)
-	if( anv_tankwarps.CheckToWarpTank( hndTank, [10535, -5508, 11360, -4625] ) )
+	if ( CheckToWarpTank( hndTank, [10535, -5508, 11360, -4625] ) )
 	{
 		hndTank.SetOrigin( Vector( 10492, -4633, 57.9 ) );
 	}

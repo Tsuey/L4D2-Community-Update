@@ -2,6 +2,24 @@ g_Chapter = "DEAD CENTER - STREETS";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_fortifications/concrete_block001_128_reference.mdl" );
+PrecacheModel( "models/props_vehicles/van_interior.mdl" );
+PrecacheModel( "models/props_urban/streetlight001.mdl" );
+PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
+PrecacheModel( "models/props_vehicles/bus01_2.mdl" );
+PrecacheModel( "models/props_highway/plywood_01.mdl" );
+PrecacheModel( "models/props_vehicles/van.mdl" );
+PrecacheModel( "models/props_vehicles/van_glass.mdl" );
+PrecacheModel( "models/props_highway/plywood_03.mdl" );
+PrecacheModel( "models/props_update/c8m1_rooftop_1.mdl" );
+PrecacheModel( "models/props_update/c8m1_rooftop_3.mdl" );
+PrecacheModel( "models/props_urban/fence_cover001_128.mdl" );
+PrecacheModel( "models/props_urban/fence_cover001_64.mdl" );
+PrecacheModel( "models/props_update/c1m2_wrongway_rooftop1.mdl" );
+PrecacheModel( "models/props_update/c1m2_wrongway_rooftop2.mdl" );
+PrecacheModel( "models/props_update/c1m2_wrongway_wall.mdl" );
+PrecacheModel( "models/props_foliage/urban_hedge_256_128_high.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_mindthegap_lolvalve",		"SI Players",	1,	"-32 -4 -64",		"32 4 64",		"-2472 137 64" );
@@ -185,7 +203,7 @@ function DoRoundFixes()
 function DoTankWarp( hndTank )
 {
 	// move tank spawn at ceda truck drop to the top of the stairs (~44% boss flow)
-	if( anv_tankwarps.CheckToWarpTank( hndTank, [-4755, 555, -4295, 1110] ) )
+	if ( CheckToWarpTank( hndTank, [-4755, 555, -4295, 1110] ) )
 	{
 		hndTank.SetOrigin( Vector( -5025, 725, 384.1 ) );
 	}

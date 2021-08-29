@@ -2,6 +2,11 @@ g_Chapter = "DEAD CENTER - MALL";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_interiors/breakwall_interior_noboards.mdl" );
+PrecacheModel( "models/props_exteriors/guardshack_break07.mdl" );
+PrecacheModel( "models/props_exteriors/guardshack_break02.mdl" );
+PrecacheModel( "models/props_vents/vent_cluster006.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_commonhop_maproom",		"Survivors",	1,	"-24 -17 0",		"100 17 112",		"3673 -2517 424" );

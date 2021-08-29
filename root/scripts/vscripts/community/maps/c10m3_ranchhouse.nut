@@ -2,6 +2,10 @@ g_Chapter = "DEATH TOLL - THE CHURCH";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props/cs_militia/militiarock03.mdl" );
+PrecacheModel( "models/props_foliage/trees_cluster01.mdl" );
+PrecacheModel( "models/props_foliage/trees_cluster02.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_commonhop_saferoom",		"Survivors",	1,	"-576 -2892 -165",	"576 368 1000",		"-8080 -5684 421" );

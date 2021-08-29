@@ -2,6 +2,12 @@ g_Chapter = "THE PARISH - WATERFRONT";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props/cs_militia/boxes_garage_lower.mdl" );
+PrecacheModel( "models/props_highway/plywood_01.mdl" );
+PrecacheModel( "models/props_swamp/plank001b_192.mdl" );
+PrecacheModel( "models/props_downtown/gutter_downspout_straight01.mdl" );
+PrecacheModel( "models/props_street/trashbin01.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_vuln_balconya",		"Survivors",	1,	"-48 -192 -76",		"48 192 76",		"-720 -128 -140" );
@@ -62,11 +68,18 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_ladder_endgutterm2mirr_pipe", "models/props_downtown/gutter_downspout_straight01.mdl", "-3216 -1056 -89", "0 270 0", "shadow_no" );
 		make_prop( "dynamic", "_ladder_startroofqol_pipe", "models/props_downtown/gutter_downspout_straight01.mdl", "580 -308 -222", "0 90 0", "shadow_no" );
 		patch_ladder( "-2592 -1030 -208", "12 -3 0" );
-		patch_nav_checkpoint( "-3764 -1224 -344" );
 
 		con_comment( "PROP:\tTrashbin near \"_ladder_endbluehouse\" moved to improve accessibility." );
 
 		kill_entity( Entities.FindByClassnameNearest( "prop_physics", Vector( -3785, 22, -375.624 ), 8 ) );
 		make_prop( "physics", "_replacement_trashbin", "models/props_street/trashbin01.mdl", "-3781 118 -376", "0 17 0" );
+	}
+}
+
+function DoMapSpawnFixes()
+{
+	if ( HasPlayerControlledZombies() )
+	{
+		patch_nav_checkpoint( "-3764 -1224 -344" );
 	}
 }

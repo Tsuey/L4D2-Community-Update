@@ -2,6 +2,13 @@ g_Chapter = "DARK CARNIVAL - CONCERT";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_fairgrounds/bass_case.mdl" );
+PrecacheModel( "models/props_fairgrounds/anvil_case_casters_64.mdl" );
+PrecacheModel( "models/props_interiors/stair_metal_02.mdl" );
+PrecacheModel( "models/props_update/c2m5_infectedroom_doorway.mdl" );
+PrecacheModel( "models/props_update/c2m5_infectedroom.mdl" );
+PrecacheModel( "models/props_junk/dumpster_2.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_nav_lightingtrussa",		"Survivors",	1,	"-11 -506 0",		"11 506 65",		"-1275 2261 368" );

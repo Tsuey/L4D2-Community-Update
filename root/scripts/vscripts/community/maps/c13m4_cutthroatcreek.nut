@@ -2,6 +2,10 @@ g_Chapter = "COLD STREAM - CUT-THROAT CREEK";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_foliage/swamp_shrubwall_block_256_deep.mdl" );
+PrecacheModel( "models/props_foliage/urban_trees_cluster01.mdl" );
+PrecacheModel( "models/props_foliage/tree_trunk_fallen.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_permstuck_treetunnel",	"Everyone",	1,	"-16 -17 -10",		"17 16 45",		"-492.1 -186.3 -385" );
@@ -74,11 +78,11 @@ function DoRoundFixes()
 function DoTankWarp( hndTank )
 {
 	// move tank spawns back a bit to discourage rushing
-	if( anv_tankwarps.CheckToWarpTank( hndTank, [-1910, -2100, -470, -850] ) )
+	if ( CheckToWarpTank( hndTank, [-1910, -2100, -470, -850] ) )
 	{
 		hndTank.SetOrigin( Vector( -488, -516, -374.9 ) );
 	}
-	else if( anv_tankwarps.CheckToWarpTank( hndTank, [-960, -850, -195, 50] ) )
+	else if ( CheckToWarpTank( hndTank, [-960, -850, -195, 50] ) )
 	{
 		hndTank.SetOrigin( Vector( -672, 362, -381.8 ) );
 	}

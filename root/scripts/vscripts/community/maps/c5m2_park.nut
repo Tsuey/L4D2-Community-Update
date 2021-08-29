@@ -2,6 +2,18 @@ g_Chapter = "THE PARISH - PARK";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_urban/fence_cover001_256.mdl" );
+PrecacheModel( "models/props_highway/plywood_02.mdl" );
+PrecacheModel( "models/props_swamp/plank001b_192.mdl" );
+PrecacheModel( "models/props_highway/plywood_01.mdl" );
+PrecacheModel( "models/props_rooftop/hotel_rooftop_equip002.mdl" );
+PrecacheModel( "models/props_street/awning_department_store.mdl" );
+PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
+PrecacheModel( "models/props_street/awning_short.mdl" );
+PrecacheModel( "models/props_update/c5m2_billboard_nodraw.mdl" );
+PrecacheModel( "models/props_urban/chimney007.mdl" );
+PrecacheModel( "models/props_junk/dumpster_2.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_ladderqol_event",		"SI Players",	1,	"-2.5 -18 -161.5",	"2.5 18 161.5",		"-8446 -5214 -86" );

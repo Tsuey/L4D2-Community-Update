@@ -98,15 +98,15 @@ function HideUpdate()
 	DebugDrawClear();
 	EntFire( "worldspawn", "RunScriptCode", "DebugDrawClear()", 0.1 );
 	EntFire( g_UpdateName + "*", "StopGlowing" );
-	
+
 	// Disable glows on props highlighted by ShowUpdate without with g_UpdateName prefixed.
-	
+
 	if ( g_TutorialShown )
 	{
 		
 		for ( local index = 0;
-			  g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
-			  index++ )
+				g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
+				index++ )
 		{
 			if ( ! g_arrayFixHandles[index].IsValid() )
 			{
@@ -117,7 +117,7 @@ function HideUpdate()
 			
 			EntFire( g_arrayFixHandles[index].GetName(), "StopGlowing" );
 		}
-	
+
 		// Clean up global arrays.
 		
 		g_arrayFixHandles.clear();
@@ -125,7 +125,7 @@ function HideUpdate()
 		g_arrayFixHandles <- array( 1, null );
 		g_arrayLadderSources <- array( 1, null);
 	}
-	
+
 }
 
 // Opacity override for DebugDrawBox's (default 37).
@@ -169,10 +169,10 @@ function ShowUpdateOther()
 
 function ShowUpdate( showGroup = "anv" )
 {
-	
+
 	// Ignore case sensitivity for arguments.
 	showGroup = showGroup.tolower();
-	
+
 	// Print a quick tutorial to console for CLIP (blocker) color coding and binds.
 
 	if ( ! g_TutorialShown )
@@ -211,7 +211,7 @@ function ShowUpdate( showGroup = "anv" )
 	// The Timer (and any "helper entities") have no reason to be in this array.
 
 	// Initialize global arrays.
-	
+
 	g_arrayFixHandles <- array( 1, null );
 	g_arrayLadderSources <- array( 1, null);
 
@@ -287,7 +287,7 @@ function ShowUpdate( showGroup = "anv" )
 			g_arrayFixHandles.resize( index + 1 , null );
 		}
 	}
-	
+
 	printl( "\nIndexed "+ index + " entities!\n" );
 
 	// Timer that DebugRedraw()'s every 1 second, better than AddThinkToEnt() because it
@@ -308,7 +308,7 @@ function ShowUpdate( showGroup = "anv" )
 			}
 		} );
 	}
-	
+
 	DebugRedraw()
 }
 
@@ -317,21 +317,21 @@ function ShowUpdate( showGroup = "anv" )
 function DebugRedraw()
 {
 	local index = 0;
-	
+
 	// Clear ladder model sources array at the start of a redraw.
-	
+
 	g_arrayLadderSources.clear()
-	
+
 	// Clear debug overlay info before starting a new redraw.
 	// Props don't need to be "redrawn" since the one "StartGlowing" is sufficient.
-	
+
 	DebugDrawClear();
-	
+
 	// Draw all indexed entities.
 
 	for ( index = 0;
-	      g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
-	      index++ )
+			g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
+			index++ )
 	{
 		// Remove invalid or deleted entities from array before drawing.
 		
@@ -651,9 +651,9 @@ function DebugRedrawName( origin, name, entityType, index )
 {
 	
 	// See SetFilter function for values.
-	
+
 	local UseViewCheck = false;
-	
+
 	if ( g_SetFilterText == 0 )
 	{
 		return;
@@ -662,12 +662,12 @@ function DebugRedrawName( origin, name, entityType, index )
 	{
 		UseViewCheck = true;
 	}
-	
+
 	local namePrefix = entityType + ": ";
 	local additionalPrefix = "";
-	
+
 	// Rules by entity type.
-	
+
 	switch( entityType )
 	{
 		case "CLIP":
@@ -679,16 +679,16 @@ function DebugRedrawName( origin, name, entityType, index )
 		default:
 			break;
 	}
-	
+
 	// Entity does not have a targetname.
-	
+
 	if ( name == "" )
 	{
 		name = "unnamed";
 	}
-	
+
 	// Build display text and check for g_UpdateName string within entity name.
-	
+
 	if ( name.find( g_UpdateName ) == null )
 	{
 		namePrefix = additionalPrefix + " " + namePrefix;		// g_UpdateName was not found, mark as non-mapfixes entity.
@@ -697,7 +697,7 @@ function DebugRedrawName( origin, name, entityType, index )
 	{
 		name = name.slice( g_UpdateName.len(), name.len() );	// g_UpdateName string was found, remove it.
 	}
-	
+
 	DebugDrawText( origin, namePrefix + name + " (" + index + ")", UseViewCheck, 10 );
 }
 
@@ -707,9 +707,9 @@ function DebugRedrawCloneSource( origin, modelName )
 {
 
 	// See SetFilter function for values.
-	
+
 	local UseViewCheck = false;
-	
+
 	if ( g_SetFilterText == 0 )
 	{
 		return;
@@ -718,9 +718,9 @@ function DebugRedrawCloneSource( origin, modelName )
 	{
 		UseViewCheck = true;
 	}
-	
+
 	// Build list of used ladder sources to avoid duplicating text.
-	
+
 	if ( g_arrayLadderSources.find( modelName ) == null )
 	{
 		DebugDrawText( origin, "LADDER CLONE SOURCE (" + modelName + ")", UseViewCheck, 10 );
@@ -735,7 +735,7 @@ function MathLadderOrigin( vecMins, vecMaxs, vecAngles )
 {
 
 	// Position of ladder mins and maxs to transform.
-	
+
 	local vectorX = ( vecMins.x + vecMaxs.x ) / 2;
 	local vectorY = ( vecMins.y + vecMaxs.y ) / 2;
 	local vectorZ = ( vecMins.z + vecMaxs.z ) / 2;
@@ -781,7 +781,7 @@ function MathLadderOrigin( vecMins, vecMaxs, vecAngles )
 	// Final result is the offset of the ladder from the world's origin (0,0,0), but corrected for rotation.
 	// GetOrigin gives us the offset of the ladder from its cloned model.
 	// Adding them together produces the actual position of the ladder in the world.
-	
+
 	return Vector( vectorX, vectorY, vectorZ );
 }
 
@@ -834,13 +834,13 @@ g_SetFilterText <- 1;
 
 function SetFilter( entityGroup = null, value = null )
 {
-	
+
 	// Ignore case sensitivity for arguments.
-	
+
 	entityGroup = entityGroup.tolower();
-	
+
 	// Process value argument to ensure it's valid for the entityGroup switch.
-	
+
 	switch( value )
 	{
 		case null:
@@ -875,10 +875,10 @@ function SetFilter( entityGroup = null, value = null )
 			}
 			break;
 	}
-	
+
 	// Change filter settings to parsed arguments.
 	// Catch if value provided is outside the possible range, set to default if it is.
-	
+
 	switch( entityGroup )
 	{
 		case "all":
@@ -968,18 +968,18 @@ function SetFilter( entityGroup = null, value = null )
 			return;
 			break;
 	}
-	
+
 	// Disable glows on props highlighted by ShowUpdate without with g_UpdateName prefixed.
-	
+
 	if ( g_TutorialShown )
 	{
 		for ( local index = 0;
-			  g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
-			  index++ )
+				g_arrayFixHandles[index] != null && index <= g_arrayFixHandles.len();
+				index++ )
 		{
 			EntFire( g_arrayFixHandles[index].GetName(), "StopGlowing" );
 		}
 	}
-	
+
 	printl("\nShowing Group: '" + entityGroup + "', with filter: '" + value + "'.\n");
 }

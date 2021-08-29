@@ -2,6 +2,20 @@ g_Chapter = "DEATH TOLL - BOAT HOUSE FINALE";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_vehicles/pickup_truck_2004.mdl" );
+PrecacheModel( "models/props_vehicles/pickup_truck_2004_glass.mdl" );
+PrecacheModel( "models/props/de_prodigy/ammo_can_02.mdl" );
+PrecacheModel( "models/props_crates/static_crate_40.mdl" );
+PrecacheModel( "models/props_unique/spawn_apartment/lantern.mdl" );
+PrecacheModel( "models/props_foliage/trees_cluster01.mdl" );
+PrecacheModel( "models/props/cs_militia/militiarock01.mdl" );
+PrecacheModel( "models/props/cs_militia/militiarock02.mdl" );
+PrecacheModel( "models/props/cs_militia/militiarock03.mdl" );
+PrecacheModel( "models/props_foliage/rock_coast02f.mdl" );
+PrecacheModel( "models/props_foliage/trees_cluster02.mdl" );
+PrecacheModel( "models/props_foliage/old_tree01.mdl" );
+PrecacheModel( "models/props_foliage/tree_trunk_fallen.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_cliprework_startarea02",	"Survivors",	1,	"-1500 -16 -124",	"1500 16 880",		"2738 3824 412" );
@@ -140,6 +154,13 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_solidify_tree28", "models/props_foliage/trees_cluster02.mdl", "5416.34 565.308 209.588", "0.0 268.0 0.0", "shadow_no" );
 		make_prop( "physics",		"_hittable_log",		"models/props_foliage/tree_trunk_fallen.mdl",		"5405 -2480 -103",		"0 0 2", "shadow_no" );
 		make_prop( "physics_ovr", "_hittable_rock", "models/props/cs_militia/militiarock01.mdl", "1721 -1971 -4", "10.6 49.1 10.9", "shadow_no" );
+	}
+}
+
+function DoMapSpawnFixes()
+{
+	if ( HasPlayerControlledZombies() )
+	{
 		patch_nav_obscured( "5298 328 153" );
 		patch_nav_obscured( "5020 664 190" );
 	}

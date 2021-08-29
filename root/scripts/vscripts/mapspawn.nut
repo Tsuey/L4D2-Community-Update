@@ -42,19 +42,12 @@ g_BaseMode	<- Director.GetGameModeBase();
 
 g_Chapter	<- null;		// Stores each "friendly" mapname
 g_UpdateName	<- "community_update";	// Prefix "community_update" to all targetnames
-g_UpdateRanOnce	<- null;		// Run special code only once outside of mapspawn.nut
 
-///////////////////////////////////////////////////////////
-// Mandatory includes which seamlessly extend mapspawn.nut.
-///////////////////////////////////////////////////////////
+// Entity creation, modification and debug functions
+IncludeScript( "community/functions" );
 
-IncludeScript( "community/functions" );	// Entity creation, modification and debug functions
-
-///////////////////////////////////////////////////////////
-// RunScriptFile the map fixes with round-persistent scope.
-///////////////////////////////////////////////////////////
-
-EntFire( "worldspawn", "RunScriptFile", "community/mapfixes" );
+// CommunityUpdate logic
+IncludeScript( "community/mapfixes" );
 
 /////////////////////////////////////////////////////////////////////////////////
 // DEVELOPER ONLY: Load "script ShowUpdate()" functions to visualize all updates.
@@ -65,13 +58,4 @@ if ( developer() > 0 && Convars.GetStr( "sv_cheats" ) == "1" )
 	// Allows use of ShowUpdate() in a bind whereas RunScriptFile lacks scope.
 
 	IncludeScript( "community/z_developer_showupdate" );
-}
-
-local fixScriptTable = {};
-
-IncludeScript( "community/maps/" + g_MapName, fixScriptTable );
-
-if( "DoMapSpawnFixes" in fixScriptTable )
-{
-	fixScriptTable["DoMapSpawnFixes"]();
 }

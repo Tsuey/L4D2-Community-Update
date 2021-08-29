@@ -32,12 +32,12 @@
 *****************************************************************************/
 
 function make_clip ( user_strTargetname,
-		     user_strBlockType,
-		     user_intInitialState,
-		     user_strMins,
-		     user_strMaxs,
-		     user_strOrigin,
-		     user_strAngles = "0 0 0" )
+			user_strBlockType,
+			user_intInitialState,
+			user_strMins,
+			user_strMaxs,
+			user_strOrigin,
+			user_strAngles = "0 0 0" )
 {
 	local intBlockType = null;
 
@@ -95,9 +95,9 @@ function make_clip ( user_strTargetname,
 *****************************************************************************/
 
 function make_brush ( user_strTargetname,
-		      user_strMins,
-		      user_strMaxs,
-		      user_strOrigin )
+			user_strMins,
+			user_strMaxs,
+			user_strOrigin )
 {
 	SpawnEntityFromTable( "func_brush",
 	{
@@ -135,11 +135,11 @@ function make_brush ( user_strTargetname,
 *****************************************************************************/
 
 function make_navblock ( user_strTargetname,
-			 user_strTeamBlock,
-			 user_strState,
-			 user_strMins,
-			 user_strMaxs,
-			 user_strOrigin )
+			user_strTeamBlock,
+			user_strState,
+			user_strMins,
+			user_strMaxs,
+			user_strOrigin )
 {
 	local intTeamBlock = null;
 
@@ -210,14 +210,14 @@ function make_navblock ( user_strTargetname,
 *****************************************************************************/
 
 function make_trigpush ( user_strTargetname,
-			 user_strActivator,
-			 user_intSpeed,
-			 user_strDirection,
-			 user_strMins,
-			 user_strMaxs,
-			 user_strOrigin,
-			 user_strAngles		=	"0 0 0",
-			 user_strFilterOverride	=	"" )
+			user_strActivator,
+			user_intSpeed,
+			user_strDirection,
+			user_strMins,
+			user_strMaxs,
+			user_strOrigin,
+			user_strAngles		=	"0 0 0",
+			user_strFilterOverride	=	"" )
 {
 	// Determine activator filter. Type always Clients (1) unless explicitly not.
 
@@ -295,10 +295,10 @@ function make_trigpush ( user_strTargetname,
 *****************************************************************************/
 
 function make_trighurt ( user_strTargetname,
-			 user_strActivator,
-			 user_strMins,
-			 user_strMaxs,
-			 user_strOrigin )
+			user_strActivator,
+			user_strMins,
+			user_strMaxs,
+			user_strOrigin )
 {
 	// Both trigger_hurt and trigger_hurt_ghost have these in common.
 
@@ -378,9 +378,9 @@ function make_trighurt ( user_strTargetname,
 *****************************************************************************/
 
 function make_trigduck ( user_strTargetname,
-			 user_strMins,
-			 user_strMaxs,
-			 user_strOrigin )
+			user_strMins,
+			user_strMaxs,
+			user_strOrigin )
 {
 	SpawnEntityFromTable( "trigger_auto_crouch",
 	{
@@ -420,10 +420,10 @@ function make_trigduck ( user_strTargetname,
 *****************************************************************************/
 
 function make_trigmove ( user_strTargetname,
-			 user_strOption,
-			 user_strMins,
-			 user_strMaxs,
-			 user_strOrigin )
+			user_strOption,
+			user_strMins,
+			user_strMaxs,
+			user_strOrigin )
 {
 	// Always Clients (1) with Option added.
 
@@ -518,16 +518,16 @@ function make_trigmove ( user_strTargetname,
 *****************************************************************************/
 
 function make_prop ( user_strType,
-		     user_strTargetname,
-		     user_strModel,
-		     user_strOrigin,
-		     user_strAngles		=	"0 0 0",
-		     user_strShadows		=	"shadow_yes",
-		     user_strSolidity		=	"solid_yes",
-		     user_strRenderColor	=	"255 255 255",
-		     user_flFadeMinDist		=	-1.0,
-		     user_flFadeMaxDist		=	 0.0,
-		     user_flMassScale		=	 1.0 )
+			user_strTargetname,
+			user_strModel,
+			user_strOrigin,
+			user_strAngles		=	"0 0 0",
+			user_strShadows		=	"shadow_yes",
+			user_strSolidity		=	"solid_yes",
+			user_strRenderColor	=	"255 255 255",
+			user_flFadeMinDist		=	-1.0,
+			user_flFadeMaxDist		=	 0.0,
+			user_flMassScale		=	 1.0 )
 {
 	local tblKeyvalues =
 	{
@@ -614,8 +614,8 @@ function make_prop ( user_strType,
 	if ( developer() > 0 )
 	{
 		print( strClassname + " \"" + user_strTargetname + "\" "
-		       + user_strShadows + " & " + user_strSolidity
-		       + " w/ \"" + user_strModel + "\"" );
+				+ user_strShadows + " & " + user_strSolidity
+				+ " w/ \"" + user_strModel + "\"" );
 
 		// Color change could just be pass-through to the others,
 		// so just dump everything else that's cool. Fade Min/Max
@@ -1324,24 +1324,21 @@ function InfectedHumEnts_Spawn()
 
 function patch_nav_obscured( user_strOrigin )
 {
-	if ( g_UpdateRanOnce == false )
+	local hndNavAttr = SpawnEntityFromTable( "point_nav_attribute_region",
 	{
-		local hndNavAttr = SpawnEntityFromTable( "point_nav_attribute_region",
-		{
-			spawnflags	=	4096,
-			mins		=	Vector( 0, 0, 0 ),
-			maxs		=	Vector( 1, 1, 1 ),
-			origin		=	StringToVector_Valve( user_strOrigin, " " )
-		} );
+		spawnflags	=	4096,
+		mins		=	Vector( 0, 0, 0 ),
+		maxs		=	Vector( 1, 1, 1 ),
+		origin		=	StringToVector_Valve( user_strOrigin, " " )
+	} );
 
-		DoEntFire( "!self", "ApplyNavAttributes", "", 0.0, null, hndNavAttr );
+	DoEntFire( "!self", "ApplyNavAttributes", "", 0.0, null, hndNavAttr );
 
-		hndNavAttr.Kill();
+	hndNavAttr.Kill();
 
-		if ( developer() > 0 )
-		{
-			printl( "Navmesh modified w/ OBSCURED @ setpos_exact " + user_strOrigin + "\n" );
-		}
+	if ( developer() > 0 )
+	{
+		printl( "Navmesh modified w/ OBSCURED @ setpos_exact " + user_strOrigin + "\n" );
 	}
 }
 
@@ -1378,24 +1375,21 @@ function patch_nav_obscured( user_strOrigin )
 
 function patch_nav_checkpoint( user_strOrigin )
 {
-	if ( g_UpdateRanOnce == false )
+	local hndNavAttr = SpawnEntityFromTable( "point_nav_attribute_region",
 	{
-		local hndNavAttr = SpawnEntityFromTable( "point_nav_attribute_region",
-		{
-			spawnflags	=	2048,
-			mins		=	Vector( 0, 0, 0 ),
-			maxs		=	Vector( 1, 1, 1 ),
-			origin		=	StringToVector_Valve( user_strOrigin, " " )
-		} );
+		spawnflags	=	2048,
+		mins		=	Vector( 0, 0, 0 ),
+		maxs		=	Vector( 1, 1, 1 ),
+		origin		=	StringToVector_Valve( user_strOrigin, " " )
+	} );
 
-		DoEntFire( "!self", "ApplyNavAttributes", "", 0.0, null, hndNavAttr );
+	DoEntFire( "!self", "ApplyNavAttributes", "", 0.0, null, hndNavAttr );
 
-		hndNavAttr.Kill();
+	hndNavAttr.Kill();
 
-		if ( developer() > 0 )
-		{
-			printl( "Navmesh modified w/ CHECKPOINT @ setpos_exact " + user_strOrigin + "\n" );
-		}
+	if ( developer() > 0 )
+	{
+		printl( "Navmesh modified w/ CHECKPOINT @ setpos_exact " + user_strOrigin + "\n" );
 	}
 }
 

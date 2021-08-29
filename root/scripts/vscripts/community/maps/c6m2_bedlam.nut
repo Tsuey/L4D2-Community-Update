@@ -2,6 +2,9 @@ g_Chapter = "THE PASSING - UNDERGROUND";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_urban/gas_meter.mdl" );
+PrecacheModel( "models/props_rooftop/vent_large1.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_permstuck_startfence",	"Survivors",	1,	"-80 -1 0",		"80 1 768",		"2384 -1280 0" );

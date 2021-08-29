@@ -2,6 +2,12 @@ g_Chapter = "HARD RAIN - MILLTOWN";
 
 devchap( "ALL MODES" );
 
+PrecacheModel( "models/props_downtown/gutter_downspout_straight_160_02.mdl" );
+PrecacheModel( "models/props_interiors/concretepillar01_dm_base.mdl" );
+PrecacheModel( "models/props_interiors/concretepillar01.mdl" );
+PrecacheModel( "models/props_pipes/PipeSet02d_512_001a.mdl" );
+PrecacheModel( "models/props_mill/PipeSet08d_512_001a.mdl" );
+
 function DoRoundFixes()
 {
 	make_clip(	"_woodwindow","Survivors",	1,	"-48 -1 -39",		"48 1 39",		"4144 -1423 391" );
