@@ -99,15 +99,15 @@ function make_brush ( user_strTargetname,
 		      user_strMaxs,
 		      user_strOrigin )
 {
-	SpawnEntityFromTable( "func_brush",
+	local brush = SpawnEntityFromTable( "func_brush",
 	{
 		targetname	=	g_UpdateName + user_strTargetname,
 		origin		=	StringToVector_Valve( user_strOrigin, " " )
 	} );
 
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "mins " + user_strMins );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "maxs " + user_strMaxs );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + user_strMins, 0, null, brush );
+	DoEntFire( "!self", "AddOutput", "maxs " + user_strMaxs, 0, null, brush );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, brush );
 
 	if ( developer() > 0 )
 	{
@@ -150,21 +150,21 @@ function make_navblock ( user_strTargetname,
 		case "Infected":	intTeamBlock =  3;	break;
 	}
 
-	SpawnEntityFromTable( "func_nav_blocker",
+	local blocker = SpawnEntityFromTable( "func_nav_blocker",
 	{
 		targetname	=	g_UpdateName + user_strTargetname,
 		teamToBlock	=	intTeamBlock,
 		origin		=	StringToVector_Valve( user_strOrigin, " " )
 	} );
 
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "mins " + user_strMins );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "maxs " + user_strMaxs );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + user_strMins, 0, null, blocker );
+	DoEntFire( "!self", "AddOutput", "maxs " + user_strMaxs, 0, null, blocker );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, blocker );
 
 	switch( user_strState )
 	{
-		case "Apply":		EntFire( g_UpdateName + user_strTargetname, "BlockNav"   );	break;
-		case "Remove":		EntFire( g_UpdateName + user_strTargetname, "UnblockNav" );	break;
+		case "Apply":		DoEntFire( "!self", "BlockNav", "", 0, null, blocker   );	break;
+		case "Remove":		DoEntFire( "!self", "UnblockNav", "", 0, null, blocker );	break;
 	}
 
 	if ( developer() > 0 )
@@ -241,7 +241,7 @@ function make_trigpush ( user_strTargetname,
 
 	// Spawn the pusher.
 
-	SpawnEntityFromTable( "trigger_push",
+	local trigger = SpawnEntityFromTable( "trigger_push",
 	{
 		targetname	=	g_UpdateName + user_strTargetname,
 		filtername	=	strFiltername,
@@ -252,9 +252,9 @@ function make_trigpush ( user_strTargetname,
 		angles		=	StringToVector_Valve( user_strAngles, " " )
 	} );
 
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "mins " + user_strMins );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "maxs " + user_strMaxs );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + user_strMins, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "maxs " + user_strMaxs, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
 
 	if ( developer() > 0 )
 	{
@@ -348,13 +348,13 @@ function make_trighurt ( user_strTargetname,
 
 	// We're done defining so spawn it.
 
-	SpawnEntityFromTable( strClassname, tblKeyvalues );
+	local trigger = SpawnEntityFromTable( strClassname, tblKeyvalues );
 
 	// Finally apply mins/maxs.
 
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "mins " + user_strMins );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "maxs " + user_strMaxs );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + user_strMins, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "maxs " + user_strMaxs, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
 
 	if ( developer() > 0 )
 	{
@@ -382,16 +382,16 @@ function make_trigduck ( user_strTargetname,
 			 user_strMaxs,
 			 user_strOrigin )
 {
-	SpawnEntityFromTable( "trigger_auto_crouch",
+	local trigger = SpawnEntityFromTable( "trigger_auto_crouch",
 	{
 		targetname	=	g_UpdateName + user_strTargetname,
 		spawnflags	=	1,
 		origin		=	StringToVector_Valve( user_strOrigin, " " )
 	} );
 
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "mins " + user_strMins );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "maxs " + user_strMaxs );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + user_strMins, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "maxs " + user_strMaxs, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
 
 	if ( developer() > 0 )
 	{
@@ -436,16 +436,16 @@ function make_trigmove ( user_strTargetname,
 		case "Jump":		intSpawnflags = 8192;		break;
 	}
 
-	SpawnEntityFromTable( "trigger_playermovement",
+	local trigger = SpawnEntityFromTable( "trigger_playermovement",
 	{
 		targetname	=	g_UpdateName + user_strTargetname,
 		spawnflags	=	1 + intSpawnflags,
 		origin		=	StringToVector_Valve( user_strOrigin, " " )
 	} );
 
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "mins " + user_strMins );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "maxs " + user_strMaxs );
-	EntFire( g_UpdateName + user_strTargetname, "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + user_strMins, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "maxs " + user_strMaxs, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
 
 	if ( developer() > 0 )
 	{
@@ -1426,7 +1426,7 @@ function patch_nav_checkpoint( user_strOrigin )
 
 function patch_spawninfront( strOrigin, strMins, strMaxs )
 {
-	SpawnEntityFromTable( "trigger_once",
+	local trigger = SpawnEntityFromTable( "trigger_once",
 	{
 		targetname	= g_UpdateName + "_spawnnopreference_trigonce",
 		spawnflags	= 1,
@@ -1441,9 +1441,9 @@ function patch_spawninfront( strOrigin, strMins, strMaxs )
 		}
 	} );
 
-	EntFire( g_UpdateName + "_spawnnopreference_trigonce", "AddOutput", "mins " + strMins );
-	EntFire( g_UpdateName + "_spawnnopreference_trigonce", "AddOutput", "maxs " + strMaxs );
-	EntFire( g_UpdateName + "_spawnnopreference_trigonce", "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + strMins, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "maxs " + strMaxs, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
 
 	if ( developer() > 0 )
 	{
@@ -1512,7 +1512,7 @@ function make_atomizer( user_strTargetname,
 		}
 	} );
 
-	SpawnEntityFromTable( "trigger_multiple",
+	local trigger = SpawnEntityFromTable( "trigger_multiple",
 	{
 		targetname	= g_UpdateName + user_strTargetname + "_trigmult",
 		origin		= StringToVector_Valve( user_strOrigin, " " ),
@@ -1535,9 +1535,9 @@ function make_atomizer( user_strTargetname,
 		}
 	} );
 
-	EntFire( g_UpdateName + user_strTargetname + "_trigmult", "AddOutput", "mins -50 -50 0" );
-	EntFire( g_UpdateName + user_strTargetname + "_trigmult", "AddOutput", "maxs 50 50 100" );
-	EntFire( g_UpdateName + user_strTargetname + "_trigmult", "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins -50 -50 0", 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "maxs 50 50 100", 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
 
 	if ( developer() > 0 )
 	{
@@ -1595,7 +1595,7 @@ function make_axiswarp ( user_strTargetname,
 	// Trigger that warps activators. Caution that RunScriptCode has a byte limit
 	// of 254 this code falls well within (86 minimum with tons of float room).
 
-	SpawnEntityFromTable( "trigger_multiple",
+	local trigger = SpawnEntityFromTable( "trigger_multiple",
 	{
 		targetname	= g_UpdateName + user_strTargetname + "_trigmult",
 		origin		= StringToVector_Valve( user_strOrigin, " " ),
@@ -1610,9 +1610,9 @@ function make_axiswarp ( user_strTargetname,
 		}
 	} );
 
-	EntFire( g_UpdateName + user_strTargetname + "_trigmult", "AddOutput", "mins " + user_strMins );
-	EntFire( g_UpdateName + user_strTargetname + "_trigmult", "AddOutput", "maxs " + user_strMaxs );
-	EntFire( g_UpdateName + user_strTargetname + "_trigmult", "AddOutput", "solid 2" );
+	DoEntFire( "!self", "AddOutput", "mins " + user_strMins, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "maxs " + user_strMaxs, 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
 
 	if ( developer() > 0 )
 	{
