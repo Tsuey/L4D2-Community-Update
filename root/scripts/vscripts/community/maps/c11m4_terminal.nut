@@ -4,6 +4,16 @@ devchap( "ALL MODES" );
 
 PrecacheModel( "models/props_unique/zombiebreakwallexteriorairport01_main.mdl" );
 PrecacheModel( "models/props_unique/zombiebreakwallhospitalexterior01_main.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalframe01_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart01_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart02_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart03_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart04_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart05_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart06_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart07_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart08_dm.mdl" );
+PrecacheModel( "models/props_unique/zombiebreakwallexteriorhospitalpart09_dm.mdl" );
 PrecacheModel( "models/props_unique/airportdeparturescreen01.mdl" );
 
 function DoRoundFixes()
