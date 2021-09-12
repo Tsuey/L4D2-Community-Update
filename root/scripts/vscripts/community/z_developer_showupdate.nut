@@ -128,7 +128,7 @@ function ShowUpdateAll()
 
 function ShowUpdateNoCommunity()
 {
-	ShowUpdate( "nocoummunity" )
+	ShowUpdate( "nocommunity" )
 }
 
 // Call to create a logic_timer as 1/10th of a Think to start DebugRedraw(). This Timer
