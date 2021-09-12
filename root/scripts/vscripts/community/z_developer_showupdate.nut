@@ -42,50 +42,6 @@
 **  before then will be missed -- but not if it's manual!
 *****************************************************************************/
 
-/* New changes/additions:
-**	- TODO:
-**		-> Update above comment block with any changes, update tutorial messages
-**		-> Add more filter options for props
-**		-> Optional range cut off for rendering debug draw boxes and text
-**		-> Check if prop is glowing/not glowing in prop redraw loop to prevent unneccessary EntFire calls
-**		-> Highlight/glow additional entities in some way - Might be possible to fire a glow input on them
-**			-> func_clip_vphysics
-**			-> func_playerinfected_clip, func_playerghostinfected_clip
-**		-> Optimize fire time for DebugRedraw()
-**	- DONE:
-**	- Various performance improvements
-**		-> Reduced repeated function calls
-**		-> Optimized order of execution and removed some statements from loops that only needed to be called or checked once
-**		-> g_arrayFixHandles is now dynamically resized and cleared when not in use, which also fixes script from failing if >200 entities are indexed
-**		-> Used switch cases in place of many if else statements
-**	- Fixed some issues with glows not being removed from props consistently
-** 	- Added optional arguments for ShowUpdate() to change which entities are highlighted, text arguments must be enclosed in "quotes", invalid or blank argument will call ShowUpdate()
-**		-> ShowUpdate()			- Only highlights entities prefixed with "mapfixes" and commentary blockers, unchanged
-**		-> ShowUpdate("all")	- Highlights all valid entities regardless of targetname - ShowUpdateAll() can be used instead
-**		-> ShowUpdate("other")	- Highlights all entities without the "mapfixes" prefix - ShowUpdateOther can be used instead
-**	- Added SetFilter function, usage: function SetFilter( entityGroup, value ), text arguments must be enclosed in "quotes", invalid or blank arguments will result in default values
-**		-> Allows user to filter out different groups of entities, allowing us to massively extend the functionality of ShowUpdate() to see (almost) exactly the entities we want at any time
-**		-> Full description of filters is found just above the function
-**	- Created new function for drawing text on highlighted entities
-**		-> Index of the entity is show at the end of the string, indicating the order it was added and acting as a unique ID
-**		-> Now labels non-mapfixes clips
-**	- Fixed text on rotated ladders being displaced from the actual model, leaving them unlabelled
-*	- Fixed ladder clone source text being duplicated for each ladder that clones from it, now it only draws the text once per ladder source
-**	- When the appropriate settings to highlight them are on, ladders that have been moved (or added with no targetname) are highlighted in purple
-**		-> Ladders that are not new and haven't been moved are highlighted in light orange
-**	- Added trigger_teleport to potential triggers to highlight
-**	- Allowed commentary blockers, lump blockers, and any blockers added by mods etc to be highlighted with the full functionality that mapfixes blockers are given
-**	- Invalid or deleted entities are removed from the drawing index before attempting to draw them
-**		-> This removes the need to toggle ShowUpdate()/HideUpdate() when an entity is deleted
-**	- Adjusted func_brush color to help distinguish it from infected clips better
-**	- Text will stop being rendered if it is off-screen for 10 seconds
-**	- Made ShowUpdate() instantly call DebugRedraw(), instead of waiting 1 second for worldspawn to fire the script
-**	- ShowUpdate() now skips over all entity types that won't be highlighted
-**	- Number of entities indexed is printed to console
-**	- Changed some if statements to switch case for optimization
-**	- Defines entity highlight colors at initialization instead of calling them within draw loop
-*/
-
 // Call to cease and desist DebugRedraw(). Technically fires "StopGlowing" to all blockers,
 // too, but only props will process that Input and it's more efficient than another loop.
 
@@ -152,22 +108,33 @@ COLOR_LADDER_ORANGE		<- Vector( 255, 128,  64 );
 
 g_TutorialShown <- false;
 
-// Wrapper functions for ShowUpdate to allow the arguments to be used with key binds.
+// Initialize SetFilter settings.
+
+g_SetFilterClip <- 1;
+g_SetFilterBrush <- 1;
+g_SetFilterNav <- 1;
+g_SetFilterTrigger <- 1;
+g_SetFilterLadder <- 1;
+g_SetFilterProp <- 1;
+g_SetFilterText <- 1;
+g_SetFilterClipType <- -1;
+
+// Wrapper functions for ShowUpdate to allow the arguments to function with key binds.
 
 function ShowUpdateAll()
 {
 	ShowUpdate( "all" )
 }
 
-function ShowUpdateOther()
+function ShowUpdateNoCommunity()
 {
-	ShowUpdate( "other" )
+	ShowUpdate( "nocoummunity" )
 }
 
 // Call to create a logic_timer as 1/10th of a Think to start DebugRedraw(). This Timer
-// is named "anv_mapfixes_DebugRedraw_timer" and only exists if it's manually created.
+// is named "g_UpdateName + _DebugRedraw_timer" and only exists if it's manually created.
 
-function ShowUpdate( showGroup = "anv" )
+function ShowUpdate( showGroup = "community" )
 {
 
 	// Ignore case sensitivity for arguments.
@@ -179,29 +146,45 @@ function ShowUpdate( showGroup = "anv" )
 	{
 		printl( "\nSHOW UPDATE DEMO MODE" );
 		printl( "_____________________" );
+		
 		printl( "\nCLIP (blocker) color coding:\n" );
 		printl( "\tRED\t\tEveryone" );
 		printl( "\tPINK\t\tSurvivors" );
 		printl( "\tGREEN\t\tSI Players" );
 		printl( "\tBLUE\t\tSI Players and AI" );
 		printl( "\tLT BLUE\t\tAll and Physics" );
+		
 		printl( "\nOther color coding:\n" );
 		printl( "\tLT GREEN\tBrush (blocks LOS & hitreg)" );
 		printl( "\tORANGE\t\tNavigation blocked" );
 		printl( "\tYELLOW\t\tTrigger volume" );
 		printl( "\tWHITE\t\tInfected ladder clone" );
-		printl( "\tBLACK\t\tLump and _commentary.txt blockers" );
+		printl( "\tPURPLE\t\tModified infected ladders / non-community ladders" );
+		
 		printl( "\nDrawn boxes marked \"ANGLED\" unpreventably block Physics." );
 		printl( "Adjust box opacity with \"script g_BoxOpacity = #\" (0-255)." );
+		
 		printl( "\nUse \"r_drawclipbrushes 2\" or 1 to see BSP-baked brushes." );
+		
 		printl( "\nRecommended tester binds:\n" );
 		printl( "\tbind [ \"script ShowUpdate(); r_drawclipbrushes 2\"" );
 		printl( "\tbind ] \"script HideUpdate(); r_drawclipbrushes 0\"" );
+		
 		printl( "\nRecommended \"map mapname versus\" test environment:\n" );
 		printl( "\t\"jointeam 2; sb_all_bot_game 1; sb_stop 1; god 1; director_stop\"" );
+		
 		printl( "\nExit with \"script HideUpdate()\" (if used with nav_edit and" );
 		printl( "director_debug this also stops their flickering). If you use" );
-		printl( "a make_ function, run ShowUpdate() again to apply changes.\n" );
+		printl( "a make_ function, run ShowUpdate() again to apply changes." );
+		
+		printl( "\nUse \"script ShowUpdateAll()\" or \"script ShowUpdate(\"all\")\"" );
+		printl( "to highlight community and non-community entities at the same time." );
+		printl( "\nUse \"script ShowUpdateNoCommunity()\" or \"script ShowUpdate(\"nocommunity\")\"" );
+		printl( "to only highlight non-community entities." );
+		
+		printl( "\nEntities highlighted by ShowUpdate() can be filtered with \"script SetFilter()\"" );
+		printl( "Usage: script SetFilter(\"ENTITY GROUP\", \"FILTER VALUE\", \"CLIP TYPE [optional]\")" );
+		printl( "Use \"script FilterHelp()\" for a full tutorial." );
 
 		g_TutorialShown = true;
 	}
@@ -227,7 +210,7 @@ function ShowUpdate( showGroup = "anv" )
 		local strEntityName = entity.GetName();
 		local strClassname = entity.GetClassname();
 		
-		// Skip entities that we don't care about.
+		// Only check entities that we care about.
 		
 		switch ( strClassname )
 		{
@@ -243,6 +226,7 @@ function ShowUpdate( showGroup = "anv" )
 			case "trigger_auto_crouch":
 			case "trigger_playermovement":
 			case "trigger_teleport":
+			case "trigger_look":
 			case "func_simpleladder":
 				break;
 			case "prop_dynamic":
@@ -252,25 +236,25 @@ function ShowUpdate( showGroup = "anv" )
 				EntFire( strEntityName, "StopGlowing" ); // Reset glows on all models.
 				break;
 			default:
-				continue; // Not any of the above entities, skip.
+				continue; // Skip everything else.
 				break;
 		}
 		
 		// Determine which entities to index based on argument given in ShowUpdate().
 		
-		local anvUpdateEntity = strEntityName.find( g_UpdateName );
+		local communityUpdateEntity = strEntityName.find( g_UpdateName );
 		local validEntity = 0;
 		
-		switch( showGroup )
+		switch ( showGroup )
 		{
 			case "all":
 				break;
-			case "other":
-				if ( anvUpdateEntity == 0 ) continue; // Found g_UpdateName at start of name, skip entity.
+			case "nocommunity":
+				if ( communityUpdateEntity == 0 ) continue; // Found g_UpdateName at start of name, skip entity.
 				break;
 			default:
 				if ( strClassname == "env_player_blocker" ) break; // Entity is a commentary blocker, index it.
-				if ( anvUpdateEntity != 0 ) continue; // Did not find g_UpdateName at start of name, skip entity.
+				if ( communityUpdateEntity != 0 ) continue; // Did not find g_UpdateName at start of name, skip entity.
 				break;
 		}
 		
@@ -374,7 +358,7 @@ function DebugRedraw()
 				
 				// See SetFilter function for values.
 				
-				switch( g_SetFilterClip )
+				switch ( g_SetFilterClip )
 				{
 					case 0:
 						continue;
@@ -392,9 +376,9 @@ function DebugRedraw()
 						break;
 				}
 				
-				if ( g_SetFilterBlockType != -1 )
+				if ( g_SetFilterClipType != -1 )
 				{
-					if ( g_SetFilterBlockType != intBlockType ) continue;
+					if ( g_SetFilterClipType != intBlockType ) continue;
 				}
 				
 				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
@@ -403,14 +387,14 @@ function DebugRedraw()
 				
 				// Color debug box by BlockType.
 
-				switch( intBlockType )
+				switch ( intBlockType )
 				{
-					case 0:	vecBoxColor = COLOR_CLIP_RED;		break;	// "Everyone" (RED)
-					case 1:	vecBoxColor = COLOR_CLIP_PINK;		break;	// "Survivors" (PINK)
-					case 2:	vecBoxColor = COLOR_CLIP_GREEN;		break;	// "SI Players" (GREEN)
-					case 3:	vecBoxColor = COLOR_CLIP_BLUE;		break;	// "SI Players and AI" (BLUE)
-					case 4:	vecBoxColor = COLOR_CLIP_LTBLUE;	break;	// "All and Physics" (LT BLUE)
-					default: vecBoxColor = COLOR_CLIP_BLACK;	break;	// Invalid block type (BLACK)
+					case 0:	vecBoxColor = COLOR_CLIP_RED;		break;	// Everyone
+					case 1:	vecBoxColor = COLOR_CLIP_PINK;		break;	// Survivors
+					case 2:	vecBoxColor = COLOR_CLIP_GREEN;		break;	// SI Players
+					case 3:	vecBoxColor = COLOR_CLIP_BLUE;		break;	// SI Players and AI
+					case 4:	vecBoxColor = COLOR_CLIP_LTBLUE;	break;	// All and Physics
+					default: vecBoxColor = COLOR_CLIP_BLACK;	break;	// Invalid/other values
 				}
 
 				// Note DebugDrawBoxDirection() with GetForwardVector() only supports Y (yaw).
@@ -424,7 +408,7 @@ function DebugRedraw()
 				// Label env_player_blocker separately, we assume they are always from _commentary.txt
 				
 				local clipType = "";
-				switch( strClassname )
+				switch ( strClassname )
 				{
 					case "env_physics_blocker":	clipType =	"CLIP";  break;
 					case "env_player_blocker":	clipType =	"PCLIP"; break;
@@ -442,7 +426,7 @@ function DebugRedraw()
 			
 				// See SetFilter function for values.
 				
-				switch( g_SetFilterBrush )
+				switch ( g_SetFilterBrush )
 				{
 					case 0:
 						continue;
@@ -456,7 +440,7 @@ function DebugRedraw()
 				
 				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
 				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
-				local vecBoxColor = COLOR_BRUSH_LTGREEN;	// LT GREEN
+				local vecBoxColor = COLOR_BRUSH_LTGREEN;
 
 				// Brush rotation unsupported so GetAngles() does nothing.
 
@@ -476,7 +460,7 @@ function DebugRedraw()
 			
 				// See SetFilter function for values.
 				
-				switch( g_SetFilterNav )
+				switch ( g_SetFilterNav )
 				{
 					case 0:
 						continue;
@@ -490,7 +474,7 @@ function DebugRedraw()
 
 				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
 				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
-				local vecBoxColor = COLOR_NAV_ORANGE;	// ORANGE
+				local vecBoxColor = COLOR_NAV_ORANGE;
 
 				// Rotation on navblockers is especially unsupported and always 0's.
 
@@ -514,10 +498,11 @@ function DebugRedraw()
 			case "trigger_auto_crouch":
 			case "trigger_playermovement":
 			case "trigger_teleport":
+			case "trigger_look":
 			
 				// See SetFilter function for values.
 				
-				switch( g_SetFilterTrigger )
+				switch ( g_SetFilterTrigger )
 				{
 					case 0:
 						continue;
@@ -531,7 +516,7 @@ function DebugRedraw()
 				
 				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
 				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
-				local vecBoxColor = COLOR_TRIGGER_YELLOW;	// YELLOW
+				local vecBoxColor = COLOR_TRIGGER_YELLOW;
 
 				// Triggers are a wildcard but try to draw Angles just in case they're non-0.
 				// Note that "trigger_push" rotation has unknown mild influence on Push Direction
@@ -554,32 +539,32 @@ function DebugRedraw()
 			
 				local vecMins = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMins" );
 				local vecMaxs = NetProps.GetPropVector( hndFixHandle, "m_Collision.m_vecMaxs" );
-				local vecBoxColor = COLOR_LADDER_WHITE;	// WHITE
+				local vecBoxColor = COLOR_LADDER_WHITE;
 				
 				// Draw moved non-update-named ladders in purple.
 				
 				if ( strTargetname.find( g_UpdateName ) == null)
 				{
-					vecBoxColor = COLOR_LADDER_PURPLE;		// PURPLE
+					vecBoxColor = COLOR_LADDER_PURPLE;
 				}
 				
 				// See SetFilter function for values.
 				
-				switch( g_SetFilterLadder )
+				switch ( g_SetFilterLadder )
 				{
 					case 0:
 						continue;
 						break;
 					case 1:
-						if ( vecOrigin.tostring() == Vector( 0, 0, 0 ).tostring() )	// Ladders from scripts won't be at (0,0,0). Also draws ladders that are not new but have been moved.
+						if ( vecOrigin.tostring() == Vector( 0, 0, 0 ).tostring() )	// Ladders from scripts won't be at (0,0,0). Also highlights ladders that are not new but have been moved.
 						{
 							continue;
 						}
 						break;
 					case 2:
-						if ( vecOrigin.tostring() == Vector( 0, 0, 0 ).tostring() )	// Draws built in ladders.
+						if ( vecOrigin.tostring() == Vector( 0, 0, 0 ).tostring() )	// Highlights built in ladders.
 						{
-							vecBoxColor = COLOR_LADDER_ORANGE;	// LIGHT ORANGE
+							vecBoxColor = COLOR_LADDER_ORANGE;
 						}
 						break;
 				}
@@ -615,7 +600,7 @@ function DebugRedraw()
 			
 				// See SetFilter function for values.
 				
-				switch( g_SetFilterProp )
+				switch ( g_SetFilterProp )
 				{
 					case 0:
 						EntFire( strTargetname, "StopGlowing" );
@@ -668,13 +653,13 @@ function DebugRedrawName( origin, name, entityType, index )
 
 	// Rules by entity type.
 
-	switch( entityType )
+	switch ( entityType )
 	{
 		case "CLIP":
-			additionalPrefix = "(LUMP)"			// Prefix for non-mapfixes entities.
+			additionalPrefix = "(LUMP)" // Prefix for non-mapfixes entities.
 			break;
 		case "PCLIP":
-			additionalPrefix = "(COMMENTARY)"	// Prefix for commentary blocker entities (env_player_blocker).
+			additionalPrefix = "(COMMENTARY)" // Prefix for commentary blocker entities (env_player_blocker).
 			break;
 		default:
 			break;
@@ -785,19 +770,8 @@ function MathLadderOrigin( vecMins, vecMaxs, vecAngles )
 	return Vector( vectorX, vectorY, vectorZ );
 }
 
-// Function to change settings for groups of entities to be highlighted.
-// Entering "all" for the value argument will default to 1, except for blocktype where it defaults to -1 (no filter).
-
-// Initialize SetFilter settings.
-
-g_SetFilterClip <- 1;
-g_SetFilterBlockType <- -1;
-g_SetFilterBrush <- 1;
-g_SetFilterNav <- 1;
-g_SetFilterTrigger <- 1;
-g_SetFilterLadder <- 1;
-g_SetFilterProp <- 1;
-g_SetFilterText <- 1;
+// Function to change filtering for highlighted entities.
+// Entering "all" in the value argument will default to 1, entering "none" will default to 0.
 
 /*
 ** Entity Filters:
@@ -807,10 +781,6 @@ g_SetFilterText <- 1;
 ** clip
 ** 		- Entities:	env_physics_blocker, env_player_blocker
 **		- Values:	0 = Hide all clips, 1 = Show all clips (Default), 2 = Only env_physics_blocker, 3 = Only env_player_blocker, 4 = Only angled blockers
-** blocktype
-**		- Entities:	env_physics_blocker, env_player_blocker - Filters by BlockType key value
-**		- Values:	all (-1) = All block types (Default), 0 = Everyone, 1 = Survivors, 2 = Player Infected,
-**					3 = All Special Infected (Player and AI), 4 = All players and physics objects (env_physics_blocker only)
 ** brush
 ** 		- Entities:	func_brush
 **		- Values:	0 = Hide all brushes, 1 = Show all brushes with "model" key value set to "0" (Default), 2 = Shows all brushes
@@ -830,76 +800,76 @@ g_SetFilterText <- 1;
 ** text
 **		- Entities: Debug text
 **		- Values:	0 = Hides all text, 1 = Shows all text (Default), 2 = Shows text only if there is a direct line of sight
+**
+** Clip Type Filters:
+**		- Entities:	env_physics_blocker, env_player_blocker - Filters by BlockType key value
+**		- Values:	all (-1) = All block types (Default), 0 = Everyone, 1 = Survivors, 2 = Player Infected,
+**					3 = All Special Infected (Player and AI), 4 = All players and physics objects (env_physics_blocker only)
 */
 
-function SetFilter( entityGroup = null, value = null )
+function SetFilter( entityGroup = null, value = null, clipType = null )
 {
 
 	// Ignore case sensitivity for arguments.
 
 	entityGroup = entityGroup.tolower();
 
-	// Process value argument to ensure it's valid for the entityGroup switch.
-
-	switch( value )
+	// Catch invalid values for "value" argument.
+	
+	if ( typeof value != "integer" || value < 0 )
 	{
-		case null:
-			if ( entityGroup == "blocktype" )
+		if ( value == "all" )
+		{
+			value = 1;
+		}
+		else if ( value == "none" )
+		{
+			value = 0;
+		}
+		else
+		{
+			printl( "\nValue: '" + value + "' is not a valid value.\n" );
+			return;
+		}
+	}
+	
+	// Catch invalid values for "clipType" argument.
+	
+	if ( clipType != null )
+	{
+		if (typeof clipType != "integer" || clipType < -1 || clipType > 4 )
+		{
+			if ( clipType == "all" )
 			{
-				value = -1;
+				g_SetFilterClipType <- -1;
+				printl( "\nClip Type filter set to: '-1'.\n" );
 			}
 			else
 			{
-				value = 1;
+				printl( "\nClip Type: '" + clipType + "' is not a valid value.\n" );
+				return;
 			}
-			break;
-		case "all":
-			if ( entityGroup == "blocktype" )
+		}
+		else
+		{
+			if ( clipType != null )
 			{
-				value = -1;
+				g_SetFilterClipType <- clipType;
+				printl( "\nClip Type filter set to: '" + clipType + "'.\n" );
 			}
-			else
-			{
-				value = 1;
-			}
-			break;
-		default:
-			try
-			{
-				value = value.tointeger();
-			}
-			catch ( err )
-			{
-				value = 1;
-				printl("\nValue: '" + value + "' is not valid, using default value.\n");
-			}
-			break;
+		}
 	}
 
 	// Change filter settings to parsed arguments.
 	// Catch if value provided is outside the possible range, set to default if it is.
-
-	switch( entityGroup )
+	
+	switch ( entityGroup )
 	{
 		case "all":
-			if (value < 0 || value > 1)
+			if (value > 1)
 			{
 				value = 1;
 			}
-			
-			// Clip Block Type is a special case and has a different default.
-			
-			/*
-			if ( value == 1 )
-			{
-				g_SetFilterBlockType <- -1;
-			}
-			else
-			{
-				g_SetFilterBlockType <- value;
-			}
-			*/
-			
 			g_SetFilterClip <- value;
 			g_SetFilterBrush <- value;
 			g_SetFilterNav <- value;
@@ -908,68 +878,61 @@ function SetFilter( entityGroup = null, value = null )
 			g_SetFilterProp <- value;
 			break;
 		case "clip":
-			if (value < 0 || value > 4)
+			if (value > 4)
 			{
 				value = 1;
 			}
 			g_SetFilterClip <- value;
 			break;
-		case "blocktype":
-			if (value < -1 || value > 4)
-			{
-				value = -1;
-			}
-			g_SetFilterBlockType <- value;
-			break;
 		case "brush":
-			if (value < 0 || value > 2)
+			if (value > 2)
 			{
 				value = 1;
 			}
 			g_SetFilterBrush <- value;
 			break;
 		case "nav":
-			if (value < 0 || value > 2)
+			if (value > 2)
 			{
 				value = 1;
 			}
 			g_SetFilterNav <- value;
 			break;
 		case "trigger":
-			if (value < 0 || value > 2)
+			if (value > 2)
 			{
 				value = 1;
 			}
 			g_SetFilterTrigger <- value;
 			break;
 		case "ladder":
-			if (value < 0 || value > 2)
+			if (value > 2)
 			{
 				value = 1;
 			}
 			g_SetFilterLadder <- value;
 			break;
 		case "prop":
-			if (value < 0 || value > 3)
+			if (value > 3)
 			{
 				value = 1;
 			}
 			g_SetFilterProp <- value;
 			break;
 		case "text":
-			if (value < 0 || value > 2)
+			if (value > 2)
 			{
 				value = 1;
 			}
 			g_SetFilterText <- value;
 			break;
 		default:
-			printl("\nEntity group: '" + entityGroup + "' is not valid, or no entity group was specified.\n");
+			printl("\nEntity Group: '" + entityGroup + "' is not valid.\n");
 			return;
 			break;
 	}
-
-	// Disable glows on props highlighted by ShowUpdate without with g_UpdateName prefixed.
+	
+	// Disable active glows on props when filter is changed.
 
 	if ( g_TutorialShown )
 	{
@@ -982,4 +945,85 @@ function SetFilter( entityGroup = null, value = null )
 	}
 
 	printl("\nShowing Group: '" + entityGroup + "', with filter: '" + value + "'.\n");
+}
+
+function FilterHelp()
+{
+	printl( "Usage: script SetFilter(\"ENTITY GROUP\", \"FILTER VALUE\", \"CLIP TYPE [optional]\")" );
+	
+	printl( "\nENTITY GROUP\tGroup of entity types to change filters for." );
+	
+	printl( "\nFILTER VALUE\tValue to set entity group filter to." );
+	printl( "Using a value of \"all\" will set the filter to '1', showing all entities." );
+	printl( "Using a value of \"none\" sets the filter to '0', hiding all entities.\n" );
+	
+	printl( "\nCLIP TYPE\t[optional] Value to filter clips by block type." );
+	printl( "Using a value of \"all\" sets the filter to '-1', showing all entities." );
+	printl( "VALUES:" );
+	printl( "-1\tShows all clips regardless of block type (default)" );
+	printl( "0\tEveryone (red)" );
+	printl( "1\tSurvivor (pink)" );
+	printl( "2\tPlayer Infected (green)" );
+	printl( "3\tAll Special Infected (Player and AI) (blue)" );
+	printl( "4\tAll players and physics objects (light blue)" );
+	
+	printl( "\nENTITY GROUP AND FILTER VALUES:" );
+	
+	printl( "\nGROUP:" );
+	printl( "all\tSets filters for all groups together" );
+	printl( "VALUES:" );
+	printl( "0\tHides all entity groups" );
+	printl( "1\tShows all entity groups (default)" );
+	
+	printl( "\nGROUP:" );
+	printl( "clip\tSets filters for all clip entities: env_physics_blocker, env_player_blocker" );
+	printl( "VALUES:" );
+	printl( "0\tHide all clips" );
+	printl( "1\tShow all clips (default)" );
+	printl( "2\tShows only env_physics_blocker" );
+	printl( "3\tShows only env_player_blocker" );
+	printl( "4\tShows only angled blockers" );
+	
+	printl( "\nGROUP:" );
+	printl( "brush\tSets filters for brush entities: func_brush" );
+	printl( "VALUES:" );
+	printl( "0\tHide all brushes" );
+	printl( "1\tShows all brushes created via scripting (without a brush model) (default)" );
+	printl( "2\tShows all brushes (including those with a brush model)" );
+	
+	printl( "\nGROUP:" );
+	printl( "nav\tSets filters for nav entities: func_nav_blocker" );
+	printl( "VALUES:" );
+	printl( "0\tHide all nav blockers" );
+	printl( "1\tShows all nav blockers created via scripting (without a brush model) (default)" );
+	printl( "2\tShows all nav blockers (including those with a brush model)" );
+	
+	printl( "\nGROUP:" );
+	printl( "trigger\tSets filters for trigger entities: trigger_multiple, trigger_once, trigger_push, trigger_hurt,trigger_hurt_ghost, trigger_auto_crouch, trigger_playermovement, trigger_teleport" );
+	printl( "VALUES:" );
+	printl( "0\tHide all triggers" );
+	printl( "1\tShows all triggers created via scripting (without a brush model) (default)" );
+	printl( "2\tShows all triggers (including those with a brush model)" );
+	
+	printl( "\nGROUP:" );
+	printl( "ladder\tSets filters for ladder entities: func_simpleladders" );
+	printl( "VALUES:" );
+	printl( "0\tHide all ladders" );
+	printl( "1\tShows all ladders created or moved via scripting (non-zero origin value) (default)" );
+	printl( "2\tShows all ladders (including those with an origin value at 0,0,0)" );
+	
+	printl( "\nGROUP:" );
+	printl( "prop\tSets filters for prop entities: prop_dynamic, prop_dynamic_override, prop_physics, prop_physics_override)" );
+	printl( "VALUES:" );
+	printl( "0\tHide all props" );
+	printl( "1\tShows all props (default)" );
+	printl( "2\tShows dynamic props only" );
+	printl( "3\tShows physics props only" );
+	
+	printl( "\nGROUP:" );
+	printl( "text\tSets filters for text labels on highlighted entities" );
+	printl( "VALUES:" );
+	printl( "0\tHide all text" );
+	printl( "1\tShows all text (default)" );
+	printl( "2\tShows text only if there is a direct line of sight with the entity" );
 }
