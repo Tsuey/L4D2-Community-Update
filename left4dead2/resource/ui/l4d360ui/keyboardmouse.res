@@ -188,7 +188,8 @@
 		"maxValue"				"20.0f"
 		"stepSize"				"1.0"
 		"navUp"					"DrpMouseFilter"
-		"navDown"				"DrpDeveloperConsole"
+		"navDown"				"DrpDeveloperConsole" [!$WIN32]
+		"navDown"				"DrpRawMouse" [$WIN32]
 		"conCommand"			"sensitivity"
 		"inverseFill"			"0"
 				
@@ -391,7 +392,8 @@
 		"enabled"			"1"
 		"usetitlesafe"		"0"
 		"tabPosition"		"0"
-		"navUp"				"SldMouseSensitivity"
+		"navUp"				"SldMouseSensitivity" [!$WIN32]
+		"navUp"				"SldMouseAcceleration" [$WIN32]
 		"navDown"			"DrpGamepadEnable"
 				
 		//button and label
@@ -657,7 +659,7 @@
 		"usetitlesafe"		"0"
 		"tabPosition"		"0"
 		"navUp"				"DrpGamepadYInvert"
-		"navDown"			"BtnCancel"
+		"navDown"			"DrpGamepadAutoAim"
 				
 		//button and label
 		"BtnDropButton"

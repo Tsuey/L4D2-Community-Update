@@ -57,7 +57,7 @@
 		"navUp"					"Btn3rdPartyCredits"
 		"navDown"				"DrpAspectRatio"
 		"conCommand"			"mat_monitorgamma"
-		"inverseFill"			"1"
+		"inverseFill"			"0"
 
 		//button and label
 		"BtnDropButton"
@@ -741,7 +741,7 @@
 		"enabled"			"1"
 		"usetitlesafe"		"0"
 		"tabPosition"		"0"
-		"navUp"				"DrpModelDetail"
+		"navUp"				"DrpQueuedMode"
 		"navDown"			"BtnUseRecommended"
 				
 		//button and label
