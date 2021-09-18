@@ -10,7 +10,7 @@ $phongboost 10
 $phongexponent 1
 
 $phongfresnelranges "[1 0 .05]"
-$allowdiffusemodulation 0
+$allowdiffusemodulation 1
 $detail "models/infected/common/l4d2/ci_burning"
 $seamless_detail 1
 $seamless_scale ".005"

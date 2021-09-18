@@ -2,7 +2,7 @@ VertexLitGeneric
 {
 $baseTexture "models\infected\boomer/boomer"
 $bumpmap "models\infected\boomer/boomer_l4d1_normal"
-$allowdiffusemodulation 0
+$allowdiffusemodulation 1
 $phong 1
 $phongfresnelranges "[.01 .15 3]"
 $phongtint "[.8 .8 1]"

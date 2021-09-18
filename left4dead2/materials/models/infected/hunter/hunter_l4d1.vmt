@@ -11,7 +11,7 @@ $phongboost 15
 $phongexponent 1
 
 $phongfresnelranges "[1 0 .25]"
-$allowdiffusemodulation 0
+$allowdiffusemodulation 1
 $detail "models/infected/hunter/hunter_01_detail.vtf"
 $detailscale 2
 $detailblendfactor .001

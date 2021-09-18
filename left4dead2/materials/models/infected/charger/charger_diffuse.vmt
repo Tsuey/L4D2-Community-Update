@@ -12,7 +12,7 @@ $phongexponent 30
 $ambientocclusion 1
 $phongtint "[0 0 0]"
 $phongfresnelranges "[.1 .5 5]"
-$allowdiffusemodulation 0
+$allowdiffusemodulation 1
 $ambientboost 0
 $color2 "[1.5 1.5 1.5]"
 $detail "models/infected/common/l4d2/ci_burning"
