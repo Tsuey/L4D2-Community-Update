@@ -2,7 +2,7 @@
 Msg("Activating Mutation 15\n");
 
 
-DirectorOptions <- 
+DirectorOptions <-
 {
 	ActiveChallenge = 1
 
@@ -30,29 +30,81 @@ DirectorOptions <-
 
 function OnGameEvent_survival_round_start( params )
 {
-	EntFire( "info_director", "PanicEvent" );
-	
-	if ( SessionState.MapName == "c1m2_steets" )
-		EntFire( "store_doors", "Open" );
-	else if ( SessionState.MapName == "c7m1_docks" )
+	local validStartNames = { func_button_timed = "OnTimeUp", func_button = "OnPressed", script_func_button = "OnPressed", trigger_finale = "UseStart", prop_door_rotating = "OnOpen" };
+	local function GetSurvivalStartEntity()
 	{
-		EntFire( "tankdoorin", "Open" );
-		EntFire( "tankdoorin_button", "Kill" );
-		EntFire( "tank_sound_timer", "Disable" );
-		EntFire( "doorsound", "PlaySound" );
-		EntFire( "tank_fog", "Enable" );
-		EntFire( "tank_fog", "Disable", "", 0.5 );
-		EntFire( "big_splash", "Start" );
-		EntFire( "big_splash", "Stop", "", 2 );
-		EntFire( "coop_tank", "Trigger" );
-		EntFire( "radio_game_event", "Kill" );
-		EntFire( "tank_door_clip", "Kill" );
-		EntFire( "director", "EnableTankFrustration" );
-		EntFire( "battlefield_cleared", "UnblockNav", "", 60 );
-		EntFire( "tank_car_camera_clip", "Kill" );
+		local validIO = { logic_relay = { input = "Trigger", output = "OnTrigger" }, logic_timer = { input = "Enable", output = "OnTimer" } };
+		local function CheckOutputs( entity, outputName )
+		{
+			local ent = entity;
+			local output = outputName;
+			while ( ent )
+			{
+				local target = null;
+				local targetOutput = "";
+				local nElements = EntityOutputs.GetNumElements( ent, output );
+				for ( local i = 0; i < nElements; i++ )
+				{
+					local outputs = {};
+					EntityOutputs.GetOutputTable( ent, output, outputs, i );
+					local outputTarget = Entities.FindByName( null, outputs.target );
+					if ( !outputTarget )
+						continue;
+					
+					if ( outputTarget.GetClassname() == "info_director" && outputs.input.find( "PanicEvent" ) != null )
+						return outputTarget;
+					else
+					{
+						if ( (outputTarget.GetClassname() in validIO) && (outputs.input == validIO[outputTarget.GetClassname()].input) )
+						{
+							target = outputTarget;
+							targetOutput = validIO[outputTarget.GetClassname()].output;
+						}
+					}
+				}
+				ent = target;
+				output = targetOutput;
+			}
+			return null;
+		}
+
+		foreach( classname, output in validStartNames )
+		{
+			for ( local ent; ent = Entities.FindByClassname( ent, classname ); )
+			{
+				if ( !EntityOutputs.HasAction( ent, output ) )
+					continue;
+				
+				local target = CheckOutputs( ent, output );
+				if ( (!target) || (target.GetClassname() != "info_director") )
+					continue;
+				
+				return ent;
+			}
+		}
+		return null;
 	}
-	else if ( SessionState.MapName == "c11m5_runway" )
-		EntFire( "planecrash_trigger", "Trigger", "", 16 );
-	else if ( SessionState.MapName == "c12m2_traintunnel" )
-		EntFire( "emergency_door", "Open" );
+
+	EntFire( "info_director", "PanicEvent" );
+
+	local startEntity = GetSurvivalStartEntity();
+	if ( startEntity )
+	{
+		if ( startEntity.GetClassname() == "func_button_timed" || startEntity.GetClassname() == "trigger_finale" )
+		{
+			local nElements = EntityOutputs.GetNumElements( startEntity, validStartNames[startEntity.GetClassname()] );
+			for ( local i = 0; i < nElements; i++ )
+			{
+				local outputs = {};
+				EntityOutputs.GetOutputTable( startEntity, validStartNames[startEntity.GetClassname()], outputs, i );
+				EntFire( outputs.target, outputs.input, outputs.parameter, outputs.delay );
+			}
+		}
+		else
+		{
+			EntFire( startEntity.GetName(), "Unlock" );
+			EntFire( startEntity.GetName(), "Press" );
+			EntFire( startEntity.GetName(), "Open" );
+		}
+	}
 }

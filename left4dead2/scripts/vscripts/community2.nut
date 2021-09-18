@@ -17,7 +17,7 @@ DirectorOptions <-
 	ChargerLimit = 0
 	JockeyLimit = 0
 
-	ProhibitBosses = 1 //tanks still spawn at finales though
+	ProhibitBosses = true //tanks still spawn at finales though
 	MegaMobSize = 0
 
 	// convert items that aren't useful
@@ -38,17 +38,13 @@ DirectorOptions <-
 
 function OnGameEvent_round_start_post_nav( params )
 {
-	local spawner = null;
-	while ( spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ) )
+	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
-		if ( spawner.IsValid() )
-		{
-			local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-			
-			if ( population == "boomer" || population == "spitter" || population == "church" || population == "river_docks_trap" )
-				continue;
-			else
-				spawner.Kill();
-		}
+		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
+		
+		if ( population == "boomer" || population == "spitter" || population == "church" || population == "river_docks_trap" )
+			continue;
+		else
+			spawner.Kill();
 	}
 }

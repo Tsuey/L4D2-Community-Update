@@ -95,20 +95,16 @@ DirectorOptions <-
 
 function OnGameEvent_round_start_post_nav( params )
 {
-	local spawner = null;
-	while ( spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ) )
+	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
-		if ( spawner.IsValid() )
-		{
-			local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-			
-			if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
-				|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
-					|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
-				continue;
-			else
-				spawner.Kill();
-		}
+		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
+		
+		if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
+			|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
+				|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
+			continue;
+		else
+			spawner.Kill();
 	}
 	
 	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
@@ -135,11 +131,7 @@ function Update()
 {
 	if ( Director.GetCommonInfectedCount() > 0 )
 	{
-		local infected = null;
-		while ( infected = Entities.FindByClassname( infected, "infected" ) )
-		{
-			if ( infected.IsValid() )
-				infected.Kill();
-		}
+		for ( local infected; infected = Entities.FindByClassname( infected, "infected" ); )
+			infected.Kill();
 	}
 }

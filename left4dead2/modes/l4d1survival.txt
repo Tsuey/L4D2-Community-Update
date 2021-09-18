@@ -36,7 +36,7 @@
 		z_female_boomer_spawn_chance 100
 		z_finale_spawn_safety_range 600
 		z_max_survivor_damage 100
-		z_tank_autoshotgun_dmg_scale 0.75
+		z_tank_autoshotgun_dmg_scale 1
 		z_use_tolerance 0.98
 	}
 }

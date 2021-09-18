@@ -6,13 +6,13 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_NoSurvivorBots = 1
+	cm_NoSurvivorBots = true
 	cm_CommonLimit = 0
 	cm_DominatorLimit = 1
 	cm_MaxSpecials = 2
 	cm_SpecialRespawnInterval = 60
-	cm_AutoReviveFromSpecialIncap = 1
-	cm_AllowPillConversion = 0
+	cm_AutoReviveFromSpecialIncap = true
+	cm_AllowPillConversion = false
 
 	BoomerLimit = 0
 	MobMaxPending = 0
@@ -47,20 +47,16 @@ DirectorOptions <-
 
 function OnGameEvent_round_start_post_nav( params )
 {
-	local spawner = null;
-	while ( spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ) )
+	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
-		if ( spawner.IsValid() )
-		{
-			local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-			
-			if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
-				|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
-					|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
-				continue;
-			else
-				spawner.Kill();
-		}
+		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
+		
+		if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
+			|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
+				|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
+			continue;
+		else
+			spawner.Kill();
 	}
 	
 	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
@@ -68,22 +64,18 @@ function OnGameEvent_round_start_post_nav( params )
 	
 	foreach( wep, val in DirectorOptions.weaponsToConvert )
 	{
-		local wep_spawner = null;
-		while ( wep_spawner = Entities.FindByClassname( wep_spawner, wep + "_spawn" ) )
+		for ( local wep_spawner; wep_spawner = Entities.FindByClassname( wep_spawner, wep + "_spawn" ); )
 		{
-			if ( wep_spawner.IsValid() )
+			local spawnTable =
 			{
-				local spawnTable =
-				{
-					origin = wep_spawner.GetOrigin(),
-					angles = wep_spawner.GetAngles().ToKVString(),
-					targetname = wep_spawner.GetName(),
-					count = NetProps.GetPropInt( wep_spawner, "m_itemCount" ),
-					spawnflags = NetProps.GetPropInt( wep_spawner, "m_spawnflags" )
-				}
-				wep_spawner.Kill();
-				SpawnEntityFromTable(val, spawnTable);
+				origin = wep_spawner.GetOrigin(),
+				angles = wep_spawner.GetAngles().ToKVString(),
+				targetname = wep_spawner.GetName(),
+				count = NetProps.GetPropInt( wep_spawner, "m_itemCount" ),
+				spawnflags = NetProps.GetPropInt( wep_spawner, "m_spawnflags" )
 			}
+			wep_spawner.Kill();
+			SpawnEntityFromTable(val, spawnTable);
 		}
 	}
 }
@@ -104,11 +96,7 @@ function Update()
 {
 	if ( Director.GetCommonInfectedCount() > 0 )
 	{
-		local infected = null;
-		while ( infected = Entities.FindByClassname( infected, "infected" ) )
-		{
-			if ( infected.IsValid() )
-				infected.Kill();
-		}
+		for ( local infected; infected = Entities.FindByClassname( infected, "infected" ); )
+			infected.Kill();
 	}
 }

@@ -106,10 +106,9 @@ MutationState <-
 
 function LeftSafeAreaThink()
 {
-	local player = null;
-	while ( player = Entities.FindByClassname( player, "player" ) )
+	for ( local player; player = Entities.FindByClassname( player, "player" ); )
 	{
-		if ( ( !player.IsValid() ) || ( NetProps.GetPropInt( player, "m_iTeamNum" ) != 2 ) )
+		if ( NetProps.GetPropInt( player, "m_iTeamNum" ) != 2 )
 			continue;
 		
 		if ( ResponseCriteria.GetValue( player, "instartarea" ) == "0" )
@@ -118,27 +117,21 @@ function LeftSafeAreaThink()
 			SessionState.LeftSafeAreaThink = false;
 			break;
 		}
-		else
-			continue;
 	}
 }
 
 function OnGameEvent_round_start_post_nav( params )
 {
-	local spawner = null;
-	while ( spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ) )
+	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
-		if ( spawner.IsValid() )
-		{
-			local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-			
-			if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
-				|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
-					|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
-				continue;
-			else
-				spawner.Kill();
-		}
+		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
+		
+		if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
+			|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
+				|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
+			continue;
+		else
+			spawner.Kill();
 	}
 	
 	if ( Director.GetMapName() == "c1m1_hotel" )
@@ -155,8 +148,7 @@ function OnGameEvent_player_left_safe_area( params )
 	if ( !player )
 		return;
 	
-	local instartarea = ResponseCriteria.GetValue( player, "instartarea" );
-	if ( instartarea == "1" )
+	if ( ResponseCriteria.GetValue( player, "instartarea" ) == "1" )
 	{
 		SessionOptions.cm_MaxSpecials = 0;
 		SessionState.LeftSafeAreaThink = true;
@@ -248,11 +240,7 @@ function Update()
 		LeftSafeAreaThink();
 	if ( Director.GetCommonInfectedCount() > 0 )
 	{
-		local infected = null;
-		while ( infected = Entities.FindByClassname( infected, "infected" ) )
-		{
-			if ( infected.IsValid() )
-				infected.Kill();
-		}
+		for ( local infected; infected = Entities.FindByClassname( infected, "infected" ); )
+			infected.Kill();
 	}
 }

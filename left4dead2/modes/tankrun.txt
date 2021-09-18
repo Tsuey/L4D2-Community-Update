@@ -24,6 +24,7 @@
 		pipe_bomb_timer_duration 1
 		survivor_allow_crawling 1
 		survivor_revive_duration 3
+		survivor_revive_health 50
 		tank_burn_duration 20
 		tank_burn_duration_expert 30
 		tank_burn_duration_hard 25

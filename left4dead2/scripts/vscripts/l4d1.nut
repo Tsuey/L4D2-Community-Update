@@ -92,77 +92,83 @@ function OnGameEvent_round_start_post_nav( params )
 		EntFire( wep + "_spawn", "Kill" );
 	foreach( wep, val in DirectorOptions.weaponsToConvert )
 	{
-		local wep_spawner = null;
-		while ( wep_spawner = Entities.FindByClassname( wep_spawner, wep + "_spawn" ) )
+		for ( local wep_spawner; wep_spawner = Entities.FindByClassname( wep_spawner, wep + "_spawn" ); )
 		{
-			if ( wep_spawner.IsValid() )
+			local spawnTable =
 			{
-				local spawnTable =
-				{
-					origin = wep_spawner.GetOrigin(),
-					angles = wep_spawner.GetAngles().ToKVString(),
-					targetname = wep_spawner.GetName(),
-					count = NetProps.GetPropInt( wep_spawner, "m_itemCount" ),
-					spawnflags = NetProps.GetPropInt( wep_spawner, "m_spawnflags" )
-				}
-				wep_spawner.Kill();
-				SpawnEntityFromTable(val, spawnTable);
+				origin = wep_spawner.GetOrigin(),
+				angles = wep_spawner.GetAngles().ToKVString(),
+				targetname = wep_spawner.GetName(),
+				count = NetProps.GetPropInt( wep_spawner, "m_itemCount" ),
+				spawnflags = NetProps.GetPropInt( wep_spawner, "m_spawnflags" )
 			}
+			wep_spawner.Kill();
+			SpawnEntityFromTable(val, spawnTable);
 		}
 	}
 	
-	if ( SessionState.ModeName == "l4d1coop" || SessionState.ModeName == "l4d1vs" )
+	if ( Director.IsL4D1Campaign() )
 	{
-		if ( SessionState.MapName == "c8m5_rooftop" || SessionState.MapName == "c9m2_lots" || SessionState.MapName == "c10m5_houseboat"
-			|| SessionState.MapName == "c11m5_runway" || SessionState.MapName == "c12m5_cornfield" )
+		DirectorOptions.WaterSlowsMovement <- false;
+		
+		if ( SessionState.ModeName == "l4d1coop" || SessionState.ModeName == "l4d1vs" )
 		{
-			local finale = Entities.FindByClassname( null, "trigger_finale" );
-			if ( finale )
-				NetProps.SetPropInt( finale, "m_type", 0 );
-		}
-		else if ( SessionState.MapName == "c10m4_mainstreet" )
-		{
-			local relay = Entities.FindByName( null, "forklift_relay" );
-			if ( relay )
+			if ( IsMissionFinalMap() )
 			{
-				EntityOutputs.RemoveOutput( relay, "OnTrigger", "director", "BeginScript", "c10m4_onslaught" );
-				EntityOutputs.AddOutput( relay, "OnTrigger", "director", "ForcePanicEvent", "", 9.0, -1 );
+				if ( SessionState.MapName != "c7m3_port" )
+				{
+					local finale = Entities.FindByClassname( null, "trigger_finale" );
+					if ( finale )
+						NetProps.SetPropInt( finale, "m_type", 0 );
+				}
 			}
-			EntFire( "onslaught1", "Kill" );
-		}
-		else if ( SessionState.MapName == "c11m4_terminal" )
-		{
-			local van = Entities.FindByName( null, "van_button" );
-			if ( van )
+			else
 			{
-				EntityOutputs.RemoveOutput( van, "OnPressed", "@director", "", "" );
-				EntityOutputs.AddOutput( van, "OnPressed", "@director", "ForcePanicEvent", "", 3.0, -1 );
+				if ( SessionState.MapName == "c10m4_mainstreet" )
+				{
+					local relay = Entities.FindByName( null, "forklift_relay" );
+					if ( relay )
+					{
+						EntityOutputs.RemoveOutput( relay, "OnTrigger", "director", "BeginScript", "c10m4_onslaught" );
+						EntityOutputs.AddOutput( relay, "OnTrigger", "director", "ForcePanicEvent", "", 9.0, -1 );
+					}
+					EntFire( "onslaught1", "Kill" );
+				}
+				else if ( SessionState.MapName == "c11m4_terminal" )
+				{
+					local van = Entities.FindByName( null, "van_button" );
+					if ( van )
+					{
+						EntityOutputs.RemoveOutput( van, "OnPressed", "@director", "", "" );
+						EntityOutputs.AddOutput( van, "OnPressed", "@director", "ForcePanicEvent", "", 3.0, -1 );
+					}
+					local relay = Entities.FindByName( null, "alarm_on_relay" );
+					if ( relay )
+					{
+						EntityOutputs.RemoveOutput( relay, "OnTrigger", "@director", "", "" );
+						EntityOutputs.RemoveOutput( relay, "OnTrigger", "alarm_safety_relay", "", "" );
+						EntityOutputs.AddOutput( relay, "OnTrigger", "@director", "ForcePanicEvent", "", 0.0, -1 );
+						EntityOutputs.AddOutput( relay, "OnTrigger", "alarm_off_relay", "Trigger", "", 15.0, -1 );
+					}
+					EntFire( "van_follow_trigger", "Kill" );
+					EntFire( "van_endscript_relay", "Kill" );
+					EntFire( "onslaught_hint_trigger", "Kill" );
+				}
+				else if ( SessionState.MapName == "c12m3_bridge" )
+				{
+					local relay = Entities.FindByName( null, "train_engine_relay" );
+					if ( relay )
+					{
+						EntityOutputs.RemoveOutput( relay, "OnTrigger", "director", "BeginScript", "c12m3_onslaught" );
+						EntityOutputs.AddOutput( relay, "OnTrigger", "director", "ForcePanicEvent", "", 2.0, -1 );
+					}
+					EntFire( "zombie_spawn1", "Kill" );
+					EntFire( "onslaught_hint_template", "Kill" );
+				}
+				else if ( SessionState.MapName == "c12m4_barn" )
+					EntFire( "window_trigger", "Kill" );
 			}
-			local relay = Entities.FindByName( null, "alarm_on_relay" );
-			if ( relay )
-			{
-				EntityOutputs.RemoveOutput( relay, "OnTrigger", "@director", "", "" );
-				EntityOutputs.RemoveOutput( relay, "OnTrigger", "alarm_safety_relay", "", "" );
-				EntityOutputs.AddOutput( relay, "OnTrigger", "@director", "ForcePanicEvent", "", 0.0, -1 );
-				EntityOutputs.AddOutput( relay, "OnTrigger", "alarm_off_relay", "Trigger", "", 15.0, -1 );
-			}
-			EntFire( "van_follow_trigger", "Kill" );
-			EntFire( "van_endscript_relay", "Kill" );
-			EntFire( "onslaught_hint_trigger", "Kill" );
 		}
-		else if ( SessionState.MapName == "c12m3_bridge" )
-		{
-			local relay = Entities.FindByName( null, "train_engine_relay" );
-			if ( relay )
-			{
-				EntityOutputs.RemoveOutput( relay, "OnTrigger", "director", "BeginScript", "c12m3_onslaught" );
-				EntityOutputs.AddOutput( relay, "OnTrigger", "director", "ForcePanicEvent", "", 2.0, -1 );
-			}
-			EntFire( "zombie_spawn1", "Kill" );
-			EntFire( "onslaught_hint_template", "Kill" );
-		}
-		else if ( SessionState.MapName == "c12m4_barn" )
-			EntFire( "window_trigger", "Kill" );
 	}
 }
 
