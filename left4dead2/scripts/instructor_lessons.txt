@@ -9972,7 +9972,7 @@
 			{
 				"local_player is"		"player userid"
 				"string1 set"			"string ability"
-				"string1 is"			"string ability_spit"				
+				"string1 is"			"string ability_leap"				
 			}
 		}
 
@@ -9982,7 +9982,7 @@
 			{
 				"local_player is"		"player userid"
 				"string1 set"			"string ability"
-				"string1 is"			"string ability_spit"				
+				"string1 is"			"string ability_leap"				
 			}
 		}
 	}
@@ -10092,7 +10092,7 @@
 
 		"success_limit"		"2"
 
-		"binding"			"+attack2"
+		"binding"			"+attack"
 		"onscreen_icon"		"use_binding"
 		"caption"			"#L4D_Instructor_tank_claw"
 
@@ -10131,7 +10131,7 @@
 
 		"success_limit"		"2"
 
-		"binding"			"+attack"
+		"binding"			"+attack2"
 		"onscreen_icon"		"use_binding"
 		"caption"			"#L4D_Instructor_tank_rock"
 
