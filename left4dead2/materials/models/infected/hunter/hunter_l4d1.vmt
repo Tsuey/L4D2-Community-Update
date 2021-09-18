@@ -1,0 +1,33 @@
+vertexlitgeneric
+{
+$baseTexture "models\infected\hunter/hunter_l4d1"
+$shinyblood 1
+$shinybloodexponent 8
+$halflambert 1
+$bumpmap "effects/flat_normal"
+
+$phong 1
+$phongboost 15
+$phongexponent 1
+
+$phongfresnelranges "[1 0 .25]"
+$allowdiffusemodulation 0
+$detail "models/infected/hunter/hunter_01_detail.vtf"
+$detailscale 2
+$detailblendfactor .001
+$detailblendmode 0
+$detailAmount 0
+$ambientocclusion 1
+Proxies
+{
+BloodyHands
+{
+resultVar $detailAmount
+}
+Equals
+{
+srcVar1 $detailAmount
+resultVar $detailblendfactor
+}
+}
+}

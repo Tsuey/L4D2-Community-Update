@@ -1,0 +1,54 @@
+VertexLitGeneric
+{
+$baseTexture "models\infected\boomer/Boomer_exploded_01"
+$shinyblood 1
+$shinybloodexponent 10
+$halflambert 1
+$bumpmap "effects/flat_normal"
+$phong 1
+$phongboost 10
+$phongexponent 1
+
+$phongfresnelranges "[1 0 .05]"
+$allowdiffusemodulation 0
+$detail "models/infected/common/l4d2/ci_burning"
+$seamless_detail 1
+$seamless_scale ".005"
+$detailscale 4
+$detailblendfactor .001
+$detailblendmode 2
+$bbqamount 1
+$BurnLevel 0.0
+$multi 10.0
+$blendMin 0.0
+$blendMax 1.2
+Proxies
+{
+BBQLevel
+{
+resultVar $bbqamount
+}
+BurnLevel
+{
+resultVar $burnlevel
+}
+Multiply
+{
+srcVar1 $BurnLevel
+srcVar2 $multi
+resultVar $BurnLevel
+}
+Clamp
+{
+min $blendMin
+max $blendMax
+srcVar1 $BurnLevel
+resultVar $BurnLevel
+}
+Equals
+{
+srcVar1 $BurnLevel
+resultVar $detailblendfactor
+}
+}
+}
