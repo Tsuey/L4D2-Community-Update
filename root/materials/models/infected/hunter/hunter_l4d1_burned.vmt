@@ -1,0 +1,55 @@
+vertexlitgeneric
+{
+$baseTexture "models\infected\hunter/hunter_l4d1"
+$shinyblood 1
+$shinybloodexponent 8
+$halflambert 1
+$bumpmap "effects/flat_normal"
+$basemapluminancephongmask 1
+$phong 1
+$phongboost 14
+$phongexponent 1
+
+$phongfresnelranges "[1 0 .25]"
+$allowdiffusemodulation 0
+$detail "effects/burned.vtf"
+$seamless_detail 1
+$seamless_scale ".005"
+$detailscale 4
+$detailblendfactor .001
+$detailblendmode 2
+$bbqamount 1
+$BurnLevel 0.0
+$multi 3.5
+$blendMin 0.0
+$blendMax 1.0
+Proxies
+{
+BBQLevel
+{
+resultVar $bbqamount
+}
+BurnLevel
+{
+resultVar $burnlevel
+}
+Multiply
+{
+srcVar1 $BurnLevel
+srcVar2 $multi
+resultVar $BurnLevel
+}
+Clamp
+{
+min $blendMin
+max $blendMax
+srcVar1 $BurnLevel
+resultVar $BurnLevel
+}
+Equals
+{
+srcVar1 $BurnLevel
+resultVar $detailblendfactor
+}
+}
+}
