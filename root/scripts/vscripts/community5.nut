@@ -14,7 +14,7 @@ DirectorOptions <-
 
 	weaponsToConvert =
 	{
-		//weapon_first_aid_kit =	"weapon_pain_pills_spawn"
+		weapon_first_aid_kit =	"weapon_pain_pills_spawn"
 		weapon_adrenaline =	"weapon_pain_pills_spawn"
 	}
 
