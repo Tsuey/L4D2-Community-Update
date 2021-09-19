@@ -7,7 +7,7 @@ $phong 1
 $phongboost 15
 $phongtint "[0.8 0.85 1]"
 $halflambert 0
-$allowdiffusemodulation 0
+$allowdiffusemodulation 1
 $phongfresnelranges "[.1 .5 4]"
 $ambientocclusion 1
 $diffuseexp "1.0"

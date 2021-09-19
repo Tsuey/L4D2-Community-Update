@@ -11,7 +11,7 @@ $phongboost 14
 $phongexponent 1
 
 $phongfresnelranges "[1 0 .25]"
-$allowdiffusemodulation 0
+$allowdiffusemodulation 1
 $detail "effects/burned.vtf"
 $seamless_detail 1
 $seamless_scale ".005"

@@ -11,7 +11,7 @@ $phongboost 12
 $phongalbedotint 1
 $phongfresnelranges "[1 .01 .1]"
 
-$allowdiffusemodulation 0
+$allowdiffusemodulation 1
 $lightwarptexture "models\survivors\coach\coach_head_wrp"
 $detail "models/infected/common/l4d2/ci_burning"
 $seamless_detail 1
