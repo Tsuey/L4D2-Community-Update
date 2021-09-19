@@ -1,0 +1,39 @@
+"l4d1coop"
+{
+	"base"		"coop"
+	"maxplayers"	"4"
+
+	"Author"	"Valve"
+
+	"DisplayTitle"	"L4D1 Co-op"
+	"Description"	"Play Co-op old school!"
+
+	convar
+	{
+		ammo_autoshotgun_max 128
+		ammo_shotgun_max 128
+		ammo_smg_max 480
+		mounted_gun_cooldown_time 20
+		mounted_gun_overheat_penalty_time 20
+		mounted_gun_overheat_time 20
+		nav_max_view_distance 1500.000000
+		//sb_path_lookahead_range 300
+		//sb_separation_danger_min_range 500
+		survivor_friendly_fire_factor_expert 1
+		survivor_friendly_fire_factor_hard 0.5
+		sv_infected_ceda_vomitjar_probability 0
+		sv_infected_police_tonfa_probability 0
+		sv_infected_riot_control_tonfa_probability 0
+		sv_vote_creation_timer 30
+		tank_burn_duration 30
+		tank_burn_duration_expert 40
+		tank_burn_duration_hard 35
+		z_female_boomer_spawn_chance 100
+		z_finale_spawn_safety_range 600
+		z_gun_swing_coop_max_penalty 999999999
+		z_gun_swing_coop_min_penalty 999999999
+		z_max_survivor_damage 100
+		z_tank_autoshotgun_dmg_scale 1
+		z_use_tolerance 0.98
+	}
+}

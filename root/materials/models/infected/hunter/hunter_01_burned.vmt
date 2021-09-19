@@ -1,0 +1,56 @@
+vertexlitgeneric
+{
+$baseTexture "models\infected\hunter\hunter_01"
+$bumpmap "models\infected\hunter\hunter_normal"
+$phongexponenttexture "models\infected\hunter\hunter_exponent"
+$shinyblood 1
+$shinybloodexponent 10
+$halflambert 0
+$phong 1
+$phongboost 12
+$phongalbedotint 1
+$phongfresnelranges "[1 .01 .1]"
+
+$allowdiffusemodulation 1
+$lightwarptexture "models\survivors\coach\coach_head_wrp"
+$detail "models/infected/common/l4d2/ci_burning"
+$seamless_detail 1
+$seamless_scale ".005"
+$detailscale 4
+$detailblendfactor .001
+$detailblendmode 2
+$bbqamount 1
+$BurnLevel 0.0
+$multi 3.5
+$blendMin 0.0
+$blendMax 1.2
+Proxies
+{
+BBQLevel
+{
+resultVar $bbqamount
+}
+BurnLevel
+{
+resultVar $burnlevel
+}
+Multiply
+{
+srcVar1 $BurnLevel
+srcVar2 $multi
+resultVar $BurnLevel
+}
+Clamp
+{
+min $blendMin
+max $blendMax
+srcVar1 $BurnLevel
+resultVar $BurnLevel
+}
+Equals
+{
+srcVar1 $BurnLevel
+resultVar $detailblendfactor
+}
+}
+}
