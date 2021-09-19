@@ -1,0 +1,35 @@
+"tankrun"
+{
+	"base"		"coop"
+	"maxplayers"	"4"
+
+	"Author"	"Rayman1103"
+
+	"DisplayTitle"	"Tank Run"
+	"ShortDescription"	"Run away from hordes of Tanks"
+	"Description"	"Feel like working out but don’t have the motivation? Tank Run will give you a reason to run by making lots and lots of Tanks chase you down!"
+	"Image"		"vgui/blog/tank_tank_tank"
+
+	convar
+	{
+		ammo_assaultrifle_max -2
+		ammo_autoshotgun_max -2
+		ammo_huntingrifle_max -2
+		ammo_shotgun_max -2
+		ammo_smg_max -2
+		ammo_sniperrifle_max -2
+		first_aid_kit_use_duration 3
+		hud_deathnotice_threats 1
+		pipe_bomb_initial_beep_interval 0.2
+		pipe_bomb_timer_duration 1
+		survivor_allow_crawling 1
+		survivor_revive_duration 3
+		survivor_revive_health 50
+		tank_burn_duration 20
+		tank_burn_duration_expert 30
+		tank_burn_duration_hard 25
+		vomitjar_duration_infected_bot 10
+		z_tank_incapacitated_health 0
+		z_tank_throw_interval 999999
+	}
+}

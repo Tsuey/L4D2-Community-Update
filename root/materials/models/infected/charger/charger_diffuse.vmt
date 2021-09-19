@@ -1,0 +1,58 @@
+vertexlitgeneric
+{
+$baseTexture "models\infected\charger\charger_diffuse"
+$lightwarptexture "models\survivors\coach\coach_head_wrp"
+$halflambert 0
+$diffuseexp 1
+$bumpmap "models\infected\charger\charger_normal"
+$phongexponenttexture "models\infected\charger\charger_body_exponent"
+$phong 1
+$phongboost 4
+$phongexponent 30
+$ambientocclusion 1
+$phongtint "[0 0 0]"
+$phongfresnelranges "[.1 .5 5]"
+$allowdiffusemodulation 1
+$ambientboost 0
+$color2 "[1.5 1.5 1.5]"
+$detail "models/infected/common/l4d2/ci_burning"
+$seamless_detail 1
+$seamless_scale ".005"
+$detailscale 4
+$detailblendfactor .001
+$detailblendmode 2
+$bbqamount 1
+$BurnLevel 0.0
+$multi 3.0
+$blendMin 0.0
+$blendMax 1.2
+Proxies
+{
+BBQLevel
+{
+resultVar $bbqamount
+}
+BurnLevel
+{
+resultVar $burnlevel
+}
+Multiply
+{
+srcVar1 $BurnLevel
+srcVar2 $multi
+resultVar $BurnLevel
+}
+Clamp
+{
+min $blendMin
+max $blendMax
+srcVar1 $BurnLevel
+resultVar $BurnLevel
+}
+Equals
+{
+srcVar1 $BurnLevel
+resultVar $detailblendfactor
+}
+}
+}
