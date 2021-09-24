@@ -110,7 +110,7 @@ function DoRoundFixes()
 		make_clip( "_ladder_startalternativeB_clipleft", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4025 96", "0 -45 0" );
 		make_clip( "_ladder_startalternativeB_clipright", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4071 96", "0 45 0" );
 		make_clip( "_ladder_upperbalconynear_clip", "Everyone", 1, "-3 0 0", "3 16 372", "3968 1822 199", "0 11 0" );
-		make_clip( "_infected_mapescape", "SI Players", 1, "-40 -350 -20", "40 440 245", "-1997 1497 192" );
+		make_clip( "_infected_mapescape", "SI Players", 1, "-1000 -350 -20", "40 808 245", "-1997 1497 192" );
 		make_ladder( "_ladder_brideentryleft_cloned_brideentryright", "196 422 574", "1199 -13 -20" );
 		make_ladder( "_ladder_elecbox_cloned_bluebin", "2528 1030 342", "-2652 -253 42" );
 		make_ladder( "_ladder_elecboxsafehouse_cloned_bluebin", "2528 1030 342", "-6434 498 516" );
@@ -136,5 +136,15 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_solidify_endacvent", "models/props_rooftop/acvent04.mdl", "-3920 1027 1056.8", "0 180 0", "shadow_no" );
 		make_prop( "dynamic", "_solidify_endchimney", "models/props_urban/chimney007.mdl", "-4027.48 830.86 1056", "2 270 0", "shadow_no" );
 		make_prop( "dynamic", "_tankfence_wrongway", "models/props_misc/wrongway_sign01_optimized.mdl", "-2025 1527 259", "0 326.5 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// At the start area, extend a func_playerinfected_clip back a
+		// bit more to prevent a stuck spawn if Survivors stand back to fence.
+
+		make_clip( "_tankstuck_startfence", "SI Players", 1, "-251 -760 0", "173 216 1513", "-261 2872 87" );
 	}
 }

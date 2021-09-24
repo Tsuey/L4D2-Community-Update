@@ -31,7 +31,6 @@ function DoRoundFixes()
 
 	make_prop( "dynamic", "_solidify_survivorchimney", "models/props/cs_militia/fireplacechimney01.mdl", "10862.2 -6085.53 120.492", "0 135 0", "shadow_no" );
 
-
 	// FIX: Prevent skipping bridge horde by forcing it even if fence is jumped.
 
 	con_comment( "TRIG:\tNew trigger will enforce onslaught even if fence is jumped." );
@@ -74,7 +73,6 @@ function DoRoundFixes()
 	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger onslaught:GenerateGameEvent::1:-1" );
 	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger director:BeginScript:c12m4_onslaught:1.5:-1" );
 
-
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -84,8 +82,8 @@ function DoRoundFixes()
 		con_comment( "TRIG_UNDO:\tDelete blockers which prevent train car commonhop skip for Coop-only." );
 
 		EntFire( g_UpdateName + "_eventskip_commonhop*", "Kill", null, 4 );
-
 	}
+
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -97,7 +95,6 @@ function DoRoundFixes()
 
 		make_clip(	"_shortcut_warehouse",		"Survivors",	1,	"0 -32 -32",		"8 64 256",		"10272 -7848 152" );
 		make_clip(	"_commonhop_traintruss",	"Survivors",	1,	"-160 -120 -55",	"160 120 1545",		"10879 -7463 116" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -138,6 +135,17 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_solidify_finalchimney1", "models/props/cs_militia/fireplacechimney01.mdl", "11020 -4586 329", "0 135 0", "shadow_no" );
 		make_prop( "dynamic", "_solidify_finalchimney2", "models/props/cs_militia/fireplacechimney01.mdl", "11020 -4073 329", "0 135 0", "shadow_no" );
 		patch_ladder( "11314.7 -4535 -259.108", "0 -22 9" );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// There's 60 func_playerinfected_clip on this map but most smooth
+		// perimeter fences and all are thick enough to block excess nav.
+		// Only exception appears to be behind the starting safe room.
+
+		make_clip( "_tankstuck_safeback", "SI Players", 1, "-170 -640 -100", "170 225 1700", "7704 -11710 425" );
 	}
 }
 

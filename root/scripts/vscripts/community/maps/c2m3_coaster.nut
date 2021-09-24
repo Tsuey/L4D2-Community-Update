@@ -99,7 +99,7 @@ function DoRoundFixes()
 		make_clip( "_onewaybreakwall_elecbox", "Everyone", 1, "-64 -4 0", "64 4 236", "-64 3524 100" );
 		make_clip( "_propladder_airconda_qol", "SI Players", 1, "-22 -20 12", "22 -1 32", "-1938 739 195" );
 		make_clip( "_startwindow_cheese", "Survivors", 1, "-47.6 0 0", "49.6 1 135", "2783 1920 105" );
-		make_clip( "_trailerfence_clip", "SI Players", 1, "-114 -39 3", "126 761 963", "-1150 2887 -3" );
+		make_clip( "_trailerfence_clip", "SI Players", 1, "-114 -39 3", "702 761 963", "-1150 2887 -3" );
 		make_ladder( "_ladder_buttonlegT_cloned_buttonlegB", "-3518 1780 102", "0 2.1 118" );
 		make_ladder( "_ladder_coastertowerB_cloned_finalleg", "-4164 2274 128", "-510 5513 168", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_coastertowerT_cloned_shrubberytilt", "-2976 886.5 258", "-5760 2209 264", "0 180 0", "0 1 0" );

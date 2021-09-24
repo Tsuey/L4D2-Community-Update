@@ -46,6 +46,13 @@ function DoRoundFixes()
 	EntFire( "securityrotator1",	"AddOutput",	"origin 1025.7 1750.9 125.456",		0 );
 	EntFire( "securityspotlight1",	"AddOutput",	"origin 1025.7 1750.9 125.456",		1 );
 
+	// Rubble axiswarp with QoL and OoB clips to reduce stuck bot and player Tank spawns
+
+	make_axiswarp( "_spawnstuck_rubble", "x+", 64, "-8 -88 0", "7 120 192", "-604 5248 296" );
+
+	make_clip( "_spawnstuck_rubble_qol", "SI Players and AI", 1, "-95 -128 0", "60 128 4", "-720 5248 360", "-45 0 0" );
+	make_clip( "_spawnstuck_rubble_oob", "SI Players", 1, "-2 -56 -32", "2 56 56", "-906 5256 344" );
+
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -53,8 +60,8 @@ function DoRoundFixes()
 		// FIXES
 
 		patch_spawninfront( "2552 4080 152", "0 -16 0", "614 16 244" );
-
 	}
+
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -64,7 +71,6 @@ function DoRoundFixes()
 		patch_spawninfront( "2552 4080 152", "0 -16 0", "614 16 244" );
 
 		make_clip( "_altpath_escalator", "Survivors", 1, "-37 -6 -35", "25 6 175", "2289 1737 51", "0 0 -2.5" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

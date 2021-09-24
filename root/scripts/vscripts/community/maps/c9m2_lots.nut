@@ -78,4 +78,21 @@ function DoRoundFixes()
 		kill_funcinfclip( 159.458 );		// Delete clip in 6th closet
 		EntFire( "worldspawn", "RunScriptCode", "kill_funcinfclip( 159.458 )", 1 );		// Delete clip in 7th closet (same)
 	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" )
+	{
+		// Delete 1 *.LMP roadsidefence model to facilitate Infected player travel.
+
+		kill_entity( Entities.FindByClassnameNearest( "prop_dynamic", Vector( 8521, 5815, 348 ), 1 ) );
+	}
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Slightly extend a func_playerinfected_clip back further behind
+		// starting safe room to fully block all navmesh behind there.
+
+		make_clip( "_tankstuck_startback", "SI Players", 1, "-120 -900 0", "120 900 1370", "-835 -110 -223" );
+	}
 }

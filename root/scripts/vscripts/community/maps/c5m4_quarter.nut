@@ -87,4 +87,15 @@ function DoRoundFixes()
 		make_ladder( "_ladder_prefloatalley_cloned_unusedwrongway", "-26 1728 234", "-1852 1566 -4", "0 -90 0", "0 -1 0" );
 		make_ladder( "_ladder_unusedareain_cloned_onewayvanfence", "-2512 2434 144", "270 765 0" );
 	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" || g_MutaMode == "mutation19" )
+	{
+		// Worst map for stuck spawns. Delete all, Skybox and clipping
+		// bounds the player in and unused perimeter ladders will be put
+		// to use. There's not even any walkable void under this map.
+
+		EntFire( "func_playerinfected_clip", "Kill" );
+	}
 }

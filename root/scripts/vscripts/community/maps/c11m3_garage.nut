@@ -146,4 +146,14 @@ function DoRoundFixes()
 		patch_ladder( "-1539.5 1472 192.315", "-1 0 0" );
 		patch_ladder( "-3352 2426 110", "0 -1 0" );
 	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// When Survivors leave the safe room, Tanks can immediately spawn
+		// stuck behind the fence. Block it off until future ladder rework.
+
+		make_clip( "_tankstuck_startfence", "SI Players", 1, "-1200 -80 0", "720 58 1800", "-4947 -3786 16" );
+	}
 }

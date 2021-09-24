@@ -73,4 +73,25 @@ function DoRoundFixes()
 		patch_ladder( "8596 5497.5 92.3941", "0 4 0" );
 		patch_ladder( "8260 5497.5 92.3941", "0 4 0" );
 	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" )
+	{
+		// Final street wrongway barricades -- only left Versus Survival relevant.
+
+		kill_funcinfclip( 1043.94 );	// Final street left barricade
+	}
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Block an excess nav area that's quite far behind a fence.
+
+		make_clip( "_tankstuck_fencenavarea", "SI Players", 1, "-64 -64 0", "64 64 1400", "10314 3862 16" );
+
+		// Final street wrongway barricades.
+
+		kill_funcinfclip( 1043.94 );	// Final street left barricade
+		kill_funcinfclip( 1493.36 );	// Final street right barricade
+	}
 }

@@ -80,4 +80,37 @@ function DoRoundFixes()
 		Entities.FindByClassnameNearest( "prop_physics", Vector( -7016, -6697, -206 ), 8 ).SetOrigin( Vector( -7016, -6747, -209 ) );
 		Entities.FindByClassnameNearest( "prop_physics", Vector( -7000, -6674, -205 ), 8 ).SetOrigin( Vector( -7000, -6724, -208 ) );
 	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" )
+	{
+		// Excessively problematic map for Taaannnk! Mutation, but not so much
+		// for Versus Survival. In the Survival area, there's 3 sewer tunnels
+		// with excess nav players could spawn behind -- this deletes all of them,
+		// and there's no way to get under the limited Survival arena.
+
+		EntFire( "func_playerinfected_clip", "Kill" );
+
+		// Delete 1 *.LMP roadsidefence model to facilitate Infected player travel.
+
+		kill_entity( Entities.FindByClassnameNearest( "prop_dynamic", Vector( -8972, -7890, -320 ), 1 ) );
+
+		// Add 3 Infected ladders to complement the "stacked blockers" meant
+		// for AI, which players cannot reasonably know the presence of.
+
+		make_ladder( "_ladder_versussurvivalfence1_cloned_tunnelmid", "-9478.5 -7280 -384", "155 45 -410" );
+		make_ladder( "_ladder_versussurvivalfence2_cloned_tunnelmid", "-9478.5 -7280 -384", "155 0 -410" );
+		make_ladder( "_ladder_versussurvivalfence3_cloned_tunnelmid", "-9478.5 -7280 -384", "155 -45 -410" );
+	}
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Excessively problematic map, most specifically the end area, so just
+		// delete all of these -- Tanks can get out of the map and venture to
+		// its far extents, but only in end area, and the alternatives messier.
+		// Also 3 sewer tunnels in the event area that have clips but excess nav.
+
+		EntFire( "func_playerinfected_clip", "Kill" );
+	}
 }

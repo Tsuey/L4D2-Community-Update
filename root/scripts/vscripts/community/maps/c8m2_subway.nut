@@ -6,6 +6,7 @@ PrecacheModel( "models/props_update/c8m2_generatorroom.mdl" );
 PrecacheModel( "models/props_swamp/plank001b_192.mdl" );
 PrecacheModel( "models/props_update/c8m1_rooftop_3.mdl" );
 PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
+PrecacheModel( "models/props/cs_office/vending_machine.mdl" );
 
 function DoRoundFixes()
 {
@@ -76,9 +77,9 @@ function DoRoundFixes()
 		make_clip( "_generator_qolstep1", "SI Players", 1, "0 -96 0", "0.1 96 8", "8021 2880 16" );
 		make_clip( "_generator_qolstep2", "SI Players", 1, "0 -96 0", "0.1 96 8", "8021 3168 16" );
 		make_clip( "_ladder_deadendrubble_clip", "Everyone", 1, "-18 -39 -87", "13 107 -5", "2149 3922 -242", "0 14 0" );
-		make_clip( "_ladder_generatorwindow_clipa", "SI Players", 1, "-4 -40 -56", "4 128 231", "7944 2512 425" );
-		make_clip( "_ladder_generatorwindow_clipb", "SI Players", 1, "-4 -40 -56", "4 128 231", "7568 2512 425" );
-		make_clip( "_ladder_generatorwindow_clipc", "SI Players", 1, "-170 -10 -56", "214 10 231", "7734 2462 425" );
+		make_clip( "_ladder_generatorwindow_clipa", "SI Players", 1, "-4 -40 -56", "376 128 231", "7944 2512 425" );
+		make_clip( "_ladder_generatorwindow_clipb", "SI Players", 1, "-400 -40 -56", "4 128 231", "7568 2512 425" );
+		make_clip( "_ladder_generatorwindow_clipc", "SI Players", 1, "-566 -216 -56", "586 10 231", "7734 2462 425" );
 		make_clip( "_ladder_tanksubqol_clip", "Everyone", 1, "-22 3 0", "9 7 152", "6290 3284 -336", "0 -20 0" );
 		make_clip( "_ladder_tanksubway_clip", "SI Players", 1, "-17 -43 0", "16 -2 8", "6999 2919 -188" );
 		make_clip( "_ladder_tanksubwreck_clip", "Everyone", 1, "-38 -6 0", "38 1 8", "4306 4053 -231", "0 -21 0" );
@@ -118,5 +119,33 @@ function DoRoundFixes()
 		con_comment( "FIX:\tGenerator Room has 13 hanging lights and 9 need to be made non-solid." );
 
 		unsolidify_model( "models/props/de_nuke/IndustrialLight01.mdl" );
+	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" )
+	{
+		// Multiple stuck spawns are only relevant to Taaannnk! Mutation,
+		// except for this: copy the invisible vending machine so players
+		// have a visible "step" to get back in bounds. (Not actually stuck)
+
+		make_prop( "dynamic", "_cosmetic_oobstep", "models/props/cs_office/vending_machine.mdl", "7366 3801 270", "90 0 0", "shadow_no", "solid_no" );
+	}
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Multiple tunnel stuck spawns that aren't accessible in Survival,
+		// that need to only be fixed for Taaannnk! Mutation. Navmesh is
+		// excessive and extends too far behind these rubbles/wrongways.
+
+		make_clip( "_tankstuck_rubblestart", "SI Players", 1, "-139 -107 0", "119 99 177", "1621 3617 -337", "0 42 0" );
+		make_clip( "_tankstuck_rubblemiddle", "SI Players", 1, "-189 -145 0", "300 179 240", "6766 5299 -336", "0 -68 0" );
+		make_clip( "_tankstuck_rubblefinal", "SI Players", 1, "-189 -253 0", "140 320 176", "8249 3222 -336", "0 -53 0" );
+
+		// Multiple difficult-but-possible to spawn stuck areas in end area.
+
+		make_clip( "_tankstuck_endalley1", "SI Players", 1, "-480 -855 0", "65 293 1400", "10303 3479 16" );
+		make_clip( "_tankstuck_endalley2", "SI Players", 1, "-373 -96 0", "395 99 1400", "11637 5342 16" );
+		make_clip( "_tankstuck_widestreet", "SI Players", 1, "-842 0 0", "386 555 1400", "10110 6784 8" );
 	}
 }

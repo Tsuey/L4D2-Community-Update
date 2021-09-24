@@ -6,6 +6,7 @@ PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
 PrecacheModel( "models/props_mill/pipeset08d_64_001a.mdl" );
 PrecacheModel( "models/props_industrial/wire_spool_02.mdl" );
 PrecacheModel( "models/props_rooftop/acvent02.mdl" );
+PrecacheModel( "models/props_fairgrounds/alligator.mdl" );
 
 function DoRoundFixes()
 {
@@ -45,6 +46,11 @@ function DoRoundFixes()
 	EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:AddOutput:origin 12687 7170 200:10:-1" );
 	EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_ladderqol_scissorlift:Kill::12:-1" );
 
+	// Mitigator for getting stuck in scissor lift
+
+	make_axiswarp( "_axiswarp_scissorlift", "y-", 50, "-53 0 -183", "7 7 42", "12687 7171 16" );
+	EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_axiswarp_scissorlift_trigmult:AddOutput:origin 12687 7171 62:4:-1" );
+	EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_axiswarp_scissorlift_trigmult:Kill::6:-1" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -62,8 +68,8 @@ function DoRoundFixes()
 		make_clip(	"_shortcut_booster_TMP2",	"Survivors",	1,	"-24 -303 0",		"24 304 972",		"11032 7048 252" );
 
 		EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_shortcut_booster_TMP*:Kill::0:-1" );
-
 	}
+
 	if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
@@ -73,7 +79,6 @@ function DoRoundFixes()
 		con_comment( "LOGIC:\tGas Station explosion will alternatively start Survival timer." );
 
 		EntFire( "gas_explosion_sound_relay", "AddOutput", "OnTrigger director:PanicEvent::2:-1" );
-
 	}
 
 	function c8m3_DynamicLadder()
@@ -104,9 +109,9 @@ function DoRoundFixes()
 		make_brush( "_losfix_sewage_tank2a",	"-132 -1 -6",	"132 1 6",	"13042 7891 -251" );
 		make_brush( "_losfix_sewage_tank2b",	"-132 -1 -6",	"132 1 6",	"13042 8120 -251" );
 		make_brush( "_losfix_sewage_tank2c",	"-132 -1 -6",	"132 1 6",	"13040 8300 -251" );
-		make_clip( "_burgerfence_blocker1", "SI Players", 1, "-419 -675 0", "-409 615 1202", "10137 6395 8" );
+		make_clip( "_burgerfence_blocker1", "SI Players", 1, "-537 -675 0", "-409 615 1202", "10137 6395 8" );
 		make_clip( "_burgerfence_blocker2", "SI Players", 1, "-419 -675 0", "384 -665 1202", "10137 6395 8" );
-		make_clip( "_burgerfence_blocker3", "SI Players", 1, "-419 605 0", "384 615 1202", "10137 6395 8" );
+		make_clip( "_burgerfence_blocker3", "SI Players", 1, "-880 605 0", "384 2372 1202", "10137 6395 8" );
 		make_clip( "_ladder_burgerfenceshared_clip", "SI Players", 1, "0 -434 0", "6 398 149", "10521 6386 8" );
 		make_clip( "_ladder_scissormini_clipleft", "Everyone", 1, "-18 -8 0", "18 8 106", "12044 7545 323", "0 -45 0" );
 		make_clip( "_ladder_scissormini_clipright", "Everyone", 1, "-18 -8 0", "18 8 106", "12094 7545 323", "0 45 0" );
@@ -115,6 +120,7 @@ function DoRoundFixes()
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-8 -295 0", "8 319 601", "15184 11445 608" );
 		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-156 -6 0", "228 6 473", "14964 11156 736" );
 		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-207 -16 0", "175 61.5 463", "13584 10754 746" );
+		make_clip( "_tankqol_warehousestrip", "SI Players", 1, "-16 -813 0", "48 731 666", "10488 7589 540" );
 		make_clip( "_waterworks_blocker", "SI Players", 1, "-8 -728 0", "8 358 412", "13008 7408 800" );
 		make_clip( "_waterworks_collision", "SI Players", 1, "-41 -245 0", "32 247 110", "12761 7407 857" );
 		make_ladder( "_ladder_brickapartment_cloned_unusedmercyback", "11899.5 12470 232", "-460 -6825 112" );
@@ -151,5 +157,60 @@ function DoRoundFixes()
 		con_comment( "LOGIC:\tGas Station explosion will spawn a new Infected ladder." );
 
 		EntFire( "gas_explosion_sound_relay", "AddOutput", "OnTrigger worldspawn:CallScriptFunction:c8m3_DynamicLadder:2:-1" );
+	}
+
+	// Fire once and only for Clients (Survivor+Infected). Scurries away after
+	// 1 second when viewed at any angle, even if only Fred sees the player
+	// for that long. 1 in 4 chance spawn, but realistically rarer. Fred is
+	// child to the func_movelinear which is Killed.
+
+	if ( RandomInt( 1, 4 ) == 4 )
+	{
+		make_prop( "dynamic", "_fred", "models/props_fairgrounds/alligator.mdl", "13103 11543 -25", "0 125 0", "shadow_no", "solid_no" );
+
+		SpawnEntityFromTable( "func_movelinear",
+		{
+			targetname	=	g_UpdateName + "_fred_movelinear",
+			spawnflags	=	0,
+			movedistance	=	100,
+			speed		=	60,
+			startposition	=	0,
+			movedir		=	Vector( 0, 37, 0 ),
+			origin		=	Vector( 13099, 11539, -25 )
+		} );
+
+		EntFire( g_UpdateName + "_fred", "SetParent", g_UpdateName + "_fred_movelinear" );
+
+		SpawnEntityFromTable( "trigger_look",
+		{
+			targetname	=	g_UpdateName + "_fred_triglook",
+			target		=	g_UpdateName + "_fred",
+			spawnflags	=	129,
+			LookTime	=	1,
+			FieldOfView	=	-1,
+			origin		=	Vector( 13072, 11520, -25 )
+		} );
+
+		EntFire( g_UpdateName + "_fred_triglook", "AddOutput", "mins -42 -38 -480" );
+		EntFire( g_UpdateName + "_fred_triglook", "AddOutput", "maxs 42 38 0" );
+		EntFire( g_UpdateName + "_fred_triglook", "AddOutput", "solid 2" );
+		EntFire( g_UpdateName + "_fred_triglook", "AddOutput", "OnTrigger " + g_UpdateName + "_fred_movelinear:Open::0:-1" );
+		EntFire( g_UpdateName + "_fred_triglook", "AddOutput", "OnTrigger " + g_UpdateName + "_fred_movelinear:Kill::2:-1" );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Only problems at beginning (due to func_playerinfected_clip,
+		// which note bot SI can also spawn behind but at least move
+		// through that), and several end clips -- nothing in Survival area,
+		// also supplemented with anv_ file make_clip() thickenings.
+
+		make_clip( "_tankstuck_startrooftops", "SI Players", 1, "-1749 -380 0", "219 332 750", "12261 4212 464" );
+
+		kill_funcinfclip( 606.217 );	// Delete clip behind a fence and inaccessible ladder
+		kill_funcinfclip( 733.138 );	// Delete clip for end area backstreet wrongway sign left
+		kill_funcinfclip( 762.564 );	// Delete clip for end area backstreet wrongway sign right
 	}
 }

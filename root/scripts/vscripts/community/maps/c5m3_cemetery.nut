@@ -108,6 +108,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_onewayleftfence_cloned_firstcrypt", "7022 -4849 197.016", "-560 985 -20" );
 		make_ladder( "_ladder_overpassfence_cloned_flamingofence", "4830 3840 57", "2793 2190 1399", "17 -90 0", "0 1 0" );
 		make_ladder( "_ladder_overpassjumpqol_cloned_startfence", "5940 8462 89.6381", "-2301 14862 210", "0 -90 0", "-1 0 0" );
+		make_ladder( "_ladder_permstuckmanhole_cloned_manholeblownwall", "3778 656 100", "3769 2954 -42", "0 -90 0", "0 -1 0" );
 		make_ladder( "_ladder_pinkhouseB_cloned_manholeblownwall", "3778 656 100", "69 3452 -12" );
 		make_ladder( "_ladder_pinkhouseT_cloned_manholeblownwall", "3778 656 100", "69 3452 180" );
 		make_ladder( "_ladder_sewerhole1_cloned_flamingofence", "4830 3840 57", "9345 -3869 -274", "0 90 0", "0 -1 0" );

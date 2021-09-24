@@ -161,4 +161,32 @@ function DoRoundFixes()
 
 		EntFire( g_UpdateName + "_hittable_hellcarglass", "SetParent", g_UpdateName + "_hittable_hellcar" );
 	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" )
+	{
+		// In Versus Survival's event area, block an inaccessible ladder
+		// (to be restored in the future) behind a barricade, and then
+		// also clip off excessive navmesh in far dark corner of the map.
+
+		make_clip( "_tankstuck_endbarricade", "SI Players", 1, "-400 -900 0", "400 900 1700", "3822 -3970 0" );
+		make_clip( "_tankstuck_excesscorner", "SI Players", 1, "-200 -100 0", "200 100 1700", "-2520 -5048 -64" );
+	}
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Tons of possibilities to spawn behind the long row of houses
+		// so just block them all off, tons of NODRAW and hostile clips.
+		// Players would only materialize back here in Taaannnk! Mutation.
+
+		make_clip( "_tankstuck_houserow", "SI Players", 1, "-2260 -440 0", "3450 900 1850", "68 158 -100" );
+
+		// In Versus Survival's event area, block an inaccessible ladder
+		// (to be restored in the future) behind a barricade, and then
+		// also clip off excessive navmesh in far dark corner of the map.
+
+		make_clip( "_tankstuck_endbarricade", "SI Players", 1, "-400 -900 0", "400 900 1700", "3822 -3970 0" );
+		make_clip( "_tankstuck_excesscorner", "SI Players", 1, "-200 -100 0", "200 100 1700", "-2520 -5048 -64" );
+	}
 }

@@ -29,7 +29,6 @@ function DoRoundFixes()
 
 		make_clip(	"_commonhop_greenhouse",	"Survivors",	1,	"0 -320 -176",		"3 240 690",		"5226 -752 1023" );
 		make_clip( "_cliprework_endpassage", "Survivors", 1, "-6 -224 0", "6 224 78", "4858 2552 274" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -78,6 +77,7 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_yesdrawgreenhouse_plywood", "models/props_update/c11m1_greenhouse_plywood.mdl", "5524 -717 968", "0 270 0", "shadow_no" );
 		make_prop( "dynamic", "_yesdrawgreenhouse_wrongwaya", "models/props_misc/wrongway_sign01_optimized.mdl", "6305 -633 1148", "0 180 0", "shadow_no", "solid_no", "255 255 255", 500, 17 );
 		make_prop( "dynamic", "_yesdrawgreenhouse_wrongwayb", "models/props_misc/wrongway_sign01_optimized.mdl", "6305 -395 1148", "0 180 0", "shadow_no", "solid_no", "255 255 255", 500, 17 );
+
 		local strEndUpperWalkway = clone_model( Entities.FindByClassnameNearest( "func_illusionary", Vector( 4063, 2331, 49.83 ), 1 ) );
 
 		if ( strEndUpperWalkway != null )
@@ -90,5 +90,14 @@ function DoRoundFixes()
 				angles		= Vector( 0, 135, 0 )
 			} );
 		}
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Delete 1 clip, opens up a lot to explore but no exploits.
+
+		kill_funcinfclip( 1154.43 );	// End area fence barricade
 	}
 }

@@ -198,6 +198,18 @@ function DoRoundFixes()
 		con_comment( "FIX/ANTI-GRIEF:\tRemoved trigger which disables common infected spawns in Save 4 Less area for Versus only." );
 		kill_entity( Entities.FindByClassnameNearest( "trigger_once", Vector( -5128, -992, 548 ), 1 ) );
 	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" || g_MutaMode == "mutation19" )
+	{
+		// Delete all. Extremely problematic map with countless stuck
+		// spawns, but Skybox stops most opportunities to get under
+		// the map and the only way to get out of bounds is limited.
+
+		EntFire( "func_playerinfected_clip", "Kill" );
+		EntFire( g_UpdateName + "_yeswayturnpike_clipb", "Kill" );
+	}
 }
 
 function DoTankWarp( hndTank )

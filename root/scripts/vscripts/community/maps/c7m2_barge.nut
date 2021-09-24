@@ -27,11 +27,12 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_scavenge_jump_woodbrush",	"Survivors",	1,	"-842 -8 0",		"216 8 988",		"-9100 392 262" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
 	{
+		kill_funcinfclip( 196.497 );	// Allow SI access into end closet (the only funcinfclip in entire map)
+
 		make_ladder( "_ladder_bluecontback_cloned_bluecontfront", "6787.2104 2431.76 196", "13183 4909 -6", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_comicboatsleftL_cloned_toolhouse", "-633 2008 254.462", "2764 -592 -344", "6 64.4 0", "0.43 0.9 0" );
 		make_ladder( "_ladder_comicboatsleftR_cloned_toolhouse", "-633 2008 254.462", "2738 -580 -344", "6 64.4 0", "0.43 0.9 0" );

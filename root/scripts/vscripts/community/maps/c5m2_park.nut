@@ -114,4 +114,14 @@ function DoRoundFixes()
 		make_prop( "physics", "_hittable_dumpster", "models/props_junk/dumpster_2.mdl", "-8095 -600 -246", "0 0 0", "shadow_no" );
 		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Starting rooftop with a wrongway sign has excess nav behind
+		// it -- block access to it, which also blocks a permstuck.
+
+		make_clip( "_tankstuck_startroof", "SI Players", 1, "-106 -240 0", "86 240 196", "-2936 -816 -58" );
+	}
 }

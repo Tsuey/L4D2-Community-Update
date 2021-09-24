@@ -85,7 +85,7 @@ function DoRoundFixes()
 		make_clip( "_propladder_acvent_qolclip", "SI Players", 1, "-36 -28 -4", "32 32 12", "-1155 -6870 80" );
 		make_clip( "_tolentrance_base_collision", "Everyone", 1, "-1 -155 0", "19 149 34", "-3924 -5493 144" );
 		make_clip( "_tolentrance_main_collision", "Everyone", 1, "-1 -155 0", "4 149 165", "-3924 -5493 144" );
-		make_clip( "_yeswayfairback_funcinfclip", "SI Players", 1, "-1824 -8 -384", "1824 17 384", "-2272 1824 384" );
+		make_clip( "_yeswayfairback_funcinfclip", "SI Players", 1, "-1824 -8 -384", "1824 452 384", "-2272 1824 384" );
 		make_ladder( "_ladder_appleshedge_cloned_endelecboxback", "-3689 -6048 1", "2926 1156 -64" );
 		make_ladder( "_ladder_brickbackend_cloned_whiteawnings", "-2736 -6652 16", "-10057 2274 158", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_brickbannerB_cloned_icemachine", "3855 784 98.6349", "868 292 26", "0 180 0", "1 0 0" );
@@ -167,6 +167,17 @@ function DoRoundFixes()
 		// Manually fix the 2009 forklift since it is spawned after mapfixes runs
 		NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_iMinHealthDmg", 400 );
 		NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_takedamage", 3 );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Delete all. Extremely problematic map with countless stuck
+		// spawns, but Skybox stops all methods of getting under the map.
+		// No Survival on this map, so we can assume they'll always be Tank.
+
+		EntFire( "func_playerinfected_clip", "Kill" );
 	}
 }
 

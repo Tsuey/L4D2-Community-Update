@@ -16,6 +16,7 @@ function DoRoundFixes()
 	make_clip( "_nav_bridgecollapsea", "Survivors", 1, "-9 -10 0", "19 19 310", "5854 -12656 -41.3", "5 0 0" );
 	make_clip( "_nav_bridgecollapseb", "Survivors", 1, "-9 -10 0", "19 19 310", "6000 -12656 -41.3", "-5 0 0" );
 	make_clip( "_stuckwarp_endtunnel", "Everyone", 1, "-18 -60 0", "48 68 84", "968 -12932 20" );
+	make_clip( "_permstuck_shedtree", "Everyone", 1, "-14 -14 -164", "14 14 1640", "3085 -14120 88" );
 	make_clip( "_permstuck_terribadcliff", "Everyone", 1, "-68 -1 0", "68 46 148", "7317 -11487 451" );
 
 	con_comment( "MOVER:\tClip \"_bridge_dynamic_clip\" simulated to move when bridge collapses." );
@@ -30,8 +31,8 @@ function DoRoundFixes()
 		// FIXES
 
 		patch_spawninfront( "7136 -11876 394", "0 -164 -24", "800 4 134" );
-
 	}
+
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -39,8 +40,8 @@ function DoRoundFixes()
 		// FIXES
 
 		patch_spawninfront( "7136 -11876 394", "0 -164 -24", "800 4 134" );
-
 	}
+
 	if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
@@ -52,7 +53,6 @@ function DoRoundFixes()
 		make_clip( "_missing_tree_2", "Survivors", 1, "-23 -23 0", "23 23 1302", "3066 -14082 418" );
 		make_clip( "_missing_tree_3", "Survivors", 1, "-23 -23 0", "23 23 1302", "4214 -12710 418" );
 		make_clip( "_missing_tree_4", "Survivors", 1, "-23 -23 0", "23 23 1302", "3730 -14198 418" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -67,18 +67,18 @@ function DoRoundFixes()
 		make_clip( "_ladder_startventshaft_clipleft", "Everyone", 1, "-10 -12 0", "0 0 233", "-1030 -10911 -32", "0 -47 0" );
 		make_clip( "_ladder_startventshaft_clipright", "Everyone", 1, "-10 -12 0", "0 0 233", "-1005 -10903 -32", "0 47 0" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-17 -515 -216", "150 721 1408", "-688 -10708 321" );
-		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-1000 -17 -170", "1150 17 1408", "262 -11524 321", "0 -21 0" );
-		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-34 -238 0", "57 260 1408", "1323 -12178 321" );
-		make_clip( "_meticulous_funcinfclip04", "SI Players", 1, "-310 -17 159", "724 17 1408", "1616 -12255 321" );
+		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-1000 -120 -170", "1150 17 1408", "262 -11524 321", "0 -21 0" );
+		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-340 -238 0", "57 260 1408", "1323 -12178 321" );
+		make_clip( "_meticulous_funcinfclip04", "SI Players", 1, "-310 -420 159", "724 17 1408", "1616 -12255 321" );
 		make_clip( "_meticulous_funcinfclip05", "SI Players", 1, "-1000 -310 -170", "850 187 1408", "262 -11524 321" );
 		make_clip( "_meticulous_funcinfclip06", "SI Players", 1, "-235 -165 64", "525 260 1408", "2560 -12100 321" );
-		make_clip( "_meticulous_funcinfclip07", "SI Players", 1, "-48 -555 -216", "17 1414 1408", "3276 -11409 321", "0 -24 0" );
-		make_clip( "_meticulous_funcinfclip08", "SI Players", 1, "-34 -120 -216", "17 700 1408", "3821 -10047 321", "0 24 0" );
-		make_clip( "_meticulous_funcinfclip09", "SI Players", 1, "-1600 -30 -216", "1600 17 1408", "1980 -9420 321" );
-		make_clip( "_meticulous_funcinfclip10", "SI Players", 1, "-600 -70 -216", "600 17 1408", "-132 -9696 321", "0 27 0" );
+		make_clip( "_meticulous_funcinfclip07", "SI Players", 1, "-48 -555 -216", "180 1414 1408", "3276 -11409 321", "0 -24 0" );
+		make_clip( "_meticulous_funcinfclip08", "SI Players", 1, "-34 -120 -216", "260 700 1408", "3821 -10047 321", "0 24 0" );
+		make_clip( "_meticulous_funcinfclip09", "SI Players", 1, "-1600 -30 -216", "1600 70 1408", "1980 -9420 321" );
+		make_clip( "_meticulous_funcinfclip10", "SI Players", 1, "-600 -70 -216", "600 170 1408", "-132 -9696 321", "0 27 0" );
 		make_clip( "_meticulous_funcinfclip11", "SI Players", 1, "-17 -555 -55", "17 1414 1408", "2361 -13935 321" );
-		make_clip( "_meticulous_funcinfclip12", "SI Players", 1, "-3000 -17 -216", "3000 17 1408", "5344 -14507 321" );
-		make_clip( "_meticulous_funcinfclip13", "SI Players", 1, "-800 -17 -216", "500 17 1408", "9070 -14172 321", "0 25 0" );
+		make_clip( "_meticulous_funcinfclip12", "SI Players", 1, "-3000 -410 -216", "3000 17 1408", "5344 -14507 321" );
+		make_clip( "_meticulous_funcinfclip13", "SI Players", 1, "-800 -170 -216", "500 17 1408", "9070 -14172 321", "0 25 0" );
 		make_clip( "_meticulous_funcinfclip14", "SI Players", 1, "-17 -761 -420", "17 1248 1408", "9216 -13284 321", "0 25 0" );
 		make_clip( "_meticulous_funcinfclip15", "SI Players", 1, "-320 -17 -216", "216 17 1408", "8456 -12150 321" );
 		make_clip( "_meticulous_funcinfclip16", "SI Players", 1, "-17 -170 -216", "17 610 1408", "8153 -11970 321" );
@@ -122,5 +122,15 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_tunneltopcliff_wrongwayb", "models/props_misc/wrongway_sign01_optimized.mdl", "3330 -12590 730", "0 180 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_tunneltopcliff_wrongwayc", "models/props_misc/wrongway_sign01_optimized.mdl", "3390 -12400 820", "0 0 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_tunneltopcliff_wrongwayd", "models/props_misc/wrongway_sign01_optimized.mdl", "3390 -12590 730", "0 0 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
+	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" || g_MutaMode == "mutation19" )
+	{
+		// Delete 1 wrongway clip. May not be necessary for Survival
+		// but too close to call; delete for it and Taaannnk! to be safe.
+
+		kill_funcinfclip( 311.003 );	// Wrongway at end of train tunnel
 	}
 }

@@ -119,7 +119,7 @@ function DoRoundFixes()
 		make_brush( "_losfix_start_trailer1a",	"-102 -1 -8",	"102 1 8",	"2347 3295 -185" );
 		make_brush( "_losfix_start_trailer1b",	"-1 -40 -8",	"1 40 8",	"2244 3333 -185" );
 		make_brush( "_losfix_start_trailer2",	"-102 -1 -8",	"102 1 8",	"2814 2614 -185" );
-		make_clip( "_eventfence_wrongway", "SI Players", 1, "-210 -20 -608", "200 20 672", "-200 2652 352" );
+		make_clip( "_eventfence_wrongway", "SI Players", 1, "-800 -20 -608", "200 676 672", "-200 2652 352" );
 		make_clip( "_eventrooftop_smoother1", "SI Players", 1, "-343 0 0", "249 140 8", "-3305 1312 195", "0 0 -44" );
 		make_clip( "_eventrooftop_smoother2", "SI Players", 1, "-249 140 0", "343 0 8", "-3305 1312 195", "0 180 -44" );
 		make_clip( "_ladder_askewhedgeshared_clip", "SI Players and AI", 1, "-3 -279 -7", "3 245 79", "593 1177 -63" );

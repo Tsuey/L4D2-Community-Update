@@ -105,4 +105,22 @@ function DoRoundFixes()
 		//make_prop( "dynamic",		"_solidify_tree09",		"models/props_foliage/trees_cluster02.mdl",	"-7168 -880 -91.8731", "-6.18811 26.8478 12.0217",	"shadow_no" );
 		make_prop( "dynamic",		"_solidify_tree10",		"models/props_foliage/trees_cluster02.mdl",	"-9664 -1400 -36.5395", "-15.8186 151.677 -1.38363",	"shadow_no" );
 	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Deleting all func_playerinfected_clip would create new exploits
+		// in the Survival/finale arena, so instead only delete specific ones.
+		// Luckily, the Survival arena itself is fine, so doesn't need any
+		// work, and all spawns fixed below are far away from Survival arena.
+
+		kill_funcinfclip( 668.433 );	// Wrongway in beginning area
+		kill_funcinfclip( 2248.58 );	// Treeline after bus/shed
+
+		// New clips to extend behind some func_playerinfected_clips.
+
+		make_clip( "_tankstuck_cornerpath", "SI Players", 1, "-700 -800 -145", "800 790 1360", "-13598 -9362 68" );
+		make_clip( "_tankstuck_mountainwedge", "SI Players", 1, "-100 -100 0", "100 100 1300", "-8388 -3525 300" );
+	}
 }

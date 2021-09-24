@@ -22,7 +22,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_nav_quarrybeams", "Survivors", 1, "-152 -7 0", "152 1 288", "-7808 -9481 512" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -49,8 +48,8 @@ function DoRoundFixes()
 		make_clip( "_meticulous_funcinfclip05", "SI Players", 1, "-280 0 -640", "210 32 1635", "-11103 -9082 557", "0 70 0" );
 		make_clip( "_meticulous_funcinfclip06", "SI Players", 1, "-8 -320 0", "8 320 1454", "-9996 -8345 738", "0 -36 0" );
 		make_clip( "_meticulous_funcinfclip07", "SI Players", 1, "-8 -160 0", "8 160 1372", "-6728 -7101 820" );
-		make_clip( "_meticulous_funcinfclip08", "SI Players", 1, "-777 -8 0", "1000 8 1372", "-5988 -6941 820" );
-		make_clip( "_meticulous_funcinfclip09", "SI Players", 1, "-205 -8 0", "1000 8 885", "-5988 -6941 -65" );
+		make_clip( "_meticulous_funcinfclip08", "SI Players", 1, "-777 -8 0", "1000 960 1372", "-5988 -6941 820" );
+		make_clip( "_meticulous_funcinfclip09", "SI Players", 1, "-205 -8 0", "1000 960 885", "-5988 -6941 -65" );
 		make_clip( "_meticulous_stuckspot", "SI Players", 1, "-420 -128 -640", "640 32 600", "-9801 -13140 120", "-20 -40 0" );
 		make_clip( "_meticulous_slidespot", "SI Players", 1, "-108 -56 0", "643 16 88", "-10932 -8918 432" );
 		make_ladder( "_ladder_1stcliffback_cloned_startwide", "-8180.8638 -14508.2334 12.3855", "-12520 3632 3095", "0 37.14 10", "-0.61 0.79 0" );
@@ -67,5 +66,19 @@ function DoRoundFixes()
 		make_ladder( "_ladder_skybridgerightB_cloned_trackstoshed", "-7726 -8871.5 120", "-242 -605 97", "0 0 -2" );
 		make_ladder( "_ladder_skybridgerightT_cloned_trackstoshed", "-7726 -8871.5 120", "-242 -597.45 321", "0 0 -2" );
 		patch_ladder( "-10213 -12939 834.173", "22 0 0" );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Thicken 2 wrongway's func_playerinfected_clip. Note this
+		// works for Taaannnk! Mutation but is a bad ladder to add
+		// to the vanilla game since it blocks climbability of a
+		// ladder that'd be climbable for custom servers that delete
+		// all func_playerinfected_clip.
+
+		make_clip( "_tankstuck_wrongwayone", "SI Players", 1, "-320 -800 0", "0 750 1740", "-11967 -10090 450" );
+		make_clip( "_tankstuck_wrongwaytwo", "SI Players", 1, "-610 0 0", "180 460 1740", "-11604 -9345 450" );
 	}
 }

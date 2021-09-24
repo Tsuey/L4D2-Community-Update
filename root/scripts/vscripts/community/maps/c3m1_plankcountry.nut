@@ -102,9 +102,9 @@ function DoRoundFixes()
 		make_brush( "_losfix_start_train5c",	"-2 -128 -12",	"2 128 12",	"-12754 9197 210" );
 		make_clip( "_ladder_earlsgatorvillage_clip", "Everyone", 1, "-5 -2 0", "2 32 222", "-7462 7696 32" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-1053 -17 -123", "1029 17 935", "-484 9840 90" );
-		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-733 -8 0", "640 8 768", "-2668 416 256" );
-		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-198 -16 0", "198 16 961", "-3516 543 61", "0 -50 0" );
-		make_clip( "_meticulous_funcinfclip04", "SI Players", 1, "-198 -16 0", "1375 16 961", "-1846 433 61", "0 10 0" );
+		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-733 -100 0", "640 8 768", "-2668 416 256" );
+		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-198 -100 0", "320 16 961", "-3516 543 61", "0 -50 0" );
+		make_clip( "_meticulous_funcinfclip04", "SI Players", 1, "-198 -360 0", "1375 16 961", "-1846 433 61", "0 10 0" );
 		make_clip( "_starttrains_badredclip", "SI Players", 1, "-64 -36 -24", "64 36 -17", "-12728 9028 216", "0 -48 0" );
 		make_ladder( "_ladder_bridgetunnelleft_cloned_shacklegback", "-427 7088 76", "-505 -2151 116" );
 		make_ladder( "_ladder_bridgetunnelright_cloned_shacklegfront", "-579 7088 76", "-537 -2151 116" );
@@ -137,5 +137,21 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_solidify_startshrubwall2", "models/props_foliage/swamp_shrubwall_block_128_deep.mdl", "-12550.2 9119.21 148.872", "0 90 0", "shadow_no" );
 		make_prop( "dynamic", "_start_fencea",	"models/props_urban/fence_cover001_256.mdl", "-11265 9665 167.25", "0 270 0", "shadow_no" );
 		make_prop( "dynamic", "_start_fenceb",	"models/props_urban/fence_cover001_64.mdl", "-10968 9586.1 167.25", "0 270 0", "shadow_no" );
+	}
+
+	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation15" || g_MutaMode == "mutation19" )
+	{
+		// Delete all, terrible for stuck spawns. Likely won't allow
+		// players under the map, and this makes dozens of unused
+		// perimeter ladders accessible preventing tons of permstucks.
+
+		EntFire( "func_playerinfected_clip", "Kill" );
+		EntFire( g_UpdateName + "_meticulous_funcinfclip01", "Kill" );
+
+		// Warp players through one-side invisible solid treeline.
+
+		make_axiswarp( "_axiswarp_semitrailer", "y-", 96, "-550 -8 0", "740 8 256", "-9505 10720 155" );
 	}
 }

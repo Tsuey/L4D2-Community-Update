@@ -28,6 +28,7 @@ function DoRoundFixes()
 	make_clip( "_permstuck_endrockcorner", "Everyone", 1, "-8 -79 -186", "95 130 174", "-11277 -6770 193", "0 -35 0" );
 	make_clip( "_dispcrouch_endrocktinytop", "Everyone", 1, "-8 -37 0", "8 121 148", "-11216 -6525 62" );
 	make_clip( "_dispcrouch_endrockparkour", "Everyone", 1, "-8 -116 0", "8 56 115", "-12284 -6439 147", "0 9 0" );
+	make_clip( "_spawnstuck_tunnelend", "SI Players and AI", 1, "-240 -550 0", "240 600 216", "-12998 -4435 -64" );
 
 	// Not confirmed canon -- but probably.
 
@@ -60,5 +61,27 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_yesdrawcliff_rocks1", "models/props_wasteland/rock_cliff01.mdl", "-11723 -9966 520", "0 273 0", "shadow_no" );
 		make_prop( "dynamic", "_yesdrawcliff_rocks2", "models/props_wasteland/rock_cliff01.mdl", "-11429 -10350 520", "0 0 0", "shadow_no" );
 		make_trigmove( "_duckqol_trafficlight", "Duck", "-8 -8 -32", "8 16 32", "-12158 -9866 60" );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// Delete several specific clips along left side of map. Deleting
+		// all of them wouldn't be so bad since it's just Tanks, but let's
+		// not do that anyway in case more Infected ladders are added later.
+
+		kill_funcinfclip( 1145.18 );	// Spawn left 1st
+		kill_funcinfclip( 1127.68 );	// Spawn left 2nd
+		kill_funcinfclip( 1110.42 );	// Spawn left 3rd
+		kill_funcinfclip( 1059.74 );	// Spawn left 4th
+		kill_funcinfclip( 1054.83 );	// Spawn left 5th
+		kill_funcinfclip( 1216.59 );	// Tunnelside
+		kill_funcinfclip( 1000.2 );	// Cliffside
+		kill_funcinfclip( 597.979 );	// End cave connection to map 2 (easter egg spot)
+
+		// Prevent falling into a permstuck spot, opened up from above deletions.
+
+		make_clip( "_tankstuck_tunnelside", "SI Players", 1, "-1700 -200 -1337", "1700 1024 610", "-13902 -10396 656", "0 45 0" );
 	}
 }

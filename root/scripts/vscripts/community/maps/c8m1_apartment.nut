@@ -70,7 +70,7 @@ function DoRoundFixes()
 		make_clip( "_ladder_subwaybricks_clip", "Everyone", 1, "-1 -8 0", "2 8 128", "2814 4104 16" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-1 -28 0", "3 28 74", "2293 850 322" );
 		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-8 -619 0", "185 629 1089", "3175 3371 832" );
-		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-153 -812 0", "293 308 4132", "153 2988 352" );
+		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-153 -812 -336", "293 308 4132", "153 2988 352" );
 		make_clip( "_meticulous_funcinfclip04", "SI Players", 1, "0 -846 0", "389 794 687", "-5 4298 466" );
 		make_clip( "_meticulous_funcinfclip05", "SI Players", 1, "-153 -128 -336", "104 0 4132", "153 2176 352" );
 		make_clip( "_yesdraw_dairy_clipa", "SI Players", 1, "-330 -231 0", "311 249 3952", "1737 5767 528" );
@@ -135,5 +135,20 @@ function DoRoundFixes()
 		DoEntFire( "!self", "Break", "", 0.0, null, Entities.FindByClassnameNearest( "prop_physics", Vector( 2293, 1340, 359 ), 1 ) );
 		DoEntFire( "!self", "AddOutput", "angles 90 20 0", 0.0, null, Entities.FindByClassnameNearest( "func_illusionary", Vector( 2296, 1340, 349.91 ), 1 ) );
 		DoEntFire( "!self", "AddOutput", "origin 2391 1335 16", 0.0, null, Entities.FindByClassnameNearest( "func_illusionary", Vector( 2296, 1340, 349.91 ), 1 ) );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// No Survival on this map, and no Tanks in Scavenge, so extend
+		// a few func_playerinfected_clip with these.
+
+		make_clip( "_tankstuck_alleystart", "SI Players", 1, "-105 -711 0", "823 57 4132", "2473 455 16" );
+		make_clip( "_tankstuck_alleymiddle", "SI Players", 1, "-127 -257 0", "209 256 4468", "-129 3584 16" );
+
+		// And preserve an actually cool Tank spawn by deleting 1 clip.
+
+		kill_funcinfclip( 1060.85 );	// Delete clip that blocks the rubble and a cool unique spawn
 	}
 }

@@ -39,6 +39,7 @@ function DoRoundFixes()
 		make_clip( "_ladder_indoorventduct_clip", "Everyone", 1, "-22 -32 0", "42 32 223", "-8170 -6300 -64" );
 		make_clip( "_ladder_parkourvent_clip", "SI Players", 1, "-1 -17 0", "0 17 64", "-8723 -7415 163" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-492 -6 -977", "553 6 657", "-7806 -7614 1536", "0 38 0" );
+		make_clip( "_permstuck_tunnelend", "SI Players", 1, "-16 -16 -16", "16 16 32", "-1445 -10327 -4" );
 		make_ladder( "_ladder_boxcarbm1mirr_cloned_firstwindow", "-6728.5 -6458 72", "-2053 -15104 -120", "0 -90 0", "0 1 0" );
 		make_ladder( "_ladder_boxcarcm1mirr_cloned_firstwindow", "-6728.5 -6458 72", "-14627 -1792 -120", "0 90 0", "0 -1 0" );
 		make_ladder( "_ladder_eventdoorback_cloned_triplepipes", "-7252 -8080.5 370", "-15712 -333 -250", "0 90 0", "1 0 0" );
@@ -65,5 +66,16 @@ function DoRoundFixes()
 		kill_entity( Entities.FindByClassnameNearest( "func_brush", Vector( -8600, -7540, -8.13 ), 1 ) );
 		kill_entity( Entities.FindByClassnameNearest( "func_brush", Vector( -8600, -7524, -8.13 ), 1 ) );
 		EntFire( "emergency_door_sign", "DisableCollision", 1 );
+	}
+
+	// Resolve stuck Tank spawns for Taaannnk! Mutation.
+
+	if ( g_MutaMode == "mutation19" )
+	{
+		// No issues in the Survival arena, but the end for Taaannnk! can
+		// result in stuck spawns here. Note this blocks "map 3 easter egg"
+		// accessible area, and is NOT ideal for vanilla Versus.
+
+		make_clip( "_tankstuck_tunnelend", "SI Players", 1, "-320 -800 -120", "450 258 240", "-1551 -10785 50" );
 	}
 }
