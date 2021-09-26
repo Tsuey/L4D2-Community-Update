@@ -4,6 +4,20 @@ devchap( "ALL MODES" );
 
 PrecacheModel( "models/props_rooftop/acvent04.mdl" );
 PrecacheModel( "models/props_industrial/brickpallets.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break01.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break02.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break03.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break04.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break05.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break06.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break07.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break08.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break09.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break10.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break11.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break12.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break13.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break14.mdl" );
 
 function DoRoundFixes()
 {

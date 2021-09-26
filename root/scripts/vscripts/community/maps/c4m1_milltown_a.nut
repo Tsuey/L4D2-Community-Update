@@ -5,6 +5,11 @@ devchap( "ALL MODES" );
 PrecacheModel( "models/props_downtown/gutter_downspout_straight_160_02.mdl" );
 PrecacheModel( "models/props_interiors/concretepillar01_dm_base.mdl" );
 PrecacheModel( "models/props_interiors/concretepillar01.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_1.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_2.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_3.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_4.mdl" );
 PrecacheModel( "models/props_pipes/PipeSet02d_512_001a.mdl" );
 PrecacheModel( "models/props_mill/PipeSet08d_512_001a.mdl" );
 
