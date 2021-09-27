@@ -16501,6 +16501,14 @@ Rule SafeRoomStartCoach
 	Response NoResponse
 }
 
+Rule IntroEndCoach
+{
+	criteria ConceptIntroEnd IsCoach FromIsCoach IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "Talk:0:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule LeavingSafeAreaCoach
 {
 	criteria ConceptSurvivorLeavingCheckpoint IsCoach IsNotSaidLeavingSafeArea

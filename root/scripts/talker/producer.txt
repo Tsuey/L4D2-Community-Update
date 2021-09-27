@@ -15591,6 +15591,14 @@ Rule SafeRoomStartProducer
 	Response NoResponse
 }
 
+Rule IntroEndProducer
+{
+	criteria ConceptIntroEnd IsProducer FromIsProducer IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "Talk:0:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule LeavingSafeAreaProducer
 {
 	criteria ConceptSurvivorLeavingCheckpoint IsProducer IsNotSaidLeavingSafeArea
