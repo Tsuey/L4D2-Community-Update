@@ -9388,6 +9388,14 @@ Rule SafeRoomStartTeenGirl
 	Response NoResponse
 }
 
+Rule IntroEndTeenGirl
+{
+	criteria ConceptIntroEnd IsTeenGirl FromIsTeenGirl IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "Talk:0:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule LeavingSafeAreaTeenGirl
 {
 	criteria ConceptSurvivorLeavingCheckpoint IsTeenGirl IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival

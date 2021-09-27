@@ -16807,6 +16807,14 @@ Rule SafeRoomStartGambler
 	Response NoResponse
 }
 
+Rule IntroEndGambler
+{
+	criteria ConceptIntroEnd IsGambler FromIsGambler IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "Talk:0:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule LeavingSafeAreaGambler
 {
 	criteria ConceptSurvivorLeavingCheckpoint IsGambler IsNotSaidLeavingSafeArea
