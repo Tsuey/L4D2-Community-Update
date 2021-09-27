@@ -384,11 +384,13 @@ criterion "IsNotInRescueVehicle"	"InRescueVehicle"	"!=1"	required
 
 criterion "IsAloneInSafeSpot" "NumberInSafeSpot" "1" required
 criterion "NotAloneInSafeSpot" "NumberInSafeSpot" ">1" required
+criterion "NoOneInSafeSpot" "NumberInSafeSpot" "0" required
 criterion "IsAllInSafeSpot" "NumberOutsideSafeSpot" "0" required
 criterion "IsNotInSafeSpot"	"InSafeSpot"	"!=1"	required
 criterion "IsInStartArea"	"InStartArea"	"1"	required
 criterion "IsNotInStartArea"	"InStartArea"	"!=1"	required
 criterion "SomeoneOutsideSafeSpot" "NumberOutsideSafeSpot" ">0" required
+criterion "NotAloneOutsideSafeSpot" "NumberOutsideSafeSpot" ">1" required
 criterion "ConceptShotMannequin"	"Concept" "ShotMannequin" required
 
 
@@ -1978,7 +1980,6 @@ criterion "IsSaidC3M3BridgeButton"   "worldSaidC3M3BridgeButton" "1"	  required
 
 //C3M4
 criterion "ismapc3m4_plantation"   "map" "c3m4_plantation"	  "required" weight 100
-criterion "Conceptc3m4GateExplosion"   "Concept" "c3m4GateExplosion"	  required
 criterion "ConceptC3M4Button1"   "Concept" "C3M4Button1"	  required
 criterion "ConceptC3M4Button1A"   "Concept" "C3M4Button1A"	  required
 criterion "ConceptC3M4Button2"   "Concept" "C3M4Button2"	  required
@@ -2040,12 +2041,12 @@ criterion "ConceptC4ExitCover"   "Concept" "C4ExitCover"	  required
 Criterion "TheParish" "campaign" "l4d2_5" "required"
 
 //C5M1
-Criterion "ismap_c5m1_waterfront" "map" "c5m1_waterfront" "required"
+Criterion "ismap_c5m1_waterfront" "map" "c5m1_waterfront" "required" weight 100
 criterion "ConceptIntroC5M1"   "concept" "introC5M1"	  required
 criterion "ConceptC5M1Flyby"  "concept" "C5M1Flyby" required
 
 //C5M2
-criterion "IsMapc5m2_park"  "map" "c5m2_park" weight 100 required
+criterion "IsMapc5m2_park"  "map" "c5m2_park" required weight 100
 
 //C5M3
 criterion "IsMapc5m3_cemetery"  "map" "c5m3_cemetery" required weight 100

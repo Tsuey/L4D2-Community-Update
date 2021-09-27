@@ -1711,7 +1711,7 @@ Response CrashFinaleTruckNagTeenGirl
 }
 Rule CrashFinaleTruckNagTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response CrashFinaleTruckNagTeenGirl
@@ -2357,7 +2357,7 @@ Response L4D1SurvivorFinalVehicleBoatTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleBoatTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatTeenGirl
@@ -2381,7 +2381,7 @@ Response L4D1SurvivorFinalVehicleFarmTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleFarmTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmTeenGirl
@@ -2417,7 +2417,7 @@ Response L4D1SurvivorFinalVehicleRooftopTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleRooftopTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRooftopTeenGirl
@@ -2444,7 +2444,7 @@ Response L4D1SurvivorFinalVehicleRunwayTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleRunwayTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRunwayTeenGirl
@@ -6161,7 +6161,7 @@ Response ScavengeStartTeenGirl
 }
 Rule ScavengeStartTeenGirl
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsTeenGirl IsNotAlone IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartTeenGirl
@@ -6173,7 +6173,7 @@ Rule ScavengeStartTeenGirl
 //--------------------------------------------------------------------------------------------------------------
 Response L4D1IntroSmalltownTeenGirl
 {
-	scene "scenes/TeenGirl/WorldSmallTown0103.vcd"  then teengirl IntroSmallTown2 foo:0 -2.288 //I heard the military was holding out Riverside.
+	scene "scenes/TeenGirl/WorldSmallTown0103.vcd"  then self IntroSmallTown2 foo:0 -2.288 //I heard the military was holding out Riverside.
 }
 Rule L4D1IntroSmalltownTeenGirl
 {
@@ -6185,7 +6185,7 @@ Rule L4D1IntroSmalltownTeenGirl
 
 Response L4D1IntroSmalltownEasterEggTeenGirl
 {
-	scene "scenes/TeenGirl/WorldSmallTown0103.vcd"  then teengirl IntroSmallTownEasterEgg foo:0 -2.288 //I heard the military was holding out Riverside.
+	scene "scenes/TeenGirl/WorldSmallTown0103.vcd"  then self IntroSmallTownEasterEgg foo:0 -2.288 //I heard the military was holding out Riverside.
 }
 Rule L4D1IntroSmalltownEasterEggTeenGirl
 {
@@ -9363,7 +9363,7 @@ Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl
 
 Rule L4D1SurvivorFinalVehicleBoatC14M2TeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatTeenGirl
@@ -9384,14 +9384,6 @@ Rule SafeRoomStartTeenGirl
 {
 	criteria ConceptTalkIdle IsTeenGirl IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
-	applycontexttoworld
-	Response NoResponse
-}
-
-Rule IntroEndTeenGirl
-{
-	criteria ConceptIntroEnd IsTeenGirl FromIsTeenGirl IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "Talk:0:0"
 	applycontexttoworld
 	Response NoResponse
 }

@@ -541,7 +541,6 @@ criterion "ConceptC3M4ButtonAnswerEllis" "Concept" "C3M4ButtonAnswerEllis" requi
 criterion "ConceptC3M4ButtonHowMany" "Concept" "C3M4ButtonHowMany" required
 criterion "ConceptC3M4ButtonHowManyAnswer" "Concept" "C3M4ButtonHowManyAnswer" required
 criterion "ConceptC3M4ButtonPickUsUp" "Concept" "C3M4ButtonPickUsUp" required
-criterion "ConceptC3M4GateBlow01" "Concept" "C3M4GateBlow01" required
 criterion "ConceptC3M4GateBlow02" "Concept" "C3M4GateBlow02" required
 criterion "ConceptInfoRemc3m2_parachutist2" "Concept" "InfoRemc3m2_parachutist2" required
 criterion "ConceptInfoRemc3m2_parachutist1" "Concept" "InfoRemc3m2_parachutist1" required

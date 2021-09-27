@@ -668,7 +668,7 @@ Response C6M1Intro_01Biker01GamblerProducerBiker
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting20.vcd"  then Gambler C6M1Intro_09a foo:0 -0.634 //Hey!
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting27.vcd"  then Gambler C6M1Intro_09a foo:0 0.1 //Hey!
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting28.vcd"  then Gambler C6M1Intro_09a foo:0 0.1 //Hey!
-	scene "scenes/Biker/DLC1_C6M1_InitialMeeting19.vcd"  then Biker C6M1Intro_07a foo:0 -4.449 //You down there, be calm. We're cops.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting19.vcd"  then self C6M1Intro_07a foo:0 -4.449 //You down there, be calm. We're cops.
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting30.vcd"  then Gambler C6M1Intro_14a foo:0 -7.878 //Brother, that's what I'm trying to tell ya. We can't get this thing down ourselves. You have to get to the other side.
 }
 Rule C6M1Intro_01Biker01GamblerProducerBiker
@@ -880,7 +880,7 @@ Rule C6M1Intro_20cBiker
 
 Response C6M1Intro_20eBiker
 {
-	scene "scenes/Biker/DLC1_C6M1_InitialMeeting41.vcd" odds 10 then Biker C6M1Intro_20f foo:0 -2.573 //Louis! I told you, there were vampires!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting41.vcd" odds 10 then self C6M1Intro_20f foo:0 -2.573 //Louis! I told you, there were vampires!
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting41.vcd"  then L4D1_Louis C6M1Intro_20f foo:0 -2.573 //Louis! I told you, there were vampires!
 }
 Rule C6M1Intro_20eBiker
@@ -1839,7 +1839,7 @@ Response C7M3PlayerGetToRescueVehicleNagBiker
 }
 Rule C7M3PlayerGetToRescueVehicleNagBiker
 {
-	criteria ConceptGetToVehicle IsBiker ismapc7m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker _auto_NotPressedC7M3BridgeButton IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsBiker ismapc7m3_port IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker _auto_NotPressedC7M3BridgeButton IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleNagBiker
@@ -2086,7 +2086,7 @@ Response CrashFinaleTruckNagBiker
 }
 Rule CrashFinaleTruckNagBiker
 {
-	criteria ConceptGetToVehicle IsBiker IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsBiker IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30"
 	applycontexttoworld
 	Response CrashFinaleTruckNagBiker
@@ -2932,11 +2932,12 @@ Rule L4D1SurvivorFinaleTriggeredRooftopBiker
 
 Response L4D1SurvivorFinalVehicleBoatBiker
 {
+	scene "scenes/Biker/ArriveBoat03.vcd"  then any EmphaticArriveRun foo:0 -2.312 //Get your asses on that boat!
 	scene "scenes/Biker/ArriveBoat02.vcd"  then any EmphaticArriveRun foo:0 -2.064 //Everyone to the boat!
 }
 Rule L4D1SurvivorFinalVehicleBoatBiker
 {
-	criteria ConceptGetToVehicle IsBiker IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsBiker IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatBiker
@@ -2945,7 +2946,7 @@ Rule L4D1SurvivorFinalVehicleBoatBiker
 Response L4D1SurvivorFinalVehicleInsideBoatBiker
 {
 	scene "scenes/Biker/ArriveBoat01.vcd"  then any EmphaticArriveRun foo:0 -1.448 //Get to the boat!
-	scene "scenes/Biker/ArriveBoat03.vcd"  then any EmphaticArriveRun foo:0 -2.312 //Get your asses on that boat!
+	scene "scenes/Biker/ArriveBoat02.vcd"  then any EmphaticArriveRun foo:0 -2.064 //Everyone to the boat!
 }
 Rule L4D1SurvivorFinalVehicleInsideBoatBiker
 {
@@ -2961,7 +2962,7 @@ Response L4D1SurvivorFinalVehicleFarmBiker
 }
 Rule L4D1SurvivorFinalVehicleFarmBiker
 {
-	criteria ConceptGetToVehicle IsBiker IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsBiker IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmBiker
@@ -2999,7 +3000,7 @@ Response L4D1SurvivorFinalVehicleRooftopBiker
 }
 Rule L4D1SurvivorFinalVehicleRooftopBiker
 {
-	criteria ConceptGetToVehicle IsBiker IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsBiker IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRooftopBiker
@@ -3024,7 +3025,7 @@ Response L4D1SurvivorFinalVehicleRunwayBiker
 }
 Rule L4D1SurvivorFinalVehicleRunwayBiker
 {
-	criteria ConceptGetToVehicle IsBiker IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsBiker IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRunwayBiker
@@ -3087,9 +3088,13 @@ Rule L4D1SurvivorFinalVehicleSpottedRunwayBiker
 //--------------------------------------------------------------------------------------------------------------
 Response L4D1PlayerShotCarNotBiker
 {
+	scene "scenes/Biker/Swear01.vcd" predelay "0.1,0.7" //Goddammit.
+	scene "scenes/Biker/Swear02.vcd" predelay "0.1,0.7" //Shit.
 	scene "scenes/Biker/Swear03.vcd" predelay "0.1,0.7" //Ah shit.
 	scene "scenes/Biker/Swear04.vcd" predelay "0.1,0.7" //Ah hell.
 	scene "scenes/Biker/Swear08.vcd" predelay "0.1,0.7" //Ah bullshit.
+	scene "scenes/Biker/Swear09.vcd" predelay "0.1,0.7" //Dammit.
+	scene "scenes/Biker/Swear10.vcd" predelay "0.1,0.7" //Bullshit.
 }
 Rule L4D1PlayerShotCarNotBiker
 {
@@ -3101,10 +3106,16 @@ Rule L4D1PlayerShotCarNotBiker
 
 Response L4D1PlayerShotCarBiker
 {
-	scene "scenes/Biker/Swear01.vcd" predelay "0.1,0.7" //Goddammit.
-	scene "scenes/Biker/Swear02.vcd" predelay "0.1,0.7" //Shit.
-	scene "scenes/Biker/Swear09.vcd" predelay "0.1,0.7" //Dammit.
-	scene "scenes/Biker/Swear10.vcd" predelay "0.1,0.7" //Bullshit.
+	scene "scenes/Biker/NegativeNoise06.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Biker/ReactionApprehensive03.vcd"  //I don't like ths one damn bit.
+	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit
+	scene "scenes/Biker/ReactionNegative09.vcd"  //Ahhhhh.
+	scene "scenes/Biker/Swear12.vcd"  //Shit.
+	scene "scenes/Biker/Swear14.vcd"  //Ah hell.
+	scene "scenes/Biker/Swear15.vcd"  //Son of a bitch.
+	scene "scenes/Biker/Swear16.vcd"  //Ah bullshit.
+	scene "scenes/Biker/Swear17.vcd"  //Dammit.
+	scene "scenes/Biker/Swear19.vcd"  //Ah bullshit.
 }
 Rule L4D1PlayerShotCarBiker
 {
@@ -4424,7 +4435,7 @@ Rule L4D1HelpResponseLouisBiker
 
 Response L4D1HelpResponseLouisBBiker
 {
-	scene "scenes/Biker/InsideSafeRoom21.vcd"  then Biker NeedsHelpResponseLouisB2 foo:0 -2.556 //We just leavin' Louis out there?
+	scene "scenes/Biker/InsideSafeRoom21.vcd"  then self NeedsHelpResponseLouisB2 foo:0 -2.556 //We just leavin' Louis out there?
 }
 Rule L4D1HelpResponseLouisBBiker
 {
@@ -7051,7 +7062,7 @@ Response ScavengeStartBiker
 }
 Rule ScavengeStartBiker
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsBiker IsNotAlone IsTalk IsTalkBiker IsWorldTalkBiker IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartBiker
@@ -10084,7 +10095,7 @@ Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2Biker
 
 Rule L4D1SurvivorFinalVehicleBoatC14M2Biker
 {
-	criteria ConceptGetToVehicle IsBiker IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsBiker IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockBiker IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatBiker
@@ -10127,7 +10138,7 @@ Rule LeavingSafeAreaBiker
 
 Rule LeavingSafeRoomBiker
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsBiker IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsBiker IsNotSaidLeavingSafeArea 
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:0:0"
 	applycontexttoworld
 	Response NoResponse

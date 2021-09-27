@@ -569,7 +569,7 @@ Rule c6m3_outroL4D106aManager
 
 Response c6m3_outroL4D1AllManager
 {
-	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic01.vcd"  then Manager c6m3_outroL4D102a foo:0 -1.024 //I'm gonna miss them.
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic01.vcd"  then self c6m3_outroL4D102a foo:0 -1.024 //I'm gonna miss them.
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic04.vcd"  then TeenGirl c6m3_outroL4D103a foo:0 -1.146 //Should we have told them?
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic05.vcd"  //BYE RO! BYE COACH! BYE ELLIS! BYE WHATEVER YOUR NAME IS!
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleBridgeRun03.vcd"  //
@@ -608,7 +608,7 @@ Rule c6m3_outroL4D1GamblerManager
 
 Response c6m3_outroL4D1MechanicManager
 {
-	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic10.vcd"  then Manager c6m3_outroL4D106a foo:0 -3.335 //Bye Ellis! You're gonna make it to New Orleans! I know you will!
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic10.vcd"  then self c6m3_outroL4D106a foo:0 -3.335 //Bye Ellis! You're gonna make it to New Orleans! I know you will!
 }
 Rule c6m3_outroL4D1MechanicManager
 {
@@ -1549,7 +1549,7 @@ Response CrashFinaleTruckNagManager
 }
 Rule CrashFinaleTruckNagManager
 {
-	criteria ConceptGetToVehicle IsManager IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsManager IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30"
 	applycontexttoworld
 	Response CrashFinaleTruckNagManager
@@ -2174,7 +2174,7 @@ Response L4D1SurvivorFinalVehicleBoatManager
 }
 Rule L4D1SurvivorFinalVehicleBoatManager
 {
-	criteria ConceptGetToVehicle IsManager IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsManager IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatManager
@@ -2199,7 +2199,7 @@ Response L4D1SurvivorFinalVehicleFarmManager
 }
 Rule L4D1SurvivorFinalVehicleFarmManager
 {
-	criteria ConceptGetToVehicle IsManager IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsManager IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmManager
@@ -2231,11 +2231,11 @@ Rule L4D1SurvivorFinalVehicleFarmSpottedManager
 
 Response L4D1SurvivorFinalVehicleRooftopManager
 {
-	scene "scenes/Manager/ArriveChopper01.vcd"  then any EmphaticArriveRun foo:0 -2.278 //Everyone in the helicopter! Go!
+	scene "scenes/Manager/ArriveChopper02.vcd"  then any EmphaticArriveRun foo:0 -1.349 //Get to the helicopter!
 }
 Rule L4D1SurvivorFinalVehicleRooftopManager
 {
-	criteria ConceptGetToVehicle IsManager IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsManager IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRooftopManager
@@ -2243,7 +2243,7 @@ Rule L4D1SurvivorFinalVehicleRooftopManager
 
 Response L4D1SurvivorFinalVehicleInsideRoofTopManager
 {
-	scene "scenes/Manager/ArriveChopper02.vcd"  then any EmphaticArriveRun foo:0 -1.349 //Get to the helicopter!
+	scene "scenes/Manager/ArriveChopper01.vcd"  then any EmphaticArriveRun foo:0 -2.278 //Everyone in the helicopter! Go!
 }
 Rule L4D1SurvivorFinalVehicleInsideRoofTopManager
 {
@@ -2259,7 +2259,7 @@ Response L4D1SurvivorFinalVehicleRunwayManager
 }
 Rule L4D1SurvivorFinalVehicleRunwayManager
 {
-	criteria ConceptGetToVehicle IsManager IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsManager IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRunwayManager
@@ -5752,7 +5752,7 @@ Response ScavengeStartManager
 }
 Rule ScavengeStartManager
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsManager IsTalk IsTalkManager IsWorldTalkManager IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsManager IsNotAlone IsTalk IsTalkManager IsWorldTalkManager IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartManager
@@ -8699,7 +8699,7 @@ Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2Manager
 
 Rule L4D1SurvivorFinalVehicleBoatC14M2Manager
 {
-	criteria ConceptGetToVehicle IsManager IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsManager IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockManager IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatManager

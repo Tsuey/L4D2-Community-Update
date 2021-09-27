@@ -334,18 +334,6 @@ Rule C3M4Button2POrator
 	Response C3M4Button2Orator
 }
 
-Response C3M4GateExplosionOrator
-{
-	scene "scenes/npcs/orator_blank.vcd"  then any C3M4GateBlow01 foo:0 9 //
-}
-Rule C3M4GateExplosionOrator
-{
-	criteria Conceptc3m4GateExplosion AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_TimerLockA:1:0"
-	applycontexttoworld
-	Response C3M4GateExplosionOrator
-}
-
 
 //--------------------------------------------------------------------------------------------------------------
 // C4General

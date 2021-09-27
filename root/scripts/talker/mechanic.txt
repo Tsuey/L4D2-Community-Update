@@ -339,7 +339,7 @@ Response Playerc1m1_elevator_pushbuttonMechanic
 }
 Rule Playerc1m1_elevator_pushbuttonMechanic
 {
-	criteria Conceptc1m1_elevator_pushbutton IsMechanic IsTalk IsTalkMechanic IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkMechanic
+	criteria Conceptc1m1_elevator_pushbutton IsMechanic IsTalk IsTalkMechanic IsNotAlone IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkMechanic
 	ApplyContext "Saidc1m1_elevator_pushbutton:1:0"
 	applycontexttoworld
 	Response Playerc1m1_elevator_pushbuttonMechanic
@@ -993,9 +993,9 @@ Rule ReviveMeInterruptedCriticalMechanic
 
 Response ReviveThanksMechanic
 {
-	scene "scenes/Mechanic/Thanks02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Much obliged
-	scene "scenes/Mechanic/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //I owe you one.
-	scene "scenes/Mechanic/Thanks05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Hey, thanks a lot.
+	scene "scenes/Mechanic/Thanks02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Much obliged
+	scene "scenes/Mechanic/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //I owe you one.
+	scene "scenes/Mechanic/Thanks05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Hey, thanks a lot.
 }
 Rule ReviveThanksMechanic
 {
@@ -1006,11 +1006,11 @@ Rule ReviveThanksMechanic
 
 Response ReviveThanksCoachMechanic
 {
-	scene "scenes/Mechanic/Thanks01.vcd" predelay "2,2.5" then Subject YouAreWelcome foo:0 0 //Hey, thanks, man.
-	scene "scenes/Mechanic/Thanks06.vcd" predelay "2,2.5" then Subject YouAreWelcome foo:0 0 //Thanks man.
-	scene "scenes/Mechanic/ThanksCoach01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, Coach.
-	scene "scenes/Mechanic/ThanksCoach02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, Coach.
-	scene "scenes/Mechanic/ThanksCoach04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, Coach.
+	scene "scenes/Mechanic/Thanks01.vcd" predelay "2,2.5" then subject YouAreWelcome foo:0 0.3 //Hey, thanks, man.
+	scene "scenes/Mechanic/Thanks06.vcd" predelay "2,2.5" then subject YouAreWelcome foo:0 0.3 //Thanks man.
+	scene "scenes/Mechanic/ThanksCoach01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, Coach.
+	scene "scenes/Mechanic/ThanksCoach02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, Coach.
+	scene "scenes/Mechanic/ThanksCoach04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, Coach.
 }
 Rule ReviveThanksCoachMechanic
 {
@@ -1021,7 +1021,7 @@ Rule ReviveThanksCoachMechanic
 
 Response ReviveThanksCoachC1Mechanic
 {
-	scene "scenes/Mechanic/ThanksCoach03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Appreciate it, big guy.
+	scene "scenes/Mechanic/ThanksCoach03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Appreciate it, big guy.
 }
 Rule ReviveThanksCoachC1Mechanic
 {
@@ -1032,11 +1032,11 @@ Rule ReviveThanksCoachC1Mechanic
 
 Response ReviveThanksGamblerMechanic
 {
-	scene "scenes/Mechanic/Thanks01.vcd" predelay "2,2.5" then Subject YouAreWelcome foo:0 0 //Hey, thanks, man.
-	scene "scenes/Mechanic/Thanks06.vcd" predelay "2,2.5" then Subject YouAreWelcome foo:0 0 //Thanks man.
-	scene "scenes/Mechanic/ThanksGambler01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thanks, Nick.
-	scene "scenes/Mechanic/ThanksGambler02.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Hey, thanks, Nick.
-	scene "scenes/Mechanic/ThanksGambler03.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Appreciate it, Nick.
+	scene "scenes/Mechanic/Thanks01.vcd" predelay "2,2.5" then subject YouAreWelcome foo:0 0.3 //Hey, thanks, man.
+	scene "scenes/Mechanic/Thanks06.vcd" predelay "2,2.5" then subject YouAreWelcome foo:0 0.3 //Thanks man.
+	scene "scenes/Mechanic/ThanksGambler01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thanks, Nick.
+	scene "scenes/Mechanic/ThanksGambler02.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Hey, thanks, Nick.
+	scene "scenes/Mechanic/ThanksGambler03.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Appreciate it, Nick.
 }
 Rule ReviveThanksGamblerMechanic
 {
@@ -1054,7 +1054,7 @@ Rule ReviveThanksGamblerC1Mechanic
 
 Response ReviveThanksProducerMechanic
 {
-	scene "scenes/Mechanic/Thanks03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thank you kindly, ma'm.
+	scene "scenes/Mechanic/Thanks03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thank you kindly, ma'm.
 }
 Rule ReviveThanksProducerMechanic
 {
@@ -1065,8 +1065,8 @@ Rule ReviveThanksProducerMechanic
 
 Response ReviveThanksBikerMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing14.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Francis!
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Francis!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing14.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Francis!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Francis!
 }
 Rule ReviveThanksBikerMechanic
 {
@@ -1077,7 +1077,7 @@ Rule ReviveThanksBikerMechanic
 
 Response ReviveThanksManagerMechanic
 {
-	scene "scenes/Mechanic/WorldC5M4B23.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thank you, sir.
+	scene "scenes/Mechanic/WorldC5M4B23.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thank you, sir.
 }
 Rule ReviveThanksManagerMechanic
 {
@@ -1095,9 +1095,9 @@ Rule ReviveThanksNamVetMechanic
 
 Response ReviveThanksTeenGirlMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thanks Zoey!
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items02.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thank you Zoey!
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Hey, thanks Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thanks Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items02.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thank you Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Hey, thanks Zoey!
 }
 Rule ReviveThanksTeenGirlMechanic
 {
@@ -1176,7 +1176,7 @@ Response C1M2LeavingSafeRoomMechanic
 }
 Rule C1M2LeavingSafeRoomMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotSaidLeavingSafeArea ismap_c1m2_streets _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotAlone IsNotSaidLeavingSafeArea ismap_c1m2_streets _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:1:1.547"
 	applycontexttoworld
 	Response C1M2LeavingSafeRoomMechanic
@@ -1291,7 +1291,7 @@ Rule C1M4PlayerGetToRescueVehicleMechanic
 
 Response c1m4startelevatorMechanic
 {
-	scene "scenes/Mechanic/WorldC1M4B04.vcd"  then mechanic _c1m4startelevator2 foo:0 -4.816 //If you're looking for ideas, look no further. Because I have a good one.
+	scene "scenes/Mechanic/WorldC1M4B04.vcd"  then self _c1m4startelevator2 foo:0 -4.816 //If you're looking for ideas, look no further. Because I have a good one.
 }
 Rule c1m4startelevatorMechanic
 {
@@ -1462,10 +1462,10 @@ Rule _C2M2_Riders07Mechanic
 //--------------------------------------------------------------------------------------------------------------
 Response C2M1Intro_400Mechanic
 {
-	scene "scenes/Mechanic/WorldC2M1B08.vcd"  then mechanic C2M1Intro_405 foo:0 0.1 //Man. This was the best day of my life.
-	scene "scenes/Mechanic/WorldC2M1B12.vcd"  then mechanic C2M1Intro_403 foo:0 0.1 //Well, this is it. Let's not make it harder than it needs to be.
-	scene "scenes/Mechanic/WorldC2M1B13.vcd"  then mechanic C2M1Intro_407 foo:0 0.01 //Well, this isn't the way I saw it, but I'm sorry I'm gonna have to leave you here.
-	scene "scenes/Mechanic/WorldC2M1B14.vcd"  then mechanic C2M1Intro_401 foo:0 0.1 //You did good.
+	scene "scenes/Mechanic/WorldC2M1B08.vcd"  then self C2M1Intro_405 foo:0 0.1 //Man. This was the best day of my life.
+	scene "scenes/Mechanic/WorldC2M1B12.vcd"  then self C2M1Intro_403 foo:0 0.1 //Well, this is it. Let's not make it harder than it needs to be.
+	scene "scenes/Mechanic/WorldC2M1B13.vcd"  then self C2M1Intro_407 foo:0 0.01 //Well, this isn't the way I saw it, but I'm sorry I'm gonna have to leave you here.
+	scene "scenes/Mechanic/WorldC2M1B14.vcd"  then self C2M1Intro_401 foo:0 0.1 //You did good.
 	scene "scenes/Mechanic/WorldC2M1B14.vcd"  then self C2M1Intro008 foo:0 0.01 //You did good.
 }
 Rule C2M1Intro_400Mechanic
@@ -1478,7 +1478,7 @@ Rule C2M1Intro_400Mechanic
 
 Response C2M1Intro_401Mechanic
 {
-	scene "scenes/Mechanic/WorldC2M1B07.vcd"  then mechanic C2M1Intro_402 foo:0 0.3 //You are the most beautiful thing I have ever sat between.
+	scene "scenes/Mechanic/WorldC2M1B07.vcd"  then self C2M1Intro_402 foo:0 0.3 //You are the most beautiful thing I have ever sat between.
 }
 Rule C2M1Intro_401Mechanic
 {
@@ -1502,7 +1502,7 @@ Rule C2M1Intro_402Mechanic
 
 Response C2M1Intro_403Mechanic
 {
-	scene "scenes/Mechanic/WorldC2M1B14.vcd"  then mechanic C2M1Intro_404 foo:0 0.1 //You did good.
+	scene "scenes/Mechanic/WorldC2M1B14.vcd"  then self C2M1Intro_404 foo:0 0.1 //You did good.
 }
 Rule C2M1Intro_403Mechanic
 {
@@ -1526,8 +1526,8 @@ Rule C2M1Intro_404Mechanic
 
 Response C2M1Intro_405Mechanic
 {
-	scene "scenes/Mechanic/WorldC2M1B05.vcd"  then mechanic C2M1Intro_406 foo:0 0.1 //We had a good time.
-	scene "scenes/Mechanic/WorldC2M1B14.vcd"  then mechanic C2M1Intro_406 foo:0 0.1 //You did good.
+	scene "scenes/Mechanic/WorldC2M1B05.vcd"  then self C2M1Intro_406 foo:0 0.1 //We had a good time.
+	scene "scenes/Mechanic/WorldC2M1B14.vcd"  then self C2M1Intro_406 foo:0 0.1 //You did good.
 }
 Rule C2M1Intro_405Mechanic
 {
@@ -1551,7 +1551,7 @@ Rule C2M1Intro_406Mechanic
 
 Response C2M1Intro_407Mechanic
 {
-	scene "scenes/Mechanic/WorldC2M1B10.vcd"  then mechanic C2M1Intro_408 foo:0 0.1 //Thank you. We couldn't have done it without you.
+	scene "scenes/Mechanic/WorldC2M1B10.vcd"  then self C2M1Intro_408 foo:0 0.1 //Thank you. We couldn't have done it without you.
 }
 Rule C2M1Intro_407Mechanic
 {
@@ -1617,7 +1617,7 @@ Rule C2M3CoasterRunGoMechanic
 
 Response C2M3CoasterStartMechanic
 {
-	scene "scenes/Mechanic/WorldC2M3B46.vcd"  then mechanic _c2m3_howcool foo:0 1.0 //I'm starting it!
+	scene "scenes/Mechanic/WorldC2M3B46.vcd"  then self _c2m3_howcool foo:0 1.0 //I'm starting it!
 }
 Rule C2M3CoasterStartMechanic
 {
@@ -1947,20 +1947,19 @@ Rule C2M5Button1Mechanic
 	Response C2M5Button1Mechanic
 }
 
-Response C2M5ChopperNagMechanic
+Response C2M5ChopperLandedMechanic
 {
-	norepeat
 	scene "scenes/Mechanic/WorldC2M5B57.vcd"  //Let's go! Get to the chopper!
 	scene "scenes/Mechanic/WorldC2M5B58.vcd"  //Everybody get to the chopper!
 	scene "scenes/Mechanic/WorldC2M5B59.vcd"  //Let's go, guys! Get to the chopper!
 	scene "scenes/Mechanic/WorldC2M5B61.vcd"  //Let's go, let's go! Chopper's here!
 }
-Rule C2M5ChopperNagMechanic
+Rule C2M5ChopperLandedMechanic
 {
-	criteria ConceptGetToVehicle IsMechanic Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
-	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
+	criteria ConceptFinalVehicleArrived IsMechanic Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_NotTimerLockA _auto_NotTimerLockMechanic _auto_NotEscapeReady IsNotSpeakingWeight0
+	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
 	applycontexttoworld
-	Response C2M5ChopperNagMechanic
+	Response C2M5ChopperLandedMechanic
 }
 
 Response C2M5InChopperNagMechanic
@@ -2053,7 +2052,7 @@ Response C2M5LeaveSafeMechanic
 }
 Rule C2M5LeaveSafeMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic ismap_c2m5 IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic ismap_c2m5 IsNotSaidLeavingSafeArea IsNotAlone AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response C2M5LeaveSafeMechanic
@@ -2344,7 +2343,7 @@ Response C3M4BoatNagsMechanic
 }
 Rule C3M4BoatNagsMechanic
 {
-	criteria ConceptGetToVehicle IsMechanic IsNotCoughing ismapc3m4_plantation IsNotIncapacitated IsRunning IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsMechanic IsNotCoughing ismapc3m4_plantation IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsMechanic
@@ -2496,14 +2495,26 @@ Rule PlayerKillTankConfirmationC3M4Mechanic
 
 Response C3M4GateBlow01Mechanic
 {
-	scene "scenes/Mechanic/WorldC3M415.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //Boat's here!
+	scene "scenes/Mechanic/WorldC3M415.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //Boat's here!
 }
 Rule C3M4GateBlow01Mechanic
 {
-	criteria ConceptC3M4GateBlow01 IsMechanic FromIsAnOrator IsTalk AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_TimerLockA:1:2"
+	criteria ConceptFinalVehicleArrived IsMechanic IsNotIncapacitated IsNotAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:7,_auto_Escape:1:0"
 	applycontexttoworld
 	Response C3M4GateBlow01Mechanic
+}
+
+Response C3M4GateBlow01AloneMechanic
+{
+	print " " then orator C3M4GateBlow02 foo:0 5 //
+}
+Rule C3M4GateBlow01AloneMechanic
+{
+	criteria ConceptFinalVehicleArrived IsMechanic IsNotIncapacitated IsAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:5,_auto_Escape:1:0"
+	applycontexttoworld
+	Response C3M4GateBlow01AloneMechanic
 }
 
 
@@ -2576,7 +2587,7 @@ Response C4M5BoatNagsMechanic
 }
 Rule C4M5BoatNagsMechanic
 {
-	criteria ConceptGetToVehicle IsMechanic Isc4m5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsMechanic Isc4m5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
 	applycontexttoworld
 	Response C4M5BoatNagsMechanic
@@ -3395,8 +3406,8 @@ Response C5M5_Button2Mechanic
 	scene "scenes/Mechanic/World420.vcd"  //I'll hit it.  Get ready.
 	scene "scenes/Mechanic/WorldC5M112.vcd"  //All right, I'm hittin' it.
 	scene "scenes/Mechanic/WorldC5M113.vcd"  //Hope this works!
-	scene "scenes/Mechanic/World410.vcd"  then mechanic C5M5_Button2200 foo:0 0.01 //They just said we oughta lower the bridge to get across to it.
-	scene "scenes/Mechanic/WorldC5M106.vcd"  then mechanic C5M5_Button2100 foo:0 0.2 //Alright, he says we gotta lower the bridge, be careful of the zombies and they'll be waitin' on the other side.
+	scene "scenes/Mechanic/World410.vcd"  then self C5M5_Button2200 foo:0 0.01 //They just said we oughta lower the bridge to get across to it.
+	scene "scenes/Mechanic/WorldC5M106.vcd"  then self C5M5_Button2100 foo:0 0.2 //Alright, he says we gotta lower the bridge, be careful of the zombies and they'll be waitin' on the other side.
 }
 Rule C5M5_Button2Mechanic
 {
@@ -3428,7 +3439,7 @@ Rule C5M5_Button2100Mechanic
 
 Response C5M5_Button2200Mechanic
 {
-	scene "scenes/Mechanic/World411.vcd"  then mechanic C5M5_Button2201 foo:0 0.01 //Once we lower it we all gotta be careful because there's zombies on the bridge.
+	scene "scenes/Mechanic/World411.vcd"  then self C5M5_Button2201 foo:0 0.01 //Once we lower it we all gotta be careful because there's zombies on the bridge.
 }
 Rule C5M5_Button2200Mechanic
 {
@@ -3438,7 +3449,7 @@ Rule C5M5_Button2200Mechanic
 
 Response C5M5_Button2201Mechanic
 {
-	scene "scenes/Mechanic/World412.vcd"  then mechanic C5M5_Button2202 foo:0 0.3 //I guess he didn't know we been like  fighting zombies all through the city.
+	scene "scenes/Mechanic/World412.vcd"  then self C5M5_Button2202 foo:0 0.3 //I guess he didn't know we been like  fighting zombies all through the city.
 }
 Rule C5M5_Button2201Mechanic
 {
@@ -3448,7 +3459,7 @@ Rule C5M5_Button2201Mechanic
 
 Response C5M5_Button2202Mechanic
 {
-	scene "scenes/Mechanic/World413.vcd"  then mechanic C5M5_Button2203 foo:0 0.3 //And the swamps.
+	scene "scenes/Mechanic/World413.vcd"  then self C5M5_Button2203 foo:0 0.3 //And the swamps.
 }
 Rule C5M5_Button2202Mechanic
 {
@@ -3458,7 +3469,7 @@ Rule C5M5_Button2202Mechanic
 
 Response C5M5_Button2203Mechanic
 {
-	scene "scenes/Mechanic/World414.vcd"  then mechanic C5M5_Button2204 foo:0 0.3 //And the river.
+	scene "scenes/Mechanic/World414.vcd"  then self C5M5_Button2204 foo:0 0.3 //And the river.
 }
 Rule C5M5_Button2203Mechanic
 {
@@ -3468,7 +3479,7 @@ Rule C5M5_Button2203Mechanic
 
 Response C5M5_Button2204Mechanic
 {
-	scene "scenes/Mechanic/World415.vcd"  then mechanic C5M5_Button2205 foo:0 0.2 //And shit.  Everywhere.
+	scene "scenes/Mechanic/World415.vcd"  then self C5M5_Button2205 foo:0 0.2 //And shit.  Everywhere.
 }
 Rule C5M5_Button2204Mechanic
 {
@@ -3639,10 +3650,22 @@ Response C5M5LeaveSafeMechanic
 }
 Rule C5M5LeaveSafeMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsMapc5m5_bridge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotAlone IsMapc5m5_bridge IsNotSaidLeavingSafeArea
 	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
 	applycontexttoworld
 	Response C5M5LeaveSafeMechanic
+}
+
+Response C5M5LeaveSafeAloneMechanic
+{
+	print " "  then orator C5M5_Soldier1 foo:0 0 //
+}
+Rule C5M5LeaveSafeAloneMechanic
+{
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsAlone IsMapc5m5_bridge IsNotSaidLeavingSafeArea
+	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
+	applycontexttoworld
+	Response C5M5LeaveSafeAloneMechanic
 }
 
 Response C5M5RescueStartMechanic
@@ -3725,7 +3748,7 @@ Response C5M5RunToHeliMechanic
 }
 Rule C5M5RunToHeliMechanic
 {
-	criteria ConceptGetToVehicle IsMechanic IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsMechanic IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
 	applycontexttoworld
 	Response C5M5RunToHeliMechanic
@@ -4148,7 +4171,7 @@ Response C6M2LeavingSafeRoomMechanic
 }
 Rule C6M2LeavingSafeRoomMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotSaidLeavingSafeArea isc6m2_bedlam AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotAlone IsNotSaidLeavingSafeArea isc6m2_bedlam AutoIsNotScavenge AutoIsNotSurvival _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:1:3"
 	applycontexttoworld
 	Response C6M2LeavingSafeRoomMechanic
@@ -4398,17 +4421,10 @@ Response C6M3_BridgeGettoCarMechanic
 }
 Rule C6M3_BridgeGettoCarMechanic
 {
-	criteria ConceptGetToVehicle IsMechanic Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsMechanic Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
 	applycontexttoworld
 	Response C6M3_BridgeGettoCarMechanic
-}
-
-Rule C6M3_elevatorCancelMechanic
-{
-	criteria ConceptC6M3_ElevatorCancel IsMechanic IsC6M3_port AutoIsNotScavenge AutoIsNotSurvival
-	forceweight 1
-	Response _PlayerInfoRemarkableBlankMechanic
 }
 
 Response C6M3_elevatorMechanic
@@ -4621,8 +4637,8 @@ Rule DLC1_C6M3_SafeRoomConvo08aMechanic
 
 Response DLC1_C6M3_SafeRoomConvo08cMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo23.vcd"  then Mechanic DLC1_C6M3_SafeRoomConvo08d foo:0 -0.936 //I will kill him.
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo24.vcd"  then Mechanic DLC1_C6M3_SafeRoomConvo08e foo:0 -1.581 //He is a dead man.
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo23.vcd"  then self DLC1_C6M3_SafeRoomConvo08d foo:0 -0.936 //I will kill him.
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo24.vcd"  then self DLC1_C6M3_SafeRoomConvo08e foo:0 -1.581 //He is a dead man.
 }
 Rule DLC1_C6M3_SafeRoomConvo08cMechanic
 {
@@ -4632,7 +4648,7 @@ Rule DLC1_C6M3_SafeRoomConvo08cMechanic
 
 Response DLC1_C6M3_SafeRoomConvo08dMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo26.vcd"  then Mechanic DLC1_C6M3_SafeRoomConvo08f foo:0 -1.479 //I will kill him.
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo26.vcd"  then self DLC1_C6M3_SafeRoomConvo08f foo:0 -1.479 //I will kill him.
 }
 Rule DLC1_C6M3_SafeRoomConvo08dMechanic
 {
@@ -4642,7 +4658,7 @@ Rule DLC1_C6M3_SafeRoomConvo08dMechanic
 
 Response DLC1_C6M3_SafeRoomConvo08eMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo25.vcd"  then Mechanic DLC1_C6M3_SafeRoomConvo08f foo:0 -2.608 //He is a dead man.
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo25.vcd"  then self DLC1_C6M3_SafeRoomConvo08f foo:0 -2.608 //He is a dead man.
 }
 Rule DLC1_C6M3_SafeRoomConvo08eMechanic
 {
@@ -7213,19 +7229,6 @@ Rule PlayerRemarkC1M1OverTableMechanic
 	Response PlayerRemarkC1M1OverTableMechanic
 }
 
-Response PlayerRemarkC1M1SearchRoomsMechanic
-{
-	scene "scenes/Mechanic/WorldC1M1B119.vcd"  then any C1M1Cough foo:0 -3.339 //Search these rooms, yall. Might be some useful shit in some of em.
-	scene "scenes/Mechanic/WorldC1M1B87.vcd"  then any C1M1Cough foo:0 -2.294 //Search these rooms, y'all. Might be something we can use.
-}
-Rule PlayerRemarkC1M1SearchRoomsMechanic
-{
-	criteria ConceptRemark IsMechanic IsC1M1SearchRooms IsNotSaidC1M1SearchRooms IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
-	ApplyContext "SaidC1M1SearchRooms:1:0"
-	applycontexttoworld
-	Response PlayerRemarkC1M1SearchRoomsMechanic
-}
-
 Response PlayerRemarkC1M1ThroughThisDoorMechanic
 {
 	scene "scenes/Mechanic/MiscDirectional13.vcd"  then any C1M1Cough foo:0 -0.618 //Through this door!
@@ -7341,8 +7344,8 @@ Rule PlayerRemarkC1M3OverHereMechanic
 
 Response PlayerRemarkC1M3SearchRoomsMechanic
 {
-	scene "scenes/Mechanic/WorldC1M1B119.vcd"  then any C1M1Cough foo:0 -3.339 //Search these rooms, yall. Might be some useful shit in some of em.
-	scene "scenes/Mechanic/WorldC1M1B87.vcd"  then any C1M1Cough foo:0 -2.294 //Search these rooms, y'all. Might be something we can use.
+	scene "scenes/Mechanic/WorldC1M1B119.vcd" //Search these rooms, yall. Might be some useful shit in some of em.
+	scene "scenes/Mechanic/WorldC1M1B87.vcd" //Search these rooms, y'all. Might be something we can use.
 }
 Rule PlayerRemarkC1M3SearchRoomsMechanic
 {
@@ -8159,7 +8162,7 @@ Response PlayerRemarkC3M2StartMechanic
 
 Rule C3M2LeavingSafeRoomMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotSaidLeavingSafeArea ismapc3m2_swamp _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotAlone IsNotSaidLeavingSafeArea ismapc3m2_swamp _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:1:1.547"
 	applycontexttoworld
 	Response PlayerRemarkC3M2StartMechanic
@@ -8953,7 +8956,7 @@ Response PlayerRemarkWorldC1M1ElevatorBrokenMechanic
 }
 Rule PlayerRemarkWorldC1M1ElevatorBrokenMechanic
 {
-	criteria ConceptRemark IsMechanic IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkMechanic IsNotSpeakingWeight0
+	criteria ConceptRemark IsMechanic IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsNotAlone IsTalk IsTalkMechanic IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkMechanic IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M1ElevatorBroken:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC1M1ElevatorBrokenMechanic
@@ -11414,7 +11417,7 @@ Response ScavengeStartMechanic
 }
 Rule ScavengeStartMechanic
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsMechanic IsNotAlone IsTalk IsTalkMechanic IsWorldTalkMechanic IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartMechanic
@@ -11432,7 +11435,7 @@ Response ScavengeStartC1M4Mechanic
 }
 Rule ScavengeStartC1M4Mechanic
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ismap_c1m4_atrium IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsMechanic IsNotAlone IsTalk IsTalkMechanic IsWorldTalkMechanic ismap_c1m4_atrium IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartC1M4Mechanic
@@ -11970,7 +11973,7 @@ Rule PlayerKillTankNotHealthyMechanic
 
 Response PlayerKillTankConfirmationC1M2Mechanic
 {
-	scene "scenes/Mechanic/Blank.vcd" then mechanic C1M2TankInfo foo:0 0.1 //
+	scene "scenes/Mechanic/Blank.vcd" then self C1M2TankInfo foo:0 0.1 //
 }
 Rule PlayerKillTankConfirmationC1M2Mechanic
 {
@@ -12664,7 +12667,7 @@ Rule SurvivorGooedBySpitterMechanic
 Response SurvivorGooedBySpitterC1Mechanic
 {
 	scene "scenes/Mechanic/GooedBySpitterC101.vcd"  //Ah this shit burns!!?!?
-	scene "scenes/Mechanic/GooedBySpitterC102.vcd"  then mechanic Player.GooedBySpitterC1R foo:0 -2.951 //What the hell!?!? Spittin' fire?
+	scene "scenes/Mechanic/GooedBySpitterC102.vcd"  then self Player.GooedBySpitterC1R foo:0 -2.951 //What the hell!?!? Spittin' fire?
 	scene "scenes/Mechanic/GooedBySpitterC103.vcd"  //Hey run, man! This is some crazy shit.
 }
 Rule SurvivorGooedBySpitterC1Mechanic
@@ -14554,9 +14557,9 @@ Rule _c1m4startelevator2Mechanic
 
 Response _c1m4startelevator2aMechanic
 {
-	scene "scenes/Mechanic/WorldC1M4B01.vcd"  then mechanic _c1m4startelevator3e foo:0 -2.084 //Actually, I been thinking...
-	scene "scenes/Mechanic/WorldC1M4B02.vcd"  then mechanic _c1m4startelevator3d foo:0 -1.250 //I might have an idea.
-	scene "scenes/Mechanic/WorldC1M4B03.vcd"  then mechanic _c1m4startelevator3d foo:0 -1.111 //I think I got one.
+	scene "scenes/Mechanic/WorldC1M4B01.vcd"  then self _c1m4startelevator3e foo:0 -2.084 //Actually, I been thinking...
+	scene "scenes/Mechanic/WorldC1M4B02.vcd"  then self _c1m4startelevator3d foo:0 -1.250 //I might have an idea.
+	scene "scenes/Mechanic/WorldC1M4B03.vcd"  then self _c1m4startelevator3d foo:0 -1.111 //I think I got one.
 	scene "scenes/Mechanic/WorldC1M4B07.vcd"  then producer _c1m4startelevator5a foo:0 -12.096 //I've got an idea. You know them posters we been seein? Get your picture taken with Jimmy Gibbs' stock car? That means it's HERE. We just need to appropriate it, and we got ourselves an escape vehicle.
 	scene "scenes/Mechanic/WorldC1M4B09.vcd"  then coach _c1m4startelevator5a foo:0 -6.111 //I've got an idea. Jimmy Gibbs, Jr. ain't gonna mind if we borrow his stock car. He's a very generous man.
 }
@@ -14568,8 +14571,8 @@ Rule _c1m4startelevator2aMechanic
 
 Response _c1m4startelevator2bMechanic
 {
-	scene "scenes/Mechanic/WorldC1M4B02.vcd"  then mechanic _c1m4startelevator3c foo:0 -1.250 //I might have an idea.
-	scene "scenes/Mechanic/WorldC1M4B03.vcd"  then mechanic _c1m4startelevator3c foo:0 -1.111 //I think I got one.
+	scene "scenes/Mechanic/WorldC1M4B02.vcd"  then self _c1m4startelevator3c foo:0 -1.250 //I might have an idea.
+	scene "scenes/Mechanic/WorldC1M4B03.vcd"  then self _c1m4startelevator3c foo:0 -1.111 //I think I got one.
 	scene "scenes/Mechanic/WorldC1M4B09.vcd"  then coach _c1m4startelevator5a foo:0 -6.111 //I've got an idea. Jimmy Gibbs, Jr. ain't gonna mind if we borrow his stock car. He's a very generous man.
 }
 Rule _c1m4startelevator2bMechanic
@@ -14669,7 +14672,7 @@ Rule _c1m4startelevator5a1Mechanic
 
 Response _c1m4startelevator5bMechanic
 {
-	scene "scenes/Mechanic/WorldC1M4B20.vcd"  then mechanic _c1m4startelevator5a foo:0 -2.936 //Wherever he is, Coach-he's proud of you.
+	scene "scenes/Mechanic/WorldC1M4B20.vcd"  then self _c1m4startelevator5a foo:0 -2.936 //Wherever he is, Coach-he's proud of you.
 }
 Rule _c1m4startelevator5bMechanic
 {
@@ -15488,8 +15491,8 @@ Rule c1m1_elevator_door_openMechanic
 
 Response c1m1_elevator_ready2Mechanic
 {
-	scene "scenes/Mechanic/WorldC1M1B125.vcd"  then Mechanic C1M1Cough foo:0 -0.618 //Get ready...
-	scene "scenes/Mechanic/WorldC1M1B126.vcd"  then mechanic C1M1Cough foo:0 -3.012 //Might be a welcomin' committee when these doors open. Get ready?
+	scene "scenes/Mechanic/WorldC1M1B125.vcd"  then self C1M1Cough foo:0 -0.618 //Get ready...
+	scene "scenes/Mechanic/WorldC1M1B126.vcd"  then self C1M1Cough foo:0 -3.012 //Might be a welcomin' committee when these doors open. Get ready?
 }
 Rule c1m1_elevator_ready2Mechanic
 {
@@ -15759,12 +15762,12 @@ Rule c1m4NearFinale1Mechanic
 
 Response C1M4SafeRoomMechanic
 {
-	scene "scenes/Mechanic/WorldC1M3B12.vcd"  then mechanic C1M4SafeRoom2c1 foo:0 1.250 //Check it out, man! Jimmy Gibbs, Jr!
-	scene "scenes/Mechanic/WorldC1M3B13.vcd"  then mechanic C1M4SafeRoom2c1 foo:0 1.250 //Check it out, man! That's Jimmy Gibbs, Jr!
-	scene "scenes/Mechanic/WorldC1M3B15.vcd"  then mechanic C1M4SafeRoom2c1 foo:0 1.250 //That right there, ladies and gentlemen, is Mr. Jimmy Gibbs, Jr.!
-	scene "scenes/Mechanic/WorldC1M3B16.vcd"  then mechanic C1M4SafeRoom2c1 foo:0 1.250 //I'll be damned! That's Jimmy Gibbs, Jr.!
-	scene "scenes/Mechanic/WorldC1M3B30.vcd"  then mechanic C1M4SafeRoom2c1 foo:0 1.250 //Check it, y'all! Jimmy Gibbs Jr.!
-	scene "scenes/Mechanic/WorldC1M3B31.vcd"  then mechanic C1M4SafeRoom2c1 foo:0 1.250 //Jimmy Gibbs got my vote.
+	scene "scenes/Mechanic/WorldC1M3B12.vcd"  then self C1M4SafeRoom2c1 foo:0 1.250 //Check it out, man! Jimmy Gibbs, Jr!
+	scene "scenes/Mechanic/WorldC1M3B13.vcd"  then self C1M4SafeRoom2c1 foo:0 1.250 //Check it out, man! That's Jimmy Gibbs, Jr!
+	scene "scenes/Mechanic/WorldC1M3B15.vcd"  then self C1M4SafeRoom2c1 foo:0 1.250 //That right there, ladies and gentlemen, is Mr. Jimmy Gibbs, Jr.!
+	scene "scenes/Mechanic/WorldC1M3B16.vcd"  then self C1M4SafeRoom2c1 foo:0 1.250 //I'll be damned! That's Jimmy Gibbs, Jr.!
+	scene "scenes/Mechanic/WorldC1M3B30.vcd"  then self C1M4SafeRoom2c1 foo:0 1.250 //Check it, y'all! Jimmy Gibbs Jr.!
+	scene "scenes/Mechanic/WorldC1M3B31.vcd"  then self C1M4SafeRoom2c1 foo:0 1.250 //Jimmy Gibbs got my vote.
 }
 Rule C1M4SafeRoomMechanic
 {
@@ -15798,9 +15801,9 @@ Rule C1M4SafeRoom2b1Mechanic
 
 Response C1M4SafeRoom2b3Mechanic
 {
-	scene "scenes/Mechanic/WorldC1M3B20.vcd"  then mechanic C1M4SafeRoom2b4 foo:0 -1.539 //That man is the pride of Georgia.
-	scene "scenes/Mechanic/WorldC1M3B21.vcd"  then mechanic C1M4SafeRoom2b4 foo:0 -2.745 //That man is America's greatest natural resource.
-	scene "scenes/Mechanic/WorldC1M3B24.vcd"  then mechanic C1M4SafeRoom2b4 foo:0 -2.143 //That man is an American hero.
+	scene "scenes/Mechanic/WorldC1M3B20.vcd"  then self C1M4SafeRoom2b4 foo:0 -1.539 //That man is the pride of Georgia.
+	scene "scenes/Mechanic/WorldC1M3B21.vcd"  then self C1M4SafeRoom2b4 foo:0 -2.745 //That man is America's greatest natural resource.
+	scene "scenes/Mechanic/WorldC1M3B24.vcd"  then self C1M4SafeRoom2b4 foo:0 -2.143 //That man is an American hero.
 }
 Rule C1M4SafeRoom2b3Mechanic
 {
@@ -15850,7 +15853,7 @@ Response C1M4SafeRoomEndMechanic
 }
 Rule C1M4SafeRoomEndMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsMechanic IsNotSaidLeavingSafeArea _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsNotAlone IsMechanic IsNotSaidLeavingSafeArea _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:0:0"
 	applycontexttoworld
 	Response C1M4SafeRoomEndMechanic
@@ -17249,7 +17252,7 @@ Rule RemarkC13M1UpHillMechanic
 	Response PlayerRemarkc2m1_uphillMechanic
 }
 
-Rule RemarkC13M1DownHereGambler
+Rule RemarkC13M1DownHereMechanic
 {
 	criteria ConceptRemark IsMechanic IsC13M1DownHere IsNotRemarkedC13M1DownHere NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear300 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "RemarkedC13M1DownHere:1:0"
@@ -17620,7 +17623,7 @@ Response C13M4GetToVehicleMechanic
 }
 Rule C13M4GetToVehicleMechanic
 {
-	criteria ConceptGetToVehicle IsMechanic ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsMechanic ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
 	applycontexttoworld
 	Response C13M4GetToVehicleMechanic

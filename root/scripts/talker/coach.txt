@@ -290,7 +290,7 @@ Rule C1M1_ElevatorHelloStart3AliveECoach
 Response C1M1_ElevatorHelloStart2AliveCoach
 {
 	scene "scenes/Coach/WorldC1M1B96.vcd" then any _C1M1_ElevatorHello2AliveName2 foo:0 -5.262 // So. Pleased to meet you. You can call me Coach. What's your name?
-	scene "scenes/Coach/WorldC1M1B115.vcd" then coach _C1M1_ElevatorHello2AliveName1 foo:0 0.1 //We are not off to a good start. 
+	scene "scenes/Coach/WorldC1M1B115.vcd" then self _C1M1_ElevatorHello2AliveName1 foo:0 0.1 //We are not off to a good start. 
 }
 Rule C1M1_ElevatorHelloStart2AliveCoach
 {
@@ -332,7 +332,7 @@ Response Playerc1m1_enter_elevatorCoach
 }
 Rule Playerc1m1_enter_elevatorCoach
 {
-	criteria Conceptc1m1_enter_elevator IsCoach IsTalk IsTalkCoach IsNotSaidc1m1_enter_elevator AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach
+	criteria Conceptc1m1_enter_elevator IsCoach IsTalk IsTalkCoach IsNotAlone IsNotSaidc1m1_enter_elevator AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach
 	ApplyContext "Saidc1m1_enter_elevator:1:0"
 	applycontexttoworld
 	Response Playerc1m1_enter_elevatorCoach
@@ -344,7 +344,7 @@ Response Playerc1m1_elevator_pushbuttonCoach
 }
 Rule Playerc1m1_elevator_pushbuttonCoach
 {
-	criteria Conceptc1m1_elevator_pushbutton IsCoach IsTalk IsTalkCoach IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach
+	criteria Conceptc1m1_elevator_pushbutton IsCoach IsTalk IsTalkCoach IsNotAlone IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach
 	ApplyContext "Saidc1m1_elevator_pushbutton:1:0"
 	applycontexttoworld
 	Response Playerc1m1_elevator_pushbuttonCoach
@@ -366,7 +366,7 @@ Response PlayerRemarkC1M2PreAlarmDoorCoach
 }
 Rule PlayerRemarkC1M2PreAlarmDoorCoach
 {
-	criteria ConceptRemark IsCoach IsWorldC1M2PreStoreAlarm IsNotSaidWorldC1M2PreStoreAlarm IsNotSaidC1M2AlarmSetoff IsTalk IsTalkCoach IsTalkCoach IsSubjectNear500 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsCoach IsWorldC1M2PreStoreAlarm IsNotSaidWorldC1M2PreStoreAlarm IsNotSaidC1M2AlarmSetoff IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear500 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M2PreStoreAlarm:1:0"
 	applycontexttoworld
 	Response PlayerRemarkC1M2PreAlarmDoorCoach
@@ -381,7 +381,7 @@ Response C1M2AlarmDoor2Coach
 }
 Rule C1M2AlarmDoor2Coach
 {
-	criteria ConceptC1M2AlarmDoor2 IsCoach IsTalk IsTalkCoach IsTalkCoach IsNotAlone AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC1M2AlarmDoor2 IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotAlone AutoIsNotScavenge AutoIsNotSurvival
 	Response C1M2AlarmDoor2Coach
 }
 
@@ -806,7 +806,7 @@ Response PlayerWorldIntroC31Coach
 	scene "scenes/Coach/WorldC3M102.vcd"  then mechanic WorldIntroC31g1 foo:0 -3.271 //No CEDA, No Military.  Stay out.
 	scene "scenes/Coach/WorldC3M1B03.vcd"  then any WorldIntroC31d2 foo:0 0.1 //Ahhh, I've had worse landings. Actually, that's a lie to spare your feelings. That crash was pretty bad.
 	scene "scenes/Coach/WorldC3M1B02.vcd"  then gambler WorldIntroC31d1 foo:0 -6.371 //That was some shit, the pilot becoming a zombie right before our eyes. Nice shooting Nick.
-	scene "scenes/Coach/WorldC3M1B04.vcd"  then coach WorldIntroC3f1 foo:0 -5.327 //You know what? No more helicopters. I'm just saying that now. I'm good.
+	scene "scenes/Coach/WorldC3M1B04.vcd"  then self WorldIntroC3f1 foo:0 -5.327 //You know what? No more helicopters. I'm just saying that now. I'm good.
 	scene "scenes/Coach/WorldC3M1B06.vcd"  then mechanic WorldIntroC31c1 foo:0 -5.605 //That was the first time I was in a helicopter. I always imagined it with less zombies.
 	scene "scenes/Coach/WorldC3M1B10.vcd" then self IntroEnd foo:0 0.1 //Anyone check where we were before we went down?
 }
@@ -1010,9 +1010,9 @@ Rule ReviveMeInterruptedCriticalCoach
 
 Response ReviveThanksCoach
 {
-	scene "scenes/Coach/Thanks01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thanks.
-	scene "scenes/Coach/Thanks06.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Allrighht thanks.
-	scene "scenes/Coach/Thanks07.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //THANKS!
+	scene "scenes/Coach/Thanks01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thanks.
+	scene "scenes/Coach/Thanks06.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Allrighht thanks.
+	scene "scenes/Coach/Thanks07.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //THANKS!
 }
 Rule ReviveThanksCoach
 {
@@ -1023,7 +1023,7 @@ Rule ReviveThanksCoach
 
 Response ReviveThanksGamblerCoach
 {
-	scene "scenes/Coach/ThanksGambler01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thanks, Nick, you're all right.
+	scene "scenes/Coach/ThanksGambler01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thanks, Nick, you're all right.
 }
 Rule ReviveThanksGamblerCoach
 {
@@ -1034,7 +1034,7 @@ Rule ReviveThanksGamblerCoach
 
 Response ReviveThanksMechanicCoach
 {
-	scene "scenes/Coach/ThanksMechanic01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //I owe you one, Ellis.
+	scene "scenes/Coach/ThanksMechanic01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //I owe you one, Ellis.
 }
 Rule ReviveThanksMechanicCoach
 {
@@ -1045,7 +1045,7 @@ Rule ReviveThanksMechanicCoach
 
 Response ReviveThanksProducerCoach
 {
-	scene "scenes/Coach/ThanksProducer01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Can always count on you, Ro.
+	scene "scenes/Coach/ThanksProducer01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Can always count on you, Ro.
 }
 Rule ReviveThanksProducerCoach
 {
@@ -1056,7 +1056,7 @@ Rule ReviveThanksProducerCoach
 
 Response ReviveThanksBikerCoach
 {
-	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Killing05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Francis!
+	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Killing05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Francis!
 }
 Rule ReviveThanksBikerCoach
 {
@@ -1694,18 +1694,17 @@ Rule C2M5_PlanWorkedMadCoach
 	Response C2M5_PlanWorkedMadCoach
 }
 
-Response C2M5ChopperNagCoach
+Response C2M5ChopperLandedCoach
 {
-	norepeat
 	scene "scenes/Coach/WorldC2M5B125.vcd"  //Everyone to the chopper!
 	scene "scenes/Coach/WorldC2M5B126.vcd"  //Get on that chopper!
 }
-Rule C2M5ChopperNagCoach
+Rule C2M5ChopperLandedCoach
 {
-	criteria ConceptGetToVehicle IsCoach Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
-	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
+	criteria ConceptFinalVehicleArrived IsCoach Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_NotTimerLockA _auto_NotTimerLockCoach _auto_NotEscapeReady IsNotSpeakingWeight0
+	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
 	applycontexttoworld
-	Response C2M5ChopperNagCoach
+	Response C2M5ChopperLandedCoach
 }
 
 Response C2M5InChopperNagCoach
@@ -2206,7 +2205,7 @@ Response C3M4BoatNagsCoach
 }
 Rule C3M4BoatNagsCoach
 {
-	criteria ConceptGetToVehicle IsCoach ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsCoach ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsCoach
@@ -2340,17 +2339,29 @@ Rule C3M4Button202Coach
 
 Response C3M4GateBlow01Coach
 {
-	scene "scenes/Coach/WorldC3M4B07.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //Oh shit! Gate open!
-	scene "scenes/Coach/WorldC3M4B08.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //That's my kind of guy, let's go!
-	scene "scenes/Coach/WorldC3M4B09.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //Gate's open, let's go!
-	scene "scenes/Coach/WorldC3M4B10.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //Our Cajun friend opened the gate!
+	scene "scenes/Coach/WorldC3M4B07.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //Oh shit! Gate open!
+	scene "scenes/Coach/WorldC3M4B08.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //That's my kind of guy, let's go!
+	scene "scenes/Coach/WorldC3M4B09.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //Gate's open, let's go!
+	scene "scenes/Coach/WorldC3M4B10.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //Our Cajun friend opened the gate!
 }
 Rule C3M4GateBlow01Coach
 {
-	criteria ConceptC3M4GateBlow01 IsCoach FromIsAnOrator IsTalk AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_TimerLockA:1:3"
+	criteria ConceptFinalVehicleArrived IsCoach IsNotIncapacitated IsNotAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:7,_auto_Escape:1:0"
 	applycontexttoworld
 	Response C3M4GateBlow01Coach
+}
+
+Response C3M4GateBlow01AloneCoach
+{
+	print " " then orator C3M4GateBlow02 foo:0 5 //
+}
+Rule C3M4GateBlow01AloneCoach
+{
+	criteria ConceptFinalVehicleArrived IsCoach IsNotIncapacitated IsAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:5,_auto_Escape:1:0"
+	applycontexttoworld
+	Response C3M4GateBlow01AloneCoach
 }
 
 
@@ -3506,7 +3517,7 @@ Response C5M5RunToHeliCoach
 }
 Rule C5M5RunToHeliCoach
 {
-	criteria ConceptGetToVehicle IsCoach IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsCoach IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
 	applycontexttoworld
 	Response C5M5RunToHeliCoach
@@ -3519,7 +3530,7 @@ Response C5M5RunToHeliRareCoach
 }
 Rule C5M5RunToHeliRareCoach
 {
-	criteria ConceptGetToVehicle IsCoach IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle ChanceToFire10Percent _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsCoach IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone NotAloneOutsideSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle ChanceToFire10Percent _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
 	applycontexttoworld
 	forceweight 500
@@ -4158,22 +4169,27 @@ Rule C6M3_BridgeDownCoach
 Response C6M3_BridgeGettoCarCoach
 {
 	norepeat
-	scene "scenes/Coach/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Get to the car!
 	scene "scenes/Coach/DLC1_C6M3_FinaleBridgeRun02.vcd"  //Let's get to the car!
 }
 Rule C6M3_BridgeGettoCarCoach
 {
-	criteria ConceptGetToVehicle IsCoach Isc6m3_port IsNotCoughing IsNotIncapacitated IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsCoach Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
 	applycontexttoworld
 	Response C6M3_BridgeGettoCarCoach
 }
 
-Rule C6M3_elevatorCancelCoach
+Response C6M3_BridgeNexttoCarCoach
 {
-	criteria ConceptC6M3_ElevatorCancel IsCoach IsC6M3_port AutoIsNotScavenge AutoIsNotSurvival
-	forceweight 1
-	Response _PlayerInfoRemarkableBlankCoach
+	norepeat
+	scene "scenes/Coach/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Get to the car!
+}
+Rule C6M3_BridgeNexttoCarCoach
+{
+	criteria ConceptGetToVehicle IsCoach Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
+	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
+	applycontexttoworld
+	Response C6M3_BridgeNexttoCarCoach
 }
 
 Response C6M3_elevatorCoach
@@ -6517,18 +6533,6 @@ Rule PlayerRemarkC1M1OverTableCoach
 	Response PlayerRemarkC1M1OverTableCoach
 }
 
-Response PlayerRemarkC1M1SearchRoomsCoach
-{
-	scene "scenes/Coach/WorldC1M1B84.vcd"  then any C1M1Cough foo:0 -2.783 //Search these rooms. Might be something we can use.
-}
-Rule PlayerRemarkC1M1SearchRoomsCoach
-{
-	criteria ConceptRemark IsCoach IsC1M1SearchRooms IsNotSaidC1M1SearchRooms IsNotCoughing NotInCombat IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
-	ApplyContext "SaidC1M1SearchRooms:1:0"
-	applycontexttoworld
-	Response PlayerRemarkC1M1SearchRoomsCoach
-}
-
 Response PlayerRemarkC1M1ThroughThisDoorCoach
 {
 	scene "scenes/Coach/MiscDirectional19.vcd"  then any C1M1Cough foo:0 -0.932 //Through this door!
@@ -6685,7 +6689,7 @@ Rule PlayerRemarkC1M3OverHereCoach
 
 Response PlayerRemarkC1M3SearchRoomsCoach
 {
-	scene "scenes/Coach/WorldC1M1B84.vcd"  then any C1M1Cough foo:0 -2.783 //Search these rooms. Might be something we can use.
+	scene "scenes/Coach/WorldC1M1B84.vcd" //Search these rooms. Might be something we can use.
 }
 Rule PlayerRemarkC1M3SearchRoomsCoach
 {
@@ -7874,8 +7878,8 @@ Response PlayerRemarkc4m1_InBurgerTankCoach
 	scene "scenes/Coach/WorldC4M104.vcd"  then any c4m1_InBurgerTank01 foo:0 0.01 //Shit. All these zombies should help you swallow.
 	scene "scenes/Coach/WorldC4M105.vcd"  then producer c4m1_InBurgerTank02 foo:0 0.01 //Man, I sure wish the Burger Tank was open.
 	scene "scenes/Coach/WorldC4M106.vcd"  then producer c4m1_InBurgerTank02 foo:0 0.01 //I sure wish the Burger Tank was open.
-	scene "scenes/Coach/WorldC4M105.vcd"  then coach c4m1_InBurgerTank01 foo:0 0.01 //Man, I sure wish the Burger Tank was open.
-	scene "scenes/Coach/WorldC4M106.vcd"  then coach c4m1_InBurgerTank01 foo:0 0.01 //I sure wish the Burger Tank was open.
+	scene "scenes/Coach/WorldC4M105.vcd"  then self c4m1_InBurgerTank01 foo:0 0.01 //Man, I sure wish the Burger Tank was open.
+	scene "scenes/Coach/WorldC4M106.vcd"  then self c4m1_InBurgerTank01 foo:0 0.01 //I sure wish the Burger Tank was open.
 }
 Rule PlayerRemarkc4m1_InBurgerTankCoach
 {
@@ -8403,7 +8407,7 @@ Response PlayerRemarkWorldC1M1ElevatorBrokenCoach
 }
 Rule PlayerRemarkWorldC1M1ElevatorBrokenCoach
 {
-	criteria ConceptRemark IsCoach IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsTalk IsTalkCoach IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach IsNotSpeakingWeight0
+	criteria ConceptRemark IsCoach IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsNotAlone IsTalk IsTalkCoach IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M1ElevatorBroken:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC1M1ElevatorBrokenCoach
@@ -9689,7 +9693,7 @@ Rule PlayerRemarkWorldSignStayInGroup2Coach
 
 Response PlayerRemarkWorldSignWhereIsCEDACoach
 {
-	scene "scenes/Coach/WorldSigns09.vcd"  then coach WorldSignWhereIsCEDA2 foo:0 0.4 //Where is CEDA.
+	scene "scenes/Coach/WorldSigns09.vcd"  then self WorldSignWhereIsCEDA2 foo:0 0.4 //Where is CEDA.
 }
 Rule PlayerRemarkWorldSignWhereIsCEDACoach
 {
@@ -10805,7 +10809,7 @@ Response ScavengeStartCoach
 }
 Rule ScavengeStartCoach
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsCoach IsNotAlone IsTalk IsTalkCoach IsWorldTalkCoach IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartCoach
@@ -10819,7 +10823,7 @@ Response ScavengeStartC1M4Coach
 }
 Rule ScavengeStartC1M4Coach
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ismap_c1m4_atrium IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsCoach IsNotAlone IsTalk IsTalkCoach IsWorldTalkCoach ismap_c1m4_atrium IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartC1M4Coach
@@ -13385,8 +13389,8 @@ Rule SurvivorPickupVomitJarCoach
 
 Response SurvivorPickupVomitJarAlwaysC1Coach
 {
-	scene "scenes/Coach/BoomerJar02.vcd"  then coach Player.TakeVomitJarC1a foo:0 -0.912 //Grabbin' puke!
-	scene "scenes/Coach/BoomerJar06.vcd"  then coach Player.TakeVomitJarC1a foo:0 -0.912 //Grabbin' puke!
+	scene "scenes/Coach/BoomerJar02.vcd"  then self Player.TakeVomitJarC1a foo:0 -0.912 //Grabbin' puke!
+	scene "scenes/Coach/BoomerJar06.vcd"  then self Player.TakeVomitJarC1a foo:0 -0.912 //Grabbin' puke!
 }
 Rule SurvivorPickupVomitJarAlwaysC1Coach
 {
@@ -13761,8 +13765,8 @@ Rule _C1M1_ElevatorHello01dCoach
 Response _C1M1_ElevatorHello02bCoach
 {
 	scene "scenes/Coach/WorldC1M1B105.vcd"  then gambler _C1M1_ElevatorHelloAllAliveExtra1 foo:0 -0.539 //And you?
-	scene "scenes/Coach/WorldC1M1B121.vcd"  then coach _C1M1_ElevatorHelloAllAliveExtra1 foo:0 -1.224 //No, I'm good.
-	scene "scenes/Coach/WorldC1M1B124.vcd"  then coach _C1M1_ElevatorHelloAllAliveExtra1 foo:0 -0.852 //I don't think so.
+	scene "scenes/Coach/WorldC1M1B121.vcd"  then self _C1M1_ElevatorHelloAllAliveExtra1 foo:0 -1.224 //No, I'm good.
+	scene "scenes/Coach/WorldC1M1B124.vcd"  then self _C1M1_ElevatorHelloAllAliveExtra1 foo:0 -0.852 //I don't think so.
 }
 Rule _C1M1_ElevatorHello02bCoach
 {
@@ -13844,8 +13848,8 @@ Rule _C1M1_ElevatorHello09aCoach
 
 Response _C1M1_ElevatorHello10aCoach
 {
-	scene "scenes/Coach/WorldC1M1B121.vcd"  then coach _C1M1_ElevatorHello10b foo:0 -1.224 //No, I'm good.
-	scene "scenes/Coach/WorldC1M1B124.vcd"  then coach _C1M1_ElevatorHello10b foo:0 -0.852 //I don't think so.
+	scene "scenes/Coach/WorldC1M1B121.vcd"  then self _C1M1_ElevatorHello10b foo:0 -1.224 //No, I'm good.
+	scene "scenes/Coach/WorldC1M1B124.vcd"  then self _C1M1_ElevatorHello10b foo:0 -0.852 //I don't think so.
 }
 Rule _C1M1_ElevatorHello10aCoach
 {
@@ -13865,7 +13869,7 @@ Rule _C1M1_ElevatorHello10bCoach
 
 Response _C1M1_ElevatorHello12bCoach
 {
-	scene "scenes/Coach/WorldC1M1B125.vcd" then coach _C1M1_ElevatorHello112c foo:0 1.5 //Coach'll work.
+	scene "scenes/Coach/WorldC1M1B125.vcd" then self _C1M1_ElevatorHello112c foo:0 1.5 //Coach'll work.
 }
 Rule _C1M1_ElevatorHello12bCoach
 {
@@ -14513,7 +14517,7 @@ Rule c1m1_elevator_door_openCoach
 
 Response c1m1_elevator_ready2Coach
 {
-	scene "scenes/Coach/WorldC1M1B95.vcd"  then coach C1M1Cough foo:0 -2.002 //Alright, enough chat. Get ready.
+	scene "scenes/Coach/WorldC1M1B95.vcd"  then self C1M1Cough foo:0 -2.002 //Alright, enough chat. Get ready.
 }
 Rule c1m1_elevator_ready2Coach
 {
@@ -14823,7 +14827,7 @@ Response C1M4SafeRoomEndCoach
 }
 Rule C1M4SafeRoomEndCoach
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsCoach IsNotSaidLeavingSafeArea _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsNotAlone IsCoach IsNotSaidLeavingSafeArea _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:0:0"
 	applycontexttoworld
 	Response C1M4SafeRoomEndCoach
@@ -14881,7 +14885,7 @@ Response LeavingC2M1StartCoach
 }
 Rule LeavingC2M1StartCoach
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsCoach IsNotSaidLeavingSafeArea Ismap_c2m1 IsTalk
+	criteria ConceptSurvivorLeavingCheckpoint IsCoach IsNotSaidLeavingSafeArea Ismap_c2m1 IsTalk AutoIsNotSurvival AutoIsNotScavenge
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response LeavingC2M1StartCoach
@@ -14951,10 +14955,10 @@ Response c4m1_InBurgerTank01Coach
 {
 	sequential
 	norepeat
-	scene "scenes/Coach/WorldC4M107.vcd"  then coach c4m1_InBurgerTank01 foo:0 0.01 //I could go for a BBQ bacon burger.
-	scene "scenes/Coach/WorldC4M108.vcd"  then coach c4m1_InBurgerTank01 foo:0 0.01 //And a large order of fries, and...
-	scene "scenes/Coach/WorldC4M109.vcd"  then coach c4m1_InBurgerTank01 foo:0 0.01 //An orange soda with no ice, and a...
-	scene "scenes/Coach/WorldC4M110.vcd"  then coach c4m1_InBurgerTank01 foo:0 0.01 //piece of hot apple pie.
+	scene "scenes/Coach/WorldC4M107.vcd"  then self c4m1_InBurgerTank01 foo:0 0.01 //I could go for a BBQ bacon burger.
+	scene "scenes/Coach/WorldC4M108.vcd"  then self c4m1_InBurgerTank01 foo:0 0.01 //And a large order of fries, and...
+	scene "scenes/Coach/WorldC4M109.vcd"  then self c4m1_InBurgerTank01 foo:0 0.01 //An orange soda with no ice, and a...
+	scene "scenes/Coach/WorldC4M110.vcd"  then self c4m1_InBurgerTank01 foo:0 0.01 //piece of hot apple pie.
 	scene "scenes/Coach/WorldC4M111.vcd"  then producer c4m1_InBurgerTank02 foo:0 0.01 //Goddamn I miss Burger Tank.
 }
 Rule c4m1_InBurgerTank01Coach
@@ -16480,7 +16484,7 @@ Response C13M4GetToVehicleCoach
 }
 Rule C13M4GetToVehicleCoach
 {
-	criteria ConceptGetToVehicle IsCoach ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsCoach ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
 	applycontexttoworld
 	Response C13M4GetToVehicleCoach
@@ -16493,14 +16497,6 @@ Rule SafeRoomStartCoach
 {
 	criteria ConceptTalkIdle IsCoach IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
-	applycontexttoworld
-	Response NoResponse
-}
-
-Rule IntroEndCoach
-{
-	criteria ConceptIntroEnd IsCoach FromIsCoach IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "Talk:0:0"
 	applycontexttoworld
 	Response NoResponse
 }

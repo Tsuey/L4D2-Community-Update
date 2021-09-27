@@ -276,7 +276,7 @@ Response _C1M1_ElevatorHelloStartAllAliveGambler
 	scene "scenes/Gambler/WorldC1M1B52.vcd"  then coach _C1M1_ElevatorHello01a foo:0 -2.673 //Nick, name's Nick. You all did good. What's your names?
 	scene "scenes/Gambler/WorldC1M1B52.vcd"  then mechanic _C1M1_ElevatorHello05c foo:0 -2.673 //Nick, name's Nick. You all did good. What's your names?
 	scene "scenes/Gambler/WorldC1M1B52.vcd"  then producer _C1M1_ElevatorHello07a foo:0 -2.673 //Nick, name's Nick. You all did good. What's your names?
-	scene "scenes/Gambler/WorldC1M1B56.vcd"  then gambler _C1M1_ElevatorHello01b foo:0 -1.500 //Name's Nick.
+	scene "scenes/Gambler/WorldC1M1B56.vcd"  then self _C1M1_ElevatorHello01b foo:0 -1.500 //Name's Nick.
 	scene "scenes/Gambler/WorldC1M1B70.vcd"  then coach _C1M1_ElevatorHello01d foo:0 -6.919 //I normally go solo-but under the circumstances, I'm thinkin' we stick together. Call me Nick. You got names?
 	scene "scenes/Gambler/WorldC1M1B57.vcd"  then coach _C1M1_ElevatorHello02b foo:0 -3.221 //Anyone get bit? Isn't that how this works?
 	scene "scenes/Gambler/WorldC1M1B59.vcd"  then coach _C1M1_ElevatorHello02b foo:0 -3.221 //Well, I'm glad we got that out of the way. Now: did anyone get bit?
@@ -289,7 +289,7 @@ Rule _C1M1_ElevatorHelloStartAllAliveGambler
 
 Response C1M1_ElevatorHelloStart2AliveGambler
 {
-	scene "scenes/Gambler/DoubleDeathResponse04.vcd" then gambler _C1M1_ElevatorHello2AliveNickIntro1 foo:0 0.1 //I think we just became long shots.
+	scene "scenes/Gambler/DoubleDeathResponse04.vcd" then self _C1M1_ElevatorHello2AliveNickIntro1 foo:0 0.1 //I think we just became long shots.
 }
 Rule C1M1_ElevatorHelloStart2AliveGambler
 {
@@ -299,7 +299,7 @@ Rule C1M1_ElevatorHelloStart2AliveGambler
 
 Response C1M1_ElevatorHelloStart3AliveGambler
 {
-	scene "scenes/Gambler/WorldC1M1B60.vcd"  then gambler _C1M1_ElevatorHello3AliveNickIntro1 foo:0 -1.859 //There's blood on me, but it ain't mine.
+	scene "scenes/Gambler/WorldC1M1B60.vcd"  then self _C1M1_ElevatorHello3AliveNickIntro1 foo:0 -1.859 //There's blood on me, but it ain't mine.
 }
 Rule C1M1_ElevatorHelloStart3AliveGambler
 {
@@ -327,7 +327,7 @@ Response Playerc1m1_elevator_pushbuttonGambler
 }
 Rule Playerc1m1_elevator_pushbuttonGambler
 {
-	criteria Conceptc1m1_elevator_pushbutton IsGambler IsTalk IsTalkGambler IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler
+	criteria Conceptc1m1_elevator_pushbutton IsGambler IsTalk IsTalkGambler IsNotAlone IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler
 	ApplyContext "Saidc1m1_elevator_pushbutton:1:0"
 	applycontexttoworld
 	Response Playerc1m1_elevator_pushbuttonGambler
@@ -875,10 +875,10 @@ Rule ReviveMeInterruptedCriticalGambler
 
 Response ReviveThanksGambler
 {
-	scene "scenes/Gambler/Thanks01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thanks.
-	scene "scenes/Gambler/Thanks02.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thank you.
-	scene "scenes/Gambler/Thanks03.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //Thanks!
-	scene "scenes/Gambler/Thanks05.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0 //I owe you one.
+	scene "scenes/Gambler/Thanks01.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thanks.
+	scene "scenes/Gambler/Thanks02.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thank you.
+	scene "scenes/Gambler/Thanks03.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //Thanks!
+	scene "scenes/Gambler/Thanks05.vcd" predelay ".2,.5"  then subject YouAreWelcome foo:0 0.3 //I owe you one.
 }
 Rule ReviveThanksGambler
 {
@@ -889,8 +889,8 @@ Rule ReviveThanksGambler
 
 Response ReviveThanksCoachGambler
 {
-	scene "scenes/Gambler/ThanksCoach01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks bro.
-	scene "scenes/Gambler/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, man, I owe you.
+	scene "scenes/Gambler/ThanksCoach01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks bro.
+	scene "scenes/Gambler/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, man, I owe you.
 }
 Rule ReviveThanksCoachGambler
 {
@@ -901,8 +901,8 @@ Rule ReviveThanksCoachGambler
 
 Response ReviveThanksMechanicGambler
 {
-	scene "scenes/Gambler/ThanksEllis01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks killer.
-	scene "scenes/Gambler/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, man, I owe you.
+	scene "scenes/Gambler/ThanksEllis01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks killer.
+	scene "scenes/Gambler/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, man, I owe you.
 }
 Rule ReviveThanksMechanicGambler
 {
@@ -913,7 +913,7 @@ Rule ReviveThanksMechanicGambler
 
 Response ReviveThanksProducerGambler
 {
-	scene "scenes/Gambler/ThanksRochelle01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Ro.
+	scene "scenes/Gambler/ThanksRochelle01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Ro.
 }
 Rule ReviveThanksProducerGambler
 {
@@ -931,11 +931,11 @@ Rule ReviveThanksProducerC1KnownGambler
 
 Response ReviveThanksBikerGambler
 {
-	scene "scenes/Gambler/ThanksCoach01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks bro.
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, greaseball!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, pal!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //I owe you one, Francis!
+	scene "scenes/Gambler/ThanksCoach01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks bro.
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Shit, thanks!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, greaseball!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //I owe you one, Francis!
 }
 Rule ReviveThanksBikerGambler
 {
@@ -946,8 +946,8 @@ Rule ReviveThanksBikerGambler
 
 Response ReviveThanksTeenGirlGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, Zoey!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Hey thanks, babe!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, Zoey!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Hey thanks, babe!
 }
 Rule ReviveThanksTeenGirlGambler
 {
@@ -958,7 +958,7 @@ Rule ReviveThanksTeenGirlGambler
 
 Response ReviveThanksManagerGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, Louis!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, Louis!
 }
 Rule ReviveThanksManagerGambler
 {
@@ -1124,7 +1124,7 @@ Response C1M2LeavingSafeRoomGambler
 }
 Rule C1M2LeavingSafeRoomGambler
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsGambler IsNotSaidLeavingSafeArea ismap_c1m2_streets _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsGambler IsNotAlone IsNotSaidLeavingSafeArea ismap_c1m2_streets _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:1:2.989"
 	applycontexttoworld
 	Response C1M2LeavingSafeRoomGambler
@@ -1717,19 +1717,18 @@ Rule C2M5_PlanWorkedCoachMadGambler
 	Response C2M5_PlanWorkedGambler
 }
 
-Response C2M5ChopperNagGambler
+Response C2M5ChopperLandedGambler
 {
-	norepeat
 	scene "scenes/Gambler/WorldC2M5B48.vcd"  //The pilot's landed, let's go!
 	scene "scenes/Gambler/WorldC2M5B52.vcd"  //Copter's landed, let's go!
 	scene "scenes/Gambler/WorldC2M5B53.vcd"  //Let's go, let's go to the copter!
 }
-Rule C2M5ChopperNagGambler
+Rule C2M5ChopperLandedGambler
 {
-	criteria ConceptGetToVehicle IsGambler Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
-	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
+	criteria ConceptFinalVehicleArrived IsGambler Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_NotTimerLockA _auto_NotTimerLockGambler _auto_NotEscapeReady IsNotSpeakingWeight0
+	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
 	applycontexttoworld
-	Response C2M5ChopperNagGambler
+	Response C2M5ChopperLandedGambler
 }
 
 Response C2M5InChopperNagGambler
@@ -1911,7 +1910,7 @@ Rule C3M2DisgustGambler
 
 Response C3M2SafeRoomGambler
 {
-	scene "scenes/Gambler/WorldC3M2B03.vcd"  then gambler C3M2SafeRoomb2 foo:0 .01 //These swamps don't agree with me.
+	scene "scenes/Gambler/WorldC3M2B03.vcd"  then self C3M2SafeRoomb2 foo:0 .01 //These swamps don't agree with me.
 	scene "scenes/Gambler/WorldC3M2B05.vcd" then self IntroEnd foo:0 0.1 //I am not dying in this goddamn swamp.
 }
 Rule C3M2SafeRoomGambler
@@ -1992,7 +1991,7 @@ Response C3M4BoatNagsGambler
 }
 Rule C3M4BoatNagsGambler
 {
-	criteria ConceptGetToVehicle IsGambler ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsGambler ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsGambler
@@ -2112,16 +2111,28 @@ Rule C3M4Button202Gambler
 
 Response C3M4GateBlow01Gambler
 {
-	scene "scenes/Gambler/WorldC3M4B22.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //Our Cajun buddy blew open the gate, let's go!
-	scene "scenes/Gambler/WorldC3M4B26.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //Wow! I thought he'd just OPEN the gate.
-	scene "scenes/Gambler/WorldC3M4B27.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //That's one way to open that gate.
+	scene "scenes/Gambler/WorldC3M4B22.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //Our Cajun buddy blew open the gate, let's go!
+	scene "scenes/Gambler/WorldC3M4B26.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //Wow! I thought he'd just OPEN the gate.
+	scene "scenes/Gambler/WorldC3M4B27.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //That's one way to open that gate.
 }
 Rule C3M4GateBlow01Gambler
 {
-	criteria ConceptC3M4GateBlow01 IsGambler FromIsAnOrator IsTalk AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_TimerLockA:1:3"
+	criteria ConceptFinalVehicleArrived IsGambler IsNotIncapacitated IsNotAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:7,_auto_Escape:1:0"
 	applycontexttoworld
 	Response C3M4GateBlow01Gambler
+}
+
+Response C3M4GateBlow01AloneGambler
+{
+	print " " then orator C3M4GateBlow02 foo:0 5 //
+}
+Rule C3M4GateBlow01AloneGambler
+{
+	criteria ConceptFinalVehicleArrived IsGambler IsNotIncapacitated IsAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:5,_auto_Escape:1:0"
+	applycontexttoworld
+	Response C3M4GateBlow01AloneGambler
 }
 
 
@@ -2234,7 +2245,7 @@ Response C4M5BoatNagsGambler
 }
 Rule C4M5BoatNagsGambler
 {
-	criteria ConceptGetToVehicle IsGambler Isc4m5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsGambler Isc4m5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
 	applycontexttoworld
 	Response C4M5BoatNagsGambler
@@ -3444,7 +3455,19 @@ Response C5M5LeaveSafeGambler
 }
 Rule C5M5LeaveSafeGambler
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsGambler IsMapc5m5_bridge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsGambler IsNotAlone IsMapc5m5_bridge IsNotSaidLeavingSafeArea
+	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
+	applycontexttoworld
+	Response C5M5LeaveSafeGambler
+}
+
+Response C5M5LeaveSafeAloneGambler
+{
+	print " "  then orator C5M5_Soldier1 foo:0 0 //
+}
+Rule C5M5LeaveSafeGambler
+{
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsGambler IsAlone IsMapc5m5_bridge IsNotSaidLeavingSafeArea
 	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
 	applycontexttoworld
 	Response C5M5LeaveSafeGambler
@@ -3475,7 +3498,7 @@ Response C5M5RunToHeliGambler
 }
 Rule C5M5RunToHeliGambler
 {
-	criteria ConceptGetToVehicle IsGambler IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsGambler IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
 	applycontexttoworld
 	Response C5M5RunToHeliGambler
@@ -3626,7 +3649,7 @@ Rule C6M1Intro_07bGambler
 
 Response C6M1Intro_09aGambler
 {
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting03.vcd"  then Gambler C6M1Intro_09b foo:0 -0.741 //Hey! (Realization someone else is alive) HEEEYYY!!
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting03.vcd"  then self C6M1Intro_09b foo:0 -0.741 //Hey! (Realization someone else is alive) HEEEYYY!!
 }
 Rule C6M1Intro_09aGambler
 {
@@ -4226,22 +4249,26 @@ Response C6M3_BridgeGettoCarGambler
 {
 	norepeat
 	scene "scenes/Gambler/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Everyone to the car!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleBridgeRun04.vcd"  //GET TO THE CAR, GET TO THE CAR!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleBridgeRun04.vcd"  //GET TO THE CAR, GET TO THE CAR!
 }
 Rule C6M3_BridgeGettoCarGambler
 {
-	criteria ConceptGetToVehicle IsGambler Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsGambler Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
 	applycontexttoworld
 	Response C6M3_BridgeGettoCarGambler
 }
 
-Rule C6M3_elevatorCancelGambler
+Response C6M3_BridgeNexttoCarGambler
 {
-	criteria ConceptC6M3_ElevatorCancel IsGambler IsC6M3_port AutoIsNotScavenge AutoIsNotSurvival
-	forceweight 1
-	Response _PlayerInfoRemarkableBlankGambler
+	norepeat
+	scene "scenes/Gambler/DLC1_C6M3_FinaleBridgeRun04.vcd"  //GET TO THE CAR, GET TO THE CAR!
+}
+Rule C6M3_BridgeNexttoCarGambler
+{
+	criteria ConceptGetToVehicle IsGambler Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
+	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
+	applycontexttoworld
+	Response C6M3_BridgeNexttoCarGambler
 }
 
 Response C6M3_elevatorGambler
@@ -6659,18 +6686,6 @@ Rule PlayerRemarkC1M1OverTableGambler
 	Response PlayerRemarkC1M1OverTableGambler
 }
 
-Response PlayerRemarkC1M1SearchRoomsGambler
-{
-	scene "scenes/Gambler/WorldC1M1B35.vcd"  then any C1M1Cough foo:0 -2.192 //Search these rooms. Might be something we can use.
-}
-Rule PlayerRemarkC1M1SearchRoomsGambler
-{
-	criteria ConceptRemark IsGambler IsC1M1SearchRooms IsNotSaidC1M1SearchRooms IsNotCoughing NotInCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
-	ApplyContext "SaidC1M1SearchRooms:1:0"
-	applycontexttoworld
-	Response PlayerRemarkC1M1SearchRoomsGambler
-}
-
 Response PlayerRemarkC1M1ThroughThisDoorGambler
 {
 	scene "scenes/Gambler/MiscDirectional13.vcd"  then any C1M1Cough foo:0 -0.819 //Through this door!
@@ -6787,7 +6802,7 @@ Rule PlayerRemarkC1M3OverHereGambler
 
 Response PlayerRemarkC1M3SearchRoomsGambler
 {
-	scene "scenes/Gambler/WorldC1M1B35.vcd"  then any C1M1Cough foo:0 -2.192 //Search these rooms. Might be something we can use.
+	scene "scenes/Gambler/WorldC1M1B35.vcd"  //Search these rooms. Might be something we can use.
 }
 Rule PlayerRemarkC1M3SearchRoomsGambler
 {
@@ -8567,7 +8582,7 @@ Response PlayerRemarkWorldC1M1ElevatorBrokenGambler
 }
 Rule PlayerRemarkWorldC1M1ElevatorBrokenGambler
 {
-	criteria ConceptRemark IsGambler IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsTalk IsTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler IsNotSpeakingWeight0
+	criteria ConceptRemark IsGambler IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsNotAlone IsTalk IsTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M1ElevatorBroken:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC1M1ElevatorBrokenGambler
@@ -13837,7 +13852,7 @@ Rule _C1M1_ElevatorHelloGambler
 
 Response _C1M1_ElevatorHelloAllAliveExtra1Gambler
 {
-	scene "scenes/Gambler/WorldC1M1B60.vcd"  then gambler _C1M1_ElevatorHelloAllAliveExtra2 foo:0 -1.859 //There's blood on me, but it ain't mine.
+	scene "scenes/Gambler/WorldC1M1B60.vcd"  then self _C1M1_ElevatorHelloAllAliveExtra2 foo:0 -1.859 //There's blood on me, but it ain't mine.
 }
 Rule _C1M1_ElevatorHelloAllAliveExtra1Gambler
 {
@@ -13847,7 +13862,7 @@ Rule _C1M1_ElevatorHelloAllAliveExtra1Gambler
 
 Response _C1M1_ElevatorHelloAllAliveExtra2Gambler
 {
-	scene "scenes/Gambler/WorldC1M1B56.vcd"  then gambler _C1M1_ElevatorHello01b foo:0 -1.500 //Name's Nick.
+	scene "scenes/Gambler/WorldC1M1B56.vcd"  then self _C1M1_ElevatorHello01b foo:0 -1.500 //Name's Nick.
 }
 Rule _C1M1_ElevatorHelloAllAliveExtra2Gambler
 {
@@ -14222,7 +14237,7 @@ Response _c4m1Intro03Gambler
 	scene "scenes/Gambler/WorldC4M110.vcd"  then producer _c4m1Intro04 foo:0 0.01 //We'll signal you when you should return.
     scene "scenes/Gambler/WorldC4M111.vcd"  then producer _c4m1Intro04 foo:0 0.01 //Stay away from the shore until we signal you.
     scene "scenes/Gambler/WorldC4M112.vcd"  then producer _c4m1Intro04 foo:0 0.01 //Stay offshore until we signal you.
-	scene "scenes/Gambler/WorldC4M101.vcd"  then gambler _c4m1Intro02 foo:0 0.01 //This, my friends, is a milk run.
+	scene "scenes/Gambler/WorldC4M101.vcd"  then self _c4m1Intro02 foo:0 0.01 //This, my friends, is a milk run.
 }
 Rule _c4m1Intro03Gambler
 {
@@ -14752,9 +14767,9 @@ Rule c1m1_elevator_door_openGambler
 
 Response c1m1_elevator_ready2Gambler
 {
-	scene "scenes/Gambler/WorldC1M1B41.vcd"  then gambler C1M1Cough foo:0 -3.035 //I bet there'll be something waiting for us out there. So let's get ready...
-	scene "scenes/Gambler/WorldC1M1B42.vcd"  then gambler C1M1Cough foo:0 -2.588 //Alright, we're all friends now. Get ready...
-	scene "scenes/Gambler/WorldC1M1B40.vcd"  then gambler C1M1Cough foo:0 -0.517 //Get ready...
+	scene "scenes/Gambler/WorldC1M1B41.vcd"  then self C1M1Cough foo:0 -3.035 //I bet there'll be something waiting for us out there. So let's get ready...
+	scene "scenes/Gambler/WorldC1M1B42.vcd"  then self C1M1Cough foo:0 -2.588 //Alright, we're all friends now. Get ready...
+	scene "scenes/Gambler/WorldC1M1B40.vcd"  then self C1M1Cough foo:0 -0.517 //Get ready...
 }
 Rule c1m1_elevator_ready2Gambler
 {
@@ -14801,7 +14816,7 @@ Rule _C1M1_ElevatorHello2AliveExtra2Gambler
 
 Response _C1M1_ElevatorHello3AliveExtra1Gambler
 {
-	scene "scenes/Gambler/WorldC1M1B64.vcd"  then gambler _C1M1_ElevatorHello3AliveNickIntro1 foo:0 -1.027 //And then there were three.
+	scene "scenes/Gambler/WorldC1M1B64.vcd"  then self _C1M1_ElevatorHello3AliveNickIntro1 foo:0 -1.027 //And then there were three.
 }
 Rule _C1M1_ElevatorHello3AliveExtra1Gambler
 {
@@ -14811,7 +14826,7 @@ Rule _C1M1_ElevatorHello3AliveExtra1Gambler
 
 Response _C1M1_ElevatorHello3AliveNickIntro1Gambler
 {
-	scene "scenes/Gambler/WorldC1M1B56.vcd"  then gambler _C1M1_ElevatorHello3AliveNickIntro2 foo:0 -0.647 //Name's Nick.
+	scene "scenes/Gambler/WorldC1M1B56.vcd"  then self _C1M1_ElevatorHello3AliveNickIntro2 foo:0 -0.647 //Name's Nick.
 }
 Rule _C1M1_ElevatorHello3AliveNickIntro1Gambler
 {
@@ -15033,7 +15048,7 @@ Response C1M4SafeRoomEndGambler
 }
 Rule C1M4SafeRoomEndGambler
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsGambler IsNotSaidLeavingSafeArea _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsNotAlone IsGambler IsNotSaidLeavingSafeArea _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:0:0"
 	applycontexttoworld
 	Response C1M4SafeRoomEndGambler
@@ -16767,7 +16782,7 @@ Response C13M4GetToVehicleGambler
 }
 Rule C13M4GetToVehicleGambler
 {
-	criteria ConceptGetToVehicle IsGambler ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsGambler ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
 	applycontexttoworld
 	Response C13M4GetToVehicleGambler
@@ -16788,14 +16803,6 @@ Rule SafeRoomStartGambler
 {
 	criteria ConceptTalkIdle IsGambler IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
-	applycontexttoworld
-	Response NoResponse
-}
-
-Rule IntroEndGambler
-{
-	criteria ConceptIntroEnd IsGambler FromIsGambler IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "Talk:0:0"
 	applycontexttoworld
 	Response NoResponse
 }

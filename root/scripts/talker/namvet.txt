@@ -1256,7 +1256,7 @@ Response C7M3PlayerGetToRescueVehicleNagNamVet
 }
 Rule C7M3PlayerGetToRescueVehicleNagNamVet
 {
-	criteria ConceptGetToVehicle IsNamVet ismapc7m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet _auto_NotPressedC7M3BridgeButton IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsNamVet ismapc7m3_port IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet _auto_NotPressedC7M3BridgeButton IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleNagNamVet
@@ -1456,7 +1456,7 @@ Response CrashFinaleTruckNagNamVet
 }
 Rule CrashFinaleTruckNagNamVet
 {
-	criteria ConceptGetToVehicle IsNamVet IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsNamVet IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30"
 	applycontexttoworld
 	Response CrashFinaleTruckNagNamVet
@@ -1677,7 +1677,7 @@ Response L4D1SurvivorFinalVehicleBoatNamVet
 }
 Rule L4D1SurvivorFinalVehicleBoatNamVet
 {
-	criteria ConceptGetToVehicle IsNamVet IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsNamVet IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatNamVet
@@ -1703,7 +1703,7 @@ Response L4D1SurvivorFinalVehicleFarmNamVet
 }
 Rule L4D1SurvivorFinalVehicleFarmNamVet
 {
-	criteria ConceptGetToVehicle IsNamVet IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsNamVet IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmNamVet
@@ -1743,7 +1743,7 @@ Response L4D1SurvivorFinalVehicleRooftopNamVet
 }
 Rule L4D1SurvivorFinalVehicleRooftopNamVet
 {
-	criteria ConceptGetToVehicle IsNamVet IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsNamVet IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRooftopNamVet
@@ -1769,7 +1769,7 @@ Response L4D1SurvivorFinalVehicleRunwayNamVet
 }
 Rule L4D1SurvivorFinalVehicleRunwayNamVet
 {
-	criteria ConceptGetToVehicle IsNamVet IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsNamVet IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRunwayNamVet
@@ -3026,7 +3026,7 @@ Rule L4D1HelpResponseLouisNamVet
 
 Response L4D1HelpResponseLouisCNamVet
 {
-	scene "scenes/NamVet/InsideSafeRoom03.vcd"  then NamVet NeedsHelpResponseLouisC2 foo:0 0.5 //How well do you really know Louis?
+	scene "scenes/NamVet/InsideSafeRoom03.vcd"  then self NeedsHelpResponseLouisC2 foo:0 0.5 //How well do you really know Louis?
 }
 Rule L4D1HelpResponseLouisCNamVet
 {
@@ -5270,7 +5270,7 @@ Response ScavengeStartNamVet
 }
 Rule ScavengeStartNamVet
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsNamVet IsNotAlone IsTalk IsTalkNamVet IsWorldTalkNamVet IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartNamVet
@@ -8188,7 +8188,7 @@ Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2NamVet
 
 Rule L4D1SurvivorFinalVehicleBoatC14M2NamVet
 {
-	criteria ConceptGetToVehicle IsNamVet IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsNamVet IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockNamVet IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatNamVet

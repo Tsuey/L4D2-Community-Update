@@ -246,7 +246,7 @@ Response Playerc1m1_elevator_pushbuttonProducer
 }
 Rule Playerc1m1_elevator_pushbuttonProducer
 {
-	criteria Conceptc1m1_elevator_pushbutton IsProducer IsTalk IsTalkProducer IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer
+	criteria Conceptc1m1_elevator_pushbutton IsProducer IsTalk IsTalkProducer IsNotAlone IsNotSaidc1m1_elevator_pushbutton AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer
 	ApplyContext "Saidc1m1_elevator_pushbutton:1:0"
 	applycontexttoworld
 	Response Playerc1m1_elevator_pushbuttonProducer
@@ -815,11 +815,11 @@ Rule ReviveMeInterruptedCriticalProducer
 
 Response ReviveThanksProducer
 {
-	scene "scenes/Producer/Thanks01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks for that.
-	scene "scenes/Producer/Thanks02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Hey, thanks!
-	scene "scenes/Producer/Thanks03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks!
-	scene "scenes/Producer/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks I owe you one.
-	scene "scenes/Producer/Thanks06.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Phew, thanks.
+	scene "scenes/Producer/Thanks01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks for that.
+	scene "scenes/Producer/Thanks02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Hey, thanks!
+	scene "scenes/Producer/Thanks03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks!
+	scene "scenes/Producer/Thanks04.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks I owe you one.
+	scene "scenes/Producer/Thanks06.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Phew, thanks.
 }
 Rule ReviveThanksProducer
 {
@@ -830,8 +830,8 @@ Rule ReviveThanksProducer
 
 Response ReviveThanksCoachProducer
 {
-	scene "scenes/Producer/ThanksCoach01.vcd" predelay "2,2.5" then subject YouAreWelcome foo:0 0 //Thanks, my brother.
-	scene "scenes/Producer/ThanksCoach02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks, Coach!
+	scene "scenes/Producer/ThanksCoach01.vcd" predelay "2,2.5" then subject YouAreWelcome foo:0 0.3 //Thanks, my brother.
+	scene "scenes/Producer/ThanksCoach02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks, Coach!
 }
 Rule ReviveThanksCoachProducer
 {
@@ -842,7 +842,7 @@ Rule ReviveThanksCoachProducer
 
 Response ReviveThanksCoachC1Producer
 {
-	scene "scenes/Producer/NameCoach201.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //You're a heart of gold fatman.
+	scene "scenes/Producer/NameCoach201.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //You're a heart of gold fatman.
 }
 Rule ReviveThanksCoachC1Producer
 {
@@ -873,7 +873,7 @@ Response ReviveThanksMechanicProducer
 {
 	scene "scenes/Producer/NiceJobMechanic01.vcd" predelay ".2,.5" //You're the man, Ellis, you are the man.
 	scene "scenes/Producer/NiceJobMechanic02.vcd" predelay ".2,.5" //You're the man, Ellis, you are the man.
-	scene "scenes/Producer/ThanksEllis01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Ellis, I guess I will keep you.
+	scene "scenes/Producer/ThanksEllis01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Ellis, I guess I will keep you.
 }
 Rule ReviveThanksMechanicProducer
 {
@@ -891,9 +891,9 @@ Rule ReviveThanksMechanicC1KnownProducer
 
 Response ReviveThanksBikerProducer
 {
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items06.vcd"  predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Francis.
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items08.vcd" odds 1  predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks sexy guy in the vest.
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing06.vcd"  predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Francis!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items06.vcd"  predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Francis.
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items08.vcd" odds 1  predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks sexy guy in the vest.
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing06.vcd"  predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Francis!
 }
 Rule ReviveThanksBikerProducer
 {
@@ -904,10 +904,10 @@ Rule ReviveThanksBikerProducer
 
 Response ReviveThanksTeenGirlProducer
 {
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing07.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Zoey!
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Zoey!
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thanks Zoey!
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0 //Thank for the help Zoey!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing07.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Zoey!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Zoey!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items02.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thanks Zoey!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay ".2,.5" then subject YouAreWelcome foo:0 0.3 //Thank for the help Zoey!
 }
 Rule ReviveThanksTeenGirlProducer
 {
@@ -989,7 +989,7 @@ Response C1M2LeavingSafeRoomProducer
 }
 Rule C1M2LeavingSafeRoomProducer
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsProducer IsNotSaidLeavingSafeArea ismap_c1m2_streets _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsProducer IsNotAlone IsNotSaidLeavingSafeArea ismap_c1m2_streets _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:1:3.298"
 	applycontexttoworld
 	Response C1M2LeavingSafeRoomProducer
@@ -1557,20 +1557,19 @@ Rule C2M5Button1Producer
 	Response C2M5Button1Producer
 }
 
-Response C2M5ChopperNagProducer
+Response C2M5ChopperLandedProducer
 {
-	norepeat
 	scene "scenes/Producer/WorldC2M5B48.vcd"  //Let's go! Get to the helicopter!
 	scene "scenes/Producer/WorldC2M5B49.vcd"  //Everybody get to the chopper!
 	scene "scenes/Producer/WorldC2M5B50.vcd"  //Let's go, guys, let's go! Get to the chopper!
 	scene "scenes/Producer/WorldC2M5B52.vcd"  //Let's go, let's go! Chopper's here!
 }
-Rule C2M5ChopperNagProducer
+Rule C2M5ChopperLandedProducer
 {
-	criteria ConceptGetToVehicle IsProducer Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
-	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
+	criteria ConceptFinalVehicleArrived IsProducer Ismap_c2m5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_NotTimerLockA _auto_NotTimerLockProducer _auto_NotEscapeReady IsNotSpeakingWeight0
+	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
 	applycontexttoworld
-	Response C2M5ChopperNagProducer
+	Response C2M5ChopperLandedProducer
 }
 
 Response C2M5InChopperNagProducer
@@ -1923,7 +1922,7 @@ Response C3M4BoatNagsProducer
 }
 Rule C3M4BoatNagsProducer
 {
-	criteria ConceptGetToVehicle IsProducer ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsProducer ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsProducer
@@ -2004,16 +2003,28 @@ Rule C3M4Button202Producer
 
 Response C3M4GateBlow01Producer
 {
-	scene "scenes/Producer/WorldC3M1B11.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //WOW! Gate's open!
-	scene "scenes/Producer/WorldC3M1B12.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //I guess the boat ride's here!
-	scene "scenes/Producer/WorldC3M422.vcd"  then orator C3M4GateBlow02 foo:0 0.01 //Boat's here! Let's go!
+	scene "scenes/Producer/WorldC3M1B11.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //WOW! Gate's open!
+	scene "scenes/Producer/WorldC3M1B12.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //I guess the boat ride's here!
+	scene "scenes/Producer/WorldC3M422.vcd" predelay "2" then orator C3M4GateBlow02 foo:0 2.01 //Boat's here! Let's go!
 }
 Rule C3M4GateBlow01Producer
 {
-	criteria ConceptC3M4GateBlow01 IsProducer FromIsAnOrator IsTalk AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_TimerLockA:1:3"
+	criteria ConceptFinalVehicleArrived IsProducer IsNotIncapacitated IsNotAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:7,_auto_Escape:1:0"
 	applycontexttoworld
 	Response C3M4GateBlow01Producer
+}
+
+Response C3M4GateBlow01AloneProducer
+{
+	print " " then orator C3M4GateBlow02 foo:0 5 //
+}
+Rule C3M4GateBlow01AloneProducer
+{
+	criteria ConceptFinalVehicleArrived IsProducer IsNotIncapacitated IsAlone ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_HasSpottedVehicle _auto_NotEscapeReady
+	ApplyContext "_auto_TimerLockA:1:5,_auto_Escape:1:0"
+	applycontexttoworld
+	Response C3M4GateBlow01AloneProducer
 }
 
 
@@ -2073,7 +2084,7 @@ Response C4M5BoatNagsProducer
 }
 Rule C4M5BoatNagsProducer
 {
-	criteria ConceptGetToVehicle IsProducer Isc4m5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsProducer Isc4m5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
 	applycontexttoworld
 	Response C4M5BoatNagsProducer
@@ -2857,7 +2868,7 @@ Response C5M5RunToHeliProducer
 }
 Rule C5M5RunToHeliProducer
 {
-	criteria ConceptGetToVehicle IsProducer IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsProducer IsMapc5m5_bridge IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
 	applycontexttoworld
 	Response C5M5RunToHeliProducer
@@ -3013,7 +3024,7 @@ Rule C6M1Intro_07cProducer
 
 Response C6M1Intro_09eProducer
 {
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting12.vcd"  then Producer C6M1Intro_09f foo:0 -2.022 //Uh, Nick. He's talking to me.
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting12.vcd"  then self C6M1Intro_09f foo:0 -2.022 //Uh, Nick. He's talking to me.
 }
 Rule C6M1Intro_09eProducer
 {
@@ -3043,8 +3054,8 @@ Rule C6M1Intro_10bProducer
 
 Response C6M1Intro_10dProducer
 {
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting15.vcd"  then Producer C6M1Intro_10e foo:0 -2.369 //See Nick, you should try being nice sometime.
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting16.vcd"  then Producer C6M1Intro_10e foo:0 -2.026 //See Nick, you should try being nice sometime.
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting15.vcd"  then self C6M1Intro_10e foo:0 -2.369 //See Nick, you should try being nice sometime.
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting16.vcd"  then self C6M1Intro_10e foo:0 -2.026 //See Nick, you should try being nice sometime.
 }
 Rule C6M1Intro_10dProducer
 {
@@ -3168,9 +3179,9 @@ Rule C6M1Intro_19bProducer
 
 Response C6M1Intro_20aProducer
 {
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting45.vcd"  then Producer C6M1Intro_20b foo:0 -0.951 //What the?
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting46.vcd"  then Producer C6M1Intro_20b foo:0 -1.214 //(to group) Is he being serious?
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting48.vcd"  then Producer C6M1Intro_20b foo:0 -1.464 //(to group) Is he being serious?
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting45.vcd"  then self C6M1Intro_20b foo:0 -0.951 //What the?
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting46.vcd"  then self C6M1Intro_20b foo:0 -1.214 //(to group) Is he being serious?
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting48.vcd"  then self C6M1Intro_20b foo:0 -1.464 //(to group) Is he being serious?
 }
 Rule C6M1Intro_20aProducer
 {
@@ -3587,8 +3598,8 @@ Rule DLC1_C6M2_SafeRoomConvo15aProducer
 Response DLC1_C6M2_SafeRoomConvoStartProducer
 {
 	scene "scenes/Producer/DLC1_C6M2_SafeRoomConvo37.vcd"  then Mechanic DLC1_C6M2_SafeRoomConvo17a foo:0 -10.043 //Ellis honey, I've been thinking. Somewhere down the road, do you think we can trade up for a car with, let's say,  working doors and a backseat?
-	scene "scenes/Producer/DLC1_C6M2_SafeRoomConvo26.vcd"  then Producer DLC1_C6M2_SafeRoomConvo14a foo:0 -1.209 //(to self)We need to get motivated.
-	scene "scenes/Producer/DLC1_C6M2_SafeRoomConvo27.vcd"  then Producer DLC1_C6M2_SafeRoomConvo14a foo:0 -2.664 //(to self)We need to get motivated. How we gonna get motivated...
+	scene "scenes/Producer/DLC1_C6M2_SafeRoomConvo26.vcd"  then self DLC1_C6M2_SafeRoomConvo14a foo:0 -1.209 //(to self)We need to get motivated.
+	scene "scenes/Producer/DLC1_C6M2_SafeRoomConvo27.vcd"  then self DLC1_C6M2_SafeRoomConvo14a foo:0 -2.664 //(to self)We need to get motivated. How we gonna get motivated...
 }
 Rule DLC1_C6M2_SafeRoomConvoStartProducer
 {
@@ -3694,8 +3705,8 @@ Rule DLC1_C6M2_SafeRoomConvo21aProducer
 
 Response WorldC6M2_InSewer101aProducer
 {
-	scene "scenes/Producer/DLC1_C6M2_Phase2InWater01.vcd"  then Producer WorldC6M2_InSewer101b foo:0 0.5 //Nick, I'm pretty sure this is sewage.
-	scene "scenes/Producer/DLC1_C6M2_Phase2InWater03.vcd"  then Producer WorldC6M2_InSewer101b foo:0 -3.388 //Nick, I'm pretty sure this is sewage.
+	scene "scenes/Producer/DLC1_C6M2_Phase2InWater01.vcd"  then self WorldC6M2_InSewer101b foo:0 0.5 //Nick, I'm pretty sure this is sewage.
+	scene "scenes/Producer/DLC1_C6M2_Phase2InWater03.vcd"  then self WorldC6M2_InSewer101b foo:0 -3.388 //Nick, I'm pretty sure this is sewage.
 }
 Rule WorldC6M2_InSewer101aProducer
 {
@@ -3727,7 +3738,7 @@ Rule WorldC6M2_InSewer202aProducer
 
 Response WorldC6M2_OnTourWalk101aProducer
 {
-	scene "scenes/Producer/DLC1_C6M2_HistoricTour03.vcd"  then Producer WorldC6M2_OnTourWalk101b foo:0 -0.850 //Shithole?
+	scene "scenes/Producer/DLC1_C6M2_HistoricTour03.vcd"  then self WorldC6M2_OnTourWalk101b foo:0 -0.850 //Shithole?
 }
 Rule WorldC6M2_OnTourWalk101aProducer
 {
@@ -3844,21 +3855,26 @@ Response C6M3_BridgeGettoCarProducer
 {
 	norepeat
 	scene "scenes/Producer/DLC1_C6M3_FinaleBridgeRun02.vcd"  //Come on, let's get to the car!
-	scene "scenes/Producer/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Get to the car!
 }
 Rule C6M3_BridgeGettoCarProducer
 {
-	criteria ConceptGetToVehicle IsProducer Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsProducer Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
 	applycontexttoworld
 	Response C6M3_BridgeGettoCarProducer
 }
 
-Rule C6M3_elevatorCancelProducer
+Response C6M3_BridgeNexttoCarProducer
 {
-	criteria ConceptC6M3_ElevatorCancel IsProducer IsC6M3_port AutoIsNotScavenge AutoIsNotSurvival
-	forceweight 1
-	Response _PlayerInfoRemarkableBlankProducer
+	norepeat
+	scene "scenes/Producer/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Get to the car!
+}
+Rule C6M3_BridgeNexttoCarProducer
+{
+	criteria ConceptGetToVehicle IsProducer Isc6m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
+	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
+	applycontexttoworld
+	Response C6M3_BridgeNexttoCarProducer
 }
 
 Response C6M3_elevatorProducer
@@ -6263,18 +6279,6 @@ Rule PlayerRemarkC1M1OverTableProducer
 	Response PlayerRemarkC1M1OverTableProducer
 }
 
-Response PlayerRemarkC1M1SearchRoomsProducer
-{
-	scene "scenes/Producer/WorldGenericProducer41.vcd"  then any C1M1Cough foo:0 -2.695 //Search those rooms. Might be something we can use.
-}
-Rule PlayerRemarkC1M1SearchRoomsProducer
-{
-	criteria ConceptRemark IsProducer IsC1M1SearchRooms IsNotSaidC1M1SearchRooms IsNotCoughing NotInCombat IsTalk IsTalkProducer IsWorldTalkProducer IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
-	ApplyContext "SaidC1M1SearchRooms:1:0"
-	applycontexttoworld
-	Response PlayerRemarkC1M1SearchRoomsProducer
-}
-
 Response PlayerRemarkC1M1ThroughThisDoorProducer
 {
 	scene "scenes/Producer/MiscDirectional13.vcd"  then any C1M1Cough foo:0 -0.677 //Through this door!
@@ -6370,7 +6374,7 @@ Rule PlayerRemarkC1M3OverHereProducer
 
 Response PlayerRemarkC1M3SearchRoomsProducer
 {
-	scene "scenes/Producer/WorldGenericProducer41.vcd"  then any C1M1Cough foo:0 -2.695 //Search those rooms. Might be something we can use.
+	scene "scenes/Producer/WorldGenericProducer41.vcd" //Search those rooms. Might be something we can use.
 }
 Rule PlayerRemarkC1M3SearchRoomsProducer
 {
@@ -7091,7 +7095,7 @@ Response PlayerRemarkC3M2StartProducer
 
 Rule C3M2LeavingSafeRoomProducer
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsProducer IsNotSaidLeavingSafeArea ismapc3m2_swamp _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsProducer IsNotAlone IsNotSaidLeavingSafeArea ismapc3m2_swamp _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:1:3.298"
 	applycontexttoworld
 	Response PlayerRemarkC3M2StartProducer
@@ -7961,7 +7965,7 @@ Response PlayerRemarkWorldC1M1ElevatorBrokenProducer
 }
 Rule PlayerRemarkWorldC1M1ElevatorBrokenProducer
 {
-	criteria ConceptRemark IsProducer IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsTalk IsTalkProducer IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer IsNotSpeakingWeight0
+	criteria ConceptRemark IsProducer IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsNotAlone IsTalk IsTalkProducer IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M1ElevatorBroken:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC1M1ElevatorBrokenProducer
@@ -8857,8 +8861,8 @@ Rule PlayerRemarkWorldC6M2_SuitcaseProducer
 
 Response PlayerRemarkWorldC6M2_TourEntranceProducer
 {
-	scene "scenes/Producer/DLC1_C6M2_TicketCounter01.vcd"  then Producer WorldC6M2_TourEntrance01a foo:0 -1.841 //Maybe there's no zombies down here.
-	scene "scenes/Producer/DLC1_C6M2_TicketCounter03.vcd"  then Producer WorldC6M2_TourEntrance01a foo:0 0.1 //Maybe there's no zombies down here.
+	scene "scenes/Producer/DLC1_C6M2_TicketCounter01.vcd"  then self WorldC6M2_TourEntrance01a foo:0 -1.841 //Maybe there's no zombies down here.
+	scene "scenes/Producer/DLC1_C6M2_TicketCounter03.vcd"  then self WorldC6M2_TourEntrance01a foo:0 0.1 //Maybe there's no zombies down here.
 }
 Rule PlayerRemarkWorldC6M2_TourEntranceProducer
 {
@@ -9996,7 +10000,7 @@ Response ScavengeStartProducer
 }
 Rule ScavengeStartProducer
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsProducer IsNotAlone IsTalk IsTalkProducer IsWorldTalkProducer IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response ScavengeStartProducer
@@ -10004,7 +10008,7 @@ Rule ScavengeStartProducer
 
 Rule ScavengeStartC1M4Producer
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsProducer IsTalk IsTalkProducer ismap_c1m4_atrium IsWorldTalkProducer IsScavenge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingCheckpoint IsProducer IsNotAlone IsTalk IsTalkProducer ismap_c1m4_atrium IsWorldTalkProducer IsScavenge IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response FinaleStartC1M4Producer
@@ -13599,9 +13603,9 @@ Rule c1m1_elevator_door_openProducer
 
 Response c1m1_elevator_ready2Producer
 {
-	scene "scenes/Producer/WorldGenericProducer45.vcd"  then producer C1M1Cough foo:0 -2.467 //I don't like this. Get ready?
-	scene "scenes/Producer/WorldGenericProducer72.vcd"  then Producer C1M1Cough foo:0 -3.454 //Okay. When these doors open, get ready for a fight.
-	scene "scenes/Producer/WorldGenericProducer73.vcd"  then Producer C1M1Cough foo:0 -4.308 //Get ready. I get the feeling we might have company when this door opens.
+	scene "scenes/Producer/WorldGenericProducer45.vcd"  then self C1M1Cough foo:0 -2.467 //I don't like this. Get ready?
+	scene "scenes/Producer/WorldGenericProducer72.vcd"  then self C1M1Cough foo:0 -3.454 //Okay. When these doors open, get ready for a fight.
+	scene "scenes/Producer/WorldGenericProducer73.vcd"  then self C1M1Cough foo:0 -4.308 //Get ready. I get the feeling we might have company when this door opens.
 }
 Rule c1m1_elevator_ready2Producer
 {
@@ -13912,7 +13916,7 @@ Response C1M4SafeRoomEndProducer
 }
 Rule C1M4SafeRoomEndProducer
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsProducer IsNotSaidLeavingSafeArea _auto_NotTellingStory
+	criteria ConceptSurvivorLeavingInitialCheckpoint ismap_c1m4_atrium IsNotAlone IsProducer IsNotSaidLeavingSafeArea _auto_NotTellingStory
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:0:0"
 	applycontexttoworld
 	Response C1M4SafeRoomEndProducer
@@ -13984,7 +13988,7 @@ Response LeavingC2M1StartProducer
 }
 Rule LeavingC2M1StartProducer
 {
-	criteria ConceptSurvivorLeavingCheckpoint IsNotSaidLeavingSafeArea IsProducer Ismap_c2m1 IsTalk
+	criteria ConceptSurvivorLeavingCheckpoint IsNotSaidLeavingSafeArea IsProducer Ismap_c2m1 IsTalk AutoIsNotSurvival AutoIsNotScavenge
 	ApplyContext "SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response LeavingC2M1StartProducer
@@ -14270,7 +14274,7 @@ Rule WeddingWitchDead02aProducer
 
 Response WorldIntroC31a2Producer
 {
-	scene "scenes/Producer/WorldC3M1B02.vcd"  then producer WorldIntroC31a4 foo:0 -6.296 //That's true. If I had a pick a low point in the flight, it was probably when he stopped flying the chopper and attacked us.
+	scene "scenes/Producer/WorldC3M1B02.vcd"  then self WorldIntroC31a4 foo:0 -6.296 //That's true. If I had a pick a low point in the flight, it was probably when he stopped flying the chopper and attacked us.
 }
 Rule WorldIntroC31a2Producer
 {
@@ -14310,10 +14314,10 @@ Rule WorldIntroC31d2Producer
 
 Response WorldIntroC31e1Producer
 {
-	scene "scenes/Producer/WorldC3M101.vcd"  then producer WorldIntroC31e2 foo:0 -4.802 //Well, we aren't CEDA or the military, so I guess we're welcome.
+	scene "scenes/Producer/WorldC3M101.vcd"  then self WorldIntroC31e2 foo:0 -4.802 //Well, we aren't CEDA or the military, so I guess we're welcome.
 	scene "scenes/Producer/WorldC3M102.vcd"  then mechanic WorldIntroC31e2a foo:0 -3.487 //When they say stay out, I'm sure they mean someone else.
 	scene "scenes/Producer/WorldC3M103.vcd" then self IntroEnd foo:0 0.1 //Do you think they put this sign up before or after the infection?
-	scene "scenes/Producer/WorldC3M106.vcd"  then producer WorldIntroC31e2 foo:0 0.1 //What a friendly bunch.
+	scene "scenes/Producer/WorldC3M106.vcd"  then self WorldIntroC31e2 foo:0 0.1 //What a friendly bunch.
 }
 Rule WorldIntroC31e1Producer
 {
@@ -15557,7 +15561,7 @@ Response C13M4GetToVehicleProducer
 }
 Rule C13M4GetToVehicleProducer
 {
-	criteria ConceptGetToVehicle IsProducer ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsProducer ismapc13m4_cutthroatcreek IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
 	applycontexttoworld
 	Response C13M4GetToVehicleProducer
@@ -15583,14 +15587,6 @@ Rule SafeRoomStartProducer
 {
 	criteria ConceptTalkIdle IsProducer IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
-	applycontexttoworld
-	Response NoResponse
-}
-
-Rule IntroEndProducer
-{
-	criteria ConceptIntroEnd IsProducer FromIsProducer IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "Talk:0:0"
 	applycontexttoworld
 	Response NoResponse
 }
