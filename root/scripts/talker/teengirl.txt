@@ -57,7 +57,7 @@ Response L4D1ReviveMeInterruptedMinorTeenGirl
 }
 Rule L4D1ReviveMeInterruptedMinorTeenGirl
 {
-	criteria ConceptReviveMeInterrupted IsTeenGirl IsIncappedStarted IsIncappedStarted2
+	criteria ConceptReviveMeInterrupted IsTeenGirl IsIncappedStarted
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMinorTeenGirl
@@ -74,7 +74,7 @@ Response L4D1ReviveMeInterruptedMajorTeenGirl
 }
 Rule L4D1ReviveMeInterruptedMajorTeenGirl
 {
-	criteria ConceptReviveMeInterrupted IsTeenGirl IsIncappedBleeding1 IsIncappedBleeding2
+	criteria ConceptReviveMeInterrupted IsTeenGirl IsIncappedBleeding
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMajorTeenGirl
@@ -3708,7 +3708,7 @@ Response L4D1PlayerHelpIncappedTeenGirl
 }
 Rule L4D1PlayerHelpIncappedTeenGirl
 {
-	criteria ConceptPlayerHelp IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsIncapacitated IsIncappedStarted IsIncappedStarted2 NotCalledForHelpRecently IsWorldTalkTeenGirl
+	criteria ConceptPlayerHelp IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsIncapacitated IsIncappedStarted NotCalledForHelpRecently IsWorldTalkTeenGirl
 	ApplyContext "CalledForHelp:1:7.5"
 	Response L4D1PlayerHelpIncappedTeenGirl
 }
@@ -3729,7 +3729,7 @@ Response L4D1PlayerHelpIncappedBleedingTeenGirl
 }
 Rule L4D1PlayerHelpIncappedBleedingTeenGirl
 {
-	criteria ConceptPlayerHelp IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsIncapacitated IsIncappedBleeding1 IsIncappedBleeding2 NotCalledForHelpRecently IsWorldTalkTeenGirl
+	criteria ConceptPlayerHelp IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsIncapacitated IsIncappedBleeding NotCalledForHelpRecently IsWorldTalkTeenGirl
 	ApplyContext "CalledForHelp:1:15"
 	Response L4D1PlayerHelpIncappedBleedingTeenGirl
 }

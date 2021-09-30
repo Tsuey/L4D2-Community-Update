@@ -315,7 +315,7 @@ Response Playerc1m1_enter_elevatorGambler
 }
 Rule Playerc1m1_enter_elevatorGambler
 {
-	criteria Conceptc1m1_enter_elevator IsGambler IsTalk IsTalkGambler IsNotSaidc1m1_enter_elevator AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler
+	criteria Conceptc1m1_enter_elevator IsGambler IsTalk IsTalkGambler IsNotAlone IsNotSaidc1m1_enter_elevator AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler
 	ApplyContext "Saidc1m1_enter_elevator:1:0"
 	applycontexttoworld
 	Response Playerc1m1_enter_elevatorGambler
@@ -827,7 +827,7 @@ Response ReviveMeInterruptedMinorGambler
 }
 Rule ReviveMeInterruptedMinorGambler
 {
-	criteria ConceptReviveMeInterrupted IsGambler IsIncappedStarted IsIncappedStarted2
+	criteria ConceptReviveMeInterrupted IsGambler IsIncappedStarted
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response ReviveMeInterruptedMinorGambler
@@ -849,7 +849,7 @@ Response ReviveMeInterruptedMajorGambler
 }
 Rule ReviveMeInterruptedMajorGambler
 {
-	criteria ConceptReviveMeInterrupted IsGambler IsIncappedBleeding1 IsIncappedBleeding2
+	criteria ConceptReviveMeInterrupted IsGambler IsIncappedBleeding
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response ReviveMeInterruptedMajorGambler
@@ -6507,7 +6507,7 @@ Response PlayerHelpIncappedGambler
 }
 Rule PlayerHelpIncappedGambler
 {
-	criteria ConceptPlayerHelp IsGambler IsNotCoughing IsTalk IsTalkGambler IsIncappedStarted IsIncappedStarted2 IsIncapacitated NotCalledForHelpRecently IsWorldTalkGambler
+	criteria ConceptPlayerHelp IsGambler IsNotCoughing IsTalk IsTalkGambler IsIncappedStarted IsIncapacitated NotCalledForHelpRecently IsWorldTalkGambler
 	ApplyContext "CalledForHelp:1:7.5"
 	Response PlayerHelpIncappedGambler
 }
@@ -6520,7 +6520,7 @@ Response PlayerHelpIncappedBleedingGambler
 }
 Rule PlayerHelpIncappedBleedingGambler
 {
-	criteria ConceptPlayerHelp IsGambler IsNotCoughing IsTalk IsTalkGambler IsIncappedBleeding1 IsIncappedBleeding2 IsIncapacitated NotCalledForHelpRecently IsWorldTalkGambler
+	criteria ConceptPlayerHelp IsGambler IsNotCoughing IsTalk IsTalkGambler IsIncappedBleeding IsIncapacitated NotCalledForHelpRecently IsWorldTalkGambler
 	ApplyContext "CalledForHelp:1:15"
 	Response PlayerHelpIncappedBleedingGambler
 }
@@ -8582,7 +8582,7 @@ Response PlayerRemarkWorldC1M1ElevatorBrokenGambler
 }
 Rule PlayerRemarkWorldC1M1ElevatorBrokenGambler
 {
-	criteria ConceptRemark IsGambler IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsNotAlone IsTalk IsTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler IsNotSpeakingWeight0
+	criteria ConceptRemark IsGambler IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsTalk IsTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M1ElevatorBroken:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC1M1ElevatorBrokenGambler
