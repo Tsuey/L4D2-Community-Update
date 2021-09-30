@@ -457,10 +457,8 @@ criterion "IsTankDominated"  "AwardName" "HulkShutOut" required
 
 criterion "IsCarAlarm"  "PanicType" "CarAlarm" required
 
-criterion "IsIncappedStarted"   "healthfrac" "<2.99"	  required
-criterion "IsIncappedStarted2"   "healthfrac" ">1.99"	  required
-criterion "IsIncappedBleeding1"   "healthfrac" "<1.99"	  required
-criterion "IsIncappedBleeding2"   "healthfrac" ">.99"	  required
+criterion "IsIncappedStarted"   "healthfrac" ">1.99,<2.99"	  required
+criterion "IsIncappedBleeding"   "healthfrac" ">.99,<1.99"	  required
 criterion "IsIncappedLethargic"   "healthfrac" "<.99"	  required
 
 criterion "IsFullHealth"   "healthfrac" ">.99"	  required

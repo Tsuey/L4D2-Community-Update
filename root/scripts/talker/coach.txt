@@ -961,7 +961,7 @@ Response ReviveMeInterruptedCoach
 }
 Rule ReviveMeInterruptedCoach
 {
-	criteria ConceptReviveMeInterrupted IsCoach IsIncappedStarted IsIncappedStarted2
+	criteria ConceptReviveMeInterrupted IsCoach IsIncappedStarted
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response ReviveMeInterruptedCoach
@@ -983,7 +983,7 @@ Response ReviveMeInterruptedMajorCoach
 }
 Rule ReviveMeInterruptedMajorCoach
 {
-	criteria ConceptReviveMeInterrupted IsCoach IsIncappedBleeding1 IsIncappedBleeding2
+	criteria ConceptReviveMeInterrupted IsCoach IsIncappedBleeding
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response ReviveMeInterruptedMajorCoach
@@ -6386,7 +6386,7 @@ Response PlayerHelpIncappedCoach
 }
 Rule PlayerHelpIncappedCoach
 {
-	criteria ConceptPlayerHelp IsCoach IsNotCoughing IsTalk IsTalkCoach IsIncapacitated IsIncappedStarted IsIncappedStarted2 NotCalledForHelpRecently IsWorldTalkCoach
+	criteria ConceptPlayerHelp IsCoach IsNotCoughing IsTalk IsTalkCoach IsIncapacitated IsIncappedStarted NotCalledForHelpRecently IsWorldTalkCoach
 	ApplyContext "CalledForHelp:1:7.5"
 	Response PlayerHelpIncappedCoach
 }
@@ -6401,7 +6401,7 @@ Response PlayerHelpIncappedBleedingCoach
 }
 Rule PlayerHelpIncappedBleedingCoach
 {
-	criteria ConceptPlayerHelp IsCoach IsNotCoughing IsTalk IsTalkCoach IsIncapacitated IsIncappedBleeding1 IsIncappedBleeding2 NotCalledForHelpRecently IsWorldTalkCoach
+	criteria ConceptPlayerHelp IsCoach IsNotCoughing IsTalk IsTalkCoach IsIncapacitated IsIncappedBleeding NotCalledForHelpRecently IsWorldTalkCoach
 	ApplyContext "CalledForHelp:1:15"
 	Response PlayerHelpIncappedBleedingCoach
 }
@@ -8407,7 +8407,7 @@ Response PlayerRemarkWorldC1M1ElevatorBrokenCoach
 }
 Rule PlayerRemarkWorldC1M1ElevatorBrokenCoach
 {
-	criteria ConceptRemark IsCoach IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsNotAlone IsTalk IsTalkCoach IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach IsNotSpeakingWeight0
+	criteria ConceptRemark IsCoach IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsTalk IsTalkCoach IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkCoach IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M1ElevatorBroken:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC1M1ElevatorBrokenCoach

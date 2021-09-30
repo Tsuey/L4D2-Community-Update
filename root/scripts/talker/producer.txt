@@ -234,7 +234,7 @@ Response Playerc1m1_enter_elevatorProducer
 }
 Rule Playerc1m1_enter_elevatorProducer
 {
-	criteria Conceptc1m1_enter_elevator IsProducer IsTalk IsTalkProducer IsNotSaidc1m1_enter_elevator AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer
+	criteria Conceptc1m1_enter_elevator IsProducer IsTalk IsTalkProducer IsNotAlone IsNotSaidc1m1_enter_elevator AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer
 	ApplyContext "Saidc1m1_enter_elevator:1:0"
 	applycontexttoworld
 	Response Playerc1m1_enter_elevatorProducer
@@ -777,7 +777,7 @@ Response ReviveMeInterruptedMinorProducer
 }
 Rule ReviveMeInterruptedMinorProducer
 {
-	criteria ConceptReviveMeInterrupted IsProducer IsIncappedStarted IsIncappedStarted2
+	criteria ConceptReviveMeInterrupted IsProducer IsIncappedStarted
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response ReviveMeInterruptedMinorProducer
@@ -792,7 +792,7 @@ Response ReviveMeInterruptedMajorProducer
 }
 Rule ReviveMeInterruptedMajorProducer
 {
-	criteria ConceptReviveMeInterrupted IsProducer IsIncappedBleeding1 IsIncappedBleeding2
+	criteria ConceptReviveMeInterrupted IsProducer IsIncappedBleeding
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response ReviveMeInterruptedMajorProducer
@@ -6125,7 +6125,7 @@ Response PlayerHelpIncappedProducer
 }
 Rule PlayerHelpIncappedProducer
 {
-	criteria ConceptPlayerHelp IsProducer IsNotCoughing IsTalk IsTalkProducer IsIncappedStarted IsIncappedStarted2 IsIncapacitated NotCalledForHelpRecently IsWorldTalkProducer
+	criteria ConceptPlayerHelp IsProducer IsNotCoughing IsTalk IsTalkProducer IsIncappedStarted IsIncapacitated NotCalledForHelpRecently IsWorldTalkProducer
 	ApplyContext "CalledForHelp:1:7.5"
 	Response PlayerHelpIncappedProducer
 }
@@ -6138,7 +6138,7 @@ Response PlayerHelpIncappedBleedingProducer
 }
 Rule PlayerHelpIncappedBleedingProducer
 {
-	criteria ConceptPlayerHelp IsProducer IsNotCoughing IsTalk IsTalkProducer IsIncappedBleeding1 IsIncappedBleeding2 IsIncapacitated NotCalledForHelpRecently IsWorldTalkProducer
+	criteria ConceptPlayerHelp IsProducer IsNotCoughing IsTalk IsTalkProducer IsIncappedBleeding IsIncapacitated NotCalledForHelpRecently IsWorldTalkProducer
 	ApplyContext "CalledForHelp:1:15"
 	Response PlayerHelpIncappedBleedingProducer
 }
@@ -7965,7 +7965,7 @@ Response PlayerRemarkWorldC1M1ElevatorBrokenProducer
 }
 Rule PlayerRemarkWorldC1M1ElevatorBrokenProducer
 {
-	criteria ConceptRemark IsProducer IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsNotAlone IsTalk IsTalkProducer IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer IsNotSpeakingWeight0
+	criteria ConceptRemark IsProducer IsWorldC1M1ElevatorBroken IsNotSaidWorldC1M1ElevatorBroken IsNotCoughing NotInCombat IsTalk IsTalkProducer IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkProducer IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC1M1ElevatorBroken:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC1M1ElevatorBrokenProducer

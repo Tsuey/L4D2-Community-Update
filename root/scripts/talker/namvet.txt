@@ -71,7 +71,7 @@ Response L4D1ReviveMeInterruptedMinorNamVet
 }
 Rule L4D1ReviveMeInterruptedMinorNamVet
 {
-	criteria ConceptReviveMeInterrupted IsNamVet IsIncappedStarted IsIncappedStarted2
+	criteria ConceptReviveMeInterrupted IsNamVet IsIncappedStarted
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMinorNamVet
@@ -91,7 +91,7 @@ Response L4D1ReviveMeInterruptedMajorNamVet
 }
 Rule L4D1ReviveMeInterruptedMajorNamVet
 {
-	criteria ConceptReviveMeInterrupted IsNamVet IsIncappedBleeding1 IsIncappedBleeding2
+	criteria ConceptReviveMeInterrupted IsNamVet IsIncappedBleeding
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMajorNamVet
@@ -2957,7 +2957,7 @@ Response L4D1PlayerHelpIncappedNamVet
 }
 Rule L4D1PlayerHelpIncappedNamVet
 {
-	criteria ConceptPlayerHelp IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsIncappedStarted IsIncappedStarted2 IsIncapacitated NotCalledForHelpRecently IsWorldTalkNamVet
+	criteria ConceptPlayerHelp IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsIncappedStarted IsIncapacitated NotCalledForHelpRecently IsWorldTalkNamVet
 	ApplyContext "CalledForHelp:1:7.5"
 	Response L4D1PlayerHelpIncappedNamVet
 }
@@ -2976,7 +2976,7 @@ Response L4D1PlayerHelpIncapped2NamVet
 }
 Rule L4D1PlayerHelpIncapped2NamVet
 {
-	criteria ConceptPlayerHelp IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsIncapacitated IsIncappedBleeding1 IsIncappedBleeding2 NotCalledForHelpRecently IsWorldTalkNamVet
+	criteria ConceptPlayerHelp IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsIncapacitated IsIncappedBleeding NotCalledForHelpRecently IsWorldTalkNamVet
 	ApplyContext "CalledForHelp:1:15"
 	Response L4D1PlayerHelpIncapped2NamVet
 }

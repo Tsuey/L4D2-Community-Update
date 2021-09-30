@@ -65,7 +65,7 @@ Response L4D1ReviveMeInterruptedMinorBiker
 }
 Rule L4D1ReviveMeInterruptedMinorBiker
 {
-	criteria ConceptReviveMeInterrupted IsBiker IsIncappedStarted IsIncappedStarted2
+	criteria ConceptReviveMeInterrupted IsBiker IsIncappedStarted
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMinorBiker
@@ -87,7 +87,7 @@ Response L4D1ReviveMeInterruptedMajorBiker
 }
 Rule L4D1ReviveMeInterruptedMajorBiker
 {
-	criteria ConceptReviveMeInterrupted IsBiker IsIncappedBleeding1 IsIncappedBleeding2
+	criteria ConceptReviveMeInterrupted IsBiker IsIncappedBleeding
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMajorBiker
@@ -4354,7 +4354,7 @@ Response L4D1PlayerHelpIncappedBiker
 }
 Rule L4D1PlayerHelpIncappedBiker
 {
-	criteria ConceptPlayerHelp IsBiker IsNotCoughing IsTalk IsTalkBiker IsIncapacitated IsIncappedStarted IsIncappedStarted2 NotCalledForHelpRecently IsWorldTalkBiker
+	criteria ConceptPlayerHelp IsBiker IsNotCoughing IsTalk IsTalkBiker IsIncapacitated IsIncappedStarted NotCalledForHelpRecently IsWorldTalkBiker
 	ApplyContext "CalledForHelp:1:15"
 	Response L4D1PlayerHelpIncappedBiker
 }
@@ -4386,7 +4386,7 @@ Response L4D1PlayerHelpIncappedBleedingBiker
 }
 Rule L4D1PlayerHelpIncappedBleedingBiker
 {
-	criteria ConceptPlayerHelp IsBiker IsNotCoughing IsTalk IsTalkBiker IsIncapacitated IsIncappedBleeding1 IsIncappedBleeding2 NotCalledForHelpRecently IsWorldTalkBiker
+	criteria ConceptPlayerHelp IsBiker IsNotCoughing IsTalk IsTalkBiker IsIncapacitated IsIncappedBleeding NotCalledForHelpRecently IsWorldTalkBiker
 	ApplyContext "CalledForHelp:1:30"
 	Response L4D1PlayerHelpIncappedBleedingBiker
 }

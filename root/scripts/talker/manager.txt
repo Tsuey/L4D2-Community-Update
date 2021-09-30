@@ -44,7 +44,7 @@ Response L4D1ReviveMeInterruptedMinorManager
 }
 Rule L4D1ReviveMeInterruptedMinorManager
 {
-	criteria ConceptReviveMeInterrupted IsManager IsIncappedStarted IsIncappedStarted2
+	criteria ConceptReviveMeInterrupted IsManager IsIncappedStarted
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMinorManager
@@ -65,7 +65,7 @@ Response L4D1ReviveMeInterruptedMajorManager
 }
 Rule L4D1ReviveMeInterruptedMajorManager
 {
-	criteria ConceptReviveMeInterrupted IsManager IsIncappedBleeding1 IsIncappedBleeding2
+	criteria ConceptReviveMeInterrupted IsManager IsIncappedBleeding
 	ApplyContext "ReviveInterrupt:1:2"
 	applycontexttoworld
 	Response L4D1ReviveMeInterruptedMajorManager
@@ -3487,7 +3487,7 @@ Response L4D1PlayerHelpIncappedManager
 }
 Rule L4D1PlayerHelpIncappedManager
 {
-	criteria ConceptPlayerHelp IsManager IsNotCoughing IsTalk IsTalkManager IsIncappedStarted IsIncappedStarted2 IsIncapacitated NotCalledForHelpRecently IsWorldTalkManager
+	criteria ConceptPlayerHelp IsManager IsNotCoughing IsTalk IsTalkManager IsIncappedStarted IsIncapacitated NotCalledForHelpRecently IsWorldTalkManager
 	ApplyContext "CalledForHelp:1:7.5"
 	Response L4D1PlayerHelpIncappedManager
 }
@@ -3501,7 +3501,7 @@ Response L4D1PlayerHelpIncappedBleedingManager
 }
 Rule L4D1PlayerHelpIncappedBleedingManager
 {
-	criteria ConceptPlayerHelp IsManager IsNotCoughing IsTalk IsTalkManager IsIncappedBleeding1 IsIncappedBleeding2 IsIncapacitated NotCalledForHelpRecently IsWorldTalkManager
+	criteria ConceptPlayerHelp IsManager IsNotCoughing IsTalk IsTalkManager IsIncappedBleeding IsIncapacitated NotCalledForHelpRecently IsWorldTalkManager
 	ApplyContext "CalledForHelp:1:15"
 	Response L4D1PlayerHelpIncappedBleedingManager
 }
