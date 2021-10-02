@@ -136,7 +136,7 @@
 
 
 ::rd_specifics_c8m4 <- function(){
-	EntFire( "worldspawn", "RunScriptFile", "c8m4_elevatorfix" )
+	EntFire( "worldspawn", "RunScriptFile", "community/c8m4_elevatorfix" )
 }
 
 
