@@ -171,7 +171,7 @@ function OnGameplayStart(){
 
 ::killFixEntities <- function(){
 	if(!fixEntitiesRemoved){
-		EntFire( "anv_mapfixes*", "Kill" )
+		EntFire( "community_update*", "Kill" )
 		EntFire( "env_player_blocker", "Kill" )
 		EntFire( "rene_relay", "Trigger" )
 		fixEntitiesRemoved = true
