@@ -10,55 +10,24 @@ Kerry Davis has approved sharing of the non-encrypted VScript files.
 
 You can do whatever you want with them.
 
-However, if you intend to use these files as a template for your own mods (replacing "anv_mapfixes.nut" and "anv_versus.nut" entirely), please rename "mapspawn.nut" to "mapspawn_addon.nut" which will allow you to not override the base game fixes.
+However, if you intend to use these files as a template for your own mods (replacing "mapfixes.nut" entirely), please rename "mapspawn.nut" to "mapspawn_addon.nut" which will allow you to not override the base game fixes.
 
 Alternatively, if you're a server admin already settled with your Stripper:Source files, create an empty "mapspawn.nut" file to opt-out!
 
+# Organization
+
+Folder | Purpose
+------ | -------
+changelogs | Cumulative for each stretch of time before all hotfixes go live.<br><br>Includes dedicated credits list. This will be maintained but if you've long been missing, please open a PR.
+root | Hotfix files for test VPK's that ultimately target going in-game officially.<br><br>Please keep all source files and everything else out. Upload original un-changed files before modified files.
+sources | Valve requires QC and other source files for every model we recompile.<br><br>This includes textures but not materials.
+tools | Some of the lighter-weight custom tools that our team uses, for community reference.<br><br>See its README for operational details.
+
 # Contributors
 
-Tsuey:
+Dedicated credits list:
 
-	Framework and functions, pre-QA Infected ladders, Clipping rework, exploit and logic fixes
-
-Jacob https://github.com/jacob404:
-
-	R&D, Versus balance tweaks and extensive QA work and polish, LOS fix brushes, Tank warp fixes
-
-With further entity contributions from NF, ReneTM, JAiZ, CircleSquared, and Tabbernaut
-
-And script contributions from Rayman1103 and Daroot Leafstorm
-
-Special thanks to https://github.com/SirPlease/ and Wicket for the sourced ZoneMod 1.9.8 ladders
-
-New Propper models in active use:
-
-		"models/props/effects/tankwall_128_2_128.mdl" -- Syberian Husky
-		"models/props/effects/tankwall_48_1_48.mdl" -- Syberian Husky
-		"models/props_update/plywood_128.mdl" -- Jacob
-		"models/props_update/c1m2_wrongway_rooftop1.mdl" -- Jacob
-		"models/props_update/c1m2_wrongway_rooftop2.mdl" -- Jacob
-		"models/props_update/c1m2_wrongway_wall.mdl" -- Jacob
-		"models/props_update/c2m2_fairgroundwall.mdl" -- Jacob
-		"models/props_update/c2m4_barn_overhang.mdl" -- NF
-		"models/props_update/c2m5_infectedroom.mdl" -- Syberian Husky
-		"models/props_update/c2m5_infectedroom_doorway.mdl" -- Jacob
-		"models/props_update/c3m3_nodrawfence.mdl" -- Syberian Husky
-		"models/props_update/c5m2_billboard_nodraw.mdl" -- Syberian Husky
-		"models/props_update/c8m1_rooftop_1.mdl" -- Syberian Husky
-		"models/props_update/c8m1_rooftop_2.mdl" -- Syberian Husky
-		"models/props_update/c8m1_rooftop_3.mdl" -- Syberian Husky
-		"models/props_update/c8m1_rooftop_4.mdl" -- Jacob
-		"models/props_update/c8m2_generatorroom.mdl" -- NF
-		"models/props_update/c8m4_skylight_rooftop.mdl" -- Jacob
-		"models/props_update/c9m1_nodraw_window.mdl" -- Jacob
-		"models/props_update/c10m4_hellcade_nodraw.mdl" -- Tsuey
-		"models/props_update/c11m1_greenhouse_nodraw.mdl" -- Tsuey
-		"models/props_update/c11m1_greenhouse_plywood.mdl" -- NF
-		"models/props_update/c11m3_nodraw_cinderwall.mdl" -- Jacob
-		"models/props_update/c11m3_wrongway_curb.mdl" -- Jacob
-		"models/props_update/c11m3_wrongway_fence.mdl" -- Jacob
-
-Thanks to all playtesters and everyone on the L4D2 Community Update Team!
+https://github.com/Tsuey/L4D2-Community-Update/blob/master/changelogs/README.md
 
 https://www.l4d.com/laststand/
 
