@@ -1,0 +1,23 @@
+VertexLitGeneric
+{
+$baseTexture "models\v_models\Weapons\rifle/m16a2_worn"
+$bumpmap "effects/flat_normal"
+
+$phongboost 1
+//$phongexponent 10
+$phongexponenttexture "models\v_models\Weapons\rifle/m16a2_worn"
+$phongalbedotint 1
+$phongfresnelranges "[10 30 .1]"
+$BASEMAPLUMINANCEPHONGMASK 1
+$color2 "[1.5 1.5 1.5]"
+$ambientocclusion 1
+$halflambert 1
+$phong 0
+"GPU>=2?$phong" 1
+
+$normalmapalphaenvmapmask 1
+$envmap env_cubemap
+$envmapfresnel 1
+$envmapFresnelMinMaxExp "[0 0 .4]"
+"$envmaptint" "[0.05 0.05 0.05]"
+}
