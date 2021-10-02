@@ -1,0 +1,18 @@
+"talkertestsurvival"
+{
+	"base"		"survival"
+	"maxplayers"    "4"
+
+	"DisplayTitle"	"Talker Test (Survival)"
+	"ShortDescription"	"A debugging mode for talker scripts"
+	"Description"	""
+
+	"Image"		"maps/any"
+	"Author"	"Rayman1103"
+
+	convar
+	{
+
+	}
+}
+
