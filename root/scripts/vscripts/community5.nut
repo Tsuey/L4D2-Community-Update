@@ -12,6 +12,14 @@ DirectorOptions <-
 	cm_AllowSurvivorRescue = false
 	SurvivorMaxIncapacitatedCount = 0
 
+	function AllowFallenSurvivorItem( classname )
+	{
+		if ( classname == "weapon_first_aid_kit" )
+			return false;
+		
+		return true;
+	}
+
 	weaponsToConvert =
 	{
 		weapon_first_aid_kit =	"weapon_pain_pills_spawn"
