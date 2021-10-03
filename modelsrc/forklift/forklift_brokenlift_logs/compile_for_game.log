@@ -1,0 +1,58 @@
+// Created by Crowbar 0.24.0.0
+
+Compiling...
+
+Using shader api: shaderapiempty.dll
+qdir:    "d:\steam\steamapps\common\left 4 dead 2\left4dead2_2ndupdate\sources\props\forklift\compile\"
+gamedir: "D:\Steam\steamapps\common\Left 4 Dead 2\left4dead2\"
+g_path:  "forklift_brokenlift.qc"
+Building binary model files...
+Working on "forklift_brokenlift.qc"
+DMX Model d:\steam\steamapps\common\left 4 dead 2\left4dead2_2ndupdate\sources\props\forklift\compile\forklift_brokenlift.dmx
+DMX Model d:\steam\steamapps\common\left 4 dead 2\left4dead2_2ndupdate\sources\props\forklift\compile\forklift_brokenlift_physics.dmx
+Processing LOD for material: forklift
+Model has 14 convex sub-parts
+Collision model completed.
+---------------------
+writing D:\Steam\steamapps\common\Left 4 Dead 2\left4dead2\models/props\cs_assault\forklift_brokenlift.mdl:
+bones          964 bytes (1)
+   animation       x       y       ips    angle
+animations     112 bytes (1 anims) (1 frames) [0:00]
+sequences      220 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       72 bytes
+bone transforms        0 bytes
+Collision model volume 186609.98 in^3
+Please check if you need to delete D:\Steam\steamapps\common\Left 4 Dead 2\left4dead2\models/props\cs_assault\forklift_brokenlift.phz
+collision        0 bytes
+total         1820
+---------------------
+writing D:\Steam\steamapps\common\Left 4 Dead 2\left4dead2\models/props\cs_assault\forklift_brokenlift.vvd:
+vertices     81264 bytes (1693 vertices)
+tangents     27088 bytes (1693 vertices)
+total       108416 bytes
+---------------------
+Generating optimized mesh "D:\Steam\steamapps\common\Left 4 Dead 2\left4dead2\models/props\cs_assault\forklift_brokenlift.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          15237 bytes
+indices:         9546 bytes
+bone changes:      16 bytes
+everything:     24924 bytes
+
+Completed "forklift_brokenlift.qc"
+CDynamicFunction: Loading library 'Kernel32.dll' (76020000)
+CDynamicFunction: Lookup of 'TryEnterCriticalSection' in 'Kernel32.dll': 77BC09B0
+CDynamicFunction: Loading library 'psapi.dll' (77AB0000)
+CDynamicFunction: Lookup of 'GetProcessMemoryInfo' in 'psapi.dll': 77AB1480
+CDynamicFunction: Closing library 'psapi.dll' (77AB0000)
+CDynamicFunction: Closing library 'Kernel32.dll' (76020000)
+
+Compiling...
