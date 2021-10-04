@@ -10,8 +10,6 @@ Use to load two revisions separately for comparison.
 
 Note that DebugDrawFilled may not draw areas outside of your view.
 
-Be sure to look from far above the map when running script the second time.
-
 # talker_debug.vpk
 
 Talker Scripts: General and Addon guide
