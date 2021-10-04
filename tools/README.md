@@ -4,8 +4,9 @@ Use to load two revisions separately for comparison.
 
 - First load map with original nav file
 - Do script_execute nav_compare
-- Then nav_load the new nav file
-- Do script_execute nav_compare again
+- Then script Store()
+- Then load new nav file
+- Then script Compare()
 
 Note that DebugDrawFilled may not draw areas outside of your view.
 
