@@ -14,10 +14,6 @@ Valve will be kept up-to-date and ship when they can.
 
 - Quick fix for invisible Forklift.
 
-### Contributors
-
-- Tsuey
-
 1.1.1 (Oct 2nd, 2021)
 =====================
 Summary
@@ -78,14 +74,6 @@ Valve will be kept up-to-date and ship when they can.
 - Reduced the env map intensity on "models/props/cs_militia/refrigerator01.mdl".
 - Reduced the env map intensity on pipebomb, hunting rifle, and worn variants.
 
-### Contributors
-
-In alphabetical order by first name:
-
-- Evgeniy Kazakov
-- Raymond Nondorf
-- Tsuey
-
 Pull requests
 -------------
 
@@ -118,51 +106,51 @@ Note: Customization scripts [#13](https://github.com/Tsuey/L4D2-Community-Update
 #### Lump:
 
 - Lump edits to account for changed weapon density values.
-- c4m2_sugarmill_a and c4m3_sugarmill_b: Added a prop to make it easier for infected bots to navigate.
-- c12m2_traintunnel: Added missing breakwall texture to wall in warehouse.
-- c12m4_barn: Removed unreachable pill spawn.
+- Hard Rain 2 and 3: Added a prop to make it easier for infected bots to navigate.
+- Blood Harvest 2: Added missing breakwall texture to wall in warehouse.
+- Blood Harvert 4: Removed unreachable pills spawn.
 
 #### Navmesh:
 
 - Various nav fixes for -9999 flow areas.
-- Better bot nav in various maps (i.e. c1m2 hedges).
-- c1m2_streets: Fixed nav areas in order for the warp_to_checkpoint concommand to work properly.
-- c1m3_mall: Added c1streets place name to the ceda evac center area.
+- Better bot nav in various maps (i.e. Dead Center 2 hedges).
 - Harmless file size optimization and merging.
+- Dead Center 2: Fixed nav areas in order for the warp_to_checkpoint concommand to work properly.
+- Dead Center 3: Added c1streets place name to the ceda evac center area.
 
 #### Map fixes:
 
-- c8m3_sewers: Mitigator axiswarp for getting stuck in scissor lift.
-- c10m1_caves: Bandaid nav clip fix for stuck SI bot spawns behind tunnel's 2nd barricade.
-- c11m4_terminal: Rubble axiswarp with QoL and OoB clips to reduce stuck bot and player Tank spawns.
-- c12m3_bridge: Permstuck in tree near shed (for SI / RocketDude).
-- c13m2_southpinestream: Fix a regression with easy event skip clip and a permstuck clip nearby.
+- No Mercy 3: Mitigator axiswarp for getting stuck in scissor lift.
+- Death Tool 1: Bandaid nav clip fix for stuck SI bot spawns behind tunnel's 2nd barricade.
+- Dead Air 4: Rubble axiswarp with QoL and OoB clips to reduce stuck bot and player Tank spawns.
+- Blood Harvest 3: Permstuck in tree near shed (for SI / RocketDude).
+- Cold Stream 2: Fix a regression with easy event skip clip and a permstuck clip nearby.
 
 #### Map Quality-of-Life:
 
-- c8m3_sewers: Fred?!
+- No Mercy 3: Fred?!
 
 #### Versus fixes:
 
-- c5m3_cemetery: New ladder in far corner of manhole drop area to fix permstuck.
-- c7m2_barge: Delete func clip that blocks SI access into end closet.
-- c8m3_sewers: Thicken SI warehouse clip Tanks could potentially spawn behind.
-- c12m2_traintunnel: SI permstuck beyond the end of tunnel just before end safe room.
+- The Parish 3: New ladder in far corner of manhole drop area to fix permstuck.
+- The Sacrifice 2: Delete func clip that blocks SI access into end closet.
+- No Mercy 3: Thicken SI warehouse clip Tanks could potentially spawn behind.
+- Blood Harvest 2: SI permstuck beyond the end of tunnel just before end safe room.
 
 #### Versus Survival (just this mode):
 
 - Thickened 24 clips across 10 maps to eliminate stuck Tank spawns.
 - Dramatically reduced stuck Tank spawns on maps...
-- c1m2_streets: Delete all func SI clip.
-- c3m1_plankcountry: Delete all func SI clip, a TLS clip, added tree axiswarp.
-- c5m4_quarter: Delete all func SI clip.
-- c8m2_subway: Added visual vending machine step to get back in-bounds.
-- c9m2_lots: Delete 1 fence model to direct SI players in-bounds.
-- c10m2_drainage: Delete all func SI clip, 1 fence model, and add 3 ladders to assist in-bounds.
-- c10m4_mainstreet: Add 2 anti-stuck clips for behind event barricade and far corner.
-- c11m2_offices: Delete 1 func SI clip for final street left barricade.
-- c12m3_bridge: Delete 1 func SI clip for wrongway at end of train tunnel.
 - Made it auto-trigger any outputs on the entity used to start Survival if the pre-round timer expires.
+- Dead Center 2: Delete all func SI clip.
+- Swamp Fever 1: Delete all func SI clip, a TLS clip, added tree axiswarp.
+- The Parish 4: Delete all func SI clip.
+- No Mercy 2: Added visual vending machine step to get back in-bounds.
+- Crash Course 2: Delete 1 fence model to direct SI players in-bounds.
+- Death Toll 2: Delete all func SI clip, 1 fence model, and add 3 ladders to assist in-bounds.
+- Death Toll 4: Add 2 anti-stuck clips for behind event barricade and far corner.
+- Dead Air 2: Delete 1 func SI clip for final street left barricade.
+- Blood Harvest 3: Delete 1 func SI clip for wrongway at end of train tunnel.
 
 #### L4D1 Co-op:
 
@@ -177,28 +165,28 @@ Note: Customization scripts [#13](https://github.com/Tsuey/L4D2-Community-Update
 
 - Thickened 24 clips across 10 maps to eliminate stuck Tank spawns.
 - Dramatically reduced stuck Tank spawns on maps...
-- c1m2_streets: Delete all func SI clip.
-- c2m2_fairgrounds: Delete all func SI clip.
-- c3m1_plankcountry: Delete all func SI clip, a TLS clip, added tree axiswarp.
-- c5m2_park: Clip for Tank stuck spot on start roof.
-- c5m4_quarter: Delete all func SI clip.
-- c6m1_riverbank: Clip for Tank stuck spot behind start fence.
-- c8m1_apartment: Delete 1 func SI clip and add 2 anti-stuck clips.
-- c8m2_subway: Add anti-stuck 6 clips for rubble and end area.
-- c8m3_sewers: Delete 3 func SI clips and add anti-stuck clip on start rooftops.
-- c9m2_lots: Clip for Tank stuck spot far behind start area.
-- c10m1_caves: Delete 8 func SI clips and add clip to fix a permstuck deletions caused.
-- c10m2_drainage: Delete all func SI clip.
-- c10m3_ranchhouse: Delete 2 func SI clip and add 2 anti-stuck clips.
-- c10m4_mainstreet: Add 2 anti-stuck clips from Versus Survival and 1 along house row.
-- c11m1_greenhouse: Delete 1 func SI clip for fence in end area.
-- c11m2_offices: Delete 2 func SI clip for final street and add anti-stuck fence clip.
-- c11m3_garage: Clip for Tank stuck spots immediately behind start fence.
-- c12m1_hilltop: Add 2 anti-stuck clips to extend 2 wrongway func SI clips.
-- c12m2_traintunnel: Clip for Tank stuck spot at end of tunnel.
-- c12m3_bridge: Delete 1 func SI clip for wrongway at end of train tunnel.
-- c12m4_barn: Clip for Tank stuck spot behind start safe room.
 - Players no longer need to wait for incapped Survivors in order to progress at areas like elevators.
+- Dead Center 2: Delete all func SI clip.
+- The Passing 1: Clip for Tank stuck spot behind start fence.
+- Dark Carnival 2: Delete all func SI clip.
+- Swamp Fever 1: Delete all func SI clip, a TLS clip, added tree axiswarp.
+- The Parish 2: Clip for Tank stuck spot on start roof.
+- The Parish 4: Delete all func SI clip.
+- No Mercy 1: Delete 1 func SI clip and add 2 anti-stuck clips.
+- No Mercy 2: Add anti-stuck 6 clips for rubble and end area.
+- No Mercy 3: Delete 3 func SI clips and add anti-stuck clip on start rooftops.
+- Crash Course 2: Clip for Tank stuck spot far behind start area.
+- Death Toll 1: Delete 8 func SI clips and add clip to fix a permstuck deletions caused.
+- Death Toll 2: Delete all func SI clip.
+- Death Toll 3: Delete 2 func SI clip and add 2 anti-stuck clips.
+- Death Toll 4: Add 2 anti-stuck clips from Versus Survival and 1 along house row.
+- Dead Air 1: Delete 1 func SI clip for fence in end area.
+- Dead Air 2: Delete 2 func SI clip for final street and add anti-stuck fence clip.
+- Dead Air 3: Clip for Tank stuck spots immediately behind start fence.
+- Blood Harvest 1: Add 2 anti-stuck clips to extend 2 wrongway func SI clips.
+- Blood Harvest 2: Clip for Tank stuck spot at end of tunnel.
+- Blood Harvest 3: Delete 1 func SI clip for wrongway at end of train tunnel.
+- Blood Harvest 4: Clip for Tank stuck spot behind start safe room.
 
 #### Death's Door:
 
@@ -234,16 +222,6 @@ Note: Customization scripts [#13](https://github.com/Tsuey/L4D2-Community-Update
 - No more "Accessed null instance" error if array entities are deleted.
 - Note: Requires DebugDrawClear(); will always conflict with other scripts that use it.
 
-### Contributors
-
-In alphabetical order by first name:
-
-- Derpduck
-- Evgeniy Kazakov
-- Raymond Nondorf
-- Treescrub
-- Tsuey
-
 Pull requests
 -------------
 
@@ -268,40 +246,36 @@ Long-standing, non-contentious fixes / enhancements are in and code rot cleaned,
 
 #### Map fixes:
 
-- c1m3_mall: Block permstuck at alternative path vending machine.
-- c2m5_concert: Prevent bass and anvil cases from disappearing.
-- c3m1_plankcountry: Patched janky ladder near the event for all modes.
-- c3m1_plankcountry: Swamp gator has been given a proper name... and some bite.
-- c4m1_milltown_a: Prevent Survivor bots from picking up items inside c4m4's saferoom.
-- c5m2_park: Eliminate permstuck spot that a previous ladder patch created.
-- c5m4_quarter: Fixed "mins" for a commonhop clip at an electrical box.
-- c8m1_apartment: Lift anti-grief kill trigger off ground to prevent an incap glitch.
-- c9m1_alleys: Block rare permstuck spot between the boxwreck and traffic light.
-- c13m2_southpinestream: Fix permstuck next to military truck leading to barricade.
-- c13m3_memorialbridge: Enlargened a permstuck clip to fully fix it.
+- Dead Center 3: Block permstuck at alternative path vending machine.
+- Dark Carnival 5: Prevent bass and anvil cases from disappearing.
+- Swamp Fever 1: Patched janky ladder near the event for all modes.
+- Swamp Fever 1: Swamp gator has been given a proper name... and some bite.
+- Hard Rain 1: Prevent Survivor bots from picking up items inside Hard Rain 4's saferoom.
+- The Parish 2: Eliminate permstuck spot that a previous ladder patch created.
+- The Parish 4: Fixed "mins" for a commonhop clip at an electrical box.
+- No Mercy 1: Lift anti-grief kill trigger off ground to prevent an incap glitch.
+- Crash Course 1: Block rare permstuck spot between the boxwreck and traffic light.
+- Cold Stream 2: Fix permstuck next to military truck leading to barricade.
+- Cold Stream 3: Enlargened a permstuck clip to fully fix it.
 
 #### Map Quality-of-Life:
 
-- c1m3_mall: Auto-crouch for starting gate at shoplift scanners.
-- c1m4_atrium: Clips for kiosks to assist jumping and booth auto-crouch.
-- c9m2_lots: Clip to prevent gascans from falling between finale buses.
+- Dead Center 3: Auto-crouch for starting gate at shoplift scanners.
+- Dead Center 4: Clips for kiosks to assist jumping and booth auto-crouch.
+- Crash Course 2: Clip to prevent gascans from falling between finale buses.
 
 #### Versus fixes:
 
-- c1m1_hotel: Move Ghost SI exploit killtrigger down a lot to solve a rare issue.
-- c2m1_highway: Add navblocker at fence/car to prevent Tank spawn flow exploit.
-- c2m4_barns: Food cart ladder replaced with better clone and smoothed it with a new clip.
-- c5m1_waterfront: Improved a clip that blocks getting stuck in skybox.
-- c5m2_park: Solidify a prop_static chimney for LOS blocking QoL.
-- c8m1_apartment: Add clip to patch a ladder shortcut at the start.
-- c11m4_terminal: Fix SI permstuck spot inside the end rubble.
-- c12m2_traintunnel: Fix prop from slightly hovering above vent.
-- c12m4_barn: Patched fence Infected ladder next to lawnmower room.
-- c14m2_lighthouse: Fix displacement crouch to get under finale map.
-
-### Contributors
-
-- Tsuey
+- Dead Center 1: Move Ghost SI exploit killtrigger down a lot to solve a rare issue.
+- Dark Carnival 1: Add navblocker at fence/car to prevent Tank spawn flow exploit.
+- Dark Carnival 4: Food cart ladder replaced with better clone and smoothed it with a new clip.
+- The Parish 1: Improved a clip that blocks getting stuck in skybox.
+- The Parish 2: Solidify a prop_static chimney for LOS blocking QoL.
+- No Mercy 1: Add clip to patch a ladder shortcut at the start.
+- Dead Air 4: Fix SI permstuck spot inside the end rubble.
+- Blood Harvest 2: Fix prop from slightly hovering above vent.
+- Blood Harvest 4: Patched fence Infected ladder next to lawnmower room.
+- The Last Stand 2: Fix displacement crouch to get under finale map.
 
 1.0.0 (Sep 24th, 2020)
 ======================
