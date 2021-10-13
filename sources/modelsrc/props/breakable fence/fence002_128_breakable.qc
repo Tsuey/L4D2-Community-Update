@@ -1,4 +1,6 @@
-// Created by Crowbar 0.71
+// Broken fence model #2 for L4D2 community fixes update, by Lt. Rocky
+
+//Purpose: fixing a duo of propdata syntax errors that prevented the model from correctly breaking when destroyed
 
 $modelname "props_urban/fence002_128_Breakable.mdl"
 
