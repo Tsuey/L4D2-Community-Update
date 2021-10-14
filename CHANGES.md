@@ -74,16 +74,6 @@ Valve will be kept up-to-date and ship when they can.
 - Reduced the env map intensity on "models/props/cs_militia/refrigerator01.mdl".
 - Reduced the env map intensity on pipebomb, hunting rifle, and worn variants.
 
-Pull requests
--------------
-
-- [#70] Update c12m2_traintunnel lumps (Raymond Nondorf)
-- [#71] Updated talker scripts with Xanaguy's changes (Raymond Nondorf)
-- [#72] Add missing IntroEnd concepts (Raymond Nondorf)
-- [#73] Update c4m2 lump and nav (Raymond Nondorf)
-- [#74] Update talker scripts (Raymond Nondorf)
-- [#81] Update for RocketDude, Assets, Tools and Readme (Tsuey)
-
 1.1.0 (Sep 24th, 2021)
 ======================
 Summary
@@ -221,16 +211,6 @@ Note: Customization scripts [#13](https://github.com/Tsuey/L4D2-Community-Update
 - Full support for commentary, lump and other mod blockers regardless of prefix.
 - No more "Accessed null instance" error if array entities are deleted.
 - Note: Requires DebugDrawClear(); will always conflict with other scripts that use it.
-
-Pull requests
--------------
-
-- [#23] Split fixes into map specific scripts (Treescrub)
-- [#27] Major code update (Evgeniy Kazakov)
-- [#34] Changed unsafe EntFire calls to DoEntFire (Treescrub)
-- [#61] Updated Various Files (Raymond Nondorf)
-- [#65] Removed accidentally restored and obsolete anv_* files (Evgeniy Kazakov)
-- [#67] Update z_developer_showupdate (Derpduck)
 
 1.0.1 (Jul 2nd, 2021)
 =====================
