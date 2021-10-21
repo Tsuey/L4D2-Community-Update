@@ -1801,7 +1801,7 @@ function con_comment( strComment )
 **  about "script ShowUpdate()" to see all changes.
 **
 **  DEVELOPER MODE is required for everything here EXCEPT the "else if" condition
-**  which will ALWAYS announce "Anniversary Map Fixes" presence. The name "devchap"
+**  which will ALWAYS announce "Community Map Fixes" presence. The name "devchap"
 **  is derived from it being mostly for DEVELOPER MODE and printing chapter name.
 *****************************************************************************/
 
@@ -1821,7 +1821,7 @@ function devchap( mode )
 
 	if ( developer() > 0 && mode == "TUTORIAL" )
 	{
-		printl( "Anniversary Map Fixes: Run or bind \"script ShowUpdate()\" and \"script HideUpdate()\"" );
+		printl( "Community Map Fixes: Run or bind \"script ShowUpdate()\" and \"script HideUpdate()\"" );
 		printl( "to draw new blockers and glow new props. They are named according to purpose and" );
 		printl( "you can see entity definitions above. If you make/delete \"mapfixes\"-prefixed" );
 		printl( "entities, toggle Hide/Show to apply changes. Please report all issues and concerns" );
@@ -1829,7 +1829,7 @@ function devchap( mode )
 	}
 	else if ( mode == "TUTORIAL" )
 	{
-		printl( "Anniversary Map Fixes: Restart with Launch Option -dev to reveal verbose entity debug dumps." );
-		printl( "Anniversary Demo Mode: Run \"script_execute community/z_developer_showupdate\" >> \"script ShowUpdate()\"." );
+		printl( "Community Map Fixes: Restart with Launch Option -dev to reveal verbose entity debug dumps." );
+		printl( "Community Demo Mode: Run \"script_execute community/z_developer_showupdate\" >> \"script ShowUpdate()\"." );
 	}
 }
