@@ -59,7 +59,7 @@ DirectorOptions <-
 	DefaultItems =
 	[
 		"weapon_chainsaw",
-		"weapon_pistol",
+		//"weapon_pistol",
 	]
 
 	function GetDefaultItem( idx )
