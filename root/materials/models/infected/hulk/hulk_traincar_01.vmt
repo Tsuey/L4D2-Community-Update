@@ -1,0 +1,59 @@
+VertexLitGeneric
+{
+$baseTexture "models\infected\hulk/Hulk_Traincar_01"
+$bumpmap "models\infected\hulk\Hulk_traincar_01_normal"
+$phong 1
+
+$phongfresnelrange_0 ".01"
+$phongfresnelrange_1 ".15"
+$phongfresnelrange_2 1
+$phongfresnelranges "[.5 .15 1]"
+$phongtint "[.8 .8 1]"
+$phongboost 8
+$phongexponent 6
+$ambientocclusion 1
+$detail "effects/burned.vtf"
+$seamless_detail 1
+$seamless_scale ".005"
+
+$detailblendfactor .001 
+$detailblendmode 2
+
+$bbqamount 1
+
+$BurnLevel 0
+Proxies
+{
+BBQLevel
+{
+resultVar $bbqamount
+}
+BurnLevel
+{
+resultVar $burnlevel
+}
+Multiply
+{
+srcVar1 $phongfresnelrange_0
+srcVar2 $bbqamount
+resultVar "$phongfresnelranges[0]"
+}
+Multiply
+{
+srcVar1 $phongfresnelrange_1
+srcVar2 $bbqamount
+resultVar "$phongfresnelranges[1]"
+}
+Multiply
+{
+srcVar1 $phongfresnelrange_2
+srcVar2 $bbqamount
+resultVar "$phongfresnelranges[2]"
+}
+Equals
+{
+srcVar1 $BurnLevel
+resultVar $detailblendfactor
+}
+}
+}
