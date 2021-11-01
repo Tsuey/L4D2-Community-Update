@@ -25,7 +25,6 @@ function DoRoundFixes()
 	make_clip( "_booster_barnbeam7", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -129 32" );
 	make_clip( "_booster_barnbeam8", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -321 32" );
 	make_clip( "_nav_eventfenceback", "Survivors", 1, "-8 -159 0", "25 164 1036", "-2266 807 -12", "0 72 0" );
-	make_clip( "_booster_clipextend", "Survivors", 1, "-38 -67 0", "10 61 668", "646 1995 356" );
 	make_clip( "_cliprework_finalfence", "Survivors", 1, "-96 -6 0", "120 11 704", "-120 2446 320" );
 	make_clip( "_booster_lightpole1", "Survivors", 1, "-59 -20 0", "64 18 637", "280 2077 387" );
 	make_clip( "_booster_lightpole2", "Survivors", 1, "-20 -59 0", "18 64 637", "1 1508 387" );
@@ -70,9 +69,9 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_eventskip_fencehang", "Survivors", 1, "-6 -50 0", "6 50 1072", "398 1990 -48" );
-
 		make_clip( "_nav_eventfencea", "Survivors", 1, "-49 -3 0", "48 14 1045", "-2751 749 -21" );
 		make_clip( "_nav_eventfenceb", "Survivors", 1, "-49 -3 0", "48 14 1045", "-2499 749 -21" );
+		make_clip( "_booster_clipextend", "Survivors", 1, "-38 -67 0", "10 61 668", "646 1995 356" );
 
 		make_clip( "_ladder_askewhedgeshared_clip", "SI Players and AI", 1, "-3 -279 -7", "3 245 79", "593 1177 -63" );
 		make_ladder( "_ladder_askewhedgebotr1_cloned_askewhedgebotl", "610 1209.88 -123.984", "0 26 0" );

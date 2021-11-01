@@ -13,10 +13,13 @@ PrecacheModel( "models/props_urban/fence_cover001_64.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_hedge_behindtrains",		"Survivors",	1,	"-532 -120 0",		"800 58 701",		"-11078 8237 320" );
-	make_clip(	"_commonhop_crossing",		"Survivors",	1,	"-99 -260 0",		"99 426 691",		"-1025 4859 332" );
-	make_clip(	"_clipgap_fence",		"Survivors",	1,	"-4 -124 -155",		"4 124 155",		"-11084 7220 428" );
-	make_clip(	"_permstuck_coolingtank",	"Everyone",	1,	"-62 -58 -56",		"21 21 56",		"-10754 8610 216" );
+	make_clip( "_hedge_behindtrains_a",	"Survivors",	1,	"-56 -520 -356",		"56 520 356",		"-10713 7656 668" );
+	make_clip( "_hedge_behindtrains_b",	"Survivors",	1,	"-431 -75 -356",		"431 75 356",		"-10237 8186 668" );
+	make_clip( "_hedge_behindtrains_c",	"Survivors",	1,	"-50.5 -174 -362",		"50.5 174 362",		"-9756.5 8114 662" );
+	make_clip( "_hedge_behindtrains_d",	"Survivors",	1,	"-41 -394 -362",		"41 394 362",		"-9767 7546 662" );
+	make_clip( "_commonhop_crossing",		"Survivors",	1,	"-99 -260 0",		"99 426 691",		"-1025 4859 332" );
+	make_clip( "_clipgap_fence",		"Survivors",	1,	"-4 -68 -376",		"4 68 376",		"-11100 7188 648" );
+	make_clip( "_permstuck_coolingtank",	"Everyone",	1,	"-62 -58 -56",		"21 21 56",		"-10754 8610 216" );
 	make_clip( "_commonhop_coolingtank", "Survivors", 1, "-74 -236 0", "70 156 880", "-6806 7572 144" );
 	make_clip( "_booster_treetop", "Survivors", 1, "-108 -186 0", "108 174 717", "-5696 7348 247" );
 	make_clip( "_chargerassist_trainwheel", "Survivors", 1, "-133 -444 -130", "28 131 765", "-12379 8416 259", "0 -19 0" );
