@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+$baseTexture "models\props_interiors/ShelvingStore_Grocery01a"
+$envmap env_cubemap
+$envmapmask "models\props_interiors/ShelvingStore_Grocery01a_ref"
+
+}
