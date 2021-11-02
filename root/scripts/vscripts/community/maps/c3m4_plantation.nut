@@ -19,6 +19,8 @@ function DoRoundFixes()
 	make_clip( "_nav_tinytree4", "Survivors", 1, "-48 -46 0", "88 96 842", "1555 1227 311" );
 	make_clip( "_nav_tinytree5", "Survivors", 1, "-58 -16 0", "98 126 842", "1429 1887 311" );
 	make_clip( "_nav_tinytree6", "Survivors", 1, "-68 -66 0", "138 156 842", "1839 1817 311" );
+	make_clip( "_commentary_permstuck_furniture", "Everyone", 1, "-28 -74 -42", "28 74 42", "-2652 -942 58" );
+	make_clip( "_commentary_floorcollapse", "Survivors", 1, "-8 -8 0", "25 115 172", "2600 -368 417" );
 	make_brush( "_defibtrick_undermap_dead", "-16 -58 -120", "24 54 0", "688 122 248" );
 
 	// For some maps the trigger_finale might exist after "round_start" and require delay -- but not this one!
@@ -28,6 +30,15 @@ function DoRoundFixes()
 	make_clip( "_point_of_no_return", "Survivors", 0, "-168 -164 12", "128 92 196", "2064 -412 396" );
 	EntFire( "trigger_finale", "AddOutput", "FinaleStart " + g_UpdateName + "_point_of_no_return:Enable::0:-1" );
 
+	if ( g_BaseMode == "versus" )
+	{
+		devchap( "BASE VERSUS" );
+
+		// FIXES
+
+		make_clip( "_commentary_shortcut_startfence", "Everyone", 1, "-8 -272 -80", "8 280 80", "-2380 -1616 78.2673" );
+
+	}
 	if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );

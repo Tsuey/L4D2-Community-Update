@@ -13,6 +13,7 @@ PrecacheModel( "models/props_update/c8m1_rooftop_4.mdl" );
 PrecacheModel( "models/props_update/c8m1_rooftop_3.mdl" );
 PrecacheModel( "models/props_update/c8m1_rooftop_1.mdl" );
 PrecacheModel( "models/props_update/c8m1_rooftop_2.mdl" );
+PrecacheModel( "models/props_rooftop/acunit01.mdl" );
 
 function DoRoundFixes()
 {
@@ -39,6 +40,13 @@ function DoRoundFixes()
 	make_clip( "_cliprework_subwayledge", "Survivors", 1, "-218 -18 132", "233 3 4322", "3014 4017 156" );
 	make_clip( "_cliprework_subwayfence", "Survivors", 1, "-5 -143 0", "4 149 3926", "3268 4141 552", "0 -8 0" );
 	make_clip( "_subwins_smoother", "Everyone", 1, "-120 -9 0", "120 9 3", "2968 4103 48" );
+	make_clip( "_commentary_roofjump_hotel", "Survivors", 1, "-13 0 -451", "0 630 0", "1536 1416 640" );
+	make_clip( "_commentary_roofjump_elec", "Survivors", 1, "0 -22 -8", "8 33 536", "2488 1375 104" );
+	make_clip( "_commentary_roofjump_ledge", "Survivors", 1, "-240 -8 -208", "12 8 260", "2288 1424 224.35" );
+	make_clip( "_commentary_roofjump_ac_a", "Survivors", 1, "-30 -60 -200", "30 60 200", "2528 1085 440" );
+	make_clip( "_commentary_roofjump_ac_b", "Survivors", 1, "-29 -60 -408", "29 60 408", "2655 1667 680" );
+	make_clip( "_commentary_roofjump_ac_c", "Survivors", 1, "-60 -29 -2124", "60 29 2124", "2192 1760 2356" );
+	make_prop( "dynamic", "_commentary_l4d1_acunit", "models/props_rooftop/acunit01.mdl", "2526.61 1085.15 161.346", "0 180 0", "shadow_no", "solid_yes", "255 255 255", "1536", "2048" );
 	make_trighurt( "_instakill_griefroom", "Survivor", "-512 -1080 0", "384 1080 17", "1152 936 202" );
 
 	con_comment( "FIX:\tFans will now rotate. Server-side entities used to have Client-side Animation spawnflag." );
@@ -79,6 +87,7 @@ function DoRoundFixes()
 		make_clip( "_yesdraw_start_clipa", "SI Players", 1, "-300 -447 0", "0 449 1120", "3052 959 800" );
 		make_clip( "_yesdraw_start_clipb", "SI Players", 1, "-158 -10 -580", "42 312 549", "2710 508 1370" );
 		make_clip( "_ladder_crushedescape_clip", "Survivors", 1, "-20 -3 0", "20 3 1745", "2478 769 173" );
+		make_clip( "_commentary_busstop", "Survivors", 1, "-36 -108 -164", "36 108 164", "1499 2786 332" );
 		make_ladder( "_ladder_alleywindow_cloned_tankerwindow", "1720 3959.5 120", "820 -1590 0" );
 		make_ladder( "_ladder_commvignette_cloned_trashorange", "2428 3204.5 255.9905", "-1800 97 -144" );
 		make_ladder( "_ladder_crushedescape_cloned_tankerwindow", "1720 3959.5 120", "4198 4729 -51", "0 180 0", "0 1 0" );

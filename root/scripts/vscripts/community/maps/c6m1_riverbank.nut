@@ -16,7 +16,7 @@ function DoRoundFixes()
 	make_clip(	"_ghostgrief_tarpledge",	"Survivors",	1,	"-4 -313 -145",		"4 466 1337",		"1148 4257 96" );
 	make_clip(	"_permstuck_tarptree",		"Everyone",	1,	"-17 -69 -17",		"17 17 17",		"1166 3794 191" );
 	make_clip(	"_commonhop_windowsill",	"Survivors",	1,	"-6 -216 0",		"6 216 800",		"539 2861 237" );
-	make_clip(	"_commonhop_awning",		"Survivors",	1,	"-117 -42 -17",		"107 55 2020",		"3824 2666 236" );
+	make_clip(	"_commonhop_awning",		"Survivors",	1,	"-106 -42 -1042",		"107 55 1042",		"3824 2666 1306" );
 	make_clip(	"_curvejump_pixelperfect",	"Survivors",	1,	"-24 -64 -128",		"24 64 128",		"4784 3785 83" );
 	make_clip(	"_permstuck_fence",		"Survivors",	1,	"-24 -48 0",		"24 48 92",		"-1391 1293 247" );
 	make_clip(	"_fence_onea",			"Survivors",	1,	"-450 -21 0",		"345 111 1216",		"96 1425 496" );
@@ -43,6 +43,14 @@ function DoRoundFixes()
 	make_clip( "_cliprework_endwindows2", "Survivors", 1, "-8 -160 0", "8 158 129", "-3911 561 863" );
 	make_clip( "_cliprework_endwindows3", "Survivors", 1, "-8 -161 0", "8 157 128", "-3880 1082 895" );
 	make_clip( "_dispcrouch_caralarm", "Everyone", 1, "-58 -8 0", "58 8 155", "1415 980 357", "0 -39 0" );
+	make_clip( "_commentary_rayfordcollision", "All and Physics", 1, "-57 -92 -76", "57 92 76", "641 3804 164" );
+	make_clip( "_commentary_clipgap_river_a", "Everyone", 1, "-128 -1552 -1592", "128 1552 1592", "-1408 5136 1504" );
+	make_clip( "_commentary_clipgap_river_b", "Everyone", 1, "-3365 -32 -1592", "3365 32 1592", "2085 6656 1504" );
+	make_clip( "_commentary_clipgap_river_c", "Everyone", 1, "-333 -1423 -1592", "333 1432 1592", "5783 5265 1504" );
+	make_clip( "_commentary_clipgap_river_d", "Everyone", 1, "-334 -746 -1015", "334 746 1015", "5782 3097 2081" );
+	make_clip( "_commentary_clipgap_streetbarricade", "Survivors", 1, "-100 -174 -884", "100 174 884", "4715 946 1044" );
+	make_clip( "_commentary_clipgap_wedding", "Everyone", 1, "-160 -297 -1196", "160 297 1196", "1120 -1912 1900" );
+	make_clip( "_commentary_clipgap_endsaferoom", "Everyone", 1, "-660 -616 -80", "8 700 600", "-3880 2380 1360" );
 
 	make_prop( "dynamic",		"_cosmetic_hifunreal",		"models/props_vehicles/racecar_damaged_glass.mdl",	"928 4016 90",			"0.0 0.0 -1.5",		"shadow_no" );
 

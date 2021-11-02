@@ -7,6 +7,9 @@ PrecacheModel( "models/props_highway/plywood_01.mdl" );
 PrecacheModel( "models/props_swamp/plank001b_192.mdl" );
 PrecacheModel( "models/props_downtown/gutter_downspout_straight01.mdl" );
 PrecacheModel( "models/props_street/trashbin01.mdl" );
+PrecacheModel( "models/props/cs_italy/it_mkt_table2.mdl" );
+PrecacheModel( "models/props/cs_militia/newspaperstack01.mdl" );
+PrecacheModel( "models/props/cs_militia/boxes_frontroom.mdl" );
 
 function DoRoundFixes()
 {
@@ -33,6 +36,14 @@ function DoRoundFixes()
 	make_clip( "_cliprework_unattackable", "Survivors", 1, "-802 -203 0", "558 213 832", "-2446 299 -376" );
 	make_clip( "_ledgehang_startfenceleft", "Survivors", 1, "-16 -48 0", "10 48 379", "589 -142 -251", "0 29 0" );
 	make_clip( "_ledgehang_startfenceright", "Survivors", 1, "-8 -24 0", "8 24 360", "599 45 -232", "0 -15 0" );
+	make_clip( "_commentary_shortcut_forsale_a", "Survivors", 1, "-4 -128 209", "4 128 209", "-1700 -128 -35" );
+	make_clip( "_commentary_shortcut_forsale_b", "Survivors", 1, "0 0 0", "128 128 128", "-2140 -288 -294.972" );
+	make_clip( "_commentary_nav_bienville_windows", "Survivors", 1, "-4 -384 -80", "6 512 256", "-662 -880 -100.086" );
+	make_clip( "_commentary_clipgap_redhouse", "Survivors", 1, "0 0 0", "48 48 128", "-3136 464 -264.871" );
+	make_clip( "_commentary_electricalbox", "Survivors", 1, "-24 -8 -80", "24 8 384", "-3832 -1144 -250" );
+	make_clip( "_commentary_clipgap_endsaferoom_a", "Survivors", 1, "-360 -48 -72", "360 48 72", "-3316 -1280 64" );
+	make_clip( "_commentary_clipgap_endsaferoom_b", "Survivors", 1, "-290 -144 -72", "290 144 72", "-3966 -1296 64" );
+	make_clip( "_commentary_clipgap_endfence", "Survivors", 1, "-176 -32 -256", "176 32 256", "-4079 -1120 -120" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -62,11 +73,15 @@ function DoRoundFixes()
 		make_ladder( "_ladder_startwtflongright_cloned_startwtflongleft", "118 912 -392", "3 -661 0" );
 		make_ladder( "_ladder_tankwaterfront_cloned_telephonegutter", "-1236 -1274 -213.5", "-1936 888 0", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_yellowbarriersroof_cloned_alleygutter", "-2086 -1984 -216", "-2639 27 18", "0 90 0", "0 -1 0" );
+		make_ladder( "_ladder_permstuck_endsaferoom", "-2566 -1272 -284", "-1347 153 -28" );
 		make_prop( "dynamic",		"_losblocker_boxes",		"models/props/cs_militia/boxes_garage_lower.mdl",	"-26 -1108 -375.742",		"0 135.5 0",		"shadow_no" );
 		make_prop( "dynamic",		"_propladder_planka",		"models/props_highway/plywood_01.mdl",		"-167 -48 -195.766",		"-34 0.6025 -0.3587" );
 		make_prop( "dynamic",		"_propladder_plankb",		"models/props_swamp/plank001b_192.mdl",		"-2176 -2538 -320",		"0 0 35" );
 		make_prop( "dynamic", "_ladder_endgutterm2mirr_pipe", "models/props_downtown/gutter_downspout_straight01.mdl", "-3216 -1056 -89", "0 270 0", "shadow_no" );
 		make_prop( "dynamic", "_ladder_startroofqol_pipe", "models/props_downtown/gutter_downspout_straight01.mdl", "580 -308 -222", "0 90 0", "shadow_no" );
+		make_prop( "dynamic", "_commentary_propladder_wall_table", "models/props/cs_italy/it_mkt_table2.mdl", "-1740 -2426 -324", "0 270 84", "shadow_no", "solid_yes", "255 255 255", "800", "600" );
+		make_prop( "dynamic", "_commentary_propladder_wall_newspapers", "models/props/cs_militia/newspaperstack01.mdl", "-1730 -2431 -312.199", "0 0 0", "shadow_no", "solid_yes", "255 255 255", "800", "600" );
+		make_prop( "dynamic", "_commentary_propladder_wall_boxes", "models/props/cs_militia/boxes_frontroom.mdl", "-1716 -2447 -376", "0 0 0", "shadow_no", "solid_yes", "255 255 255", "800", "600" );
 		patch_ladder( "-2592 -1030 -208", "12 -3 0" );
 
 		con_comment( "PROP:\tTrashbin near \"_ladder_endbluehouse\" moved to improve accessibility." );

@@ -31,6 +31,7 @@ function DoRoundFixes()
 	make_clip( "_permstuck_orangefence", "Everyone", 1, "-32 -32 0", "32 32 64", "2188 1856 -64" );
 	make_clip( "_booster_awningnlights", "Survivors", 1, "-124 -41 0", "129 56 762", "1264 3705 8" );
 	make_clip( "_nav_bagselecbox", "Survivors", 1, "-7 -34 0", "4 28 822", "636 2243 -70" );
+	make_clip( "_commentary_minifinale_clip", "Survivors", 1, "-4 -64 -80", "4 64 80", "2544 5288 -1000" );
 	make_trigduck( "_duckqol_poolhallwin", "-2 -34 -46.5", "4 34 46.5", "1480 986.4 38.5" );
 	make_trigduck( "_duckqol_missingpipe", "-117 -40 -28", "117 40 28", "1824 1528 -164" );
 
@@ -43,6 +44,10 @@ function DoRoundFixes()
 		// FIXES
 
 		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
+		
+		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
+		
+		EntFire( "button_minifinale", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_minifinale_clip:Kill::0:-1" );
 
 	}
 	if ( g_BaseMode == "survival" )

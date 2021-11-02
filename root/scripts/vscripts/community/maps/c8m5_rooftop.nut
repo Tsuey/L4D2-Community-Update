@@ -36,6 +36,11 @@ function DoRoundFixes()
 	make_clip( "_charger_smoother_26", "Everyone", 1, "-4 -90 -17",	"8 113 1",	"7861 8193 5780",	"46 -38.6 0" );
 	make_clip( "_railing_rampright", "Everyone", 1, "-1 -78 0", "1 140 32", "5473 8478 6000", "0 0 45" );
 	make_clip( "_railing_rampleft", "Everyone", 1, "-1 -78 0", "1 125 32", "5567 8478 6000", "0 0 45" );
+	make_prop( "dynamic", "_commentary_nav_unattackable_pipe_a", "models/props_pipes/pipeset32d_corner128r_001a.mdl", "5847 9258 5792", "0 0 -90", "shadow_no", "solid_yes", "255 255 255", "1000", "1200" );
+	make_prop( "dynamic", "_commentary_nav_unattackable_pipe_b", "models/props_pipes/pipeset32d_corner128r_001a.mdl", "5847 9308 5792", "0 0 -90", "shadow_no", "solid_yes", "255 255 255", "1000", "1200" );
+	make_prop( "dynamic", "_commentary_nav_unattackable_pipe_c", "models/props_pipes/pipeset32d_256_001a.mdl", "5801 9308 5600", "-90 270 0", "shadow_no", "solid_yes", "255 255 255", "1000", "1200" );
+	make_prop( "dynamic", "_commentary_nav_unattackable_pipe_d", "models/props_pipes/pipeset32d_256_001a.mdl", "5801 9258 5600", "-90 270 0", "shadow_no", "solid_yes", "255 255 255", "1000", "1200" );
+	make_prop( "dynamic", "_commentary_nav_unattackable_crate", "models/props_crates/static_crate_40.mdl", "5804 9376 5644", "0 0 0", "shadow_no", "solid_yes", "255 255 255", "1000", "1200" );
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{

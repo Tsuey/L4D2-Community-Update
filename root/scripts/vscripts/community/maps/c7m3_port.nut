@@ -51,6 +51,7 @@ function DoRoundFixes()
 	make_clip( "_bridgerail_thinledge", "Survivors", 1, "-19 -5 0", "19 -1 223", "288 -1275 414" );
 	make_clip( "_bridge_curbsmoother1", "Everyone", 1, "-128 -267 0", "-127 182 8", "-1 -1014 -8" );
 	make_clip( "_bridge_curbsmoother2", "Everyone", 1, "127 -267 0", "128 182 8", "1 -1014 -8" );
+	make_clip( "_commentary_warehousegenerator", "Everyone", 1, "-30 -15 -8", "30 15 135", "-1156 886 345" );
 
 	if ( HasPlayerControlledZombies() )
 	{

@@ -17,6 +17,9 @@ function DoRoundFixes()
 
 	make_prop( "dynamic", "_omg_valve_wrongwayc", "models/props_vehicles/van.mdl", "8815 2888 10", "0 45 3", "shadow_no" );
 	make_prop( "dynamic", "_omg_valve_wrongwayg", "models/props_vehicles/van_glass.mdl", "8815 2888 10", "0 45 3", "shadow_no" );
+	make_prop( "dynamic", "_commentary_propladder_crate_a", "models/props_crates/static_crate_40.mdl", "7517 3280 828", "0 346.5 0", "shadow_no" );
+	make_prop( "dynamic", "_commentary_propladder_crate_b", "models/props_crates/static_crate_40.mdl", "7517 3235 828", "0 90 0", "shadow_no" );
+	make_prop( "dynamic", "_commentary_propladder_crate_c", "models/props_crates/static_crate_40.mdl", "7517 3235 868", "0 0 0", "shadow_no" );
 
 	if ( g_BaseMode == "versus" )
 	{

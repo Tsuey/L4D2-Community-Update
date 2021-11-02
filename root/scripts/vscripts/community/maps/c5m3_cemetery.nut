@@ -11,7 +11,7 @@ PrecacheModel( "models/props_urban/chimney007.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-24 -4 -28",		"24 4 88",		"3080 1407 222" );
+	make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-48 -7 -208",		"48 7 208",		"3055.5 1410 432" );
 	make_clip(	"_sewer_holed",			"Survivors",	1,	"-4 -40 -44",		"4 40 44",		"5212 -112 -116" );
 	make_clip(	"_sewer_holec",			"Survivors",	1,	"-264 -4 -44",		"264 4 44",		"5968 -452 -116" );
 	make_clip(	"_sewer_holeb",			"Survivors",	1,	"-4 -376 -44",		"4 376 44",		"6532 224 -116" );
@@ -36,6 +36,13 @@ function DoRoundFixes()
 	make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469", "2052 2534 160" );
 	make_clip( "_nav_opencrypt", "Survivors", 1, "-26 -47 0", "7 49 1000", "9604 -6659 344" );
 	make_clip( "_nav_cornertree", "Survivors", 1, "-83 -116 0", "97 180 935", "10459 -4981 409" );
+	make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
+	make_clip( "_commentary_nav_parkingtruck_a1", "Survivors", 1, "-8 -82 -8", "94 8 800", "5383 -1373 8" );
+	make_clip( "_commentary_nav_parkingtruck_a2", "Survivors", 1, "-8 -112 -8", "226 8 800", "5480 -1356 164" );
+	make_clip( "_commentary_nav_parkingtruck_b1", "Survivors", 1, "-8 -82 -8", "94 8 800", "5495 -1028 4" );
+	make_clip( "_commentary_nav_parkingtruck_b2", "Survivors", 1, "-8 -112 -8", "226 8 800", "5587 -1015 160" );
+	make_clip( "_commentary_oob_bridgeexplosion", "Everyone", 1, "-1338 -1128 -8", "8 8 857", "6489 -5161 103" );
+	make_clip( "_commentary_clipgap_bridge", "Survivors", 1, "-512 -8 -8", "8 8 735", "6969 -3864 225" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -47,6 +54,10 @@ function DoRoundFixes()
 
 		make_clip( "_nav_brokenhome_shortcuta", "Survivors", 1, "-5 -51 0", "5 66 130", "2301 958 31", "-10 0 0" );
 		make_clip( "_nav_brokenhome_shortcutb", "Survivors", 1, "-5 -51 0", "5 66 130", "2302 1290 31", "-10 0 0" );
+		make_clip( "_commentary_shortcut_barricade_a", "Survivors", 1, "-12 -144 -232", "12 144 232", "3821 1937 408" );
+		make_clip( "_commentary_shortcut_barricade_b", "Survivors", 1, "-21 -52 -232", "21 52 232", "3830 1741 408" );
+		make_clip( "_commentary_shortcut_barricade_c", "Survivors", 1, "-21 -52 -232", "21 52 232", "3809 1637 408" );
+		make_clip( "_commentary_shortcut_barricade_d", "Survivors", 1, "-9 -100 -232", "9 100 232", "3794 1492 408" );
 
 	}
 

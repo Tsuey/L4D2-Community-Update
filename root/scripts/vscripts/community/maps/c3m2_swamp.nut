@@ -35,6 +35,7 @@ function DoRoundFixes()
 		make_brush( "_losfix_end_gen1",		"-20 -1 -8",	"20 1 8",	"8011 2779 128" );
 		make_brush( "_losfix_end_gen2",		"-1 -13 -8",	"1 12 8",	"8007 2793 128" );
 		make_clip( "_propladder_crate_qol", "SI Players", 1, "-36 -2 -8", "44 4 8", "8055 100 166", "0 27 0" );
+		make_clip( "_commentary_clipgap_postcrash", "Everyone", 1, "0 0 0", "280 96 660", "31.0388 1957.69 -14.6749" );
 		make_ladder( "_ladder_brokenhomeleft_cloned_airplanewingmini", "-1690.5 2951.13 38.3488", "-2031 6319 98", "0 93.74 0", "1 0 0" );
 		make_ladder( "_ladder_brokenhomeright_cloned_airplanewingmini", "-1690.5 2951.13 38.3488", "-2030.5 6344 98", "0 93.74 0", "1 0 0" );
 		make_ladder( "_ladder_corrugatedhome_cloned_airplaneleft", "-2060 3278 96", "3919.22 26.78 66" );
