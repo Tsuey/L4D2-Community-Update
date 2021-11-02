@@ -35,6 +35,16 @@ function DoRoundFixes()
 	make_clip( "_commentary_electricalbox", "Survivors", 1, "-4 -8 -8", "6 74 1800", "-7036 -5098 -239" );
 	make_clip( "_commentary_shortcut_station", "Survivors", 1, "-1 -1 -1", "64 4 120", "-6752 -6736 -120" );
 
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+
+		// FIXES
+
+		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
+		
+		EntFire( "finale_alarm_stop_button", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_shortcut_station:Kill::0:-1" );
+	}
 	if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
