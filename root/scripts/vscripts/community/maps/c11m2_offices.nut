@@ -6,6 +6,7 @@ PrecacheModel( "models/props_vehicles/van.mdl" );
 PrecacheModel( "models/props_vehicles/van_glass.mdl" );
 PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
 PrecacheModel( "models/props_trainstation/pole_384connection001a.mdl" );
+PrecacheModel( "models/props_crates/static_crate_40.mdl" );
 
 function DoRoundFixes()
 {

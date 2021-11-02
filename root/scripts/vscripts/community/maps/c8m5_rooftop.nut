@@ -5,6 +5,8 @@ devchap( "ALL MODES" );
 PrecacheModel( "models/props_rooftop/Gutter_Pipe_256.mdl" );
 PrecacheModel( "models/props_pipes/PipeSet02d_512_001a.mdl" );
 PrecacheModel( "models/props_pipes/PipeSet32d_256_001a.mdl" );
+PrecacheModel( "models/props_pipes/pipeset32d_corner128r_001a.mdl" );
+PrecacheModel( "models/props_crates/static_crate_40.mdl" );
 
 function DoRoundFixes()
 {
