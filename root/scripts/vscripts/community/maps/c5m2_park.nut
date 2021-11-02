@@ -41,7 +41,7 @@ function DoRoundFixes()
 
 		// FIXES
 
-		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
+		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the button to open the doors is pressed." );
 		
 		EntFire( "finale_alarm_stop_button", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_shortcut_station:Kill::0:-1" );
 	}
