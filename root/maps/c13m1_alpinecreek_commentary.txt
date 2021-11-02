@@ -1,17 +1,5 @@
 "Entities"
 {
-	// Added a playerblocker to solve an exploit where the survivors could get on-top of the tower's roof.
-	entity
-	{
-		"id" "2321852"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "215 128 40"
-		"mins" "-73 -96 -80"
-		"origin" "-2411 3228 1000"
-		"mapupdate" "1"
-	}
 	entity
 	{
 		"classname" "info_remarkable"

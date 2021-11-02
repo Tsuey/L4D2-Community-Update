@@ -112,17 +112,4 @@
 		"angles" "0 -9.6232013702 0"
 		"contextsubject" "c7m1_pastbricks"
 	}
-
-	// Blocks survivors from accessing infected-only area by jumping onto the open saferoom door.
-	entity
-	{
-		"id" "9680129"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "96 16 47"
-		"mins" "-80 -16 -80"
-		"origin" "2184 2560 417"
-		"mapupdate" "1"
-	}
 }

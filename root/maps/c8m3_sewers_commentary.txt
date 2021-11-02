@@ -88,44 +88,6 @@
 		"angles" "0 -21.5193939209 0"
 		"contextsubject" "hospital03_path11"
 	}
-	
-	
-	// Blocks survivors from leaving the map if tank-punched on top of the gas station.
-	entity
-	{
-		"id" "8664375"
-		"classname" "env_player_blocker"
-		"BlockType" "0"
-		"initialstate" "1"
-		"maxs" "44 556 780"
-		"mins" "-4 -380 -80"
-		"origin" "13004 6132 400"
-		"mapupdate" "1"
-	}
-	entity
-	{
-		"id" "8664948"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "68 24 80"
-		"mins" "-4 -128 -80"
-		"origin" "12932 5880 400"
-		"mapupdate" "1"
-	}
-
-	// Blocks survivors from jumping from the lift to a window ledge.
-	entity
-	{
-		"id" "8665431"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "4 33 107"
-		"mins" "-4 -33 -43"
-		"origin" "12704 7036 240"
-		"mapupdate" "1"
-	}
 
 	// Blocks like this search for existing entities, using "find_by_modelname" or "find_by_targetname"
 	// and apply the settings found inside the "modify" block to all matching entities.

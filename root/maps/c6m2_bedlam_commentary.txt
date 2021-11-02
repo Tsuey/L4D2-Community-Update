@@ -1,19 +1,5 @@
 "Entities"
 {
-	// start mu
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "4 64 80"
-		"mins" "-4 -64 -80"
-		"targetname" "c6m2_minifinale_clip"
-		"origin" "2544 5288 -1000"
-		"mapupdate" "1"
-	}
-	// end mu
-
 	"entity"
 	{
 		"classname" "info_remarkable"
@@ -309,39 +295,5 @@
 		"origin" "2583.1499023438 5704.0297851563 -982.8599853516"
 		"angles" "0 -4.7300014496 0"
 		"contextsubject" "WorldC6M2_PostGate1"
-	}
-// Map update - Fixes fire escape glitch/exploit
-	"entity"
-	{
-		"id" "1078847"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "64 8 656"
-		"mins" "-12 -124 -8"
-		"origin" "676 2780 96"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
-		"id" "1078952"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "152 8 656"
-		"mins" "-8 -60 -8"
-		"origin" "748 2716 96"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
-		"id" "1078970"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "216 8 656"
-		"mins" "-4 -124 -8"
-		"origin" "904 2780 96"
-		"mapupdate" "1"
 	}
 }

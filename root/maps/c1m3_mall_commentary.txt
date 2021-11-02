@@ -1,27 +1,5 @@
 "Entities"
 {
-// MU
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "196 196 32"
-		"mins" "0 0 0"
-		"origin" "1159.05 -2466.62 442"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "48 48 64"
-		"mins" "0 0 0"
-		"origin" "1680 -2526.44 384"
-		"mapupdate" "1"
-	}
-// End MU
 	"entity"
 	{
 		"classname" "info_remarkable"

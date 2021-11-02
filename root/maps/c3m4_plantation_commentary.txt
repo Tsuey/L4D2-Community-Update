@@ -1,37 +1,5 @@
 "Entities"
 {
-
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"BlockType" "0"
-		"initialstate" "1"
-		"maxs" "25 115 172"
-		"mins" "-8 -8 0"
-		"origin" "2600 -368 417"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"BlockType" "0"
-		"initialstate" "1"
-		"maxs" "24 30 150"
-		"mins" "-55 -128 -100"
-		"origin" "-2624 -887 120"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
-		"id" "10"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "8 280 80"
-		"mins" "-8 -272 -80"
-		"origin" "-2380 -1616 78.2673"
-		"mapupdate" "1"
-	}
 	"entity"
 	{
 		"classname" "info_remarkable"

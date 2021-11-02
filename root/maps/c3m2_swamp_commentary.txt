@@ -2,24 +2,6 @@
 {
 	"entity"
 	{
-		"classname" "env_player_blocker"
-		"initialstate" "1"
-		"maxs" "64 8 80"
-		"mins" "0 0 0"
-		"origin" "-1966.28 2607.48 76.977"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"initialstate" "1"
-		"maxs" "280 96 660"
-		"mins" "0 0 0"
-		"origin" "31.0388 1957.69 -14.6749"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
 		"classname" "info_remarkable"
 		"targetname" "C3M2Start"
 		"origin" "-8175.5297851563 7123.3901367188 23.5100002289"
@@ -130,94 +112,5 @@
 		"angles" "0 -16.9449272156 0"
 		"contextsubject" "C3M2Bathtub"
 	}
-	
 
-//Block jumping into the plane tail windows to skip the plane panic event.  Entity name chosen because it recieves a kill command when the event fires.
-	
-	entity
-	{
-		"id" "1908155"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "180 8 648"
-		"mins" "-8 -34 -8"
-		"targetname" "cabin_door_button"
-		"origin" "-1922 2591 -8"
-		"mapupdate" "1"
-	}
-	entity
-	{
-		"id" "1908348"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "180 8 648"
-		"mins" "-8 -24 -8"
-		"targetname" "cabin_door_button"
-		"origin" "-1904 2549 -8"
-		"mapupdate" "1"
-	}
-	entity
-	{
-		"id" "1912907"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "180 8 648"
-		"mins" "-8 -25 -8"
-		"targetname" "cabin_door_button"
-		"origin" "-1886 2517 -8"
-		"mapupdate" "1"
-	}
-	entity
-	{
-		"id" "1912971"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "4 144 500"
-		"mins" "-4 -144 -80"
-		"targetname" "cabin_door_button"
-		"origin" "-1404 1813 64"
-		"mapupdate" "1"
-	}
-	
-// Further fixes to prevent jumping on top of the airplane.
-	entity
-	{
-		"id" "1908156"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "146 158 680"
-		"mins" "-8 -180 -80"
-		"targetname" "cabin_door_button"
-		"origin" "-1984 3728 224"
-		"mapupdate" "1"
-	}
-	entity
-	{
-		"id" "1908216"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "80 128 680"
-		"mins" "-8 -128 -80"
-		"targetname" "cabin_door_button"
-		"origin" "-2072 3872 192"
-		"mapupdate" "1"
-	}
-	entity
-	{
-		"id" "1908291"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "146 100 680"
-		"mins" "-8 -128 -80"
-		"targetname" "cabin_door_button"
-		"origin" "-1928 3448 264"
-		"mapupdate" "1"
-	}
 }

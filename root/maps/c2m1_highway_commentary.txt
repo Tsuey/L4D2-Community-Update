@@ -1,41 +1,5 @@
 "Entities"
 {
-
-// Blocks survivors from jumping onto the white truck at the top of the slope, near the saferoom.
-
-	entity
-	{
-		"id" "2655040"
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "90 8 800"
-		"mins" "-8 -84 -8"
-		"origin" "-1251 -734 -1081"
-		"mapupdate" "1"
-	}
-	
-	
-//Map update
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"initialstate" "1"
-		"maxs" "4 0 394"
-		"mins" "-2192 -592 0"
-		"origin" "2972 3724 -649"
-		"mapupdate" "1"
-	}
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"initialstate" "1"
-		"maxs" "0 0 394"
-		"mins" "-604 -1936 0"
-		"origin" "1388 5660 -649"
-		"mapupdate" "1"
-	}
-
 	"entity"
 	{
 		"classname" "info_remarkable"

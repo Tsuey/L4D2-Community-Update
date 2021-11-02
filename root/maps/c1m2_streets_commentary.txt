@@ -136,18 +136,4 @@
 		"angles" "1.628703 179.567429 0.000000"
 		"contextsubject" "WorldC1M2DeliverCola"
 	}
-
-//Update fix
-
-"entity"
-{
-	"classname" "point_nav_attribute_region"
-	"maxs" "368 416 192"
-	"mins" "0 0 0"
-	"spawnflags" "524288"
-	"targetname" "offramp_nothreat_region"
-	"origin" "-4272 2144 65"
-	"mapupdate" "1"
-}
-
 }

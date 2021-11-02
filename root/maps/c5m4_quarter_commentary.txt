@@ -1,49 +1,5 @@
 "Entities"
 {
-
-//Blocks jumping on the window to backtrack up a one-way drop following the pool hall
-
-	entity
-	{
-		"id" "3523936"
-		"classname" "env_player_blocker"
-		"BlockType" "0"
-		"initialstate" "1"
-		"maxs" "70 4 224"
-		"mins" "-4 -2 -80"
-		"origin" "-1249 2460 152"
-		"mapupdate" "1"
-	}
-
-	
-//Blocks player infected from perching on a window in the ending safe room, preventing the round from ending.
-
-	entity
-	{
-		"id" "3524600"
-		"classname" "env_player_blocker"
-		"BlockType" "2"
-		"initialstate" "1"
-		"maxs" "66 0 210"
-		"mins" "-8 -8 -8"
-		"origin" "1357 -3528 230"
-		"mapupdate" "1"
-	}
-	
-	
-
-	
-	"entity"
-	{
-		"classname" "env_player_blocker"
-		"BlockType" "1"
-		"initialstate" "1"
-		"maxs" "64 16 256"
-		"mins" "0 0 0"
-		"origin" "-3455 3444.37 184.244"
-		"mapupdate" "1"
-	}
-
 	"entity"
 	{
 		"classname" "info_remarkable"
