@@ -1,0 +1,153 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "RemarkWorldC1M2SpotGunStore"
+		"origin" "-5112.66015625 -1090.5899658203 719.4400024414"
+		"angles" "0 -92.0152282715 0"
+		"contextsubject" "RemarkWorldC1M2SpotGunStore"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "RemarkWorldC1M2OutsideGunStore"
+		"origin" "-5423.8701171875 -2125.9299316406 670.5599975586"
+		"angles" "0 177.9244232178 0"
+		"contextsubject" "RemarkWorldC1M2OutsideGunStore"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2BigGuns"
+		"origin" "-3690.40234375 2270.3405761719 355.197265625"
+		"angles" "9.5700016022 -120.9483184814 0"
+		"contextsubject" "WorldC1M2BigGuns"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2MallThisWay"
+		"origin" "1224.017456 2783.745850 572.031250"
+		"angles" "0 48.0248451233 0"
+		"contextsubject" "WorldC1M2MallThisWay"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2InHere"
+		"origin" "-888.964172 3102.446045 326.146515"
+		"angles" "11.866274 167.998627 0.000000"
+		"contextsubject" "WorldC1M2InHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2DownStairs"
+		"origin" "-763.8800048828 3761.7800292969 279.8599853516"
+		"angles" "0 78.9217453003 0"
+		"contextsubject" "WorldC1M2DownStairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2Abandoned"
+		"origin" "-1992.2600097656 1720.9699707031 109.1299972534"
+		"angles" "0 175.5459594727 0"
+		"contextsubject" "WorldC1M2Abandoned"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2Dumpster"
+		"origin" "-2406.3000488281 2414.9099121094 108.8700027466"
+		"angles" "0 -19.7841453552 0"
+		"contextsubject" "WorldC1M2Dumpster"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2JumpTruck"
+		"origin" "-4370.259765625 2250.8798828125 330.5599975586"
+		"angles" "0 -84.0677337646 0"
+		"contextsubject" "WorldC1M2JumpTruck"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2GunStoreClose"
+		"origin" "-4725.3798828125 929.7600097656 211.25"
+		"angles" "0 89.1527328491 0"
+		"contextsubject" "WorldC1M2GunStoreClose"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2UpStairs"
+		"origin" "-5182.4702148438 881.2800292969 488.6199951172"
+		"angles" "0 -174.2531738281 0"
+		"contextsubject" "WorldC1M2UpStairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2MallSignHere"
+		"origin" "-8118.8500976563 -866.4899902344 438.3399963379"
+		"angles" "0 176.9216003418 0"
+		"contextsubject" "WorldC1M2MallSignHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2MadeIt"
+		"origin" "-7493.58984375 -4556.1201171875 436.5799865723"
+		"angles" "0 -80.5499343872 0"
+		"contextsubject" "WorldC1M2MadeIt"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2Close"
+		"origin" "-1090.5600585938 3074.8500976563 103.4800033569"
+		"angles" "0 -95.5928573608 0"
+		"contextsubject" "WorldC1M2Close"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2PreStoreAlarm"
+		"origin" "-6668.229980 -2494.226563 392.031250"
+		"angles" "13.494927 10.107785 0.000000"
+		"contextsubject" "WorldC1M2PreStoreAlarm"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2StoreAlarm"
+		"origin" "-6702.292480 -2494.707520 392.031250"
+		"angles" "1.628703 179.567429 0.000000"
+		"contextsubject" "WorldC1M2StoreAlarm"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M2DeliverCola"
+		"origin" "-5378.021973 -2066.229492 616.031250"
+		"angles" "1.628703 179.567429 0.000000"
+		"contextsubject" "WorldC1M2DeliverCola"
+	}
+
+//Update fix
+
+"entity"
+{
+	"classname" "point_nav_attribute_region"
+	"maxs" "368 416 192"
+	"mins" "0 0 0"
+	"spawnflags" "524288"
+	"targetname" "offramp_nothreat_region"
+	"origin" "-4272 2144 65"
+	"mapupdate" "1"
+}
+
+}

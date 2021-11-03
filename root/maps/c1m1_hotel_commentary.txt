@@ -1,0 +1,360 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1First"
+		"origin" "519.3099975586 5624.8198242188 2709.75"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "WorldC1M1First"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1StairsSign"
+		"origin" "1777.4499511719 5743.080078125 2715.4099121094"
+		"angles" "0 30.6602916718 0"
+		"contextsubject" "WorldC1M1StairsSign"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1Ledge"
+		"origin" "2305.2700195313 7037.41015625 2490.1899414063"
+		"angles" "0 -95.1530609131 0"
+		"contextsubject" "WorldC1M1Ledge"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1DownStairs"
+		"origin" "1909.8900146484 7822.5 2633.3200683594"
+		"angles" "0 -0.6031208038 0"
+		"contextsubject" "WorldC1M1DownStairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1ElevatorBroken"
+		"origin" "2051.8000488281 5679.75 2707.6499023438"
+		"angles" "0 69.5856018066 0"
+		"contextsubject" "WorldC1M1ElevatorBroken"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1KnowBoomer"
+		"origin" "1009.1221923828 5163.41015625 2709.03125"
+		"angles" "0 -50.0699234009 0"
+		"contextsubject" "WorldC1M1KnowBoomer"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1FireSpreading"
+		"origin" "1737.6199951172 6242.5200195313 2712.1499023438"
+		"angles" "0 85.4940719604 0"
+		"contextsubject" "WorldC1M1FireSpreading"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1CedaMaps"
+		"origin" "1025.0899658203 5253.4599609375 2709.8000488281"
+		"angles" "0 -50.0699234009 0"
+		"contextsubject" "WorldC1M1CedaMaps"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1DoorFire"
+		"origin" "1862.3000488281 7231.1298828125 2518.3400878906"
+		"angles" "0 15.98595047 0"
+		"contextsubject" "WorldC1M1DoorFire"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1DownHere"
+		"origin" "1123.8599853516 5537.2001953125 1227.4300537109"
+		"angles" "0 158.0184020996 0"
+		"contextsubject" "WorldC1M1DownHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1AlmostThere"
+		"origin" "598.4400024414 4567.7797851563 1232.3499755859"
+		"angles" "0 -173.9316711426 0"
+		"contextsubject" "WorldC1M1AlmostThere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC1M1FireRoom"
+		"origin" "1814.6899414063 5153.1298828125 1231.9799804688"
+		"angles" "0 -80.3278656006 0"
+		"contextsubject" "WorldC1M1FireRoom"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M1OverTable"
+		"origin" "662.0700073242 6019.580078125 1249.6300048828"
+		"angles" "0 -177.149887085 0"
+		"contextsubject" "C1M1OverTable"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M1SearchRooms"
+		"origin" "1515.4899902344 5597.5297851563 1236.0500488281"
+		"angles" "0 -171.151260376 0"
+		"contextsubject" "C1M1SearchRooms"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M1ThroughThisDoor"
+		"origin" "174.7899932861 5709.169921875 1245.8499755859"
+		"angles" "0 -93.9310150146 0"
+		"contextsubject" "C1M1ThroughThisDoor"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M1AroundFire"
+		"origin" "-353 5177.6201171875 1238.2900390625"
+		"angles" "0 -100.5968475342 0"
+		"contextsubject" "C1M1AroundFire"
+	}
+	
+// Block falling out of the window at the end of the hallway to skip to the elevator leaving the upper hotel sections.
+	"entity"
+	{
+		"id" "4425623"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 32 28"
+		"mins" "-4 -32 -68"
+		"origin" "2356 5624 2644"
+		"mapupdate" "1"
+	}
+	
+// Blocks being able to jump between balcony floors.
+	"entity"
+	{
+		"id" "4425744"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "2 128 112"
+		"mins" "-2 -128 -280"
+		"origin" "1344 4880 2704"
+		"mapupdate" "1"
+	}
+	
+// Blocks for remaining window-jumps, ledge jumps, and makes the corner jump much more difficult.
+	entity
+	{
+		"id" "4434066"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 32 28"
+		"mins" "-4 -32 -68"
+		"origin" "1644 6432 2644"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434132"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 32 28"
+		"mins" "-4 -32 -68"
+		"origin" "1644 6560 2644"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434156"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 32 28"
+		"mins" "-4 -32 -68"
+		"origin" "1644 6848 2644"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434168"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 32 28"
+		"mins" "-4 -32 -68"
+		"origin" "1644 7008 2644"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434177"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 32 28"
+		"mins" "-4 -32 -68"
+		"origin" "1644 7328 2644"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434192"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 32 28"
+		"mins" "-4 -32 -68"
+		"origin" "1644 7488 2644"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434234"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "95 8 28"
+		"mins" "-95 -8 -8"
+		"origin" "1504 6280 2788"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434340"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 288 8"
+		"mins" "-68 -16 -44"
+		"origin" "2516 6192 2646"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434439"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "18 4 8"
+		"mins" "-166 -8 -44"
+		"origin" "2502 6486 2646"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434568"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 16 8"
+		"mins" "-4 -1182 -44"
+		"origin" "2340 7672 2646"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4434697"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 0 8"
+		"mins" "-44 -8 -44"
+		"origin" "2332 7688 2646"
+		"mapupdate" "1"
+	}
+	
+//Blocks access to the lower windows along the building side.
+	entity
+	{
+		"id" "4425623"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 8 8"
+		"mins" "-8 -56 -570"
+		"origin" "1654 7512 2473"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4425776"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 8 8"
+		"mins" "-8 -56 -570"
+		"origin" "1654 7352 2473"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4425842"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 8 8"
+		"mins" "-8 -56 -570"
+		"origin" "1654 7032 2473"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4425980"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 8 8"
+		"mins" "-8 -56 -570"
+		"origin" "1654 6872 2473"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4426040"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 8 8"
+		"mins" "-8 -56 -570"
+		"origin" "1654 6584 2473"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4426148"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 8 8"
+		"mins" "-8 -56 -570"
+		"origin" "1654 6456 2473"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "4426202"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "8 8 8"
+		"mins" "-4 -56 -570"
+		"origin" "2346 5648 2472"
+		"mapupdate" "1"
+	}
+
+}

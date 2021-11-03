@@ -1,0 +1,231 @@
+"Entities"
+{
+
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "64 64 1100"
+	"mins" "0 0 0"
+	"origin" "-1750 350 -39"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "184 200 930"
+	"mins" "-117 -122 -80"
+	"origin" "-704 864 88.25"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "230 122 930"
+	"mins" "-117 -122 -80"
+	"origin" "128 832 88.25"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "50 186 910"
+	"mins" "-119 -122 -80"
+	"origin" "-1648 784 104.25"
+	"mapupdate" "1"
+}
+
+// Makes out of bounds dumpster area near the strength test game inaccessable to survivors.  Some survivors were getting tank-punched into the area and were unable to escape.
+
+entity
+	{
+		"id" "2387230"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "8 8 1208"
+		"mins" "-240 -322 -8"
+		"origin" "3366 898 -184"
+		"mapupdate" "1"
+	}
+entity
+	{
+		"id" "2387358"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "190 64 1208"
+		"mins" "-8 -8 -8"
+		"origin" "2936 584 -184"
+		"mapupdate" "1"
+	}
+
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_moustachio"
+		"origin" "2717.7399902344 1870.6700439453 -140.4100036621"
+		"angles" "0 113.5084533691 0"
+		"contextsubject" "c2m4_moustachio"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_bumpercars"
+		"origin" "2144.4699707031 1109.2600097656 -102.3600006104"
+		"angles" "0 -175.8051300049 0"
+		"contextsubject" "c2m4_bumpercars"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_bumpercars"
+		"origin" "2140.7199707031 1508.0600585938 -71.7600021362"
+		"angles" "0 175.5487518311 0"
+		"contextsubject" "c2m4_bumpercars"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_bumpercars"
+		"origin" "2125.080078125 1732.3800048828 -74.0599975586"
+		"angles" "0 178.9808502197 0"
+		"contextsubject" "c2m4_bumpercars"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_stadium"
+		"origin" "277.1400146484 2145.8000488281 -124.0800018311"
+		"angles" "0 177.6909332275 0"
+		"contextsubject" "c2m4_stadium"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_stadium"
+		"origin" "278.5400085449 1699.2600097656 -111.7200012207"
+		"angles" "0 151.356842041 0"
+		"contextsubject" "c2m4_stadium"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_stadium"
+		"origin" "209.7899932861 1513.1999511719 -124.0100021362"
+		"angles" "0 124.8248443604 0"
+		"contextsubject" "c2m4_stadium"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_whacker"
+		"origin" "-792.5399780273 534.8300170898 -148.8000030518"
+		"angles" "0 -177.7856445313 0"
+		"contextsubject" "c2m4_whacker"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_barnentry"
+		"origin" "-1981.7299804688 316.549987793 -135.1600036621"
+		"angles" "0 -115.0195541382 0"
+		"contextsubject" "c2m4_barnentry"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_pens"
+		"origin" "-1881.0600585938 -404.2099914551 -119.8699951172"
+		"angles" "0 -6.9116668701 0"
+		"contextsubject" "c2m4_pens"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_pens"
+		"origin" "-1135.4699707031 19.4300003052 -139.7400054932"
+		"angles" "0 -28.4936008453 0"
+		"contextsubject" "c2m4_pens"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_pendoor"
+		"origin" "-985.2299804688 -403.3999938965 -134.9799957275"
+		"angles" "0 -1.2354955673 0"
+		"contextsubject" "c2m4_pendoor"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_upbarn"
+		"origin" "-17.9500007629 -365.0199890137 -130.7899932861"
+		"angles" "0 -158.8136291504 0"
+		"contextsubject" "c2m4_upbarn"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_upbarn"
+		"origin" "-36.7799987793 -296.4400024414 -147.3000030518"
+		"angles" "0 -142.1156616211 0"
+		"contextsubject" "c2m4_upbarn"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_onroof"
+		"origin" "-525.0399780273 -229.8200073242 180.8000030518"
+		"angles" "0 -175.5780181885 0"
+		"contextsubject" "c2m4_onroof"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_onroof"
+		"origin" "-950.5599975586 -118.4499969482 60.8199996948"
+		"angles" "0 176.9278106689 0"
+		"contextsubject" "c2m4_onroof"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_evac"
+		"origin" "-2742.580078125 300.3500061035 -83.6200027466"
+		"angles" "0 163.7818450928 0"
+		"contextsubject" "c2m4_evac"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_evac"
+		"origin" "-3083.4699707031 567.6599731445 -116.1100006104"
+		"angles" "0 -178.2001495361 0"
+		"contextsubject" "c2m4_evac"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_gatebutton"
+		"origin" "-2367.3898925781 1598.9200439453 -204.0800018311"
+		"angles" "0 60.88804245 0"
+		"contextsubject" "c2m4_gatebutton"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m4_midnightriders"
+		"origin" "-2618.812744 1494.607666 46.425037"
+		"angles" "89.000000 -94.264854 0.000000"
+		"contextsubject" "c2m4_midnightriders"
+	}
+}

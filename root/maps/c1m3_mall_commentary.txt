@@ -1,0 +1,273 @@
+"Entities"
+{
+// MU
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "196 196 32"
+		"mins" "0 0 0"
+		"origin" "1159.05 -2466.62 442"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "48 48 64"
+		"mins" "0 0 0"
+		"origin" "1680 -2526.44 384"
+		"mapupdate" "1"
+	}
+// End MU
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3UpEscalator1"
+		"origin" "6183.6499023438 -2504.9299316406 75.1100006104"
+		"angles" "0 1.1263270378 0"
+		"contextsubject" "C1M3UpEscalator1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3ThroughHere"
+		"origin" "5491.6298828125 -2680.5100097656 322.4100036621"
+		"angles" "0 -169.087677002 0"
+		"contextsubject" "C1M3ThroughHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3DownTheEscalator"
+		"origin" "4881.9399414063 -2687.6999511719 296.7399902344"
+		"angles" "0 -5.3417696953 0"
+		"contextsubject" "C1M3DownTheEscalator"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3ThisWay"
+		"origin" "2908.1101074219 -2341.3898925781 59.4609985352"
+		"angles" "0 161.2783813477 0"
+		"contextsubject" "C1M3ThisWay"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3FoodCourtOkay"
+		"origin" "4026.6799316406 -2590.6999511719 51.9599990845"
+		"angles" "0 -177.6317138672 0"
+		"contextsubject" "C1M3FoodCourtOkay"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3FoodCourtNotOkay"
+		"origin" "2275.0300292969 -1664.0300292969 51.2900009155"
+		"angles" "0 -41.8337097168 0"
+		"contextsubject" "C1M3FoodCourtNotOkay"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3UpEscalator2"
+		"origin" "2427.8999023438 -372.6900024414 11.779999733"
+		"angles" "0 -84.7686157227 0"
+		"contextsubject" "C1M3UpEscalator2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3OverHere"
+		"origin" "1734.1700439453 -1026.75 293.8399963379"
+		"angles" "0 -178.8852844238 0"
+		"contextsubject" "C1M3OverHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3SearchRooms"
+		"origin" "708.2299804688 -1937.8699951172 324.7799987793"
+		"angles" "0 -121.1054611206 0"
+		"contextsubject" "C1M3SearchRooms"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3CarefulWindows"
+		"origin" "1091.6800537109 -2182.4799804688 329.3500061035"
+		"angles" "0 -58.5071487427 0"
+		"contextsubject" "C1M3CarefulWindows"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm1"
+		"origin" "1039.3499755859 -3440.2399902344 325.1199951172"
+		"angles" "0 -134.6112213135 0"
+		"contextsubject" "C1M3TurnOffAlarm1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm1"
+		"origin" "1767.0600585938 -3310.8798828125 328.3500061035"
+		"angles" "0 2.6026892662 0"
+		"contextsubject" "C1M3TurnOffAlarm1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm1"
+		"origin" "2342.919921875 -2620.5900878906 329.3500061035"
+		"angles" "0 -24.7873802185 0"
+		"contextsubject" "C1M3TurnOffAlarm1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm1"
+		"origin" "2283.7299804688 -3034.4899902344 326.299987793"
+		"angles" "0 137.9385986328 0"
+		"contextsubject" "C1M3TurnOffAlarm1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm2"
+		"origin" "1836.5200195313 -2589.1899414063 578.1900024414"
+		"angles" "0 131.6685333252 0"
+		"contextsubject" "C1M3TurnOffAlarm2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm2"
+		"origin" "1325.2299804688 -3450.0600585938 581.1599731445"
+		"angles" "0 -76.2007675171 0"
+		"contextsubject" "C1M3TurnOffAlarm2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm2"
+		"origin" "853.299987793 -3575 578.5300292969"
+		"angles" "0 -136.5606231689 0"
+		"contextsubject" "C1M3TurnOffAlarm2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm2"
+		"origin" "2299.8798828125 -3105.7299804688 530.8599853516"
+		"angles" "0 -127.0567245483 0"
+		"contextsubject" "C1M3TurnOffAlarm2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm2"
+		"origin" "1128.4000244141 -4284.2202148438 578.0100097656"
+		"angles" "0 -130.5548095703 0"
+		"contextsubject" "C1M3TurnOffAlarm2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm3"
+		"origin" "672.0100097656 -4681.1098632813 580"
+		"angles" "0 -98.5446395874 0"
+		"contextsubject" "C1M3TurnOffAlarm3"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3DownHere"
+		"origin" "1502.5799560547 -5255.8901367188 477.9400024414"
+		"angles" "0 174.6295928955 0"
+		"contextsubject" "C1M3DownHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3CEDAGone"
+		"origin" "-187.8500061035 -4488.33984375 321.5799865723"
+		"angles" "0 -123.8869400024 0"
+		"contextsubject" "C1M3CEDAGone"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3CEDAGone"
+		"origin" "-618.0599975586 -4261.4799804688 327.3999938965"
+		"angles" "0 176.712890625 0"
+		"contextsubject" "C1M3CEDAGone"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3UpEscalator3"
+		"origin" "-887.784302 -4231.609375 423.390381"
+		"angles" "0 89.1669158936 0"
+		"contextsubject" "C1M3UpEscalator3"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3DiscoPants"
+		"origin" "1055.4100341797 -4289.4702148438 155.4199981689"
+		"angles" "0 -56.3022727966 0"
+		"contextsubject" "C1M3DiscoPants"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3DownHere2"
+		"origin" "621.1599731445 -404.8999938965 214.8500061035"
+		"angles" "0 -101.7250518799 0"
+		"contextsubject" "C1M3DownHere2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3AlarmDoors"
+		"origin" "936.0200195313 -2942.2199707031 42.3300018311"
+		"angles" "0 -31.8005619049 0"
+		"contextsubject" "C1M3AlarmDoors"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm3"
+		"origin" "1180.9200439453 -3183.669921875 39.5200004578"
+		"angles" "0 -39.3244743347 0"
+		"contextsubject" "C1M3TurnOffAlarm3"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm3"
+		"origin" "1433.0699462891 -3449.1499023438 32.7200012207"
+		"angles" "0 -36.0243148804 0"
+		"contextsubject" "C1M3TurnOffAlarm3"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm3"
+		"origin" "445.6799926758 -4476.6201171875 42.1699981689"
+		"angles" "0 46.5415267944 0"
+		"contextsubject" "C1M3TurnOffAlarm3"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C1M3TurnOffAlarm3"
+		"origin" "1987.7399902344 -2890.6799316406 47.4900016785"
+		"angles" "0 -126.9066009521 0"
+		"contextsubject" "C1M3TurnOffAlarm3"
+	}
+}

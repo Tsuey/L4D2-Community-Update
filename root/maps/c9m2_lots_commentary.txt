@@ -1,0 +1,115 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path01"
+		"origin" "1614.5999755859 -870.6699829102 -158.8999938965"
+		"angles" "0 -112.0931015015 0"
+		"contextsubject" "crashcourse02_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path03"
+		"origin" "4347.4301757813 2720.4799804688 278.1099853516"
+		"angles" "0 83.0389328003 0"
+		"contextsubject" "crashcourse02_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path02"
+		"origin" "4306.5 2683.3701171875 163.4299926758"
+		"angles" "0 83.8611373901 0"
+		"contextsubject" "crashcourse02_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path04"
+		"origin" "3370.3601074219 730.5100097656 -185.1699981689"
+		"angles" "0 -95.5326080322 0"
+		"contextsubject" "crashcourse02_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path05"
+		"origin" "2622.0500488281 3429.3500976563 -58.3800010681"
+		"angles" "0 80.7177429199 0"
+		"contextsubject" "crashcourse02_path05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path06"
+		"origin" "3164.9899902344 3756.1398925781 61.5400009155"
+		"angles" "0 -92.2679367065 0"
+		"contextsubject" "crashcourse02_path06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path09"
+		"origin" "4555.5400390625 5727.6899414063 139.1000061035"
+		"angles" "0 3.5584955215 0"
+		"contextsubject" "crashcourse02_path09"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path10"
+		"origin" "5334.6401367188 6764.9799804688 121.9800033569"
+		"angles" "0 85.398399353 0"
+		"contextsubject" "crashcourse02_path10"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path11"
+		"origin" "6173.2900390625 7596.7900390625 305.5100097656"
+		"angles" "0 63.8826141357 0"
+		"contextsubject" "crashcourse02_path11"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path07"
+		"origin" "3330.9299316406 4983.419921875 110.6200027466"
+		"angles" "0 85.7286071777 0"
+		"contextsubject" "crashcourse02_path07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path12"
+		"origin" "5780.1401367188 7173.0698242188 263.3800048828"
+		"angles" "0 -27.1010570526 0"
+		"contextsubject" "crashcourse02_path12"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path13"
+		"origin" "6769.8198242188 6769.9702148438 106.8700027466"
+		"angles" "0 -17.8610725403 0"
+		"contextsubject" "crashcourse02_path13"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path14"
+		"origin" "7705.66015625 6344.4399414063 192.1199951172"
+		"angles" "0 8.5389757156 0"
+		"contextsubject" "crashcourse02_path14"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "crashcourse02_path15"
+		"origin" "6888.7998046875 5906.16015625 91.9700012207"
+		"angles" "0 -132.8331756592 0"
+		"contextsubject" "crashcourse02_path15"
+	}
+}

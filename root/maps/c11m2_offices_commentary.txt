@@ -1,0 +1,125 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_path01"
+		"origin" "4955.1201171875 3324.5400390625 143.8500061035"
+		"angles" "0 9.1365184784 0"
+		"contextsubject" "airport02_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_path02"
+		"origin" "8954.8896484375 3500.8701171875 742.4899902344"
+		"angles" "0 0.4249587059 0"
+		"contextsubject" "airport02_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_path03"
+		"origin" "9486.76953125 4236.6098632813 312.0700073242"
+		"angles" "0 -15.3725147247 0"
+		"contextsubject" "airport02_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_path04"
+		"origin" "8398.740234375 4330.0600585938 594.8499755859"
+		"angles" "0 -153.3842315674 0"
+		"contextsubject" "airport02_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_path05"
+		"origin" "7538.4301757813 5596.240234375 212.2599945068"
+		"angles" "0 86.6287155151 0"
+		"contextsubject" "airport02_path05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_path06"
+		"origin" "8898.3798828125 4662.1098632813 124.4400024414"
+		"angles" "0 -91.3491287231 0"
+		"contextsubject" "airport02_path06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_creshendo01a"
+		"origin" "5767.009765625 3177.6298828125 631.4000244141"
+		"angles" "0 -176.993927002 0"
+		"contextsubject" "airport02_creshendo01a"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport02_creshendo01b"
+		"origin" "6056.1499023438 3810.9099121094 701.049987793"
+		"angles" "0 83.8082427979 0"
+		"contextsubject" "airport02_creshendo01b"
+	}
+
+	entity
+	{
+		"id" "19461"
+		"classname" "prop_dynamic"
+		"angles" "0 346.5 0"
+		"fademindist" "-1"
+		"fadescale" "1"
+		"glowbackfacemult" "1.0"
+		"glowcolor" "0 0 0"
+		"MaxAnimTime" "10"
+		"MinAnimTime" "5"
+		"model" "models/props_crates/static_crate_40.mdl"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"skin" "0"
+		"solid" "6"
+		"origin" "7517 3280 828"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "19465"
+		"classname" "prop_dynamic"
+		"angles" "0 90 0"
+		"fademindist" "-1"
+		"fadescale" "1"
+		"glowbackfacemult" "1.0"
+		"glowcolor" "0 0 0"
+		"MaxAnimTime" "10"
+		"MinAnimTime" "5"
+		"model" "models/props_crates/static_crate_40.mdl"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"skin" "0"
+		"solid" "6"
+		"origin" "7517 3235 828"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "19469"
+		"classname" "prop_dynamic"
+		"angles" "0 0 0"
+		"fademindist" "-1"
+		"fadescale" "1"
+		"glowbackfacemult" "1.0"
+		"glowcolor" "0 0 0"
+		"MaxAnimTime" "10"
+		"MinAnimTime" "5"
+		"model" "models/props_crates/static_crate_40.mdl"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"skin" "0"
+		"solid" "6"
+		"origin" "7517 3235 868"
+		"mapupdate" "1"
+	}
+}

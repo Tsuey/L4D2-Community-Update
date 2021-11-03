@@ -1,0 +1,159 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "64 64 256"
+		"mins" "0 0 0"
+		"origin" "-3880 -1674 110.628"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "96 12 16"
+		"mins" "0 0 0"
+		"origin" "-3968.53 -1692.92 92.6282"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3SearchHouses"
+		"origin" "-5404.0200195313 1285.75 180.8999938965"
+		"angles" "0 -50.4419670105 0"
+		"contextsubject" "C3M3SearchHouses"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3ThroughHere"
+		"origin" "-4952.1899414063 493.5299987793 203.8000030518"
+		"angles" "0 18.3960933685 0"
+		"contextsubject" "C3M3ThroughHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3Bodies"
+		"origin" "-4059.9299316406 878.0599975586 15.6700000763"
+		"angles" "0 -38.6278114319 0"
+		"contextsubject" "C3M3Bodies"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3Stairs"
+		"origin" "-2532.5700683594 -445.8099975586 14.5500001907"
+		"angles" "0 -106.4067077637 0"
+		"contextsubject" "C3M3Stairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3Stairs2"
+		"origin" "-5293.2700195313 -2222 5.6100001335"
+		"angles" "0 -138.878616333 0"
+		"contextsubject" "C3M3Stairs2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3ThroughThisHouse"
+		"origin" "-3886.5200195313 -3006.9599609375 84.3700027466"
+		"angles" "0 -166.8626251221 0"
+		"contextsubject" "C3M3ThroughThisHouse"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3MoreShacks"
+		"origin" "-473.2900085449 -2948.8100585938 36.6599998474"
+		"angles" "0 126.1775054932 0"
+		"contextsubject" "C3M3MoreShacks"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3UpHere"
+		"origin" "-512.2899780273 -3842.8400878906 87.8600006104"
+		"angles" "0 78.0935897827 0"
+		"contextsubject" "C3M3UpHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3LowerGate"
+		"origin" "-347.5299987793 -4126.1499023438 89.6699981689"
+		"angles" "0 -37.2744445801 0"
+		"contextsubject" "C3M3LowerGate"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3StayUpHere"
+		"origin" "540.9799804688 -4206.2299804688 140.8399963379"
+		"angles" "0 94.5675888062 0"
+		"contextsubject" "C3M3StayUpHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3ThisWay"
+		"origin" "2439.7399902344 -4533.7900390625 56.2999992371"
+		"angles" "0 9.0318384171 0"
+		"contextsubject" "C3M3ThisWay"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3Unsanitary"
+		"origin" "-3374.3100585938 -540.9000244141 50.3600006104"
+		"angles" "0 -81.0086135864 0"
+		"contextsubject" "C3M3Unsanitary"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3UsePlanks"
+		"origin" "-1954.3100585938 -2717.7800292969 47.8300018311"
+		"angles" "0 -7.6543807983 0"
+		"contextsubject" "C3M3UsePlanks"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3BridgeDown"
+		"origin" "-49.6500015259 -4236.1201171875 126.3700027466"
+		"angles" "0 136.5951385498 0"
+		"contextsubject" "C3M3BridgeDown"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3SafeHouseAhead"
+		"origin" "3648 -3680 43.6209"
+		"angles" "0 77.1382751465 0"
+		"contextsubject" "C3M3SafeHouseAhead"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3SafeHouseAhead"
+		"origin" "4000 -4672 171.621"
+		"angles" "0 77.1382751465 0"
+		"contextsubject" "C3M3SafeHouseAhead"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M3SafeHouseAhead"
+		"origin" "4352 -5120 171.621"
+		"angles" "0 77.1382751465 0"
+		"contextsubject" "C3M3SafeHouseAhead"
+	}
+}

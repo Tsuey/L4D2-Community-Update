@@ -1,0 +1,152 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital01_path01"
+		"origin" "1503.8599853516 2675.25 75.7799987793"
+		"angles" "0 78.8679275513 0"
+		"contextsubject" "hospital01_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital01_path02"
+		"origin" "1759.8499755859 3306.0400390625 47.0699996948"
+		"angles" "0 29.1699962616 0"
+		"contextsubject" "hospital01_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital01_path03"
+		"origin" "2852.4899902344 4193.1000976563 52.4700012207"
+		"angles" "0 -0.2659577727 0"
+		"contextsubject" "hospital01_path03"
+	}
+	
+	// Player blocker entities to block survivors from jumping off the starting roof without dying.
+	"entity"
+	{
+		"id" "2600337"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "12 8 260"
+		"mins" "-240  -8 -208"
+		"origin" "2288 1424 224.35"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2612333"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "0 630 0"
+		"mins" "-13 0 -451"
+		"origin" "1536 1416 640"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2612484"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "8 33 536"
+		"mins" "0 -22 -8"
+		"origin" "2488 1375 104"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2600448"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "8 8 800"
+		"mins" "-54 -130 -98"
+		"origin" "2680 1728 256"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2600529"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "130 8 1200"
+		"mins" "-8 -54 -86"
+		"origin" "2131 1784 204"
+		"mapupdate" "1"
+	}
+
+	// Added air conditioner unit and blocks the survivors from jumping on it.
+	entity
+	{
+		"id" "516900"
+		"classname" "prop_dynamic"
+		"angles" "0.0 180.0 0.0"
+		"body" "0"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"ExplodeDamage" "0"
+		"ExplodeRadius" "0"
+		"fademaxdist" "2048.0"
+		"fademindist" "1536.0"
+		"fadescale" "1.0"
+		"glowbackfacemult" "1.0"
+		"glowcolor" "0 0 0"
+		"glowrange" "0"
+		"glowrangemin" "0"
+		"glowstate" "0"
+		"LagCompensate" "0"
+		"MaxAnimTime" "10"
+		"maxcpulevel" "0"
+		"maxgpulevel" "0"
+		"MinAnimTime" "5"
+		"mincpulevel" "0"
+		"mingpulevel" "0"
+		"model" "models/props_rooftop/acunit01.mdl"
+		"PerformanceMode" "0"
+		"pressuredelay" "0"
+		"RandomAnimation" "0"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"SetBodyGroup" "0"
+		"skin" "0"
+		"solid" "6"
+		"spawnflags" "0"
+		"StartDisabled" "0"
+		"updatechildren" "0"
+		"origin" "2526.61 1085.15 161.346"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2612635"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "35 60 328"
+		"mins" "-25 -70 -100"
+		"origin" "2522 1087 312"
+		"mapupdate" "1"
+	}
+
+	// Blocks survivors from being able to jump onto the bus stop.
+	entity
+	{
+		"id" "2612791"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "36 108 38"
+		"mins" "-36 -108 -38"
+		"origin" "1499 2786 171"
+		"mapupdate" "1"
+	}
+}

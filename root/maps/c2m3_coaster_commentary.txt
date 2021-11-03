@@ -1,0 +1,509 @@
+"Entities"
+{
+entity
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "200 4 128"
+	"mins" "0 0 0"
+	"origin" "-2887 2609.01 121.607"
+	"mapupdate" "1"
+}
+entity
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 188 256"
+	"mins" "0 0 -64"
+	"origin" "-3350.76 2608.73 444"
+	"mapupdate" "1"
+}
+entity
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 292 256"
+	"mins" "0 0 0"
+	"origin" "-2854.76 2456.73 444"
+	"mapupdate" "1"
+}
+entity
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 256 512"
+	"mins" "-4 0 0"
+	"origin" "-2868 1844 122.859"
+	"mapupdate" "1"
+}
+entity
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 256 512"
+	"mins" "-4 0 0"
+	"origin" "-2700 1964 122.859"
+	"mapupdate" "1"
+}
+entity
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 350 512"
+	"mins" "0 0 0"
+	"origin" "-3540.08 2368 128"
+	"mapupdate" "1"
+}
+entity
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "132 290 512"
+	"mins" "0 0 0"
+	"origin" "-4223.74 1980 150"
+	"mapupdate" "1"
+}
+
+//Blocks players climbing into the shelved swan in swan maintenance.
+
+entity
+{
+	"id" "1664530"
+	"classname" "env_player_blocker"
+	"BlockType" "0"
+	"initialstate" "1"
+	"maxs" "48 8 88"
+	"mins" "-8 -108  -8"
+	"origin" "204 4528 0"
+	"mapupdate" "1"
+}
+
+// Blocks survivors mounting the white truck near the coaster, which was causing some issues with clip brushes.
+
+entity
+{
+	"id" "1672624"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "84 8 953"
+	"mins" "-8 -100 -8"
+	"origin" "-1364 2040 7"
+	"mapupdate" "1"
+}
+
+entity
+{
+	"id" "1672705"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "228 8 800"
+	"mins" "-8 -113 -8"
+	"origin" "-1600 2040 159"
+	"mapupdate" "1"
+}
+
+// Blocks alternate route to skip the coaster panic start.
+
+entity
+{
+	"id" "1674306"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "2 112 40"
+	"mins" "-2 -104 -80"
+	"origin" "-3030 2988 208"
+	"mapupdate" "1"
+}
+
+// Blocks survivors climbing on electric box props near the coaster start
+
+entity
+{
+	"id" "1664414"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 8 196"
+	"mins" "-8 -56 -8"
+	"origin" "-2056 2624 8"
+	"mapupdate" "1"
+}
+entity
+{
+	"id" "1664516"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 8 196"
+	"mins" "-8 -56 -16"
+	"origin" "-776 1724 16"
+	"mapupdate" "1"
+}
+entity
+{
+	"id" "1664549"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 8 196"
+	"mins" "-56 -8 -34"
+	"origin" "-1124 1032 36"
+	"mapupdate" "1"
+}
+
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_coollight"
+		"origin" "3091.6999511719 2050.2399902344 134.5399932861"
+		"angles" "0 -178.8781280518 0"
+		"contextsubject" "c2m3_coollight"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_wayblocked"
+		"origin" "2898.4299316406 1630.7199707031 61.3899993896"
+		"angles" "0 -0.743914783 0"
+		"contextsubject" "c2m3_wayblocked"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_cementriver"
+		"origin" "2050.5900878906 2209.1298828125 6.0300002098"
+		"angles" "0 68.885925293 0"
+		"contextsubject" "c2m3_cementriver"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_cementriver"
+		"origin" "2835.4099121094 2802.8701171875 6.1199998856"
+		"angles" "0 87.8580474854 0"
+		"contextsubject" "c2m3_cementriver"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_water"
+		"origin" "2111.5 3295.8000488281 -9.0699996948"
+		"angles" "0 -142.3859863281 0"
+		"contextsubject" "c2m3_water"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_vent"
+		"origin" "2007.3100585938 4028.9699707031 44.9799995422"
+		"angles" "0 87.9241104126 0"
+		"contextsubject" "c2m3_vent"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_swanpileup"
+		"origin" "937.6599731445 4932.3701171875 41.4700012207"
+		"angles" "0 133.0322570801 0"
+		"contextsubject" "c2m3_swanpileup"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_cementriver"
+		"origin" "1498.8199462891 3424.330078125 6.0799999237"
+		"angles" "0 149.5022735596 0"
+		"contextsubject" "c2m3_cementriver"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_swanroom"
+		"origin" "707.3400268555 4481.1201171875 15.1099996567"
+		"angles" "0 -179.543548584 0"
+		"contextsubject" "c2m3_swanroom"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_hole"
+		"origin" "368.9299926758 3742.7199707031 274.9700012207"
+		"angles" "0 -4.5115671158 0"
+		"contextsubject" "c2m3_hole"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_aroundblock"
+		"origin" "127.6299972534 3839.9099121094 21"
+		"angles" "0 163.9563140869 0"
+		"contextsubject" "c2m3_aroundblock"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_aroundblock"
+		"origin" "461.0299987793 3614.080078125 14.470000267"
+		"angles" "0 -50.3156700134 0"
+		"contextsubject" "c2m3_aroundblock"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_aroundblock"
+		"origin" "430.6099853516 3743.2099609375 22.9699993134"
+		"angles" "0 79.2422790527 0"
+		"contextsubject" "c2m3_aroundblock"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_longesttunnel"
+		"origin" "605.6400146484 3011.7700195313 15.4300003052"
+		"angles" "0 -121.9315795898 0"
+		"contextsubject" "c2m3_longesttunnel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_longesttunnel"
+		"origin" "340.450012207 2736.3898925781 -2.2599999905"
+		"angles" "0 -161.2677154541 0"
+		"contextsubject" "c2m3_longesttunnel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_freshair"
+		"origin" "-230.4600067139 1948.2299804688 20.5100002289"
+		"angles" "0 -87.1499557495 0"
+		"contextsubject" "c2m3_freshair"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_overfence"
+		"origin" "-2353.9099121094 2588.2800292969 61.6500015259"
+		"angles" "0 97.7158279419 0"
+		"contextsubject" "c2m3_overfence"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_exittunnel"
+		"origin" "-886.2700195313 1910.8699951172 44.0999984741"
+		"angles" "0 178.9614562988 0"
+		"contextsubject" "c2m3_exittunnel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_screamingoak"
+		"origin" "-2002.3399658203 1730.4000244141 105.0899963379"
+		"angles" "0 -179.4547729492 0"
+		"contextsubject" "c2m3_screamingoak"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_screamingoak"
+		"origin" "-1998.4599609375 1528.0699462891 95.5800018311"
+		"angles" "0 -176.0228729248 0"
+		"contextsubject" "c2m3_screamingoak"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_screamingoak"
+		"origin" "-2027.0400390625 1894.1400146484 105.4800033569"
+		"angles" "0 -172.7230072021 0"
+		"contextsubject" "c2m3_screamingoak"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-2871.1899414063 1900.3299560547 16.5799999237"
+		"angles" "0 -49.6687812805 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-2932.2800292969 1835.0600585938 14.0699996948"
+		"angles" "0 -70.6568450928 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-3006.580078125 1809.8199462891 14.0200004578"
+		"angles" "0 -71.6468734741 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_undercoaster"
+		"origin" "-2807.8798828125 2795.3701171875 19.6700000763"
+		"angles" "0 -128.4429473877 0"
+		"contextsubject" "c2m3_undercoaster"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks01"
+		"origin" "-2783.419921875 2332.6298828125 396.7699890137"
+		"angles" "0 89.412399292 0"
+		"contextsubject" "c2m3_tracks01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks02"
+		"origin" "-3422.6101074219 2576.3500976563 568.5200195313"
+		"angles" "0 -85.3251266479 0"
+		"contextsubject" "c2m3_tracks02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks03"
+		"origin" "-2942.3999023438 1671.3299560547 368.3900146484"
+		"angles" "0 -29.6640319824 0"
+		"contextsubject" "c2m3_tracks03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks04"
+		"origin" "-2302.4799804688 915.3599853516 363.9100036621"
+		"angles" "0 -95.1360702515 0"
+		"contextsubject" "c2m3_tracks04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks05"
+		"origin" "-3427.6899414063 386.200012207 507.3099975586"
+		"angles" "0 88.7098312378 0"
+		"contextsubject" "c2m3_tracks05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks06"
+		"origin" "-3423.5200195313 2028 158.1799926758"
+		"angles" "0 89.6999511719 0"
+		"contextsubject" "c2m3_tracks06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks07"
+		"origin" "-3426.7900390625 3344.3601074219 431.3800048828"
+		"angles" "0 87.0541000366 0"
+		"contextsubject" "c2m3_tracks07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_tracks08"
+		"origin" "-3903.6298828125 2962.669921875 421.9700012207"
+		"angles" "0 -90.6838989258 0"
+		"contextsubject" "c2m3_tracks08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_coasteroff"
+		"origin" "-3572.8999023438 1553.7299804688 213.3099975586"
+		"angles" "0 -73.2598876953 0"
+		"contextsubject" "c2m3_coasteroff"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_coasteroff"
+		"origin" "-3671.9799804688 1425.1800537109 202.5700073242"
+		"angles" "0 -65.8018035889 0"
+		"contextsubject" "c2m3_coasteroff"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_coasteroff"
+		"origin" "-3683.6899414063 1645.4399414063 191.0500030518"
+		"angles" "0 -67.3198318481 0"
+		"contextsubject" "c2m3_coasteroff"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_saferoomenda"
+		"origin" "-4923 1672.3499755859 133.3600006104"
+		"angles" "0 -173.0876617432 0"
+		"contextsubject" "c2m3_saferoomenda"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-2912.3400878906 1683.0100097656 39.6399993896"
+		"angles" "0 -71.6277084351 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-3032.5300292969 1692.0500488281 19.8199996948"
+		"angles" "0 -128.3217163086 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-2877.6599121094 2054.8400878906 47.25"
+		"angles" "0 57.3721923828 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-3130.0900878906 2137.0700683594 59.5099983215"
+		"angles" "0 161.9162750244 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-3054.3400878906 2228.5700683594 51.5"
+		"angles" "0 70.0442428589 0"
+		"contextsubject" "c2m3_rubble"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m3_rubble"
+		"origin" "-3017.2700195313 2034.8399658203 38.6899986267"
+		"angles" "0 -71.4597015381 0"
+		"contextsubject" "c2m3_rubble"
+	}
+}

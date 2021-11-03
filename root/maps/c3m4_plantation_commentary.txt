@@ -1,0 +1,115 @@
+"Entities"
+{
+
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "25 115 172"
+		"mins" "-8 -8 0"
+		"origin" "2600 -368 417"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "24 30 150"
+		"mins" "-55 -128 -100"
+		"origin" "-2624 -887 120"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"id" "10"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "8 280 80"
+		"mins" "-8 -272 -80"
+		"origin" "-2380 -1616 78.2673"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4Radio"
+		"origin" "1538.9300537109 1973.8100585938 179.0899963379"
+		"angles" "0 119.8234100342 0"
+		"contextsubject" "c3m4Radio"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4House"
+		"origin" "1577.1899414063 -2736.8999023438 115.4700012207"
+		"angles" "0 73.6892471313 0"
+		"contextsubject" "c3m4House"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4House"
+		"origin" "1252.0200195313 -2559.7299804688 157.0800018311"
+		"angles" "0 82.1371536255 0"
+		"contextsubject" "c3m4House"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4House"
+		"origin" "2204.6298828125 -2778.7299804688 104.2099990845"
+		"angles" "0 62.7331695557 0"
+		"contextsubject" "c3m4House"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4DownRoad"
+		"origin" "-353.5700073242 -3450.0700683594 75.1100006104"
+		"angles" "0 -13.4009418488 0"
+		"contextsubject" "c3m4DownRoad"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4Scaffold"
+		"origin" "2075.9899902344 -705.5 247.3999938965"
+		"angles" "0 65.007232666 0"
+		"contextsubject" "c3m4Scaffold"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4Shacks"
+		"origin" "-1414.9200439453 -1563.6999511719 58.7099990845"
+		"angles" "0 -64.7459106445 0"
+		"contextsubject" "c3m4Shacks"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4Outhouse"
+		"origin" "1446.9699707031 -1174.7700195313 220.7100067139"
+		"angles" "0 64.0202102661 0"
+		"contextsubject" "c3m4Outhouse"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4InHouse"
+		"origin" "1716.75 -269.1600036621 278.7600097656"
+		"angles" "0 -92.963470459 0"
+		"contextsubject" "c3m4InHouse"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c3m4InHouse"
+		"origin" "1493.7800292969 -32.8800010681 470.2699890137"
+		"angles" "0 89.0643768311 0"
+		"contextsubject" "c3m4InHouse"
+	}
+}

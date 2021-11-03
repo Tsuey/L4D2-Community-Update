@@ -1,0 +1,87 @@
+"Entities"
+{
+
+// MAP UPDATE
+
+
+"entity"
+{
+	"classname" "env_player_blocker"
+	"initialstate" "1"
+	"maxs" "1000 128 1000"
+	"mins" "-200 0 -100"
+	"origin" "-4726.73 -2305.03 8"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "4 100 800"
+	"mins" "-200 0 0"
+	"origin" "-6076 -3528 537"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "10 10 100"
+	"mins" "0 -150 -100"
+	"origin" "-4151.76 -2962.15 633"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "500 70 1000"
+	"mins" "0 0 0"
+	"origin" "-4429 -4214.89 734.565"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_physics_blocker"
+	"angles" "0 0 0"
+	"BlockType" "4"
+	"boxmaxs" "140 20 0"
+	"boxmins" "0 10 -200"
+	"initialstate" "1"
+	"origin" "-4513.47 -2304.41 128"
+	"mapupdate" "1"
+}
+
+
+// Block players standing on the extremely-easy-to-reach map information panel, where AI infected are not able to path to the survivors.
+
+entity
+{
+	"id" "863766"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "96 8 222"
+	"mins" "-8 -42 -8"
+	"origin" "-4492 -2767 9"
+	"mapupdate" "1"
+}
+	
+	
+// Block survivors standiong the vending machines in the early part of the map.
+entity
+{
+	"id" "863766"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "58 8 224"
+	"mins" "-4 -120 -8"
+	"origin" "-1834 -4792 544"
+	"mapupdate" "1"
+}
+	
+}

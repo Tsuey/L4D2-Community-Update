@@ -1,0 +1,128 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m1_harborblocked"
+		"origin" "11572.1748046875 -288.0113525391 -63.96875"
+		"angles" "4.092168808 3.4017899036 0"
+		"contextsubject" "c7m1_harborblocked"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m1_pretank"
+		"origin" "7047.1484375 608.9166870117 142.8402099609"
+		"angles" "18.4141674042 93.8877868652 0"
+		"contextsubject" "c7m1_pretank"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m1_tankcar"
+		"origin" "6870.4599609375 481.5 207.2200012207"
+		"angles" "0 -131.6894378662 0"
+		"contextsubject" "c7m1_tankcar"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Info_powerboat"
+		"origin" "13110.2998046875 2018.8699951172 -8.3800001144"
+		"angles" "0 -111.4922027588 0"
+		"contextsubject" "Info_powerboat"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Info_powerboat2"
+		"origin" "10078.7197265625 799.8800048828 51.6199989319"
+		"angles" "0 -34.8592834473 0"
+		"contextsubject" "Info_powerboat2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "info_sunkboatthere"
+		"origin" "11976.900390625 -681.7800292969 -54.9300003052"
+		"angles" "0 -85.3558883667 0"
+		"contextsubject" "info_sunkboatthere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "info_trailerboatruck"
+		"origin" "10166.48046875 2259.919921875 182.75"
+		"angles" "3.6960029602 123.4381027222 0"
+		"contextsubject" "info_trailerboatruck"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "info_trailerboat"
+		"origin" "10085.833984375 1993.6352539063 220.8770141602"
+		"angles" "89 98.622253418 0"
+		"contextsubject" "info_trailerboat"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "info_powerboat3"
+		"origin" "9198.349609375 2342.8400878906 191.0599975586"
+		"angles" "0 131.9799957275 0"
+		"contextsubject" "info_powerboat3"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "info_powerboat4"
+		"origin" "8318.01953125 1352.5999755859 180.7599945068"
+		"angles" "0 -148.3580169678 0"
+		"contextsubject" "info_powerboat4"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "info_carboat"
+		"origin" "10494.4501953125 1862.4599609375 168.7899932861"
+		"angles" "0 90.8982009888 0"
+		"contextsubject" "info_carboat"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "info_carnotboat"
+		"origin" "9608.3203125 595.7600097656 47.8300018311"
+		"angles" "0 105.0883712769 0"
+		"contextsubject" "info_carnotboat"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m1_bricktop"
+		"origin" "5035.5698242188 62.8199996948 354.9800109863"
+		"angles" "0 177.5891876221 0"
+		"contextsubject" "c7m1_bricktop"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m1_pastbricks"
+		"origin" "5465.3500976563 177.5299987793 162.4900054932"
+		"angles" "0 -9.6232013702 0"
+		"contextsubject" "c7m1_pastbricks"
+	}
+
+	// Blocks survivors from accessing infected-only area by jumping onto the open saferoom door.
+	entity
+	{
+		"id" "9680129"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "96 16 47"
+		"mins" "-80 -16 -80"
+		"origin" "2184 2560 417"
+		"mapupdate" "1"
+	}
+}

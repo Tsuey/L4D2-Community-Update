@@ -1,0 +1,309 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_clientcommand"
+		"targetname" "comm_cmd"
+		"origin" "0 0 0"
+		"angles" "0 0 0"
+	}
+	"entity"
+	{
+		"id" "2332614"
+		"classname" "logic_auto"
+		"spawnflags" "1"
+		"connections"
+		{
+			"OnMapSpawn" "comm_cmd,Command,z_difficulty Easy,0.1,-1"
+			"OnMapSpawn" "comm_cmd,Command,sv_cheats 1,0,-1"
+			"OnMapSpawn" "comm_cmd,Command,director_no_bosses 1,0.1,-1"
+		}
+		"origin" "-11975 5890 555"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "STRAIGHTFORWARD FINALE"
+		"origin" "-11725 6325 500"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-straightforward.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ido Magal"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "ASSETS"
+		"origin" "-11410 6330 500"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-assets.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Wright"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "LEFT 4 DICTIONARY"
+		"origin" "-7975 6165 500"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-L4dictionary.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Steve Bond"
+		"synopsis" ""
+	}
+"entity"
+{
+	"id" "2"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "elevation_camera"
+	"origin" "-4224 5760 640"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+"entity"
+{
+	"id" "4"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "elevation_target"
+	"origin" "-3680 6048 576"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "ELEVATION"
+		"origin" "-3845 6330 490"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-elevation.wav"
+		"viewtarget" "elevation_target"
+		"viewposition" "elevation_camera"
+		"prevent_movement" 0
+		"speakers" "Chris Chin"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "WEATHER EFFECTS"
+		"origin" "-1760 6185 830"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-weatherfx.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Tim Larkin"
+		"synopsis" ""
+	}
+"entity"
+{
+	"id" "20"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "grenade_template"
+	"Template01" "grenade_spawn"
+	"origin" "2944 6336 512"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+"entity"
+{
+	"id" "22"
+	"classname" "logic_relay"
+	"targetname" "grenade_relay"
+	"spawnflags" "1"
+	"connections"
+	{
+		"OnTrigger" "grenade_templateForceSpawn0-1"
+	}
+	"origin" "2944 6336 480"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+"entity"
+{
+	"id" "24"
+	"classname" "weapon_grenade_launcher_spawn"
+	"angles" "0 90 -90"
+	"body" "0"
+	"count" "5"
+	"disableshadows" "1"
+	"skin" "0"
+	"solid" "6"
+	"spawnflags" "2"
+	"targetname" "grenade_spawn"
+	"origin" "3108 6244 528.533"
+	"editor"
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2500 -4268]"
+	}
+}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "GRENADE LAUNCHER"
+		"origin" "3005 6260 535"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-grenadelauncher.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Noel McGinn"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "grenade_relay,Trigger,,0,-1"
+		}
+	}
+"entity"
+{
+	"id" "16"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "water_camera"
+	"origin" "4896 5568 320"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+"entity"
+{
+	"id" "18"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "water_target"
+	"origin" "4576 5856 224"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "FLOWING WATER"
+		"origin" "4940 6330 605"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-flowingwater.wav"
+		"viewtarget" "water_target"
+		"viewposition" "water_camera"
+		"prevent_movement" 0
+		"speakers" "Alex Vlachos"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "FROM_SERVER_BROWSING_TO_MATCHMAKING"
+		"origin" "7015 6215 625"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-serverbrowsing.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Vitaliy Genkin"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "ENGINE OPTIMIZATIONS"
+		"origin" "9345 3405 490"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-engineoptimizations.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobson "
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "HYBRID ENVIRONMENT AUTHORING"
+		"origin" "8220 3785 220"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-hybridenviron.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Yasser Malaika"
+		"synopsis" ""
+	}
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M5Truck"
+		"origin" "3658.275391 6444.389160 455.531250"
+		"angles" "21.638504 -2.366174 0.000000"
+		"contextsubject" "C5M5Truck"
+	}
+}

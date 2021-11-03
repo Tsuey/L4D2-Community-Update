@@ -1,0 +1,1097 @@
+"Entities"
+{
+
+//Blocks survivors from jumping on to the generator and metal fences just after the park area.
+	
+	entity
+	{
+		"id" "2365327"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "6 120 1808"
+		"mins" "0 -8 -8"
+		"origin" "-8580 -3320 -144"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2365447"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "56 8 1672"
+		"mins" "-8 -44 -8"
+		"origin" "-8371 -3338 -8"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2365648"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "6 120 1808"
+		"mins" "0 -8 -8"
+		"origin" "-9217 -3320 -144"
+		"mapupdate" "1"
+	}
+	
+
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "65 65 1790"
+		"mins" "-65 -65 -20"
+		"origin" "-6853 -5598 -135.75"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "64 4 120"
+		"mins" "-1 -1 -1"
+		"origin" "-6752 -6736 -120"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2365327"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "6 74 1800"
+		"mins" "-4 -8 -8"
+		"origin" "-7036 -5098 -239"
+		"mapupdate" "1"
+	}
+	
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignContagious"
+		"origin" "-3790.7099609375 -1291.1800537109 -283.0299987793"
+		"angles" "0 82.737953186 0"
+		"contextsubject" "WorldSignContagious"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignReportSick"
+		"origin" "-4476.490234375 -2086.5300292969 -178.1600036621"
+		"angles" "0 178.8335723877 0"
+		"contextsubject" "WorldSignReportSick"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502Horse"
+		"origin" "-6346.2700195313 -2220.4899902344 -66.4700012207"
+		"angles" "0 -174.2372894287 0"
+		"contextsubject" "WorldC502Horse"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502Horse"
+		"origin" "-6445.9399414063 -2233.4899902344 -83.0699996948"
+		"angles" "0 81.7459335327 0"
+		"contextsubject" "WorldC502Horse"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502SmellBath"
+		"origin" "-7284.8198242188 -3230.2900390625 -212.0299987793"
+		"angles" "0 -82.401802063 0"
+		"contextsubject" "WorldC502SmellBath"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502Smell"
+		"origin" "-7514.6000976563 -855.3300170898 -198.3800048828"
+		"angles" "0 178.3340148926 0"
+		"contextsubject" "WorldC502Smell"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502Alley"
+		"origin" "-8720.759765625 -3267.580078125 -194.8600006104"
+		"angles" "0 173.5158996582 0"
+		"contextsubject" "WorldC502Alley"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502NotZombies"
+		"origin" "-9657.7998046875 -3587.4099121094 -230.1600036621"
+		"angles" "0 -88.4734344482 0"
+		"contextsubject" "WorldC502NotZombies"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignPhotography"
+		"origin" "-9462.6298828125 -5151.810546875 -193.96875"
+		"angles" "0 6.1709213257 0"
+		"contextsubject" "WorldSignPhotography"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignFormLine"
+		"origin" "-9221.23046875 -3780.5300292969 -187.0200042725"
+		"angles" "0 6.1709213257 0"
+		"contextsubject" "WorldSignFormLine"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignRestrictedArea"
+		"origin" "-9554.3095703125 -4239.8198242188 -189.3699951172"
+		"angles" "0 -95.0069198608 0"
+		"contextsubject" "WorldSignRestrictedArea"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignRestrictedArea"
+		"origin" "-9589.75 -5597.740234375 -177.6699981689"
+		"angles" "0 -91.0824661255 0"
+		"contextsubject" "WorldSignRestrictedArea"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignRestrictedArea"
+		"origin" "-9786.2001953125 -5096.1899414063 -201.1000061035"
+		"angles" "0 -52.8022079468 0"
+		"contextsubject" "WorldSignRestrictedArea"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignC5AlarmWillSound"
+		"origin" "-9582.7802734375 -6060.3901367188 -156.9900054932"
+		"angles" "0 -86.4865570068 0"
+		"contextsubject" "WorldSignC5AlarmWillSound"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignStayInGroup"
+		"origin" "-8884.601563 -5200.948242 -185.908401"
+		"angles" "0 -95.0069198608 0"
+		"contextsubject" "WorldSignStayInGroup"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502AlarmButton"
+		"origin" "-8164.509765625 -5865.5600585938 11.6800003052"
+		"angles" "0 -79.3999633789 0"
+		"contextsubject" "WorldC502AlarmButton"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignReportSick"
+		"origin" "-8266.1796875 -6766.259765625 -180.3200073242"
+		"angles" "0 -89.9301605225 0"
+		"contextsubject" "WorldSignReportSick"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502BusStory"
+		"origin" "-7435.6098632813 -7501.9301757813 -197.3600006104"
+		"angles" "0 -70.5259094238 0"
+		"contextsubject" "WorldC502BusStory"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC502SpotSafeHouse"
+		"origin" "-8852.2197265625 -8326.5 -195.0399932861"
+		"angles" "0 155.4579772949 0"
+		"contextsubject" "WorldC502SpotSafeHouse"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldSignWhereIsCEDA"
+		"origin" "-8534.357421875 -3131.0659179688 -216.6248931885"
+		"angles" "0 155.4579772949 0"
+		"contextsubject" "WorldSignWhereIsCEDA"
+	}
+	"entity"
+	{
+		"classname" "point_clientcommand"
+		"targetname" "comm_cmd"
+		"origin" "0 0 0"
+		"angles" "0 0 0"
+	}
+	"entity"
+	{
+		"classname" "logic_auto"
+		"targetname" ""
+		"origin" "1888 896 512"
+		"angles" "0 0 0"
+		"id" 2332614
+		"spawnflags" 1
+		"connections"
+		{
+			"OnMapSpawn" "comm_cmd,Command,z_difficulty Easy,0.1,-1"
+			"OnMapSpawn" "comm_cmd,Command,sv_cheats 1,0,-1"
+			"OnMapSpawn" "comm_cmd,Command,director_no_bosses 1,0.1,-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "STORY"
+		"origin" "-4085 -1275 -300"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-story.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Chet Faliszek"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "commentary_zombie_spawner"
+		"targetname" "charger_spawner"
+		"origin" "-3456 -1664 -379"
+		"angles" "0 90 0"
+		"id" 2
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "commentary_zombie_spawner"
+		"targetname" "spitter_spawner"
+		"origin" "-3408 -1664 -379"
+		"angles" "0 90 0"
+		"id" 4
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "special_cancel_relay"
+		"origin" "-3456 -1616 -320"
+		"angles" "0 0 0"
+		"id" 47
+		"connections"
+		{
+			"ontrigger" "special_relayCancelPending0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "special_relay"
+		"origin" "-3456 -1616 -352"
+		"angles" "0 0 0"
+		"id" 49
+		"connections"
+		{
+			"ontrigger" "charger_spawnerSpawnZombiecharger charger0-1"
+			"ontrigger" "chargerKill59-1"
+			"ontrigger" "spitter_spawnerSpawnZombiespitter spitter60-1"
+			"ontrigger" "spitterKill78-1"
+			"ontrigger" "jockey_spawnerSpawnZombiejockey jockey79-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "commentary_zombie_spawner"
+		"targetname" "jockey_spawner"
+		"origin" "-3504 -1664 -379"
+		"angles" "0 90 0"
+		"id" 8
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "THE NEW SPECIAL INFECTED"
+		"origin" "-3475 -1575 -335"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-newspecialinfected.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Tom Leonard"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "special_relay,Trigger,,0,-1"
+			"oncommentarystopped" "chargerKill0-1"
+			"oncommentarystopped" "spitterKill0-1"
+			"oncommentarystopped" "jockeyKill0-1"
+			"oncommentarystopped" "special_relay,Enable,,0.1,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "park_camera"
+		"origin" "-4928 -1184 96"
+		"angles" "0 0 0"
+		"id" 51
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "park_target"
+		"origin" "-5504 -1600 -96"
+		"angles" "0 0 0"
+		"id" 53
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "PARK PATHS"
+		"origin" "-4445 -2200 -215"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-parkpaths.wav"
+		"viewtarget" "park_target"
+		"viewposition" "park_camera"
+		"prevent_movement" 0
+		"speakers" "Dario Casali"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "AMMO PILES AND WEAPON SCAVENGING"
+		"origin" "-6560 -2190 -190"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-ammopiles.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Boone"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "commentary_zombie_spawner"
+		"targetname" "jockey2_spawner"
+		"origin" "-8304 -2160 -256.0589904785"
+		"angles" "0 0 0"
+		"id" 55
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "specialmoves_cancel_relay"
+		"origin" "-8256 -2208 -197.0590057373"
+		"angles" "0 0 0"
+		"id" 57
+		"connections"
+		{
+			"ontrigger" "specialmoves_relayCancelPending0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "specialmoves_relay"
+		"origin" "-8256 -2208 -229.0590057373"
+		"angles" "0 0 0"
+		"id" 59
+		"connections"
+		{
+			"ontrigger" "spitter2_spawnerSpawnZombiespitter spitter0-1"
+			"ontrigger" "spitterKill25-1"
+			"ontrigger" "jockey2_spawnerSpawnZombiejockey jockey25-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "commentary_zombie_spawner"
+		"targetname" "spitter2_spawner"
+		"origin" "-8304 -2256 -256.0589904785"
+		"angles" "0 0 0"
+		"id" 61
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "SPECIAL MOVES"
+		"origin" "-7985 -2170 -190"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-specialmoves.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Karen Prell"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "specialmoves_relay,Trigger,,0,-1"
+			"oncommentarystopped" "spitter,Kill,,0,-1"
+			"oncommentarystopped" "jockey,Kill,,0,-1"
+			"oncommentarystopped" "specialmoves_relay,Enable,,0.1,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "DEADLY HALLWAYS"
+		"origin" "-8785 -3270 -215"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-deadlyhallways.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Chris Carollo"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "overpasses_camera"
+		"origin" "-9360 -3376 -184"
+		"angles" "0 0 0"
+		"id" 18
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "overpasses_target"
+		"origin" "-9536 -3600 -112"
+		"angles" "0 0 0"
+		"id" 20
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "OVERPASSES"
+		"origin" "-9520 -3520 -215"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-overpasses.wav"
+		"viewtarget" "overpasses_target"
+		"viewposition" "overpasses_camera"
+		"prevent_movement" 0
+		"speakers" "Randy Lundeen"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "busstation_target"
+		"origin" "-8448 -6016 0"
+		"angles" "0 0 0"
+		"id" 22
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "busstation_camera"
+		"origin" "-8864 -5632 208"
+		"angles" "0 0 0"
+		"id" 24
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "BUS STATION"
+		"origin" "-9590 -5940 -170"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-busstation.wav"
+		"viewtarget" "busstation_target"
+		"viewposition" "busstation_camera"
+		"prevent_movement" 0
+		"speakers" "Aaron Barber"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_template"
+		"targetname" "gunplay_template"
+		"origin" "-6976 -5440 -224"
+		"angles" "0 0 0"
+		"id" 26
+		"spawnflags" 2
+		"template01" "gunplay_desert_rifle"
+		"template02" "gunplay_ak47_rifle"
+		"template03" "gunplay_silenced_smg"
+		"template04" "gunplay_military_sniper"
+		"template05" "gunplay_police_pistol"
+		"template06" "gunplay_magnum_pistol"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "gunplay_relay"
+		"origin" "-6976 -5440 -192"
+		"angles" "0 0 0"
+		"id" 28
+		"spawnflags" 1
+		"connections"
+		{
+			"ontrigger" "gunplay_templateForceSpawn0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_pistol_magnum_spawn"
+		"targetname" "gunplay_magnum_pistol"
+		"origin" "-7040 -5480 -254.4620056152"
+		"angles" "0 289.5 90"
+		"id" 30
+		"body" 0
+		"count" 5
+		"solid" 6
+		"spawnflags" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_pistol_spawn"
+		"targetname" "gunplay_police_pistol"
+		"origin" "-7032 -5504 -254.4620056152"
+		"angles" "0 289.5 90"
+		"id" 32
+		"body" 0
+		"count" 5
+		"solid" 6
+		"spawnflags" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_sniper_military_spawn"
+		"targetname" "gunplay_military_sniper"
+		"origin" "-7008 -5480 -254.4620056152"
+		"angles" "0 289.5 90"
+		"id" 34
+		"body" 0
+		"count" 5
+		"solid" 6
+		"spawnflags" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_smg_silenced_spawn"
+		"targetname" "gunplay_silenced_smg"
+		"origin" "-6984 -5480 -254.4620056152"
+		"angles" "0 289.5 90"
+		"id" 36
+		"body" 0
+		"count" 5
+		"solid" 6
+		"spawnflags" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_rifle_ak47_spawn"
+		"targetname" "gunplay_ak47_rifle"
+		"origin" "-6960 -5480 -254.4620056152"
+		"angles" "0 289.5 90"
+		"id" 38
+		"body" 0
+		"count" 5
+		"solid" 6
+		"spawnflags" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_rifle_desert_spawn"
+		"targetname" "gunplay_desert_rifle"
+		"origin" "-6936 -5480 -254.4620056152"
+		"angles" "0 289.5 90"
+		"id" 40
+		"body" 0
+		"count" 5
+		"solid" 6
+		"spawnflags" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "GUNPLAY"
+		"origin" "-6855 -5495 -215"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-gunplay.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Tristan Reidford"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "gunplay_relay,Trigger,,0,-1"
+			"oncommentarystopped" "gunplay_relay,Enable,,0.1,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "DAYTIME CUES"
+		"origin" "-8960 -6145 -215"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-daytimecues.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brandon Idol"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "adrenaline_relay"
+		"origin" "-8176 -5808 32"
+		"angles" "0 0 0"
+		"id" 2
+		"spawnflags" 1
+		"connections"
+		{
+			"ontrigger" "adrenaline_templateForceSpawn0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_template"
+		"targetname" "adrenaline_template"
+		"origin" "-8176 -5808 16"
+		"angles" "0 0 0"
+		"id" 4
+		"spawnflags" 2
+		"template01" "adrenaline_spawn"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_adrenaline_spawn"
+		"targetname" "adrenaline_spawn"
+		"origin" "-8160 -5808 -32"
+		"angles" "0 315 0"
+		"id" 6
+		"body" 0
+		"disableshadows" 1
+		"skin" 0
+		"solid" 6
+		"spawnflags" 2
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_adrenaline_spawn"
+		"targetname" "adrenaline_spawn"
+		"origin" "-8160 -5840 -32"
+		"angles" "0 240 0"
+		"id" 8
+		"body" 0
+		"disableshadows" 1
+		"skin" 0
+		"solid" 6
+		"spawnflags" 2
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "ADRENALINE"
+		"origin" "-8175 -5825 0"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-adrenaline.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Guthrie"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "adrenaline_relay,Trigger,,0,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "SPECIALS AND SONIC SILHOUETTES"
+		"origin" "-7570 -7140 -205"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-sonicsilhouettes.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "jockey_relay"
+		"origin" "-8736 -8416 -192"
+		"angles" "0 0 0"
+		"id" 42
+		"connections"
+		{
+			"ontrigger" "jockey3_spawnerSpawnZombiejockey jockey0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "commentary_zombie_spawner"
+		"targetname" "jockey3_spawner"
+		"origin" "-8784 -8368 -248"
+		"angles" "0 0 0"
+		"id" 44
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "GIDDY UP! COMPOSITING THE JOCKEY AND SURVIVOR"
+		"origin" "-8625 -8385 -205"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-giddyup.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "jockey_relay,Trigger,,0,-1"
+			"oncommentarystopped" "jockey,Kill,,0,-1"
+			"oncommentarystopped" "jockey_relay,Enable,,0.1,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Park"
+		"origin" "-4120.08984375 -2340.5500488281 -268.450012207"
+		"angles" "0 -179.2264251709 0"
+		"contextsubject" "C5M2Park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Park"
+		"origin" "-4092.6499023438 -2083.5900878906 -265.299987793"
+		"angles" "0 -176.3885498047 0"
+		"contextsubject" "C5M2Park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Park"
+		"origin" "-4071.5500488281 -1911.7700195313 -266.3200073242"
+		"angles" "0 -171.9665222168 0"
+		"contextsubject" "C5M2Park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Freeway"
+		"origin" "-6730.16015625 -8432.490234375 -120.4400024414"
+		"angles" "0 -93.6685180664 0"
+		"contextsubject" "C5M2Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Freeway"
+		"origin" "-6957.1801757813 -8443.3095703125 -47.4900016785"
+		"angles" "0 -113.2045288086 0"
+		"contextsubject" "C5M2Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Freeway"
+		"origin" "-7368.3701171875 -8462.3701171875 -73.3700027466"
+		"angles" "0 -142.0167694092 0"
+		"contextsubject" "C5M2Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Freeway"
+		"origin" "-8120.9599609375 -8450.6201171875 -63.3600006104"
+		"angles" "0 -159.177154541 0"
+		"contextsubject" "C5M2Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2Freeway"
+		"origin" "-7736.830078125 -8480.16015625 -102.8099975586"
+		"angles" "0 -162.1173858643 0"
+		"contextsubject" "C5M2Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2BusStation"
+		"origin" "-8206.349609375 -6519.4799804688 -202.6600036621"
+		"angles" "0 90.5678329468 0"
+		"contextsubject" "C5M2BusStation"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2People"
+		"origin" "-9522.16015625 -4911.7001953125 -228.9600067139"
+		"angles" "0 -65.0763702393 0"
+		"contextsubject" "C5M2People"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2People"
+		"origin" "-9763.650390625 -4906.8500976563 -211.4400024414"
+		"angles" "0 -154.9682617188 0"
+		"contextsubject" "C5M2People"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M2People"
+		"origin" "-9696.3203125 -5026.3999023438 -223.3300018311"
+		"angles" "0 -102.6961975098 0"
+		"contextsubject" "C5M2People"
+	}
+}

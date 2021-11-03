@@ -1,0 +1,91 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_01"
+		"origin" "-1932.7900390625 1812.3499755859 45.4000015259"
+		"angles" "0 -22.6376533508 0"
+		"contextsubject" "airport03_01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_02"
+		"origin" "-1518.5500488281 2789.8400878906 401.9100036621"
+		"angles" "0 -134.2788238525 0"
+		"contextsubject" "airport03_02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_02"
+		"origin" "-1577.7900390625 1961.3599853516 219.2700042725"
+		"angles" "0 -176.7830200195 0"
+		"contextsubject" "airport03_02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_03"
+		"origin" "-540.9899902344 2513.0200195313 77.4000015259"
+		"angles" "0 1.915066123 0"
+		"contextsubject" "airport03_03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_03"
+		"origin" "-551.5200195313 4270.3798828125 79.7699966431"
+		"angles" "0 1.3211407661 0"
+		"contextsubject" "airport03_03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_03"
+		"origin" "-548.0100097656 4047.1298828125 80.7300033569"
+		"angles" "0 -2.1108074188 0"
+		"contextsubject" "airport03_03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_04"
+		"origin" "-1836.355103 3459.334717 228.322830"
+		"angles" "0 89.6583786011 0"
+		"contextsubject" "airport03_04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_05"
+		"origin" "-4120.5600585938 821.3099975586 66.5500030518"
+		"angles" "0 135.0663452148 0"
+		"contextsubject" "airport03_05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_06"
+		"origin" "-2777.8701171875 3762.9299316406 75.2300033569"
+		"angles" "0 167.0463562012 0"
+		"contextsubject" "airport03_06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_07"
+		"origin" "-1352.9000244141 3349.9699707031 351.1099853516"
+		"angles" "0 173.6825408936 0"
+		"contextsubject" "airport03_07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport03_barrier"
+		"origin" "-5396.240234375 -982.1199951172 68.4199981689"
+		"angles" "0 12.6234359741 0"
+		"contextsubject" "airport03_barrier"
+	}
+}

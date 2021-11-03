@@ -1,0 +1,223 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"initialstate" "1"
+		"maxs" "64 8 80"
+		"mins" "0 0 0"
+		"origin" "-1966.28 2607.48 76.977"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"initialstate" "1"
+		"maxs" "280 96 660"
+		"mins" "0 0 0"
+		"origin" "31.0388 1957.69 -14.6749"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2Start"
+		"origin" "-8175.5297851563 7123.3901367188 23.5100002289"
+		"angles" "0 -94.289855957 0"
+		"contextsubject" "C3M2Start"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2StartDry"
+		"origin" "-8638.58984375 6886.2700195313 66.0100021362"
+		"angles" "0 -120.5576171875 0"
+		"contextsubject" "C3M2StartDry"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2OverTree"
+		"origin" "-7803.740234375 5316.759765625 77.4300003052"
+		"angles" "0 -12.9773006439 0"
+		"contextsubject" "C3M2OverTree"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2PlaneCrash"
+		"origin" "-2387.2900390625 3869.9599609375 50.9399986267"
+		"angles" "0 -52.2470588684 0"
+		"contextsubject" "C3M2PlaneCrash"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2PlaneDoorNag"
+		"origin" "-1814.1999511719 3051.8400878906 95"
+		"angles" "0 -6.5089244843 0"
+		"contextsubject" "C3M2PlaneDoorNag"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2PlaneDoorNaga"
+		"origin" "-1788.9000244141 3045.4299316406 92.6399993896"
+		"angles" "0 -4.8588876724 0"
+		"contextsubject" "C3M2PlaneDoorNaga"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2SickOfSwamp"
+		"origin" "48.7200012207 2626.8701171875 31.0599994659"
+		"angles" "0 35.8633384705 0"
+		"contextsubject" "C3M2SickOfSwamp"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2Garbage"
+		"origin" "3774.6398925781 2730.1398925781 55.5499992371"
+		"angles" "0 64.3753356934 0"
+		"contextsubject" "C3M2Garbage"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2UnderWaterShack"
+		"origin" "6277.5297851563 1621.9899902344 22.4599990845"
+		"angles" "0 23.7193183899 0"
+		"contextsubject" "C3M2UnderWaterShack"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2Road"
+		"origin" "7370.7299804688 2290.0500488281 3.7799999714"
+		"angles" "0 24.0135307312 0"
+		"contextsubject" "C3M2Road"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2Village1"
+		"origin" "8346.1103515625 291.9700012207 178.0899963379"
+		"angles" "0 -90.9016799927 0"
+		"contextsubject" "C3M2Village1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2Village2"
+		"origin" "7529.0600585938 -359.6000061035 167.4100036621"
+		"angles" "0 50.4705238342 0"
+		"contextsubject" "C3M2Village2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2WhereAreWe"
+		"origin" "-6270.080078125 4875.8100585938 67.3700027466"
+		"angles" "0 -13.4470348358 0"
+		"contextsubject" "C3M2WhereAreWe"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C3M2Bathtub"
+		"origin" "3626.4099121094 2677.1000976563 30.2800006866"
+		"angles" "0 -16.9449272156 0"
+		"contextsubject" "C3M2Bathtub"
+	}
+	
+
+//Block jumping into the plane tail windows to skip the plane panic event.  Entity name chosen because it recieves a kill command when the event fires.
+	
+	entity
+	{
+		"id" "1908155"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "180 8 648"
+		"mins" "-8 -34 -8"
+		"targetname" "cabin_door_button"
+		"origin" "-1922 2591 -8"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "1908348"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "180 8 648"
+		"mins" "-8 -24 -8"
+		"targetname" "cabin_door_button"
+		"origin" "-1904 2549 -8"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "1912907"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "180 8 648"
+		"mins" "-8 -25 -8"
+		"targetname" "cabin_door_button"
+		"origin" "-1886 2517 -8"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "1912971"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 144 500"
+		"mins" "-4 -144 -80"
+		"targetname" "cabin_door_button"
+		"origin" "-1404 1813 64"
+		"mapupdate" "1"
+	}
+	
+// Further fixes to prevent jumping on top of the airplane.
+	entity
+	{
+		"id" "1908156"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "146 158 680"
+		"mins" "-8 -180 -80"
+		"targetname" "cabin_door_button"
+		"origin" "-1984 3728 224"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "1908216"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "80 128 680"
+		"mins" "-8 -128 -80"
+		"targetname" "cabin_door_button"
+		"origin" "-2072 3872 192"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "1908291"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "146 100 680"
+		"mins" "-8 -128 -80"
+		"targetname" "cabin_door_button"
+		"origin" "-1928 3448 264"
+		"mapupdate" "1"
+	}
+}

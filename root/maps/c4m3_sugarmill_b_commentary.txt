@@ -1,0 +1,341 @@
+"Entities"
+{
+
+// Blocks access to the roofs just after the start of the map, which allowed survivors to skip the cane field.
+entity
+{
+	"id" "40051"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "396 1417 2180"
+	"mins" "-8 -8 -19"
+	"origin" "-140 -12633 212"
+	"mapupdate" "1"
+}
+entity
+{
+	"id" "40201"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "292 1880 2080"
+	"mins" "-8 -8 -8"
+	"origin" "-36 -11176 312.332"
+	"mapupdate" "1"
+}
+
+// MAP UPDATE
+
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "50 800 1000"
+	"mins" "0 0 0"
+	"origin" "208 -6112 359"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "1000 300 1000"
+	"mins" "0 0 0"
+	"origin" "256 -5632 359"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "1400 1000 1000"
+	"mins" "0 0 0"
+	"origin" "1071.14 -6319.28 385"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "50 50 500"
+	"mins" "0 0 0"
+	"origin" "-1535 -9144.59 614.604"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "62 62 500"
+	"mins" "0 0 0"
+	"targetname" "blocker_spool_survival"
+	"origin" "502 -6628 200"
+	"mapupdate" "1"
+}
+
+	
+//
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_rain"
+		"origin" "-1136.6400146484 -13618.8701171875 168.5500030518"
+		"angles" "0 57.1919212341 0"
+		"contextsubject" "c4m3_rain"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_rain"
+		"origin" "-1117.7299804688 -13353.75 148.7700042725"
+		"angles" "0 70.7879486084 0"
+		"contextsubject" "c4m3_rain"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_rain"
+		"origin" "-1145.6899414063 -13043.83984375 173.8600006104"
+		"angles" "0 99.3662414551 0"
+		"contextsubject" "c4m3_rain"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_rain"
+		"origin" "-1293.0500488281 -13201.7197265625 173.3099975586"
+		"angles" "0 -107.3156204224 0"
+		"contextsubject" "c4m3_rain"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-1193.4300537109 -12622.1201171875 176.5700073242"
+		"angles" "0 92.202583313 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-1269.4100341797 -12631.2802734375 176.4400024414"
+		"angles" "0 100.3866653442 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-1464.9399414063 -12700.099609375 176.1600036621"
+		"angles" "0 116.88671875 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-1708.3199462891 -12832.8203125 175.8399963379"
+		"angles" "0 118.6027297974 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-1071.1800537109 -12601.6396484375 166.6900024414"
+		"angles" "0 101.1787109375 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-924.2700195313 -12577.4599609375 166.2400054932"
+		"angles" "0 97.6806869507 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-686.6599731445 -12556.0498046875 165.1900024414"
+		"angles" "0 88.572593689 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-418.0799865723 -12672.2802734375 157.5"
+		"angles" "0 85.1405944824 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_cane"
+		"origin" "-228.2700042725 -12701.8095703125 156.8600006104"
+		"angles" "0 80.3886108398 0"
+		"contextsubject" "c4m3_cane"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_elevator"
+		"origin" "-1426.9300537109 -9635.0703125 162.5200042725"
+		"angles" "0 134.1787261963 0"
+		"contextsubject" "c4m3_elevator"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_elevator"
+		"origin" "-1305.2900390625 -9570.6201171875 154.9499969482"
+		"angles" "0 166.9807128906 0"
+		"contextsubject" "c4m3_elevator"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_elevator"
+		"origin" "-1191.3900146484 -9601.3095703125 150.6399993896"
+		"angles" "0 136.356048584 0"
+		"contextsubject" "c4m3_elevator"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_downstairs"
+		"origin" "-911.0700073242 -8727.1904296875 659.0999755859"
+		"angles" "0 -113.0279159546 0"
+		"contextsubject" "c4m3_downstairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_flooded"
+		"origin" "-557.799987793 -8409.6103515625 394.450012207"
+		"angles" "0 -82.2235488892 0"
+		"contextsubject" "c4m3_flooded"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_overtank"
+		"origin" "-705.0200195313 -7559.3598632813 149.8200073242"
+		"angles" "0 97.9763641357 0"
+		"contextsubject" "c4m3_overtank"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_overtank"
+		"origin" "-723.25 -7521.8901367188 301.7600097656"
+		"angles" "0 78.4402770996 0"
+		"contextsubject" "c4m3_overtank"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_thisway"
+		"origin" "-485.2200012207 -7015.5600585938 407.7600097656"
+		"angles" "0 58.4425315857 0"
+		"contextsubject" "c4m3_thisway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_downhere"
+		"origin" "771.3900146484 -5951.8701171875 392.5400085449"
+		"angles" "0 21.0536422729 0"
+		"contextsubject" "c4m3_downhere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_downhere"
+		"origin" "2328.0600585938 -5413.009765625 388.2900085449"
+		"angles" "0 10.9920368195 0"
+		"contextsubject" "c4m3_downhere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_crosshere"
+		"origin" "1638.6199951172 -5145.3999023438 268.0799865723"
+		"angles" "0 -177.804107666 0"
+		"contextsubject" "c4m3_crosshere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_uppipes"
+		"origin" "1640.5500488281 -4329.0600585938 177.6600036621"
+		"angles" "0 3.9296598434 0"
+		"contextsubject" "c4m3_uppipes"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_crosshere"
+		"origin" "2774.6201171875 -4306.1401367188 384.2699890137"
+		"angles" "0 -64.3800735474 0"
+		"contextsubject" "c4m3_crosshere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_ducatelsign"
+		"origin" "3519.7600097656 -3762.2800292969 415.2900085449"
+		"angles" "0 93.1622238159 0"
+		"contextsubject" "c4m3_ducatelsign"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_flooded2"
+		"origin" "3698.6899414063 -4445.3198242188 158.7599945068"
+		"angles" "0 -5.9446563721 0"
+		"contextsubject" "c4m3_flooded2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_flooded2"
+		"origin" "4874.8500976563 -3870.8601074219 159.8999938965"
+		"angles" "0 58.7353096008 0"
+		"contextsubject" "c4m3_flooded2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_flooded2"
+		"origin" "-918.3099975586 -8358.33984375 649.7600097656"
+		"angles" "0 87.6803436279 0"
+		"contextsubject" "c4m3_flooded2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_flooded2"
+		"origin" "-551.7399902344 -8323.6201171875 694.1300048828"
+		"angles" "0 77.8104553223 0"
+		"contextsubject" "c4m3_flooded2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m3_flooded2"
+		"origin" "-731.4400024414 -8349.330078125 667.2899780273"
+		"angles" "0 69.0324020386 0"
+		"contextsubject" "c4m3_flooded2"
+	}
+}

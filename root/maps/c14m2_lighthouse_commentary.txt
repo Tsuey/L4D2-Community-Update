@@ -1,0 +1,27 @@
+"Entities"
+{
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m2_gate"
+		"origin" "774.640930 260.881042 208.031250"
+		"angles" "-7.257380 105.521957 0.000000"
+		"contextsubject" "c14m2_gate"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m2_drop"
+		"origin" "269.665558 905.887878 552.645386"
+		"angles" "8.262826 175.597931 0.000000"
+		"contextsubject" "c14m2_drop"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m2_note_lighthouse"
+		"origin" "-2943.727539 3298.617188 590.804016"
+		"angles" "-19.657803 166.346069 0.000000"
+		"contextsubject" "c14m2_note_lighthouse"
+	}
+}

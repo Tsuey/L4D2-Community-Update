@@ -1,0 +1,1105 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_clientcommand"
+		"targetname" "comm_cmd"
+		"origin" "0 0 0"
+		"angles" "0 0 0"
+	}
+	"entity"
+	{
+		"classname" "logic_auto"
+		"targetname" ""
+		"origin" "6435 8335 45"
+		"angles" "0 0 0"
+		"id" 2332614
+		"spawnflags" 1
+		"connections"
+		{
+			"OnMapSpawn" "comm_cmd,Command,z_difficulty Easy,0.1,-1"
+			"OnMapSpawn" "comm_cmd,Command,sv_cheats 1,0,-1"
+			"OnMapSpawn" "comm_cmd,Command,director_no_bosses 1,0.1,-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "PLAYTEST OBSERVATION"
+		"origin" "5870 8180 65"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-playtestobservation.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Burgin"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "BUS RETURN"
+		"origin" "4160 5305 170"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-busreturn.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Alireza Razmpoosh"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "incendiary_relay"
+		"origin" "4608 4240 16"
+		"angles" "0 0 0"
+		"id" 2
+		"spawnflags" 1
+		"connections"
+		{
+			"ontrigger" "incendiary_templateForceSpawn0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_template"
+		"targetname" "incendiary_template"
+		"origin" "4608 4240 48"
+		"angles" "0 0 0"
+		"id" 4
+		"spawnflags" 2
+		"template01" "incendiary_spawn"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_upgradepack_incendiary_spawn"
+		"targetname" "incendiary_spawn"
+		"origin" "4639 4292 26.2513008118"
+		"angles" "0 0 0"
+		"id" 6
+		"solid" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_upgradepack_incendiary_spawn"
+		"targetname" "incendiary_spawn"
+		"origin" "4551 4292 26.2513008118"
+		"angles" "0 0 0"
+		"id" 8
+		"solid" 6
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "UPGRADE PACKS"
+		"origin" "4620 4235 40"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-upgradepacks.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Strand"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "incendiary_relay,Trigger,,0,-1"
+		}
+	}
+
+	"entity"
+	{
+		"classname" "commentary_zombie_spawner"
+		"targetname" "spitter_spawner"
+		"origin" "2588 2496 132"
+		"angles" "0 0 0"
+		"id" 127
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 3500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "spitter_goo_relay"
+		"origin" "2720 2592 32"
+		"angles" "0 0 0"
+		"id" 129
+		"spawnflags" 0
+		"connections"
+		{
+			"ontrigger" "spitter_spawnerSpawnZombiespitter spitter0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_timer"
+		"targetname" "spitter_goo_timer"
+		"origin" "2720 2592 64"
+		"angles" "0 0 0"
+		"id" 125
+		"refiretime" 9
+		"spawnflags" 0
+		"startdisabled" 1
+		"userandomtime" 0
+		"connections"
+		{
+			"ontimer" "spitter_goo_systemStop7-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_particle_system"
+		"targetname" "spitter_goo_system"
+		"origin" "2720 2576 0"
+		"angles" "0 0 0"
+		"id" 28
+		"cpoint1" "spitter_goo_target1"
+		"cpoint2" "spitter_goo_target2"
+		"cpoint3" "spitter_goo_target3"
+		"cpoint4" "spitter_goo_target4"
+		"cpoint5" "spitter_goo_target5"
+		"cpoint6" "spitter_goo_target6"
+		"effect_name" "spitter_areaofdenial"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 1500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_template"
+		"targetname" "spitter_goo_template"
+		"origin" "2688 2592 32"
+		"angles" "0 0 0"
+		"id" 93
+		"spawnflags" 2
+		"template01" "spitter_goo_system"
+		"template02" "spitter_goo_target*"
+		"connections"
+		{
+			"onentityspawned" "spitter_goo_systemStart0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 3000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_particle_target"
+		"targetname" "spitter_goo_target1"
+		"origin" "2704 2528 0"
+		"angles" "0 0 0"
+		"id" 107
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_particle_target"
+		"targetname" "spitter_goo_target2"
+		"origin" "2736 2480 0"
+		"angles" "0 0 0"
+		"id" 109
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_particle_target"
+		"targetname" "spitter_goo_target3"
+		"origin" "2720 2432 0"
+		"angles" "0 0 0"
+		"id" 111
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_particle_target"
+		"targetname" "spitter_goo_target4"
+		"origin" "2704 2384 0"
+		"angles" "0 0 0"
+		"id" 113
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_particle_target"
+		"targetname" "spitter_goo_target5"
+		"origin" "2720 2336 0"
+		"angles" "0 0 0"
+		"id" 115
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_particle_target"
+		"targetname" "spitter_goo_target6"
+		"origin" "2768 2336 0"
+		"angles" "0 0 0"
+		"id" 117
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "SPITTER EFFECTS"
+		"origin" "2610 2510 175"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-spittereffects.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Peter Konig"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "spitter_goo_relay,Trigger,,0,-1"
+			"oncommentarystopped" "spitter,kill,,0.1,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "LOBBY BROWSER"
+		"origin" "2920 495 40"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-lobbybrowser.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Zoid Kirsch"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_template"
+		"targetname" "laser_sight_template"
+		"origin" "3648 192 64"
+		"angles" "0 0 0"
+		"id" 131
+		"spawnflags" 2
+		"template01" "laser_sight_spawn"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 3000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "laser_sight_relay"
+		"origin" "3648 192 96"
+		"angles" "0 0 0"
+		"id" 133
+		"spawnflags" 1
+		"connections"
+		{
+			"ontrigger" "laser_sight_templateForceSpawn0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "upgrade_spawn"
+		"targetname" "laser_sight_spawn"
+		"origin" "3648 240 84"
+		"angles" "0 0 0"
+		"id" 135
+		"laser_sight" 1
+		"spawnflags" 2
+		"upgradepack_explosive" 0
+		"upgradepack_incendiary" 0
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 4000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "LASER-SIGHTS"
+		"origin" "3625 190 75"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-lasersights.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Pinkerton"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "laser_sight_relay,Trigger,,0,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "SNEAK OR FIGHT"
+		"origin" "5940 150 40"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-sneakorfight.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_template"
+		"targetname" "defib_template"
+		"origin" "6176 -2816 464"
+		"angles" "0 0 0"
+		"id" 137
+		"spawnflags" 2
+		"template01" "defib_spawn"
+		"connections"
+		{
+			"onentityspawned" "spitter_goo_systemStart0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 3000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "defib_relay"
+		"origin" "6176 -2816 496"
+		"angles" "0 0 0"
+		"id" 139
+		"spawnflags" 1
+		"connections"
+		{
+			"ontrigger" "defib_templateForceSpawn0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 2500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_defibrillator_spawn"
+		"targetname" "defib_spawn"
+		"origin" "6160 -2848 435"
+		"angles" "0 300 0"
+		"id" 141
+		"body" 0
+		"disableshadows" 1
+		"skin" 0
+		"solid" 6
+		"spawnflags" 2
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 4000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "weapon_defibrillator_spawn"
+		"targetname" "defib_spawn"
+		"origin" "6176 -2864 435"
+		"angles" "0 255 0"
+		"id" 143
+		"body" 0
+		"disableshadows" 1
+		"skin" 0
+		"solid" 6
+		"spawnflags" 2
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 4000]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "DEFIBRILLATOR"
+		"origin" "6215 -2840 475"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-defibrillator.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Lars Jensvold"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "defib_relay,Trigger,,0,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "DYNAMIC PATHS"
+		"origin" "6730 -4625 150"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-dynamicpaths.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kim Swift"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "commentary_dummy"
+		"targetname" "coach_dummy"
+		"origin" "8856 -6624 218.1649932861"
+		"angles" "0 0 0"
+		"id" 2
+		"eyeheight" 64
+		"headpitchposeparam" "Head_Pitch"
+		"headyawposeparam" "Head_Yaw"
+		"model" "models/survivors/survivor_coach.mdl"
+		"startinganim" "Idle_Calm_Pistol"
+		"startingweapons" "weapon_pistol"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "logic_relay"
+		"targetname" "survivor_dummy_relay"
+		"origin" "8960 -6592 288"
+		"angles" "0 0 0"
+		"id" 4
+		"connections"
+		{
+			"ontrigger" "survivor_dummy_templateForceSpawn0-1"
+		}
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_template"
+		"targetname" "survivor_dummy_template"
+		"origin" "9000 -6592 256"
+		"angles" "0 0 0"
+		"id" 6
+		"spawnflags" 2
+		"template01" "coach_dummy"
+		"template02" "gambler_dummy"
+		"template03" "producer_dummy"
+		"template04" "mechanic_dummy"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 500]"
+		}
+	}
+	"entity"
+	{
+		"classname" "commentary_dummy"
+		"targetname" "mechanic_dummy"
+		"origin" "8895 -6592 218.1649932861"
+		"angles" "0 0 0"
+		"id" 8
+		"eyeheight" 64
+		"headpitchposeparam" "Head_Pitch"
+		"headyawposeparam" "Head_Yaw"
+		"model" "models/survivors/survivor_mechanic.mdl"
+		"startinganim" "Idle_Calm_Pistol"
+		"startingweapons" "weapon_pistol"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "commentary_dummy"
+		"targetname" "producer_dummy"
+		"origin" "8935 -6568 218.1649932861"
+		"angles" "0 0 0"
+		"id" 10
+		"eyeheight" 64
+		"headpitchposeparam" "Head_Pitch"
+		"headyawposeparam" "Head_Yaw"
+		"model" "models/survivors/survivor_producer.mdl"
+		"startinganim" "Idle_Calm_Pistol"
+		"startingweapons" "weapon_pistol"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "commentary_dummy"
+		"targetname" "gambler_dummy"
+		"origin" "8895 -6536 218.1649932861"
+		"angles" "0 0 0"
+		"id" 12
+		"eyeheight" 64
+		"headpitchposeparam" "Head_Pitch"
+		"headyawposeparam" "Head_Yaw"
+		"model" "models/survivors/survivor_gambler.mdl"
+		"startinganim" "Idle_Calm_Pistol"
+		"startingweapons" "weapon_pistol"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" 1
+			"visgroupautoshown" 1
+			"logicalpos" "[0 0]"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "NEW SURVIVORS"
+		"origin" "9170 -6595 255"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-newsurvivors.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeremy Bennett"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "survivor_dummy_relay,Trigger,,0,-1"
+			"oncommentarystopped" "coach_dummy,kill,,0.1,-1"
+			"oncommentarystopped" "gambler_dummy,kill,,0.1,-1"
+			"oncommentarystopped" "producer_dummy,kill,,0.1,-1"
+			"oncommentarystopped" "mechanic_dummy,kill,,0.1,-1"
+			"oncommentarystopped" "survivor_dummy_relay,Enable,,0.1,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Freeway"
+		"origin" "5893.5 8296.73046875 175.6900024414"
+		"angles" "0 -161.2282562256 0"
+		"contextsubject" "C5M3Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Freeway"
+		"origin" "5849.6899414063 7894.8901367188 176.0899963379"
+		"angles" "0 -123.278175354 0"
+		"contextsubject" "C5M3Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Freeway"
+		"origin" "5875.1201171875 7452.0200195313 137.0299987793"
+		"angles" "0 -114.6981277466 0"
+		"contextsubject" "C5M3Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Freeway"
+		"origin" "5701.1499023438 7251.9702148438 121.2099990845"
+		"angles" "0 -110.8699035645 0"
+		"contextsubject" "C5M3Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Freeway"
+		"origin" "5529.9599609375 6737.330078125 110.2699966431"
+		"angles" "0 -150.6019592285 0"
+		"contextsubject" "C5M3Freeway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3UpSteps"
+		"origin" "3703.3898925781 2724.7800292969 58.9300003052"
+		"angles" "0 178.3961029053 0"
+		"contextsubject" "C5M3UpSteps"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3WarZone"
+		"origin" "2668.189209 2500.188477 127.737938"
+		"angles" "8.608880 -108.559090 0.000000"
+		"contextsubject" "C5M3WarZone"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Sniper"
+		"origin" "3281.3000488281 327.3800048828 247.2400054932"
+		"angles" "0 -95.8089141846 0"
+		"contextsubject" "C5M3Sniper"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Manhole"
+		"origin" "4218.2900390625 307.3299865723 40.1399993896"
+		"angles" "0 -52.1168251038 0"
+		"contextsubject" "C5M3Manhole"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Manhole"
+		"origin" "4329.3100585938 288.9700012207 39.6100006104"
+		"angles" "0 72.9533538818 0"
+		"contextsubject" "C5M3Manhole"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Manhole"
+		"origin" "4051.8100585938 319.1300048828 42.2599983215"
+		"angles" "0 111.3654556274 0"
+		"contextsubject" "C5M3Manhole"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3InSewer"
+		"origin" "4139.7299804688 318.1300048828 -161.8500061035"
+		"angles" "0 175.5473480225 0"
+		"contextsubject" "C5M3InSewer"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3InSewer"
+		"origin" "4388.2202148438 310.8500061035 -166.25"
+		"angles" "0 0.6113901138 0"
+		"contextsubject" "C5M3InSewer"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3InSewer"
+		"origin" "4490.6401367188 311.8599853516 -174.8200073242"
+		"angles" "0 0.5453901291 0"
+		"contextsubject" "C5M3InSewer"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3UpLadder"
+		"origin" "5959.5297851563 -2333.5300292969 62.1500015259"
+		"angles" "0 -88.950553894 0"
+		"contextsubject" "C5M3UpLadder"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3SeeGraveyard"
+		"origin" "6328.4702148438 -4527.830078125 479.1799926758"
+		"angles" "0 -81.8099594116 0"
+		"contextsubject" "C5M3SeeGraveyard"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3OffHighway"
+		"origin" "6808.91015625 -4553.259765625 148.8800048828"
+		"angles" "0 -2.4119040966 0"
+		"contextsubject" "C5M3OffHighway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3OffHighway"
+		"origin" "6914.8701171875 -4756.16015625 137.7799987793"
+		"angles" "0 4.4520950317 0"
+		"contextsubject" "C5M3OffHighway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3OffHighway"
+		"origin" "6695.2797851563 -4757.0698242188 144.1600036621"
+		"angles" "0 -103.0320892334 0"
+		"contextsubject" "C5M3OffHighway"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3SeeSaferoom"
+		"origin" "7431.3598632813 -8825.01953125 167.3899993896"
+		"angles" "0 -103.0619506836 0"
+		"contextsubject" "C5M3SeeSaferoom"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3CrashedHeli"
+		"origin" "1921.2099609375 1630.8199462891 54.8400001526"
+		"angles" "0 177.7317657471 0"
+		"contextsubject" "C5M3CrashedHeli"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Bodies"
+		"origin" "6418.7700195313 8559.7900390625 48.5"
+		"angles" "0 54.4435348511 0"
+		"contextsubject" "C5M3Bodies"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3SafeZone"
+		"origin" "6239.41015625 8435.66015625 72.1800003052"
+		"angles" "0 -172.3023223877 0"
+		"contextsubject" "C5M3SafeZone"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3SewerComment"
+		"origin" "4992.7099609375 303.1900024414 -161.1399993896"
+		"angles" "0 -5.7846007347 0"
+		"contextsubject" "C5M3SewerComment"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3SewerComment"
+		"origin" "5283.1801757813 320.25 -161.3200073242"
+		"angles" "0 0.1553319991 0"
+		"contextsubject" "C5M3SewerComment"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M3Bus"
+		"origin" "3965.604980 5491.655762 226.031250"
+		"angles" "11.633625 -58.358383 0.000000"
+		"contextsubject" "C5M3Bus"
+	}
+	entity
+	{
+		"id" "2"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 128 256"
+		"mins" "-4 -170 -80"
+		"origin" "3816 1952 215.307"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "5"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 80 256"
+		"mins" "-4 -128 -80"
+		"origin" "3786 1520 215.307"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "8"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "32 80 256"
+		"mins" "-4 -128 -80"
+		"origin" "3794 1712 215.307"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "11"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "180 700 256"
+		"mins" "-164 -800 -170"
+		"origin" "3601.35 752.831 384"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "14"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "80 16 256"
+		"mins" "0 0 0"
+		"origin" "3008 1400 267.76"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
+		"mapupdate" "1"
+	}
+	
+	
+//Blocks access for survivors to the top of the large trucks in the alarm yard, one of which is an invincible spot.
+	
+	entity
+	{
+		"id" "2952912"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "94 8 800"
+		"mins" "-8 -82 -8"
+		"origin" "5383 -1373 8"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2953352"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "226 8 800"
+		"mins" "-8 -112 -8"
+		"origin" "5480 -1356 164"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2953598"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "226 8 800"
+		"mins" "-8 -112 -8"
+		"origin" "5587 -1015 160"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "2953601"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "94 8 800"
+		"mins" "-8 -82 -8"
+		"origin" "5495 -1028 4"
+		"mapupdate" "1"
+	}
+	
+// Blocks players from getting under the map following the bridge explosion
+
+	entity
+	{
+		"id" "2953763"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "8 8 857"
+		"mins" "-1338 -1128 -8"
+		"origin" "6489 -5161 103"
+		"mapupdate" "1"
+	}
+
+// Blocks survivors getting into inescapable infected-only terriroty following the bridge explosion.
+	
+	entity
+	{
+		"id" "2953862"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "8 8 735"
+		"mins" "-512 -8 -8"
+		"origin" "6969 -3864 225"
+		"mapupdate" "1"
+	}
+
+}
