@@ -1,0 +1,344 @@
+"Entities"
+{
+
+// Blocks survivors from jumping onto the white truck at the top of the slope, near the saferoom.
+
+	entity
+	{
+		"id" "2655040"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "90 8 800"
+		"mins" "-8 -84 -8"
+		"origin" "-1251 -734 -1081"
+		"mapupdate" "1"
+	}
+	
+	
+//Map update
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"initialstate" "1"
+		"maxs" "4 0 394"
+		"mins" "-2192 -592 0"
+		"origin" "2972 3724 -649"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"initialstate" "1"
+		"maxs" "0 0 394"
+		"mins" "-604 -1936 0"
+		"origin" "1388 5660 -649"
+		"mapupdate" "1"
+	}
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "pathc2m1_billboard"
+		"origin" "9697.259765625 8334.5595703125 -282.8399963379"
+		"angles" "0 167.7590026855 0"
+		"contextsubject" "pathc2m1_billboard"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "pathc2m1_abandonedcars"
+		"origin" "8920.73046875 7873.41015625 -446.5299987793"
+		"angles" "0 -175.7630157471 0"
+		"contextsubject" "pathc2m1_abandonedcars"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_carwreckage"
+		"origin" "7612.6000976563 6977.830078125 -551.4199829102"
+		"angles" "0 -132.7312469482 0"
+		"contextsubject" "c2m1_carwreckage"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_carwreckage"
+		"origin" "7487.5200195313 7950.5 -559.7600097656"
+		"angles" "0 168.3609619141 0"
+		"contextsubject" "c2m1_carwreckage"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_busblock"
+		"origin" "7010.3701171875 7753.08984375 -603.8699951172"
+		"angles" "0 158.5268554688 0"
+		"contextsubject" "c2m1_busblock"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_offramp"
+		"origin" "6067.6000976563 8149.9301757813 -663.0999755859"
+		"angles" "0 166.8067932129 0"
+		"contextsubject" "c2m1_offramp"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_offramp"
+		"origin" "6098.580078125 8246.3896484375 -668.1099853516"
+		"angles" "0 140.340713501 0"
+		"contextsubject" "c2m1_offramp"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_offramp"
+		"origin" "5944.580078125 8245.8701171875 -685.549987793"
+		"angles" "0 158.2266082764 0"
+		"contextsubject" "c2m1_offramp"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_offramp"
+		"origin" "5819.4399414063 8431.51953125 -682.7100219727"
+		"angles" "0 173.6705474854 0"
+		"contextsubject" "c2m1_offramp"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_searchlights"
+		"origin" "3367.652832 5899.740723 -809.516907"
+		"angles" "0 -90.6952362061 0"
+		"contextsubject" "c2m1_searchlights"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_motelsign"
+		"origin" "2959.2099609375 4967.759765625 -717.75"
+		"angles" "0 -95.0867156982 0"
+		"contextsubject" "c2m1_motelsign"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_riders"
+		"origin" "2439.8200683594 6242.2099609375 -501.1600036621"
+		"angles" "0 177.426864624 0"
+		"contextsubject" "c2m1_riders"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_pool"
+		"origin" "2363.8500976563 4289.7099609375 -1005.8300170898"
+		"angles" "0 -165.6111297607 0"
+		"contextsubject" "c2m1_pool"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_upstairs"
+		"origin" "1168.5500488281 5525.419921875 -910.5700073242"
+		"angles" "0 -176.897277832 0"
+		"contextsubject" "c2m1_upstairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_upstairs"
+		"origin" "946.8800048828 3523.1101074219 -909.0200195313"
+		"angles" "0 -87.4674377441 0"
+		"contextsubject" "c2m1_upstairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_checkrooms"
+		"origin" "2073.1298828125 5593.9599609375 -909.1799926758"
+		"angles" "0 94.1648635864 0"
+		"contextsubject" "c2m1_checkrooms"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_checkrooms"
+		"origin" "1712.2900390625 5623 -918.8200073242"
+		"angles" "0 111.1267623901 0"
+		"contextsubject" "c2m1_checkrooms"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_checkrooms"
+		"origin" "1272.1099853516 5300.58984375 -906.5900268555"
+		"angles" "0 166.3688049316 0"
+		"contextsubject" "c2m1_checkrooms"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_checkrooms"
+		"origin" "1289.4699707031 4758.990234375 -914.4799804688"
+		"angles" "0 -172.9734802246 0"
+		"contextsubject" "c2m1_checkrooms"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_downstairs"
+		"origin" "2844.3100585938 3226.580078125 -771.3599853516"
+		"angles" "0 96.5766601563 0"
+		"contextsubject" "c2m1_downstairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_throughwindow"
+		"origin" "2252.9299316406 3475.6599121094 -721.7700195313"
+		"angles" "0 81.5948638916 0"
+		"contextsubject" "c2m1_throughwindow"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_throughhere"
+		"origin" "1703.9499511719 3614.9099121094 -745.3900146484"
+		"angles" "0 -66.6112289429 0"
+		"contextsubject" "c2m1_throughhere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_campsite"
+		"origin" "1183.8800048828 2350.7700195313 -1173.1199951172"
+		"angles" "0 -107.0030288696 0"
+		"contextsubject" "c2m1_campsite"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_cliff"
+		"origin" "2119.4899902344 2667.6899414063 -960.8400268555"
+		"angles" "0 -87.3349456787 0"
+		"contextsubject" "c2m1_cliff"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_cliff"
+		"origin" "2023.7600097656 2663.2399902344 -960.8400268555"
+		"angles" "0 -87.3349456787 0"
+		"contextsubject" "c2m1_cliff"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_cliff"
+		"origin" "1882.25 2656.6499023438 -960.8400268555"
+		"angles" "0 -87.3349456787 0"
+		"contextsubject" "c2m1_cliff"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_cliff"
+		"origin" "1775.7700195313 2649.4599609375 -960.8400268555"
+		"angles" "0 -85.9489440918 0"
+		"contextsubject" "c2m1_cliff"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_uphill"
+		"origin" "-1247.1500244141 1024.2700195313 -1745.2099609375"
+		"angles" "0 -112.0551223755 0"
+		"contextsubject" "c2m1_uphill"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_hillcomplain"
+		"origin" "-788.9299926758 68.3399963379 -1344.9200439453"
+		"angles" "0 -68.9570770264 0"
+		"contextsubject" "c2m1_hillcomplain"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_park"
+		"origin" "-207.8300018311 -1018.9600219727 -1024.5500488281"
+		"angles" "0 -85.830039978 0"
+		"contextsubject" "c2m1_park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_park"
+		"origin" "-364.6499938965 -1030.1800537109 -1024.6800537109"
+		"angles" "0 -86.2260513306 0"
+		"contextsubject" "c2m1_park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_park"
+		"origin" "-499.7200012207 -1039.25 -1024.6800537109"
+		"angles" "0 -86.1600494385 0"
+		"contextsubject" "c2m1_park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_park"
+		"origin" "-645.9199829102 -1049.0600585938 -1024.6800537109"
+		"angles" "0 -86.1600494385 0"
+		"contextsubject" "c2m1_park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_park"
+		"origin" "-921.3099975586 -1067.5400390625 -1024.6800537109"
+		"angles" "0 -86.1600494385 0"
+		"contextsubject" "c2m1_park"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_throughmotel"
+		"origin" "3361.1799316406 5734.8798828125 -960.5900268555"
+		"angles" "0 -72.3411636353 0"
+		"contextsubject" "c2m1_throughmotel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_throughmotel"
+		"origin" "3164.7299804688 5681.330078125 -961.0900268555"
+		"angles" "0 -83.6271972656 0"
+		"contextsubject" "c2m1_throughmotel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_throughmotel"
+		"origin" "2968.1599121094 5731.3798828125 -937.1799926758"
+		"angles" "0 -163.0252990723 0"
+		"contextsubject" "c2m1_throughmotel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m1_followriver"
+		"origin" "435.200012207 1325.6400146484 -1743.8100585938"
+		"angles" "0 175.8572998047 0"
+		"contextsubject" "c2m1_followriver"
+	}
+	
+}

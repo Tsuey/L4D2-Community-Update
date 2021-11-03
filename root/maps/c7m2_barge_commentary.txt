@@ -1,0 +1,67 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m2_seebarge"
+		"origin" "-3911.8601074219 238.5800018311 30.1100006104"
+		"angles" "11.4554462433 -148.0742492676 0"
+		"contextsubject" "c7m2_seebarge"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m2_gravelhill"
+		"origin" "-4952.9487304688 641.5440063477 275.5989074707"
+		"angles" "-3.5254259109 143.9360809326 0"
+		"contextsubject" "c7m2_gravelhill"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m2_gravelhill"
+		"origin" "-4949.357421875 302.171875 153.1158905029"
+		"angles" "11.3245716095 -131.1217803955 0"
+		"contextsubject" "c7m2_gravelhill"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m2_onbarge"
+		"origin" "-5473.1298828125 -1031.2199707031 90.0299987793"
+		"angles" "26.5034694672 -141.7391967773 0"
+		"contextsubject" "c7m2_onbarge"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m2_listingtug"
+		"origin" "1341.8900146484 1388.4200439453 50.5800018311"
+		"angles" "5.438519001 178.0585327148 0"
+		"contextsubject" "c7m2_listingtug"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m2_overboat"
+		"origin" "799.549987793 1356.2399902344 39.4900016785"
+		"angles" "0 -166.458190918 0"
+		"contextsubject" "c7m2_overboat"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m2_throughhere"
+		"origin" "-2470.0500488281 1011.3099975586 45.8199996948"
+		"angles" "0 -162.7976379395 0"
+		"contextsubject" "c7m2_throughhere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" " c7m2_climbupcrap"
+		"origin" "-9191.73046875 1205.4699707031 232.2899932861"
+		"angles" "0 -80.3630142212 0"
+		"contextsubject" "c7m2_climbupcrap"
+	}
+}

@@ -1,0 +1,347 @@
+"Entities"
+{
+	// start mu
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 64 80"
+		"mins" "-4 -64 -80"
+		"targetname" "c6m2_minifinale_clip"
+		"origin" "2544 5288 -1000"
+		"mapupdate" "1"
+	}
+	// end mu
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_UpStairs"
+		"origin" "2702.4299316406 -938.6099853516 -221.8099975586"
+		"angles" "0 -179.9298400879 0"
+		"contextsubject" "WorldC6M2_UpStairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_Tattoo"
+		"origin" "2251.3000488281 38.1500015259 21.4699993134"
+		"angles" "0 -3.7400946617 0"
+		"contextsubject" "WorldC6M2_Tattoo"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_IntoPoolHall"
+		"origin" "1502.7700195313 1049.1199951172 -24.6399993896"
+		"angles" "0 -178.8738861084 0"
+		"contextsubject" "WorldC6M2_IntoPoolHall"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_JukeBox"
+		"origin" "1419.549561 1198.595337 -15.968750"
+		"angles" "0 33.2201805115 0"
+		"contextsubject" "WorldC6M2_JukeBox"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_IntoConstruction"
+		"origin" "1236.5799560547 1253.8199462891 4.8400001526"
+		"angles" "0 88.7622528076 0"
+		"contextsubject" "WorldC6M2_IntoConstruction"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_IntoConstruction"
+		"origin" "1365.6300048828 1253.4100341797 3.2999999523"
+		"angles" "0 89.9502716064 0"
+		"contextsubject" "WorldC6M2_IntoConstruction"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_IntoConstruction"
+		"origin" "1108.5200195313 1257.7299804688 2.7599999905"
+		"angles" "0 92.7223739624 0"
+		"contextsubject" "WorldC6M2_IntoConstruction"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_DownIntoBuilding"
+		"origin" "152.0700073242 1893.8000488281 -79.3899993896"
+		"angles" "0 178.2523651123 0"
+		"contextsubject" "WorldC6M2_DownIntoBuilding"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_UpStairs2"
+		"origin" "358.3500061035 2435.7099609375 -72.2399978638"
+		"angles" "0 91.1324234009 0"
+		"contextsubject" "WorldC6M2_UpStairs2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_Suitcase"
+		"origin" "100.3300018311 2095.9799804688 50.8499984741"
+		"angles" "0 159.8385009766 0"
+		"contextsubject" "WorldC6M2_Suitcase"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_AcrossPlank"
+		"origin" "351.5400085449 3001.9699707031 217.2200012207"
+		"angles" "0 88.8945999146 0"
+		"contextsubject" "WorldC6M2_AcrossPlank"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_DownHere"
+		"origin" "943.1699829102 3509.6999511719 269.299987793"
+		"angles" "0 -10.6993141174 0"
+		"contextsubject" "WorldC6M2_DownHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_InJazzClub"
+		"origin" "992.8499755859 4162.0698242188 -101.4800033569"
+		"angles" "0 -113.8212738037 0"
+		"contextsubject" "WorldC6M2_InJazzClub"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_TourEntrance"
+		"origin" "1746.5400390625 5508.6201171875 -126.3799972534"
+		"angles" "0 -42.1150665283 0"
+		"contextsubject" "WorldC6M2_TourEntrance"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_OnTourWalk1"
+		"origin" "2790.3100585938 4839.1201171875 -303.7699890137"
+		"angles" "0 -94.4530792236 0"
+		"contextsubject" "WorldC6M2_OnTourWalk1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_OnTourWalk2"
+		"origin" "1793.7700195313 4120.5297851563 -298.2399902344"
+		"angles" "0 -179.1971282959 0"
+		"contextsubject" "WorldC6M2_OnTourWalk2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_OnTourWalk3"
+		"origin" "180.4900054932 4485.1499023438 -298.3999938965"
+		"angles" "0 -86.5631866455 0"
+		"contextsubject" "WorldC6M2_OnTourWalk3"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_Phase2"
+		"origin" "479.1900024414 5020.009765625 -282.5599975586"
+		"angles" "0 60.7731742859 0"
+		"contextsubject" "WorldC6M2_Phase2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_Phase2Down"
+		"origin" "747.7299804688 5085.1298828125 -493.200012207"
+		"angles" "0 178.3491668701 0"
+		"contextsubject" "WorldC6M2_Phase2Down"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_JumpDown"
+		"origin" "742 5070.419921875 -870.6099853516"
+		"angles" "0 1.4630776644 0"
+		"contextsubject" "WorldC6M2_JumpDown"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_InSewer1"
+		"origin" "884.9600219727 5067.1899414063 -1161.9300537109"
+		"angles" "0 -18.138753891 0"
+		"contextsubject" "WorldC6M2_InSewer1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_InSewer2"
+		"origin" "1308.4699707031 5304.8701171875 -1153.6400146484"
+		"angles" "0 14.2012653351 0"
+		"contextsubject" "WorldC6M2_InSewer2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_InSewer2"
+		"origin" "1300.7199707031 4755.8999023438 -1154.3199462891"
+		"angles" "0 -57.3426780701 0"
+		"contextsubject" "WorldC6M2_InSewer2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_InSewerLadder1"
+		"origin" "1602.785034 4576.134766 -1161.054932"
+		"angles" "0 -6.4568853378 0"
+		"contextsubject" "WorldC6M2_InSewerLadder1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_OpenGate1"
+		"origin" "2533.5400390625 5662.75 -1010.6099853516"
+		"angles" "0 -1.638794899 0"
+		"contextsubject" "WorldC6M2_OpenGate1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_AfterGate1"
+		"origin" "3265.7600097656 5623.25 -1151.6700439453"
+		"angles" "0 -14.1127967834 0"
+		"contextsubject" "WorldC6M2_AfterGate1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_AfterGate1"
+		"origin" "3263 5951.9702148438 -1153.5100097656"
+		"angles" "0 4.5652327538 0"
+		"contextsubject" "WorldC6M2_AfterGate1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_AfterGate1"
+		"origin" "3205.830078125 5291.2099609375 -1151.1500244141"
+		"angles" "0 -15.4987707138 0"
+		"contextsubject" "WorldC6M2_AfterGate1"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_AfterGate2"
+		"origin" "3864.5200195313 5550.9301757813 -1152.8299560547"
+		"angles" "0 171.5452575684 0"
+		"contextsubject" "WorldC6M2_AfterGate2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_AfterGate2"
+		"origin" "3853.9699707031 5009.4799804688 -1149.8399658203"
+		"angles" "0 -102.4568252563 0"
+		"contextsubject" "WorldC6M2_AfterGate2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_UpCatWalk"
+		"origin" "4722.990234375 5329.91015625 -1117.8199462891"
+		"angles" "0 -4.9747986794 0"
+		"contextsubject" "WorldC6M2_UpCatWalk"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_OpenGate2"
+		"origin" "5194.5297851563 5430.0200195313 -1015.1500244141"
+		"angles" "0 1.5591958761 0"
+		"contextsubject" "WorldC6M2_OpenGate2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_FinalWater"
+		"origin" "6834.6298828125 5437.8701171875 -1041.9599609375"
+		"angles" "0 -0.3547877669 0"
+		"contextsubject" "WorldC6M2_FinalWater"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_FinalWaterGoGo"
+		"origin" "7900.9599609375 5455.240234375 -1150.5799560547"
+		"angles" "0 -12.1028137207 0"
+		"contextsubject" "WorldC6M2_FinalWaterGoGo"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_FinalLadder"
+		"origin" "9681.759765625 5581.0698242188 -1104.8100585938"
+		"angles" "0 2.4832203388 0"
+		"contextsubject" "WorldC6M2_FinalLadder"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_SafeRoom"
+		"origin" "11095.150390625 5062.8598632813 -571.3400268555"
+		"angles" "0 4.0313558578 0"
+		"contextsubject" "WorldC6M2_SafeRoom"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M2_PostGate1"
+		"origin" "2583.1499023438 5704.0297851563 -982.8599853516"
+		"angles" "0 -4.7300014496 0"
+		"contextsubject" "WorldC6M2_PostGate1"
+	}
+// Map update - Fixes fire escape glitch/exploit
+	"entity"
+	{
+		"id" "1078847"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "64 8 656"
+		"mins" "-12 -124 -8"
+		"origin" "676 2780 96"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"id" "1078952"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "152 8 656"
+		"mins" "-8 -60 -8"
+		"origin" "748 2716 96"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"id" "1078970"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "216 8 656"
+		"mins" "-4 -124 -8"
+		"origin" "904 2780 96"
+		"mapupdate" "1"
+	}
+}

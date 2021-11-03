@@ -1,0 +1,83 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path01"
+		"origin" "10720.1796875 4605.5 90.9599990845"
+		"angles" "0 95.3719711304 0"
+		"contextsubject" "Farm05_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path02"
+		"origin" "10761.7001953125 4181.3198242188 14.2899999619"
+		"angles" "0 85.9636611938 0"
+		"contextsubject" "Farm05_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path03"
+		"origin" "9092.4697265625 2900.3200683594 255.3099975586"
+		"angles" "0 178.4601898193 0"
+		"contextsubject" "Farm05_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path04"
+		"origin" "9100.41015625 1223.2800292969 258.7099914551"
+		"angles" "0 -127.7393493652 0"
+		"contextsubject" "Farm05_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path05"
+		"origin" "8508.400390625 2789.4599609375 254.8800048828"
+		"angles" "0 -110.4111785889 0"
+		"contextsubject" "Farm05_path05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path06"
+		"origin" "7228.907227 1115.955933 238.031250"
+		"angles" "0 179.6028289795 0"
+		"contextsubject" "Farm05_path06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path07"
+		"origin" "6799.2299804688 1336.8900146484 280.3699951172"
+		"angles" "0 101.6567459106 0"
+		"contextsubject" "Farm05_path07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path08"
+		"origin" "10180.8701171875 4449.740234375 278.0599975586"
+		"angles" "0 102.0934448242 0"
+		"contextsubject" "Farm05_path08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path09"
+		"origin" "9048.409180 3589.027100 391.546356"
+		"angles" "0 -42.7463493347 0"
+		"contextsubject" "Farm05_path09"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Farm05_path10"
+		"origin" "10215.48046875 4135.25 220.0500030518"
+		"angles" "0 -108.0092544556 0"
+		"contextsubject" "Farm05_path10"
+	}
+}

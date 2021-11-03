@@ -1,0 +1,87 @@
+"Entities"
+{
+	// Added a playerblocker to solve an exploit where the survivors could get on-top of the tower's roof.
+	entity
+	{
+		"id" "2321852"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "215 128 40"
+		"mins" "-73 -96 -80"
+		"origin" "-2411 3228 1000"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1Uphill"
+		"origin" "-2592 3044 272"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1Uphill"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1DownHere"
+		"origin" "-1100 3500 695"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1DownHere"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1ThroughHere"
+		"origin" "832 2733 469"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1ThroughHere"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1ThroughWindow"
+		"origin" "869 2297 618"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1ThroughWindow"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1DownHere2"
+		"origin" "1060 365 712"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1DownHere"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1UpSteps"
+		"origin" "-2176 3387 591"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1UpSteps"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1CrossHere"
+		"origin" "1124 1875 573"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1CrossHere"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1SearchHouses"
+		"origin" "588 3140 374"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1SearchHouses"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M1PreBunkerOpen"
+		"origin" "1054.959595 265.916870 704.031250"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M1PreBunkerOpen"
+	}
+}

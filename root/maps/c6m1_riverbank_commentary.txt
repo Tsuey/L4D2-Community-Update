@@ -1,0 +1,278 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_Intothepark"
+		"origin" "1105.2399902344 3353.5500488281 131.7200012207"
+		"angles" "0 -69.6969528198 0"
+		"contextsubject" "WorldC6M1_Intothepark"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_HistoricTour"
+		"origin" "772.342041 3838.477539 244.007233"
+		"angles" "3.722784 -87.750679 0.000000"
+		"contextsubject" "WorldC6M1_HistoricTour"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_IntoTheStore"
+		"origin" "3397.4899902344 2722.1499023438 122.3499984741"
+		"angles" "0 -110.8185882568 0"
+		"contextsubject" "WorldC6M1_IntoTheStore"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_UpTheStairs"
+		"origin" "3721.5600585938 2184.1499023438 93.3199996948"
+		"angles" "0 166.1184997559 0"
+		"contextsubject" "WorldC6M1_UpTheStairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_AlleyBelow"
+		"origin" "3384.3500976563 1413.3599853516 238.2400054932"
+		"angles" "0 -169.8277740479 0"
+		"contextsubject" "WorldC6M1_AlleyBelow"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_AlleyBelow"
+		"origin" "1669.7600097656 1460.3399658203 233.2100067139"
+		"angles" "0 -179.6616821289 0"
+		"contextsubject" "WorldC6M1_AlleyBelow"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_AlleyIntoBuilding"
+		"origin" "1646.1099853516 1198.6800537109 401.7200012207"
+		"angles" "0 -166.4974365234 0"
+		"contextsubject" "WorldC6M1_AlleyIntoBuilding"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_UpTheStairs2"
+		"origin" "2149.4899902344 2298.9599609375 399.6700134277"
+		"angles" "0 -151.9776153564 0"
+		"contextsubject" "WorldC6M1_UpTheStairs2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_AcrossHere"
+		"origin" "1702.9300537109 1125.4499511719 564.0800170898"
+		"angles" "0 94.2383422852 0"
+		"contextsubject" "WorldC6M1_AcrossHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_AcrossHere"
+		"origin" "1302.0799560547 1118.5699462891 547.4400024414"
+		"angles" "0 -87.4295654297 0"
+		"contextsubject" "WorldC6M1_AcrossHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_IntoThePark2"
+		"origin" "873.1300048828 374.8399963379 553.7800292969"
+		"angles" "0 -113.697517395 0"
+		"contextsubject" "WorldC6M1_IntoThePark2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_PostWedding"
+		"origin" "-2496.5900878906 -346.0799865723 691.6699829102"
+		"angles" "0 3.4525854588 0"
+		"contextsubject" "WorldC6M1_PostWedding"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_WeddingWarn"
+		"origin" "-687.0399780273 -374.6499938965 669.6500244141"
+		"angles" "0 -179.9915771484 0"
+		"contextsubject" "WorldC6M1_WeddingWarn"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_SafeRoomAlley"
+		"origin" "-3731.2700195313 47.6800003052 769.3400268555"
+		"angles" "0 98.2646179199 0"
+		"contextsubject" "WorldC6M1_SafeRoomAlley"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_WeddingWarn"
+		"origin" "-573.950012207 -447.7099914551 616.3200073242"
+		"angles" "0 175.490447998 0"
+		"contextsubject" "WorldC6M1_WeddingWarn"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_WeddingWarn"
+		"origin" "-589.4400024414 -298.0700073242 629.5399780273"
+		"angles" "0 -172.7617645264 0"
+		"contextsubject" "WorldC6M1_WeddingWarn"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_ThroughBar"
+		"origin" "3218.080078125 2066.3000488281 247.5299987793"
+		"angles" "0 -77.4546203613 0"
+		"contextsubject" "WorldC6M1_ThroughBar"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_UpHere"
+		"origin" "-440.299987793 1098.4699707031 264.549987793"
+		"angles" "0 109.5233230591 0"
+		"contextsubject" "WorldC6M1_UpHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_InApts"
+		"origin" "1623.1099853516 1650.6999511719 404.6400146484"
+		"angles" "0 -89.766784668 0"
+		"contextsubject" "WorldC6M1_InApts"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M1_InApts"
+		"origin" "2087.1799316406 1624.7399902344 390.5400085449"
+		"angles" "0 -87.3247146606 0"
+		"contextsubject" "WorldC6M1_InApts"
+	}
+
+//map update
+
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 128 80"
+		"mins" "-8 -8 -8"
+		"origin" "3718.9 2633 235.03"
+		"mapupdate" "1"
+	}
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 500 200"
+		"mins" "-8 -8 -8"
+		"origin" "698.599 3464.44 128"
+		"mapupdate" "1"
+	}
+	
+//Block infected ghost players from getting under the map by crossing the bridge at the start
+entity
+	{
+		"id" "1032100"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4176 56 1400"
+		"mins" "-2230 -10 -80"
+		"origin" "944 6632 -40"
+		"mapupdate" "1"
+	}
+	
+// Block infected from leaving map bounds by going beyond the first area.	
+	entity
+	{
+		"id" "1032261"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 2966 1074"
+		"mins" "-4 -1435 -80"
+		"origin" "5453 3722 -8"
+		"mapupdate" "1"
+	}
+	
+// Block survivors jumping the fence following the just after first interior, allowing them to leave the map bounds.
+entity
+	{
+		"id" "1032524"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 173 780"
+		"mins" "-4 -467 -80"
+		"origin" "4629 947 237"
+		"mapupdate" "1"
+	}
+	
+
+//Block survivors following the second interior.
+	entity
+	{
+		"id" "1043428"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "4 8 153"
+		"mins" "-4 -126 -8"
+		"origin" "436 1528 520"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "1043575"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 8 153"
+		"mins" "-4 -126 -8"
+		"origin" "76 768 520"
+		"mapupdate" "1"
+	}
+	
+// Block an out of map exploit near the wedding party area.
+
+entity
+	{
+		"id" "1032761"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "160 8 840"
+		"mins" "-160 -8 -80"
+		"origin" "1120 -1616 784"
+		"mapupdate" "1"
+	}
+	
+// Block an infected out-of-map exploit near the safe room.
+	entity
+	{
+		"id" "1033221"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "8 700 600"
+		"mins" "-660 -616 -80"
+		"origin" "-3880 2380 1360"
+		"mapupdate" "1"
+	}
+	
+}

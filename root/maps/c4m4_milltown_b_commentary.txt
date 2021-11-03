@@ -1,0 +1,199 @@
+"Entities"
+{
+
+// MAP UPDATE
+
+"entity"
+{
+	"classname" "env_player_blocker"
+	"initialstate" "1"
+	"maxs" "400 200 3000"
+	"mins" "-500 -528 -80"
+	"origin" "-7580.84 6948.33 -303"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"initialstate" "1"
+	"maxs" "50 1200 3000"
+	"mins" "-50 -52 -80"
+	"origin" "-957.801 3798.52 351.499"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "275 200 3000"
+	"mins" "-50 -150 0"
+	"origin" "-6376 6720 265.496"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "275 200 3000"
+	"mins" "-50 -150 0"
+	"origin" "-4840 6800 281.496"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "350 300 3000"
+	"mins" "0 -100 0"
+	"origin" "-7144 8120 249.496"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "300 200 3000"
+	"mins" "-50 -120 0"
+	"origin" "-4800 8480 281.496"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "300 200 3000"
+	"mins" "-50 -120 0"
+	"origin" "-5520 7936 281.496"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "200 200 3000"
+	"mins" "0 -100 0"
+	"origin" "-6900.06 7183.3 249.496"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"initialstate" "1"
+	"maxs" "50 300 2000"
+	"mins" "-50 -52 -80"
+	"origin" "-2852.78 5296.57 290.201"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"initialstate" "1"
+	"maxs" "50 1000 2000"
+	"mins" "-50 -52 -80"
+	"origin" "-2948.78 5232.57 290.201"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "0"
+	"initialstate" "1"
+	"maxs" "0 0 60"
+	"mins" "-25 -25 0"
+	"origin" "957.262 5780.71 107.593"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "0"
+	"initialstate" "1"
+	"maxs" "0 0 60"
+	"mins" "-25 -25 0"
+	"origin" "917.262 5840.71 107.593"
+	"mapupdate" "1"
+}
+
+
+	
+//	
+	
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_flooded"
+		"origin" "3987.6101074219 -1338.0600585938 289.6799926758"
+		"angles" "0 90.090133667 0"
+		"contextsubject" "c4m4_flooded"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_useroofs"
+		"origin" "3860.8798828125 -895.0700073242 162.2100067139"
+		"angles" "0 83.1599731445 0"
+		"contextsubject" "c4m4_useroofs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_useroofs"
+		"origin" "3641.919921875 -933.1900024414 160.8500061035"
+		"angles" "0 64.4820251465 0"
+		"contextsubject" "c4m4_useroofs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_useroofs"
+		"origin" "3835.1899414063 -1094.0400390625 192.0500030518"
+		"angles" "0 56.2978858948 0"
+		"contextsubject" "c4m4_useroofs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_porchlight"
+		"origin" "2964.5 2305.4899902344 185.9400024414"
+		"angles" "0 119.8200378418 0"
+		"contextsubject" "c4m4_porchlight"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_garagesale"
+		"origin" "2045.5899658203 2722.7700195313 139.1999969482"
+		"angles" "0 160.6744232178 0"
+		"contextsubject" "c4m4_garagesale"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_garagesale2"
+		"origin" "1959.3699951172 2539.7600097656 160.3800048828"
+		"angles" "0 150.4444580078 0"
+		"contextsubject" "c4m4_garagesale2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_playground"
+		"origin" "-1343.6800537109 6612.669921875 196.9199981689"
+		"angles" "0 131.8323516846 0"
+		"contextsubject" "c4m4_playground"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m4_truckwreck"
+		"origin" "-2500.828613 7704.798828 96.031250"
+		"angles" "3.490086 110.751923 0.000000"
+		"contextsubject" "c4m4_truckwreck"
+	}
+}

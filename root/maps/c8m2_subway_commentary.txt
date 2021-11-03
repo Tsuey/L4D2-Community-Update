@@ -1,0 +1,131 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital02_path01"
+		"origin" "3020.3999023438 3010.8798828125 70.8799972534"
+		"angles" "0 -2.5739486217 0"
+		"contextsubject" "hospital02_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital02_path02"
+		"origin" "3832.5300292969 3478.8798828125 -258.8900146484"
+		"angles" "0 86.9226303101 0"
+		"contextsubject" "hospital02_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital02_path03"
+		"origin" "7615.4887695313 2859.3107910156 -283.8635864258"
+		"angles" "0 -16.472694397 0"
+		"contextsubject" "hospital02_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital02_path04"
+		"origin" "8244.8701171875 5134.3100585938 38.4099998474"
+		"angles" "0 18.3697986603 0"
+		"contextsubject" "hospital02_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital02_safehouse"
+		"origin" "10045.099609375 5035.0698242188 40.1300010681"
+		"angles" "0 -10.7056560516 0"
+		"contextsubject" "hospital02_safehouse"
+	}
+	
+	// Blocking several stuck spots just under the safe room, in the corner.
+	entity
+	{
+		"id" "9679694"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "24 102 58"
+		"mins" "-4 -250 -60"
+		"origin" "2708 3050 -57.6663"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "9679938"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "8 8 75"
+		"mins" "-40 -40 -37"
+		"origin" "2744 2808 -75"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "9679999"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "48 22 75"
+		"mins" "-48 -8 -37"
+		"origin" "2784 2776 -75"
+		"mapupdate" "1"
+	}
+	
+	
+	// Blocks survivors from jumping to a near-invincible pathway on a building ledge shortly after the generator event.
+	entity
+	{
+		"id" "9679731"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "1153 545 376"
+		"mins" "-1 -128 -8"
+		"origin" "8320 4064 296"
+		"mapupdate" "1"
+	}
+
+	// Blocks survivors from getting onto a subway car.
+	entity
+	{
+		"id" "9680245"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "50 50 40"
+		"mins" "-50 -50 -40"
+		"origin" "6199 3294 -146"
+		"mapupdate" "1"
+	}
+
+	// Blocks survivors from jumping to a near-invincible pathway on a fence shortly after the generator event.
+	entity
+	{
+		"id" "9680306"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "11 47 154"
+		"mins" "-11 -47 -40"
+		"origin" "8404 3888 190"
+		"mapupdate" "1"
+	}
+
+	// Blocks survivors from getting out of map by jumping onto an electrical box.
+	entity
+	{
+		"id" "9680367"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "30 5 148"
+		"mins" "-30 -5 -80"
+		"origin" "9638 5563 97"
+		"mapupdate" "1"
+	}
+}

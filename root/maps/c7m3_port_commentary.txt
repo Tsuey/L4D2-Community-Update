@@ -1,0 +1,56 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m3_generatora"
+		"origin" "-1179.538940 818.679138 181.031250"
+		"angles" "23.269028 -9.398746 0.000000"
+		"contextsubject" "c7m3_generatora"
+	}
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m3_generatorb"
+		"origin" "-368.296600 -557.014404 23.031250"
+		"angles" "18.583029 68.253006 0.000000"
+		"contextsubject" "c7m3_generatorb"
+	}
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m3_generatora"
+		"origin" "-1179.538940 818.679138 181.031250"
+		"angles" "23.269028 -9.398746 0.000000"
+		"contextsubject" "c7m3_generatora"
+	}
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c7m3_seesailboat"
+		"origin" "348.678558 -1224.392090 69.568863"
+		"angles" "19.609623 -57.385578 0.000000"
+		"contextsubject" "c7m3_seesailboat"
+	}
+
+	// Block survivors being able to stand on the generator and access rooftop areas.
+	
+	entity
+	{
+		"id" "3146566"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "30 15 135"
+		"mins" "-30 -15 -8"
+		"origin" "-1156 886 345"
+		"mapupdate" "1"
+	}
+
+}
+
+
+

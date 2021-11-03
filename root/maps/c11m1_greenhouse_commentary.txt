@@ -1,0 +1,43 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport01_burning"
+		"origin" "4490.7797851563 890.6500244141 606.9699707031"
+		"angles" "0 98.0135803223 0"
+		"contextsubject" "airport01_burning"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport01_path01"
+		"origin" "6373.2797851563 -434.4100036621 735.6400146484"
+		"angles" "0 175.0655517578 0"
+		"contextsubject" "airport01_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "UpThatLadder"
+		"origin" "3113.6201171875 490.2799987793 538.9099731445"
+		"angles" "0 18.123298645 0"
+		"contextsubject" "UpThatLadder"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "ThroughHere"
+		"origin" "3019.0600585938 1814.3699951172 458.7200012207"
+		"angles" "0 89.4034957886 0"
+		"contextsubject" "ThroughHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport01_path02"
+		"origin" "4546.4399414063 2473.6298828125 104.6999969482"
+		"angles" "0 -169.3524780273 0"
+		"contextsubject" "airport01_path02"
+	}
+}

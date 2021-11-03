@@ -1,0 +1,148 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path01"
+		"origin" "11396.9404296875 5424.1401367188 70.9100036621"
+		"angles" "0 91.5422286987 0"
+		"contextsubject" "hospital03_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path02"
+		"origin" "10882.490234375 6056.1899414063 61.8699989319"
+		"angles" "0 82.434387207 0"
+		"contextsubject" "hospital03_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path03"
+		"origin" "12656.4501953125 7161.4399414063 49.4900016785"
+		"angles" "0 43.0325965881 0"
+		"contextsubject" "hospital03_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path04"
+		"origin" "11219.7099609375 7821.1298828125 66.6100006104"
+		"angles" "0 -2.5072937012 0"
+		"contextsubject" "hospital03_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path05"
+		"origin" "13108.9501953125 7412.6201171875 72.6999969482"
+		"angles" "0 -11.5490913391 0"
+		"contextsubject" "hospital03_path05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path06"
+		"origin" "13377.4404296875 7532.0698242188 -225.7100067139"
+		"angles" "0 40.2249412537 0"
+		"contextsubject" "hospital03_path06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path07"
+		"origin" "13264.8798828125 8546.2197265625 -283.8200073242"
+		"angles" "0 -87.2205505371 0"
+		"contextsubject" "hospital03_path07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path08"
+		"origin" "14137.4501953125 9040.5 -398.7300109863"
+		"angles" "0 84.3803634644 0"
+		"contextsubject" "hospital03_path08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path09"
+		"origin" "13365.8896484375 10440.080078125 -426.5400085449"
+		"angles" "0 -173.4875793457 0"
+		"contextsubject" "hospital03_path09"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path10"
+		"origin" "13354.6396484375 11520.349609375 -439.5700073242"
+		"angles" "0 -0.6635313034 0"
+		"contextsubject" "hospital03_path10"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital03_path11"
+		"origin" "12950.2099609375 12322.3701171875 75.3899993896"
+		"angles" "0 -21.5193939209 0"
+		"contextsubject" "hospital03_path11"
+	}
+	
+	
+	// Blocks survivors from leaving the map if tank-punched on top of the gas station.
+	entity
+	{
+		"id" "8664375"
+		"classname" "env_player_blocker"
+		"BlockType" "0"
+		"initialstate" "1"
+		"maxs" "44 556 780"
+		"mins" "-4 -380 -80"
+		"origin" "13004 6132 400"
+		"mapupdate" "1"
+	}
+	entity
+	{
+		"id" "8664948"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "68 24 80"
+		"mins" "-4 -128 -80"
+		"origin" "12932 5880 400"
+		"mapupdate" "1"
+	}
+
+	// Blocks survivors from jumping from the lift to a window ledge.
+	entity
+	{
+		"id" "8665431"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "4 33 107"
+		"mins" "-4 -33 -43"
+		"origin" "12704 7036 240"
+		"mapupdate" "1"
+	}
+
+	// Blocks like this search for existing entities, using "find_by_modelname" or "find_by_targetname"
+	// and apply the settings found inside the "modify" block to all matching entities.
+//	"modify_entity"
+//	{
+//		// first find the entity or entities to modify
+//		"find_by_modelname"		"models/props_interiors/door_sliding_breakable01.mdl"
+//		
+//		// AND / OR 
+//		
+//		//"find_by_targetname"	"some_targetname"
+//		
+//		// then the changes contained in this block are applied to all found ents
+//		"modify"
+//		{
+//			"minhealthdmg"	"180"
+//			"targetname" "warehouse_door"
+//		}
+//	}
+}

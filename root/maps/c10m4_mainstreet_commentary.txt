@@ -1,0 +1,83 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path01"
+		"origin" "-3071.1000976563 -127.8700027466 410.5700073242"
+		"angles" "0 -89.5617904663 0"
+		"contextsubject" "Smalltown04_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path02"
+		"origin" "-3071.4299316406 -245.9799957275 373.6099853516"
+		"angles" "0 -85.9335174561 0"
+		"contextsubject" "Smalltown04_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path03"
+		"origin" "-5060.66015625 -1069.5799560547 -2.4400000572"
+		"angles" "0 176.5335083008 0"
+		"contextsubject" "Smalltown04_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path04"
+		"origin" "-2448.3999023438 -2794.6499023438 -4.3600001335"
+		"angles" "0 -90.0103378296 0"
+		"contextsubject" "Smalltown04_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path05"
+		"origin" "2441.7700195313 -2277.9499511719 116.5500030518"
+		"angles" "0 -41.8600616455 0"
+		"contextsubject" "Smalltown04_path05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path06"
+		"origin" "2202.3100585938 -3331.1000976563 270.5899963379"
+		"angles" "0 -23.7098064423 0"
+		"contextsubject" "Smalltown04_path06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path07"
+		"origin" "1789.3399658203 -3958.0100097656 42.5"
+		"angles" "0 -166.2040557861 0"
+		"contextsubject" "Smalltown04_path07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path09"
+		"origin" "842.6199951172 -3910.9899902344 -3.0599999428"
+		"angles" "0 -179.205871582 0"
+		"contextsubject" "Smalltown04_path09"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path10"
+		"origin" "183.8200073242 -5110.0600585938 67.8199996948"
+		"angles" "0 85.0222015381 0"
+		"contextsubject" "Smalltown04_path10"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "Smalltown04_path11"
+		"origin" "-1472.4000244141 -4841.7202148438 -15.5200004578"
+		"angles" "0 -159.1119842529 0"
+		"contextsubject" "Smalltown04_path11"
+	}
+}

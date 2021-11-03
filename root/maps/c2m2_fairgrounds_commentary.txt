@@ -1,0 +1,433 @@
+"Entities"
+{
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_entrancesign"
+		"origin" "2057.080078125 2109.1499023438 292.9899902344"
+		"angles" "0 -85.631729126 0"
+		"contextsubject" "c2m2_entrancesign"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_womensroom"
+		"origin" "3471.3701171875 1314.3299560547 61.1500015259"
+		"angles" "0 146.9169769287 0"
+		"contextsubject" "c2m2_womensroom"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_candymachine"
+		"origin" "4063.1000976563 138.0599975586 48.8800010681"
+		"angles" "0 0.0309740901 0"
+		"contextsubject" "c2m2_candymachine"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_cottoncandy"
+		"origin" "3439.5500488281 -1016.0399780273 126.5100021362"
+		"angles" "0 -126.8930282593 0"
+		"contextsubject" "c2m2_cottoncandy"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_okra"
+		"origin" "3848.8999023438 -738.5300292969 92.3700027466"
+		"angles" "0 -72.9708862305 0"
+		"contextsubject" "c2m2_okra"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_kettlekorn"
+		"origin" "4283.7299804688 -634.450012207 83.2900009155"
+		"angles" "0 4.4470419884 0"
+		"contextsubject" "c2m2_kettlekorn"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_kettlekorn"
+		"origin" "-709.177979 -348.361420 -73.459999"
+		"angles" "7.445497 -152.847961 0.000000"
+		"contextsubject" "c2m2_kettlekorn"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_miscfood"
+		"origin" "4262.25 -883.8699951172 113.3399963379"
+		"angles" "0 -20.0388221741 0"
+		"contextsubject" "c2m2_miscfood"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_kiddieland"
+		"origin" "-435.5599975586 -270.9400024414 82.6600036621"
+		"angles" "0 -174.3828277588 0"
+		"contextsubject" "c2m2_kiddieland"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_cottoncandy"
+		"origin" "601.9099731445 -168.4199981689 107.3700027466"
+		"angles" "0 96.6791152954 0"
+		"contextsubject" "c2m2_cottoncandy"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_burgers"
+		"origin" "-1767.6800537109 1368.0699462891 -19.6100006104"
+		"angles" "0 96.7094116211 0"
+		"contextsubject" "c2m2_burgers"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_burgers"
+		"origin" "-3040.6201171875 1396.4699707031 -34.9199981689"
+		"angles" "0 88.4593505859 0"
+		"contextsubject" "c2m2_burgers"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_womensroom"
+		"origin" "-3763.9899902344 1003.8800048828 -63.2099990845"
+		"angles" "0 -132.2807617188 0"
+		"contextsubject" "c2m2_womensroom"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_candymachine"
+		"origin" "-3162.2399902344 410.4299926758 -69.4599990845"
+		"angles" "0 -177.3587646484 0"
+		"contextsubject" "c2m2_candymachine"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_cobbler"
+		"origin" "-2778.0700683594 -1422.8299560547 61.2700004578"
+		"angles" "0 179.7673339844 0"
+		"contextsubject" "c2m2_cobbler"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_cottoncandy2"
+		"origin" "-2784.2900390625 -1657.0899658203 73.7200012207"
+		"angles" "0 -179.704788208 0"
+		"contextsubject" "c2m2_cottoncandy2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_cottoncandy2"
+		"origin" "-1512.239624 -6526.833984 17.989883"
+		"angles" "7.445547 -36.102589 0.000000"
+		"contextsubject" "c2m2_cottoncandy2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_burgers"
+		"origin" "-2758.4299316406 -1803.4399414063 61.4399986267"
+		"angles" "0 -170.5966186523 0"
+		"contextsubject" "c2m2_burgers"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_backalley"
+		"origin" "-3221.055664 -1988.673218 -124.282417"
+		"angles" "-2.559382 178.579422 0.000000"
+		"contextsubject" "c2m2_backalley"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_favoriteride"
+		"origin" "-2071.4599609375 -588.7100219727 -13.2700004578"
+		"angles" "0 123.0679779053 0"
+		"contextsubject" "c2m2_favoriteride"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_favoriteride"
+		"origin" "-1324.126953 -1416.583008 -69.041687"
+		"angles" "33.504833 101.469696 0.000000"
+		"contextsubject" "c2m2_favoriteride"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_lilpeanut"
+		"origin" "-1247.0300292969 52.3800010681 -70.7699966431"
+		"angles" "0 143.3518981934 0"
+		"contextsubject" "c2m2_lilpeanut"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_lilpeanut"
+		"origin" "-2465.400391 -642.088623 -127.969063"
+		"angles" "12.098929 167.365005 0.000000"
+		"contextsubject" "c2m2_lilpeanut"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_lilpeanut"
+		"origin" "-1710.360352 -1422.103760 -126.968750"
+		"angles" "14.425673 -50.472298 0.000000"
+		"contextsubject" "c2m2_lilpeanut"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_ladder"
+		"origin" "-3666.014160 -685.164978 0.031250"
+		"angles" "7.332097 -99.098351 0.000000"
+		"contextsubject" "c2m2_ladder"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_topofslide"
+		"origin" "-2887.2399902344 -2105.4799804688 413.7900085449"
+		"angles" "0 0.4864618778 0"
+		"contextsubject" "c2m2_topofslide"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_topofslide"
+		"origin" "-2886.5600585938 -2176.5900878906 413.7900085449"
+		"angles" "0 0.0904618353 0"
+		"contextsubject" "c2m2_topofslide"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_topofslide"
+		"origin" "-2891.9399414063 -2244.169921875 413.4299926758"
+		"angles" "0 -5.5195374489 0"
+		"contextsubject" "c2m2_topofslide"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_topofslide"
+		"origin" "-2903.9599609375 -2368.5900878906 413.4299926758"
+		"angles" "0 -5.5195374489 0"
+		"contextsubject" "c2m2_topofslide"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_burgers"
+		"origin" "-2588.4599609375 -2875.1298828125 -40.2900009155"
+		"angles" "0 178.158203125 0"
+		"contextsubject" "c2m2_burgers"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_steake"
+		"origin" "-1570.3399658203 -4475.490234375 -4.8699998856"
+		"angles" "0 90.3789215088 0"
+		"contextsubject" "c2m2_steake"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_burgers"
+		"origin" "-1505.8800048828 -4475.5297851563 -5.0100002289"
+		"angles" "0 89.2568969727 0"
+		"contextsubject" "c2m2_burgers"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_carousel"
+		"origin" "-2286.8701171875 -4796.9301757813 -59.5200004578"
+		"angles" "0 -88.0554428101 0"
+		"contextsubject" "c2m2_carousel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_carousel"
+		"origin" "-2013.6300048828 -4908.669921875 -50.9599990845"
+		"angles" "0 -123.299621582 0"
+		"contextsubject" "c2m2_carousel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_carousel"
+		"origin" "-1682.4200439453 -5301.91015625 -50.5"
+		"angles" "0 -167.5196380615 0"
+		"contextsubject" "c2m2_carousel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_carousel"
+		"origin" "-1906.5500488281 -4930.2998046875 -50.5400009155"
+		"angles" "0 -112.2116622925 0"
+		"contextsubject" "c2m2_carousel"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_carouselbutton"
+		"origin" "-2829.9599609375 -5441.7700195313 -67.2399978638"
+		"angles" "0 -90.299911499 0"
+		"contextsubject" "c2m2_carouselbutton"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_candymachine"
+		"origin" "-825.799987793 -5878.919921875 -74.4899978638"
+		"angles" "0 0.1501490027 0"
+		"contextsubject" "c2m2_candymachine"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_okra2"
+		"origin" "-1900.1700439453 -6826.2202148438 29.2199993134"
+		"angles" "0 -106.1098709106 0"
+		"contextsubject" "c2m2_okra2"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_miscfood"
+		"origin" "3675.7700195313 -833.4299926758 60.6199989319"
+		"angles" "0 -76.1566772461 0"
+		"contextsubject" "c2m2_miscfood"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c2m2_thistall"
+		"origin" "-2736.5100097656 -4961.9399414063 -86.0500030518"
+		"angles" "0 -20.6582279205 0"
+		"contextsubject" "c2m2_thistall"
+	}
+
+
+//Update fix
+
+"entity"
+{
+	"classname" "env_player_blocker"
+	"initialstate" "1"
+	"maxs" "16 128 80"
+	"mins" "-16 -124 -84"
+	"origin" "3044 -2052 84"
+	"mapupdate" "1"
+}
+entity
+{
+	"id" "9"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "64 256 64"
+	"mins" "-64 -256 -64"
+	"origin" "-704 -256 192"
+	"mapupdate" "1"
+}
+entity
+{
+	"id" "12"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "192 16 64"
+	"mins" "-192 -16 -64"
+	"origin" "-704 -528 192"
+	"mapupdate" "1"
+}
+entity
+{
+	"id" "15"
+	"classname" "env_player_blocker"
+	"BlockType" "0"
+	"initialstate" "1"
+	"maxs" "4 24 80"
+	"mins" "-4 -24 -80"
+	"origin" "-2764 -5452 -48"
+	"mapupdate" "1"
+}
+
+
+// Blocks survivors climbing onto the back wall before the carousel, where AI cannot path to them.
+
+entity
+	{
+		"id" "3738058"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "40 8 786"
+		"mins" "-8 -132 -8"
+		"origin" "-4336 -4209 -18"
+		"mapupdate" "1"
+	}
+entity
+	{
+		"id" "3738169"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "8 624 776"
+		"mins" "-8 -8 -8"
+		"origin" "-4352 -4600 -8"
+		"mapupdate" "1"
+	}
+	
+//Blocks a spot where survivors in VS could glitch their way to 100% map completion if they jumped against a hedge.
+entity
+	{
+		"id" "3738021"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "8 8 800"
+		"mins" "-26 -26 -8"
+		"targetname" "tol_clip_brush"
+		"origin" "-3407 -4987 -115"
+		"mapupdate" "1"
+	}
+	
+//Blocks survivors jumping on one of the generator lights near the start of the map, which was an invincible camping spot, and blocked AI spawns
+
+entity
+	{
+		"id" "3738024"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "44 8 524"
+		"mins" "-8 -56 -8"
+		"origin" "2876 -1700 244"
+		"mapupdate" "1"
+	}
+
+}

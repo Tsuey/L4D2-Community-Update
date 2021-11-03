@@ -1,0 +1,310 @@
+"Entities"
+{
+
+// Blocks an invincible spot at the elevator holdout event.
+entity
+{
+	"id" "41506"
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "8 8 164"
+	"mins" "-20 -8 -8"
+	"origin" "-360 -8440 632"
+	"mapupdate" "1"
+}
+
+// Blocks easy method hop-up to the pipe leading into the factory
+
+entity
+{
+	"id" "41508"
+	"classname" "env_player_blocker"
+	"BlockType" "0"
+	"initialstate" "1"
+	"maxs" "38 11 28"
+	"mins" "-70 -11 -8"
+	"origin" "1214 -4856 168"
+	"mapupdate" "1"
+}
+entity
+{
+	"id" "41519"
+	"classname" "env_player_blocker"
+	"BlockType" "0"
+	"initialstate" "1"
+	"maxs" "8 11 88"
+	"mins" "-48 -11 -8"
+	"origin" "1136 -4856 108"
+	"mapupdate" "1"
+}
+
+
+
+
+// MAP UPDATE
+
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "50 800 1000"
+	"mins" "0 0 0"
+	"origin" "208 -6112 359"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "1000 300 1000"
+	"mins" "0 0 0"
+	"origin" "256 -5632 359"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "1400 1000 1000"
+	"mins" "0 0 0"
+	"origin" "1071.14 -6319.28 385"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "50 50 500"
+	"mins" "0 0 0"
+	"origin" "-1535 -9144.59 614.604"
+	"mapupdate" "1"
+}
+"entity"
+{
+	"classname" "env_player_blocker"
+	"BlockType" "1"
+	"initialstate" "1"
+	"maxs" "62 62 500"
+	"mins" "0 0 0"
+	"targetname" "blocker_spool_survival"
+	"origin" "502 -6628 200"
+	"mapupdate" "1"
+}
+	
+//
+
+
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_streetblocked"
+		"origin" "3988.2700195313 -2683.3601074219 162.7100067139"
+		"angles" "0 -7.0772027969 0"
+		"contextsubject" "c4m2_streetblocked"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_streetblocked"
+		"origin" "3297.6000976563 -2697.9299316406 145.3000030518"
+		"angles" "0 176.9009094238 0"
+		"contextsubject" "c4m2_streetblocked"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_streetblocked"
+		"origin" "3566.25 -2726.830078125 122.1500015259"
+		"angles" "0 -116.5711364746 0"
+		"contextsubject" "c4m2_streetblocked"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_millentrance"
+		"origin" "3970 -3125.4899902344 181.6199951172"
+		"angles" "0 -87.2671737671 0"
+		"contextsubject" "c4m2_millentrance"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_millentranceexit"
+		"origin" "4312.8598632813 -3483.3898925781 173.4100036621"
+		"angles" "0 3.2187228203 0"
+		"contextsubject" "c4m2_millentranceexit"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_upramp"
+		"origin" "3241.9599609375 -5671.5698242188 157.7700042725"
+		"angles" "0 -160.3293762207 0"
+		"contextsubject" "c4m2_upramp"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_waterpool"
+		"origin" "266.6600036621 -7116.8198242188 127.7699966431"
+		"angles" "0 -111.0271759033 0"
+		"contextsubject" "c4m2_waterpool"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_waterpool"
+		"origin" "-143.7700042725 -7417.4399414063 120.0299987793"
+		"angles" "0 136.1789093018 0"
+		"contextsubject" "c4m2_waterpool"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_waterpool"
+		"origin" "-249.5 -7790.16015625 123.7200012207"
+		"angles" "0 52.2929420471 0"
+		"contextsubject" "c4m2_waterpool"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_upthestairs"
+		"origin" "-830.25 -8773.2099609375 159.7100067139"
+		"angles" "0 -98.1566619873 0"
+		"contextsubject" "c4m2_upthestairs"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_seegasstation"
+		"origin" "-1185.5799560547 -9486.349609375 667.549987793"
+		"angles" "0 -92.9425964355 0"
+		"contextsubject" "c4m2_seegasstation"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_seegasstation"
+		"origin" "-1224.6099853516 -9484.33984375 667.7800292969"
+		"angles" "0 -91.2265548706 0"
+		"contextsubject" "c4m2_seegasstation"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_seegasstation"
+		"origin" "-1256.6400146484 -9483.669921875 667.9699707031"
+		"angles" "0 -91.3585586548 0"
+		"contextsubject" "c4m2_seegasstation"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_seegasstation"
+		"origin" "-1294.2299804688 -9481.009765625 667.9199829102"
+		"angles" "0 -89.5105209351 0"
+		"contextsubject" "c4m2_seegasstation"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_seegasstation"
+		"origin" "-1326.5799560547 -9481.2802734375 667.8699951172"
+		"angles" "0 -90.1045379639 0"
+		"contextsubject" "c4m2_seegasstation"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_useelevator"
+		"origin" "-1403.8100585938 -9463.48046875 665.8900146484"
+		"angles" "0 -97.5322952271 0"
+		"contextsubject" "c4m2_useelevator"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_useelevator"
+		"origin" "-1505.9599609375 -9451.7001953125 655.5599975586"
+		"angles" "0 -119.642250061 0"
+		"contextsubject" "c4m2_useelevator"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_useelevator"
+		"origin" "-1458.9000244141 -9465.8095703125 668.7100219727"
+		"angles" "0 -92.1859893799 0"
+		"contextsubject" "c4m2_useelevator"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_weather"
+		"origin" "4993.0698242188 -4142.259765625 195.0399932861"
+		"angles" "0 -69.771232605 0"
+		"contextsubject" "c4m2_weather"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_weather"
+		"origin" "5120.3500976563 -3779.25 159.9199981689"
+		"angles" "0 -44.6554794312 0"
+		"contextsubject" "c4m2_weather"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_weather"
+		"origin" "4977.9799804688 -3582.1398925781 184.4299926758"
+		"angles" "0 53.4204978943 0"
+		"contextsubject" "c4m2_weather"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_weather"
+		"origin" "4845.0200195313 -4292.240234375 181.0299987793"
+		"angles" "0 -91.6830062866 0"
+		"contextsubject" "c4m2_weather"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_weather"
+		"origin" "4510.83984375 -4285.6000976563 169.8500061035"
+		"angles" "0 -130.4911346436 0"
+		"contextsubject" "c4m2_weather"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_gasinsidesign"
+		"origin" "-1475.8199462891 -13225.1103515625 238.4900054932"
+		"angles" "0 -82.5347976685 0"
+		"contextsubject" "c4m2_gasinsidesign"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_gasinsidesign"
+		"origin" "-1619.3000488281 -13234.169921875 237.4799957275"
+		"angles" "0 -85.9007873535 0"
+		"contextsubject" "c4m2_gasinsidesign"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m2_gasinsidesign"
+		"origin" "-1748.4499511719 -13229.6298828125 237.0800018311"
+		"angles" "0 -92.3027954102 0"
+		"contextsubject" "c4m2_gasinsidesign"
+	}
+}

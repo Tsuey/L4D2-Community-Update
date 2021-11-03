@@ -1,0 +1,53 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M3_ByBridge"
+		"origin" "-3.75 -1204.8900146484 42.2700004578"
+		"angles" "0 -90.9116821289 0"
+		"contextsubject" "WorldC6M3_ByBridge"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M3_BridgeRun"
+		"origin" "5.9099998474 -2222.6101074219 45.0699996948"
+		"angles" "0 -94.445350647 0"
+		"contextsubject" "WorldC6M3_BridgeRun"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M3_Bill"
+		"origin" "-368.841217 -946.784973 0.031250"
+		"angles" "0 -94.445350647 0"
+		"contextsubject" "WorldC6M3_Bill"
+	}
+
+//Map Update
+	"entity"
+	{
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "128 8 44"
+		"mins" "-128 -8 -44"
+		"targetname" "survivor_window1_blocker"
+		"origin" "-1280 -1020 238"
+		"mapupdate" "1"
+	}
+	
+// Blocks jumping on top of the indoor generator to access the roof.
+	entity
+	{
+		"id" "1479332"
+		"classname" "env_player_blocker"
+		"BlockType" "1"
+		"initialstate" "1"
+		"maxs" "30 15 135"
+		"mins" "-30 -15 -8"
+		"origin" "-1158 884 345"
+		"mapupdate" "1"
+	}
+}
