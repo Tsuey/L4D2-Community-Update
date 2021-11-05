@@ -36,7 +36,7 @@ function DoRoundFixes()
 	make_clip( "_cliprework_unattackable", "Survivors", 1, "-802 -203 0", "558 213 832", "-2446 299 -376" );
 	make_clip( "_ledgehang_startfenceleft", "Survivors", 1, "-16 -48 0", "10 48 379", "589 -142 -251", "0 29 0" );
 	make_clip( "_ledgehang_startfenceright", "Survivors", 1, "-8 -24 0", "8 24 360", "599 45 -232", "0 -15 0" );
-	make_clip( "_commentary_shortcut_forsale_a", "Survivors", 1, "-4 -128 209", "4 128 209", "-1700 -128 -35" );
+	make_clip( "_commentary_shortcut_forsale_a", "Survivors", 1, "-4 -128 -209", "4 128 209", "-1700 -128 -35" );
 	make_clip( "_commentary_shortcut_forsale_b", "Survivors", 1, "0 0 0", "128 128 128", "-2140 -288 -294.972" );
 	make_clip( "_commentary_nav_bienville_windows", "Survivors", 1, "-4 -384 -80", "6 512 256", "-662 -880 -100.086" );
 	make_clip( "_commentary_clipgap_redhouse", "Survivors", 1, "0 0 0", "48 48 128", "-3136 464 -264.871" );
