@@ -70,12 +70,12 @@ function DoRoundFixes()
 		make_clip( "_commentary_balconyjump",		"Survivors",	1,	"-2 -128 -280",		"2 128 112",	"1344 4880 2704" );
 		make_clip( "_commentary_elevator_window",	"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"2352.5 5624 2644", "-10 0 0" );
 		make_clip( "_commentary_windowdrop_corner",	"Survivors",	1,	"-95 -8 -8",		"95 8 28",		"1504 6280 2788" );
-		make_clip( "_commentary_windowdrop_a",		"Survivors",	1,	"-4 -32 -34",		"4 32 28",		"1647.5 6432 2644", "10 0 0" );
-		make_clip( "_commentary_windowdrop_b",		"Survivors",	1,	"-4 -32 -34",		"4 32 28",		"1647.5 6560 2644", "10 0 0" );
-		make_clip( "_commentary_windowdrop_c",		"Survivors",	1,	"-4 -32 -34",		"4 32 28",		"1647.5 6848 2644", "10 0 0" );
-		make_clip( "_commentary_windowdrop_d",		"Survivors",	1,	"-4 -32 -34",		"4 32 28",		"1647.5 7008 2644", "10 0 0" );
-		make_clip( "_commentary_windowdrop_e",		"Survivors",	1,	"-4 -32 -34",		"4 32 28",		"1647.5 7328 2644", "10 0 0" );
-		make_clip( "_commentary_windowdrop_f",		"Survivors",	1,	"-4 -32 -34",		"4 32 28",		"1647.5 7488 2644", "10 0 0" );
+		make_clip( "_commentary_windowdrop_a",		"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"1647.5 6432 2644", "10 0 0" );
+		make_clip( "_commentary_windowdrop_b",		"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"1647.5 6560 2644", "10 0 0" );
+		make_clip( "_commentary_windowdrop_c",		"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"1647.5 6848 2644", "10 0 0" );
+		make_clip( "_commentary_windowdrop_d",		"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"1647.5 7008 2644", "10 0 0" );
+		make_clip( "_commentary_windowdrop_e",		"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"1647.5 7328 2644", "10 0 0" );
+		make_clip( "_commentary_windowdrop_f",		"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"1647.5 7488 2644", "10 0 0" );
 		make_clip( "_commentary_ledgedrop_a",		"Survivors",	1,	"-4 -600 -26",		"4 600 26",		"2338 7080 2628", "-15 0 0" );
 		make_clip( "_commentary_ledgedrop_b",		"Survivors",	1,	"-4 -147 -26",		"4 147 26",		"2514 6331 2628", "-15 0 0" );
 		make_clip( "_commentary_ledgedrop_c",		"Survivors",	1,	"-32 -4 -26",		"32 4 26",		"2480 6182 2628", "0 0 -15" );
