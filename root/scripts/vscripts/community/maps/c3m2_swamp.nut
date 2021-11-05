@@ -18,7 +18,9 @@ function DoRoundFixes()
 
 		// FIXES
 
-		// FIX: Prevent skipping the plane horde by forcing it even if the door is skipped.
+		// FIX: Prevent skipping the plane horde by forcing it even if the plane door is skipped.
+		
+		con_comment( "TRIG:\tNew trigger will enforce panic event even if plane door is skipped." );
 
 		SpawnEntityFromTable( "trigger_once",
 		{
