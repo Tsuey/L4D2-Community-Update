@@ -12,7 +12,36 @@ function DoRoundFixes()
 	// This map is clipped like a tunnel. No known gamebreaking exploits.
 
 	make_clip( "_boat_smoother", "Everyone", 1, "-16 -24 0", "16 24 30", "-7863 5391 -8", "-10 -30 0" );
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
 
+		// FIXES
+
+		// FIX: Prevent skipping the plane horde by forcing it even if the door is skipped.
+
+		SpawnEntityFromTable( "trigger_once",
+		{
+			targetname	= g_UpdateName + "_eventskip_plane_trigonce",
+			StartDisabled	= 0,
+			spawnflags	= 1,
+			filtername	= "anv_globalfixes_filter_survivor",
+			origin		= Vector( -1336, 2988, 256 )
+		} );
+
+		EntFire( g_UpdateName + "_eventskip_plane_trigonce", "AddOutput", "mins -24 -1132 -384" );
+		EntFire( g_UpdateName + "_eventskip_plane_trigonce", "AddOutput", "maxs 24 1132 384" );
+		EntFire( g_UpdateName + "_eventskip_plane_trigonce", "AddOutput", "solid 2" );
+
+		// Fire the door relay when triggered.
+
+		EntFire( g_UpdateName + "_eventskip_plane_trigonce", "AddOutput", "OnTrigger Blow_door:Trigger::0:-1" );
+
+		// Kill the trigger if the door is opened normally.
+
+		EntFire( "Blow_door", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_plane_trigonce:Kill::0:-1" );
+
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -26,6 +55,8 @@ function DoRoundFixes()
 		make_clip( "_cabin_door_button_a", "Survivors", 1, "-138 -176 -13", "138 372 444", "-1932 3700 196", "0 28 0" );
 		make_clip( "_cabin_door_button_b", "Survivors", 1, "-147 -434 -70", "138 404 444", "-1888 3079 226" );
 		make_clip( "_cabin_door_button_c", "Survivors", 1, "-112 -516 -30", "108 431 521", "-1622 2298 162", "0 28 0" );
+		make_clip( "_commentary_planeclimb_a", "Survivors", 1, "-29 -3 -44", "29 3 44", "-1931 2612 124" );
+		make_clip( "_commentary_planeclimb_b", "Survivors", 1, "-36 -14 -44", "36 14 44", "-1908 2578 124", "0 300 0" );
 		EntFire( "Blow_door", "AddOutput", "OnTrigger " + g_UpdateName + "_cabin_door_button*:Kill::0:-1" );
 
 	}
