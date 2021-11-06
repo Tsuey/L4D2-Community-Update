@@ -5,6 +5,16 @@ devchap( "ALL MODES" );
 PrecacheModel( "models/props_crates/static_crate_40.mdl" );
 PrecacheModel( "models/props_update/c3m3_nodrawfence.mdl" );
 PrecacheModel( "models/props_canal/boat001a.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk01.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk02.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk03.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk04.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk05.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk06.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk07.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk08.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk09.mdl" );
+PrecacheModel( "models/props_canal/boat001a_chunk010.mdl" );
 PrecacheModel( "models/props_foliage/swamp_fallentree01_bare.mdl" );
 
 function DoRoundFixes()
