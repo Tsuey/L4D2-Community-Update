@@ -1,0 +1,153 @@
+WeaponData
+{
+	// Terror-specific Data --------------------
+	"VerticalPunch"				"3"
+	"SpreadPerShot"				"22"
+	"MaxSpread"					"5"
+	"SpreadDecay"				"6"
+	"MinDuckingSpread"			"0"
+	"MinStandingSpread"			"0.75"
+	"MinInAirSpread"			"2.5"
+	"MaxMovementSpread"			"1.5"
+	"PelletScatterPitch"		"3.5"
+	"PelletScatterYaw"			"8.0"
+	"ReloadDuration"			"0.396"
+
+	"AddonAttachment"		"primary"
+
+	"team"					"Survivor"
+	"Tier"					"2"			// valid entries are 0, 1, 2
+
+	"ResponseRulesName"		"Shotgun_SPAS"
+	"NewInL4D2"				"1"
+
+	// particle muzzle flash effect to play when fired
+	"MuzzleFlashEffect_1stPerson"	"weapon_muzzle_flash_shotgun_FP"
+	"MuzzleFlashEffect_3rdPerson"	"weapon_muzzle_flash_autoshotgun"
+
+	// model for the shell casing to eject when we fire bullets
+	"EjectBrassEffect"			"weapon_shell_casing_shotgun"
+
+	// Used in the music system when this weapon fires
+	"MusicDynamicSpeed"		"1.5"
+	"DisplayName"			"#L4D_Weapon_Shotgun_SPAS"
+	"DisplayNameAllCaps"	"#L4D_Weapon_Shotgun_SPAS_CAPS"
+
+	// 360 Terror Data
+	"MaxAutoAimDeflection1"			"10.0"
+	"MaxAutoAimRange1"				"0"
+	//This value determins how "big" a target is for auto aim. If a target is 10.0 units big then it is considered 10.0*scale.  
+	//You can think about this value controlling a falloff value on distant targets, the smaller the value the harder it is to hit at a distance.
+	"WeaponAutoAimScale"			"1.0"
+	// End Terror-specific Data ----------------
+
+	"Rumble"		"5"
+
+	"MaxPlayerSpeed" 			"240"
+	"WeaponType" 				"shotgun"
+	"WeaponPrice"				"3000"
+	"WeaponArmorRatio"			"1.0"
+	"CrosshairMinDistance"		"9"
+	"CrosshairDeltaDistance"	"4"
+	"Team"						"ANY"
+	"BuiltRightHanded"			"1"
+	"PlayerAnimationExtension"	"xm1014"
+	"MuzzleFlashScale"			"1.3"
+	"CanEquipWithShield"		"0"
+
+	// Weapon characteristics:
+	"PenetrationNumLayers"				"2"
+	"PenetrationPower"					"30"
+	"PenetrationMaxDistance"			"500"
+	"CharacterPenetrationMaxDistance"	"300"	// Shooting through infected is doesn't count against penetration count out to this range
+
+	"Damage"			"28"
+	"Range"				"3000"
+	"RangeModifier"		"0.7"
+	"Bullets"			"9"
+	"CycleTime"			"0.15"
+
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"Auto Shotgun"
+	"playermodel"		"models/w_models/weapons/w_shotgun_spas.mdl"	"viewmodel"			"models/v_models/v_shotgun_spas.mdl"
+
+	"CharacterViewmodelAddon"
+	{
+		"Coach"				"models/weapons/arms/v_arms_coach_new.mdl"
+		"Mechanic"			"models/weapons/arms/v_arms_mechanic_new.mdl"
+		"Producer"			"models/weapons/arms/v_arms_producer_new.mdl"
+		"Gambler"			"models/weapons/arms/v_arms_gambler_new.mdl"
+
+		"Manager"			"models/weapons/arms/v_arms_louis.mdl"
+		"Biker"				"models/weapons/arms/v_arms_francis.mdl"
+	 	"TeenGirl"			"models/weapons/arms/v_arms_zoey.mdl"
+		"NamVet"			"models/weapons/arms/v_arms_bill.mdl"
+	}
+
+	"anim_prefix"		"anim"
+	"bucket"			"0"
+	"bucket_position"	"0"
+
+	"clip_size"			"10"	//increased from 9
+	"primary_ammo"		"AMMO_TYPE_AUTOSHOTGUN"
+	"secondary_ammo"	"None"
+
+	"weight"			"20"
+	"item_flags"		"0"
+
+	"LoadoutSlots"		"2"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"AutoShotgun_Spas.Fire"
+		"shoot_incendiary"	"AutoShotgun_Spas.FireIncendiary"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+			"file"		"vgui/hud/icon_shotgun_spas"
+			"width"		"256"
+			"height"	"64"
+		}
+		"ammo"
+		{
+			"file"		"vgui/hud/ammo_shotgun_spas"
+			"width"		"64"
+			"height"	"64"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"0"
+			"y"			"48"
+			"width"		"24"
+			"height"	"24"
+		}
+		"autoaim"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"0"
+			"y"			"48"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+
+	ModelBounds
+	{
+		Viewmodel
+		{
+			Mins	"-13 -3 -11"
+			Maxs	"29 10 0"
+		}
+		World
+		{
+			Mins	"-4 -8 -4"
+			Maxs	"30 8 6"
+		}
+	}
+}

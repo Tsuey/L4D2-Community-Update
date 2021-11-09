@@ -1,0 +1,155 @@
+WeaponData
+{
+	// Terror-specific Data --------------------
+	"VerticalPunch"				"4.0"
+	"SpreadPerShot"				"2"
+	"MaxSpread"					"30"
+	"SpreadDecay"				"5"
+	"MinDuckingSpread"			"0.5"
+	"MinStandingSpread"			"1.25"
+	"MinInAirSpread"			"3.0"
+	"MaxMovementSpread"			"3.0"
+	"DeployDuration"			"0.5"
+	"DualDeployDuration"		"0.65"
+
+	"AddonAttachment"		"pistol"
+	"addon_offset"			"2 0 -2"
+	"addon_angles"			"0 0 0"
+
+	"Team" 					"Survivor"
+	"Tier"					"0"			// valid entries are 0, 1, 2
+
+	"ResponseRulesName"		"magnum"
+
+	// particle muzzle flash effect to play when fired
+	"MuzzleFlashEffect_1stPerson"	"weapon_muzzle_flash_shotgun_FP"
+	"MuzzleFlashEffect_3rdPerson"	"weapon_muzzle_flash_autoshotgun"
+
+	// model for the shell casing to eject when we fire bullets
+	"EjectBrassEffect"			"weapon_shell_casing_desert_eagle"
+
+	// Used in the music system when this weapon fires
+	"MusicDynamicSpeed"		"0.8"
+	"DisplayName"			"#L4D_Weapon_magnum"
+	"DisplayNameAllCaps"	"#L4D_Weapon_magnum_CAPS"
+
+	// 360 Terror Data
+	"MaxAutoAimDeflection1"			"10.0"
+	"MaxAutoAimRange1"				"0"
+	//This value determins how "big" a target is for auto aim. If a target is 10.0 units big then it is considered 10.0*scale.  
+	//You can think about this value controlling a falloff value on distant targets, the smaller the value the harder it is to hit at a distance.
+	"WeaponAutoAimScale"			"1.0"
+	// End Terror-specific Data ----------------
+
+	"Rumble"		"1"
+
+	"MaxPlayerSpeed"			"250"
+	"WeaponType"				"pistol"
+	"WeaponPrice"				"500"
+	"WeaponArmorRatio"			"1.0"
+	"CrosshairMinDistance"		"8"
+	"CrosshairDeltaDistance" 	"3"
+	"BuiltRightHanded" 			"1"
+	"PlayerAnimationExtension"	"pistol"
+	"MuzzleFlashScale"			"1"
+	"CanEquipWithShield" 		"1"
+
+	"NoiseFactor" 				"350"
+
+	// Weapon characteristics:
+	"PenetrationNumLayers"				"2"
+	"PenetrationPower"					"50"
+	"PenetrationMaxDistance"			"0"		// none
+
+	"Damage"			"80"
+	"Range"				"3500"
+	"RangeModifier"		"0.75"
+	"Bullets"			"1"
+	"CycleTime"			"0.3"	// 0.15
+
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"Magnum"
+	"playermodel"		"models/w_models/weapons/w_desert_eagle.mdl"	"viewmodel"			"models/v_models/v_desert_eagle.mdl"
+
+	"CharacterViewmodelAddon"
+	{
+		"Coach"				"models/weapons/arms/v_arms_coach_new.mdl"
+		"Mechanic"			"models/weapons/arms/v_arms_mechanic_new.mdl"
+		"Producer"			"models/weapons/arms/v_arms_producer_new.mdl"
+		"Gambler"			"models/weapons/arms/v_arms_gambler_new.mdl"
+
+		"Manager"			"models/weapons/arms/v_arms_louis.mdl"
+		"Biker"				"models/weapons/arms/v_arms_francis.mdl"
+	  	"TeenGirl"			"models/weapons/arms/v_arms_zoey.mdl"
+		"NamVet"			"models/weapons/arms/v_arms_bill.mdl"
+}
+
+	"anim_prefix"		"anim"
+	"bucket"			"1"
+	"bucket_position"	"0"
+
+	"clip_size"			"8"
+	"primary_ammo"		"AMMO_TYPE_PISTOL_MAGNUM"	// custom ammo - adds dismemberment, and full damage on expert to kill infected
+	"secondary_ammo"	"None"
+
+	"weight"			"5"
+	"item_flags"		"0"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+ 	{
+  		"single_shot"	"Magnum.Fire"
+ 	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+			"file"		"vgui/hud/icon_pistol_magnum"
+			"width"		"64"
+			"height"	"64"
+		}
+		"weapon_dual"
+		{
+			"file"		"vgui/hud/icon_pistol_magnum"
+			"width"		"64"
+			"height"	"64"
+		}
+		"ammo"
+		{
+			"font"		"DebugFixed"
+			"character"	"A"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"0"
+			"y"			"48"
+			"width"		"24"
+			"height"	"24"
+		}
+		"autoaim"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"0"
+			"y"			"48"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+
+	ModelBounds
+	{
+		Viewmodel
+		{
+			Mins	"-7 -4 -14"
+			Maxs	"24 9 -2"
+		}
+		World
+		{
+			Mins	"-1 -4 -3"
+			Maxs	"17 5 6"
+		}
+	}
+}

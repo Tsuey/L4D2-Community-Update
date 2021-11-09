@@ -1,0 +1,128 @@
+WeaponData
+{
+	"MaxPlayerSpeed"			"250"
+	"WeaponType"				"grenade"
+	"WeaponPrice"				"300"
+	"WeaponArmorRatio"			"1"
+	"CrosshairMinDistance"		"8"
+	"CrosshairDeltaDistance"	"3"
+	"Team"						"Survivor"
+	"BuiltRightHanded"			"1"
+	"PlayerAnimationExtension" 	"gren"
+	"MuzzleFlashScale"			"0"
+	"MuzzleFlashStyle"			"CS_MUZZLEFLASH_NONE"
+
+	"Tier"						"0"		// valid entries are 0, 1, 2
+
+	"ResponseRulesName"			"VomitJar"
+
+	"DisplayName"				"#L4D_Weapon_VomitJar"
+	"DisplayNameAllCaps"		"#L4D_Weapon_VomitJar_CAPS"
+
+	"CanEquipWithShield"		"1"
+	"AddonModel"				"models/w_models/weapons/w_eq_bile_flask.mdl"
+	"AddonAttachment"			"molotov"
+
+	// Weapon characteristics:
+	"Penetration"				"1"
+	"Damage"					"50"
+	"Range"						"4096"
+	"RangeModifier"				"0.99"
+	"Bullets"					"1"
+
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"					"_ Vomit Jar _"
+	"playermodel"				"models/w_models/weapons/w_eq_bile_flask.mdl"
+	"viewmodel"					"models/v_models/v_bile_flask.mdl"
+
+	"CharacterViewmodelAddon"
+	{
+		"Coach"				"models/weapons/arms/v_arms_coach_new.mdl"
+		"Mechanic"			"models/weapons/arms/v_arms_mechanic_new.mdl"
+		"Producer"			"models/weapons/arms/v_arms_producer_new.mdl"
+		"Gambler"			"models/weapons/arms/v_arms_gambler_new.mdl"
+
+		"Manager"			"models/weapons/arms/v_arms_louis.mdl"
+		"Biker"				"models/weapons/arms/v_arms_francis.mdl"
+	 	"TeenGirl"			"models/weapons/arms/v_arms_zoey.mdl"
+		"NamVet"			"models/weapons/arms/v_arms_bill.mdl"
+	}
+
+	"anim_prefix"				"anim"
+	"bucket"					"2"
+	"bucket_position"			"1"
+
+	"clip_size"					"-1"
+	"default_clip"				"1"
+	"primary_ammo"				"AMMO_TYPE_VOMITJAR"
+	"secondary_ammo"			"None"
+
+	"weight"					"2"
+	"item_flags"				"0"
+	"ITEM_FLAG_NOAMMOPICKUPS"	"1"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+			"file"		"vgui/hud/icon_vomitjar"
+			"width"		"64"
+			"height"	"64"
+		}
+		"weapon_small"
+		{
+			"file"		"vgui/hud/icon_vomitjar"
+			"x"			"80"
+			"y"			"16"
+			"width"		"32"
+			"height"	"32"
+		}
+		"weapon_s"
+		{
+			"file"		"vgui/hud/icon_vomitjar"
+			"width"		"64"
+			"height"	"64"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"0"
+			"y"			"48"
+			"width"		"24"
+			"height"	"24"
+		}
+		"autoaim"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"0"
+			"y"			"48"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+
+	ModelBounds
+	{
+		Viewmodel
+		{
+			Mins	"-6 -9 -15"
+			Maxs	"15 11 0"
+		}
+		World
+		{
+			Mins	"-20 -20 -20"
+			Maxs	"20 20 20"
+		}
+		Addon
+		{
+			Mins	"-20 -20 -20"
+			Maxs	"20 20 20"
+		}
+	}
+}
