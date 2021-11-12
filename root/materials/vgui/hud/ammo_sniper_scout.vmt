@@ -1,10 +1,10 @@
 UnlitGeneric
 {
-	$basetexture "vgui\hud\ammo_sniper_scout"
-	$translucent 1
-	$alpha 1
-	$vertexalpha 1
-	$ignorez 1
-	$no_fullbright 1
-	$vertexcolor 1
+$basetexture "vgui\hud\ammo_sniper_scout"
+$translucent 1
+$alpha 1
+$vertexalpha 1
+$ignorez 1
+$no_fullbright 1
+$vertexcolor 1
 }
