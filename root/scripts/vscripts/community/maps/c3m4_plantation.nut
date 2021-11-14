@@ -36,7 +36,7 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip( "_commentary_shortcut_startfence", "Everyone", 1, "-8 -272 -80", "8 280 80", "-2380 -1616 78.2673" );
+		make_clip( "_commentary_shortcut_startfence", "Survivors", 1, "-8 -272 -80", "8 280 80", "-2380 -1616 78.2673" );
 
 	}
 	if ( g_BaseMode == "survival" )
