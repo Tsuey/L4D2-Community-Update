@@ -4,6 +4,11 @@ devchap( "ALL MODES" );
 
 PrecacheModel( "models/props_interiors/concretepillar01_dm_base.mdl" );
 PrecacheModel( "models/props_interiors/concretepillar01.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_1.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_2.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_3.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_4.mdl" );
 
 function DoRoundFixes()
 {
