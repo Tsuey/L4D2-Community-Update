@@ -53,8 +53,6 @@ function DoRoundFixes()
 	make_clip( "_commentary_electricalbox_a", "Survivors", 1, "-4 -56 -8", "8 8 196", "-2056 2624 8" );
 	make_clip( "_commentary_electricalbox_b", "Survivors", 1, "-4 -56 -16", "8 8 196", "-776 1724 16" );
 	make_clip( "_commentary_electricalbox_c", "Survivors", 1, "-56 -8 -34", "8 4 196", "-1124 1032 36" );
-	make_clip( "_commentary_fencewalk_a", "Survivors", 1, "-4 0 0", "8 256 512", "-2868 1844 122.859" );
-	make_clip( "_commentary_fencewalk_b", "Survivors", 1, "-4 0 0", "8 256 512", "-2700 1964 122.859" );
 	make_brush( "_permstuck_swanroom_dead", "-54 -20 0", "58 29 108", "510 4084 -7" );
 	make_trigduck( "_duckqol_swanhole", "-5 -32 -32", "5 32 32", "1348 4096 32" );
 
@@ -67,6 +65,13 @@ function DoRoundFixes()
 	//EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 	//EntFire( "relay_panicevent", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" || g_BaseMode == "versus" )
+	{
+
+		make_clip( "_commentary_fencewalk_a", "Survivors", 1, "-4 0 0", "8 256 512", "-2868 1844 122.859" );
+		make_clip( "_commentary_fencewalk_b", "Survivors", 1, "-4 0 0", "8 256 512", "-2700 1964 122.859" );
+
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
