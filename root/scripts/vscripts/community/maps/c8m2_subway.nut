@@ -26,7 +26,7 @@ function DoRoundFixes()
 	make_clip( "_stuckwarp_underspawn", "Everyone", 1, "-11 -7 0", "-3 10 70", "3111 2775 -70" );
 	make_clip( "_stuckwarp_tunnelend", "Everyone", 1, "-12 -24 -14", "137 73 70", "4182 2831 -70", "0 -1 0" );
 	make_clip( "_tankwarp_solidify", "SI Players and AI", 1, "-26 -30 0", "98 6 100", "5977 4742 -335", "0 -22 0" );
-	make_clip( "_unattackable_building_top", "Survivors", 1, "-576 -336 -368", "157 336 368", "8896 4272 1040" );
+	make_clip( "_unattackable_building_top", "Survivors", 1, "-576 -336 -368", "576 336 368", "8896 4272 1040" );
 	make_clip( "_unattackable_backalley1", "Survivors", 1, "-252 -311 0", "260 337 772", "6780 4279 632" );
 	make_clip( "_unattackable_backalley2", "Survivors", 1, "-1191 -320 0", "1153 320 752", "8319 3520 660" );
 	make_clip( "_unattackable_backalley3", "Survivors", 1, "-58 -7 0", "70 7 1402", "10298 3765 16" );
@@ -59,7 +59,6 @@ function DoRoundFixes()
 		make_clip( "_nav_backlightright", "Survivors", 1, "6 -13 -61", "9 15 84", "5243 4210 -265" );
 		make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
 		make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
-		make_clip( "_unattackable_building_bot", "Survivors", 1, "-576 -336 -192", "157 336 192", "8896 4272 480" );
 
 	}
 	if ( g_BaseMode == "survival" )
@@ -87,6 +86,7 @@ function DoRoundFixes()
 		make_clip( "_ladder_tanksubqol_clip", "Everyone", 1, "-22 3 0", "9 7 152", "6290 3284 -336", "0 -20 0" );
 		make_clip( "_ladder_tanksubway_clip", "SI Players", 1, "-17 -43 0", "16 -2 8", "6999 2919 -188" );
 		make_clip( "_ladder_tanksubwreck_clip", "Everyone", 1, "-38 -6 0", "38 1 8", "4306 4053 -231", "0 -21 0" );
+		make_clip( "_unattackable_building_bot", "Survivors", 1, "-576 -336 -192", "576 336 192", "8896 4272 480" );
 		make_ladder( "_ladder_deadendrubble_cloned_endfenceshortest", "10195 5726.5 67.766", "-5520 12737 -375", "0 -78.24 0", "0.98 0.2 0" );
 		make_ladder( "_ladder_endpawnbrick_cloned_trashbagdrop", "8233 3844.5 278", "14396 -3589 -228", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_endpolicefence_cloned_oneunitbroke", "8657 5483.5 92", "1625 240 -40" );
