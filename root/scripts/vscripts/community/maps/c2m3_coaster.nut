@@ -95,8 +95,8 @@ function DoRoundFixes()
 		make_clip( "_shortcut_finally_done", "Survivors", 1, "-8 -146 0", "0 146 255", "-2894 2609 253", "9 0 0" );
 		make_clip( "_booster_eventskip1", "Survivors", 1, "-253 -16 -459", "332 23 32", "-3106 3081 960" );
 		make_clip( "_booster_eventskip2", "Survivors", 1, "-253 -72 -459", "-246 23 32", "-3106 3081 960" );
-		make_clip( "_commentary_downramp_railing", "Survivors", 1, "0 0 -64", "8 188 256", "-3350.76 2608.73 444" );
-		make_clip( "_commentary_pretunnel_supports", "Survivors", 1, "0 0 0", "8 350 512", "-3540.08 2368 128" );
+		make_clip( "_commentary_downramp_railing", "Survivors", 1, "0 0 -64", "8 188 1280", "-3350.76 2608.73 444" );
+		make_clip( "_commentary_pretunnel_supports", "Survivors", 1, "0 0 0", "8 350 1600", "-3540.08 2368 128" );
 		make_clip( "_commentary_shortcut_bush_a", "Survivors", 1, "-16 -64 -772", "16 64 772", "-4097 2048 956" );
 		make_clip( "_commentary_shortcut_bush_b", "Survivors", 1, "-16 -78 -772", "16 78 772", "-4133 2174 956", "0 31 0" );
 
