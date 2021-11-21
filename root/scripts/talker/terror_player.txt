@@ -880,6 +880,8 @@ criterion "IsPickedUpPitchfork"  "ItemPickedUp" "Pitchfork" required
 
 criterion "IsPickedUpColaBottles"  "ItemPickedUp" "ColaBottles" required
 
+criterion "IsNotCarriedProp"  "itemtype" "!=carried_prop" required
+
 Criterion "NotSaidGrabbingCan" "SaidGrabbingCan" "!=1" "required" weight 0
 
 Criterion "NotPickedUpItem" "PickedUpItem" "!=1" "required" weight 0
