@@ -879,9 +879,9 @@ Rule ItemDonorGamblerMechanic
 
 Response ItemDonorBikerMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay "2,2.5" then gambler YouAreWelcome foo:0 0 //Thanks Francis!
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay "2,2.5" then gambler YouAreWelcome foo:0 0 //Hey, thanks guys!
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then gambler YouAreWelcome foo:0 0 //This from you? THANKS!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0 //Thanks Francis!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0 //Hey, thanks guys!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0 //This from you? THANKS!
 }
 Rule ItemDonorBikerMechanic
 {
@@ -1490,6 +1490,7 @@ Rule C2M1Intro_401Mechanic
 
 Response C2M1Intro_402Mechanic
 {
+	scene "scenes/Mechanic/WorldC2M1B06.vcd"  //I will always love you.
 	scene "scenes/Mechanic/WorldC2M1B09.vcd"  //I love you.
 }
 Rule C2M1Intro_402Mechanic
@@ -15922,6 +15923,7 @@ Rule C2M1Intro005Mechanic
 
 Response C2M1Intro008Mechanic
 {
+	scene "scenes/Mechanic/WorldC2M1B06.vcd"  //I will always love you.
 	scene "scenes/Mechanic/WorldC2M1B09.vcd"  //I love you.
 }
 Rule C2M1Intro008Mechanic
