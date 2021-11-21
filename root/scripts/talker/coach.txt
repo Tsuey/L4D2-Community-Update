@@ -1879,6 +1879,20 @@ Rule C2M5ReloadingTankCoach
 	Response C2M5ReloadingTankCoach
 }
 
+Response C2M5ReloadingTankMadAtRidersCoach
+{
+	norepeat
+	scene "scenes/Coach/WorldC2M5B113.vcd"  //We need to kill the Tank before he lands!
+	scene "scenes/Coach/WorldC2M5B122.vcd"  //We gotta kill the Tank before he lands!
+}
+Rule C2M5ReloadingTankMadAtRidersCoach
+{
+	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsCoach IsNotIncapacitated IsTalk IsTalkCoach IsNotSaidReloadingTank IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkCoach CoachMadAtRiders Ismap_c2m5 _auto_ConcertIsLive
+	ApplyContext "SaidReloadingTank:1:10,SaidTankWarn2:1:20"
+	applycontexttoworld
+	Response C2M5ReloadingTankMadAtRidersCoach
+}
+
 Response C2M5ConcertTankResponseCoach
 {
 	scene "scenes/Coach/WorldC2M5B114.vcd"  //You heard the man, kill the Tank!
