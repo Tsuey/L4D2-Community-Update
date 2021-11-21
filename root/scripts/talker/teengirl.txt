@@ -2551,13 +2551,27 @@ Rule L4D1ResponseSoftDispleasureSwearTeenGirl
 //--------------------------------------------------------------------------------------------------------------
 // Item Spotted
 //--------------------------------------------------------------------------------------------------------------
+Response L4D1SurvivorAskForHealthThirdStrikeTeenGirl
+{
+	scene "scenes/TeenGirl/GoingToDieAskForHeal01.vcd"  //Anyone have some first aid?
+	scene "scenes/TeenGirl/GoingToDieAskForHeal02.vcd"  //I need some first aid now.
+	scene "scenes/TeenGirl/GoingToDieAskForHeal04.vcd"  //Anyone have some first aid? I'm gonna die.
+	scene "scenes/TeenGirl/GoingToDieAskForHeal05.vcd"  //I need some first aid now.
+	scene "scenes/TeenGirl/GoingToDieAskForHeal13.vcd"  //I can't make it without some help.
+}
+Rule L4D1SurvivorAskForHealthThirdStrikeTeenGirl
+{
+	criteria ConceptAskForHealth2 IsTeenGirl IssuerClose IsNotSpeaking IsOnThirdStrike
+	Response L4D1SurvivorAskForHealthThirdStrikeTeenGirl
+}
+
 Response L4D1SurvivorAskBillForHealthTeenGirl
 {
 	scene "scenes/TeenGirl/PlayerSuggestHealthSpecific10.vcd"  //Bill, if you aren't gonna use that first aid kit, can I have it?
 }
 Rule L4D1SurvivorAskBillForHealthTeenGirl
 {
-	criteria ConceptAskForHealth2  IsTeenGirl SubjectIsNamVet IsSubjectNear400
+	criteria ConceptAskForHealth2 IsTeenGirl FromIsNamVet IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskBillForHealthTeenGirl
 }
 
@@ -2579,7 +2593,7 @@ Response L4D1SurvivorAskFrancisForHealthTeenGirl
 }
 Rule L4D1SurvivorAskFrancisForHealthTeenGirl
 {
-	criteria ConceptAskForHealth2  IsTeenGirl SubjectIsBiker IsSubjectNear400
+	criteria ConceptAskForHealth2 IsTeenGirl FromIsBiker IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskFrancisForHealthTeenGirl
 }
 
@@ -2589,7 +2603,7 @@ Response L4D1SurvivorAskLouisForHealthTeenGirl
 }
 Rule L4D1SurvivorAskLouisForHealthTeenGirl
 {
-	criteria ConceptAskForHealth2  IsTeenGirl SubjectIsManager IsSubjectNear400
+	criteria ConceptAskForHealth2 IsTeenGirl FromIsManager IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskLouisForHealthTeenGirl
 }
 

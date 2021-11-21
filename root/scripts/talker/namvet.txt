@@ -1893,13 +1893,26 @@ Rule L4D1SurvivorAskForHealthNamVet
 	Response L4D1SurvivorAskForHealthNamVet
 }
 
+Response L4D1SurvivorAskForHealthThirdStrikeNamVet
+{
+	scene "scenes/NamVet/GoingToDieAskForHeal01.vcd" //Anybody have some first aid? I ain't feelin' right...
+	scene "scenes/NamVet/GoingToDieAskForHeal02.vcd" //Someone gonna heal the old guy about to die?
+	scene "scenes/NamVet/GoingToDieAskForHeal03.vcd" //Sure could use some patching up.
+	scene "scenes/NamVet/GoingToDieAskForHeal04.vcd" //Anyone spare a medkit?
+}
+Rule L4D1SurvivorAskForHealthThirdStrikeNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet IssuerClose IsNotSpeaking IsOnThirdStrike
+	Response L4D1SurvivorAskForHealthThirdStrikeNamVet
+}
+
 Response L4D1SurvivorAskFrancisForHealthNamVet
 {
 	scene "scenes/NamVet/PlayerSuggestHealthSpecific01.vcd"  //Francis, buddy, you gonna use that health kit?
 }
 Rule L4D1SurvivorAskFrancisForHealthNamVet
 {
-	criteria ConceptAskForHealth2 IsNamVet SubjectIsBiker IsSubjectNear400
+	criteria ConceptAskForHealth2 IsNamVet FromIsBiker IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskFrancisForHealthNamVet
 }
 
@@ -1909,7 +1922,7 @@ Response L4D1SurvivorAskLouisForHealthNamVet
 }
 Rule L4D1SurvivorAskLouisForHealthNamVet
 {
-	criteria ConceptAskForHealth2 IsNamVet SubjectIsManager IsSubjectNear400
+	criteria ConceptAskForHealth2 IsNamVet FromIsManager IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskLouisForHealthNamVet
 }
 
@@ -1919,18 +1932,18 @@ Response L4D1SurvivorAskZoeyForHealthNamVet
 }
 Rule L4D1SurvivorAskZoeyForHealthNamVet
 {
-	criteria ConceptAskForHealth2 IsNamVet SubjectIsTeenGirl IsSubjectNear400
+	criteria ConceptAskForHealth2 IsNamVet FromIsTeenGirl IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskZoeyForHealthNamVet
 }
 
-Response L4D1SurvivorFrancisHealthHereNamVet
+Response L4D1SurvivorHealthHereNamVet
 {
 	print " " then From AskForHealth2 foo:0 0 //
 }
-Rule L4D1SurvivorFrancisHealthHereNamVet
+Rule L4D1SurvivorHealthHereNamVet
 {
 	criteria ConceptAskForHealth IsNotCoughing IsNamVet IsTalk IsTalkNamVet YesHasFirstAidKit IsRocking IsWorldTalkNamVet
-	Response L4D1SurvivorFrancisHealthHereNamVet
+	Response L4D1SurvivorHealthHereNamVet
 }
 
 Response L4D1SurvivorSpottedFrancisCloseNamVet

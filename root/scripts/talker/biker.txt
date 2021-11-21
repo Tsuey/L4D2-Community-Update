@@ -2627,7 +2627,7 @@ Rule IntroCrashR06Biker
 
 Response IntroCrashR08Biker
 {
-	scene "scenes/Biker/DLC2Intro21.vcd"  //Whoah. Musta hit my head in the crash. I'm okay now. I hate helicopters.
+	scene "scenes/Biker/DLC2Intro21.vcd" then self IntroEnd foo:0 0.1 //Whoah. Musta hit my head in the crash. I'm okay now. I hate helicopters.
 }
 Rule IntroCrashR08Biker
 {
@@ -3148,6 +3148,19 @@ Rule L4D1ResponseSoftDispleasureSwearBiker
 //--------------------------------------------------------------------------------------------------------------
 // Item Spotted
 //--------------------------------------------------------------------------------------------------------------
+Response L4D1SurvivorAskForHealthThirdStrikeBiker
+{
+	scene "scenes/Biker/GoingToDieAskForHeal01.vcd" //Anyone have some first aid, I'm about to die.
+	scene "scenes/Biker/GoingToDieAskForHeal02.vcd" //Sure could use a medkit. Just sayin'.
+	scene "scenes/Biker/GoingToDieAskForHeal03.vcd" //Can anyone patch me up?
+	scene "scenes/Biker/GoingToDieAskForHeal04.vcd" //Ahh. Hey. Someone wanna patch me up?
+}
+Rule L4D1SurvivorAskForHealthThirdStrikeBiker
+{
+	criteria ConceptAskForHealth2 IsBiker IssuerClose IsNotSpeaking IsOnThirdStrike
+	Response L4D1SurvivorAskForHealthThirdStrikeBiker
+}
+
 Response L4D1SurvivorAskBillForHealthBiker
 {
 	scene "scenes/Biker/PlayerSuggestHealthSpecific05.vcd" odds 5 //Bill, could I borrow your med kit? I just wanna look at it.
@@ -3156,7 +3169,7 @@ Response L4D1SurvivorAskBillForHealthBiker
 }
 Rule L4D1SurvivorAskBillForHealthBiker
 {
-	criteria ConceptAskForHealth2 IsBiker SubjectIsNamVet IsSubjectNear400
+	criteria ConceptAskForHealth2 IsBiker FromIsNamVet IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskBillForHealthBiker
 }
 
@@ -3181,7 +3194,7 @@ Response L4D1SurvivorAskLouisForHealthBiker
 }
 Rule L4D1SurvivorAskLouisForHealthBiker
 {
-	criteria ConceptAskForHealth2  IsBiker SubjectIsManager IsSubjectNear400
+	criteria ConceptAskForHealth2  IsBiker FromIsManager IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskLouisForHealthBiker
 }
 
@@ -3192,7 +3205,7 @@ Response L4D1SurvivorAskZoeyForHealthBiker
 }
 Rule L4D1SurvivorAskZoeyForHealthBiker
 {
-	criteria ConceptAskForHealth2  IsBiker SubjectIsTeenGirl IsSubjectNear400
+	criteria ConceptAskForHealth2  IsBiker FromIsTeenGirl IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskZoeyForHealthBiker
 }
 

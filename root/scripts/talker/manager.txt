@@ -2368,6 +2368,19 @@ Rule L4D1ResponseSoftDispleasureSwearManager
 //--------------------------------------------------------------------------------------------------------------
 // Item Spotted
 //--------------------------------------------------------------------------------------------------------------
+Response L4D1SurvivorAskForHealthThirdStrikeManager
+{
+	scene "scenes/Manager/GoingToDieAskForHeal01.vcd" //Someone got a first aid kit?
+	scene "scenes/Manager/GoingToDieAskForHeal02.vcd" //Can anybody spare a kit?
+	scene "scenes/Manager/GoingToDieAskForHeal03.vcd" //I can use a first aid kit.
+	scene "scenes/Manager/GoingToDieAskForHeal04.vcd" //I can use some first aid.
+}
+Rule L4D1SurvivorAskForHealthThirdStrikeManager
+{
+	criteria ConceptAskForHealth2 IsManager IssuerClose IsNotSpeaking IsOnThirdStrike
+	Response L4D1SurvivorAskForHealthThirdStrikeManager
+}
+
 Response L4D1SurvivorAskBillForHealthManager
 {
 	scene "scenes/Manager/PlayerSuggestHealthSpecific06.vcd"  //Bill, Bill... first aid kit?
@@ -2375,7 +2388,7 @@ Response L4D1SurvivorAskBillForHealthManager
 }
 Rule L4D1SurvivorAskBillForHealthManager
 {
-	criteria ConceptAskForHealth2  IsManager SubjectIsNamVet IsSubjectNear400
+	criteria ConceptAskForHealth2  IsManager FromIsNamVet IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskBillForHealthManager
 }
 
@@ -2385,7 +2398,7 @@ Response L4D1SurvivorAskForHealthManager
 }
 Rule L4D1SurvivorAskForHealthManager
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto  IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthyHalf NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
+	criteria ConceptPlayerLookHere IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthyHalf NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthManager
@@ -2399,7 +2412,7 @@ Response L4D1SurvivorAskFrancisForHealthManager
 }
 Rule L4D1SurvivorAskFrancisForHealthManager
 {
-	criteria ConceptAskForHealth2  IsManager SubjectIsBiker IsSubjectNear400
+	criteria ConceptAskForHealth2  IsManager FromIsBiker IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskFrancisForHealthManager
 }
 
@@ -2410,7 +2423,7 @@ Response L4D1SurvivorAskZoeyForHealthManager
 }
 Rule L4D1SurvivorAskZoeyForHealthManager
 {
-	criteria ConceptAskForHealth2  IsManager SubjectIsTeenGirl IsSubjectNear400
+	criteria ConceptAskForHealth2  IsManager FromIsTeenGirl IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskZoeyForHealthManager
 }
 
