@@ -315,7 +315,7 @@ Response ItemDonorManagerNamVet
 }
 Rule ItemDonorManagerNamVet
 {
-	criteria ConceptPlayerPickup IsNamVet IsDonorBiker ChanceToFire30Percent IsPickedUpValidHealingItem
+	criteria ConceptPlayerPickup IsNamVet IsDonorManager ChanceToFire30Percent IsPickedUpValidHealingItem
 	ApplyContext "TalkNamVet:1:3"
 	applycontexttoworld
 	Response ItemDonorManagerNamVet

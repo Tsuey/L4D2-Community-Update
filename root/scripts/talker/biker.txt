@@ -301,7 +301,7 @@ Response ItemDonorManagerBiker
 }
 Rule ItemDonorManagerBiker
 {
-	criteria ConceptPlayerPickup IsBiker IsDonorBiker ChanceToFire30Percent IsPickedUpValidHealingItem
+	criteria ConceptPlayerPickup IsBiker IsDonorManager ChanceToFire30Percent IsPickedUpValidHealingItem
 	ApplyContext "TalkBiker:1:3"
 	applycontexttoworld
 	Response ItemDonorManagerBiker
