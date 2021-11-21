@@ -43,7 +43,7 @@ function DoRoundFixes()
 	make_clip( "_commentary_roofjump_hotel", "Survivors", 1, "-13 0 -451", "0 630 0", "1536 1416 640" );
 	make_clip( "_commentary_roofjump_elec", "Survivors", 1, "0 -22 -8", "8 33 536", "2488 1375 104" );
 	make_clip( "_commentary_roofjump_ledge", "Survivors", 1, "-240 -8 -208", "12 8 260", "2288 1424 224.35" );
-	make_clip( "_commentary_roofjump_ac_a", "Survivors", 1, "-30 -60 -200", "30 60 200", "2528 1085 440" );
+	make_clip( "_commentary_roofjump_ac_a", "Survivors", 1, "-30 -60 -200", "30 60 200", "2527 1085 440" );
 	make_clip( "_commentary_roofjump_ac_b", "Survivors", 1, "-29 -60 -408", "29 60 408", "2655 1667 680" );
 	make_clip( "_commentary_roofjump_ac_c", "Survivors", 1, "-60 -29 -2124", "60 29 2124", "2192 1760 2356" );
 	make_prop( "dynamic", "_commentary_l4d1_acunit", "models/props_rooftop/acunit01.mdl", "2526.61 1085.15 161.346", "0 180 0", "shadow_no", "solid_yes", "255 255 255", "1536", "2048" );
