@@ -253,7 +253,7 @@ function ShowUpdate( showGroup = "community" )
 				if ( communityUpdateEntity == 0 ) continue; // Found g_UpdateName at start of name, skip entity.
 				break;
 			default:
-				if ( strClassname == "env_player_blocker" ) break; // Entity is a commentary blocker, index it.
+				if ( strClassname == "env_player_blocker" ) break; // Entity is a player blocker, index it.
 				if ( communityUpdateEntity != 0 ) continue; // Did not find g_UpdateName at start of name, skip entity.
 				break;
 		}
@@ -406,13 +406,13 @@ function DebugRedraw()
 							vecAngles, vecBoxColor,
 							g_BoxOpacity, 99999999 );
 				
-				// Label env_player_blocker separately, we assume they are always from _commentary.txt
+				// Label env_player_blocker differently
 				
 				local clipType = "";
 				switch ( strClassname )
 				{
 					case "env_physics_blocker":	clipType =	"CLIP";  break;
-					case "env_player_blocker":	clipType =	"PCLIP"; break;
+					case "env_player_blocker":	clipType =	"PLAYER CLIP"; break;
 				}
 				
 				// Draw text to identify entity.
@@ -673,10 +673,8 @@ function DebugRedrawName( origin, name, entityType, index, extraText = "" )
 		switch ( entityType )
 		{
 			case "CLIP":
+			case "PLAYER CLIP":
 				entTypeText = "LUMP"; // Prefix for non-mapfixes entities.
-				break;
-			case "PCLIP":
-				entTypeText = "COMMENTARY"; // Prefix for commentary blocker entities (env_player_blocker).
 				break;
 			default:
 				break;
