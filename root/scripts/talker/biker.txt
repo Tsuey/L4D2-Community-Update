@@ -3223,7 +3223,7 @@ Response L4D1SurvivorHealthHereBiker
 }
 Rule L4D1SurvivorHealthHereBiker
 {
-	criteria ConceptAskForHealth IsNotCoughing IsBiker IsTalk IsTalkBiker YesHasFirstAidKit IsHealthyHalf IsWorldTalkBiker
+	criteria ConceptAskForHealth IsNotCoughing IsBiker IsTalk IsTalkBiker YesHasFirstAidKit IsRocking IsWorldTalkBiker
 	Response L4D1SurvivorHealthHereBiker
 }
 

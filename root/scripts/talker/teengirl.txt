@@ -2621,7 +2621,7 @@ Response L4D1SurvivorHealthHereTeenGirl
 }
 Rule L4D1SurvivorHealthHereTeenGirl
 {
-	criteria ConceptAskForHealth IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl YesHasFirstAidKit IsHealthyHalf IsWorldTalkTeenGirl
+	criteria ConceptAskForHealth IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl YesHasFirstAidKit IsRocking IsWorldTalkTeenGirl
 	Response L4D1SurvivorHealthHereTeenGirl
 }
 
