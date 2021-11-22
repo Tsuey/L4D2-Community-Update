@@ -2587,6 +2587,14 @@ Rule L4D1SurvivorAskForHealthTeenGirl
 	Response L4D1SurvivorAskForHealthTeenGirl
 }
 
+Rule L4D1SurvivorAskForHealthV2TeenGirl
+{
+	criteria ConceptPlayerLook IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkTeenGirl
+	ApplyContext "SaidAskForHealth:1:10"
+	applycontexttoworld
+	Response L4D1SurvivorAskForHealthTeenGirl
+}
+
 Response L4D1SurvivorAskFrancisForHealthTeenGirl
 {
 	scene "scenes/TeenGirl/PlayerSuggestHealthSpecific09.vcd"  //Francis, if you aren't gonna use that first aid kit, can I have it?

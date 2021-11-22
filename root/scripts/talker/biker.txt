@@ -3185,6 +3185,14 @@ Rule L4D1SurvivorAskForHealthBiker
 	Response L4D1SurvivorAskForHealthBiker
 }
 
+Rule L4D1SurvivorAskForHealthV2Biker
+{
+	criteria ConceptPlayerLook IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
+	ApplyContext "SaidAskForHealth:1:10"
+	applycontexttoworld
+	Response L4D1SurvivorAskForHealthBiker
+}
+
 Response L4D1SurvivorAskLouisForHealthBiker
 {
 	scene "scenes/Biker/PlayerSuggestHealthSpecific06.vcd"  //Louis, you got a med kit I could have?

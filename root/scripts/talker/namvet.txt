@@ -1887,7 +1887,15 @@ Response L4D1SurvivorAskForHealthNamVet
 }
 Rule L4D1SurvivorAskForHealthNamVet
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNotSmartLookAuto  IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthyHalf NotInCombat IsNotSaidAskForHealth IsWorldTalkNamVet
+	criteria ConceptPlayerLookHere IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNotSmartLookAuto  IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkNamVet
+	ApplyContext "SaidAskForHealth:1:10"
+	applycontexttoworld
+	Response L4D1SurvivorAskForHealthNamVet
+}
+
+Rule L4D1SurvivorAskForHealthV2NamVet
+{
+	criteria ConceptPlayerLook IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNotSmartLookAuto  IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkNamVet
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthNamVet

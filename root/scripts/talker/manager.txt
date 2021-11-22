@@ -2398,7 +2398,15 @@ Response L4D1SurvivorAskForHealthManager
 }
 Rule L4D1SurvivorAskForHealthManager
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthyHalf NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
+	criteria ConceptPlayerLookHere IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
+	ApplyContext "SaidAskForHealth:1:10"
+	applycontexttoworld
+	Response L4D1SurvivorAskForHealthManager
+}
+
+Rule L4D1SurvivorAskForHealthV2Manager
+{
+	criteria ConceptPlayerLook IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthManager
