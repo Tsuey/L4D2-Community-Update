@@ -3209,14 +3209,14 @@ Rule L4D1SurvivorAskZoeyForHealthBiker
 	Response L4D1SurvivorAskZoeyForHealthBiker
 }
 
-Response L4D1SurvivorFrancisHealthHereBiker
+Response L4D1SurvivorHealthHereBiker
 {
 	print " "  then From AskForHealth2 foo:0 0 //
 }
-Rule L4D1SurvivorFrancisHealthHereBiker
+Rule L4D1SurvivorHealthHereBiker
 {
 	criteria ConceptAskForHealth IsNotCoughing IsBiker IsTalk IsTalkBiker YesHasFirstAidKit IsHealthyHalf IsWorldTalkBiker
-	Response L4D1SurvivorFrancisHealthHereBiker
+	Response L4D1SurvivorHealthHereBiker
 }
 
 Response L4D1SurvivorSpottedBillCloseBiker
