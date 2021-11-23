@@ -2581,7 +2581,7 @@ Response L4D1SurvivorAskForHealthTeenGirl
 }
 Rule L4D1SurvivorAskForHealthTeenGirl
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkTeenGirl
+	criteria ConceptPlayerLookHere IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto HasASubject IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkTeenGirl
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthTeenGirl
@@ -2589,7 +2589,7 @@ Rule L4D1SurvivorAskForHealthTeenGirl
 
 Rule L4D1SurvivorAskForHealthV2TeenGirl
 {
-	criteria ConceptPlayerLook IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkTeenGirl
+	criteria ConceptPlayerLook IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto HasASubject IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkTeenGirl
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthTeenGirl

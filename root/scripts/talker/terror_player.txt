@@ -372,6 +372,7 @@ Criterion "ConceptAynRandResponse" "concept" "AynRandResponse" required
 criterion "IsSmartLookAuto"	"smartlooktype"	"auto"	required
 criterion "IsNotSmartLookAuto"	"smartlooktype"	"!=auto"	required
 criterion "IsSubjectNone"	"subject"	"None"	required
+criterion "HasASubject"	"subject"	"!=None"	required
 
 criterion "IsInCheckpoint"	"InCheckpoint"	"1"	required
 criterion "IsNotInCheckpoint"	"InCheckpoint"	"!=1"	required
