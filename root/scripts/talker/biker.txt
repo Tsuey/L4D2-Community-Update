@@ -3179,7 +3179,7 @@ Response L4D1SurvivorAskForHealthBiker
 }
 Rule L4D1SurvivorAskForHealthBiker
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto HasASubject IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
+	criteria ConceptPlayerLookHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto HasASubject IsSubjectDistNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthBiker
@@ -3187,7 +3187,7 @@ Rule L4D1SurvivorAskForHealthBiker
 
 Rule L4D1SurvivorAskForHealthV2Biker
 {
-	criteria ConceptPlayerLook IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto HasASubject IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
+	criteria ConceptPlayerLook IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto HasASubject IsSubjectDistNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthBiker
