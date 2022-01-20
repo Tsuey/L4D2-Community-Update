@@ -28,6 +28,14 @@ function DoRoundFixes()
 	make_prop( "dynamic", "_permstuck_cratebot", "models/props_crates/static_crate_40.mdl", "-3749.85 -183.67 -3.164", "0 0 0" );
 	make_prop( "dynamic", "_permstuck_cratetop", "models/props_crates/static_crate_40.mdl", "-3749.85 -182.67 36.837", "0 -30 0" );
 
+	make_trigmove( "_antistuck_crouch1", "Duck", "-186.0 -70.0 -30.0", "186.0 70.0 30.0", "-4333.0 -2855.0 16.9" );
+	make_trigmove( "_antistuck_crouch2", "Duck", "-65 -30 -30", "65 30 30", "-4875 -2730 18.5" );
+	make_trigmove( "_antistuck_crouch3", "Duck", "-26 -69 -30", "26 69 30", "-3691 -3155 16.5" );
+	make_trigmove( "_antistuck_crouch4", "Duck", "-12.5 -2 -30", "12.5 2 30", "-5233.5 -3123 21.8" );
+	make_trigmove( "_antistuck_crouch5", "Duck", "-29.5 -7.5 -30.0", "29.5 7.5 30.0", "-2652.5 -1078.5 13.0" );
+	make_trigmove( "_antistuck_crouch6", "Duck", "-53.0 -47.0 -30.0", "53.0 47.0 30.0", "-2746.0 -1271.0 21.0" );
+	make_trigmove( "_antistuck_crouch7", "Duck", "-56.5 -50.0 -30.0", "56.5 50.0 30.0", "-2591.5 -723.0 21.9" );
+
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
