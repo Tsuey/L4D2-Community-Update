@@ -7050,7 +7050,7 @@ Response PlayerRemarkc2m2_candymachineCoach
 }
 Rule PlayerRemarkc2m2_candymachineCoach
 {
-	criteria ConceptRemark IsCoach Isc2m2_candymachine IsNotSaidc2m2_candymachine IsNotCoughing NotInCombat IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear150 AutoIsNotScavenge AutoIsNotSurvival _auto_NotCoachFoodBreak _auto_NotAlarm IsNotSpeakingWeight0
+	criteria ConceptRemark IsCoach Isc2m2_candymachine IsNotSaidc2m2_candymachine IsNotCoughing NotInCombat IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear150 AutoIsNotScavenge AutoIsNotSurvival _auto_NotCoachFoodBreak _auto_NotAlarmV2 IsNotSpeakingWeight0
 	ApplyContext "Saidc2m2_candymachine:1:0,Talk:1:3.824,_auto_CoachFoodBreak:1:15"
 	applycontexttoworld
 	Response PlayerRemarkc2m2_candymachineCoach
