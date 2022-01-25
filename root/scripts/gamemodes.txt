@@ -506,7 +506,6 @@
 		"achievementindex"	"5"
 		"x360ctx"	"33"
 		"dlcmask"	"0x0000000000000002"
-		"hasdifficulty"		"1"
 		"builtin"	"1"
 		"Author"	"SR69MMJC and Karma Jockey"
 		"Image"		"vgui/blog/flu_season"
@@ -619,8 +618,6 @@
 		"builtin"	"1"
 		"Author"	"Rayman1103"
 		"Image"		"vgui/blog/deaths_door"
-		
-		"hasdifficulty"		"1"
 	}
 
 	"community6"
