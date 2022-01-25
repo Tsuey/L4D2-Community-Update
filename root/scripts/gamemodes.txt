@@ -106,7 +106,7 @@
 			// get set on 360 and dedicated for 360
 			"360_z_mega_mob_size" 25
 			"360_z_mob_spawn_max_size" 18
-			"360_z_versus_wandering_density" 0.026
+			"360_versus_wandering_zombie_density" 0.026
 		}
 	}
 
@@ -152,7 +152,7 @@
 			// get set on 360 and dedicated for 360
 			"360_z_mega_mob_size" 25
 			"360_z_mob_spawn_max_size" 18
-			"360_z_versus_wandering_density" 0.026
+			"360_versus_wandering_zombie_density" 0.026
 		}
 	}
 
@@ -199,11 +199,6 @@
 		"builtin"	"1"
 		"Author"	"Valve"
 		"Image"		"vgui/blog/bleed_out"
-
-		convar
-		{
-			pain_pills_decay_rate 0.27
-		}
 	}
 
 	"mutation4"
@@ -258,7 +253,7 @@
 
 	"mutation8"
 	{
-		"base"		"coop"
+		"base"		"realism"
 		"maxplayers"    "4"
 		"achievementindex"	"7"
 		"x360ctx"	"14"
@@ -270,13 +265,6 @@
 		convar
 		{
 			sv_permawipe 1
-			sv_disable_glow_survivors 1
-			sv_disable_glow_faritems 1
-			sv_rescue_disabled 1
-			z_non_head_damage_factor_multiplier 0.5
-			z_head_damage_causes_wounds 1
-			z_use_next_difficulty_damage_factor 1
-			z_witch_always_kills 1
 		}
 	}
 
@@ -320,12 +308,6 @@
 		"builtin"	"1"
 		"Author"	"Valve"
 		"Image"		"vgui/blog/healthpackalypse"
-
-		convar
-		{
-			"director_special_initial_spawn_delay_min" 2
-			"director_special_initial_spawn_delay_max" 10
-		}
 	}
 
 	"mutation12"
@@ -348,8 +330,6 @@
 			z_head_damage_causes_wounds 1
 			z_use_next_difficulty_damage_factor 1
 			z_witch_always_kills 1
-			"director_special_initial_spawn_delay_min" 2
-			"director_special_initial_spawn_delay_max" 10
 		}
 
 	}
@@ -365,12 +345,6 @@
 		"builtin"	"1"
 		"Author"	"Valve"
 		"Image"		"vgui/blog/follow_the_liter"
-
-		convar
-		{
-			"director_special_initial_spawn_delay_min" 2
-			"director_special_initial_spawn_delay_max" 10
-		}
 	}
 
 	"mutation14"
@@ -471,11 +445,6 @@
 		"Image"		"vgui/blog/bleed_out_versus"
 
 		"playercontrolledzombies"	"1"
-
-		convar
-		{
-			pain_pills_decay_rate 0.27
-		}
 	}
 
 	"mutation19"
@@ -652,10 +621,6 @@
 		"Image"		"vgui/blog/deaths_door"
 		
 		"hasdifficulty"		"1"
-		convar
-		{
-			"survivor_max_incapacitated_count" 0
-		}
 	}
 
 	"community6"
@@ -686,14 +651,9 @@
 			"sv_force_time_of_day" 0
 			"z_ghost_delay_min" 20
 			"z_ghost_delay_max" 20
-			"director_vs_convert_pills" 0
-			"director_convert_pills" 0
-			"director_convert_pills_critical_health" 0
-			"director_convert_pills_to_defib_health" 0
 			"versus_tank_chance" 1
 			"versus_tank_chance_finale" 1
 			"versus_tank_chance_intro" 1
-			"versus_tank_flow_team_variation" 0
 			"versus_witch_chance" 0.75
 			"versus_witch_chance_finale" 0
 			"versus_witch_chance_intro" 0
