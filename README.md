@@ -20,7 +20,6 @@ Folder | Purpose
 ------ | -------
 changelogs | Cumulative for each stretch of time before all hotfixes go live.<br><br>Includes dedicated credits list. This will be maintained but if you've long been missing, please open a PR.
 root | Hotfix files for test VPK's that ultimately target going in-game officially.<br><br>Please keep all source files and everything else out. Upload original un-changed files before modified files.
-sources | Valve requires QC and other source files for every model we recompile.<br><br>This includes textures but not materials.
 tools | Some of the lighter-weight custom tools that our team uses, for community reference.<br><br>See its README for operational details.
 
 # Contributors
