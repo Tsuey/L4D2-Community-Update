@@ -1482,56 +1482,24 @@ function make_atomizer( user_strTargetname,
 			user_strModel,
 			user_intKillTimer )
 {
-	SpawnEntityFromTable( "filter_activator_model",
-	{
-		targetname	= g_UpdateName + user_strTargetname + "_filter",
-		Negated		= "Allow entities that match criteria",
-		model		= user_strModel
-	} );
-
-	SpawnEntityFromTable( "logic_timer",
-	{
-		targetname	= g_UpdateName + user_strTargetname + "_timer",
-		StartDisabled	= 1,
-		RefireTime	= user_intKillTimer,
-		connections =
-		{
-			OnTimer =
-			{
-				cmd1 = g_UpdateName + "_atomizer_monitoredStartGlowing0-1"
-				cmd2 = g_UpdateName + "_atomizer_monitoredKill5-1"
-				cmd3 = "!selfDisable0-1"
-				cmd4 = "!selfResetTimer0-1"
-			}
-		}
-	} );
-
-	local trigger = SpawnEntityFromTable( "trigger_multiple",
+	local hndlTrigger = SpawnEntityFromTable( "trigger_multiple",
 	{
 		targetname	= g_UpdateName + user_strTargetname + "_trigmult",
 		origin		= StringToVector_Valve( user_strOrigin, " " ),
-		spawnflags	= 8,
-		filtername	= g_UpdateName + user_strTargetname + "_filter",
-		connections =
-		{
-			OnStartTouch =
-			{
-				cmd1 = g_UpdateName + user_strTargetname + "_timer" + "Enable0-1"
-				cmd2 = "!activatorAddOutputtargetname " + g_UpdateName + "_atomizer_monitored0-1"
-				cmd3 = "!selfAddOutputspawnflags 00-1"
-			}
-			OnEndTouch =
-			{
-				cmd1 = g_UpdateName + user_strTargetname + "_timer" + "Disable0-1"
-				cmd2 = g_UpdateName + user_strTargetname + "_timer" + "ResetTimer0-1"
-				cmd3 = "!selfAddOutputspawnflags 80-1"
-			}
-		}
+		spawnflags	= 8, // SF_TRIGGER_ALLOW_PHYSICS
+		vscripts	= "community/utility/atomizer_logic"
 	} );
 
-	DoEntFire( "!self", "AddOutput", "mins -50 -50 0", 0, null, trigger );
-	DoEntFire( "!self", "AddOutput", "maxs 50 50 100", 0, null, trigger );
-	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, trigger );
+	DoEntFire( "!self", "AddOutput", "mins -50 -50 0", 0, null, hndlTrigger );
+	DoEntFire( "!self", "AddOutput", "maxs 50 50 100", 0, null, hndlTrigger );
+	DoEntFire( "!self", "AddOutput", "solid 2", 0, null, hndlTrigger );
+
+	hndlTrigger.ValidateScriptScope();
+	local hndlScope = hndlTrigger.GetScriptScope();
+	if ( hndlScope != null && "InitAtomizer" in hndlScope )
+	{
+		hndlScope.InitAtomizer( user_strModel, user_intKillTimer );
+	}
 
 	if ( developer() > 0 )
 	{
