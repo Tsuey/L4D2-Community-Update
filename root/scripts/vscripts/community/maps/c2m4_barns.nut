@@ -38,6 +38,11 @@ function DoRoundFixes()
 	make_clip( "_booster_awning", "Survivors", 1, "-17 -16 -34", "274 13 134", "-3119 528 5" );
 	make_clip( "_booster_elecroof", "Survivors", 1, "-170 -28 0", "182 21 967", "426 2316 57" );
 	make_clip( "_ladder_askewhedgeshared_base", "Everyone", 1, "-2 -336 0", "4 195 128", "609 1233 -192" );
+	make_clip( "_commentary_permstuck_dumpsters_a", "Survivors", 1, "-8 -8 -8", "190 64 1208", "2936 584 -184" );
+	make_clip( "_commentary_permstuck_dumpsters_b", "Survivors", 1, "-325 -163 -608", "325 163 608", "3451 739 416" );
+	make_clip( "_commentary_boostertree_a", "Survivors", 1, "-117 -122 -80", "184 200 930", "-704 864 88.25" );
+	make_clip( "_commentary_boostertree_b", "Survivors", 1, "-117 -122 -80", "230 122 930", "128 832 88.25" );
+	make_clip( "_commentary_boostertree_c", "Survivors", 1, "-119 -122 -80", "50 186 910", "-1648 784 104.25" );
 	patch_spawninfront( "-596 2312 -256", "-76 -8 0", "76 8 160" );
 	patch_spawninfront( "-508 2503 -256", "-8 -51 0", "8 51 160" );
 
@@ -60,6 +65,9 @@ function DoRoundFixes()
 
 		make_clip( "_commonhop_generator1", "Survivors", 1, "-35 -16 0", "35 16 50", "-1716 273 -81", "0 0 20" );
 		make_clip( "_commonhop_generator2", "Everyone", 1, "8 0 0", "58 8 164", "-1660 275 -192", "0 -19 0" );
+
+		make_clip( "_commentary_shortcut_generator_a", "Survivors", 1, "-5 -5 -98", "5 5 98", "-1721 373 -94" );
+		make_clip( "_commentary_shortcut_generator_b", "Survivors", 1, "-28 -20 -504", "28 20 504", "-1718.5 376 520" );
 
 	}
 	if ( g_BaseMode == "survival" )

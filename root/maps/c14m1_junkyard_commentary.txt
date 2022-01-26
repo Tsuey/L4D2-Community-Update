@@ -1,0 +1,51 @@
+"Entities"
+{
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m1_humvee"
+		"origin" "-3883.494629 -7005.644531 -255.968750"
+		"angles" "18.381109 42.518211 0.000000"
+		"contextsubject" "c14m1_humvee"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m1_cabin_upstairs"
+		"origin" "-1296.826904 -5014.296387 -303.968750"
+		"angles" "8.030136 65.319977 0.000000"
+		"contextsubject" "c14m1_cabin_upstairs"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m1_junkyard_entrance"
+		"origin" "-4111.405273 -1835.435791 -37.450611"
+		"angles" "18.035061 177.178772 0.000000"
+		"contextsubject" "c14m1_junkyard_entrance"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m1_traincar"
+		"origin" "-2368.393311 451.742615 -14.431274"
+		"angles" "8.960835 75.803185 0.000000"
+		"contextsubject" "c14m1_traincar"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m1_pre_panic"
+		"origin" "-3827.119873 1412.879517 -55.560307"
+		"angles" "18.148430 -178.274643 0.000000"
+		"contextsubject" "c14m1_pre_panic"
+	}
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "c14m1_down_cliff"
+		"origin" "-4655.728516 5957.396484 -5.079210"
+		"angles" "7.564830 7.517312 0.000000"
+		"contextsubject" "c14m1_down_cliff"
+	}
+}

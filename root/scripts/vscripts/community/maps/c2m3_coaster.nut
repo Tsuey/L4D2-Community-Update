@@ -47,6 +47,12 @@ function DoRoundFixes()
 	make_clip( "_recompilepls_pillar6", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2280 0" );
 	make_clip( "_cliprework_permstuck", "Survivors", 1, "-93 -81 -55", "108 47 88", "-3266 3057 413" );
 	make_clip( "_stuckwarp_swanstairs", "Everyone", 1, "-52 0 0", "143 3 37", "298 4192 43", "-34.5 0 0" );
+	make_clip( "_commentary_permstuck_swanshelf", "Everyone", 1, "-19 -30 -11", "19 30 11", "224 4491 18" );
+	make_clip( "_commentary_truckclimb_a", "Survivors", 1, "-8 -100 -8", "84 8 953", "-1364 2040 7" );
+	make_clip( "_commentary_truckclimb_b", "Survivors", 1, "0 -113 -8", "224 8 800", "-1596 2040 159" );
+	make_clip( "_commentary_electricalbox_a", "Survivors", 1, "-4 -56 -8", "8 8 196", "-2056 2624 8" );
+	make_clip( "_commentary_electricalbox_b", "Survivors", 1, "-4 -56 -16", "8 8 196", "-776 1724 16" );
+	make_clip( "_commentary_electricalbox_c", "Survivors", 1, "-56 -8 -34", "8 4 196", "-1124 1032 36" );
 	make_brush( "_permstuck_swanroom_dead", "-54 -20 0", "58 29 108", "510 4084 -7" );
 	make_trigduck( "_duckqol_swanhole", "-5 -32 -32", "5 32 32", "1348 4096 32" );
 
@@ -59,6 +65,13 @@ function DoRoundFixes()
 	//EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 	//EntFire( "relay_panicevent", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" || g_BaseMode == "versus" )
+	{
+
+		make_clip( "_commentary_fencewalk_a", "Survivors", 1, "-4 0 0", "8 256 512", "-2868 1844 122.859" );
+		make_clip( "_commentary_fencewalk_b", "Survivors", 1, "-4 0 0", "8 256 512", "-2700 1964 122.859" );
+
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -71,7 +84,7 @@ function DoRoundFixes()
 		make_clip(	"_cliprework_scaffnuke_skipa",	"Survivors",	1,	"-120 -111 -48",	"150 88 310",		"-3044 3000 177" );
 		make_clip(	"_cliprework_scaffnuke_skipb",	"Survivors",	1,	"-90 -211 -48",		"82 0 310",		"-2788 2760 177" );
 		make_clip(	"_cliprework_scaffnuke_skipc",	"Survivors",	1,	"-120 -111 -48",	"20 -73 1545",		"-3044 3000 177" );
-		make_clip(	"_cliprework_scaffnuke_skipd",	"Survivors",	1,	"-90 -211 -48",		"-61 0 1545",		"-2788 2760 177" );
+		make_clip(	"_cliprework_scaffnuke_skipd",	"Survivors",	1,	"-90 -305 -48",		"-61 0 1545",		"-2788 2760 177" );
 		make_clip(	"_cliprework_roofa",		"Survivors",	1,	"-108 -224 -320",	"108 224 1100",		"-3596 1560 640" );
 		make_clip(	"_cliprework_roofb",		"Survivors",	1,	"-295 -444 -280",	"295 444 1100",		"-3970 1558 640" );
 		make_clip(	"_cliprework_sign",		"Survivors",	1,	"-307 -70 0",		"307 70 1320",		"-3902 2321 431" );
@@ -82,6 +95,10 @@ function DoRoundFixes()
 		make_clip( "_shortcut_finally_done", "Survivors", 1, "-8 -146 0", "0 146 255", "-2894 2609 253", "9 0 0" );
 		make_clip( "_booster_eventskip1", "Survivors", 1, "-253 -16 -459", "332 23 32", "-3106 3081 960" );
 		make_clip( "_booster_eventskip2", "Survivors", 1, "-253 -72 -459", "-246 23 32", "-3106 3081 960" );
+		make_clip( "_commentary_downramp_railing", "Survivors", 1, "0 0 -64", "8 188 1280", "-3350.76 2608.73 444" );
+		make_clip( "_commentary_pretunnel_supports", "Survivors", 1, "0 0 0", "8 350 1600", "-3540.08 2368 128" );
+		make_clip( "_commentary_shortcut_bush_a", "Survivors", 1, "-16 -64 -772", "16 64 772", "-4097 2048 956" );
+		make_clip( "_commentary_shortcut_bush_b", "Survivors", 1, "-16 -78 -772", "16 78 772", "-4133 2174 956", "0 31 0" );
 
 	}
 

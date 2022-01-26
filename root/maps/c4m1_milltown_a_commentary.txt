@@ -1,0 +1,67 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_InBurgerTank"
+		"origin" "-5879.490723 7347.567383 140.265152"
+		"angles" "0 -176.5146484375 0"
+		"contextsubject" "c4m1_InBurgerTank"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_roadclosed"
+		"origin" "-5165.33984375 6693.91015625 152.1900024414"
+		"angles" "0 -86.9437637329 0"
+		"contextsubject" "c4m1_roadclosed"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_carcrash"
+		"origin" "-2570.9799804688 7885.3598632813 153.6000061035"
+		"angles" "0 -19.2139587402 0"
+		"contextsubject" "c4m1_carcrash"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_playground"
+		"origin" "-1901.3599853516 6795.9501953125 183.8399963379"
+		"angles" "0 -17.4978656769 0"
+		"contextsubject" "c4m1_playground"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_garagesale"
+		"origin" "1658.0600585938 2807.7900390625 150.0800018311"
+		"angles" "0 -38.2215881348 0"
+		"contextsubject" "c4m1_garagesale"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_nogas"
+		"origin" "-4838.080078125 7499.0200195313 149.1300048828"
+		"angles" "0 7.6612625122 0"
+		"contextsubject" "c4m1_nogas"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_boat"
+		"origin" "910.9299926758 5844.7998046875 152.5200042725"
+		"angles" "0 -27.2309169769 0"
+		"contextsubject" "c4m1_boat"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m1_boat"
+		"origin" "3786.7900390625 -576.6300048828 144.4600067139"
+		"angles" "0 -6.9686946869 0"
+		"contextsubject" "c4m1_boat"
+	}
+}

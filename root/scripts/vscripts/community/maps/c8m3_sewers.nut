@@ -27,6 +27,8 @@ function DoRoundFixes()
 	make_clip( "_clipextend_alley", "Survivors", 1, "-54 -29 0", "236 29 782", "12774 8347 432" );
 	make_clip( "_clipextend_warehouse1", "Survivors", 1, "-270 -753 -43", "290 799 372", "10742 7529 843" );
 	make_clip( "_clipextend_warehouse2", "Survivors", 1, "-787 -413 0", "909 403 372", "11795 7941 800" );
+	make_clip( "_commentary_washerwindow", "Survivors", 1, "-4 -161 -301", "4 33 301", "12704 7036 499" );
+	make_clip( "_commentary_clipgap_gasfence", "Survivors", 1, "-36 -76 -444", "36 76 444", "12964 5828 764" );
 	make_trigduck( "_duckqol_warehousevent", "-9 -26 -28", "9 26 28", "12712 8148 304" );
 
 	make_clip(	"_gasstationroof_TMP",		"Survivors",	1,	"0 -794 0",		"503 0 700",		"12186 6694 324" );

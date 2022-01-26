@@ -18,6 +18,14 @@ function DoRoundFixes()
 	make_clip(	"_booster_skylights",		"Survivors",	1,	"-256 -88 0",		"256 88 8",		"12550 12112 448" );
 	make_clip(	"_nav_elevatorbutton",		"Survivors",	1,	"-4 -1 0",		"4 4 86",		"13491 15103 493" );
 	make_clip( "_counterweight_edging", "Survivors", 1, "-25 -54 -666", "17 56 666", "13144 15243 5526" );
+	make_clip( "_commentary_vent_oob_a", "Survivors", 1, "-4 -32 -40", "4 32 40", "12924 15104 664" );
+	make_clip( "_commentary_vent_oob_b", "Survivors", 1, "-8 -56 -8", "56 8 8", "13608 14932 562.54" );
+	make_clip( "_commentary_vent_oob_c", "Survivors", 1, "-8 -56 -8", "56 8 8", "13416 14952 570.788" );
+	make_clip( "_commentary_vent_oob_d", "Survivors", 1, "-8 -56 -8", "56 8 8", "13288 14856 568" );
+	make_clip( "_commentary_vent_oob_e", "Survivors", 1, "-8 -56 -8", "56 8 8", "13224 14344 565.252" );
+	make_clip( "_commentary_vent_oob_f", "Survivors", 1, "-8 -56 -8", "56 8 8", "13032 14440 566.645" );
+	make_clip( "_commentary_vent_oob_g", "Survivors", 1, "-8 -88 -8", "88 8 8", "13672 14472 566.523" );
+	make_clip( "_commentary_vent_oob_h", "Survivors", 1, "-8 -88 -8", "88 8 8", "13608 14280 565.083" );
 
 	con_comment( "FIX:\tLower and upper elevator doors will no longer break if SI spawn inside them." );
 

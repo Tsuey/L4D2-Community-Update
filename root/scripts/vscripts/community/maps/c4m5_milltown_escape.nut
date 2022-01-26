@@ -29,6 +29,19 @@ function DoRoundFixes()
 	make_clip( "_burgertank_windowsmoother2", "Everyone", 1, "-90 -5 0", "90 6 4", "-5798 7505 135" );
 	make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "-6022 7777 135" );
 	make_clip( "_dockm5only_smoother", "Everyone", 1, "0 -376 0", "8 820 32", "-7039 7701 91", "-45 0 0" );
+	make_clip( "_commentary_clipgap_water", "Everyone", 1, "-500 -528 -80", "400 200 3000", "-7580.84 6948.33 -303" );
+	make_clip( "_commentary_smoother_burgersuv_a", "All and Physics", 1, "0 -5 0", "70 10 10", "-6577 7549 169.753", "0 30 0" );
+	make_clip( "_commentary_smoother_burgersuv_b", "All and Physics", 1, "0 -10 0", "70 8 10", "-6582 7554 161.753", "0 30 0" );
+	make_clip( "_commentary_smoother_burgersuv_c", "All and Physics", 1, "0 -10 0", "70 5 10", "-6586 7562 153.753", "0 30 0" );
+	make_clip( "_commentary_booster_burgertree_a1", "Survivors", 1, "-148 -99 -608", "148 99 608", "-6255 6674 928");
+	make_clip( "_commentary_booster_burgertree_a2", "Survivors", 1, "-37 -93 -552", "37 93 552", "-6257 6827 984");
+	make_clip( "_commentary_booster_burgertree_b1", "Survivors", 1, "-100 -81 -604", "100 81 604", "-4726 6761 932");
+	make_clip( "_commentary_booster_burgertree_b2", "Survivors", 1, "-46 -112 -584", "46 112 584", "-4783 6887 952");
+	make_clip( "_commentary_booster_burgertree_c1", "Survivors", 1, "-142 -123 -608", "142 123 608", "-7004 8145 928");
+	make_clip( "_commentary_booster_burgertree_c2", "Survivors", 1, "-58 -61 -616", "58 61 616", "-6824 8307 920");
+	make_clip( "_commentary_booster_burgertree_d", "Survivors", 1, "-148 -145 -612", "148 145 612", "-4701 8538 924");
+	make_clip( "_commentary_booster_burgertree_e", "Survivors", 1, "-178 -136 -608", "178 136 608", "-5397 7956 928");
+	make_clip( "_commentary_booster_burgertree_f", "Survivors", 1, "-178 -134 -628", "178 134 628", "-6806 7205 908");
 
 	// Non-1st rounds require a delay because this trigger_finale exists after "round_start".
 

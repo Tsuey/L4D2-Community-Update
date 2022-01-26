@@ -1,0 +1,11 @@
+"Entities"
+{	
+	entity
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M3DownHere"
+		"origin" "3132 -4134 326"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M3DownHere"
+	}
+}

@@ -31,6 +31,7 @@ function DoRoundFixes()
 	make_clip( "_cliprework_unattackable", "Survivors", 1, "-28 -245 0", "28 235 704", "-3828 2709 448" );
 	make_clip( "_void_cliprework", "Survivors", 1, "-288 -223 0", "288 401 697", "-224 -1425 456" );
 	make_clip( "_void_filler", "SI Players", 1, "-64 17 -90", "65 301 -3", "-224 -1425 677" );
+	make_clip( "_commentary_poolwindow", "Everyone", 1, "-4 -2 -80", "70 4 224", "-1249 2460 152" );
 
 	con_comment( "FIX:\tTotal of 13 out of 13 traffic cones need to be made non-solid -- finally we can!" );
 
@@ -46,6 +47,8 @@ function DoRoundFixes()
 		make_clip(	"_commonhop_rollupdoor",	"Survivors",	1,	"-13 -65 -376",		"13 65 528",		"-1652 1745 573" );
 		make_clip(	"_commonhop_fountain",		"Survivors",	1,	"-71 -222 0",		"71 700 777",		"-2881 3746 399" );
 		make_clip( "_clipgap_leftfence", "Survivors", 1, "-32 -4 0", "32 4 208", "-2976 3452 184" );
+		make_clip( "_commentary_clipgap_rightfence", "Survivors", 1, "-32 -4 -104", "32 4 104", "-3424 3452 288" );
+		make_clip( "_commentary_sneakyhunter_endsaferoom", "SI Players", 1, "-8 -8 -8", "66 0 210", "1357 -3528 230" );
 
 		// Piggyback on Survivor-filtered trigger that queries Director for car alarm.
 

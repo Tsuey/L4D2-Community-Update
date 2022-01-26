@@ -1,0 +1,59 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital04_path01"
+		"origin" "12341.51953125 12973.080078125 56.9599990845"
+		"angles" "0 -10.9620513916 0"
+		"contextsubject" "hospital04_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital04_path02"
+		"origin" "12330.1298828125 13277.6904296875 396.1199951172"
+		"angles" "0 88.7942657471 0"
+		"contextsubject" "hospital04_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital04_path03"
+		"origin" "12466.599609375 13764.580078125 476.1600036621"
+		"angles" "0 12.9304656982 0"
+		"contextsubject" "hospital04_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital04_path04"
+		"origin" "13431.349609375 15266.080078125 480.2699890137"
+		"angles" "0 -94.4211654663 0"
+		"contextsubject" "hospital04_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital04_path05"
+		"origin" "13427.48046875 15095.599609375 5590.08984375"
+		"angles" "0 86.3889923096 0"
+		"contextsubject" "hospital04_path05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital04_path06"
+		"origin" "14095.7900390625 14789.73046875 5495.3198242188"
+		"angles" "0 -171.7070007324 0"
+		"contextsubject" "hospital04_path06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital04_path07"
+		"origin" "12343.4296875 14794.8203125 5588.4301757813"
+		"angles" "0 -92.4404373169 0"
+		"contextsubject" "hospital04_path07"
+	}
+}

@@ -1,0 +1,27 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital01_path01"
+		"origin" "1503.8599853516 2675.25 75.7799987793"
+		"angles" "0 78.8679275513 0"
+		"contextsubject" "hospital01_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital01_path02"
+		"origin" "1759.8499755859 3306.0400390625 47.0699996948"
+		"angles" "0 29.1699962616 0"
+		"contextsubject" "hospital01_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "hospital01_path03"
+		"origin" "2852.4899902344 4193.1000976563 52.4700012207"
+		"angles" "0 -0.2659577727 0"
+		"contextsubject" "hospital01_path03"
+	}
+}

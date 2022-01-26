@@ -47,6 +47,8 @@ function DoRoundFixes()
 	make_clip( "_booster_windows", "Survivors", 1, "-8 -400 0", "8 400 96", "-1032 568 352" );
 	make_clip( "_window_smoother_c6only", "SI Players", 1, "-9 -400 0", "3 400 8", "-1023 568 352", "30 0 0" );
 	make_clip( "_booster_coolingtanks", "Survivors", 1, "-117 -56 -120", "117 56 80", "-1473 958 402" );
+	make_clip( "_commentary_clipgap_turbinewindows", "Survivors", 1, "-128 -8 -44", "128 8 44", "-1280 -1020 238" );
+	make_clip( "_commentary_warehousegenerator", "Survivors", 1, "-30 -15 -8", "30 15 135", "-1158 884 345" );
 
 	con_comment( "FIX:\tTotal of 2 out of 2 traffic cones need to be made non-solid -- c7m3 already OK." );
 

@@ -1,0 +1,27 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M3_ByBridge"
+		"origin" "-3.75 -1204.8900146484 42.2700004578"
+		"angles" "0 -90.9116821289 0"
+		"contextsubject" "WorldC6M3_ByBridge"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M3_BridgeRun"
+		"origin" "5.9099998474 -2222.6101074219 45.0699996948"
+		"angles" "0 -94.445350647 0"
+		"contextsubject" "WorldC6M3_BridgeRun"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "WorldC6M3_Bill"
+		"origin" "-368.841217 -946.784973 0.031250"
+		"angles" "0 -94.445350647 0"
+		"contextsubject" "WorldC6M3_Bill"
+	}
+}

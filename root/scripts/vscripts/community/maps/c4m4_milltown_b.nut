@@ -12,6 +12,9 @@ function DoRoundFixes()
 	make_clip(	"_permstuck_shruba",		"SI Players",	1,	"-60 -32 -36",		"60 72 60",		"3668 -1664 132" );
 	make_clip(	"_permstuck_shrubb",		"SI Players",	1,	"-64 -64 -48",		"64 64 48",		"3408 -1760 144" );
 	make_clip(	"_commonhop_safehouse",		"Survivors",	1,	"-280 -456 0",		"280 456 1100",		"3984 -1863 464" );
+	make_clip( "_commentary_edgeshrubs_a", "Survivors", 1, "-50 -52 -80", "50 1200 3000", "-957.801 3798.52 351.499" );
+	make_clip( "_commentary_edgeshrubs_b", "Survivors", 1, "-50 -52 -80", "50 300 2000", "-2852.78 5296.57 290.201" );
+	make_clip( "_commentary_edgeshrubs_c", "Survivors", 1, "-50 -52 -80", "50 1000 2000", "-2948.78 5232.57 290.201" );
 	make_trigduck( "_duckqol_greenposts1", "-60 -97 0", "60 97 142", "-2021 5568 98" );
 	make_trigduck( "_duckqol_greenposts2", "-60 -97 0", "60 97 142", "1069 6976 224" );
 	make_trigduck( "_duckqol_playground", "-156 -1 0", "156 1 77", "-1442 6968 119" );

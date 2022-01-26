@@ -1,0 +1,480 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4TractorNag"
+		"origin" "-1477.841797 201.164291 155.641052"
+		"angles" "13.666258 69.513710 0.000000"
+		"contextsubject" "C5M4TractorNag"
+	}
+	"entity"
+	{
+		"classname" "point_clientcommand"
+		"targetname" "comm_cmd"
+		"origin" "0 0 0"
+		"angles" "0 0 0"
+	}
+	"entity"
+	{
+		"id" "2332614"
+		"classname" "logic_auto"
+		"spawnflags" "1"
+		"connections"
+		{
+			"OnMapSpawn" "comm_cmd,Command,z_difficulty Easy,0.1,-1"
+			"OnMapSpawn" "comm_cmd,Command,sv_cheats 1,0,-1"
+			"OnMapSpawn" "comm_cmd,Command,director_no_bosses 1,0.1,-1"
+		}
+		"origin" "-3290 4845 110"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
+	}
+"entity"
+{
+	"id" "2"
+	"classname" "logic_relay"
+	"targetname" "nick_relay"
+	"connections"
+	{
+		"OnTrigger" "nick_templateForceSpawn0-1"
+	}
+	"origin" "-3336 4432 88"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+"entity"
+{
+	"id" "4"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "nick_template"
+	"Template01" "nick_dummy"
+	"origin" "-3336 4432 112"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+"entity"
+{
+	"id" "6"
+	"classname" "commentary_dummy"
+	"angles" "0 90 0"
+	"EyeHeight" "64"
+	"HeadPitchPoseParam" "Head_Pitch"
+	"HeadYawPoseParam" "Head_Yaw"
+	"model" "models/survivors/survivor_gambler.mdl"
+	"skin" "0"
+	"StartingAnim" "Idle_Calm_Pistol"
+	"StartingWeapons" "weapon_pistol"
+	"targetname" "nick_dummy"
+	"origin" "-3336 4464 66.8034"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "RIVERBOAT GAMBLER"
+		"origin" "-3360 4545 105"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-riverboatgambler.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Andrea Wicklund"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "nick_relay,Trigger,,0,-1"
+			"oncommentarystopped" "nick_dummy,Kill,,0,-1"
+			"oncommentarystopped" "nick_relay,Enable,,0.1,-1"
+		}
+	}
+"entity"
+{
+	"id" "18"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "balcony_camera"
+	"origin" "-3360 2688 287"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+"entity"
+{
+	"id" "20"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "balcony_target"
+	"origin" "-3072 2896 255"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "BALCONY"
+		"origin" "-3075 2895 265"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-balcony.wav"
+		"viewtarget" "balcony_target"
+		"viewposition" "balcony_camera"
+		"prevent_movement" 0
+		"speakers" "Jess Cliffe"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "ITEM PLACEMENT"
+		"origin" "-1485 2915 105"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-itemplacement.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ryan Thorlakson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "JAZZ CLUB"
+		"origin" "-645 1975 105"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-jazzclub.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Paul Graham"
+		"synopsis" ""
+	}
+"entity"
+{
+	"id" "2"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "ax_template"
+	"Template01" "ax_spawn"
+	"origin" "-720 2368 272"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+"entity"
+{
+	"id" "4"
+	"classname" "logic_relay"
+	"targetname" "ax_relay"
+	"spawnflags" "1"
+	"connections"
+	{
+		"OnTrigger" "ax_templateForceSpawn0-1"
+	}
+	"origin" "-720 2368 248"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+"entity"
+{
+	"id" "6"
+	"classname" "weapon_melee_spawn"
+	"angles" "0 270 90"
+	"count" "1"
+	"melee_weapon" "fireaxe"
+	"solid" "6"
+	"spawnflags" "2"
+	"targetname" "ax_spawn"
+	"origin" "-728 2416 260.251"
+	"editor"
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 2000]"
+	}
+}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "THE AX"
+		"origin" "-700 2360 265"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-ax.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "ax_relay,Trigger,,0,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "TEMPORARY SOUNDS"
+		"origin" "-1235 1540 110"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-tempsounds.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Thornton"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "SEPARATION ANXIETY"
+		"origin" "-630 805 460"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-separationanxiety.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Phil Co"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "TRADITIONAL CRESCENDO"
+		"origin" "-1215 745 350"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-traditionalcrescendo.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "PARADE FLOAT"
+		"origin" "-1565 125 200"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-paradefloat.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Danika Wright"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "THIRD PARTY ADDON CAMPAIGNS"
+		"origin" "-2370 835 115"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-thirdpartyaddon.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Durand"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "MOCAP BASICS"
+		"origin" "-2680 -845 115"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-mocapbasics.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Nick Maggiore"
+		"synopsis" ""
+	}
+"entity"
+{
+	"id" "24"
+	"classname" "commentary_zombie_spawner"
+	"angles" "0 180 0"
+	"targetname" "riot_cop_spawner"
+	"origin" "-784 -1744 65.6698"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 2500]"
+	}
+}
+"entity" [!$LOWVIOLENCE]
+{
+	"id" "26"
+	"classname" "logic_relay"
+	"targetname" "riot_cop_relay"
+	"connections"
+	{
+		"OnTrigger" "riot_cop_spawnerSpawnZombiecommon_male_riot riotcop0-1"
+	}
+	"origin" "-816 -1744 88"
+	"editor"
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "UNCOMMON COMMONS"
+		"origin" "-915 -1735 105"
+		"angles" "0 0 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-uncommons.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ted Backman"
+		"synopsis" ""
+		"connections"
+		{
+			"oncommentarystarted" "riot_cop_relay,Trigger,,0,-1"
+			"oncommentarystopped" "riotcop,Kill,,0,-1"
+			"oncommentarystopped" "riot_cop_relay,Enable,,0.1,-1"
+		}
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "DYNAMIC ALARMS"
+		"origin" "1460 -2140 105"
+		"angles" "0 90 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\com-dynamicalarms.wav"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jason Mitchell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4PoolTable"
+		"origin" "-440.700012207 2247.8601074219 286.6700134277"
+		"angles" "0 167.2303924561 0"
+		"contextsubject" "C5M4PoolTable"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4Alley"
+		"origin" "-827.3699951172 1521.5500488281 124.2900009155"
+		"angles" "0 -0.7095761299 0"
+		"contextsubject" "C5M4Alley"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4InMiniFinale"
+		"origin" "-623.3599853516 805.8099975586 467.1900024414"
+		"angles" "0 -179.9714813232 0"
+		"contextsubject" "C5M4InMiniFinale"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4TractorNag"
+		"origin" "-1327.4799804688 485.1499938965 347.8200073242"
+		"angles" "0 -128.4255828857 0"
+		"contextsubject" "C5M4TractorNag"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4TractorNag"
+		"origin" "-996.8499755859 211.7100067139 137.1999969482"
+		"angles" "0 124.9185028076 0"
+		"contextsubject" "C5M4TractorNag"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4SeeBridge"
+		"origin" "365.4299926758 -1713.3000488281 168.4299926758"
+		"angles" "0 -3.3914022446 0"
+		"contextsubject" "C5M4SeeBridge"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C5M4SeeSafeRoom"
+		"origin" "1496.0899658203 -3189.1000976563 126.4800033569"
+		"angles" "0 -87.6733551025 0"
+		"contextsubject" "C5M4SeeSafeRoom"
+	}
+
+
+}
