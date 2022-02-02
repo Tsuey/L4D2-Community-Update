@@ -576,10 +576,6 @@
 			"z_spitter_health" 300
 			"z_charger_allow_shove" 1
 			"director_no_mobs" 1
-			"z_special_spawn_interval" 10
-			"director_special_respawn_interval" 10
-			"director_special_initial_spawn_delay_min" 10
-			"director_special_initial_spawn_delay_max" 30
 			"sv_disable_glow_survivors" 1
 			"sv_disable_glow_faritems" 1
 			"intensity_decay_time" 15
