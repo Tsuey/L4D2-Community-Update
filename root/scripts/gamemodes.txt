@@ -161,7 +161,7 @@
 		"maxplayers"	"1"
 		"achievementindex"	"0"
 		"x360ctx"	"7"
-		"x360presence" 	"13"
+		"x360presence"	"13"
 		"dlcmask"	"0x0000000000000002"
 		"builtin"	"1"
 		"Author"	"Valve"
@@ -498,7 +498,6 @@
 
 	"community2"
 	{
-
 		"base"		"coop"
 		"maxplayers"	"4"
 		"achievementindex"	"5"
@@ -634,7 +633,7 @@
 			"gascan_spit_time" 2
 			"z_mob_spawn_min_size" 25
 			"z_mob_spawn_max_size" 25
- 			"z_mob_spawn_min_interval_normal" 999999
+			"z_mob_spawn_min_interval_normal" 999999
 			"z_mob_spawn_max_interval_normal" 999999
 			"ammo_shotgun_max" 80
 			"ammo_huntingrifle_max" 220
@@ -650,7 +649,7 @@
 			"versus_boss_flow_max" 0.9
 			"versus_boss_flow_max_intro" 0.9
 			"versus_boss_flow_min" 0.15
- 			"versus_boss_flow_min_intro" 0.15
+			"versus_boss_flow_min_intro" 0.15
 			"z_witch_damage_per_kill_hit" 75
 			"z_witch_personal_space" 240
 			"z_leap_interval_post_incap" 15
