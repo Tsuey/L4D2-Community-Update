@@ -511,7 +511,6 @@
 		convar
 		{
 			"sb_max_team_melee_weapons" 1
-			"ai_talk_idle_enabled" 1
 			"sb_vomit_blind_time" 0.1
 			"boomer_vomit_delay" 0.1
 			"z_vomit_fade_duration" 0.1
@@ -590,12 +589,12 @@
 			"director_molotov_density" 7.48
 			"director_pistol_density" 6
 			"fog_override" 1
-			"fog_enable" 1
+			"fog_enable" 1	// to enforce default
 			"fog_start" 242
 			"fog_end" 730
 			"fog_startskybox" -10000
 			"fog_endskybox" -10000
-			"fog_enableskybox" 1
+			"fog_enableskybox" 1	// to enforce default
 			"z_tank_health" 5000
 			"z_tank_throw_force" 1200
 			"z_tank_throw_health" 200
