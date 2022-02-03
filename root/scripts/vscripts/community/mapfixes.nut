@@ -159,6 +159,9 @@ local s_CommunityUpdate =
 	{
 		// Hook events now, after ScriptMode_Init has just cleared them.
 		ListenForGameEvent( "round_start" );
+
+		// Broadcast "before round_start but during ScriptMode_Init", when some things were already set.
+		InvokeScopedMethod( "OnScriptMode_Init" );
 	}
 
 	// Functions that spawn in the map-specific fixes for any Mutation/Base mode.

@@ -2,6 +2,11 @@ g_Chapter = "DEAD CENTER - HOTEL";
 
 devchap( "ALL MODES" );
 
+function OnScriptMode_Init()
+{
+	IncludeScript("c1m1_reserved_wanderers", g_MapScript.LocalScript);
+}
+
 function DoRoundFixes()
 {
 	make_clip( "_cliphang_window",				"Survivors",	1,	"-72 -123 -12",		"127 14 44",	"2335 6420 2804" );

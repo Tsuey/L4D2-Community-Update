@@ -15,6 +15,11 @@ PrecacheModel( "models/props_update/c8m1_rooftop_1.mdl" );
 PrecacheModel( "models/props_update/c8m1_rooftop_2.mdl" );
 PrecacheModel( "models/props_rooftop/acunit01.mdl" );
 
+function OnScriptMode_Init()
+{
+	IncludeScript("c8m1_apartment", g_MapScript.LocalScript);
+}
+
 function DoRoundFixes()
 {
 	make_clip(	"_fallrevive_griefroom",	"Survivors",	1,	"-8 -40 -276",		"8 40 276",		"632 984 292" );
