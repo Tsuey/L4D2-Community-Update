@@ -550,7 +550,6 @@
 			z_jockey_health 500
 			z_jockey_speed 450
 			z_jockey_ride_damage 10
-			z_jockey_ride_damage_delay 1.0
 			z_jockey_ride_damage_interval 1.0
 		}
 	}
@@ -626,7 +625,6 @@
 
 		convar
 		{
-			"sv_infected_ceda_vomitjar_probability" 0
 			"sv_infected_police_tonfa_probability" 0
 			"sv_infected_riot_control_tonfa_probability" 0
 			"z_fallen_max_count" 0
@@ -638,15 +636,12 @@
 			"ammo_shotgun_max" 80
 			"ammo_huntingrifle_max" 220
 			"sv_force_time_of_day" 0
-			"z_ghost_delay_min" 20
 			"z_ghost_delay_max" 20
 			"versus_tank_chance" 1
 			"versus_tank_chance_finale" 1
 			"versus_tank_chance_intro" 1
-			"versus_witch_chance" 0.75
 			"versus_witch_chance_finale" 0
 			"versus_witch_chance_intro" 0
-			"versus_boss_flow_max" 0.9
 			"versus_boss_flow_max_intro" 0.9
 			"versus_boss_flow_min" 0.15
 			"versus_boss_flow_min_intro" 0.15
@@ -659,7 +654,6 @@
 
 			// Mega mob size should be intact for 360. (25)
 			"360_z_mob_spawn_min_size" 18
-			"360_z_mob_spawn_max_size" 18
 		}
 	}
 }
