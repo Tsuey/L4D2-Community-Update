@@ -12581,7 +12581,6 @@ Response SurvivorVocalizeGoingToDieCoach
 	scene "scenes/Coach/GoingToDie21.vcd"  //No pain, no gain. I must be about to gain some serious shit.
 	scene "scenes/Coach/GoingToDie22.vcd"  //I ain't ready to lay down yet.
 	scene "scenes/Coach/GoingToDie23.vcd"  //Hey. Now this here is some bullshit.
-	scene "scenes/Coach/GoingToDie23.vcd"  //Hey. Now this here is some bullshit.
 	scene "scenes/Coach/GoingToDie24.vcd"  //I can walk this off.
 	scene "scenes/Coach/GoingToDie25.vcd"  //Tryin' to walk this off.
 	scene "scenes/Coach/GoingToDie27.vcd"  //I'm gotta get right.

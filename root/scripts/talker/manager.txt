@@ -6585,6 +6585,7 @@ Response L4D1SurvivorVocalizeGoingToDie3Manager
 	scene "scenes/Manager/GoingToDie22.vcd"  //[pain sound] Dammit.
 	scene "scenes/Manager/GoingToDie02.vcd"  //I don't, I don't know if I'm going to make it
 	scene "scenes/Manager/GoingToDieLight12.vcd" odds 2 //[quiet pep talk to self]C'mon Louis: you are NOT dyin' here.
+	scene "scenes/Manager/GoingToDieLight16.vcd"  //I don't wanna die. I know nobody wants to die, but I'm like, fifty times that.
 	scene "scenes/Manager/GoingToDie05.vcd"  //I really need to get some First Aid.
 	scene "scenes/Manager/GoingToDie15.vcd"  //I think I'm dyin'.
 	scene "scenes/Manager/GoingToDie07.vcd"  //I don't think I'm gonnna make it.
