@@ -937,18 +937,6 @@ Rule C6M3_BridgeDownBiker
 	Response C6M3_BridgeDownBiker
 }
 
-Response c6m3_outroBiker
-{
-	scene "scenes/Biker/blank.vcd" then Any c6m3_outro3 foo:0 0.5 //
-	scene "scenes/Biker/blank.vcd" odds 50 then self c6m3_outro3 foo:0 0.5 //
-}
-Rule c6m3_outroBiker
-{
-	criteria Conceptc6m3_outro IsBiker NotSaidOutro isC6m3_port IsNotVersus
-	ApplyContext "Talk:1:0,SaidOutro:1:0"
-	applycontexttoworld
-	Response c6m3_outroBiker
-}
 
 Response c6m3_outroL4D1Biker
 {

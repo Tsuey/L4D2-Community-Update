@@ -794,6 +794,21 @@ Rule C5M5BridgeDestroyedOrator
 }
 
 //--------------------------------------------------------------------------------------------------------------
+// C6M3
+//--------------------------------------------------------------------------------------------------------------
+Response c6m3_outro
+{
+	scene "scenes/npcs/orator_blank.vcd" then Any c6m3_outro3 foo:0 0.5 //
+}
+Rule c6m3_outro
+{
+	criteria Conceptc6m3_outro NotSaidOutro isC6m3_port IsNotVersus
+	ApplyContext "Talk:1:0,SaidOutro:1:0"
+	applycontexttoworld
+	Response c6m3_outro
+}
+
+//--------------------------------------------------------------------------------------------------------------
 // Orator
 //--------------------------------------------------------------------------------------------------------------
 Response C1M3AlarmOffOratorCoach
