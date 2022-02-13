@@ -1279,7 +1279,7 @@ Response c1m4startelevatorCoach
 }
 Rule c1m4startelevatorCoach
 {
-	criteria Conceptc1m4startelevator IsCoach AutoIsNotScavenge AutoIsNotSurvival
+	criteria Conceptc1m4startelevator IsCoach IsMechanicAlive AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Talk:1:0,ElevatorTimer:1:25"
 	applycontexttoworld
 	Response c1m4startelevatorCoach

@@ -1170,7 +1170,7 @@ Response c1m4startelevatorProducer
 }
 Rule c1m4startelevatorProducer
 {
-	criteria Conceptc1m4startelevator IsProducer AutoIsNotScavenge AutoIsNotSurvival
+	criteria Conceptc1m4startelevator IsProducer IsMechanicAlive AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Talk:1:0,ElevatorTimer:1:25"
 	applycontexttoworld
 	Response c1m4startelevatorProducer

@@ -1295,7 +1295,7 @@ Response c1m4startelevatorGambler
 }
 Rule c1m4startelevatorGambler
 {
-	criteria Conceptc1m4startelevator IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	criteria Conceptc1m4startelevator IsGambler IsMechanicAlive AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Talk:1:0,ElevatorTimer:1:25"
 	applycontexttoworld
 	Response c1m4startelevatorGambler
