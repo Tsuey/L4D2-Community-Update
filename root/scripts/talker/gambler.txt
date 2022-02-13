@@ -4473,7 +4473,7 @@ Response c6m3_outroGambler
 }
 Rule c6m3_outroGambler
 {
-	criteria Conceptc6m3_outro3 IsGambler isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent FromIsBiker
+	criteria Conceptc6m3_outro3 IsGambler isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroGambler
 }
@@ -4484,7 +4484,7 @@ Response c6m3_outroEllisGambler
 }
 Rule c6m3_outroEllisGambler
 {
-	criteria Conceptc6m3_outro3 IsGambler IsMechanicAlive ChanceToFire50Percent IsNotIncapacitated isC6m3_port IsNotVersus FromIsBiker
+	criteria Conceptc6m3_outro3 IsGambler IsMechanicAlive ChanceToFire50Percent IsNotIncapacitated isC6m3_port IsNotVersus HasAFrom
 	forceweight 5
 	Response c6m3_outroEllisGambler
 }
@@ -4496,7 +4496,7 @@ Response c6m3_outroZoeyOutroGambler
 }
 Rule c6m3_outroZoeyOutroGambler
 {
-	criteria Conceptc6m3_outroL4D1011a IsGambler IsNotIncapacitated FromIsMechanic
+	criteria Conceptc6m3_outroL4D1011a IsGambler IsNotIncapacitated HasAFrom
 	Response c6m3_outroZoeyOutroGambler
 }
 

@@ -4119,7 +4119,7 @@ Response c6m3_outroProducer
 }
 Rule c6m3_outroProducer
 {
-	criteria Conceptc6m3_outro3 IsProducer isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent FromIsBiker
+	criteria Conceptc6m3_outro3 IsProducer isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroProducer
 }
@@ -12116,7 +12116,7 @@ Response SurvivorPickupGunC1M2Producer
 }
 Rule SurvivorPickupGunC1M2Producer
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsNotSpeaking IsTalk IsSaidC1M2InsideGunShop IsNotPickedUpFirstAidKit IsNotPickedUpAdrenaline IsNotPickedUpPainPills IsNotPickedUpAmmo IsNotPickedUpVomitJar IsNotPickedUpLaserSights IsNotPickedUpMolotov IsNotPickedUpPipeBomb IsNotCarriedProp IsWorldTalkProducer _auto_NotButton1
+	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsNotSpeaking IsTalk IsSaidC1M2InsideGunShop IsNotPickedUpFirstAidKit IsNotPickedUpAdrenaline IsNotPickedUpPainPills IsNotPickedUpAmmo IsNotPickedUpVomitJar IsNotPickedUpLaserSights IsNotPickedUpMolotov IsNotPickedUpPipeBomb IsNotCarriedProp IsWorldTalkProducer ismap_c1m2_streets _auto_NotButton1
 	Response SurvivorPickupGunC1M2Producer
 }
 

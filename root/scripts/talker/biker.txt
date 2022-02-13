@@ -956,7 +956,7 @@ Response c6m3_outroL4D1Biker
 }
 Rule c6m3_outroL4D1Biker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroL4D1Biker
 }
@@ -967,7 +967,7 @@ Response c6m3_outroL4D1010aBiker
 }
 Rule c6m3_outroL4D1010aBiker
 {
-	criteria Conceptc6m3_outroL4D1010a IsBiker
+	criteria Conceptc6m3_outroL4D1010a IsBiker HasAFrom
 	Response c6m3_outroL4D1010aBiker
 }
 
@@ -977,7 +977,7 @@ Response c6m3_outroL4D104bBiker
 }
 Rule c6m3_outroL4D104bBiker
 {
-	criteria Conceptc6m3_outroL4D104b IsBiker
+	criteria Conceptc6m3_outroL4D104b IsBiker HasAFrom
 	Response c6m3_outroL4D104bBiker
 }
 
@@ -987,7 +987,7 @@ Response c6m3_outroL4D108aBiker
 }
 Rule c6m3_outroL4D108aBiker
 {
-	criteria Conceptc6m3_outroL4D108a IsBiker
+	criteria Conceptc6m3_outroL4D108a IsBiker HasAFrom
 	Response c6m3_outroL4D108aBiker
 }
 
@@ -998,7 +998,7 @@ Response c6m3_outroL4D1AllBiker
 }
 Rule c6m3_outroL4D1AllBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 8
 	Response c6m3_outroL4D1AllBiker
 }
@@ -1009,7 +1009,7 @@ Response c6m3_outroL4D1CoachBiker
 }
 Rule c6m3_outroL4D1CoachBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsCoachAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsCoachAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 6
 	Response c6m3_outroL4D1CoachBiker
 }
@@ -1023,7 +1023,7 @@ Response c6m3_outroL4D1CopGibbsBiker
 }
 Rule c6m3_outroL4D1CopGibbsBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsFrancisIntroActor ChanceToFire10Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsFrancisIntroActor ChanceToFire10Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 10
 	Response c6m3_outroL4D1CopGibbsBiker
 }
@@ -1034,7 +1034,7 @@ Response c6m3_outroL4D1GamblerBiker
 }
 Rule c6m3_outroL4D1GamblerBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsGamblerAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsGamblerAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 5
 	Response c6m3_outroL4D1GamblerBiker
 }
@@ -1046,7 +1046,7 @@ Response c6m3_outroL4D1MechanicBiker
 }
 Rule c6m3_outroL4D1MechanicBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsMechanicAlive ChanceToFire60Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsMechanicAlive ChanceToFire60Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 4
 	Response c6m3_outroL4D1MechanicBiker
 }
@@ -1061,7 +1061,7 @@ Response c6m3_outroL4D1ProducerBiker
 }
 Rule c6m3_outroL4D1ProducerBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsProducerAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsProducerAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 7
 	Response c6m3_outroL4D1ProducerBiker
 }

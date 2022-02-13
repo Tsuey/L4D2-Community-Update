@@ -5068,7 +5068,7 @@ Response c6m3_outroMechanic
 }
 Rule c6m3_outroMechanic
 {
-	criteria Conceptc6m3_outro3 IsMechanic isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent FromIsBiker
+	criteria Conceptc6m3_outro3 IsMechanic isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroMechanic
 }
@@ -5088,7 +5088,7 @@ Response c6m3_outroZoeyOutroMechanic
 }
 Rule c6m3_outroZoeyOutroMechanic
 {
-	criteria Conceptc6m3_outro3 IsMechanic isC6m3_port IsZoeyIntroActor IsNotVersus IsNotIncapacitated ChanceToFire100Percent FromIsBiker
+	criteria Conceptc6m3_outro3 IsMechanic isC6m3_port IsZoeyIntroActor IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 2
 	Response c6m3_outroZoeyOutroMechanic
 }
@@ -5100,7 +5100,7 @@ Response c6m3_outroRochelleOutroMechanic
 }
 Rule c6m3_outroRochelleOutroMechanic
 {
-	criteria Conceptc6m3_outroL4D1012a IsMechanic IsNotIncapacitated FromIsProducer
+	criteria Conceptc6m3_outroL4D1012a IsMechanic IsNotIncapacitated HasAFrom
 	Response c6m3_outroRochelleOutroMechanic
 }
 

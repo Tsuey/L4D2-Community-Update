@@ -100,6 +100,20 @@ criterion "FromIsNotNamVet"        "From"     "!=NamVet"        required
 criterion "FromIsNotTeenGirl"        "From"     "!=TeenGirl"        required
 criterion "FromIsNotManager"        "From"     "!=Manager"        required
 
+criterion "FromIsExteriorBombing"        "From"     "ds_ext-c5m4BombingExterior"        required
+criterion "FromIsInteriorBombing"        "From"     "ds_int-c5m4BombingInterior"        required
+criterion "FromIsPapaGator"        "From"     "papa_gator"        required
+criterion "FromIsRescue7"        "From"     "orator_chopper"        required
+criterion "FromIsPilot"        "From"     "pilot"        required
+criterion "FromIsChurchguy"        "From"     "churchguy"        required
+criterion "FromIsJohnSlater"        "From"     "orator_boat_radio"        required
+criterion "FromIsBarricadeOrator"        "From"     "barricade_orator"        required
+criterion "FromIsAC130"        "From"     "orator_plane_radio"        required
+criterion "FromIsMillhaven"        "From"     "orator_farm_radio"        required
+criterion "FromIsL4D1Louis"        "From"     "L4D1_Louis"        required
+
+criterion "HasAFrom" { FromIsCoach FromIsGambler FromIsMechanic FromIsProducer FromIsBiker FromIsNamVet FromIsTeenGirl FromIsManager FromIsUnknown FromIsAnOrator FromIsExteriorBombing FromIsInteriorBombing FromIsPapaGator FromIsRescue7 FromIsPilot FromIsChurchguy FromIsJohnSlater FromIsBarricadeOrator FromIsAC130 FromIsMillhaven FromIsL4D1Louis } required
+
 criterion "FromSet1" { FromIsCoach FromIsAnOrator } required
 
 criterion "Iswitch_aggro_onManager"	"witch_aggro_on"     "Manager"		required

@@ -895,7 +895,7 @@ Response c6m3_outroL4D1TeenGirl
 }
 Rule c6m3_outroL4D1TeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroL4D1TeenGirl
 }
@@ -906,7 +906,7 @@ Response c6m3_outroL4D101aTeenGirl
 }
 Rule c6m3_outroL4D101aTeenGirl
 {
-	criteria Conceptc6m3_outroL4D101a IsTeenGirl
+	criteria Conceptc6m3_outroL4D101a IsTeenGirl HasAFrom
 	Response c6m3_outroL4D101aTeenGirl
 }
 
@@ -916,7 +916,7 @@ Response c6m3_outroL4D102bTeenGirl
 }
 Rule c6m3_outroL4D102bTeenGirl
 {
-	criteria Conceptc6m3_outroL4D102b IsTeenGirl
+	criteria Conceptc6m3_outroL4D102b IsTeenGirl HasAFrom
 	Response c6m3_outroL4D102bTeenGirl
 }
 
@@ -926,7 +926,7 @@ Response c6m3_outroL4D103aTeenGirl
 }
 Rule c6m3_outroL4D103aTeenGirl
 {
-	criteria Conceptc6m3_outroL4D103a IsTeenGirl
+	criteria Conceptc6m3_outroL4D103a IsTeenGirl HasAFrom
 	Response c6m3_outroL4D103aTeenGirl
 }
 
@@ -936,7 +936,7 @@ Response c6m3_outroL4D104aTeenGirl
 }
 Rule c6m3_outroL4D104aTeenGirl
 {
-	criteria Conceptc6m3_outroL4D104a IsTeenGirl
+	criteria Conceptc6m3_outroL4D104a IsTeenGirl HasAFrom
 	Response c6m3_outroL4D104aTeenGirl
 }
 
@@ -946,7 +946,7 @@ Response c6m3_outroL4D105aTeenGirl
 }
 Rule c6m3_outroL4D105aTeenGirl
 {
-	criteria Conceptc6m3_outroL4D105a IsTeenGirl
+	criteria Conceptc6m3_outroL4D105a IsTeenGirl HasAFrom
 	Response c6m3_outroL4D105aTeenGirl
 }
 
@@ -956,7 +956,7 @@ Response c6m3_outroL4D107aTeenGirl
 }
 Rule c6m3_outroL4D107aTeenGirl
 {
-	criteria Conceptc6m3_outroL4D107a IsTeenGirl
+	criteria Conceptc6m3_outroL4D107a IsTeenGirl HasAFrom
 	Response c6m3_outroL4D107aTeenGirl
 }
 
@@ -966,7 +966,7 @@ Response c6m3_outroL4D109aTeenGirl
 }
 Rule c6m3_outroL4D109aTeenGirl
 {
-	criteria Conceptc6m3_outroL4D109a IsTeenGirl
+	criteria Conceptc6m3_outroL4D109a IsTeenGirl HasAFrom
 	Response c6m3_outroL4D109aTeenGirl
 }
 
@@ -976,7 +976,7 @@ Response c6m3_outroL4D1AllTeenGirl
 }
 Rule c6m3_outroL4D1AllTeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 8
 	Response c6m3_outroL4D1AllTeenGirl
 }
@@ -987,7 +987,7 @@ Response c6m3_outroL4D1MechanicTeenGirl
 }
 Rule c6m3_outroL4D1MechanicTeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsMechanicAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsMechanicAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 7
 	Response c6m3_outroL4D1MechanicTeenGirl
 }
@@ -1002,7 +1002,7 @@ Response c6m3_outroL4D1MechanicZoeyTeenGirl
 }
 Rule c6m3_outroL4D1MechanicZoeyTeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsZoeyIntroActor ChanceToFire100Percent IsMechanicAlive IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsZoeyIntroActor ChanceToFire100Percent IsMechanicAlive IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 2
 	Response c6m3_outroL4D1MechanicZoeyTeenGirl
 }

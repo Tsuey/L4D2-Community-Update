@@ -540,7 +540,7 @@ Response c6m3_outroL4D1Manager
 }
 Rule c6m3_outroL4D1Manager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	applycontexttoworld
 	forceweight 1
 	Response c6m3_outroL4D1Manager
@@ -553,7 +553,7 @@ Response c6m3_outroL4D102aManager
 }
 Rule c6m3_outroL4D102aManager
 {
-	criteria Conceptc6m3_outroL4D102a IsManager
+	criteria Conceptc6m3_outroL4D102a IsManager HasAFrom
 	Response c6m3_outroL4D102aManager
 }
 
@@ -563,7 +563,7 @@ Response c6m3_outroL4D106aManager
 }
 Rule c6m3_outroL4D106aManager
 {
-	criteria Conceptc6m3_outroL4D106a IsManager
+	criteria Conceptc6m3_outroL4D106a IsManager HasAFrom
 	Response c6m3_outroL4D106aManager
 }
 
@@ -577,7 +577,7 @@ Response c6m3_outroL4D1AllManager
 }
 Rule c6m3_outroL4D1AllManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 8
 	Response c6m3_outroL4D1AllManager
 }
@@ -589,7 +589,7 @@ Response c6m3_outroL4D1CoachManager
 }
 Rule c6m3_outroL4D1CoachManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsCoachAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsCoachAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 7
 	Response c6m3_outroL4D1CoachManager
 }
@@ -601,7 +601,7 @@ Response c6m3_outroL4D1GamblerManager
 }
 Rule c6m3_outroL4D1GamblerManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsGamblerAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsGamblerAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 6
 	Response c6m3_outroL4D1GamblerManager
 }
@@ -612,7 +612,7 @@ Response c6m3_outroL4D1MechanicManager
 }
 Rule c6m3_outroL4D1MechanicManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsMechanicAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsMechanicAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 5
 	Response c6m3_outroL4D1MechanicManager
 }
