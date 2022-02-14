@@ -1347,7 +1347,7 @@ Response C7M3PlayerGetToRescueVehicleManager
 }
 Rule C7M3PlayerGetToRescueVehicleManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager ismapc7m3_port IsTalk IsTalkManager IsWorldTalkManager _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager ismapc7m3_port IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleManager
@@ -2223,7 +2223,7 @@ Response L4D1SurvivorFinalVehicleFarmSpottedManager
 }
 Rule L4D1SurvivorFinalVehicleFarmSpottedManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsBloodHarvest5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsBloodHarvest5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmSpottedManager
@@ -2284,7 +2284,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatManager
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsDeathToll5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsDeathToll5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatManager
@@ -2298,7 +2298,7 @@ Response L4D1SurvivorFinalVehicleSpottedRooftopManager
 }
 Rule L4D1SurvivorFinalVehicleSpottedRooftopManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsNoMercy5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsNoMercy5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRooftopManager
@@ -2310,7 +2310,7 @@ Response L4D1SurvivorFinalVehicleSpottedRunwayManager
 }
 Rule L4D1SurvivorFinalVehicleSpottedRunwayManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsDeadAir5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsDeadAir5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRunwayManager
@@ -8713,7 +8713,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Manager
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2Manager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsLastStand2 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsLastStand2 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Manager

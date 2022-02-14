@@ -3482,7 +3482,7 @@ Response C5M5RescueStartGambler
 }
 Rule C5M5RescueStartGambler
 {
-	criteria ConceptFinalVehicleSpotted IsGambler IsMapc5m5_bridge _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsGambler IsMapc5m5_bridge IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C5M5RescueStartGambler
@@ -16764,7 +16764,7 @@ Response C13M4SpottedVehicleGambler
 }
 Rule C13M4SpottedVehicleGambler
 {
-	criteria ConceptFinalVehicleSpotted IsGambler ismapc13m4_cutthroatcreek _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsGambler ismapc13m4_cutthroatcreek IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C13M4SpottedVehicleGambler

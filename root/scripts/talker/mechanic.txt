@@ -3681,7 +3681,7 @@ Response C5M5RescueStartMechanic
 }
 Rule C5M5RescueStartMechanic
 {
-	criteria ConceptFinalVehicleSpotted IsMechanic IsMapc5m5_bridge _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsMechanic IsMapc5m5_bridge IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C5M5RescueStartMechanic
@@ -17607,7 +17607,7 @@ Response C13M4SpottedVehicleMechanic
 }
 Rule C13M4SpottedVehicleMechanic
 {
-	criteria ConceptFinalVehicleSpotted IsMechanic ismapc13m4_cutthroatcreek _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsMechanic ismapc13m4_cutthroatcreek IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C13M4SpottedVehicleMechanic

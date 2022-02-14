@@ -1244,7 +1244,7 @@ Response C7M3PlayerGetToRescueVehicleNamVet
 }
 Rule C7M3PlayerGetToRescueVehicleNamVet
 {
-	criteria ConceptFinalVehicleSpotted IsNamVet ismapc7m3_port IsTalk IsTalkNamVet IsWorldTalkNamVet _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsNamVet ismapc7m3_port IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleNamVet
@@ -1729,7 +1729,7 @@ Response L4D1SurvivorFinalVehicleFarmSpottedNamVet
 }
 Rule L4D1SurvivorFinalVehicleFarmSpottedNamVet
 {
-	criteria ConceptFinalVehicleSpotted IsNamVet IsBloodHarvest5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsNamVet IsBloodHarvest5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmSpottedNamVet
@@ -1795,7 +1795,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatNamVet
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatNamVet
 {
-	criteria ConceptFinalVehicleSpotted IsNamVet IsDeathToll5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsNamVet IsDeathToll5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatNamVet
@@ -1809,7 +1809,7 @@ Response L4D1SurvivorFinalVehicleSpottedRooftopNamVet
 }
 Rule L4D1SurvivorFinalVehicleSpottedRooftopNamVet
 {
-	criteria ConceptFinalVehicleSpotted IsNamVet IsNoMercy5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsNamVet IsNoMercy5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRooftopNamVet
@@ -1821,7 +1821,7 @@ Response L4D1SurvivorFinalVehicleSpottedRunwayNamVet
 }
 Rule L4D1SurvivorFinalVehicleSpottedRunwayNamVet
 {
-	criteria ConceptFinalVehicleSpotted IsNamVet IsDeadAir5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsNamVet IsDeadAir5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRunwayNamVet
@@ -8201,7 +8201,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatC14M2NamVet
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2NamVet
 {
-	criteria ConceptFinalVehicleSpotted IsNamVet IsLastStand2 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsNamVet IsLastStand2 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockNamVet:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatC14M2NamVet

@@ -937,7 +937,6 @@ Rule C6M3_BridgeDownBiker
 	Response C6M3_BridgeDownBiker
 }
 
-
 Response c6m3_outroL4D1Biker
 {
 	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic13.vcd"  //I hate goodbyes.
@@ -1814,7 +1813,7 @@ Response C7M3PlayerGetToRescueVehicleBiker
 }
 Rule C7M3PlayerGetToRescueVehicleBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker ismapc7m3_port IsTalk IsTalkBiker IsWorldTalkBiker _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker ismapc7m3_port IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleBiker
@@ -2976,7 +2975,7 @@ Response L4D1SurvivorFinalVehicleFarmSpottedBiker
 }
 Rule L4D1SurvivorFinalVehicleFarmSpottedBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsBloodHarvest5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsBloodHarvest5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmSpottedBiker
@@ -3038,7 +3037,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatBiker
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsDeathToll5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsDeathToll5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatBiker
@@ -3052,7 +3051,7 @@ Response L4D1SurvivorFinalVehicleSpottedRooftopBiker
 }
 Rule L4D1SurvivorFinalVehicleSpottedRooftopBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsNoMercy5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsNoMercy5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRooftopBiker
@@ -3064,7 +3063,7 @@ Response L4D1SurvivorFinalVehicleSpottedRunwayBiker
 }
 Rule L4D1SurvivorFinalVehicleSpottedRunwayBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsDeadAir5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsDeadAir5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRunwayBiker
@@ -10096,7 +10095,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Biker
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2Biker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsLastStand2 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsLastStand2 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Biker

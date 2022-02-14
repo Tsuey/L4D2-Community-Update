@@ -3518,7 +3518,7 @@ Response C5M5RescueStartCoach
 }
 Rule C5M5RescueStartCoach
 {
-	criteria ConceptFinalVehicleSpotted IsCoach IsMapc5m5_bridge _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsCoach IsMapc5m5_bridge IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C5M5RescueStartCoach
@@ -16481,7 +16481,7 @@ Response C13M4SpottedVehicleCoach
 }
 Rule C13M4SpottedVehicleCoach
 {
-	criteria ConceptFinalVehicleSpotted IsCoach ismapc13m4_cutthroatcreek _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsCoach ismapc13m4_cutthroatcreek IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C13M4SpottedVehicleCoach

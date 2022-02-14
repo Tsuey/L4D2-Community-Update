@@ -1478,7 +1478,7 @@ Response C7M3PlayerGetToRescueVehicleTeenGirl
 }
 Rule C7M3PlayerGetToRescueVehicleTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl ismapc7m3_port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl ismapc7m3_port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleTeenGirl
@@ -1491,7 +1491,7 @@ Response C7M3PlayerGetToRescueVehicleLouisTeenGirl
 }
 Rule C7M3PlayerGetToRescueVehicleLouisTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl ismapc7m3_port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsManagerAlive ChanceToFire20Percent _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl ismapc7m3_port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsManagerAlive ChanceToFire20Percent _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleLouisTeenGirl
@@ -2405,7 +2405,7 @@ Response L4D1SurvivorFinalVehicleFarmSpottedTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleFarmSpottedTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsBloodHarvest5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsBloodHarvest5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmSpottedTeenGirl
@@ -2470,7 +2470,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsDeathToll5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsDeathToll5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatTeenGirl
@@ -2484,7 +2484,7 @@ Response L4D1SurvivorFinalVehicleSpottedRooftopTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleSpottedRooftopTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsNoMercy5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsNoMercy5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRooftopTeenGirl
@@ -2496,7 +2496,7 @@ Response L4D1SurvivorFinalVehicleSpottedRunwayTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleSpottedRunwayTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsDeadAir5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsDeadAir5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRunwayTeenGirl
@@ -9377,7 +9377,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsLastStand2 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsLastStand2 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl

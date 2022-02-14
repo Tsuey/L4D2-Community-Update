@@ -2854,7 +2854,7 @@ Response C5M5RescueStartProducer
 }
 Rule C5M5RescueStartProducer
 {
-	criteria ConceptFinalVehicleSpotted IsProducer IsMapc5m5_bridge _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsProducer IsMapc5m5_bridge IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C5M5RescueStartProducer
@@ -15542,7 +15542,7 @@ Response C13M4SpottedVehicleProducer
 }
 Rule C13M4SpottedVehicleProducer
 {
-	criteria ConceptFinalVehicleSpotted IsProducer ismapc13m4_cutthroatcreek _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsProducer ismapc13m4_cutthroatcreek IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C13M4SpottedVehicleProducer
