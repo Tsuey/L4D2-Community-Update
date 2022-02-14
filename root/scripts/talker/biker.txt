@@ -9198,6 +9198,22 @@ Rule SurvivorSpottedChainsawAutoBiker
 	Response SurvivorSpottedChainsawBiker
 }
 
+Rule SurvivorSpottedM60Biker
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsNotSmartLookAuto IsM60 IsWorldTalkBiker _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawBiker
+}
+
+Rule SurvivorSpottedM60AutoBiker
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsM60 IsWorldTalkBiker IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawBiker
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Spotted Firearms (Generic Lines)
 //--------------------------------------------------------------------------------------------------------------
@@ -9208,22 +9224,6 @@ Response SurvivorSpottedWeaponBiker
 	scene "scenes/Biker/SpotWeapons03.vcd"  //Buncha guns over here!
 	scene "scenes/Biker/SpotWeapons04.vcd"  //Weapon's over here!
 	scene "scenes/Biker/SpotWeapons05.vcd"  //We got weapons over here.
-}
-
-Rule SurvivorSpottedM60Biker
-{
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsNotSmartLookAuto IsM60 IsWorldTalkBiker _auto_NotSpottedVehicle
-	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedWeaponBiker
-}
-
-Rule SurvivorSpottedM60AutoBiker
-{
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsM60 IsWorldTalkBiker IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedWeaponBiker
 }
 
 Rule SurvivorSpottedMagnumBiker
