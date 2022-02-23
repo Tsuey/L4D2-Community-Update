@@ -12,7 +12,7 @@ DirectorOptions <-
 	cm_AutoSpawnInfectedGhosts = true
 
 	PreferredSpecialDirection = SPAWN_BEHIND_SURVIVORS
-	BehindSurvivorsSpawnDistance = 2000
+	SpawnBehindSurvivorsDistance = 2000
 	TankRunSpawnDelay = 15
 
 	MobMaxPending = 0
