@@ -493,14 +493,14 @@
 	}
 	"rndwave"
 	{
-		"wave"		"npc/infected/gore/bullets/bullet_impact_01.wav"
-		"wave"		"npc/infected/gore/bullets/bullet_impact_02.wav"
-		"wave"		"npc/infected/gore/bullets/bullet_impact_03.wav"
-		"wave"		"npc/infected/gore/bullets/bullet_impact_04.wav"
-		"wave"		"npc/infected/gore/bullets/bullet_impact_05.wav"
-		"wave"		"npc/infected/gore/bullets/bullet_impact_06.wav"
-		"wave"		"npc/infected/gore/bullets/bullet_impact_07.wav"
-		"wave"		"npc/infected/gore/bullets/bullet_impact_08.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_01.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_02.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_03.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_04.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_05.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_06.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_07.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_08.wav"
 	}
 }
 

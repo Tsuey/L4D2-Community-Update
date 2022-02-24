@@ -1384,7 +1384,11 @@
 {
 	"channel"		"CHAN_WEAPON"
 	"soundlevel"		"SNDLVL_GUNFIRE"
-	"wave"		")weapons/grenade_launcher/grenadefire/grenade_launcher_explode_2.wav"
+	"rndwave"
+	{
+		"wave"		")weapons/grenade_launcher/grenadefire/grenade_launcher_explode_1.wav"
+		"wave"		")weapons/grenade_launcher/grenadefire/grenade_launcher_explode_2.wav"
+	}
 }
 
 "GrenadeLauncher.Deploy"
