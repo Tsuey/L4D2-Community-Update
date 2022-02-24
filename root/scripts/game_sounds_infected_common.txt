@@ -1,0 +1,584 @@
+// Sound effects for Terror
+
+// CHECK THE OTHER EXISTING "IDLE" sounds
+"Zombie.Sleeping"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_65dB"
+	"volume"		"0.75"
+	"pitch"		"95,105"
+	"rndwave"
+	{
+		"wave"		"npc/infected/idle/breathing/breathing01.wav"
+		"wave"		"npc/infected/idle/breathing/breathing08.wav"
+		"wave"		"npc/infected/idle/breathing/breathing09.wav"
+		"wave"		"npc/infected/idle/breathing/breathing10.wav"
+		"wave"		"npc/infected/idle/breathing/breathing13.wav"
+		"wave"		"npc/infected/idle/breathing/breathing16.wav"
+		"wave"		"npc/infected/idle/breathing/breathing18.wav"
+		"wave"		"npc/infected/idle/breathing/breathing25.wav"
+		"wave"		"npc/infected/idle/breathing/breathing26.wav"
+	}
+}
+
+"Zombie.Wander"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_70dB"
+	"volume"		"0.80"
+	"pitch"		"95,105"
+	"rndwave"
+	{
+		"wave"		"npc/infected/idle/breathing/idle_breath_01.wav"
+		"wave"		"npc/infected/idle/breathing/idle_breath_02.wav"
+		"wave"		"npc/infected/idle/breathing/idle_breath_03.wav"
+		"wave"		"npc/infected/idle/breathing/idle_breath_04.wav"
+		"wave"		"npc/infected/idle/breathing/idle_breath_06.wav"
+		"wave"		"npc/infected/idle/moaning/moan01.wav"
+		"wave"		"npc/infected/idle/moaning/moan02.wav"
+		"wave"		"npc/infected/idle/moaning/moan03.wav"
+		"wave"		"npc/infected/idle/moaning/moan04.wav"
+		"wave"		"npc/infected/idle/moaning/moan05.wav"
+		"wave"		"npc/infected/idle/moaning/moan06.wav"
+		"wave"		"npc/infected/idle/moaning/moan07.wav"
+		"wave"		"npc/infected/idle/moaning/moan08.wav"
+		"wave"		"npc/infected/idle/moaning/moan09.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling01.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling02.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling03.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling04.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling05.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling06.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling07.wav"
+		"wave"		"npc/infected/idle/mumbling/mumbling08.wav"
+	}
+}
+
+"Zombie.BecomeAlert"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_70dB"
+	"volume"		"0.80"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+	"rndwave"
+	{
+		"wave"		"npc/infected/alert/becomeAlert/hiss01.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize01.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize02.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize03.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize04.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize05.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize06.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize07.wav"
+		"wave"		"npc/infected/alert/becomeAlert/recognize08.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout01.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout02.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout03.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout04.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout06.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout07.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout08.wav"
+		"wave"		"npc/infected/alert/becomeAlert/shout09.wav"
+		"wave"		"npc/infected/alert/becomeAlert/howl01.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert01.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert04.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert09.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert11.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert12.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert14.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert17.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert18.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert21.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert23.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert25.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert26.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert29.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert38.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert41.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert54.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert55.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert56.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert57.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert58.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert59.wav"
+		"wave"		"npc/infected/alert/becomeAlert/become_alert25.wav"
+		"wave"		"npc/infected/alert/becomeAlert/$gender/become_alert60.wav"
+		"wave"		"npc/infected/alert/becomeAlert/$gender/become_alert61.wav"
+		"wave"		"npc/infected/alert/becomeAlert/$gender/become_alert62.wav"
+		"wave"		"npc/infected/alert/becomeAlert/$gender/become_alert63.wav"
+	}
+}
+
+// awake and becoming aware of survivors
+"Zombie.Alert"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_70dB"
+	"volume"		"0.90"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+	"rndwave"
+	{
+		"wave"		"npc/infected/alert/alert/alert13.wav"
+		"wave"		"npc/infected/alert/alert/alert16.wav"
+		"wave"		"npc/infected/alert/alert/alert23.wav"
+		"wave"		"npc/infected/alert/alert/alert22.wav"
+		"wave"		"npc/infected/alert/alert/alert25.wav"
+		"wave"		"npc/infected/alert/alert/alert26.wav"
+		"wave"		"npc/infected/alert/alert/alert27.wav"
+		"wave"		"npc/infected/alert/alert/alert36.wav"
+		"wave"		"npc/infected/alert/alert/alert37.wav"
+		"wave"		"npc/infected/alert/alert/alert38.wav"
+		"wave"		"npc/infected/alert/alert/alert39.wav"
+		"wave"		"npc/infected/alert/alert/alert40.wav"
+		"wave"		"npc/infected/alert/alert/alert41.wav"
+		"wave"		"npc/infected/alert/alert/alert42.wav"
+		"wave"		"npc/infected/alert/alert/alert43.wav"
+		"wave"		"npc/infected/alert/alert/alert44.wav"
+		"wave"		"npc/infected/alert/alert/$gender/alert50.wav"
+		"wave"		"npc/infected/alert/alert/$gender/alert51.wav"
+		"wave"		"npc/infected/alert/alert/$gender/alert52.wav"
+		"wave"		"npc/infected/alert/alert/$gender/alert53.wav"
+		"wave"		"npc/infected/alert/alert/$gender/alert54.wav"
+		"wave"		"npc/infected/alert/alert/$gender/alert55.wav"
+	}
+}
+
+// just launched into an attack
+"Zombie.BecomeEnraged"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.70"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+	"rndwave"
+	{
+		"wave"		"npc/infected/alert/becomeEnraged/alert24.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged01.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged02.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged03.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged06.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged07.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged09.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged10.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged11.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged30.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged50.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged51.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged52.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged53.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged54.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged55.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged56.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged57.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/become_enraged58.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/$gender/become_enraged40.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/$gender/become_enraged41.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/$gender/become_enraged42.wav"
+		"wave"		"npc/infected/alert/becomeEnraged/$gender/become_enraged43.wav"
+	}
+}
+
+// raging mad, running through the streets, NO SPECIFIC VICTIM
+"Zombie.Rage"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_85dB"
+	"volume"		"0.85"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Important"
+	}
+
+	"rndwave"
+	{
+		"wave"		"npc/infected/action/rage/$gender/rage_50.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_51.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_52.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_53.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_54.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_55.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_56.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_57.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_58.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_59.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_60.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_61.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_62.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_64.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_65.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_66.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_67.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_68.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_69.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_70.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_71.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_72.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_73.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_74.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_75.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_76.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_77.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_78.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_79.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_80.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_81.wav"
+		"wave"		"npc/infected/action/rage/$gender/rage_82.wav"
+	}
+}
+
+// chasing, raging mad, at a Survivor we can see, VICTIM HAS BEEN DETERMINED AND IS BEING YELLED AT 
+"Zombie.RageAtVictim"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.80"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Important"
+	}
+	"rndwave"
+	{
+		"wave"		"npc/infected/action/rageAt/rage_at_victim25.wav"
+		"wave"		"npc/infected/action/rageAt/rage_at_victim35.wav"
+		"wave"		"npc/infected/action/rageAt/rage_at_victim02.wav"
+		"wave"		"npc/infected/action/rageAt/rage_at_victim34.wav"
+		"wave"		"npc/infected/action/rageAt/rage_at_victim26.wav"
+		"wave"		"npc/infected/action/rageAt/rage_at_victim01.wav"
+		"wave"		"npc/infected/action/rageAt/rage_at_victim22.wav"
+		"wave"		"npc/infected/action/rageAt/rage_at_victim21.wav"
+		"wave"		"npc/infected/action/rageAt/snarl_4.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim20.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim21.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim22.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim23.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim24.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim25.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim26.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim27.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim28.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim29.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim30.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim31.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim32.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim33.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim34.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim35.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim36.wav"
+		"wave"		"npc/infected/action/rageAt/$gender/rage_at_victim37.wav"
+	}
+}
+
+// getting shoved backwards, BAMM, UHHH and anger
+"Zombie.Shoved"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.90"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+	"rndwave"
+	{
+		"wave"		"npc/infected/action/shoved/mp/shoved_long_1.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_long_2.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_long_3.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_01.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_02.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_03.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_04.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_05.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_06.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_07.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_08.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_09.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_10.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_11.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_12.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_13.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_14.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_15.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_16.wav"
+		"wave"		"npc/infected/action/shoved/mp/shoved_17.wav"
+	}
+}
+
+"Zombie.Shot"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_65dB"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+	"rndwave"
+	{
+		"wave"		"npc/infected/action/been_shot/been_shot_01.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_02.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_04.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_05.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_06.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_08.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_09.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_12.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_13.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_14.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_18.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_19.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_20.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_21.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_22.wav"
+		"wave"		"npc/infected/action/been_shot/been_shot_24.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_30.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_31.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_32.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_33.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_34.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_35.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_36.wav"
+		"wave"		"npc/infected/action/been_shot/$gender/been_shot_37.wav"
+	}
+}
+
+"Zombie.Die"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_65dB"
+	"volume"		"0.80"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+
+	"rndwave"
+	{
+		"wave"		"npc/infected/action/die/mp/odd_2.wav"
+		"wave"		"npc/infected/action/die/mp/odd_3.wav"
+		"wave"		"npc/infected/action/die/mp/odd_4.wav"
+		"wave"		"npc/infected/action/die/mp/odd_5.wav"
+		"wave"		"npc/infected/action/die/mp/squeal_1.wav"
+		"wave"		"npc/infected/action/die/mp/squeal_2.wav"
+		"wave"		"npc/infected/action/die/mp/squeal_3.wav"
+		"wave"		"npc/infected/action/die/mp/squeal_4.wav"
+		"wave"		"npc/infected/action/die/death_14.wav"
+		"wave"		"npc/infected/action/die/death_17.wav"
+		"wave"		"npc/infected/action/die/death_18.wav"
+		"wave"		"npc/infected/action/die/death_19.wav"
+		"wave"		"npc/infected/action/die/death_22.wav"
+		"wave"		"npc/infected/action/die/death_23.wav"
+		"wave"		"npc/infected/action/die/death_24.wav"
+		"wave"		"npc/infected/action/die/death_25.wav"
+		"wave"		"npc/infected/action/die/death_26.wav"
+		"wave"		"npc/infected/action/die/death_27.wav"
+		"wave"		"npc/infected/action/die/death_28.wav"
+		"wave"		"npc/infected/action/die/death_29.wav"
+		"wave"		"npc/infected/action/die/death_30.wav"
+		"wave"		"npc/infected/action/die/death_32.wav"
+		"wave"		"npc/infected/action/die/death_33.wav"
+		"wave"		"npc/infected/action/die/death_34.wav"
+		"wave"		"npc/infected/action/die/death_35.wav"
+		"wave"		"npc/infected/action/die/death_36.wav"
+		"wave"		"npc/infected/action/die/death_37.wav"
+		"wave"		"npc/infected/action/die/death_38.wav"
+		"wave"		"npc/infected/action/die/$gender/death_40.wav"
+		"wave"		"npc/infected/action/die/$gender/death_41.wav"
+		"wave"		"npc/infected/action/die/$gender/death_42.wav"
+		"wave"		"npc/infected/action/die/$gender/death_43.wav"
+		"wave"		"npc/infected/action/die/$gender/death_44.wav"
+		"wave"		"npc/infected/action/die/$gender/death_45.wav"
+		"wave"		"npc/infected/action/die/$gender/death_46.wav"
+		"wave"		"npc/infected/action/die/$gender/death_47.wav"
+		"wave"		"npc/infected/action/die/$gender/death_48.wav"
+		"wave"		"npc/infected/action/die/$gender/death_49.wav"
+	}
+}
+
+"Zombie.IgniteScream"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_70dB"
+	"volume"		"0.80"
+	"pitch"		"90,110"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+
+	"rndwave"
+	{
+		"wave"		"npc/infected/action/die/mp/squeal_1.wav"
+		"wave"		"npc/infected/action/die/mp/squeal_2.wav"
+		"wave"		"npc/infected/action/die/mp/squeal_3.wav"
+		"wave"		"npc/infected/action/die/mp/squeal_4.wav"
+		"wave"		"npc/infected/action/Ignite/Ignite01.wav"
+		"wave"		"npc/infected/action/Ignite/Ignite07.wav"
+		"wave"		"npc/infected/action/Ignite/Ignite08.wav"
+		"wave"		"npc/infected/action/Ignite/Ignite09.wav"
+		"wave"		"npc/infected/action/Ignite/$gender/Ignite11.wav"
+		"wave"		"npc/infected/action/Ignite/$gender/Ignite12.wav"
+		"wave"		"npc/infected/action/Ignite/$gender/Ignite13.wav"
+		"wave"		"npc/infected/action/Ignite/$gender/Ignite14.wav"
+		"wave"		"npc/infected/action/Ignite/$gender/Ignite10.wav"
+	}
+}
+
+"Zombie.HeadlessCough"
+{
+	"channel"		"CHAN_VOICE"
+	"soundlevel"		"SNDLVL_IDLE"
+	"volume"		"0.75"
+	"pitch"		"90,110"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+
+	"rndwave"
+	{
+		"wave"		"npc/infected/gore/headless/headless_1.wav"
+		"wave"		"npc/infected/gore/headless/headless_2.wav"
+		"wave"		"npc/infected/gore/headless/headless_3.wav"
+		"wave"		"npc/infected/gore/headless/headless_4.wav"
+	}
+}
+
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+// NON voice
+
+"Zombie.AttackMiss"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"		"SNDLVL_70dB"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+
+	"rndwave"
+	{
+		"wave"		"npc/infected/miss/claw_miss_1.wav"
+		"wave"		"npc/infected/miss/claw_miss_2.wav"
+	}
+}
+
+"Zombie.BulletImpact"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"		"SNDLVL_75dB"
+	"volume"		"0.55, 0.63"
+//	"volume"		"0.0"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+	"rndwave"
+	{
+		"wave"		")npc/infected/gore/bullets/bullet_impact_01.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_02.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_03.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_04.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_05.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_06.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_07.wav"
+		"wave"		")npc/infected/gore/bullets/bullet_impact_08.wav"
+	}
+}
+
+"Zombie.ClawScrape"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"		"SNDLVL_65dB"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+
+	"rndwave"
+	{
+		"wave"		"npc/infected/hit/claw_scrape_1.wav"
+		"wave"		"npc/infected/hit/claw_scrape_2.wav"
+		"wave"		"npc/infected/hit/claw_scrape_3.wav"
+	}
+}
+
+"Zombie.Punch"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"		"SNDLVL_NORM"
+	"pitch"		"95,105"
+	"GameData"
+	{
+		"Priority"	"Interesting"
+	}
+
+	"rndwave"
+	{
+		"wave"		"npc/infected/hit/Punch_Boxing_BodyHit03.wav"
+		"wave"		"npc/infected/hit/Punch_Boxing_BodyHit04.wav"
+		"wave"		"npc/infected/hit/Punch_Boxing_FaceHit4.wav"
+		"wave"		"npc/infected/hit/Punch_Boxing_FaceHit5.wav"
+		"wave"		"npc/infected/hit/Punch_Boxing_FaceHit6.wav"
+		"wave"		"npc/infected/hit/hit_punch_01.wav"
+		"wave"		"npc/infected/hit/hit_punch_02.wav"
+		"wave"		"npc/infected/hit/hit_punch_03.wav"
+		"wave"		"npc/infected/hit/hit_punch_04.wav"
+		"wave"		"npc/infected/hit/hit_punch_05.wav"
+		"wave"		"npc/infected/hit/hit_punch_06.wav"
+		"wave"		"npc/infected/hit/hit_punch_07.wav"
+		"wave"		"npc/infected/hit/hit_punch_08.wav"
+	}
+}
+
+
+
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+// The Mega Mob howl.
+// This is the far-off howling of 100 zombies who are about to 
+// swarm the Survivors.  The sound needs to be heard above the
+// potentially noisy event that triggered their arrival.
+
+"MegaMobIncoming"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_70dB"
+	"volume"		"0.60"
+	"pitch"		"95,105"
+	"wave"		"npc/mega_mob/mega_mob_incoming.wav"
+}
+
+"CEDA.suit.deflate"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_70dB"
+	"volume"		"0.65, 0.75"
+	"pitch"			"90,100"
+	"rndwave"
+	{	
+	
+		"wave"			"npc/infected/action/die/CEDA_Suit_Deflate.wav"
+		"wave"			"npc/infected/action/die/CEDA_Suit_Deflate_02.wav"
+		"wave"			"npc/infected/action/die/CEDA_Suit_Deflate_03.wav"
+	}
+}
