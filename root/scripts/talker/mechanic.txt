@@ -4132,6 +4132,7 @@ Rule C6M2_OpenGate1Mechanic
 Response C6M2_OpenGate1bMechanic
 {
 	scene "scenes/Mechanic/DLC1_C6M2_Bridge2Raise08.vcd"  //Hey!
+	scene "scenes/Mechanic/DLC1_C6M2_BridgeCollapse04.vcd"  //I didn't touch nothin'.
 }
 Rule C6M2_OpenGate1bMechanic
 {
