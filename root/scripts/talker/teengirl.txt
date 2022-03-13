@@ -24,13 +24,13 @@ Response C6M3PlayerNiceShotTeenGirl
 }
 Rule C6M3PlayerNiceShotTeenGirl
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsTeenGirl IssuerNotSoClose HasAFrom IsC6M3_Port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking ChanceToFire70Percent
+	criteria ConceptPlayerNiceShot IsNotCoughing IsTeenGirl IssuerNotSoClose IsC6M3_Port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking ChanceToFire70Percent
 	Response C6M3PlayerNiceShotTeenGirl
 }
 
 Rule PlayerNiceShotTeenGirl
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsTeenGirl IssuerClose HasAFrom IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking ChanceToFire30Percent
+	criteria ConceptPlayerNiceShot IsNotCoughing IsTeenGirl IssuerClose IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking ChanceToFire30Percent
 	Response C6M3PlayerNiceShotTeenGirl
 }
 
@@ -40,7 +40,7 @@ Response PlayerNiceShotNamVetTeenGirl
 }
 Rule PlayerNiceShotNamVetTeenGirl
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsTeenGirl IssuerClose HasAFrom IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsNamVet IsNotSpeaking ChanceToFire30Percent
+	criteria ConceptPlayerNiceShot IsNotCoughing IsTeenGirl IssuerClose IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsNamVet IsNotSpeaking ChanceToFire30Percent
 	Response PlayerNiceShotNamVetTeenGirl
 }
 
@@ -142,11 +142,6 @@ Rule L4D1SurvivorMournLouisTeenGirl
 	criteria ConceptPlayerSeeDeadPlayer IsNotCoughing IsTeenGirl IsDeadManager IsNotSaidSomeoneDied HasNotDefibrillator IsTalk IsTalkTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl
 	Response L4D1SurvivorMournLouisTeenGirl
 }
-
-
-//--------------------------------------------------------------------------------------------------------------
-// At Top
-//--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
 // AutoConvo
@@ -733,7 +728,7 @@ Response C6M1Intro_03aTeenGirl
 }
 Rule C6M1Intro_03aTeenGirl
 {
-	criteria ConceptC6M1Intro_03a IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_03a IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Talk:1:7"
 	applycontexttoworld
 	Response C6M1Intro_03aTeenGirl
@@ -745,7 +740,7 @@ Response C6M1Intro_04aTeenGirl
 }
 Rule C6M1Intro_04aTeenGirl
 {
-	criteria ConceptC6M1Intro_04a IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_04a IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_04aTeenGirl
 }
 
@@ -755,7 +750,7 @@ Response C6M1Intro_04cTeenGirl
 }
 Rule C6M1Intro_04cTeenGirl
 {
-	criteria ConceptC6M1Intro_04c IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_04c IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Talk:1:7"
 	applycontexttoworld
 	Response C6M1Intro_04cTeenGirl
@@ -767,7 +762,7 @@ Response C6M1Intro_11bTeenGirl
 }
 Rule C6M1Intro_11bTeenGirl
 {
-	criteria ConceptC6M1Intro_11b IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_11b IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_11bTeenGirl
 }
 
@@ -777,7 +772,7 @@ Response C6M1Intro_13dTeenGirl
 }
 Rule C6M1Intro_13dTeenGirl
 {
-	criteria ConceptC6M1Intro_13d IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_13d IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_13dTeenGirl
 }
 
@@ -787,7 +782,7 @@ Response C6M1Intro_15bTeenGirl
 }
 Rule C6M1Intro_15bTeenGirl
 {
-	criteria ConceptC6M1Intro_15b IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_15b IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_15bTeenGirl
 }
 
@@ -798,7 +793,7 @@ Response C6M1Intro_15dTeenGirl
 }
 Rule C6M1Intro_15dTeenGirl
 {
-	criteria ConceptC6M1Intro_15d IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_15d IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_15dTeenGirl
 }
 
@@ -808,7 +803,7 @@ Response C6M1Intro_17aTeenGirl
 }
 Rule C6M1Intro_17aTeenGirl
 {
-	criteria ConceptC6M1Intro_17a IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_17a IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_17aTeenGirl
 }
 
@@ -819,7 +814,7 @@ Response C6M1Intro_17cTeenGirl
 }
 Rule C6M1Intro_17cTeenGirl
 {
-	criteria ConceptC6M1Intro_17c IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_17c IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_17cTeenGirl
 }
 
@@ -830,7 +825,7 @@ Response C6M1Intro_22bTeenGirl
 }
 Rule C6M1Intro_22bTeenGirl
 {
-	criteria ConceptC6M1Intro_22b IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_22b IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_22bTeenGirl
 }
 
@@ -840,7 +835,7 @@ Response C6M1Intro_22dTeenGirl
 }
 Rule C6M1Intro_22dTeenGirl
 {
-	criteria ConceptC6M1Intro_22d IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_22d IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_22dTeenGirl
 }
 
@@ -850,7 +845,7 @@ Response C6M1Intro_22gTeenGirl
 }
 Rule C6M1Intro_22gTeenGirl
 {
-	criteria ConceptC6M1Intro_22g IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_22g IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_22gTeenGirl
 }
 
@@ -863,7 +858,7 @@ Response C6M1Intro_23aTeenGirl
 }
 Rule C6M1Intro_23aTeenGirl
 {
-	criteria ConceptC6M1Intro_23a IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_23a IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_23aTeenGirl
 }
 
@@ -873,7 +868,7 @@ Response C6M1Intro_23cTeenGirl
 }
 Rule C6M1Intro_23cTeenGirl
 {
-	criteria ConceptC6M1Intro_23c IsTeenGirl IsNotVersus HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC6M1Intro_23c IsTeenGirl IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
 	Response C6M1Intro_23cTeenGirl
 }
 
@@ -887,7 +882,7 @@ Response C6M3_BridgeDownTeenGirl
 }
 Rule C6M3_BridgeDownTeenGirl
 {
-	criteria ConceptC6M3_BridgeDown IsTeenGirl HasAFrom
+	criteria ConceptC6M3_BridgeDown IsTeenGirl
 	Response C6M3_BridgeDownTeenGirl
 }
 
@@ -900,7 +895,7 @@ Response c6m3_outroL4D1TeenGirl
 }
 Rule c6m3_outroL4D1TeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsNotVersus HasAFrom IsNotIncapacitated ChanceToFire100Percent
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroL4D1TeenGirl
 }
@@ -981,7 +976,7 @@ Response c6m3_outroL4D1AllTeenGirl
 }
 Rule c6m3_outroL4D1AllTeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus HasAFrom IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 8
 	Response c6m3_outroL4D1AllTeenGirl
 }
@@ -992,7 +987,7 @@ Response c6m3_outroL4D1MechanicTeenGirl
 }
 Rule c6m3_outroL4D1MechanicTeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsMechanicAlive ChanceToFire30Percent IsNotVersus HasAFrom IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsMechanicAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 7
 	Response c6m3_outroL4D1MechanicTeenGirl
 }
@@ -1007,7 +1002,7 @@ Response c6m3_outroL4D1MechanicZoeyTeenGirl
 }
 Rule c6m3_outroL4D1MechanicZoeyTeenGirl
 {
-	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsZoeyIntroActor ChanceToFire100Percent IsMechanicAlive IsNotVersus HasAFrom IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsZoeyIntroActor ChanceToFire100Percent IsMechanicAlive IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 2
 	Response c6m3_outroL4D1MechanicZoeyTeenGirl
 }
@@ -1021,7 +1016,7 @@ Response IncapBounce2TeenGirl
 }
 Rule IncapBounce2TeenGirl
 {
-	criteria ConceptIncapBounce2 IsTeenGirl isC6m3_port HasAFrom
+	criteria ConceptIncapBounce2 IsTeenGirl isC6m3_port
 	Response IncapBounce2TeenGirl
 }
 
@@ -1039,7 +1034,7 @@ Response L4D1_NiceJobPourTeenGirl
 }
 Rule L4D1_NiceJobPourTeenGirl
 {
-	criteria ConceptL4D1_NiceJobPour IsTeenGirl HasAFrom
+	criteria ConceptL4D1_NiceJobPour IsTeenGirl
 	Response L4D1_NiceJobPourTeenGirl
 }
 
@@ -1077,7 +1072,7 @@ Response WorldC6M3_ByBridge01TeenGirl
 }
 Rule WorldC6M3_ByBridge01TeenGirl
 {
-	criteria ConceptWorldC6M3_ByBridge01 IsTeenGirl HasAFrom
+	criteria ConceptWorldC6M3_ByBridge01 IsTeenGirl
 	Response WorldC6M3_ByBridge01TeenGirl
 }
 
@@ -1089,7 +1084,7 @@ Response WorldC6M3_ByBridge01EllisTeenGirl
 }
 Rule WorldC6M3_ByBridge01EllisTeenGirl
 {
-	criteria ConceptWorldC6M3_ByBridge01 IsTeenGirl FromIsMechanic ChanceToFire100Percent HasAFrom
+	criteria ConceptWorldC6M3_ByBridge01 IsTeenGirl FromIsMechanic ChanceToFire100Percent
 	Response WorldC6M3_ByBridge01EllisTeenGirl
 }
 
@@ -1105,7 +1100,7 @@ Response C7M1_saferoom02TeenGirl
 }
 Rule C7M1_saferoom02TeenGirl
 {
-	criteria ConceptC7M1_saferoom02 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom02 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom02TeenGirl
 }
 
@@ -1116,7 +1111,7 @@ Response C7M1_saferoom09bTeenGirl
 }
 Rule C7M1_saferoom09bTeenGirl
 {
-	criteria ConceptC7M1_saferoom09b IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom09b IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom09bTeenGirl
 }
 
@@ -1129,7 +1124,7 @@ Response C7M1_saferoom10aTeenGirl
 }
 Rule C7M1_saferoom10aTeenGirl
 {
-	criteria ConceptC7M1_saferoom10a IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom10a IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom10aTeenGirl
 }
 
@@ -1139,7 +1134,7 @@ Response C7M1_saferoom11TeenGirl
 }
 Rule C7M1_saferoom11TeenGirl
 {
-	criteria ConceptC7M1_saferoom11 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom11 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom11TeenGirl
 }
 
@@ -1149,7 +1144,7 @@ Response C7M1_saferoom15aTeenGirl
 }
 Rule C7M1_saferoom15aTeenGirl
 {
-	criteria ConceptC7M1_saferoom15a IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom15a IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom15aTeenGirl
 }
 
@@ -1159,7 +1154,7 @@ Response C7M1_saferoom18TeenGirl
 }
 Rule C7M1_saferoom18TeenGirl
 {
-	criteria ConceptC7M1_saferoom18 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom18 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom18TeenGirl
 }
 
@@ -1169,7 +1164,7 @@ Response C7M1_saferoom19aTeenGirl
 }
 Rule C7M1_saferoom19aTeenGirl
 {
-	criteria ConceptC7M1_saferoom19a IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom19a IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom19aTeenGirl
 }
 
@@ -1180,7 +1175,7 @@ Response C7M1_saferoom20aTeenGirl
 }
 Rule C7M1_saferoom20aTeenGirl
 {
-	criteria ConceptC7M1_saferoom20a IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom20a IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom20aTeenGirl
 }
 
@@ -1190,7 +1185,7 @@ Response C7M1_saferoom23TeenGirl
 }
 Rule C7M1_saferoom23TeenGirl
 {
-	criteria ConceptC7M1_saferoom23 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M1_saferoom23 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M1_saferoom23TeenGirl
 }
 
@@ -1205,7 +1200,7 @@ Response C7M1OpenTankDoorTeenGirl
 }
 Rule C7M1OpenTankDoorTeenGirl
 {
-	criteria ConceptC7M1OpenTankDoorSpeak IsTeenGirl HasAFrom
+	criteria ConceptC7M1OpenTankDoorSpeak IsTeenGirl
 	Response C7M1OpenTankDoorTeenGirl
 }
 
@@ -1238,7 +1233,7 @@ Response C7M2_saferoom01TeenGirl
 }
 Rule C7M2_saferoom01TeenGirl
 {
-	criteria ConceptC7M2_saferoom01 IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M2_saferoom01 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M2_saferoom01TeenGirl
 }
 
@@ -1248,7 +1243,7 @@ Response C7M2_saferoom01bTeenGirl
 }
 Rule C7M2_saferoom01bTeenGirl
 {
-	criteria ConceptC7M2_saferoom01b IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M2_saferoom01b IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M2_saferoom01bTeenGirl
 }
 
@@ -1260,7 +1255,7 @@ Response C7M2_saferoom05bTeenGirl
 }
 Rule C7M2_saferoom05bTeenGirl
 {
-	criteria ConceptC7M2_saferoom05b IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M2_saferoom05b IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M2_saferoom05bTeenGirl
 }
 
@@ -1271,7 +1266,7 @@ Response C7M2SafeRoomTeenGirl
 }
 Rule C7M2SafeRoomTeenGirl
 {
-	criteria ConceptTalkIdle IsTeenGirl NotInCombat C7M2VanillaOrC7M2TrueEnding IsInStartArea IsEveryoneAlive AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSaidLeavingSafeArea IsNotSpeakingWeight0
+	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsMapc7m2_barge IsInStartArea IsNotAlone AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSaidLeavingSafeArea IsNotSpeakingWeight0
 	ApplyContext "_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response C7M2SafeRoomTeenGirl
@@ -1284,7 +1279,9 @@ Response Player.WarnMegaMobc7m201TeenGirl
 }
 Rule Player.WarnMegaMobc7m201TeenGirl
 {
-	criteria ConceptPlayer.WarnMegaMobc7m201 IsTeenGirl HasAFrom
+	criteria ConceptPlayer.WarnMegaMobc7m201 IsTeenGirl
+	ApplyContext "WarnMegaMob:1:300,SaidSpecialWarn:1:30"
+	applycontexttoworld
 	Response Player.WarnMegaMobc7m201TeenGirl
 }
 
@@ -1299,7 +1296,7 @@ Response C7M3_saferoom004bTeenGirl
 }
 Rule C7M3_saferoom004bTeenGirl
 {
-	criteria ConceptC7M3_saferoom004b IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M3_saferoom004b IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M3_saferoom004bTeenGirl
 }
 
@@ -1311,7 +1308,7 @@ Response C7M3_saferoom005TeenGirl
 }
 Rule C7M3_saferoom005TeenGirl
 {
-	criteria ConceptC7M3_saferoom005 IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M3_saferoom005 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M3_saferoom005TeenGirl
 }
 
@@ -1321,7 +1318,7 @@ Response C7M3_saferoom006cTeenGirl
 }
 Rule C7M3_saferoom006cTeenGirl
 {
-	criteria ConceptC7M3_saferoom006c IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M3_saferoom006c IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M3_saferoom006cTeenGirl
 }
 
@@ -1331,7 +1328,7 @@ Response C7M3_saferoom007TeenGirl
 }
 Rule C7M3_saferoom007TeenGirl
 {
-	criteria ConceptC7M3_saferoom007 IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M3_saferoom007 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M3_saferoom007TeenGirl
 }
 
@@ -1341,7 +1338,7 @@ Response C7M3_saferoom007bTeenGirl
 }
 Rule C7M3_saferoom007bTeenGirl
 {
-	criteria ConceptC7M3_saferoom007b IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M3_saferoom007b IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M3_saferoom007bTeenGirl
 }
 
@@ -1352,7 +1349,7 @@ Response C7M3_saferoom016TeenGirl
 }
 Rule C7M3_saferoom016TeenGirl
 {
-	criteria ConceptC7M3_saferoom016 IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M3_saferoom016 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M3_saferoom016TeenGirl
 }
 
@@ -1366,7 +1363,7 @@ Response C7M3_saferoom016cTeenGirl
 }
 Rule C7M3_saferoom016cTeenGirl
 {
-	criteria ConceptC7M3_saferoom016c IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC7M3_saferoom016c IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response C7M3_saferoom016cTeenGirl
 }
 
@@ -1378,7 +1375,7 @@ Response C7M3BridgeBreaksTeenGirl
 }
 Rule C7M3BridgeBreaksTeenGirl
 {
-	criteria conceptC7M3BridgeBreaks IsTeenGirl _auto_NotSaidC7M3BridgeLeap HasAFrom
+	criteria conceptC7M3BridgeBreaks IsTeenGirl _auto_NotSaidC7M3BridgeLeap
 	Response C7M3BridgeBreaksTeenGirl
 }
 
@@ -1392,7 +1389,7 @@ Response C7M3FinalPressBikerTeenGirl
 }
 Rule C7M3FinalPressBikerTeenGirl
 {
-	criteria ConceptC7M3FinalSpeakBiker IsTeenGirl IsLastGenerator IsNotIncapacitated HasAFrom IsInRescueVehicle
+	criteria ConceptC7M3FinalSpeakBiker IsTeenGirl IsLastGenerator IsNotIncapacitated
 	Response C7M3FinalPressBikerTeenGirl
 }
 
@@ -1406,7 +1403,7 @@ Response C7M3FinalPressManagerTeenGirl
 }
 Rule C7M3FinalPressManagerTeenGirl
 {
-	criteria ConceptC7M3FinalSpeakManager IsTeenGirl IsLastGenerator IsNotIncapacitated HasAFrom IsInRescueVehicle
+	criteria ConceptC7M3FinalSpeakManager IsTeenGirl IsLastGenerator IsNotIncapacitated
 	Response C7M3FinalPressManagerTeenGirl
 }
 
@@ -1429,7 +1426,7 @@ Response C7M3FinalPressNamVetTeenGirl
 }
 Rule C7M3FinalPressNamVetTeenGirl
 {
-	criteria ConceptC7M3FinalSpeakNamVet IsTeenGirl IsLastGenerator IsNotIncapacitated HasAFrom IsInRescueVehicle
+	criteria ConceptC7M3FinalSpeakNamVet IsTeenGirl IsLastGenerator IsNotIncapacitated
 	Response C7M3FinalPressNamVetTeenGirl
 }
 
@@ -1443,7 +1440,7 @@ Response C7M3GeneratorPress01TeenGirl
 }
 Rule C7M3GeneratorPress01TeenGirl
 {
-	criteria ConceptC7M3GeneratorSpeak IsTeenGirl IsFirstGenerator _auto_NotTimerLockTeenGirl HasAFrom
+	criteria ConceptC7M3GeneratorSpeak IsTeenGirl IsFirstGenerator _auto_NotTimerLockTeenGirl
 	ApplyContext "_auto_TimerLockTeenGirl:1:6,_auto_NoLostCall:1:0,SaidCreshendoStartNear:1:0"
 	applycontexttoworld
 	Response C7M3GeneratorPress01TeenGirl
@@ -1455,7 +1452,7 @@ Response C7M3GeneratorPress02TeenGirl
 }
 Rule C7M3GeneratorPress02TeenGirl
 {
-	criteria ConceptC7M3GeneratorSpeak IsTeenGirl IsSecondGenerator _auto_NotTimerLockTeenGirl HasAFrom
+	criteria ConceptC7M3GeneratorSpeak IsTeenGirl IsSecondGenerator _auto_NotTimerLockTeenGirl
 	ApplyContext "_auto_TimerLockTeenGirl:1:6,SaidCreshendoStartNear:1:0"
 	applycontexttoworld
 	Response C7M3GeneratorPress02TeenGirl
@@ -1468,7 +1465,7 @@ Response C7M3GeneratorPress03TeenGirl
 }
 Rule C7M3GeneratorPress03TeenGirl
 {
-	criteria ConceptC7M3GeneratorSpeak IsTeenGirl IsThirdGenerator _auto_NotTimerLockTeenGirl HasAFrom
+	criteria ConceptC7M3GeneratorSpeak IsTeenGirl IsThirdGenerator _auto_NotTimerLockTeenGirl
 	ApplyContext "_auto_TimerLockTeenGirl:1:6,SaidCreshendoStartNear:1:0"
 	applycontexttoworld
 	Response C7M3GeneratorPress03TeenGirl
@@ -1481,7 +1478,7 @@ Response C7M3PlayerGetToRescueVehicleTeenGirl
 }
 Rule C7M3PlayerGetToRescueVehicleTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl C7M3VanillaOrC7M3TrueEnding IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl ismapc7m3_port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleTeenGirl
@@ -1494,7 +1491,7 @@ Response C7M3PlayerGetToRescueVehicleLouisTeenGirl
 }
 Rule C7M3PlayerGetToRescueVehicleLouisTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl C7M3VanillaOrC7M3TrueEnding IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsManagerAlive ChanceToFire20Percent _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl ismapc7m3_port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsManagerAlive ChanceToFire20Percent _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleLouisTeenGirl
@@ -1506,7 +1503,7 @@ Response C7M3PlayerIsOnRescueVehicleNagTeenGirl
 }
 Rule C7M3PlayerIsOnRescueVehicleNagTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl C7M3VanillaOrC7M3TrueEnding IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl _auto_NotC7M3BridgeReady _auto_NotPressedC7M3BridgeButton IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl ismapc7m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl _auto_NotC7M3BridgeReady IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response C7M3PlayerIsOnRescueVehicleNagTeenGirl
@@ -1520,7 +1517,7 @@ Response C7M3PlayerRaiseBridgeNagTeenGirl
 }
 Rule C7M3PlayerRaiseBridgeNagTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl C7M3VanillaOrC7M3TrueEnding IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl _auto_IsC7M3BridgeReady _auto_NotPressedC7M3BridgeButton IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl ismapc7m3_port IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl _auto_IsC7M3BridgeReady _auto_NotPressedC7M3BridgeButton IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response C7M3PlayerRaiseBridgeNagTeenGirl
@@ -1537,7 +1534,7 @@ Response C7M3BridgeButtonSpeakTeenGirl
 }
 Rule C7M3BridgeButtonSpeakTeenGirl
 {
-	criteria ConceptC7M3BridgeButtonSpeak IsTeenGirl HasAFrom
+	criteria ConceptC7M3BridgeButtonSpeak IsTeenGirl
 	Response C7M3BridgeButtonSpeakTeenGirl
 }
 
@@ -1548,7 +1545,7 @@ Response C7M3WaveOverGen1TeenGirl
 }
 Rule C7M3WaveOverGen1TeenGirl
 {
-	criteria ConceptC7M3WaveOverSpeak IsTeenGirl IsSecondGenerator HasAFrom
+	criteria ConceptC7M3WaveOverSpeak IsTeenGirl IsSecondGenerator
 	Response C7M3WaveOverGen1TeenGirl
 }
 
@@ -1560,7 +1557,7 @@ Response C7M3WaveOverGen2TeenGirl
 }
 Rule C7M3WaveOverGen2TeenGirl
 {
-	criteria ConceptC7M3WaveOverSpeak IsTeenGirl IsThirdGenerator HasAFrom
+	criteria ConceptC7M3WaveOverSpeak IsTeenGirl IsThirdGenerator
 	Response C7M3WaveOverGen2TeenGirl
 }
 
@@ -1596,7 +1593,7 @@ Response HowitzerBurnEnd00TeenGirl
 }
 Rule HowitzerBurnEnd00TeenGirl
 {
-	criteria ConceptHowitzerBurnEnd00 IsTeenGirl HasAFrom NotCrash01ThroughBridge AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptHowitzerBurnEnd00 IsTeenGirl NotCrash01ThroughBridge AutoIsNotScavenge AutoIsNotSurvival
 	Response HowitzerBurnEnd00TeenGirl
 }
 
@@ -1606,7 +1603,7 @@ Response HowitzerBurnEnd01TeenGirl
 }
 Rule HowitzerBurnEnd01TeenGirl
 {
-	criteria ConceptHowitzerBurnEnd01 IsTeenGirl HasAFrom
+	criteria ConceptHowitzerBurnEnd01 IsTeenGirl
 	Response HowitzerBurnEnd01TeenGirl
 }
 
@@ -1616,7 +1613,7 @@ Response L4D1CrashCourseR14TeenGirl
 }
 Rule L4D1CrashCourseR14TeenGirl
 {
-	criteria ConceptCrashCourseR14 IsTeenGirl HasAFrom
+	criteria ConceptCrashCourseR14 IsTeenGirl
 	Response L4D1CrashCourseR14TeenGirl
 }
 
@@ -1640,7 +1637,7 @@ Response L4D1HowitzerFiredTeenGirl
 }
 Rule L4D1HowitzerFiredTeenGirl
 {
-	criteria ConceptHowitzerFiredResponse IsTeenGirl ChanceToFire50Percent HasAFrom AutoIsNotScavenge
+	criteria ConceptHowitzerFiredResponse IsTeenGirl ChanceToFire50Percent AutoIsNotScavenge
 	Response L4D1HowitzerFiredTeenGirl
 }
 
@@ -1654,7 +1651,7 @@ Response CrashFinaleGenerator2OnSpkTeenGirl
 }
 Rule CrashFinaleGenerator2OnSpkTeenGirl
 {
-	criteria ConceptCrashFinaleGenerator2OnSpk IsTeenGirl HasAFrom
+	criteria ConceptCrashFinaleGenerator2OnSpk IsTeenGirl
 	Response CrashFinaleGenerator2OnSpkTeenGirl
 }
 
@@ -1668,7 +1665,7 @@ Response CrashFinaleGenerator2SpeakTeenGirl
 }
 Rule CrashFinaleGenerator2SpeakTeenGirl
 {
-	criteria ConceptCrashFinaleGenerator2Speak IsTeenGirl HasAFrom
+	criteria ConceptCrashFinaleGenerator2Speak IsTeenGirl
 	Response CrashFinaleGenerator2SpeakTeenGirl
 }
 
@@ -1679,7 +1676,7 @@ Response CrashFinaleGeneratorBreakSpkTeenGirl
 }
 Rule CrashFinaleGeneratorBreakSpkTeenGirl
 {
-	criteria ConceptCrashFinaleGeneratorBreakSpk IsTeenGirl HasAFrom AutoIsNotSurvival
+	criteria ConceptCrashFinaleGeneratorBreakSpk IsTeenGirl AutoIsNotSurvival
 	Response CrashFinaleGeneratorBreakSpkTeenGirl
 }
 
@@ -1690,7 +1687,7 @@ Response CrashFinaleGeneratorSpeakTeenGirl
 }
 Rule CrashFinaleGeneratorSpeakTeenGirl
 {
-	criteria ConceptCrashFinaleGeneratorSpeak IsTeenGirl IsNotAlone HasAFrom
+	criteria ConceptCrashFinaleGeneratorSpeak IsTeenGirl IsNotAlone
 	Response CrashFinaleGeneratorSpeakTeenGirl
 }
 
@@ -1714,7 +1711,7 @@ Response CrashFinaleTruckNagTeenGirl
 }
 Rule CrashFinaleTruckNagTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsCrashCourse2 IsNotCoughing IsNotIncapacitated NoOneInSafeSpot IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsCrashCourse2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response CrashFinaleTruckNagTeenGirl
@@ -1738,7 +1735,7 @@ Response CrashFinaleTruckResp01TeenGirl
 }
 Rule CrashFinaleTruckResp01TeenGirl
 {
-	criteria ConceptCrashFinaleTruckResp01 IsTeenGirl HasAFrom
+	criteria ConceptCrashFinaleTruckResp01 IsTeenGirl
 	ApplyContext "_auto_TimerLockA:1:10,CrashGenerator1Nag:1:0"
 	applycontexttoworld
 	Response CrashFinaleTruckResp01TeenGirl
@@ -1750,7 +1747,7 @@ Response CrashFinaleTruckResp02TeenGirl
 }
 Rule CrashFinaleTruckResp02TeenGirl
 {
-	criteria ConceptCrashFinaleTruckResp02 IsTeenGirl HasAFrom
+	criteria ConceptCrashFinaleTruckResp02 IsTeenGirl
 	Response CrashFinaleTruckResp02TeenGirl
 }
 
@@ -1760,7 +1757,7 @@ Response CrashFinaleTruckRespZombie2TeenGirl
 }
 Rule CrashFinaleTruckRespZombie2TeenGirl
 {
-	criteria ConceptCrashFinaleTruckRespZombie2 IsTeenGirl HasAFrom
+	criteria ConceptCrashFinaleTruckRespZombie2 IsTeenGirl
 	Response CrashFinaleTruckRespZombie2TeenGirl
 }
 
@@ -1783,7 +1780,7 @@ Response L4D1CrashFinaleGenUnPressSpeakTeenGirl
 }
 Rule L4D1CrashFinaleGenUnPressSpeakTeenGirl
 {
-	criteria ConceptCrashFinaleGeneratorUnPressSpeak IsTeenGirl HasAFrom
+	criteria ConceptCrashFinaleGeneratorUnPressSpeak IsTeenGirl
 	Response L4D1CrashFinaleGenUnPressSpeakTeenGirl
 }
 
@@ -1795,13 +1792,13 @@ Response L4D1CrashFinaleGen2UnPressSpeakTeenGirl
 }
 Rule L4D1CrashFinaleGen2UnPressSpeakTeenGirl
 {
-	criteria ConceptCrashFinaleGenerator2UnPressSpeak IsTeenGirl HasAFrom
+	criteria ConceptCrashFinaleGenerator2UnPressSpeak IsTeenGirl
 	Response L4D1CrashFinaleGen2UnPressSpeakTeenGirl
 }
 
 Rule L4D1SacrificeFinaleGenUnPressSpeakTeenGirl
 {
-	criteria ConceptCrashFinaleGeneratorUnPressSpeak IsTeenGirl C7M3VanillaOrC7M3TrueEnding
+	criteria ConceptCrashFinaleGeneratorUnPressSpeak IsTeenGirl IsMapc7m3_port
 	Response NoResponse
 }
 
@@ -1811,7 +1808,7 @@ Response L4D1CrashFinaleTruckReadySpkTeenGirl
 }
 Rule L4D1CrashFinaleTruckReadySpkTeenGirl
 {
-	criteria ConceptCrashFinaleTruckReadySpk IsTeenGirl IsNotCoughing HasAFrom AutoIsNotSurvival
+	criteria ConceptCrashFinaleTruckReadySpk IsTeenGirl IsNotCoughing AutoIsNotSurvival
 	Response L4D1CrashFinaleTruckReadySpkTeenGirl
 }
 
@@ -1821,7 +1818,7 @@ Response L4D1CrashFinaleTruckReadyRespTeenGirl
 }
 Rule L4D1CrashFinaleTruckReadyRespTeenGirl
 {
-	criteria ConceptCrashFinaleTruckReadyResp IsTeenGirl IsNotCoughing HasAFrom
+	criteria ConceptCrashFinaleTruckReadyResp IsTeenGirl IsNotCoughing
 	Response L4D1CrashFinaleTruckReadyRespTeenGirl
 }
 
@@ -1849,7 +1846,7 @@ Response CrashCourseR01TeenGirl
 }
 Rule CrashCourseR01TeenGirl
 {
-	criteria ConceptCrashCourseR01 IsTeenGirl IssuerClose HasAFrom IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptCrashCourseR01 IsTeenGirl IssuerClose IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response CrashCourseR01TeenGirl
 }
 
@@ -1861,7 +1858,7 @@ Response CrashCourseR03TeenGirl
 }
 Rule CrashCourseR03TeenGirl
 {
-	criteria ConceptCrashCourseR03 IsTeenGirl IssuerClose HasAFrom IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptCrashCourseR03 IsTeenGirl IssuerClose IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response CrashCourseR03TeenGirl
 }
 
@@ -1873,7 +1870,7 @@ Rule CrashCourseR03TeenGirl
 //}
 //Rule CrashCourseR06TeenGirl
 //{
-//	criteria ConceptCrashCourseR06 IsTeenGirl IssuerClose HasAFrom IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+//	criteria ConceptCrashCourseR06 IsTeenGirl IssuerClose IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 //	Response CrashCourseR06TeenGirl
 //}
 
@@ -1884,7 +1881,7 @@ Response CrashCourseR10TeenGirl
 }
 Rule CrashCourseR10TeenGirl
 {
-	criteria ConceptCrashCourseR10 IsTeenGirl HasAFrom IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptCrashCourseR10 IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response CrashCourseR10TeenGirl
 }
 
@@ -1894,7 +1891,7 @@ Response CrashCourseR11TeenGirl
 }
 Rule CrashCourseR11TeenGirl
 {
-	criteria ConceptCrashCourseR11 IsTeenGirl IssuerReallyClose HasAFrom IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptCrashCourseR11 IsTeenGirl IssuerReallyClose IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response CrashCourseR11TeenGirl
 }
 
@@ -1904,7 +1901,7 @@ Response CrashCourseR12TeenGirl
 }
 Rule CrashCourseR12TeenGirl
 {
-	criteria ConceptCrashCourseR12 IsTeenGirl IssuerReallyClose HasAFrom IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptCrashCourseR12 IsTeenGirl IssuerReallyClose IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response CrashCourseR12TeenGirl
 }
 
@@ -2023,8 +2020,8 @@ Response L4D1PlayerRemarkcrashcourse01_path24TeenGirl
 }
 Rule L4D1PlayerRemarkcrashcourse01_path24TeenGirl
 {
-	criteria ConceptRemark IsTeenGirl Iscrashcourse01_path24 IsNotSaidcrashcourse01_path24 IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear200 IsWorldTalkTeenGirl IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "Saidcrashcourse01_path24:1:0,SaidSafeSpotAhead:1:0"
+	criteria ConceptRemark IsTeenGirl Iscrashcourse01_path24 IsNotSaidSafeSpotAhead IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear200 IsWorldTalkTeenGirl IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "SaidSafeSpotAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerRemarkcrashcourse01_path24TeenGirl
 }
@@ -2134,7 +2131,7 @@ Response IntroCrashR01TeenGirl
 }
 Rule IntroCrashR01TeenGirl
 {
-	criteria ConceptIntroCrashR01 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR01 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR01TeenGirl
 }
 
@@ -2144,7 +2141,7 @@ Response IntroCrashR04TeenGirl
 }
 Rule IntroCrashR04TeenGirl
 {
-	criteria ConceptIntroCrashR04 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR04 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR04TeenGirl
 }
 
@@ -2154,7 +2151,7 @@ Response IntroCrashR07TeenGirl
 }
 Rule IntroCrashR07TeenGirl
 {
-	criteria ConceptIntroCrashR07 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR07 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR07TeenGirl
 }
 
@@ -2164,7 +2161,7 @@ Response IntroCrashR09TeenGirl
 }
 Rule IntroCrashR09TeenGirl
 {
-	criteria ConceptIntroCrashR09 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR09 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR09TeenGirl
 }
 
@@ -2174,7 +2171,7 @@ Response IntroCrashR10TeenGirl
 }
 Rule IntroCrashR10TeenGirl
 {
-	criteria ConceptIntroCrashR10 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR10 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR10TeenGirl
 }
 
@@ -2184,7 +2181,7 @@ Response IntroCrashR11TeenGirl
 }
 Rule IntroCrashR11TeenGirl
 {
-	criteria ConceptIntroCrashR11 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR11 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR11TeenGirl
 }
 
@@ -2194,7 +2191,7 @@ Response IntroCrashR19TeenGirl
 }
 Rule IntroCrashR19TeenGirl
 {
-	criteria ConceptIntroCrashR19 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR19 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR19TeenGirl
 }
 
@@ -2205,7 +2202,7 @@ Response IntroCrashR28TeenGirl
 }
 Rule IntroCrashR28TeenGirl
 {
-	criteria ConceptIntroCrashR28 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroCrashR28 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR28TeenGirl
 }
 
@@ -2235,7 +2232,7 @@ Response CrashCourseI01TeenGirl
 }
 Rule CrashCourseI01TeenGirl
 {
-	criteria ConceptCrashCourseI01 IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptCrashCourseI01 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response CrashCourseI01TeenGirl
 }
 
@@ -2247,7 +2244,7 @@ Response CrashCourseB01TeenGirl
 }
 Rule CrashCourseB01TeenGirl
 {
-	criteria ConceptCrashCourseB01 IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptCrashCourseB01 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "CanadaBikerHate:1:0"
 	applycontexttoworld
 	Response CrashCourseB01TeenGirl
@@ -2262,7 +2259,7 @@ Response L4D1C9M2SafeRoomTeenGirl
 }
 Rule L4D1C9M2SafeRoomTeenGirl
 {
-	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsInStartArea IsEveryoneAlive IsNotSaidLeavingSafeArea IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomQuiet _auto_IsSafeRoomStart IsNotSpeakingWeight0
+	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsInStartArea IsNotAlone IsNotSaidLeavingSafeArea IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomQuiet _auto_IsSafeRoomStart IsNotSpeakingWeight0
 	ApplyContext "_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response L4D1C9M2SafeRoomTeenGirl
@@ -2277,7 +2274,7 @@ Response L4D1IntroFarm4TeenGirl
 }
 Rule L4D1IntroFarm4TeenGirl
 {
-	criteria ConceptIntroFarm4 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroFarm4 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1IntroFarm4TeenGirl
 }
 
@@ -2360,7 +2357,7 @@ Response L4D1SurvivorFinalVehicleBoatTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleBoatTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsDeathToll5 IsNotCoughing IsNotIncapacitated NoOneInSafeSpot IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatTeenGirl
@@ -2384,7 +2381,7 @@ Response L4D1SurvivorFinalVehicleFarmTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleFarmTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsBloodHarvest5 IsNotCoughing IsNotIncapacitated NoOneInSafeSpot IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmTeenGirl
@@ -2402,16 +2399,16 @@ Rule L4D1SurvivorFinalVehicleInsideFarmTeenGirl
 	Response L4D1SurvivorFinalVehicleInsideFarmTeenGirl
 }
 
-Response L4D1SurvivorFinalVehicleFarmArrivedTeenGirl
+Response L4D1SurvivorFinalVehicleFarmSpottedTeenGirl
 {
 	scene "scenes/TeenGirl/ArriveTruckInitial01.vcd"  then any EmphaticArriveRunFarm foo:0 -1.615 //The truck's here! Let's go!
 }
-Rule L4D1SurvivorFinalVehicleFarmArrivedTeenGirl
+Rule L4D1SurvivorFinalVehicleFarmSpottedTeenGirl
 {
-	criteria ConceptFinalVehicleArrived IsTeenGirl IsBloodHarvest5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival _auto_NotEscapeReady IsNotSpeakingWeight0
-	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsBloodHarvest5 IsNotIncapacitated _auto_IsFinaleStarted
+	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
-	Response L4D1SurvivorFinalVehicleFarmArrivedTeenGirl
+	Response L4D1SurvivorFinalVehicleFarmSpottedTeenGirl
 }
 
 Response L4D1SurvivorFinalVehicleRooftopTeenGirl
@@ -2420,7 +2417,7 @@ Response L4D1SurvivorFinalVehicleRooftopTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleRooftopTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsNoMercy5 IsNotCoughing IsNotIncapacitated NoOneInSafeSpot IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRooftopTeenGirl
@@ -2438,28 +2435,16 @@ Rule L4D1SurvivorFinalVehicleInsideRooftopTeenGirl
 	Response L4D1SurvivorFinalVehicleInsideRooftopTeenGirl
 }
 
-Response L4D1SurvivorFinalVehicleArrivedRunwayTeenGirl
+Response L4D1SurvivorFinalVehicleRunwayTeenGirl
 {
 	scene "scenes/TeenGirl/WorldAirport0504.vcd"  then any EmphaticArriveRun foo:0 -1.644 //The plane's fueled: Let's go!
 	scene "scenes/TeenGirl/WorldAirport0505.vcd"  then any EmphaticArriveRun foo:0 -1.156 //The plane's ready!
 	scene "scenes/TeenGirl/WorldAirport0507.vcd"  then any EmphaticArriveRun foo:0 -2.223 //We can get on the plane! Let's go! Let's go!
-}
-Rule L4D1SurvivorFinalVehicleArrivedRunwayTeenGirl
-{
-	criteria ConceptFinalVehicleArrived IsTeenGirl IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival _auto_NotEscapeReady IsNotSpeakingWeight0
-	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
-	applycontexttoworld
-	Response L4D1SurvivorFinalVehicleArrivedRunwayTeenGirl
-}
-
-Response L4D1SurvivorFinalVehicleRunwayTeenGirl
-{
-	norepeat
 	scene "scenes/TeenGirl/ArrivePlane02.vcd"  then any EmphaticArriveRun foo:0 0.1 //Get to the plane!
 }
 Rule L4D1SurvivorFinalVehicleRunwayTeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsDeadAir5 IsNotCoughing IsNotIncapacitated NoOneInSafeSpot IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsDeadAir5 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleRunwayTeenGirl
@@ -2477,43 +2462,32 @@ Rule L4D1SurvivorFinalVehicleInsideRunwayTeenGirl
 	Response L4D1SurvivorFinalVehicleInsideRunwayTeenGirl
 }
 
-Response L4D1SurvivorFinalVehicleArrivedBoatTeenGirl
+Response L4D1SurvivorFinalVehicleSpottedBoatTeenGirl
 {
 	scene "scenes/TeenGirl/ArriveBoatInitial01.vcd"  then any EmphaticArriveRun foo:0 -1.984 //Boat's here, let's go
 	scene "scenes/TeenGirl/ArriveBoatInitial02.vcd"  then any EmphaticArriveRun foo:0 -2.384 //The boat's here! Come on, let's go!
 	scene "scenes/TeenGirl/ArriveBoatInitial05.vcd"  then any EmphaticArriveRun foo:0 -2.221 //The boat's here! Come on, let's go!
 }
-Rule L4D1SurvivorFinalVehicleArrivedBoatTeenGirl
+Rule L4D1SurvivorFinalVehicleSpottedBoatTeenGirl
 {
-	criteria ConceptFinalVehicleArrived IsTeenGirl IsDeathToll5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival _auto_NotEscapeReady IsNotSpeakingWeight0
-	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsDeathToll5 IsNotIncapacitated _auto_IsFinaleStarted
+	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
-	Response L4D1SurvivorFinalVehicleArrivedBoatTeenGirl
+	Response L4D1SurvivorFinalVehicleSpottedBoatTeenGirl
 }
 
 Response L4D1SurvivorFinalVehicleSpottedRooftopTeenGirl
 {
+	scene "scenes/TeenGirl/ArriveChopperInitial01.vcd"  then any EmphaticArriveRun foo:0 -2.255 //Guys, the helicopter's here. Let's go!
+	scene "scenes/TeenGirl/ArriveChopperInitial02.vcd"  then any EmphaticArriveRun foo:0 -1.700 //The helicopter's here! Come on, let's go!
 	print " " then pilot HospitalRadioChopperHere foo:0 0 //
 }
 Rule L4D1SurvivorFinalVehicleSpottedRooftopTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsNoMercy5 _auto_IsFinaleStarted
-	ApplyContext "_auto_Finale:2:0"
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsNoMercy5 IsNotIncapacitated _auto_IsFinaleStarted
+	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRooftopTeenGirl
-}
-
-Response L4D1SurvivorFinalVehicleArrivedRooftopTeenGirl
-{
-	scene "scenes/TeenGirl/ArriveChopperInitial01.vcd"  then any EmphaticArriveRun foo:0 -2.255 //Guys, the helicopter's here. Let's go!
-	scene "scenes/TeenGirl/ArriveChopperInitial02.vcd"  then any EmphaticArriveRun foo:0 -1.700 //The helicopter's here! Come on, let's go!
-}
-Rule L4D1SurvivorFinalVehicleArrivedRooftopTeenGirl
-{
-	criteria ConceptFinalVehicleArrived IsTeenGirl IsNoMercy5 IsNotCoughing IsNotIncapacitated IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival _auto_NotEscapeReady IsNotSpeakingWeight0
-	ApplyContext "_auto_Escape:1:0,_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
-	applycontexttoworld
-	Response L4D1SurvivorFinalVehicleArrivedRooftopTeenGirl
 }
 
 Response L4D1SurvivorFinalVehicleSpottedRunwayTeenGirl
@@ -2522,8 +2496,8 @@ Response L4D1SurvivorFinalVehicleSpottedRunwayTeenGirl
 }
 Rule L4D1SurvivorFinalVehicleSpottedRunwayTeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsDeadAir5 _auto_IsFinaleStarted
-	ApplyContext "_auto_Finale:2:0"
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsDeadAir5 IsNotIncapacitated _auto_IsFinaleStarted
+	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRunwayTeenGirl
 }
@@ -2569,7 +2543,7 @@ Response L4D1ResponseSoftDispleasureSwearTeenGirl
 }
 Rule L4D1ResponseSoftDispleasureSwearTeenGirl
 {
-	criteria ConceptResponseSoftDispleasureSwear IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IssuerMediumClose IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptResponseSoftDispleasureSwear IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IssuerMediumClose IsWorldTalkTeenGirl
 	Response L4D1ResponseSoftDispleasureSwearTeenGirl
 }
 
@@ -2597,7 +2571,7 @@ Response L4D1SurvivorAskBillForHealthTeenGirl
 }
 Rule L4D1SurvivorAskBillForHealthTeenGirl
 {
-	criteria ConceptAskForHealth2  IsTeenGirl FromIsNamVet IssuerClose IsNotSpeaking IsNotOnThirdStrike
+	criteria ConceptAskForHealth2 IsTeenGirl FromIsNamVet IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskBillForHealthTeenGirl
 }
 
@@ -2627,7 +2601,7 @@ Response L4D1SurvivorAskFrancisForHealthTeenGirl
 }
 Rule L4D1SurvivorAskFrancisForHealthTeenGirl
 {
-	criteria ConceptAskForHealth2  IsTeenGirl FromIsBiker IssuerClose IsNotSpeaking IsNotOnThirdStrike
+	criteria ConceptAskForHealth2 IsTeenGirl FromIsBiker IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskFrancisForHealthTeenGirl
 }
 
@@ -2637,7 +2611,7 @@ Response L4D1SurvivorAskLouisForHealthTeenGirl
 }
 Rule L4D1SurvivorAskLouisForHealthTeenGirl
 {
-	criteria ConceptAskForHealth2  IsTeenGirl FromIsManager IssuerClose IsNotSpeaking IsNotOnThirdStrike
+	criteria ConceptAskForHealth2 IsTeenGirl FromIsManager IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskLouisForHealthTeenGirl
 }
 
@@ -2833,6 +2807,21 @@ Rule SurvivorSpottedGrenadeAutoTeenGirl
 	Response SurvivorSpottedGrenadeTeenGirl
 }
 
+Response SurvivorSpottedGrenadeAutoTeenGirl2
+{
+	scene "scenes/TeenGirl/Hurrah01.vcd"  //Cool.
+	scene "scenes/TeenGirl/Hurrah01.vcd"  //Cool.
+	scene "scenes/TeenGirl/Yes10.vcd"  //Yeah.
+	scene "scenes/TeenGirl/Yes10.vcd"  //Yeah.
+}
+Rule SurvivorSpottedGrenadeAutoTeenGirl2
+{
+	criteria ConceptPlayerSpotGrenade IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsSmartLookAuto IsNotInSafeSpot NoHasGrenade IsNotAlone IsSaidSpotGrenade IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotGrenade:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeAutoTeenGirl2
+}
+
 Response SurvivorSpottedHealthTeenGirl
 {
 	scene "scenes/TeenGirl/SpotFirstAid01.vcd"   //First Aid Kit here!
@@ -2859,6 +2848,14 @@ Rule SurvivorSpottedHealthAutoTeenGirl
 	ApplyContext "SaidSpotHealth:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedHealthTeenGirl
+}
+
+Rule SurvivorSpottedHealthAutoTeenGirl2
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsSmartLookAuto  IsNotInSafeSpot NoHasFirstAidKit IsNotAlone IsSaidSpotHealth IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotHealth:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeAutoTeenGirl2
 }
 
 Response SurvivorSpottedMolotovTeenGirl
@@ -2893,7 +2890,7 @@ Response SurvivorSpottedVomitJarTeenGirl
 Rule SurvivorSpottedVomitJarTeenGirl
 {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto IsVomitjar IsWorldTalkTeenGirl _auto_NotSpottedVehicle
-	ApplyContext "SaidSpotMolotov:1:5,SaidSpot:1:20"
+	ApplyContext "SaidSpotVomitJar:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedVomitJarTeenGirl
 }
@@ -2901,7 +2898,7 @@ Rule SurvivorSpottedVomitJarTeenGirl
 Rule SurvivorSpottedVomitJarAutoTeenGirl
 {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpot IsVomitjar IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidSpotMolotov:1:5,SaidSpot:1:20"
+	ApplyContext "SaidSpotVomitJar:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedVomitJarTeenGirl
 }
@@ -3016,7 +3013,7 @@ Rule SurvivorSpottedLaserSightsAutoTeenGirl
 
 Rule SurvivorBotPickupLaserSightsSpottedTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsNotSaidSpotWeapons IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsNotSaidSpotWeapons IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedAdrenalineTeenGirl
@@ -3079,7 +3076,7 @@ Rule L4D1SpottedBoomerAlsoTeenGirl
 
 Rule L4D1SpottedBoomer2TeenGirl
 {
-	criteria ConceptPlayerWarnBoomer IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	Response L4D1SpottedBoomerTeenGirl
 }
 
@@ -3107,7 +3104,7 @@ Rule L4D1SpottedHunterAlsoTeenGirl
 
 Rule L4D1SpottedHunter2TeenGirl
 {
-	criteria ConceptPlayerWarnHunter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	Response L4D1SpottedHunterTeenGirl
 }
 
@@ -3135,7 +3132,7 @@ Rule L4D1SpottedSmokerAlsoTeenGirl
 
 Rule L4D1SpottedSmoker2TeenGirl
 {
-	criteria ConceptPlayerWarnSmoker IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	Response L4D1SpottedSmokerTeenGirl
 }
 
@@ -3163,7 +3160,7 @@ Rule L4D1SpottedChargerAlsoTeenGirl
 
 Rule L4D1SpottedCharger2TeenGirl
 {
-	criteria ConceptPlayerWarnCharger IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	Response L4D1SpottedChargerTeenGirl
 }
 
@@ -3191,7 +3188,7 @@ Rule L4D1SpottedJockeyAlsoTeenGirl
 
 Rule L4D1SpottedJockey2TeenGirl
 {
-	criteria ConceptPlayerWarnJockey IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	Response L4D1SpottedJockeyTeenGirl
 }
 
@@ -3219,7 +3216,7 @@ Rule L4D1SpottedSpitterAlsoTeenGirl
 
 Rule L4D1SpottedSpitter2TeenGirl
 {
-	criteria ConceptPlayerWarnSpitter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	Response L4D1SpottedSpitterTeenGirl
 }
 
@@ -3262,7 +3259,7 @@ Rule SurvivorSpottedTankTeenGirl
 
 Rule SurvivorSpottedTank2TeenGirl
 {
-	criteria ConceptPlayerWarnTank IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnTank IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	Response SurvivorSpottedTankTeenGirl
 }
 
@@ -3283,7 +3280,7 @@ Rule L4D1SpottedTankTeenGirl
 
 Rule L4D1SpottedTank2TeenGirl
 {
-	criteria ConceptPlayerWarnTank IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated Isc6m3_port IsNotVersus IsNotSurvival IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnTank IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated Isc6m3_port IsNotVersus IsNotSurvival _auto_NotSpottedVehicle
 	Response L4D1SpottedTankTeenGirl
 }
 
@@ -3304,7 +3301,7 @@ Rule SurvivorSpottedWitchTeenGirl
 
 Rule SurvivorSpottedWitch2TeenGirl
 {
-	criteria ConceptPlayerWarnWitch IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSaidWitchStartAttack IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerWarnWitch IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated IsNotSaidWitchStartAttack _auto_NotSpottedVehicle
 	Response SurvivorSpottedWitchTeenGirl
 }
 
@@ -3321,7 +3318,7 @@ Response L4D1EmphaticArriveRunTeenGirl
 }
 Rule L4D1EmphaticArriveRunTeenGirl
 {
-	criteria ConceptEmphaticArriveRun IsNotCoughing IsTeenGirl IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptEmphaticArriveRun IsNotCoughing IsTeenGirl IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1EmphaticArriveRunTeenGirl
 }
 
@@ -3374,7 +3371,7 @@ Response L4D1PlayerFriendlyFireTeenGirl
 }
 Rule L4D1PlayerFriendlyFireTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireTeenGirl
 }
@@ -3388,7 +3385,7 @@ Response L4D1PlayerFriendlyFire2TeenGirl
 }
 Rule L4D1PlayerFriendlyFire2TeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2TeenGirl
 }
@@ -3400,7 +3397,7 @@ Response L4D1PlayerFriendlyFireFromBillTeenGirl
 }
 Rule L4D1PlayerFriendlyFireFromBillTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsNamVet ChanceToFire30Percent IsWorldTalkTeenGirl IsNotZombiePresentTank _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsNamVet ChanceToFire30Percent IsWorldTalkTeenGirl IsNotZombiePresentTank
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromBillTeenGirl
 }
@@ -3413,7 +3410,7 @@ Response L4D1PlayerFriendlyFireFromFrancisTeenGirl
 }
 Rule L4D1PlayerFriendlyFireFromFrancisTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsBiker ChanceToFire30Percent IsWorldTalkTeenGirl IsNotZombiePresentTank _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsBiker ChanceToFire30Percent IsWorldTalkTeenGirl IsNotZombiePresentTank
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromFrancisTeenGirl
 }
@@ -3424,7 +3421,7 @@ Response L4D1PlayerFriendlyFireFromLouisTeenGirl
 }
 Rule L4D1PlayerFriendlyFireFromLouisTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsManager ChanceToFire30Percent IsWorldTalkTeenGirl IsNotZombiePresentTank _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsManager ChanceToFire30Percent IsWorldTalkTeenGirl IsNotZombiePresentTank
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromLouisTeenGirl
 }
@@ -3447,7 +3444,7 @@ Response L4D1PlayerFriendlyFireNoBulletTeenGirl
 }
 Rule L4D1PlayerFriendlyFireNoBulletTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletTeenGirl
 }
@@ -3550,7 +3547,7 @@ Response PlayerToTheRescueRosTeenGirl
 }
 Rule PlayerToTheRescueRosTeenGirl
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response PlayerToTheRescueRosTeenGirl
 }
 
@@ -3610,7 +3607,7 @@ Rule L4D1SurvivorCriticalHurtTeenGirl
 
 Rule L4D1SurvivorCriticalHurtC7M3TeenGirl
 {
-	criteria IsSurvivor InPain IsCriticalPain IsTeenGirl IsTalk IsTalkTeenGirl C7M3VanillaOrC7M3TrueEnding _auto_IsSaidC7M3BridgeLeap IsWorldTalkTeenGirl
+	criteria IsSurvivor InPain IsCriticalPain IsTeenGirl IsTalk IsTalkTeenGirl Ismapc7m3_port _auto_IsSaidC7M3BridgeLeap IsWorldTalkTeenGirl
 	Response NoResponse
 }
 
@@ -3644,7 +3641,7 @@ Rule L4D1SurvivorMajorHurtTeenGirl
 
 Rule L4D1SurvivorMajorHurtC7M3TeenGirl
 {
-	criteria IsSurvivor InPain IsMajorPain IsTeenGirl IsTalk IsTalkTeenGirl C7M3VanillaOrC7M3TrueEnding _auto_IsSaidC7M3BridgeLeap IsWorldTalkTeenGirl
+	criteria IsSurvivor InPain IsMajorPain IsTeenGirl IsTalk IsTalkTeenGirl Ismapc7m3_port _auto_IsSaidC7M3BridgeLeap IsWorldTalkTeenGirl
 	Response NoResponse
 }
 
@@ -3667,7 +3664,7 @@ Rule L4D1SurvivorMinorHurtTeenGirl
 
 Rule L4D1SurvivorMinorHurtC7M3TeenGirl
 {
-	criteria IsSurvivor InPain IsMinorPain IsTeenGirl IsTalk IsTalkTeenGirl C7M3VanillaOrC7M3TrueEnding _auto_IsSaidC7M3BridgeLeap IsWorldTalkTeenGirl
+	criteria IsSurvivor InPain IsMinorPain IsTeenGirl IsTalk IsTalkTeenGirl Ismapc7m3_port _auto_IsSaidC7M3BridgeLeap IsWorldTalkTeenGirl
 	Response NoResponse
 }
 
@@ -3852,7 +3849,7 @@ Response L4D1crashcourse01_path01zrTeenGirl
 }
 Rule L4D1crashcourse01_path01zrTeenGirl
 {
-	criteria Conceptcrashcourse01_path01zresp IsNotCoughing NotInCombat IsTalkTeenGirl IsTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria Conceptcrashcourse01_path01zresp IsNotCoughing NotInCombat IsTalkTeenGirl IsTeenGirl IsWorldTalkTeenGirl
 	Response L4D1crashcourse01_path01zrTeenGirl
 }
 
@@ -3879,7 +3876,7 @@ Response L4D1PlayerAirport02CraneStartedTeenGirl
 }
 Rule L4D1PlayerAirport02CraneStartedTeenGirl
 {
-	criteria Conceptairport02_creshendoCrane IsTeenGirl HasAFrom
+	criteria Conceptairport02_creshendoCrane IsTeenGirl
 	ApplyContext "Airport02CraneStarted:1:0"
 	applycontexttoworld
 	Response L4D1PlayerAirport02CraneStartedTeenGirl
@@ -3892,7 +3889,7 @@ Response L4D1PlayerAirport02DumpsterDownTeenGirl
 }
 Rule L4D1PlayerAirport02DumpsterDownTeenGirl
 {
-	criteria Conceptairport02_creshendo03 IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria Conceptairport02_creshendo03 IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerAirport02DumpsterDownTeenGirl
 }
 
@@ -3903,7 +3900,7 @@ Response L4D1Playerairport03_barrieraTeenGirl
 }
 Rule L4D1Playerairport03_barrieraTeenGirl
 {
-	criteria Conceptairport03_barriera IsTeenGirl IsTalk IsTalkTeenGirl IssuerClose HasAFrom IsWorldTalkTeenGirl IsNotSaidAirport03FireStarted AutoIsNotScavenge AutoIsNotSurvival
+	criteria Conceptairport03_barriera IsTeenGirl IsTalk IsTalkTeenGirl IssuerClose IsWorldTalkTeenGirl IsNotSaidAirport03FireStarted AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1Playerairport03_barrieraTeenGirl
 }
 
@@ -3913,7 +3910,7 @@ Response L4D1PlayerAirport03FirePathClearaTeenGirl
 }
 Rule L4D1PlayerAirport03FirePathClearaTeenGirl
 {
-	criteria ConceptAirport03FirePathCleara IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptAirport03FirePathCleara IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerAirport03FirePathClearaTeenGirl
 }
 
@@ -3924,7 +3921,7 @@ Response L4D1PlayerAirport03FirePathClearXTeenGirl
 }
 Rule L4D1PlayerAirport03FirePathClearXTeenGirl
 {
-	criteria ConceptAirport03FirePathClearX IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsNotSaidAirport03FirePathClear IsWorldTalkTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptAirport03FirePathClearX IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsNotSaidAirport03FirePathClear IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "SaidAirport03FirePathClear:1:0"
 	applycontexttoworld
 	Response L4D1PlayerAirport03FirePathClearXTeenGirl
@@ -3940,7 +3937,7 @@ Response L4D1PlayerAirport03FireStartedXTeenGirl
 }
 Rule L4D1PlayerAirport03FireStartedXTeenGirl
 {
-	criteria ConceptAirport03FireStartedX IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptAirport03FireStartedX IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerAirport03FireStartedXTeenGirl
 }
 
@@ -3950,7 +3947,7 @@ Response L4D1Playerairport04_08bTeenGirl
 }
 Rule L4D1Playerairport04_08bTeenGirl
 {
-	criteria Conceptairport04_08b IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear400 IsWorldTalkTeenGirl HasAFrom
+	criteria Conceptairport04_08b IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear400 IsWorldTalkTeenGirl
 	Response L4D1Playerairport04_08bTeenGirl
 }
 
@@ -3961,7 +3958,7 @@ Response L4D1Playerairport04_08cTeenGirl
 }
 Rule L4D1Playerairport04_08cTeenGirl
 {
-	criteria Conceptairport04_08c IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear400 IsWorldTalkTeenGirl HasAFrom
+	criteria Conceptairport04_08c IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear400 IsWorldTalkTeenGirl
 	Response L4D1Playerairport04_08cTeenGirl
 }
 
@@ -3971,7 +3968,7 @@ Response L4D1Playerairport04_08dTeenGirl
 }
 Rule L4D1Playerairport04_08dTeenGirl
 {
-	criteria Conceptairport04_08d IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear400 IsWorldTalkTeenGirl HasAFrom
+	criteria Conceptairport04_08d IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear400 IsWorldTalkTeenGirl
 	Response L4D1Playerairport04_08dTeenGirl
 }
 
@@ -3982,7 +3979,7 @@ Response L4D1PlayerFrancisSuggestsCraneTeenGirl
 }
 Rule L4D1PlayerFrancisSuggestsCraneTeenGirl
 {
-	criteria ConceptFrancisSuggestsCrane IsTeenGirl IsNotSaidFrancisSuggestsCrane IsTalk IsTalkTeenGirl IsSubjectNear800 IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptFrancisSuggestsCrane IsTeenGirl IsNotSaidFrancisSuggestsCrane IsTalk IsTalkTeenGirl IsSubjectNear800 IsWorldTalkTeenGirl
 	ApplyContext "SaidFrancisSuggestsCrane:1:0"
 	applycontexttoworld
 	Response L4D1PlayerFrancisSuggestsCraneTeenGirl
@@ -3996,7 +3993,7 @@ Response L4D1PlayerLaughFrancisTeenGirl
 }
 Rule L4D1PlayerLaughFrancisTeenGirl
 {
-	criteria ConceptLaughFrancis IsTeenGirl IsNotSaidLaughFrancis IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear300 IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptLaughFrancis IsTeenGirl IsNotSaidLaughFrancis IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear300 IsWorldTalkTeenGirl
 	ApplyContext "SaidLaughFrancis:1:0"
 	applycontexttoworld
 	Response L4D1PlayerLaughFrancisTeenGirl
@@ -4659,7 +4656,7 @@ Response L4D1PlayerAirport04VanStartedXTeenGirl
 }
 Rule L4D1PlayerAirport04VanStartedXTeenGirl
 {
-	criteria ConceptAirport04VanStartedX IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptAirport04VanStartedX IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	ApplyContext "SaidAirport04VanStarted:1:0"
 	applycontexttoworld
 	Response L4D1PlayerAirport04VanStartedXTeenGirl
@@ -4674,7 +4671,7 @@ Response L4D1PlayerRemarkPathClearVanTeenGirl
 }
 Rule L4D1PlayerRemarkPathClearVanTeenGirl
 {
-	criteria ConceptPathClearVan IsTeenGirl IsNotSaidPathClearVan IsNotCoughing  IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPathClearVan IsTeenGirl IsNotSaidPathClearVan IsNotCoughing  IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "SaidPathClearVan:1:0"
 	applycontexttoworld
 	Response L4D1PlayerRemarkPathClearVanTeenGirl
@@ -4853,7 +4850,7 @@ Rule L4D1PlayerRemarkSmalltown03_path04TeenGirl
 Rule L4D1PlayerRemarkSmalltown03_path05TeenGirl
 {
 	criteria ConceptRemark IsTeenGirl IsSmalltown03_path05 IsNotSaidSmalltown03_path04 IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsSubjectNear200 IsWorldTalkTeenGirl IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "SaidSmalltown03_path05:1:0"
+	ApplyContext "SaidSmalltown03_path04:1:0"
 	applycontexttoworld
 	Response L4D1PlayerRemarkSmalltown03_path04TeenGirl
 }
@@ -5091,7 +5088,7 @@ Response L4D1RespondAffirmativeTeenGirl
 }
 Rule L4D1RespondAffirmativeTeenGirl
 {
-	criteria ConceptRespondAffirmative IssuerMediumClose IsNotCoughing NotInCombat isTeenGirl IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptRespondAffirmative IssuerMediumClose IsNotCoughing NotInCombat isTeenGirl IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1RespondAffirmativeTeenGirl
 }
 
@@ -5102,7 +5099,7 @@ Response L4D1RiversideIsDeadPlanTeenGirl
 }
 Rule L4D1RiversideIsDeadPlanTeenGirl
 {
-	criteria ConceptRiversideIsDeadPlan IsTeenGirl IsNotCoughing IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptRiversideIsDeadPlan IsTeenGirl IsNotCoughing IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1RiversideIsDeadPlanTeenGirl
 }
 
@@ -5278,7 +5275,7 @@ Response L4D1PlayerNearFinaleC7M3TeenGirl
 }
 Rule L4D1PlayerNearFinaleC7M3TeenGirl
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsTeenGirl IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl C7M3VanillaOrC7M3TrueEnding AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsTeenGirl IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC7M3TeenGirl
@@ -5332,7 +5329,7 @@ Response L4D1C11M5NearFinale2TeenGirl
 }
 Rule L4D1C11M5NearFinale2TeenGirl
 {
-	criteria ConceptC11M5NearFinale2 IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptC11M5NearFinale2 IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl
 	Response L4D1C11M5NearFinale2TeenGirl
 }
 
@@ -5470,7 +5467,7 @@ Response SafeSpotAheadResponseTeenGirl
 }
 Rule SafeSpotAheadResponseTeenGirl
 {
-	criteria IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IssuerClose ConceptSafeSpotAheadResponse ChanceToFire30Percent IsWorldTalkTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IssuerClose ConceptSafeSpotAheadResponse ChanceToFire30Percent IsWorldTalkTeenGirl
 	Response SafeSpotAheadResponseTeenGirl
 }
 
@@ -5490,7 +5487,7 @@ Response L4D1PlayerCoverMeTeenGirl
 }
 Rule L4D1PlayerCoverMeTeenGirl
 {
-	criteria ConceptPlayerCoverMe IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerCoverMe IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerCoverMeTeenGirl
 }
 
@@ -5519,7 +5516,7 @@ Response L4D1PlayerFollowMeTeenGirl
 }
 Rule L4D1PlayerFollowMeTeenGirl
 {
-	criteria ConceptPlayerFollowMe IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerFollowMe IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerFollowMeTeenGirl
 }
 
@@ -5540,7 +5537,7 @@ Response L4D1PlayerHelpTeenGirl
 }
 Rule L4D1PlayerHelpTeenGirl
 {
-	criteria ConceptPlayerHelp IsTeenGirl IsNotCoughing IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerHelp IsTeenGirl IsNotCoughing IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerHelpTeenGirl
 }
 
@@ -5555,7 +5552,7 @@ Response L4D1PlayerHurryUpTeenGirl
 }
 Rule L4D1PlayerHurryUpTeenGirl
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerHurryUp IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerHurryUpTeenGirl
 }
 
@@ -5576,7 +5573,7 @@ Response L4D1PlayerKillThatLightTeenGirl
 }
 Rule L4D1PlayerKillThatLightTeenGirl
 {
-	criteria ConceptPlayerKillThatLight IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerKillThatLight IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerKillThatLightTeenGirl
 }
 
@@ -5600,7 +5597,7 @@ Response L4D1PlayerLeadOnTeenGirl
 }
 Rule L4D1PlayerLeadOnTeenGirl
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerLeadOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerLeadOnTeenGirl
 }
 
@@ -5620,7 +5617,7 @@ Response L4D1PlayerMoveOnTeenGirl
 }
 Rule L4D1PlayerMoveOnTeenGirl
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerMoveOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerMoveOnTeenGirl
 }
 
@@ -5639,7 +5636,7 @@ Response L4D1PlayerStayTogetherTeenGirl
 }
 Rule L4D1PlayerStayTogetherTeenGirl
 {
-	criteria ConceptPlayerStayTogether IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerStayTogether IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerStayTogetherTeenGirl
 }
 
@@ -5651,7 +5648,7 @@ Response L4D1PlayerWatchOutBehindTeenGirl
 }
 Rule L4D1PlayerWatchOutBehindTeenGirl
 {
-	criteria ConceptPlayerWatchOutBehind IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerWatchOutBehind IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerWatchOutBehindTeenGirl
 }
 
@@ -5674,7 +5671,7 @@ Response L4D1PlayerAskReadyTeenGirl
 }
 Rule L4D1PlayerAskReadyTeenGirl
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerAskReady IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerAskReadyTeenGirl
 }
 
@@ -5699,7 +5696,7 @@ Response L4D1PlayerImWithYouTeenGirl
 }
 Rule L4D1PlayerImWithYouTeenGirl
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerImWithYouTeenGirl
 }
 
@@ -5724,7 +5721,7 @@ Response L4D1PlayerLaughTeenGirl
 }
 Rule L4D1PlayerLaughTeenGirl
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus IsNotSpeaking
+	criteria ConceptPlayerLaugh IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus
 	Response L4D1PlayerLaughTeenGirl
 }
 
@@ -5740,7 +5737,7 @@ Response L4D1PlayerLostCallTeenGirl
 }
 Rule L4D1PlayerLostCallTeenGirl
 {
-	criteria ConceptPlayerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerLostCallTeenGirl
 }
 
@@ -5778,7 +5775,7 @@ Response L4D1PlayerNiceJobResponseTeenGirl
 }
 Rule L4D1PlayerNiceJobResponseTeenGirl
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerNiceJobResponseTeenGirl
 }
 
@@ -5789,7 +5786,7 @@ Response L4D1PlayerNiceJobLouisTeenGirl
 }
 Rule L4D1PlayerNiceJobResponseTeenGirl
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsTeenGirl IsTalk IsManagerNear200 ChanceToFire5Percent IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsTeenGirl IsTalk IsManagerNear200 ChanceToFire5Percent IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerNiceJobResponseTeenGirl
 }
 
@@ -5818,7 +5815,7 @@ Response L4D1PlayerNoTeenGirl
 }
 Rule L4D1PlayerNoTeenGirl
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerNo IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerNoTeenGirl
 }
 
@@ -5832,7 +5829,7 @@ Response L4D1PlayerAnswerLostCallTeenGirl
 }
 Rule L4D1PlayerAnswerLostCallTeenGirl
 {
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerAnswerLostCallTeenGirl
 }
 
@@ -5862,11 +5859,11 @@ Response L4D1PlayerNegativeTeenGirl
 	scene "scenes/TeenGirl/ReactionNegative28.vcd"  //This is not going well
 	scene "scenes/TeenGirl/ReactionNegative29.vcd"  //Oh man oh man oh man
 	scene "scenes/TeenGirl/ReactionNegative32.vcd"  //This is bad
-	scene "scenes/TeenGirl/ReactionNegative33.vcd"  //Ah crapl
+	scene "scenes/TeenGirl/ReactionNegative33.vcd"  //Ah crap!
 }
 Rule L4D1PlayerNegativeTeenGirl
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerNegativeTeenGirl
 }
 
@@ -5885,7 +5882,7 @@ Response L4D1PlayerSorryTeenGirl
 }
 Rule L4D1PlayerSorryTeenGirl
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerSorryTeenGirl
 }
 
@@ -5901,7 +5898,7 @@ Response L4D1PlayerSorryFFTeenGirl
 }
 Rule L4D1PlayerSorryFFTeenGirl
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerSorryFFTeenGirl
 }
 
@@ -5927,7 +5924,7 @@ Response L4D1PlayerThanksTeenGirl
 }
 Rule L4D1PlayerThanksTeenGirl
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerThanks IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerThanksTeenGirl
 }
 
@@ -5938,7 +5935,7 @@ Response L4D1PlayerThanksLouisTeenGirl
 }
 Rule L4D1PlayerThanksLouisTeenGirl
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsTeenGirl IsTalk IsManagerNear200 ChanceToFire2Percent IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerThanks IsNotCoughing  IsTeenGirl IsTalk IsManagerNear200 ChanceToFire2Percent IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerThanksLouisTeenGirl
 }
 
@@ -5961,7 +5958,7 @@ Response L4D1PlayerYesTeenGirl
 }
 Rule L4D1PlayerYesTeenGirl
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerYes IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerYesTeenGirl
 }
 
@@ -5990,7 +5987,7 @@ Response L4D1PlayerYouAreWelcomeTeenGirl
 }
 Rule L4D1PlayerYouAreWelcomeTeenGirl
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSpeaking IsWorldTalkTeenGirl
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerYouAreWelcomeTeenGirl
 }
 
@@ -6003,7 +6000,7 @@ Response PlayerYellRunTeenGirl
 }
 Rule PlayerYellRunTeenGirl
 {
-	criteria ConceptPlayerYellRun IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerYellRun IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response PlayerYellRunTeenGirl
 }
 
@@ -6031,7 +6028,7 @@ Response L4D1PlayerAreaClearTeenGirl
 }
 Rule L4D1PlayerAreaClearTeenGirl
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerAreaClear IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerAreaClearTeenGirl
 }
 
@@ -6075,7 +6072,7 @@ Response PlayerHurrahTeenGirl
 }
 Rule PlayerHurrahTeenGirl
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerHurrah IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response PlayerHurrahTeenGirl
 }
 
@@ -6091,7 +6088,7 @@ Response PlayerWarnCarefulTeenGirl
 }
 Rule PlayerWarnCarefulTeenGirl
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response PlayerWarnCarefulTeenGirl
 }
 
@@ -6227,7 +6224,7 @@ Response L4D1IntroSmalltown2TeenGirl
 }
 Rule L4D1IntroSmalltown2TeenGirl
 {
-	criteria ConceptIntroSmalltown2 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroSmalltown2 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1IntroSmalltown2TeenGirl
 }
 
@@ -6237,7 +6234,7 @@ Response L4D1IntroSmalltown2EasterEggTeenGirl
 }
 Rule L4D1IntroSmalltown2EasterEggTeenGirl
 {
-	criteria ConceptIntroSmalltownEasterEgg IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroSmalltownEasterEgg IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1IntroSmalltown2EasterEggTeenGirl
 }
 
@@ -6249,7 +6246,7 @@ Response L4D1IntroSmalltown2EasterEgg3TeenGirl
 }
 Rule L4D1IntroSmalltown2EasterEgg3TeenGirl
 {
-	criteria ConceptIntroSmalltownEasterEgg3 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroSmalltownEasterEgg3 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1IntroSmalltown2EasterEgg3TeenGirl
 }
 
@@ -6271,7 +6268,7 @@ Response L4D1SurvivorSpawnTeenGirl
 }
 Rule L4D1SurvivorSpawnTeenGirl
 {
-	criteria ConceptPlayerScenarioJoin IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerScenarioJoin IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1SurvivorSpawnTeenGirl
 }
 
@@ -6287,7 +6284,7 @@ Response PlayerCommentJockeyTeenGirl
 }
 Rule PlayerCommentJockeyTeenGirl
 {
-	criteria ConceptCommentJockey IsTeenGirl IssuerCloseEnough IsNotIncapacitated IntensityUnder50 IsNotSaidCommentJockey HasAFrom
+	criteria ConceptCommentJockey IsTeenGirl IssuerCloseEnough IsNotIncapacitated IntensityUnder50 IsNotSaidCommentJockey
 	ApplyContext "SaidCommentJockey:1:0"
 	applycontexttoworld
 	Response PlayerCommentJockeyTeenGirl
@@ -6315,7 +6312,7 @@ Response L4D1PlayerBounceReactionTeenGirl
 }
 Rule L4D1PlayerBounceReactionTeenGirl
 {
-	criteria ConceptBounceReaction IsTeenGirl IsNotCoughing NotInCombat IsSubjectAlmostNear IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptBounceReaction IsTeenGirl IsNotCoughing NotInCombat IsSubjectAlmostNear IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerBounceReactionTeenGirl
 }
 
@@ -6354,13 +6351,13 @@ Response L4D1PlayerGetInsideCheckPointTeenGirl
 }
 Rule L4D1PlayerGetInsideCheckPointTeenGirl
 {
-	criteria ConceptPlayerGetInsideCheckPoint IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl SomeoneOutsideSafeSpot IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerGetInsideCheckPoint  IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl SomeoneOutsideSafeSpot IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerGetInsideCheckPointTeenGirl
 }
 
 Rule L4D1PlayerStayTogetherSaferoomTeenGirl
 {
-	criteria ConceptPlayerStayTogether IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl SomeoneOutsideSafeSpot IsWorldTalkTeenGirl IsNotSpeaking AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerStayTogether IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl SomeoneOutsideSafeSpot IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerGetInsideCheckPointTeenGirl
 }
 
@@ -6388,7 +6385,7 @@ Rule L4D1PlayerGrenadeTeenGirl
 //}
 //Rule L4D1PlayerGrenadeCarefulTeenGirl
 //{
-//	criteria ConceptGrenadeCareful IsNotCoughing IsTeenGirl IsWitchPresent NotInCombat IssuerClose HasAFrom IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank HasAFrom
+//	criteria ConceptGrenadeCareful IsNotCoughing IsTeenGirl IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotZombiePresentTank
 //	Response L4D1PlayerGrenadeCarefulTeenGirl
 //}
 
@@ -6576,7 +6573,7 @@ Response L4D1PlayerSuggestHealthTeenGirl
 }
 Rule L4D1PlayerSuggestHealthTeenGirl
 {
-	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 IsWorldTalkTeenGirl
 	ApplyContext "SuggestedHealth:1:120"
 	applycontexttoworld
 	Response L4D1PlayerSuggestHealthTeenGirl
@@ -6596,7 +6593,7 @@ Response L4D1PlayerSuggestHealthBillTeenGirl
 }
 Rule L4D1PlayerSuggestHealthBillTeenGirl
 {
-	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 FromIsNamVet ChanceToFire50Percent IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 FromIsNamVet ChanceToFire50Percent IsWorldTalkTeenGirl
 	ApplyContext "SuggestedHealth:1:120"
 	applycontexttoworld
 	Response L4D1PlayerSuggestHealthBillTeenGirl
@@ -6614,7 +6611,7 @@ Response L4D1PlayerSuggestHealthFrancisTeenGirl
 }
 Rule L4D1PlayerSuggestHealthFrancisTeenGirl
 {
-	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 FromIsBiker ChanceToFire50Percent IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 FromIsBiker ChanceToFire50Percent IsWorldTalkTeenGirl
 	ApplyContext "SuggestedHealth:1:120"
 	applycontexttoworld
 	Response L4D1PlayerSuggestHealthFrancisTeenGirl
@@ -6628,7 +6625,7 @@ Response L4D1PlayerSuggestHealthLouisTeenGirl
 }
 Rule L4D1PlayerSuggestHealthLouisTeenGirl
 {
-	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 FromIsManager ChanceToFire50Percent IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptPlayerSuggestHealth IsTeenGirl IssuerReallyClose IsNotBeingHealed IsTalk IsTalkTeenGirl IsNotIncapacitated TimeSinceGroupInCombat20 IsNotSpeakingWeight0 FromIsManager ChanceToFire50Percent IsWorldTalkTeenGirl
 	ApplyContext "SuggestedHealth:1:120"
 	applycontexttoworld
 	Response L4D1PlayerSuggestHealthLouisTeenGirl
@@ -6709,7 +6706,7 @@ Rule L4D1PlayerWarnHeardBoomerTeenGirl
 
 Rule PlayerHeardBoomerTeenGirl
 {
-	criteria ConceptPlayerHeardBoomer IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
 	Response L4D1PlayerWarnHeardBoomerTeenGirl
 }
 
@@ -6738,7 +6735,7 @@ Rule L4D1PlayerWarnHeardHunterTeenGirl
 
 Rule PlayerHeardHunterTeenGirl
 {
-	criteria ConceptPlayerHeardHunter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
 	Response L4D1PlayerWarnHeardHunterTeenGirl
 }
 
@@ -6763,7 +6760,7 @@ Rule L4D1PlayerWarnHeardSmokerTeenGirl
 
 Rule PlayerHeardSmokerTeenGirl
 {
-	criteria ConceptPlayerHeardSmoker IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
 	Response L4D1PlayerWarnHeardSmokerTeenGirl
 }
 
@@ -6797,7 +6794,7 @@ Response PlayerHeardWitchTeenGirl
 }
 Rule PlayerHeardWitchTeenGirl
 {
-	criteria ConceptPlayerHeardWitch IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking _auto_NotSpottedVehicle
+	criteria ConceptPlayerHeardWitch IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
 	Response PlayerHeardWitchTeenGirl
 }
 
@@ -6917,7 +6914,7 @@ Rule L4D1SurvivorCoughingTeenGirl
 
 Rule L4D1SurvivorCoughingDeathTeenGirl
 {
-	criteria ConceptPlayerDeath IsCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus IsNotSpeaking
+	criteria ConceptPlayerDeath IsCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus
 	Response L4D1SurvivorCoughingTeenGirl
 }
 
@@ -6937,7 +6934,7 @@ Response L4D1SurvivorDeathTeenGirl
 }
 Rule L4D1SurvivorDeathTeenGirl
 {
-	criteria ConceptPlayerDeath IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus IsNotSpeaking
+	criteria ConceptPlayerDeath IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus
 	Response L4D1SurvivorDeathTeenGirl
 }
 
@@ -6951,7 +6948,6 @@ Response L4D1SurvivorGrabbedByTongueTeenGirl
 Rule L4D1SurvivorGrabbedByTongueTeenGirl
 {
 	criteria ConceptPlayerGrabbedByTongue IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
-	ApplyContext "TalkTeenGirl:1:2"
 	Response L4D1SurvivorGrabbedByTongueTeenGirl
 }
 
@@ -6971,7 +6967,7 @@ Response L4D1PlayerWitchChasingTeenGirl
 }
 Rule L4D1PlayerWitchChasingTeenGirl
 {
-	criteria PlayerIsMoving IsTeenGirl IsNotSpeaking IsWitchPresent SubjectIsNotWitch IsNotSaidWitchChasing IsTalkTeenGirl IsSaidWitchAttacking IsWitchAggro
+	criteria ConceptPlayerExertionMinor IsTeenGirl IsNotSpeaking IsWitchPresent SubjectIsNotWitch IsNotSaidWitchChasing IsTalkTeenGirl IsSaidWitchAttacking IsWitchAggro
 	ApplyContext "SaidWitchChasing:1:5,TalkTeenGirl:1:2"
 	Response L4D1PlayerWitchChasingTeenGirl
 }
@@ -6990,9 +6986,9 @@ Rule L4D1PlayerWitchStartAttackTeenGirl
 	Response L4D1PlayerWitchStartAttackTeenGirl
 }
 
-Rule WitchAggroGambler
+Rule WitchAggroTeenGirl
 {
-	criteria ConceptWitchStartAttack IsGambler Iswitch_aggro_onGambler
+	criteria ConceptWitchStartAttack IsTeenGirl Iswitch_aggro_onTeenGirl
 	ApplyContext "WitchAggro:++1"
 	applycontexttoworld
 	Response NoResponse
@@ -7026,7 +7022,7 @@ Response L4D1SurvivorVocalizeBackUpTeenGirl
 }
 Rule L4D1SurvivorVocalizeBackUpTeenGirl
 {
-	criteria ConceptPlayerBackUp IsTeenGirl IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerBackUp IsTeenGirl IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1SurvivorVocalizeBackUpTeenGirl
 }
 
@@ -7050,7 +7046,7 @@ Response L4D1SurvivorVocalizeEmphaticGoTeenGirl
 }
 Rule L4D1SurvivorVocalizeEmphaticGoTeenGirl
 {
-	criteria ConceptPlayerEmphaticGo IsTeenGirl IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerEmphaticGo IsTeenGirl IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1SurvivorVocalizeEmphaticGoTeenGirl
 }
 
@@ -7197,7 +7193,7 @@ Response L4D1SurvivorVocalizeThisWayTeenGirl
 }
 Rule L4D1SurvivorVocalizeThisWayTeenGirl
 {
-	criteria ConceptPlayerThisWay IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerThisWay IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1SurvivorVocalizeThisWayTeenGirl
 }
 
@@ -7212,7 +7208,7 @@ Response L4D1SurvivorVocalizeWaitHereTeenGirl
 }
 Rule L4D1SurvivorVocalizeWaitHereTeenGirl
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerWaitHere IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1SurvivorVocalizeWaitHereTeenGirl
 }
 
@@ -7224,7 +7220,7 @@ Response Player.C7M2CrowsFlyTeenGirl
 }
 Rule Player.C7M2CrowsFlyTeenGirl
 {
-	criteria ConceptC7M2CrowsFlySpeak IsTeenGirl HasAFrom
+	criteria ConceptC7M2CrowsFlySpeak IsTeenGirl
 	Response Player.C7M2CrowsFlyTeenGirl
 }
 
@@ -7242,7 +7238,7 @@ Response Player.C7M3BridgeLeapTeenGirl
 }
 Rule Player.C7M3BridgeLeapTeenGirl
 {
-	criteria ConceptC7M3BridgeLeapSpeak IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsLastGenerator C7M3VanillaOrC7M3TrueEnding IsWorldTalkTeenGirl IsNotScavenge HasAFrom
+	criteria ConceptC7M3BridgeLeapSpeak IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsLastGenerator ismapc7m3_port IsWorldTalkTeenGirl IsNotScavenge
 	Response Player.C7M3BridgeLeapTeenGirl
 }
 
@@ -7253,7 +7249,7 @@ Response Player.C7M3BridgeLeapLouisTeenGirl
 }
 Rule Player.C7M3BridgeLeapLouisTeenGirl
 {
-	criteria ConceptC7M3BridgeLeapSpeak IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsLastGenerator IsManagerAlive ChanceToFire10Percent C7M3VanillaOrC7M3TrueEnding IsWorldTalkTeenGirl IsNotScavenge HasAFrom
+	criteria ConceptC7M3BridgeLeapSpeak IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsLastGenerator IsManagerAlive ChanceToFire10Percent ismapc7m3_port IsWorldTalkTeenGirl IsNotScavenge
 	Response Player.C7M3BridgeLeapLouisTeenGirl
 }
 
@@ -7279,22 +7275,15 @@ Rule SacrificeSuccessfulTeenGirl
 	Response SacrificeSuccessfulTeenGirl
 }
 
-Rule SacrificeSuccessfulTrueEndingTeenGirl
-{
-	criteria ConceptPlayerIncapacitated IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsLastGenerator ismapc7m3_port_trueending _auto_IsSaidC7M3BridgeLeap _auto_IsC7M3FinalPress
-	ApplyContext "TalkTeenGirl:1:15"
-	Response NoResponse
-}
-
 Rule SacrificeFinaleGenerator2OnSpkTeenGirl
 {
-	criteria ConceptCrashFinaleGenerator2OnSpk IsTeenGirl IsLastGenerator C7M3VanillaOrC7M3TrueEnding
+	criteria ConceptCrashFinaleGenerator2OnSpk IsTeenGirl IsLastGenerator IsMapc7m3_port
 	Response NoResponse
 }
 
 Rule CrashFinaleGenerator2SpeakTeenGirl
 {
-	criteria ConceptCrashFinaleGenerator2Speak IsTeenGirl IsLastGenerator C7M3VanillaOrC7M3TrueEnding
+	criteria ConceptCrashFinaleGenerator2Speak IsTeenGirl IsLastGenerator IsMapc7m3_port
 	Response NoResponse
 }
 
@@ -7304,14 +7293,14 @@ Response SacrificeFailedTeenGirl
 }
 Rule SacrificeFailedTeenGirl
 {
-	criteria ConceptPlayerIncapacitated IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsLastGenerator C7M3VanillaOrC7M3TrueEnding IsNotInRescueVehicle _auto_IsSaidC7M3BridgeLeap _auto_NotC7M3FinalPress
+	criteria ConceptPlayerIncapacitated IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsLastGenerator ismapc7m3_port IsNotInRescueVehicle _auto_IsSaidC7M3BridgeLeap _auto_NotC7M3FinalPress
 	ApplyContext "TalkTeenGirl:1:2"
 	Response SacrificeFailedTeenGirl
 }
 
 Rule PlayerHelpSacrificeTeenGirl
 {
-	criteria ConceptPlayerHelp C7M3VanillaOrC7M3TrueEnding IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_IsSaidC7M3BridgeLeap
+	criteria ConceptPlayerHelp ismapc7m3_port IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_IsSaidC7M3BridgeLeap
 	Response NoResponse
 }
 
@@ -7438,7 +7427,7 @@ Response SurvivorPouncedByHunterTeenGirl
 {
 	scene "scenes/TeenGirl/ScreamWhilePounced01.vcd"  //GET IT OFF ME!
 	scene "scenes/TeenGirl/ScreamWhilePounced02.vcd"  //GET IT OFF GET IT OFF!
-	//scene "scenes/TeenGirl/ScreamWhilePounced03.vcd"  //GET IT OFF!
+	//scene "scenes/TeenGirl/ScreamWhilePounced03.vcd"  //Get it off!
 	scene "scenes/TeenGirl/ScreamWhilePounced04.vcd"  //GET IT GET IT OFF GET IT OFF!
 	scene "scenes/TeenGirl/ScreamWhilePounced06.vcd"  //GET IT OFF ME!
 }
@@ -7456,7 +7445,7 @@ Response ChargerBeatsNickTeenGirl
 }
 Rule ChargerBeatsNickTeenGirl
 {
-	criteria ConceptChargerBeatsNick IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom _auto_NotSpottedVehicle
+	criteria ConceptChargerBeatsNick IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
 	Response ChargerBeatsNickTeenGirl
 }
 
@@ -7523,7 +7512,7 @@ Response L4D1SurvivorFirstDeathTeenGirl
 }
 Rule L4D1SurvivorFirstDeathTeenGirl
 {
-	criteria ConceptSurvivorDied IsNotCoughing IsSurvivor SurvivorDiedNearEnough IsTeenGirl IsEveryoneAlive IsNotSaidSomeoneDied IsNotSaidFaultFriendlyFireGeneral IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedNearEnough IsSurvivor IsTeenGirl IsEveryoneAlive IsNotSaidSomeoneDied IsNotSaidFaultFriendlyFireGeneral IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorFirstDeathTeenGirl
@@ -7535,7 +7524,7 @@ Response L4D1DoubleDeathTeenGirl
 }
 Rule L4D1DoubleDeathTeenGirl
 {
-	criteria ConceptSurvivorDied IsNotCoughing IsSurvivor SurvivorDiedNearEnough IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsNotSaidFaultFriendlyFireGeneral IsWithOnlyThree IsNotIncapacitated IsWorldTalkTeenGirl
+	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedNearEnough IsSurvivor IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsNotSaidFaultFriendlyFireGeneral IsWithOnlyThree IsNotIncapacitated IsWorldTalkTeenGirl
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1DoubleDeathTeenGirl
@@ -7547,7 +7536,7 @@ Response L4D1DeathOneTeenGirl
 }
 Rule L4D1DeathOneTeenGirl
 {
-	criteria ConceptSurvivorDied IsNotCoughing IsSurvivor SurvivorDiedNearEnough IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidFaultFriendlyFireGeneral IsWithTwo IsNotIncapacitated IsWorldTalkTeenGirl
+	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedNearEnough IsSurvivor IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidFaultFriendlyFireGeneral IsWithTwo IsNotIncapacitated IsWorldTalkTeenGirl
 	Response L4D1DeathOneTeenGirl
 }
 
@@ -7581,14 +7570,14 @@ Response L4D1SurvivorPickupAutoShotgunTeenGirl
 }
 Rule L4D1SurvivorPickupAutoShotgunTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAutoShotgunTeenGirl
 }
 
 Rule L4D1SurvivorPickupSpasShotgunTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpShotgun_Spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpShotgun_Spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAutoShotgunTeenGirl
 }
@@ -7602,7 +7591,7 @@ Response L4D1SurvivorPickupFirstAidKitTeenGirl
 }
 Rule L4D1SurvivorPickupFirstAidKitTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupFirstAidKitTeenGirl
 }
@@ -7615,7 +7604,7 @@ Response L4D1SurvivorPickupHuntingRifleTeenGirl
 }
 Rule L4D1SurvivorPickupHuntingRifleTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupHuntingRifleTeenGirl
 }
@@ -7626,21 +7615,21 @@ Response L4D1SurvivorPickupMilitarySniperTeenGirl
 }
 Rule L4D1SurvivorPickupMilitarySniperTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMilitarySniperTeenGirl
 }
 
 Rule L4D1SurvivorPickupScoutSniperTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMilitarySniperTeenGirl
 }
 
 Rule L4D1SurvivorPickupScoutAWPTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMilitarySniperTeenGirl
 }
@@ -7661,21 +7650,21 @@ Response L4D1SurvivorPickupLaserSightsTeenGirl
 }
 Rule L4D1SurvivorPickupLaserSightsTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupLaserSightsTeenGirl
 }
 
 Rule L4D1SurvivorPickupUpIncendiaryAmmoTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpIncendiaryAmmo IsNotSpeaking IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpIncendiaryAmmo IsNotSpeaking IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupLaserSightsTeenGirl
 }
 
 Rule L4D1SurvivorPickupUpExplosiveAmmoTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpExplosiveAmmo IsNotSpeaking IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpExplosiveAmmo IsNotSpeaking IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupLaserSightsTeenGirl
 }
@@ -7689,7 +7678,7 @@ Response L4D1SurvivorPickupMolotovTeenGirl
 }
 Rule L4D1SurvivorPickupMolotovTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMolotovTeenGirl
 }
@@ -7704,7 +7693,7 @@ Response L4D1SurvivorPickupPainPillsTeenGirl
 }
 Rule L4D1SurvivorPickupPainPillsTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPainPillsTeenGirl
 }
@@ -7716,14 +7705,14 @@ Response L4D1SurvivorPickupAdrenalineTeenGirl
 }
 Rule L4D1SurvivorPickupAdrenalineTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAdrenalineTeenGirl
 }
 
 Rule SurvivorPickupDefibrillatorTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpDefibrillator IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpDefibrillator IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAdrenalineTeenGirl
 }
@@ -7735,7 +7724,7 @@ Response L4D1SurvivorPickupPipeBombTeenGirl
 }
 Rule L4D1SurvivorPickupPipeBombTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPipeBombTeenGirl
 }
@@ -7746,7 +7735,7 @@ Response L4D1SurvivorPickupVomitJarTeenGirl
 }
 Rule L4D1SurvivorPickupVomitJarTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpVomitJar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpVomitJar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupVomitJarTeenGirl
 }
@@ -7761,14 +7750,14 @@ Response L4D1SurvivorPickupPumpShotgunTeenGirl
 }
 Rule L4D1SurvivorPickupPumpShotgunTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPumpShotgunTeenGirl
 }
 
 Rule L4D1SurvivorPickupChromeShotgunTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPumpShotgunTeenGirl
 }
@@ -7787,28 +7776,28 @@ Response L4D1SurvivorPickupRifleTeenGirl
 }
 Rule L4D1SurvivorPickupRifleTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleTeenGirl
 }
 
 Rule L4D1SurvivorPickupDesertRifleTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleTeenGirl
 }
 
 Rule L4D1SurvivorPickupAK47RifleTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleTeenGirl
 }
 
 Rule L4D1SurvivorPickupSG552RifleTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleTeenGirl
 }
@@ -7822,21 +7811,21 @@ Response L4D1SurvivorPickupSMGTeenGirl
 }
 Rule L4D1SurvivorPickupSMGTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot IsNotInStartArea NotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot IsNotInStartArea NotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGTeenGirl
 }
 
 Rule L4D1SurvivorPickupSilencedSMGTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot IsNotInStartArea NotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot IsNotInStartArea NotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGTeenGirl
 }
 
 Rule L4D1SurvivorPickupMP5TeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot IsNotInStartArea NotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot IsNotInStartArea NotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGTeenGirl
 }
@@ -7847,7 +7836,7 @@ Response L4D1TakeShotgunGroovyZoey
 }
 Rule L4D1TakeShotgunGroovyZoey
 {
-	criteria ConceptTakeShotgunGroovyZoey IsTeenGirl IsTalk IsTalkTeenGirl NotInCombat ChanceToFire50Percent HasAFrom _auto_NotSpottedVehicle
+	criteria ConceptTakeShotgunGroovyZoey IsTeenGirl IsTalk IsTalkTeenGirl NotInCombat ChanceToFire50Percent _auto_NotSpottedVehicle
 	Response L4D1TakeShotgunGroovyZoey
 }
 
@@ -7859,7 +7848,7 @@ Response L4D1TakeShotgunGroovyZoeyLaugh
 }
 Rule L4D1TakeShotgunGroovyZoeyLaugh
 {
-	criteria ConceptTakeShotgunGroovyZoey IsTeenGirl IsTalk IsTalkTeenGirl NotInCombat ChanceLeft50Percent HasAFrom
+	criteria ConceptTakeShotgunGroovyZoey IsTeenGirl IsTalk IsTalkTeenGirl NotInCombat ChanceLeft50Percent
 	Response L4D1TakeShotgunGroovyZoeyLaugh
 }
 
@@ -7900,7 +7889,7 @@ Response SurvivorPickupSecondPistolTeenGirl
 }
 Rule SurvivorPickupSecondPistolTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot NotPickedUpItem IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent IsNotInSafeSpot NotPickedUpItem IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSecondPistolTeenGirl
 }
@@ -7925,91 +7914,91 @@ Response L4D1SurvivorPickupMeleeTeenGirl
 
 Rule L4D1SurvivorPickupGolfClubTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpGolfClub IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpGolfClub IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupFireAxeTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpFireAxe IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpFireAxe IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupCrowbarTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpCrowBar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpCrowBar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupGuitarTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpelectric_guitar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpelectric_guitar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupKatanaTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpKatana IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpKatana IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupMacheteTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpMachete IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpMachete IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupFryingPanTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpFryingPan IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpFryingPan IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupTonfaTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUptonfa IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUptonfa IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupCricketBatTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpcricket_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpcricket_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupBaseballBatTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpbaseball_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpbaseball_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupKnifeTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpKnife IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpKnife IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupShovelTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpShovel IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpShovel IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
 
 Rule L4D1SurvivorPickupPitchforkTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPitchfork IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPitchfork IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
@@ -8020,7 +8009,7 @@ Response SurvivorPickupChainSawGroovyTeenGirl
 }
 Rule SurvivorPickupChainSawGroovyTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpChainSaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpChainSaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupChainSawGroovyTeenGirl
 }
@@ -8032,14 +8021,14 @@ Response SurvivorPickupM60TeenGirl
 }
 Rule SurvivorPickupM60TeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupM60TeenGirl
 }
 
 Rule L4D1SurvivorPickupGrenadeLauncherTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpGrenadeLauncher IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpGrenadeLauncher IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupM60TeenGirl
 }
@@ -8065,7 +8054,7 @@ Rule L4D1PlayerChainSawUsedTeenGirl
 
 Rule L4D1SurvivorPickupUpIncendiaryTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeTeenGirl
 }
@@ -8076,7 +8065,7 @@ Response L4D1SurvivorPickupUpExplosivesTeenGirl
 }
 Rule L4D1SurvivorPickupUpExplosivesTeenGirl
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupUpExplosivesTeenGirl
 }
@@ -8100,7 +8089,7 @@ Response L4D1PlayerGettingRevivedTeenGirl
 }
 Rule L4D1PlayerGettingRevivedTeenGirl
 {
-	criteria ConceptReviveFriendDown IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl HasAFrom
+	criteria ConceptReviveFriendDown IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1PlayerGettingRevivedTeenGirl
 }
 
@@ -8226,6 +8215,7 @@ Rule L4D1PlayerReviveFriendLoud2TeenGirl
 {
 	criteria ConceptPlayerReviveFriend IsNotCoughing IsTeenGirl IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotSpottedVehicle
 	ApplyContext "TalkTeenGirl:1:5"
+	forceweight 30
 	Response L4D1PlayerReviveFriendLoudTeenGirl
 }
 
@@ -8301,7 +8291,7 @@ Response L4D1ReviveFriendDownFinalTeenGirl
 }
 Rule L4D1ReviveFriendDownFinalTeenGirl
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotReviveInterrupt HasAFrom
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotReviveInterrupt
 	Response L4D1ReviveFriendDownFinalTeenGirl
 }
 
@@ -8372,7 +8362,7 @@ Response L4D1PlayerAirportIntrozbTeenGirl
 }
 Rule L4D1PlayerAirportIntrozbTeenGirl
 {
-	criteria ConceptIntroAirport01zb IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroAirport01zb IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerAirportIntrozbTeenGirl
 }
 
@@ -8383,7 +8373,7 @@ Response L4D1PlayerHospitalIntro02TeenGirl
 }
 Rule L4D1PlayerHospitalIntro02TeenGirl
 {
-	criteria ConceptIntroHospital02 IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptIntroHospital02 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerHospitalIntro02TeenGirl
 }
 
@@ -8399,7 +8389,7 @@ Response InfoReminfo_powerboat4TeenGirl
 }
 Rule InfoReminfo_powerboat4TeenGirl
 {
-	criteria ConceptInfoReminfo_powerboat4 IsTeenGirl IssuerClose HasAFrom IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptInfoReminfo_powerboat4 IsTeenGirl IssuerClose IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response InfoReminfo_powerboat4TeenGirl
 }
 
@@ -8523,7 +8513,6 @@ Rule SurvivorSpottedGrenadeLauncherAutoTeenGirl
 	applycontexttoworld
 	Response SurvivorSpottedM60TeenGirl
 }
-
 //--------------------------------------------------------------------------------------------------------------
 // Spotted Firearms (Generic Lines)
 //--------------------------------------------------------------------------------------------------------------
@@ -9035,6 +9024,73 @@ Rule SurvivorSpottedKnifeAutoTeenGirl
 }
 
 //--------------------------------------------------------------------------------------------------------------
+// Vocalize Spot Weapons
+//--------------------------------------------------------------------------------------------------------------
+
+Response SurvivorSpottedRifleAutoTeenGirl2
+{
+	scene "scenes/TeenGirl/Hurrah01.vcd"  //Cool.
+	scene "scenes/TeenGirl/Hurrah01.vcd"  //Cool.
+	scene "scenes/TeenGirl/Yes10.vcd"  //Yeah.
+	scene "scenes/TeenGirl/Yes10.vcd"  //Yeah.
+}
+Rule SurvivorSpottedRifleAutoTeenGirl2
+{
+	criteria ConceptPlayerSpotRifle IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsSaidSpotWeapons IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedRifleAutoTeenGirl2
+}
+
+Rule SurvivorSpottedSMGAutoTeenGirl2
+{
+	criteria ConceptPlayerSpotSMG IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsSaidSpotWeapons IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedRifleAutoTeenGirl2
+}
+
+Rule SurvivorSpottedSniperRifleAutoTeenGirl2
+{
+	criteria ConceptPlayerSpotSniperRifle IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsSaidSpotWeapons IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedRifleAutoTeenGirl2
+}
+
+Rule SurvivorSpottedWeaponPistolTeenGirl
+{
+	criteria ConceptPlayerSpotPistol IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsNotSmartLookAuto IsNotAlone IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedWeaponsTeenGirl
+}
+
+Rule SurvivorSpottedWeaponPistolAutoTeenGirl2
+{
+	criteria ConceptPlayerSpotPistol IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsSaidSpotWeapons IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedRifleAutoTeenGirl2
+}
+
+Rule SurvivorSpottedShotgunTeenGirl
+{
+	criteria ConceptPlayerSpotShotgun IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsNotSmartLookAuto IsNotAlone IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedWeaponsTeenGirl
+}
+
+Rule SurvivorSpottedOtherWeaponTeenGirl
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsNotSmartLookAuto IsNotAlone IsWorldTalkTeenGirl _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedWeaponsTeenGirl
+}
+
+//--------------------------------------------------------------------------------------------------------------
 // The Last Stand
 //--------------------------------------------------------------------------------------------------------------
 Response L4D1PlayerLighthouseIntroTeenGirl
@@ -9056,7 +9112,7 @@ Response L4D1PlayerLighthouseIntro01aTeenGirl
 }
 Rule L4D1PlayerLighthouseIntro01aTeenGirl
 {
-	criteria ConceptC14M1Intro1a IsTeenGirl HasAFrom AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1Intro1a IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerLighthouseIntro01aTeenGirl
 }
 
@@ -9093,7 +9149,7 @@ Response L4D1C14M1EngineBrokeTeenGirl
 }
 Rule L4D1C14M1EngineBrokeTeenGirl
 {
-	criteria ConceptC14M1EngineBroke IsTeenGirl HasAFrom IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1EngineBroke IsTeenGirl IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M1EngineBrokeTeenGirl
 }
 
@@ -9156,7 +9212,7 @@ Response L4D1C14M1PanicSpeakQuickReadyTeenGirl
 }
 Rule L4D1C14M1PanicSpeakQuickReadyTeenGirl
 {
-	criteria ConceptC14M1PanicSpeak IsTeenGirl HasAFrom IsNotRemarkedC14M1PrePanic AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1PanicSpeak IsTeenGirl IsNotRemarkedC14M1PrePanic AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "RemarkedC14M1PrePanic:1:0"
 	applycontexttoworld
 	Response L4D1C14M1PanicSpeakQuickReadyTeenGirl
@@ -9168,7 +9224,7 @@ Response L4D1C14M1PanicSpeakTeenGirl
 }
 Rule L4D1C14M1PanicSpeakTeenGirl
 {
-	criteria ConceptC14M1PanicSpeak IsTeenGirl HasAFrom IsRemarkedC14M1PrePanic AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1PanicSpeak IsTeenGirl IsRemarkedC14M1PrePanic AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M1PanicSpeakTeenGirl
 }
 
@@ -9181,7 +9237,7 @@ Response L4D1C14M1PowerOutTeenGirl
 }
 Rule L4D1C14M1PowerOutTeenGirl
 {
-	criteria ConceptC14M1PowerOutSpeak IsTeenGirl HasAFrom IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1PowerOutSpeak IsTeenGirl IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M1PowerOutTeenGirl
 }
 
@@ -9194,7 +9250,7 @@ Response L4D1C14M1GeneratorActivatedSpeakTeenGirl
 }
 Rule L4D1C14M1GeneratorActivatedSpeakTeenGirl
 {
-	criteria ConceptC14M1GeneratorActivatedSpeak IsTeenGirl HasAFrom C14M1GeneratorTask AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1GeneratorActivatedSpeak IsTeenGirl C14M1GeneratorTask AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M1GeneratorActivatedSpeakTeenGirl
 }
 
@@ -9206,7 +9262,7 @@ Response L4D1C14M1ThirdGeneratorActivatedSpeakTeenGirl
 }
 Rule L4D1C14M1ThirdGeneratorActivatedSpeakTeenGirl
 {
-	criteria ConceptC14M1GeneratorActivatedSpeak IsTeenGirl HasAFrom C14M1LastGenerator AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1GeneratorActivatedSpeak IsTeenGirl C14M1LastGenerator AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M1ThirdGeneratorActivatedSpeakTeenGirl
 }
 
@@ -9216,13 +9272,13 @@ Response L4D1C14M1LastGeneratorActivatedSpeakTeenGirl
 }
 Rule L4D1C14M1LastGeneratorActivatedSpeakTeenGirl
 {
-	criteria ConceptC14M1GeneratorActivatedSpeak IsTeenGirl HasAFrom C14M1AllGenerators AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1GeneratorActivatedSpeak IsTeenGirl C14M1AllGenerators AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M1LastGeneratorActivatedSpeakTeenGirl
 }
 
 Rule L4D1C14M1CraneDropBlankTeenGirl
 {
-	criteria ConceptC14M1CraneDropBlank IsTeenGirl HasAFrom IsNotIncapacitated IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1CraneDropBlank IsTeenGirl IsNotIncapacitated IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response _PlayerInfoRemarkableBlankTeenGirl
 }
 
@@ -9232,7 +9288,7 @@ Response L4D1C14M1PathClearTeenGirl
 }
 Rule L4D1C14M1PathClearTeenGirl
 {
-	criteria ConceptC14M1PathClearSpeak IsTeenGirl HasAFrom IsNotIncapacitated IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M1PathClearSpeak IsTeenGirl IsNotIncapacitated IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M1PathClearTeenGirl
 }
 
@@ -9268,7 +9324,7 @@ Response L4D1C14M2RadioSpeakTeenGirl
 }
 Rule L4D1C14M2RadioSpeakTeenGirl
 {
-	criteria ConceptC14M2Radio IsTeenGirl HasAFrom IsNotIncapacitated IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival _auto_IsTalkingTeenGirl
+	criteria ConceptC14M2RadioSpeak IsTeenGirl IsNotIncapacitated IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival _auto_IsTalkingTeenGirl
 	Response L4D1C14M2RadioSpeakTeenGirl
 }
 
@@ -9314,7 +9370,7 @@ Response L4D1C14M2NoteLighthouse2TeenGirl
 }
 Rule L4D1C14M2NoteLighthouse2TeenGirl
 {
-	criteria ConceptC14M2NoteLighthouse2 IsTeenGirl IssuerClose HasAFrom IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M2NoteLighthouse2 IsTeenGirl IssuerClose IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M2NoteLighthouse2TeenGirl
 }
 
@@ -9324,7 +9380,7 @@ Response L4D1C14M2PowerOutAgainTeenGirl
 }
 Rule L4D1C14M2PowerOutAgainTeenGirl
 {
-	criteria ConceptC14M2PowerOutAgainSpeak IsTeenGirl HasAFrom IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC14M2PowerOutAgainSpeak IsTeenGirl IsNotIncapacitated IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1C14M2PowerOutAgainTeenGirl
 }
 
@@ -9336,7 +9392,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl
 {
-	criteria ConceptFinalVehicleSpotted IsTeenGirl IsLastStand2 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsTeenGirl IsLastStand2 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl
@@ -9344,7 +9400,7 @@ Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2TeenGirl
 
 Rule L4D1SurvivorFinalVehicleBoatC14M2TeenGirl
 {
-	criteria ConceptGetToVehicle IsTeenGirl IsLastStand2 IsNotCoughing IsNotIncapacitated NoOneInSafeSpot IsNotAlone IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsTeenGirl IsLastStand2 IsNotCoughing IsNotIncapacitated IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockTeenGirl IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleBoatTeenGirl
@@ -9359,328 +9415,6 @@ Rule L4D1SurvivorFinalVehicleInsideBoatC14M2TeenGirl
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fatal Freight by Tamari
-//--------------------------------------------------------------------------------------------------------------
-Response L4D1FatalFreightIntroTeenGirl
-{
-	scene "scenes/TeenGirl/WorldSmallTownIntro04.vcd"  then any FatalFreightIntroEnd foo:0 -3.193 //Unless anyone has a better plan, I say we head there.
-}
-Rule L4D1FatalFreightIntroTeenGirl
-{
-	criteria ConceptIntroFatalFreight IsTeenGirl IsNotSaidCXM1Intro IsInStartArea IsNotAlone AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "CXM1Intro:1:0"
-	applycontexttoworld
-	Response L4D1FatalFreightIntroTeenGirl
-}
-
-Response L4D1FatalFreightIntroEndTeenGirl
-{
-	scene "scenes/TeenGirl/GenericResponses08.vcd" then self IntroEnd foo:0 0.1 //Yeah, let's do it.
-}
-Rule L4D1FatalFreightIntroEndTeenGirl
-{
-	criteria ConceptFatalFreightIntroEnd IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
-	Response L4D1FatalFreightIntroEndTeenGirl
-}
-
-Response L4D1FatalFreight2SaferoomTeenGirl
-{
-	scene "scenes/TeenGirl/DLC2MagazineRack01.vcd"  then Biker FatalFreight2Intro2a foo:0 -4.193 //Hey, Francis. They've got the latest issue of Hating Everything Magazine here.
-}
-Rule L4D1FatalFreight2SaferoomTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsFatalFreight2 IsInStartArea IsEveryoneAlive IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
-	ApplyContext "_auto_SafeRoomStart:2:0"
-	applycontexttoworld
-	Response L4D1FatalFreight2SaferoomTeenGirl
-}
-
-Response L4D1FatalFreight3Intro2bTeenGirl
-{
-	scene "scenes/TeenGirl/NegativeNoise04.vcd" then from FatalFreight3Intro2c foo:0 0.1 //[Improv non-verbal displeasure sounds]
-}
-Rule L4D1FatalFreight3Intro2bTeenGirl
-{
-	criteria ConceptFatalFreight3Intro2b IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
-	Response L4D1FatalFreight3Intro2bTeenGirl
-}
-
-Response L4D1FatalFreight4SaferoomTeenGirl
-{
-	scene "scenes/TeenGirl/GenericResponses39.vcd" then any FatalFreight4Intro2a foo:0 0.1 //Almost there. Almost there.
-}
-Rule L4D1FatalFreight4SaferoomTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsFatalFreight4 IsInStartArea IsEveryoneAlive IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
-	ApplyContext "_auto_SafeRoomStart:2:0"
-	applycontexttoworld
-	Response L4D1FatalFreight4SaferoomTeenGirl
-}
-
-Response L4D1FatalFreight4GauntletStartTeenGirl
-{
-	scene "scenes/TeenGirl/EmphaticRun10.vcd"  //RUN!
-}
-Rule L4D1FatalFreight4GauntletStartTeenGirl
-{
-	criteria ConceptFatalFreight4GauntletStart IsTeenGirl HasAFrom IsNotAlone AutoIsNotScavenge AutoIsNotSurvival _auto_NotTimerLockA _auto_NotTimerLockTeenGirl
-	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
-	applycontexttoworld
-	Response L4D1FatalFreight4GauntletStartTeenGirl
-}
-
-Response L4D1FatalFreight4GauntletNagTeenGirl
-{
-	scene "scenes/TeenGirl/HurryUp04.vcd"  //We have to hurry guys!
-	scene "scenes/TeenGirl/HurryUp05.vcd"  //Lets go guys!
-	scene "scenes/TeenGirl/HurryUp08.vcd"  //Guys, hurry!
-	scene "scenes/TeenGirl/HurryUp09.vcd"  //Lets go, Lets go!
-}
-Rule L4D1FatalFreight4GauntletNagTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl IsNotCoughing IsFatalFreight4 IsNotSaidSafeSpotAhead IsNotAlone IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl FatalFreight4NotPhase2V2 FatalFreight4NooneInTrain IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival _auto_NotTimerLockA _auto_NotTimerLockTeenGirl _auto_IsAlarm
-	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockTeenGirl:1:30"
-	applycontexttoworld
-	Response L4D1FatalFreight4GauntletNagTeenGirl
-}
-
-Response FatalFreight4GauntletTeenGirlInTrain
-{
-	print " "  then self ff04_gauntlet_in_train_speak foo:0 0 //
-}
-Rule FatalFreight4GauntletTeenGirlInTrain
-{
-	criteria ConceptFatalFreight4SurvivorInTrain IsTeenGirl FatalFreight4NotPhase2V1 AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "FatalFreight4TrainCount:++1"
-	applycontexttoworld
-	Response FatalFreight4GauntletTeenGirlInTrain
-}
-
-Rule L4D1FatalFreight4InsideTrainTeenGirl
-{
-	criteria ConceptFatalFreight4SurvivorEnteredTrain IsTeenGirl HasAFrom
-	ApplyContext "SurvivorInTrain:1:0"
-	Response NoResponse
-}
-
-Response FatalFreight4GauntletTeenGirlOutOfTrain
-{
-	print " " then self ff04_gauntlet_out_of_train_speak foo:0 0 //
-}
-Rule FatalFreight4GauntletTeenGirlOutOfTrain
-{
-	criteria ConceptFatalFreight4SurvivorOutOfTrain IsTeenGirl FatalFreight4NotPhase2V1 AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "FatalFreight4TrainCount:--1,FatalFreight4TeamInTrain:0:0"
-	applycontexttoworld
-	Response FatalFreight4GauntletTeenGirlOutOfTrain
-}
-
-Rule L4D1FatalFreight4OutsideTrainTeenGirl
-{
-	criteria ConceptFatalFreight4SurvivorExitedTrain IsTeenGirl HasAFrom
-	ApplyContext "SurvivorInTrain:0:0"
-	Response NoResponse
-}
-
-Response L4D1FatalFreight4GauntletInTrainNagTeenGirl
-{
-	scene "scenes/TeenGirl/StayTogetherInside04.vcd"  //Guys, get inside!
-	scene "scenes/TeenGirl/StayTogetherInside05.vcd"  //Come on, come on! Everyone in here!
-	scene "scenes/TeenGirl/StayTogetherInside06.vcd"  //Everyone, in here!
-	scene "scenes/TeenGirl/StayTogetherInside07.vcd"  //Everyone inside!
-}
-Rule L4D1FatalFreight4GauntletInTrainNagTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl IsNotCoughing IsFatalFreight4 IsNotSaidSafeSpotAhead IsNotAlone IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl FatalFreight4NotPhase2V1 FatalFreight4TeamNotInTrain FatalFreight4SomeoneInTrain FatalFreight4InTrain IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival _auto_NotTimerLockA _auto_NotTimerLockTeenGirl _auto_IsAlarm
-	ApplyContext "_auto_TimerLockA:1:5,_auto_TimerLockTeenGirl:1:15"
-	applycontexttoworld
-	Response L4D1FatalFreight4GauntletInTrainNagTeenGirl
-}
-
-Response L4D1FatalFreight4GauntletLockTrainDoorNagTeenGirl
-{
-	scene "scenes/TeenGirl/CloseTheDoor01.vcd"  //Lock the door.
-	scene "scenes/TeenGirl/CloseTheDoor16.vcd"  //Close the door, please! (angry)
-	scene "scenes/TeenGirl/CloseTheDoor17.vcd"  //Lock that door.
-	scene "scenes/TeenGirl/CloseTheDoor22.vcd"  //Can you lock that door?!
-	scene "scenes/TeenGirl/CloseTheDoor28.vcd"  //Close the door, please! (angry)
-	scene "scenes/TeenGirl/CloseTheDoor29.vcd"  //Lock that door.
-	scene "scenes/TeenGirl/CloseTheDoor42.vcd"  //Lock the door.
-}
-Rule L4D1FatalFreight4GauntletLockTrainDoorNagTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl IsNotCoughing IsFatalFreight4 IsNotSaidSafeSpotAhead IsNotAlone IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl FatalFreight4NotPhase2V1 FatalFreight4TeamIsInTrain IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival _auto_NotTimerLockA _auto_NotTimerLockTeenGirl _auto_IsAlarm
-	ApplyContext "_auto_TimerLockA:1:5,_auto_TimerLockTeenGirl:1:15"
-	applycontexttoworld
-	Response L4D1FatalFreight4GauntletLockTrainDoorNagTeenGirl
-}
-
-Response SurvivorNearCheckpointFatalFreight4TeenGirl
-{
-	scene "scenes/TeenGirl/SafeSpotAhead06.vcd"  then any SafeSpotAheadResponse foo:0 -1.095 //Safe house ahead!
-	scene "scenes/TeenGirl/SafeSpotAhead08.vcd"  then any SafeSpotAheadResponse foo:0 -1.424 //There's a safe house ahead.
-}
-Rule SurvivorNearCheckpointFatalFreight4TeenGirl
-{
-	criteria ConceptPlayerNearCheckpoint IsNotCoughing IsTeenGirl IsNotSaidSafeSpotAhead IsNotAlone IsNotInCheckpoint IsFatalFreight4 IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "SaidSafeSpotAhead:1:0"
-	applycontexttoworld
-	Response SurvivorNearCheckpointFatalFreight4TeenGirl
-}
-
-Response SafeSpotAheadResponseFatalFreight4TeenGirl
-{
-	scene "scenes/TeenGirl/HurryUp01.vcd"  //Hurry up!
-	scene "scenes/TeenGirl/HurryUp06.vcd"  //Hurry!
-}
-Rule SafeSpotAheadResponseFatalFreight4TeenGirl
-{
-	criteria IsTeenGirl IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IssuerClose ConceptSafeSpotAheadResponse IsWorldTalkTeenGirl HasAFrom IsFatalFreight4 AutoIsNotScavenge AutoIsNotSurvival
-	Response SafeSpotAheadResponseFatalFreight4TeenGirl
-}
-
-Rule L4D1PlayerGetInsideCheckPointFatalFreight4TeenGirl
-{
-	criteria ConceptPlayerGetInsideCheckPoint IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl SomeoneOutsideSafeSpot IsWorldTalkTeenGirl IsFatalFreight4 AutoIsNotScavenge AutoIsNotSurvival
-	Response NoResponse
-}
-
-Rule L4D1PlayerLockTheDoorCheckPointFatalFreight4TeenGirl
-{
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsFatalFreight4 AutoIsNotScavenge AutoIsNotSurvival
-	Response NoResponse
-}
-
-Rule L4D1PlayerTransitionFatalFreight4TeenGirl
-{
-	criteria ConceptPlayerTransition IsNotCoughing IsTeenGirl IsNotSaidPlayerTransition IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsFatalFreight4 AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "SaidPlayerTransition:1:90"
-	applycontexttoworld
-	Response NoResponse
-}
-
-Rule FatalFreight5SafeRoomStartHealthyTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl IsFatalFreight5 IsRocking IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
-	ApplyContext "Talk:1:45,FatalFreight5StartType:1:0,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
-	applycontexttoworld
-	Response CustomTalkerEnable
-}
-
-Response L4D1FatalFreight5SaferoomTeenGirl
-{
-	scene "scenes/TeenGirl/Hurrah19.vcd"  then Any FatalFreight5HealthyIntro1 foo:0 -1.291 //No stopping us!
-	scene "scenes/TeenGirl/Hurrah20.vcd"  then Any FatalFreight5HealthyIntro1 foo:0 -2.027 //We are unstoppable
-}
-Rule L4D1FatalFreight5SaferoomTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsFatalFreight5 FatalFreight5HealthyStart IsInStartArea IsEveryoneAlive IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
-	ApplyContext "_auto_SafeRoomStart:2:0"
-	applycontexttoworld
-	Response L4D1FatalFreight5SaferoomTeenGirl
-}
-
-Response L4D1FatalFreight5HealthyIntro1TeenGirl
-{
-	scene "scenes/TeenGirl/Taunt28.vcd" then Any FatalFreight5HealthyIntro2 foo:0 0.1 //Thats right. [grim, determined]
-	scene "scenes/TeenGirl/Taunt34.vcd" then Any FatalFreight5HealthyIntro2 foo:0 0.1 //Thats right. [grim, determined]
-}
-Rule L4D1FatalFreight5HealthyIntro1TeenGirl
-{
-	criteria ConceptFatalFreight5HealthyIntro1 IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
-	Response L4D1FatalFreight5HealthyIntro1TeenGirl
-}
-
-Rule FatalFreight5SafeRoomStartNotHealthyTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl IsFatalFreight5 IsNotHealthy IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
-	ApplyContext "Talk:1:45,FatalFreight5StartType:2:0,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
-	applycontexttoworld
-	Response CustomTalkerEnable
-}
-
-Response L4D1FatalFreight5SaferoomNotHealthyTeenGirl
-{
-	scene "scenes/TeenGirl/TransitionClose01.vcd" then any FatalFreight5NotHealthyIntro1a foo:0 0.1 //That was close
-	scene "scenes/TeenGirl/TransitionClose05.vcd" then any FatalFreight5NotHealthyIntro1a foo:0 0.1 //Close one
-	scene "scenes/TeenGirl/TransitionClose07.vcd" then any FatalFreight5NotHealthyIntro1a foo:0 0.1 //That was close
-	scene "scenes/TeenGirl/TransitionClose09.vcd" then any FatalFreight5NotHealthyIntro1a foo:0 0.1 //That was close
-	scene "scenes/TeenGirl/TransitionClose10.vcd" then any FatalFreight5NotHealthyIntro1a foo:0 0.1 //Close one
-}
-Rule L4D1FatalFreight5SaferoomNotHealthyTeenGirl
-{
-	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsFatalFreight5 FatalFreight5BadStart IsInStartArea IsEveryoneAlive IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
-	ApplyContext "_auto_SafeRoomStart:2:0"
-	applycontexttoworld
-	Response L4D1FatalFreight5SaferoomNotHealthyTeenGirl
-}
-
-Response L4D1FatalFreight5NotHealthyIntro1aTeenGirl
-{
-	scene "scenes/TeenGirl/ViolenceAwe13.vcd" then any FatalFreight5NotHealthyIntro1b foo:0 0.1 //Holy crap.
-	scene "scenes/TeenGirl/ViolenceAwe15.vcd" then any FatalFreight5NotHealthyIntro1b foo:0 0.1 //Holy shit...
-}
-Rule L4D1FatalFreight5NotHealthyIntro1aTeenGirl
-{
-	criteria ConceptFatalFreight5NotHealthyIntro1a IsTeenGirl IsNotSaidLeavingSafeArea HasAFrom AutoIsNotScavenge AutoIsNotSurvival
-	Response L4D1FatalFreight5NotHealthyIntro1aTeenGirl
-}
-
-Response L4D1SurvivorNearFinaleFatalFreightTeenGirl
-{
-	scene "scenes/TeenGirl/WorldSmallTown0203.vcd"  //Up here guys!
-}
-Rule L4D1SurvivorNearFinaleFatalFreightTeenGirl
-{
-	criteria ConceptPlayerNearFinale IsNotCoughing IsTeenGirl IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl IsFatalFreight5 AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "SaidFinaleAhead:1:0"
-	applycontexttoworld
-	Response L4D1SurvivorNearFinaleFatalFreightTeenGirl
-}
-
-//--------------------------------------------------------------------------------------------------------------
-// Dark Wood (Extended)
-//--------------------------------------------------------------------------------------------------------------
-Response SurvivorNearCheckpointDW3TeenGirl
-{
-	scene "scenes/NamVet/WorldHospital0413.vcd"  //Get to the elevator!
-	scene "scenes/NamVet/WorldHospital0414.vcd"  //Into the elevator!
-}
-Rule SurvivorNearCheckpointDW3TeenGirl
-{
-	criteria ConceptPlayerNearCheckpoint IsNotCoughing IsTeenGirl IsNotSaidSafeSpotAhead IsNotAlone IsNotInCheckpoint IsTalk IsTalkTeenGirl IsDarkWood3 IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "SaidSafeSpotAhead:1:0"
-	applycontexttoworld
-	Response SurvivorNearCheckpointDW3TeenGirl
-}
-
-Rule PlayerGetInsideCheckPointDW3TeenGirl
-{
-	criteria ConceptPlayerGetInsideCheckPoint IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl SomeoneOutsideSafeSpot IsWorldTalkTeenGirl IsDarkWood3 AutoIsNotScavenge AutoIsNotSurvival
-	Response NoResponse
-}
-
-Rule PlayerStayTogetherSaferoomDW3TeenGirl
-{
-	criteria ConceptPlayerStayTogether IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl SomeoneOutsideSafeSpot IsWorldTalkTeenGirl IsDarkWood3 IsNotSpeaking AutoIsNotScavenge AutoIsNotSurvival
-	Response NoResponse
-}
-
-Rule PlayerLockTheDoorCheckPointDW3TeenGIrl
-{
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsTeenGirl IsInSafeSpot IsNotAlone IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsDarkWood3 AutoIsNotScavenge AutoIsNotSurvival
-	Response NoResponse
-}
-
-Rule PlayerTransitionDW33TeenGirl
-{
-	criteria ConceptPlayerTransition IsNotCoughing IsTeenGirl IsNotSaidPlayerTransition IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsDarkWood3 AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "SaidPlayerTransition:1:90"
-	applycontexttoworld
-	Response NoResponse
-}
-
-//--------------------------------------------------------------------------------------------------------------
 // Generic rules to keep track of contexts for all maps (Unless there's a seperate rule for special cases)
 //--------------------------------------------------------------------------------------------------------------
 Rule SafeRoomStartTeenGirl
@@ -9688,7 +9422,7 @@ Rule SafeRoomStartTeenGirl
 	criteria ConceptTalkIdle IsTeenGirl IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
 	applycontexttoworld
-	Response CustomTalkerEnable
+	Response NoResponse
 }
 
 Rule IntroEndTeenGirl

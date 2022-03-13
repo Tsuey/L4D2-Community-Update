@@ -12897,7 +12897,7 @@ Response SurvivorPickupAdrenalineCoach
 }
 Rule SurvivorPickupAdrenalineCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAdrenalineCoach
 }
@@ -12910,14 +12910,14 @@ Response SurvivorPickupAutoShotgunCoach
 }
 Rule SurvivorPickupAutoShotgunCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAutoShotgunCoach
 }
 
 Rule SurvivorPickupSpasShotgunCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpShotgun_spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpShotgun_spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAutoShotgunCoach
 }
@@ -12930,7 +12930,7 @@ Response SurvivorPickupchainsawCoach
 }
 Rule SurvivorPickupchainsawCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpchainsaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpchainsaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupchainsawCoach
 }
@@ -12944,7 +12944,7 @@ Response SurvivorPickupcricket_batCoach
 }
 Rule SurvivorPickupcricket_batCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupcricket_batCoach
 }
@@ -12961,14 +12961,14 @@ Response SurvivorPickupCricketBatCoach
 }
 Rule SurvivorPickupCricketBatCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupCricketBatCoach
 }
 
 Rule SurvivorPickupShovelCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpShovel IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpShovel IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupCricketBatCoach
 }
@@ -12980,7 +12980,7 @@ Response SurvivorPickupKnifeCoach
 }
 Rule SurvivorPickupKnifeCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpKnife IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpKnife IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupKnifeCoach
 }
@@ -12994,7 +12994,7 @@ Response SurvivorPickupCrowBarCoach
 }
 Rule SurvivorPickupCrowBarCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupCrowBarCoach
 }
@@ -13006,7 +13006,7 @@ Response SurvivorPickupDefibrillatorCoach
 }
 Rule SurvivorPickupDefibrillatorCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpDefibrillator ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpDefibrillator ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupDefibrillatorCoach
 }
@@ -13017,7 +13017,7 @@ Response SurvivorPickupelectric_guitarCoach
 }
 Rule SurvivorPickupelectric_guitarCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpelectric_guitar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpelectric_guitar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupelectric_guitarCoach
 }
@@ -13030,7 +13030,7 @@ Response SurvivorPickupFirstAidKitCoach
 }
 Rule SurvivorPickupFirstAidKitCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach IsNotScavenge isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach IsNotScavenge isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupFirstAidKitCoach
 }
@@ -13067,7 +13067,7 @@ Response SurvivorPickupGolfCLubCoach
 }
 Rule SurvivorPickupGolfCLubCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpGolfClub IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpGolfClub IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupGolfCLubCoach
 }
@@ -13082,7 +13082,7 @@ Response SurvivorPickupGrenadeLauncherCoach
 }
 Rule SurvivorPickupGrenadeLauncherCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpGrenadeLauncher NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpGrenadeLauncher NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupGrenadeLauncherCoach
 }
@@ -13095,28 +13095,28 @@ Response SurvivorPickupHuntingRifleCoach
 }
 Rule SurvivorPickupHuntingRifleCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleCoach
 }
 
 Rule SurvivorPickupMilitarySniperCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleCoach
 }
 
 Rule SurvivorPickupScoutSniperCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleCoach
 }
 
 Rule SurvivorPickupAWPSniperCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleCoach
 }
@@ -13128,7 +13128,7 @@ Response SurvivorPickupIncendiaryAmmoCoach
 }
 Rule SurvivorPickupIncendiaryAmmoCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupIncendiaryAmmoCoach
 }
@@ -13141,7 +13141,7 @@ Response SurvivorPickupExplosiveAmmoCoach
 }
 Rule SurvivorPickupExplosiveAmmoCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupExplosiveAmmoCoach
 }
@@ -13156,7 +13156,7 @@ Response SurvivorPickupKatanaCoach
 }
 Rule SurvivorPickupKatanaCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpKatana IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpKatana IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupKatanaCoach
 }
@@ -13169,7 +13169,7 @@ Response SurvivorPickupLaserSightsAlwaysCoach
 }
 Rule SurvivorPickupLaserSightsAlwaysCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpLaserSights IsNotSpeaking ChanceToFire50Percent IsBotNotAvailable NotPickedUpItem IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpLaserSights IsNotSpeaking ChanceToFire50Percent IsBotNotAvailable NotPickedUpItem IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupLaserSightsAlwaysCoach
 }
@@ -13184,7 +13184,7 @@ Response SurvivorPickupM60Coach
 }
 Rule SurvivorPickupM60Coach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupM60Coach
 }
@@ -13196,7 +13196,7 @@ Response SurvivorPickupMacheteCoach
 }
 Rule SurvivorPickupMacheteCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpMachete IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpMachete IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMacheteCoach
 }
@@ -13207,14 +13207,14 @@ Response SurvivorPickupMagnumCoach
 }
 Rule SurvivorPickupMagnumCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpMagnum IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpMagnum IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMagnumCoach
 }
 
 Rule SurvivorPickupPitchforkCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPitchfork IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPitchfork IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMagnumCoach
 }
@@ -13226,7 +13226,7 @@ Response SurvivorPickupMolotovCoach
 }
 Rule SurvivorPickupMolotovCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMolotovCoach
 }
@@ -13242,7 +13242,7 @@ Response SurvivorPickupPainPillsCoach
 }
 Rule SurvivorPickupPainPillsCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach IsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPainPillsCoach
 }
@@ -13257,7 +13257,7 @@ Response SurvivorPickupPipeBombCoach
 }
 Rule SurvivorPickupPipeBombCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPipeBombCoach
 }
@@ -13270,14 +13270,14 @@ Response SurvivorPickupPumpShotgunCoach
 }
 Rule SurvivorPickupPumpShotgunCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPumpShotgunCoach
 }
 
 Rule SurvivorPickupChromeShotgunCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpShotgun_chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpShotgun_chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPumpShotgunCoach
 }
@@ -13293,28 +13293,28 @@ Response SurvivorPickupRifleCoach
 }
 Rule SurvivorPickupRifleCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleCoach
 }
 
 Rule SurvivorPickupDesertRifleCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleCoach
 }
 
 Rule SurvivorPickupAK47RifleCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleCoach
 }
 
 Rule SurvivorPickupSG552RifleCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleCoach
 }
@@ -13327,7 +13327,7 @@ Response SurvivorPickupSecondPistolCoach
 }
 Rule SurvivorPickupSecondPistolCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSecondPistolCoach
 }
@@ -13340,14 +13340,14 @@ Response SurvivorPickupSMGCoach
 }
 Rule SurvivorPickupSMGCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGCoach
 }
 
 Rule SurvivorPickupSilencedSMGCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGCoach
 }
@@ -13359,7 +13359,7 @@ Response SurvivorPickuptonfaCoach
 }
 Rule SurvivorPickuptonfaCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUptonfa IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUptonfa IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickuptonfaCoach
 }
@@ -13370,7 +13370,7 @@ Response SurvivorPickupUpExplosivesCoach
 }
 Rule SurvivorPickupUpExplosivesCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpExplosivesCoach
 }
@@ -13381,7 +13381,7 @@ Response SurvivorPickupUpIncendiaryCoach
 }
 Rule SurvivorPickupUpIncendiaryCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpIncendiaryCoach
 }
@@ -13395,7 +13395,7 @@ Response SurvivorPickupVomitJarCoach
 }
 Rule SurvivorPickupVomitJarCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpVomitJar ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpVomitJar ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupVomitJarCoach
 }

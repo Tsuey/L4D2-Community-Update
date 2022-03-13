@@ -13508,7 +13508,7 @@ Response SurvivorPickupAdrenalineMechanic
 }
 Rule SurvivorPickupAdrenalineMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAdrenalineMechanic
 }
@@ -13521,14 +13521,14 @@ Response SurvivorPickupAutoShotgunMechanic
 }
 Rule SurvivorPickupAutoShotgunMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAutoShotgunMechanic
 }
 
 Rule SurvivorPickupSpasShotgunMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpShotgun_spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpShotgun_spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAutoShotgunMechanic
 }
@@ -13546,7 +13546,7 @@ Response SurvivorPickupbaseball_batMechanic
 }
 Rule SurvivorPickupbaseball_batMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpbaseball_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpbaseball_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupbaseball_batMechanic
 }
@@ -13563,7 +13563,7 @@ Response SurvivorPickupShovelMechanic
 }
 Rule SurvivorPickupShovelMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpShovel IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpShovel IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupShovelMechanic
 }
@@ -13578,7 +13578,7 @@ Response SurvivorPickupchainsawMechanic
 }
 Rule SurvivorPickupchainsawMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpchainsaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpchainsaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupchainsawMechanic
 }
@@ -13589,7 +13589,7 @@ Response SurvivorPickupKnifeMechanic
 }
 Rule SurvivorPickupKnifeMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpKnife IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpKnife IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupKnifeMechanic
 }
@@ -13606,7 +13606,7 @@ Response SurvivorPickupcricket_batMechanic
 }
 Rule SurvivorPickupcricket_batMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupcricket_batMechanic
 }
@@ -13618,7 +13618,7 @@ Response SurvivorPickupPitchforkMechanic
 }
 Rule SurvivorPickupPitchforkMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPitchfork IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPitchfork IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPitchforkMechanic
 }
@@ -13631,7 +13631,7 @@ Response SurvivorPickupCrowBarMechanic
 }
 Rule SurvivorPickupCrowBarMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupCrowBarMechanic
 }
@@ -13643,7 +13643,7 @@ Response SurvivorPickupDefibrillatorMechanic
 }
 Rule SurvivorPickupDefibrillatorMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpDefibrillator ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpDefibrillator ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupDefibrillatorMechanic
 }
@@ -13655,7 +13655,7 @@ Response SurvivorPickupelectric_guitarMechanic
 }
 Rule SurvivorPickupelectric_guitarMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpelectric_guitar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpelectric_guitar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupelectric_guitarMechanic
 }
@@ -13671,7 +13671,7 @@ Response SurvivorPickupFireAxeMechanic
 }
 Rule SurvivorPickupFireAxeMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpFireAxe ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpFireAxe ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupFireAxeMechanic
 }
@@ -13685,7 +13685,7 @@ Response SurvivorPickupFirstAidKitMechanic
 }
 Rule SurvivorPickupFirstAidKitMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea IsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupFirstAidKitMechanic
 }
@@ -13717,7 +13717,7 @@ Response SurvivorPickupFryingPanMechanic
 }
 Rule SurvivorPickupFryingPanMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpFryingPan IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpFryingPan IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupFryingPanMechanic
 }
@@ -13731,7 +13731,7 @@ Response SurvivorPickupGolfCLubMechanic
 }
 Rule SurvivorPickupGolfCLubMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpGolfClub  IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpGolfClub  IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupGolfCLubMechanic
 }
@@ -13745,7 +13745,7 @@ Response SurvivorPickupGrenadeLauncherMechanic
 }
 Rule SurvivorPickupGrenadeLauncherMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpGrenadeLauncher NotPickedUpItem IsNotInSafeSpot  IsNotSpeaking IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpGrenadeLauncher NotPickedUpItem IsNotInSafeSpot  IsNotSpeaking IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupGrenadeLauncherMechanic
 }
@@ -13771,28 +13771,28 @@ Response SurvivorPickupHuntingRifleMechanic
 }
 Rule SurvivorPickupHuntingRifleMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleMechanic
 }
 
 Rule SurvivorPickupMilitarySniperMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleMechanic
 }
 
 Rule SurvivorPickupScoutSniperMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleMechanic
 }
 
 Rule SurvivorPickupAWPSniperMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleMechanic
 }
@@ -13807,7 +13807,7 @@ Response SurvivorPickupIncendiaryAmmoMechanic
 }
 Rule SurvivorPickupIncendiaryAmmoMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupIncendiaryAmmoMechanic
 }
@@ -13824,7 +13824,7 @@ Response SurvivorPickupKatanaMechanic
 }
 Rule SurvivorPickupKatanaMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpKatana IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpKatana IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupKatanaMechanic
 }
@@ -13837,7 +13837,7 @@ Response SurvivorPickupLaserSightsAlwaysMechanic
 }
 Rule SurvivorPickupLaserSightsAlwaysMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupLaserSightsAlwaysMechanic
 }
@@ -13851,7 +13851,7 @@ Response SurvivorPickupM60Mechanic
 }
 Rule SurvivorPickupM60Mechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupM60Mechanic
 }
@@ -13863,7 +13863,7 @@ Response SurvivorPickupMacheteMechanic
 }
 Rule SurvivorPickupMacheteMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpMachete IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpMachete IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMacheteMechanic
 }
@@ -13877,7 +13877,7 @@ Response SurvivorPickupMagnumMechanic
 }
 Rule SurvivorPickupMagnumMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpMagnum IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpMagnum IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMagnumMechanic
 }
@@ -13895,7 +13895,7 @@ Response SurvivorPickupMolotovMechanic
 }
 Rule SurvivorPickupMolotovMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMolotovMechanic
 }
@@ -13908,7 +13908,7 @@ Response SurvivorPickupPainPillsMechanic
 }
 Rule SurvivorPickupPainPillsMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPainPills ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPainPills ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPainPillsMechanic
 }
@@ -13921,7 +13921,7 @@ Response SurvivorPickupPipeBombMechanic
 }
 Rule SurvivorPickupPipeBombMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPipeBombMechanic
 }
@@ -13934,14 +13934,14 @@ Response SurvivorPickupPumpShotgunMechanic
 }
 Rule SurvivorPickupPumpShotgunMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPumpShotgunMechanic
 }
 
 Rule SurvivorPickupChromeShotgunMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPumpShotgunMechanic
 }
@@ -13956,7 +13956,7 @@ Response SurvivorPickupRifleMechanic
 }
 Rule SurvivorPickupRifleMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleMechanic
 }
@@ -13970,21 +13970,21 @@ Response SurvivorPickupDesertRifleMechanic
 }
 Rule SurvivorPickupDesertRifleMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupDesertRifleMechanic
 }
 
 Rule SurvivorPickupAK47RifleMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupDesertRifleMechanic
 }
 
 Rule SurvivorPickupSG552RifleMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupDesertRifleMechanic
 }
@@ -13998,7 +13998,7 @@ Response SurvivorPickupSecondPistolMechanic
 }
 Rule SurvivorPickupSecondPistolMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSecondPistolMechanic
 }
@@ -14011,21 +14011,21 @@ Response SurvivorPickupSMGMechanic
 }
 Rule SurvivorPickupSMGMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGMechanic
 }
 
 Rule SurvivorPickupSilencedSMGMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSMG_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSMG_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGMechanic
 }
 
 Rule SurvivorPickupMP5SMGMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSMG_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpSMG_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGMechanic
 }
@@ -14038,7 +14038,7 @@ Response SurvivorPickuptonfaMechanic
 }
 Rule SurvivorPickuptonfaMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUptonfa IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUptonfa IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickuptonfaMechanic
 }
@@ -14051,7 +14051,7 @@ Response SurvivorPickupUpExplosiveAmmoMechanic
 }
 Rule SurvivorPickupUpExplosiveAmmoMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpExplosiveAmmo ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpExplosiveAmmo ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpExplosiveAmmoMechanic
 }
@@ -14063,7 +14063,7 @@ Response SurvivorPickupUpExplosivesMechanic
 }
 Rule SurvivorPickupUpExplosivesMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpExplosivesMechanic
 }
@@ -14075,7 +14075,7 @@ Response SurvivorPickupUpIncendiaryMechanic
 }
 Rule SurvivorPickupUpIncendiaryMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpUpgradePack_Incendiary IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpUpgradePack_Incendiary IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpIncendiaryMechanic
 }
@@ -14090,7 +14090,7 @@ Response SurvivorPickupVomitJarMechanic
 }
 Rule SurvivorPickupVomitJarMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpVomitJar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpVomitJar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkMechanic IsWorldTalkMechanic AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupVomitJarMechanic
 }
@@ -16525,7 +16525,7 @@ Rule SurvivorSpottedLaserSightsAutoMechanic
 
 Rule SurvivorBotPickupLaserSightsSpottedMechanic
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInSafeSpot IsNotInCheckpoint IsNotInStartArea IsNotSaidSpotWeapons IsTalk IsTalkMechanic IsWorldTalkMechanic _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInSafeSpot IsNotInCheckpoint IsNotInStartArea IsNotSaidSpotWeapons IsTalk IsTalkMechanic IsWorldTalkMechanic AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedLaserSightsMechanic
