@@ -12061,7 +12061,7 @@ Response SurvivorPickupFirstSMGProducer2
 }
 Rule SurvivorPickupFirstSMGProducer2
 {
-	criteria ConceptPlayerPickupFirstSMG2 IsProducer IsWorldTalkProducer ChanceToFire80Percent
+	criteria ConceptPlayerPickupFirstSMG2 IsProducer IsWorldTalkProducer
 	Response SurvivorPickupFirstSMGProducer2
 }
 
