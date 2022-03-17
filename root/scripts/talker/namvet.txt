@@ -4510,7 +4510,7 @@ Response L4D1SurvivorNearFinaleNamVet
 }
 Rule L4D1SurvivorNearFinaleNamVet
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorNearFinaleNamVet
@@ -4523,7 +4523,7 @@ Response L4D1PlayerNearFinaleC7M3NamVet
 }
 Rule L4D1PlayerNearFinaleC7M3NamVet
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC7M3NamVet
@@ -4537,7 +4537,7 @@ Response L4D1SurvivorFinaleAheadC8M5NamVet
 }
 Rule L4D1SurvivorFinaleAheadC8M5NamVet
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet IsNoMercy5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet IsNoMercy5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinaleAheadC8M5NamVet
@@ -4545,7 +4545,7 @@ Rule L4D1SurvivorFinaleAheadC8M5NamVet
 
 Rule L4D1SurvivorFinaleAheadC9M2NamVet
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,SaidCreshendoStartNear:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -4558,7 +4558,7 @@ Response L4D1SurvivorNearFinaleC11M5NamVet
 }
 Rule L4D1SurvivorNearFinaleC11M5NamVet
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsWorldTalkNamVet IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorNearFinaleC11M5NamVet
@@ -4571,7 +4571,7 @@ Response L4D1PlayerNearFinaleC12M5NamVet
 }
 Rule L4D1PlayerNearFinaleC12M5NamVet
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsBloodHarvest5 IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsBloodHarvest5 IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,WarnMegaMob:1:60,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC12M5NamVet
@@ -4579,7 +4579,7 @@ Rule L4D1PlayerNearFinaleC12M5NamVet
 
 Rule L4D1PlayerNearFinaleC14M2NamVet
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsLastStand2 IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsNamVet IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkNamVet IsNotIncapacitated IsLastStand2 IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse

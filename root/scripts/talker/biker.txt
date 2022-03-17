@@ -6242,7 +6242,7 @@ Response L4D1SurvivorNearFinaleBiker
 }
 Rule L4D1SurvivorNearFinaleBiker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorNearFinaleBiker
@@ -6258,7 +6258,7 @@ Response L4D1PlayerNearFinaleC7M3Biker
 }
 Rule L4D1PlayerNearFinaleC7M3Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC7M3Biker
@@ -6266,7 +6266,7 @@ Rule L4D1PlayerNearFinaleC7M3Biker
 
 Rule L4D1SurvivorFinaleAheadC9M2Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,SaidCreshendoStartNear:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -6279,7 +6279,7 @@ Response L4D1PlayerNearFinaleC11M5Biker
 }
 Rule L4D1PlayerNearFinaleC11M5Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC11M5Biker
@@ -6292,7 +6292,7 @@ Response L4D1PlayerNearFinaleC12M5Biker
 }
 Rule L4D1PlayerNearFinaleC12M5Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsBloodHarvest5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsBloodHarvest5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,WarnMegaMob:1:60,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC12M5Biker
@@ -6300,7 +6300,7 @@ Rule L4D1PlayerNearFinaleC12M5Biker
 
 Rule L4D1PlayerNearFinaleC14M2Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsLastStand2 IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsLastStand2 IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse

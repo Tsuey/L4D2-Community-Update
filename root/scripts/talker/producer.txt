@@ -11435,7 +11435,7 @@ Response SurvivorNearFinaleProducer
 }
 Rule SurvivorNearFinaleProducer
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response SurvivorNearFinaleProducer
@@ -11443,7 +11443,7 @@ Rule SurvivorNearFinaleProducer
 
 Rule SurvivorNearFinaleC1M4Producer
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer ismap_c1m4_atrium AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer ismap_c1m4_atrium AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -11455,7 +11455,7 @@ Response SurvivorNearFinaleC2M5Producer
 }
 Rule SurvivorNearFinaleC2M5Producer
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer ismap_c2m5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer ismap_c2m5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response SurvivorNearFinaleC2M5Producer
@@ -11470,7 +11470,7 @@ Response SurvivorNearFinaleC3M4Producer
 }
 Rule SurvivorNearFinaleC3M4Producer
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response SurvivorNearFinaleC3M4Producer
@@ -11478,7 +11478,7 @@ Rule SurvivorNearFinaleC3M4Producer
 
 Rule SurvivorNearFinaleC4M5Producer
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer isc4m5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer isc4m5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -11486,7 +11486,7 @@ Rule SurvivorNearFinaleC4M5Producer
 
 Rule SurvivorNearFinaleC5M5Producer
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer IsMapc5m5_bridge AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer IsMapc5m5_bridge AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -11494,7 +11494,7 @@ Rule SurvivorNearFinaleC5M5Producer
 
 Rule SurvivorNearFinaleC6M3Producer
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer Isc6m3_port AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsProducer IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkProducer IsNotIncapacitated IsWorldTalkProducer Isc6m3_port AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
