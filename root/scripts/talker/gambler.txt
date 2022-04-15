@@ -6060,7 +6060,7 @@ Response PlayerToTheRescueRosGambler
 }
 Rule PlayerToTheRescueRosGambler
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerToTheRescueRosGambler
 }
 
@@ -9816,7 +9816,7 @@ Response PlayerHurryUpGambler
 }
 Rule PlayerHurryUpGambler
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerHurryUp IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerHurryUpGambler
 }
 
@@ -9860,7 +9860,7 @@ Response PlayerLeadOnGambler
 }
 Rule PlayerLeadOnGambler
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerLeadOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerLeadOnGambler
 }
 
@@ -9874,7 +9874,7 @@ Response PlayerMoveOnGambler
 }
 Rule PlayerMoveOnGambler
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerMoveOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerMoveOnGambler
 }
 
@@ -9922,7 +9922,7 @@ Response PlayerAskReadyGambler
 }
 Rule PlayerAskReadyGambler
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerAskReadyGambler
 }
 
@@ -9934,7 +9934,7 @@ Response PlayerAskReadyC1Gambler
 }
 Rule PlayerAskReadyC1Gambler
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames
+	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames IsNotSpeaking
 	Response PlayerAskReadyC1Gambler
 }
 
@@ -9948,7 +9948,7 @@ Response PlayerImWithYouGambler
 }
 Rule PlayerImWithYouGambler
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerImWithYouGambler
 }
 
@@ -9974,7 +9974,7 @@ Response PlayerLaughGambler
 }
 Rule PlayerLaughGambler
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerLaughGambler
 }
 
@@ -10007,7 +10007,7 @@ Response PlayerNiceJobResponseGambler
 }
 Rule PlayerNiceJobResponseGambler
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNiceJobResponseGambler
 }
 
@@ -10028,7 +10028,7 @@ Response PlayerNoGambler
 }
 Rule PlayerNoGambler
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerNo IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNoGambler
 }
 
@@ -10091,7 +10091,7 @@ Response PlayerSorryGambler
 }
 Rule PlayerSorryGambler
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerSorryGambler
 }
 
@@ -10106,7 +10106,7 @@ Response PlayerSorryFFGambler
 }
 Rule PlayerSorryFFGambler
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerSorryFFGambler
 }
 
@@ -10119,7 +10119,7 @@ Response PlayerThanksGambler
 }
 Rule PlayerThanksGambler
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerThanks IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerThanksGambler
 }
 
@@ -10152,7 +10152,7 @@ Response PlayerYesGambler
 }
 Rule PlayerYesGambler
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerYes IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerYesGambler
 }
 
@@ -10338,7 +10338,7 @@ Response PlayerNegativeGambler
 }
 Rule PlayerNegativeGambler
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNegativeGambler
 }
 
@@ -10569,7 +10569,7 @@ Response PlayerHurrahGambler
 }
 Rule PlayerHurrahGambler
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerHurrah IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerHurrahGambler
 }
 
@@ -10581,7 +10581,7 @@ Response PlayerWarnCarefulGambler
 }
 Rule PlayerWarnCarefulGambler
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerWarnCarefulGambler
 }
 
@@ -12623,7 +12623,7 @@ Response SurvivorVocalizeWaitHereGambler
 }
 Rule SurvivorVocalizeWaitHereGambler
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerWaitHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response SurvivorVocalizeWaitHereGambler
 }
 

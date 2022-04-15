@@ -5703,7 +5703,7 @@ Response PlayerToTheRescueRosProducer
 }
 Rule PlayerToTheRescueRosProducer
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerToTheRescueRosProducer
 }
 
@@ -5720,7 +5720,7 @@ Response SurvivorTauntResponseProducer
 }
 Rule SurvivorTauntResponseProducer
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotVersus 
+	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking 
 	Response SurvivorTauntResponseProducer
 }
 
@@ -9093,7 +9093,7 @@ Response PlayerHurryUpProducer
 }
 Rule PlayerHurryUpProducer
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerHurryUp IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerHurryUpProducer
 }
 
@@ -9140,7 +9140,7 @@ Response PlayerLeadOnProducer
 }
 Rule PlayerLeadOnProducer
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerLeadOn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerLeadOnProducer
 }
 
@@ -9154,7 +9154,7 @@ Response PlayerMoveOnProducer
 }
 Rule PlayerMoveOnProducer
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerMoveOn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerMoveOnProducer
 }
 
@@ -9196,7 +9196,7 @@ Response PlayerAskReadyProducer
 }
 Rule PlayerAskReadyProducer
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerAskReady IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerAskReadyProducer
 }
 
@@ -9211,7 +9211,7 @@ Response PlayerImWithYouProducer
 }
 Rule PlayerImWithYouProducer
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerImWithYouProducer
 }
 
@@ -9237,7 +9237,7 @@ Response PlayerLaughProducer
 }
 Rule PlayerLaughProducer
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerLaughProducer
 }
 
@@ -9273,7 +9273,7 @@ Response PlayerNiceJobResponseProducer
 }
 Rule PlayerNiceJobResponseProducer
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerNiceJobResponseProducer
 }
 
@@ -9294,7 +9294,7 @@ Response PlayerNoProducer
 }
 Rule PlayerNoProducer
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerNo IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerNoProducer
 }
 
@@ -9330,7 +9330,7 @@ Response PlayerSorryProducer
 }
 Rule PlayerSorryProducer
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateProducer IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateProducer IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerSorryProducer
 }
 
@@ -9344,7 +9344,7 @@ Response PlayerSorryFFProducer
 }
 Rule PlayerSorryFFProducer
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateProducer IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateProducer IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerSorryFFProducer
 }
 
@@ -9357,7 +9357,7 @@ Response PlayerThanksProducer
 }
 Rule PlayerThanksProducer
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerThanks IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerThanksProducer
 }
 
@@ -9388,7 +9388,7 @@ Response PlayerYesProducer
 }
 Rule PlayerYesProducer
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerYes IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerYesProducer
 }
 
@@ -9525,7 +9525,7 @@ Response PlayerNegativeProducer
 }
 Rule PlayerNegativeProducer
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerNegative IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerNegativeProducer
 }
 
@@ -9739,7 +9739,7 @@ Response PlayerHurrahProducer
 }
 Rule PlayerHurrahProducer
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerHurrah IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerHurrahProducer
 }
 
@@ -9751,7 +9751,7 @@ Response PlayerWarnCarefulProducer
 }
 Rule PlayerWarnCarefulProducer
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response PlayerWarnCarefulProducer
 }
 
@@ -11665,7 +11665,7 @@ Response SurvivorVocalizeWaitHereProducer
 }
 Rule SurvivorVocalizeWaitHereProducer
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptPlayerWaitHere IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking
 	Response SurvivorVocalizeWaitHereProducer
 }
 

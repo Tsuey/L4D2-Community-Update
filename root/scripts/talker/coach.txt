@@ -5941,7 +5941,7 @@ Response PlayerToTheRescueRosCoach
 }
 Rule PlayerToTheRescueRosCoach
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerToTheRescueRosCoach
 }
 
@@ -9845,7 +9845,7 @@ Response PlayerHurryUpCoach
 }
 Rule PlayerHurryUpCoach
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerHurryUp IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerHurryUpCoach
 }
 
@@ -9885,7 +9885,7 @@ Response PlayerLeadOnCoach
 }
 Rule PlayerLeadOnCoach
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerLeadOn IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerLeadOnCoach
 }
 
@@ -9904,7 +9904,7 @@ Response PlayerMoveOnCoach
 }
 Rule PlayerMoveOnCoach
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerMoveOn IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerMoveOnCoach
 }
 
@@ -9953,7 +9953,7 @@ Response PlayerAskReadyCoach
 }
 Rule PlayerAskReadyCoach
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerAskReady IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerAskReadyCoach
 }
 
@@ -9968,7 +9968,7 @@ Response PlayerImWithYouCoach
 }
 Rule PlayerImWithYouCoach
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerImWithYouCoach
 }
 
@@ -10000,7 +10000,7 @@ Response PlayerLaughCoach
 }
 Rule PlayerLaughCoach
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerLaughCoach
 }
 
@@ -10036,7 +10036,7 @@ Response PlayerNiceJobResponseCoach
 }
 Rule PlayerNiceJobResponseCoach
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerNiceJobResponseCoach
 }
 
@@ -10057,7 +10057,7 @@ Response PlayerNoCoach
 }
 Rule PlayerNoCoach
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerNo IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerNoCoach
 }
 
@@ -10119,7 +10119,7 @@ Response PlayerSorryCoach
 }
 Rule PlayerSorryCoach
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateCoach IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateCoach IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerSorryCoach
 }
 
@@ -10133,7 +10133,7 @@ Response PlayerSorryFFCoach
 }
 Rule PlayerSorryFFCoach
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateCoach IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateCoach IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerSorryFFCoach
 }
 
@@ -10150,7 +10150,7 @@ Response PlayerThanksCoach
 }
 Rule PlayerThanksCoach
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerThanks IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerThanksCoach
 }
 
@@ -10185,7 +10185,7 @@ Response PlayerYesCoach
 }
 Rule PlayerYesCoach
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerYes IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerYesCoach
 }
 
@@ -10331,7 +10331,7 @@ Response PlayerNegativeCoach
 }
 Rule PlayerNegativeCoach
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerNegativeCoach
 }
 
@@ -10549,7 +10549,7 @@ Response PlayerHurrahCoach
 }
 Rule PlayerHurrahCoach
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerHurrah IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerHurrahCoach
 }
 
@@ -10562,7 +10562,7 @@ Response PlayerWarnCarefulCoach
 }
 Rule PlayerWarnCarefulCoach
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response PlayerWarnCarefulCoach
 }
 
@@ -12646,7 +12646,7 @@ Response SurvivorVocalizeWaitHereCoach
 }
 Rule SurvivorVocalizeWaitHereCoach
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptPlayerWaitHere IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response SurvivorVocalizeWaitHereCoach
 }
 

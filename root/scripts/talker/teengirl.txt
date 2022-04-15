@@ -3496,7 +3496,7 @@ Response L4D1SurvivorTauntResponseTeenGirl
 }
 Rule L4D1SurvivorTauntResponseTeenGirl
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1SurvivorTauntResponseTeenGirl
 }
 
@@ -3547,7 +3547,7 @@ Response PlayerToTheRescueRosTeenGirl
 }
 Rule PlayerToTheRescueRosTeenGirl
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response PlayerToTheRescueRosTeenGirl
 }
 
@@ -5487,7 +5487,7 @@ Response L4D1PlayerCoverMeTeenGirl
 }
 Rule L4D1PlayerCoverMeTeenGirl
 {
-	criteria ConceptPlayerCoverMe IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerCoverMe IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerCoverMeTeenGirl
 }
 
@@ -5552,7 +5552,7 @@ Response L4D1PlayerHurryUpTeenGirl
 }
 Rule L4D1PlayerHurryUpTeenGirl
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerHurryUp IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerHurryUpTeenGirl
 }
 
@@ -5597,7 +5597,7 @@ Response L4D1PlayerLeadOnTeenGirl
 }
 Rule L4D1PlayerLeadOnTeenGirl
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerLeadOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerLeadOnTeenGirl
 }
 
@@ -5617,7 +5617,7 @@ Response L4D1PlayerMoveOnTeenGirl
 }
 Rule L4D1PlayerMoveOnTeenGirl
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerMoveOn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerMoveOnTeenGirl
 }
 
@@ -5671,7 +5671,7 @@ Response L4D1PlayerAskReadyTeenGirl
 }
 Rule L4D1PlayerAskReadyTeenGirl
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerAskReady IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerAskReadyTeenGirl
 }
 
@@ -5696,7 +5696,7 @@ Response L4D1PlayerImWithYouTeenGirl
 }
 Rule L4D1PlayerImWithYouTeenGirl
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerImWithYouTeenGirl
 }
 
@@ -5721,7 +5721,7 @@ Response L4D1PlayerLaughTeenGirl
 }
 Rule L4D1PlayerLaughTeenGirl
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerLaughTeenGirl
 }
 
@@ -5775,7 +5775,7 @@ Response L4D1PlayerNiceJobResponseTeenGirl
 }
 Rule L4D1PlayerNiceJobResponseTeenGirl
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerNiceJobResponseTeenGirl
 }
 
@@ -5815,7 +5815,7 @@ Response L4D1PlayerNoTeenGirl
 }
 Rule L4D1PlayerNoTeenGirl
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerNo IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerNoTeenGirl
 }
 
@@ -5863,7 +5863,7 @@ Response L4D1PlayerNegativeTeenGirl
 }
 Rule L4D1PlayerNegativeTeenGirl
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerNegativeTeenGirl
 }
 
@@ -5882,7 +5882,7 @@ Response L4D1PlayerSorryTeenGirl
 }
 Rule L4D1PlayerSorryTeenGirl
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerSorryTeenGirl
 }
 
@@ -5898,7 +5898,7 @@ Response L4D1PlayerSorryFFTeenGirl
 }
 Rule L4D1PlayerSorryFFTeenGirl
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateTeenGirl IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerSorryFFTeenGirl
 }
 
@@ -5924,7 +5924,7 @@ Response L4D1PlayerThanksTeenGirl
 }
 Rule L4D1PlayerThanksTeenGirl
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerThanks IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerThanksTeenGirl
 }
 
@@ -5958,7 +5958,7 @@ Response L4D1PlayerYesTeenGirl
 }
 Rule L4D1PlayerYesTeenGirl
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerYes IsNotCoughing  IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerYesTeenGirl
 }
 
@@ -6028,7 +6028,7 @@ Response L4D1PlayerAreaClearTeenGirl
 }
 Rule L4D1PlayerAreaClearTeenGirl
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerAreaClear IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1PlayerAreaClearTeenGirl
 }
 
@@ -6072,7 +6072,7 @@ Response PlayerHurrahTeenGirl
 }
 Rule PlayerHurrahTeenGirl
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerHurrah IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response PlayerHurrahTeenGirl
 }
 
@@ -6088,7 +6088,7 @@ Response PlayerWarnCarefulTeenGirl
 }
 Rule PlayerWarnCarefulTeenGirl
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response PlayerWarnCarefulTeenGirl
 }
 
@@ -7208,7 +7208,7 @@ Response L4D1SurvivorVocalizeWaitHereTeenGirl
 }
 Rule L4D1SurvivorVocalizeWaitHereTeenGirl
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	criteria ConceptPlayerWaitHere IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response L4D1SurvivorVocalizeWaitHereTeenGirl
 }
 

@@ -2722,7 +2722,7 @@ Response L4D1SurvivorTauntResponseNamVet
 }
 Rule L4D1SurvivorTauntResponseNamVet
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1SurvivorTauntResponseNamVet
 }
 
@@ -2750,7 +2750,7 @@ Response PlayerToTheRescueRosNamVet
 }
 Rule PlayerToTheRescueRosNamVet
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response PlayerToTheRescueRosNamVet
 }
 
@@ -4754,7 +4754,7 @@ Response L4D1PlayerCoverMeNamVet
 }
 Rule L4D1PlayerCoverMeNamVet
 {
-	criteria ConceptPlayerCoverMe IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerCoverMe IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerCoverMeNamVet
 }
 
@@ -4815,7 +4815,7 @@ Response L4D1PlayerHurryUpNamVet
 }
 Rule L4D1PlayerHurryUpNamVet
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerHurryUp IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerHurryUpNamVet
 }
 
@@ -4846,7 +4846,7 @@ Response L4D1PlayerLeadOnNamVet
 }
 Rule L4D1PlayerLeadOnNamVet
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerLeadOn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerLeadOnNamVet
 }
 
@@ -4867,7 +4867,7 @@ Response L4D1PlayerMoveOnNamVet
 }
 Rule L4D1PlayerMoveOnNamVet
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerMoveOn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerMoveOnNamVet
 }
 
@@ -4918,7 +4918,7 @@ Response L4D1PlayerAskReadyNamVet
 }
 Rule L4D1PlayerAskReadyNamVet
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerAskReady IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerAskReadyNamVet
 }
 
@@ -4933,7 +4933,7 @@ Response L4D1PlayerImWithYouNamVet
 }
 Rule L4D1PlayerImWithYouNamVet
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerImWithYouNamVet
 }
 
@@ -4948,7 +4948,7 @@ Response L4D1PlayerLaughNamVet
 }
 Rule L4D1PlayerLaughNamVet
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerLaughNamVet
 }
 
@@ -4995,7 +4995,7 @@ Response L4D1PlayerNiceJobResponseNamVet
 }
 Rule L4D1PlayerNiceJobResponseNamVet
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerNiceJobResponseNamVet
 }
 
@@ -5017,7 +5017,7 @@ Response L4D1PlayerNoNamVet
 }
 Rule L4D1PlayerNoNamVet
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerNo IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerNoNamVet
 }
 
@@ -5039,7 +5039,7 @@ Response L4D1PlayerSorryNamVet
 }
 Rule L4D1PlayerSorryNamVet
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateNamVet IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateNamVet IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerSorryNamVet
 }
 
@@ -5057,7 +5057,7 @@ Response L4D1PlayerSorryFFNamVet
 }
 Rule L4D1PlayerSorryFFNamVet
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateNamVet IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateNamVet IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerSorryFFNamVet
 }
 
@@ -5077,7 +5077,7 @@ Response L4D1PlayerThanksNamVet
 }
 Rule L4D1PlayerThanksNamVet
 {
-	criteria ConceptPlayerThanks IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerThanks IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerThanksNamVet
 }
 
@@ -5091,7 +5091,7 @@ Response L4D1PlayerYesNamVet
 }
 Rule L4D1PlayerYesNamVet
 {
-	criteria ConceptPlayerYes IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerYes IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerYesNamVet
 }
 
@@ -5149,7 +5149,7 @@ Response L4D1PlayerNegativeNamVet
 }
 Rule L4D1PlayerNegativeNamVet
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerNegativeNamVet
 }
 
@@ -5164,7 +5164,7 @@ Response L4D1PlayerAreaClearNamVet
 }
 Rule L4D1PlayerAreaClearNamVet
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerAreaClear IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1PlayerAreaClearNamVet
 }
 
@@ -5191,7 +5191,7 @@ Response PlayerHurrahNamVet
 }
 Rule PlayerHurrahNamVet
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerHurrah IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response PlayerHurrahNamVet
 }
 
@@ -5209,7 +5209,7 @@ Response PlayerWarnCarefulNamVet
 }
 Rule PlayerWarnCarefulNamVet
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response PlayerWarnCarefulNamVet
 }
 
@@ -6061,7 +6061,7 @@ Response L4D1SurvivorVocalizeWaitHereNamVet
 }
 Rule L4D1SurvivorVocalizeWaitHereNamVet
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria ConceptPlayerWaitHere IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
 	Response L4D1SurvivorVocalizeWaitHereNamVet
 }
 

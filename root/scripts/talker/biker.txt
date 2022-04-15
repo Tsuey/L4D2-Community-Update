@@ -4069,7 +4069,7 @@ Response L4D1SurvivorTauntResponseBiker
 }
 Rule L4D1SurvivorTauntResponseBiker
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1SurvivorTauntResponseBiker
 }
 
@@ -4116,7 +4116,7 @@ Response PlayerToTheRescueRosBiker
 }
 Rule PlayerToTheRescueRosBiker
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerToTheRescueRosBiker
 }
 
@@ -6478,7 +6478,7 @@ Response L4D1PlayerCoverMeBiker
 }
 Rule L4D1PlayerCoverMeBiker
 {
-	criteria ConceptPlayerCoverMe IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerCoverMe IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerCoverMeBiker
 }
 
@@ -6535,7 +6535,7 @@ Response L4D1PlayerHurryUpBiker
 }
 Rule L4D1PlayerHurryUpBiker
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerHurryUp IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerHurryUpBiker
 }
 
@@ -6570,7 +6570,7 @@ Response L4D1PlayerLeadOnBiker
 }
 Rule L4D1PlayerLeadOnBiker
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerLeadOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerLeadOnBiker
 }
 
@@ -6590,7 +6590,7 @@ Response L4D1PlayerMoveOnBiker
 }
 Rule L4D1PlayerMoveOnBiker
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerMoveOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerMoveOnBiker
 }
 
@@ -6645,7 +6645,7 @@ Response L4D1PlayerAskReadyBiker
 }
 Rule L4D1PlayerAskReadyBiker
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerAskReady IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerAskReadyBiker
 }
 
@@ -6664,7 +6664,7 @@ Response L4D1PlayerImWithYouBiker
 }
 Rule L4D1PlayerImWithYouBiker
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerImWithYouBiker
 }
 
@@ -6684,7 +6684,7 @@ Response L4D1PlayerLaughBiker
 }
 Rule L4D1PlayerLaughBiker
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerLaughBiker
 }
 
@@ -6725,7 +6725,7 @@ Response L4D1PlayerNiceJobResponseBiker
 }
 Rule L4D1PlayerNiceJobResponseBiker
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerNiceJob IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerNiceJobResponseBiker
 }
 
@@ -6751,7 +6751,7 @@ Response L4D1PlayerNoBiker
 }
 Rule L4D1PlayerNoBiker
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerNo IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerNoBiker
 }
 
@@ -6763,7 +6763,7 @@ Response L4D1PlayerAnswerLostCallBiker
 }
 Rule L4D1PlayerAnswerLostCallBiker
 {
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerAnswerLostCallBiker
 }
 
@@ -6777,7 +6777,7 @@ Response L4D1PlayerSorryBiker
 }
 Rule L4D1PlayerSorryBiker
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerSorryBiker
 }
 
@@ -6798,7 +6798,7 @@ Response L4D1PlayerSorryFFBiker
 }
 Rule L4D1PlayerSorryFFBiker
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerSorryFFBiker
 }
 
@@ -6820,7 +6820,7 @@ Response L4D1PlayerThanksBiker
 }
 Rule L4D1PlayerThanksBiker
 {
-	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerThanksBiker
 }
 
@@ -6835,7 +6835,7 @@ Response L4D1PlayerYesBiker
 }
 Rule L4D1PlayerYesBiker
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerYes IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerYesBiker
 }
 
@@ -6873,7 +6873,7 @@ Response PlayerYellRunBiker
 }
 Rule PlayerYellRunBiker
 {
-	criteria ConceptPlayerYellRun IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerYellRun IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerYellRunBiker
 }
 
@@ -6895,7 +6895,7 @@ Response L4D1PlayerNegativeBiker
 }
 Rule L4D1PlayerNegativeBiker
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerNegativeBiker
 }
 
@@ -6918,7 +6918,7 @@ Response L4D1PlayerAreaClearBiker
 }
 Rule L4D1PlayerAreaClearBiker
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerAreaClear IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerAreaClearBiker
 }
 
@@ -6956,7 +6956,7 @@ Response PlayerHurrahBiker
 }
 Rule PlayerHurrahBiker
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker 
+	criteria ConceptPlayerHurrah IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerHurrahBiker
 }
 
@@ -6974,7 +6974,7 @@ Response PlayerWarnCarefulBiker
 }
 Rule PlayerWarnCarefulBiker
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerWarnCarefulBiker
 }
 
@@ -7935,7 +7935,7 @@ Response L4D1SurvivorVocalizeWaitHereBiker
 }
 Rule L4D1SurvivorVocalizeWaitHereBiker
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerWaitHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1SurvivorVocalizeWaitHereBiker
 }
 

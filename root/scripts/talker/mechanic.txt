@@ -6626,7 +6626,7 @@ Response PlayerToTheRescueRosMechanic
 }
 Rule PlayerToTheRescueRosMechanic
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerToTheRescueRosMechanic
 }
 
@@ -6643,7 +6643,7 @@ Response SurvivorTauntResponseMechanic
 }
 Rule SurvivorTauntResponseMechanic
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response SurvivorTauntResponseMechanic
 }
 
@@ -10488,7 +10488,7 @@ Response PlayerHurryUpMechanic
 }
 Rule PlayerHurryUpMechanic
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerHurryUp IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerHurryUpMechanic
 }
 
@@ -10528,7 +10528,7 @@ Response PlayerLeadOnMechanic
 }
 Rule PlayerLeadOnMechanic
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerLeadOn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerLeadOnMechanic
 }
 
@@ -10544,7 +10544,7 @@ Response PlayerMoveOnMechanic
 }
 Rule PlayerMoveOnMechanic
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerMoveOn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerMoveOnMechanic
 }
 
@@ -10592,7 +10592,7 @@ Response PlayerAskReadyMechanic
 }
 Rule PlayerAskReadyMechanic
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerAskReady IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerAskReadyMechanic
 }
 
@@ -10605,7 +10605,7 @@ Response PlayerImWithYouMechanic
 }
 Rule PlayerImWithYouMechanic
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerImWithYouMechanic
 }
 
@@ -10631,7 +10631,7 @@ Response PlayerLaughMechanic
 }
 Rule PlayerLaughMechanic
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerLaughMechanic
 }
 
@@ -10665,7 +10665,7 @@ Response PlayerNiceJobResponseMechanic
 }
 Rule PlayerNiceJobResponseMechanic
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerNiceJobResponseMechanic
 }
 
@@ -10686,7 +10686,7 @@ Response PlayerNoMechanic
 }
 Rule PlayerNoMechanic
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerNo IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerNoMechanic
 }
 
@@ -10709,7 +10709,7 @@ Response PlayerSorryMechanic
 }
 Rule PlayerSorryMechanic
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateMechanic IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateMechanic IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerSorryMechanic
 }
 
@@ -10725,7 +10725,7 @@ Response PlayerSorryFFMechanic
 }
 Rule PlayerSorryFFMechanic
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateMechanic IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateMechanic IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerSorryFFMechanic
 }
 
@@ -10737,7 +10737,7 @@ Response PlayerThanksMechanic
 }
 Rule PlayerThanksMechanic
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerThanks IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerThanksMechanic
 }
 
@@ -10767,7 +10767,7 @@ Response PlayerYesMechanic
 }
 Rule PlayerYesMechanic
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerYes IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerYesMechanic
 }
 
@@ -10924,7 +10924,7 @@ Response PlayerNegativeMechanic
 }
 Rule PlayerNegativeMechanic
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerNegativeMechanic
 }
 
@@ -11142,7 +11142,7 @@ Response PlayerHurrahMechanic
 }
 Rule PlayerHurrahMechanic
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerHurrah IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerHurrahMechanic
 }
 
@@ -11156,7 +11156,7 @@ Response PlayerWarnCarefulMechanic
 }
 Rule PlayerWarnCarefulMechanic
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerWarnCarefulMechanic
 }
 
@@ -13225,7 +13225,7 @@ Response SurvivorVocalizeWaitHereMechanic
 }
 Rule SurvivorVocalizeWaitHereMechanic
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptPlayerWaitHere IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response SurvivorVocalizeWaitHereMechanic
 }
 
