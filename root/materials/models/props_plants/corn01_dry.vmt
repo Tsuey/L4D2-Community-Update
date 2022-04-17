@@ -1,0 +1,23 @@
+patch
+{
+include "materials/models/props_foliage/tree_include_small.vmt"
+insert
+{
+$baseTexture "models\props_plants/corn01_dry"
+$alphatest 1
+$nocull 1
+$model 1
+$FlashlightNoLambert 1
+$AlphaTestReference "0.3"
+$treeSwayHeight 1
+$treeSwayRadius 60
+$treeSwayStartHeight "0.22" 
+$treeSwayStartRadius "0.25" 
+$treeSwaySpeedHighWindMultiplier "1.1" 
+$treeSwayStrength "0.21"
+$treeSwaySpeed "0.63" 
+$treeSwayScrumbleSpeed "3.25" 
+$treeSwayScrumbleStrength "0.05" 
+$treeSwayScrumbleFrequency "111" 
+}
+}
