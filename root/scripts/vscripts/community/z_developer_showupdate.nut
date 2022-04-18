@@ -159,7 +159,7 @@ function ShowUpdate( showGroup = "community" )
 		printl( "\tORANGE\t\tNavigation blocked" );
 		printl( "\tYELLOW\t\tTrigger volume" );
 		printl( "\tWHITE\t\tInfected ladder clone" );
-		printl( "\tPURPLE\t\tOther modified infeced ladders" );
+		printl( "\tPURPLE\t\tOther modified infected ladders" );
 		
 		printl( "\nDrawn boxes marked \"ANGLED\" unpreventably block Physics." );
 		printl( "Adjust box opacity with \"script g_BoxOpacity = #\" (0-255)." );
