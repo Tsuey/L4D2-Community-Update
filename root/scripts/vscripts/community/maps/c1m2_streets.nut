@@ -114,7 +114,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_longfencefarright_cloned_longfencefarleft", "1728 2306 649", "-900 -5 -16" );
 		make_ladder( "_ladder_oneway_cloned_stairsbus", "-2800 1182 66", "-1680 1129 364" );
 		make_ladder( "_ladder_overpassleft_cloned_overpassright", "-1920 2322 333.5", "508 0 23" );
-		make_ladder( "_ladder_postdropcut_cloned_turnpikemid", "-1026 1280 256", "-5147 3002 0", "0 165 0", "0.96 -0.26 0" );
+		make_ladder( "_ladder_postdropcut_cloned_turnpikemid", "-1026 1280 256", "-5159.81 2996.11 0", "0 165.5 0", "0.96 -0.25 0" );
 		make_ladder( "_ladder_saferoomperch_cloned_save4less", "-6864 -2238 536", "-1328 -2107 -8" );
 		make_ladder( "_ladder_saferoomperchoob_cloned_save4less", "-6864 -2238 536", "-176 -2107 -8" );
 		make_ladder( "_ladder_skybridgebus_cloned_endbusright", "-8406 -2272 449", "1578 -5868 64", "0 -53 0", "-0.6 0.8 0" );
@@ -132,10 +132,10 @@ function DoRoundFixes()
 		make_ladder( "_ladder_tankerfrontmid_cloned_tankerfencemid", "-6032 -126 510", "-12063 -269 -5", "0 180 0", "0 -1 0" );
 		make_ladder( "_ladder_tankerfrontright_cloned_tankerfenceright", "-6288 -126 506", "-12063 -269 -5", "0 180 0", "0 -1 0" );
 		make_ladder( "_ladder_tankhedge_cloned_stairsbus", "-2800 1182 66", "5389 2072 572" );
-		make_ladder( "_ladder_tentbus_cloned_stairsbus", "-2800 1182 66", "1786 5841 570", "0 120 0", "0.87 0.5 0" );
+		make_ladder( "_ladder_tentbus_cloned_stairsbus", "2446 4732 518", "2409.7 -2499.03 112", "0 30 0", "0.86 0.5 0" );
 		make_ladder( "_ladder_truckandtent_cloned_carthedge", "-6034 -2592 480", "-1460 8465 153", "0 90 0", "0 -1 0" );
 		make_ladder( "_ladder_turnpikeleft_cloned_turnpikemid", "-1026 1280 256", "3 780 0" );
-		make_ladder( "_ladder_turnpikeright_cloned_turnpikemid", "-1026 1280 256", "-1052 -1275 -41", "0 -27.42 0", "-0.89 0.46 0" );
+		make_ladder( "_ladder_turnpikeright_cloned_turnpikemid", "-1026 1280 256", "-1053 -1275 -41", "0 -27.42 0", "-0.89 0.46 0" );
 		make_ladder( "_ladder_whitakerback_cloned_tinyendladder", "-7168 -2754 650", "2020 579 128" );
 		make_ladder( "_ladder_whitakergunshop_cloned_eventicemachine", "-5506 -2564 544", "-2400 -7165 172", "0 -90 0", "0 1 0" );
 		make_ladder( "_ladder_whitakerquick_cloned_hedgeparklot", "-6034 -2256 476", "723.9 196 233" );
@@ -179,10 +179,6 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_yeswayturnpike_wrongwaya", "models/props_misc/wrongway_sign01_optimized.mdl", "-816 32 496", "0 90 0", "shadow_no", "solid_no", "255 255 255", 217, 17 );
 		make_prop( "dynamic", "_yeswayturnpike_wrongwayb", "models/props_misc/wrongway_sign01_optimized.mdl", "-1200 32 496", "0 90 0", "shadow_no", "solid_no", "255 255 255", 217, 17 );
 		patch_ladder( "-5168 162.0004 448", "0 -4 0" );
-		patch_ladder( "-7200 -126 506", "0 0 -1000" );
-		patch_ladder( "-7440 -126 510", "0 0 -1000" );
-		patch_ladder( "-7968 -126 510", "0 0 -1000" );
-		patch_ladder( "-8224 -126 510", "0 0 -1000" );
 
 		con_comment( "LOGIC:\tLOS tanker fixes will be deleted upon its destruction." );
 
