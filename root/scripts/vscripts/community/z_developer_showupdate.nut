@@ -159,7 +159,7 @@ function ShowUpdate( showGroup = "community" )
 		printl( "\tORANGE\t\tNavigation blocked" );
 		printl( "\tYELLOW\t\tTrigger volume" );
 		printl( "\tWHITE\t\tInfected ladder clone" );
-		printl( "\tPURPLE\t\tModified infected ladders / non-community ladders" );
+		printl( "\tPURPLE\t\tOther modified infeced ladders" );
 		
 		printl( "\nDrawn boxes marked \"ANGLED\" unpreventably block Physics." );
 		printl( "Adjust box opacity with \"script g_BoxOpacity = #\" (0-255)." );
@@ -178,13 +178,13 @@ function ShowUpdate( showGroup = "community" )
 		printl( "a make_ function, run ShowUpdate() again to apply changes." );
 		
 		printl( "\nUse \"script ShowUpdateAll()\" or \"script ShowUpdate(\"all\")\"" );
-		printl( "to highlight community and non-community entities at the same time." );
+		printl( "to highlight community and non-community (custom server) entities at the same time." );
 		printl( "\nUse \"script ShowUpdateNoCommunity()\" or \"script ShowUpdate(\"nocommunity\")\"" );
-		printl( "to only highlight non-community entities." );
+		printl( "to only highlight non-community (custom server) entities." );
 		
 		printl( "\nEntities highlighted by ShowUpdate() can be filtered with \"script SetFilter()\"" );
-		printl( "Usage: script SetFilter(\"ENTITY GROUP\", \"FILTER VALUE\", \"CLIP TYPE [optional]\")" );
-		printl( "Use \"script FilterHelp()\" for a full tutorial." );
+		printl( "Usage: script SetFilter(\"ENTITY GROUP\", \"FILTER OPTION\", \"CLIP OPTION\")" );
+		printl( "Use \"script FilterHelp()\" for a full explaination." );
 
 		g_TutorialShown = true;
 	}
@@ -812,7 +812,7 @@ function SetFilter( entityGroup = null, value = null, clipType = null )
 		}
 		else
 		{
-			printl( "\nValue: '" + value + "' is not a valid value.\n" );
+			printl( "\nFilter Option: '" + value + "' is not a valid value.\n" );
 			return;
 		}
 	}
@@ -826,11 +826,11 @@ function SetFilter( entityGroup = null, value = null, clipType = null )
 			if ( clipType == "all" )
 			{
 				g_SetFilterClipType <- -1;
-				printl( "\nClip Type filter set to: '-1'.\n" );
+				printl( "\nClip Option filter set to: '-1'.\n" );
 			}
 			else
 			{
-				printl( "\nClip Type: '" + clipType + "' is not a valid value.\n" );
+				printl( "\nClip Option: '" + clipType + "' is not a valid value.\n" );
 				return;
 			}
 		}
@@ -839,7 +839,7 @@ function SetFilter( entityGroup = null, value = null, clipType = null )
 			if ( clipType != null )
 			{
 				g_SetFilterClipType <- clipType;
-				printl( "\nClip Type filter set to: '" + clipType + "'.\n" );
+				printl( "\nClip Option filter set to: '" + clipType + "'.\n" );
 			}
 		}
 	}
@@ -933,80 +933,74 @@ function SetFilter( entityGroup = null, value = null, clipType = null )
 
 function FilterHelp()
 {
-	printl( "Usage: script SetFilter(\"ENTITY GROUP\", \"FILTER VALUE\", \"CLIP TYPE [optional]\")" );
+	printl( "Usage: script SetFilter(\"ENTITY GROUP\", \"FILTER OPTION\", \"CLIP OPTION\")" );
 	
-	printl( "\nENTITY GROUP\tGroup of entity types to change filters for." );
+	printl( "\nENTITY GROUP" );
+	printl( "Group of entities to change filters for." );
 	
-	printl( "\nFILTER VALUE\tValue to set entity group filter to." );
-	printl( "Using a value of \"all\" will set the filter to '1', showing all entities." );
-	printl( "Using a value of \"none\" sets the filter to '0', hiding all entities.\n" );
-	
-	printl( "\nCLIP TYPE\t[optional] Value to filter clips by block type." );
-	printl( "Using a value of \"all\" sets the filter to '-1', showing all entities." );
-	printl( "VALUES:" );
+	printl( "\nFILTER OPTION" );
+	printl( "Select criteria to filter entities by." )
+	printl( "Selecting \"all\" sets the filter to '1', showing all entities." );
+	printl( "Selecting \"none\" sets the filter to '0', hiding all entities." );
+
+	printl( "\nCLIP OPTION" );
+	printl( "Clips have an additional (optional) filter based on which players the clip blocks." );
 	printl( "-1\tShows all clips regardless of block type (default)" );
 	printl( "0\tEveryone (red)" );
 	printl( "1\tSurvivor (pink)" );
 	printl( "2\tPlayer Infected (green)" );
 	printl( "3\tAll Special Infected (Player and AI) (blue)" );
-	printl( "4\tAll players and physics objects (light blue)" );
+	printl( "4\tAll Players and Physics Objects (light blue)" );
+	printl( "\"all\" sets the filter to '-1', showing all clips." );
 	
-	printl( "\nENTITY GROUP AND FILTER VALUES:" );
+	printl( "\nEntity Groups and Filter Options:" );
 	
-	printl( "\nGROUP:" );
-	printl( "all\tSets filters for all groups together" );
-	printl( "VALUES:" );
+	printl( "\n\"all\"" );
+	printl( "Sets filters for every group." );
 	printl( "0\tHides all entity groups" );
 	printl( "1\tShows all entity groups (default)" );
 	
-	printl( "\nGROUP:" );
-	printl( "clip\tSets filters for all clip entities: env_physics_blocker, env_player_blocker" );
-	printl( "VALUES:" );
+	printl( "\n\"clip\"" );
+	printl( "Sets filters for all clip entities: env_physics_blocker, env_player_blocker" );
 	printl( "0\tHide all clips" );
 	printl( "1\tShow all clips (default)" );
 	printl( "2\tShows only env_physics_blocker" );
 	printl( "3\tShows only env_player_blocker" );
 	printl( "4\tShows only angled blockers" );
 	
-	printl( "\nGROUP:" );
-	printl( "brush\tSets filters for brush entities: func_brush" );
-	printl( "VALUES:" );
+	printl( "\n\"brush\"" );
+	printl( "Sets filters for brush entities: func_brush" );
 	printl( "0\tHide all brushes" );
 	printl( "1\tShows all brushes created via scripting (without a brush model) (default)" );
 	printl( "2\tShows all brushes (including those with a brush model)" );
 	
-	printl( "\nGROUP:" );
-	printl( "nav\tSets filters for nav entities: func_nav_blocker" );
-	printl( "VALUES:" );
+	printl( "\n\"nav\"" );
+	printl( "Sets filters for nav entities: func_nav_blocker" );
 	printl( "0\tHide all nav blockers" );
 	printl( "1\tShows all nav blockers created via scripting (without a brush model) (default)" );
 	printl( "2\tShows all nav blockers (including those with a brush model)" );
 	
-	printl( "\nGROUP:" );
-	printl( "trigger\tSets filters for trigger entities: trigger_multiple, trigger_once, trigger_push, trigger_hurt,trigger_hurt_ghost, trigger_auto_crouch, trigger_playermovement, trigger_teleport" );
-	printl( "VALUES:" );
+	printl( "\n\"trigger\"" );
+	printl( "Sets filters for trigger entities: trigger_multiple, trigger_once, trigger_push, trigger_hurt,trigger_hurt_ghost, trigger_auto_crouch, trigger_playermovement, trigger_teleport" );
 	printl( "0\tHide all triggers" );
 	printl( "1\tShows all triggers created via scripting (without a brush model) (default)" );
 	printl( "2\tShows all triggers (including those with a brush model)" );
 	
-	printl( "\nGROUP:" );
-	printl( "ladder\tSets filters for ladder entities: func_simpleladders" );
-	printl( "VALUES:" );
+	printl( "\n\"ladder\"" );
+	printl( "Sets filters for ladder entities: func_simpleladders" );
 	printl( "0\tHide all ladders" );
 	printl( "1\tShows all ladders created or moved via scripting (non-zero origin value) (default)" );
 	printl( "2\tShows all ladders (including those with an origin value at 0,0,0)" );
 	
-	printl( "\nGROUP:" );
-	printl( "prop\tSets filters for prop entities: prop_dynamic, prop_dynamic_override, prop_physics, prop_physics_override)" );
-	printl( "VALUES:" );
+	printl( "\n\"prop\"" );
+	printl( "Sets filters for prop entities: prop_dynamic, prop_dynamic_override, prop_physics, prop_physics_override)" );
 	printl( "0\tHide all props" );
 	printl( "1\tShows all props (default)" );
 	printl( "2\tShows dynamic props only" );
 	printl( "3\tShows physics props only" );
 	
-	printl( "\nGROUP:" );
-	printl( "text\tSets filters for text labels on highlighted entities" );
-	printl( "VALUES:" );
+	printl( "\n\"text\"" );
+	printl( "Sets filters for text labels on highlighted entities" );
 	printl( "0\tHide all text" );
 	printl( "1\tShows all text (default)" );
 	printl( "2\tShows text only for named entities" );

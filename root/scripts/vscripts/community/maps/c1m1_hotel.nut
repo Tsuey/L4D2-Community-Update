@@ -59,7 +59,6 @@ function DoRoundFixes()
 		make_clip( "_commentary_lower_windows_d", "Everyone", 1, "-8 -56 -570", "4 8 8", "1654 6872 2473" );
 		make_clip( "_commentary_lower_windows_e", "Everyone", 1, "-8 -56 -570", "4 8 8", "1654 6584 2473" );
 		make_clip( "_commentary_lower_windows_f", "Everyone", 1, "-8 -56 -570", "4 8 8", "1654 6456 2473" );
-
 	}
 	if ( g_BaseMode == "versus")
 	{
@@ -82,10 +81,6 @@ function DoRoundFixes()
 		make_clip( "_commentary_ledgedrop_d",		"Survivors",	1,	"-87 -4 -26",		"87 4 26",		"2423 6482 2628", "0 0 15" );
 		make_clip( "_commentary_ledgedrop_e",		"Survivors",	1,	"-24 -4 -26",		"24 4 26",		"2312 7682 2628", "0 0 15" );
 
-	}
-
-	if ( HasPlayerControlledZombies() )
-	{
 		// Simulates getting squished. Requires 2 Ghost Infected constantly stuck-warping.
 
 		con_comment( "LOGIC:\tAnti-doorbreak trighurt will be deleted 4 seconds after elevator starts." );
