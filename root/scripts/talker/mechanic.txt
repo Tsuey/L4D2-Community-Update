@@ -4922,6 +4922,19 @@ Rule C4M4EllisStoryMechanic
 	Response C4M4EllisStoryMechanic
 }
 
+Response C4M5EllisStoryMechanic
+{
+	scene "scenes/Mechanic/DLC1_COMMUNITYE23.vcd"  then any EllisInterrupt foo:0 -4.20	//"I ever tell you about the time my buddy Keith told me that he was picked up by some little green men and they..."
+}
+Rule C4M5EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking isc4m5 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C4M5EllisStoryMechanic
+}
+
 Response C5M2EllisStoryMechanic
 {
 	scene "scenes/Mechanic/EllisStoriesF01.vcd"  then any EllisInterrupt foo:0 -8.54 //Do you know what suck the heads means?  Because I came down here with Keith once and he didn't know and... It ain't nothin' bad.  It's about eatin'.
@@ -5056,6 +5069,44 @@ Rule EllisStoryReac01GoatMechanic
 	Response EllisStoryReac01GoatMechanic
 }
 
+Response C13M2EllisStoryMechanic
+{
+	scene "scenes/Mechanic/EllisStoriesL01.vcd"  then any EllisInterrupt foo:0 -15.53 //I ever tell you guys about the time my buddy Keith got rolled by a gator in a swamp? He didn't antagonize it or nothing, we were just trying to grab two so we could piss them off and get 'em to fight.
+}
+Rule C13M2EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc13m2_southpinestream IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C13M2EllisStoryMechanic
+}
+
+Response C13M3EllisStoryMechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories01.vcd"  then any EllisInterrupt foo:0 -16.0 //This one time, my buddy, Keith, got a tattoo. "I'M A MORON!" Right across his forehead. Of course, he made $200 off of that. So you ask yourself. Who's the REAL moron, huh?
+}
+Rule C13M3EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc13m3_memorialbridge IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C13M3EllisStoryMechanic
+}
+
+Response C13M4EllisStoryMechanic
+{
+	scene "scenes/Mechanic/EllisStoriesS01.vcd"  then any EllisInterrupt foo:0 -18.21 //One the time the army bombed my buddy Keith. He went camping and didn't bother reading the signs, and I guess they were testing bombs that day-all sorts of stuff too, not just regular bombs.
+}
+Rule C13M4EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc13m4_cutthroatcreek IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C13M4EllisStoryMechanic
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech
@@ -5701,13 +5752,14 @@ Rule SurvivorSpottedArmoredMechanic
 
 Response SurvivorSpottedArmoredC5M1Mechanic
 {
+	norepeat
 	scene "scenes/Mechanic/SeeArmored01.vcd"  //Aw, hell, now they're bulletproof?
 	scene "scenes/Mechanic/SeeArmored02.vcd"  //Aw, hell, they're bulletproof!
 }
 Rule SurvivorSpottedArmoredC5M1Mechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront IsNotSpeakingWeight0
-	ApplyContext "SaidArmoredWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidArmoredWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Mechanic
 }
@@ -5809,12 +5861,13 @@ Rule SurvivorSpottedCedaMechanic
 
 Response SurvivorSpottedCedaC1M1Mechanic
 {
+	norepeat
 	scene "scenes/Mechanic/SeeHazmat02.vcd"  //Watch out for the ones in the hazmat suits.
 }
 Rule SurvivorSpottedCedaC1M1Mechanic
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:0"
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Mechanic
 }
@@ -5878,12 +5931,14 @@ Rule SurvivorSpottedCharger2C1Mechanic
 
 Response SurvivorSpottedClownMechanic
 {
+	norepeat
 	scene "scenes/Mechanic/SeeClowns01.vcd"  //That clown's bringing friends! Take him down!
 	scene "scenes/Mechanic/SeeClowns02.vcd"  //We gotta shut that clown up!
 	scene "scenes/Mechanic/SeeClowns03.vcd"  //Hey, take that clown down!
 	scene "scenes/Mechanic/SeeClowns04.vcd"  //Take that clown down!
 	scene "scenes/Mechanic/SeeClowns05.vcd"  //Take the clown down!
 	scene "scenes/Mechanic/SeeClowns06.vcd"  //Take down that clown!
+	scene "scenes/Mechanic/SeeClowns07.vcd"  //Man, I've never been so scared of clowns.
 }
 Rule SurvivorSpottedClownMechanic
 {
@@ -5913,14 +5968,13 @@ Rule SurvivorSpottedFallenMechanic
 
 Response SurvivorSpottedFirstClownMechanic
 {
-	scene "scenes/Mechanic/SeeClowns07.vcd"  //Man, I've never been so scared of clowns.
 	scene "scenes/Mechanic/SeeClowns08.vcd"  //Clowns!
 	scene "scenes/Mechanic/SeeClowns09.vcd"  //Clowns? Clowns. Oh, you have got to be kidding me.
 }
 Rule SurvivorSpottedFirstClownMechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:0,SawClowns:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 SawFirstClown IsNotSpeakingWeight0
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedFirstClownMechanic
 }
@@ -5997,6 +6051,7 @@ Rule SurvivorSpottedInfectedMechanic
 
 Response SurvivorSpottedJimmyMechanic
 {
+	norepeat
 	scene "scenes/Mechanic/GrabbedBySmoker02b.vcd"  //NOOOOOOO!!!!
 }
 Rule SurvivorSpottedJimmyMechanic
@@ -6070,8 +6125,8 @@ Response SurvivorSpottedMudmenC3M2Mechanic
 }
 Rule SurvivorSpottedMudmenC3M2Mechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp IsNotSpeakingWeight0
-	ApplyContext "SaidMudmenWarn:1:0,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp SawFirstMudMen IsNotSpeakingWeight0
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmenC3M2Mechanic
 }
@@ -6095,6 +6150,7 @@ Rule SurvivorSpottedMudmenMechanic
 
 Response SurvivorSpottedMudmen2Mechanic
 {
+	norepeat
 	scene "scenes/Mechanic/WorldC3M236.vcd"  then gambler Player.SeeMudmen2a foo:0 -2.938 //I got a new thing I hate: mud people.
 	scene "scenes/Mechanic/WorldC3M237.vcd"  //Tell you what, mud people take all the fun out of the mud.
 }

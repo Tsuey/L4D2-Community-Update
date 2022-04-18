@@ -2643,6 +2643,14 @@ Rule EllisStoryInterruptC4M4Producer
 	Response EllisStoryInterruptGenericProducer
 }
 
+Rule EllisStoryInterruptC4M5Producer
+{
+	criteria ConceptEllisInterrupt IsProducer isc4m5 _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
+}
+
 Rule EllisStoryInterruptC5M2Producer
 {
 	criteria ConceptEllisInterrupt IsProducer IsMapc5m2_park _auto_IsTellingStory _auto_NotDidInterrupt
@@ -2680,6 +2688,30 @@ Rule EllisStoryReac01Producer
 {
 	criteria ConceptEllisStoryReac01 IsProducer ismapc3m2_swamp
 	Response EllisStoryReac01Producer
+}
+
+Rule EllisStoryInterruptC13M2Producer
+{
+	criteria ConceptEllisInterrupt IsProducer IsMapc13m2_southpinestream _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
+}
+
+Rule EllisStoryInterruptC13M3Producer
+{
+	criteria ConceptEllisInterrupt IsProducer IsMapc13m3_memorialbridge _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
+}
+
+Rule EllisStoryInterruptC13M4Producer
+{
+	criteria ConceptEllisInterrupt IsProducer IsMapc13m4_cutthroatcreek _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -4729,12 +4761,13 @@ Rule SurvivorSpottedWorldCloseProducer
 //--------------------------------------------------------------------------------------------------------------
 Response SurvivorSpottedArmoredC5M1Producer
 {
+	norepeat
 	scene "scenes/Producer/SeeArmored01.vcd"  //Are these things bulletproof?
 }
 Rule SurvivorSpottedArmoredC5M1Producer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn IsNotSpeakingWeight0
-	ApplyContext "SaidArmoredWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidArmoredWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Producer
 }
@@ -4835,7 +4868,7 @@ Rule SurvivorSpottedBoomerAlsoC1M2Producer
 Response SurvivorSpottedCedaProducer
 {
 	norepeat
-	scene "scenes/Producer/SeeHazmat02.vcd"  //Fireproof zombies. Hooray!
+	scene "scenes/Producer/SeeHazmat02.vcd" //Fireproof zombies. Hooray!
 	scene "scenes/Producer/SeeHazmat03.vcd" //Shit. I think these guys are fireproof.
 }
 Rule SurvivorSpottedCedaProducer
@@ -4848,12 +4881,13 @@ Rule SurvivorSpottedCedaProducer
 
 Response SurvivorSpottedCedaC1M1Producer
 {
+	norepeat
 	scene "scenes/Producer/SeeHazmat01.vcd"  //Great. Infected in hazmat suits.
 }
 Rule SurvivorSpottedCedaC1M1Producer
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:0"
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Producer
 }
@@ -4937,10 +4971,13 @@ Rule SurvivorSpottedChargerAlsoC1M2Producer
 
 Response SurvivorSpottedClownProducer
 {
+	norepeat
+	scene "scenes/Producer/SeeClowns01.vcd"  //That clown's attracting a horde!
 	scene "scenes/Producer/SeeClowns03.vcd"  //Somebody shut that clown up!
 	scene "scenes/Producer/SeeClowns04.vcd"  //Somebody shut up that clown!
 	scene "scenes/Producer/SeeClowns05.vcd"  //Kill the clown!
 	scene "scenes/Producer/SeeClowns06.vcd"  //Kill the clown!
+	scene "scenes/Producer/SeeClowns07.vcd"  //The clown's attracting a horde!
 }
 Rule SurvivorSpottedClownProducer
 {
@@ -4952,14 +4989,12 @@ Rule SurvivorSpottedClownProducer
 
 Response SurvivorSpottedClownC2M2Producer
 {
-	scene "scenes/Producer/SeeClowns01.vcd"  //That clown's attracting a horde!
 	scene "scenes/Producer/SeeClowns02.vcd"  //Okay, that clown's attracting a horde!
-	scene "scenes/Producer/SeeClowns07.vcd"  //The clown's attracting a horde!
 }
 Rule SurvivorSpottedClownC2M2Producer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:0,SawClowns:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 SawFirstClown IsNotSpeakingWeight0
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedClownC2M2Producer
 }
@@ -5078,8 +5113,10 @@ Rule SurvivorSpottedInfectedProducer
 
 Response SurvivorSpottedJimmyProducer
 {
+	norepeat
 	scene "scenes/Producer/WorldC1M3B17.vcd"  //Take that, Jimmy Gibbs!
 	scene "scenes/Producer/WorldC1M3B18.vcd"  //Eat lead, Jimmy Gibbs.
+	scene "scenes/Producer/WorldC1M4B12.vcd"  //Dibs on Gibbs!
 }
 Rule SurvivorSpottedJimmyProducer
 {
@@ -5191,8 +5228,8 @@ Response SurvivorSpottedMudmenFirstProducer
 }
 Rule SurvivorSpottedMudmenFirstProducer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp IsNotSpeakingWeight0
-	ApplyContext "SaidMudmenWarn:1:0,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp SawFirstMudMen IsNotSpeakingWeight0
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmenFirstProducer
 }
