@@ -131,8 +131,8 @@ function DoRoundFixes()
 		make_ladder( "_ladder_fireworksL_cloned_scaffoldsinglefork", "-2980 3298 -152", "771 -834 4" );
 		make_ladder( "_ladder_fireworksR_cloned_scaffoldsinglefork", "-2980 3298 -152", "581 -834 4" );
 		make_ladder( "_ladder_leftchopperwindowl_cloned_leftchopperwindowr", "-763.5005 2285.4995 240", "263 263 0" );
-		make_ladder( "_ladder_startfenceback_cloned_fencecoverfront", "-3444 3528 -188", "3838 2073 5", "0 43.5 0", "0.7 0.7 0" );
-		make_ladder( "_ladder_startfencefront_cloned_fencecoverback", "-3468 3592 -188", "3857 2072 5", "0 43.5 0", "-0.7 -0.7 0" );
+		make_ladder( "_ladder_startfenceback_cloned_fencecoverfront", "-3444 3528 -188", "3845 2199 8", "0 45 0", "0.70 0.70 0" );
+		make_ladder( "_ladder_startfencefront_cloned_fencecoverback", "-3468 3592 -188", "3860 2114 8", "0 44 0", "-0.71 -0.69 0" );
 		make_prop( "dynamic", "_missing_staircase", "models/props_interiors/stair_metal_02.mdl", "-840 1792 136", "0 315 0", "shadow_yes" );
 		make_prop( "dynamic", "_yesdraw_infecteddoorway", "models/props_update/c2m5_infectedroom_doorway.mdl", "-3200 3972 0", "0 90 0", "shadow_yes" );
 		make_prop( "dynamic", "_yesdraw_infectedroom", "models/props_update/c2m5_infectedroom.mdl", "-3200 3727 0", "0 -90 0", "shadow_yes" );
