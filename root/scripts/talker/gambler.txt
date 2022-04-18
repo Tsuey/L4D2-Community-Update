@@ -3248,6 +3248,19 @@ Rule EllisStoryInterruptC4M4Gambler
 	Response EllisStoryInterruptC4M4Gambler
 }
 
+Response EllisStoryInterruptC4M5Gambler
+{
+	scene "scenes/Gambler/EllisInterrupt07.vcd"  //Hey Ellis, why don't you tell us about the time you SHUT UP?
+	scene "scenes/Gambler/EllisInterrupt20.vcd"  //You know what I like best about your stories, Ellis? NOTHING!
+}
+Rule EllisStoryInterruptC4M5Gambler
+{
+	criteria ConceptEllisInterrupt IsGambler isc4m5 _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptC4M5Gambler
+}
+
 Response EllisStoryInterruptC5M2Gambler
 {
 	scene "scenes/Gambler/EllisInterrupt09.vcd"  //I don't care. NOBODY CARES!
@@ -3272,6 +3285,27 @@ Rule EllisStoryInterruptC5M5Gambler
 	Response EllisStoryInterruptC5M5Gambler
 }
 
+Rule EllisStoryInterruptC13M2Gambler
+{
+	criteria ConceptEllisInterrupt IsGambler IsMapc13m2_southpinestream _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericGambler
+}
+Rule EllisStoryInterruptC13M3Gambler
+{
+	criteria ConceptEllisInterrupt IsGambler IsMapc13m3_memorialbridge _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericGambler
+}
+Rule EllisStoryInterruptC13M4Gambler
+{
+	criteria ConceptEllisInterrupt IsGambler ismapc13m4_cutthroatcreek _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptC5M5Gambler
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // C5M5
@@ -5041,13 +5075,14 @@ Rule SurvivorSpottedWorldCloseGambler
 //--------------------------------------------------------------------------------------------------------------
 Response SurvivorSpottedArmoredC5M1Gambler
 {
+	norepeat
 	scene "scenes/Gambler/SeeArmored01.vcd"  //Those zombies are wearing armor?
 	scene "scenes/Gambler/SeeArmored02.vcd"  //Those zombies are wearing armor!
 }
 Rule SurvivorSpottedArmoredC5M1Gambler
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidArmoredWarn:1:0"
+	ApplyContext "SaidArmoredWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Gambler
 }
@@ -5163,8 +5198,8 @@ Rule SurvivorSpottedBoomerAlsoC1M2Gambler
 Response SurvivorSpottedCedaGambler
 {
 	norepeat
-	scene "scenes/Gambler/SeeHazmat01.vcd"  //Hazmat guys!
-	scene "scenes/Gambler/SeeHazmat03.vcd"  //Are those guys fireproof?
+	scene "scenes/Gambler/SeeHazmat01.vcd" //Hazmat guys!
+	scene "scenes/Gambler/SeeHazmat03.vcd" //Are those guys fireproof?
 }
 Rule SurvivorSpottedCedaGambler
 {
@@ -5177,12 +5212,12 @@ Rule SurvivorSpottedCedaGambler
 Response SurvivorSpottedCedaC1M1Gambler
 {
 	norepeat
-	scene "scenes/Gambler/SeeHazmat02.vcd"  //Guess those suits don't stop bites.
+	scene "scenes/Gambler/SeeHazmat02.vcd" //Guess those suits don't stop bites.
 }
 Rule SurvivorSpottedCedaC1M1Gambler
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:0"
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Gambler
 }
@@ -5265,20 +5300,18 @@ Rule SurvivorSpottedChargerAlsoC1M2Gambler
 	Response SurvivorSpottedChargerC1M1Gambler
 }
 
-Response SurvivorSpottedClownC2M2Gambler
-{
-	scene "scenes/Gambler/SeeClowns01.vcd"  //That squeaking is driving the zombies crazy!
-}
 Rule SurvivorSpottedClownC2M2Gambler
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated Ismap_c2m2 IsNotSaidClownWarn IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:0,SawClowns:++1"
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
-	Response SurvivorSpottedClownC2M2Gambler
+	Response SurvivorSpottedClownGambler
 }
 
 Response SurvivorSpottedClownGambler
 {
+	norepeat
+	scene "scenes/Gambler/SeeClowns01.vcd"  //That squeaking is driving the zombies crazy!
 	scene "scenes/Gambler/SeeClowns02.vcd"  //Kill the clown!
 	scene "scenes/Gambler/SeeClowns03.vcd"  //Kill the clown, he's attracting more zombies!
 	scene "scenes/Gambler/SeeClowns04.vcd"  //Kill every clown you see!
@@ -5516,13 +5549,14 @@ Rule SurvivorSpottedMudmenGambler
 Rule SurvivorSpottedMudmenC3M2Gambler
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp IsNotSpeakingWeight0
-	ApplyContext "SaidMudmenWarn:1:0,SawMudMen:++1"
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmenGambler
 }
 
 Response SurvivorSpottedMudmen2Gambler
 {
+	norepeat
 	scene "scenes/Gambler/WorldC3M201.vcd"  //Screw these goddamn mud people.
 }
 Rule SurvivorSpottedMudmen2Gambler
