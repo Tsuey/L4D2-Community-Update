@@ -5813,8 +5813,8 @@ Response SurvivorSpottedCedaC1M1Mechanic
 }
 Rule SurvivorSpottedCedaC1M1Mechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Mechanic
 }
@@ -5888,7 +5888,7 @@ Response SurvivorSpottedClownMechanic
 Rule SurvivorSpottedClownMechanic
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidClownWarn IsNotSpeakingWeight0 _auto_ConcertNotLive _auto_NotSpottedVehicle
-	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
+	ApplyContext "SaidClownWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedClownMechanic
 }
@@ -5919,8 +5919,8 @@ Response SurvivorSpottedFirstClownMechanic
 }
 Rule SurvivorSpottedFirstClownMechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:0,SawClowns:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 SawFirstClown IsNotSpeakingWeight0
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedFirstClownMechanic
 }
@@ -6001,8 +6001,8 @@ Response SurvivorSpottedJimmyMechanic
 }
 Rule SurvivorSpottedJimmyMechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidJimmyWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidJimmyWarn:1:3"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated SawJimmyGibbs IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SawJimmyGibbs:++1"
 	applycontexttoworld
 	Response SurvivorSpottedJimmyMechanic
 }
@@ -6070,8 +6070,8 @@ Response SurvivorSpottedMudmenC3M2Mechanic
 }
 Rule SurvivorSpottedMudmenC3M2Mechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp IsNotSpeakingWeight0
-	ApplyContext "SaidMudmenWarn:1:0,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp SawFirstMudMen IsNotSpeakingWeight0
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmenC3M2Mechanic
 }
@@ -6100,8 +6100,8 @@ Response SurvivorSpottedMudmen2Mechanic
 }
 Rule SurvivorSpottedMudmen2Mechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidMudmenWarn SawManyMudMen IntensityUnder50 IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidMudmenWarn SawManyMudMen SickOfMudMen IntensityUnder50 IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1,SickOfMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmen2Mechanic
 }
@@ -7098,6 +7098,14 @@ Rule PlayerHelpIncappedLethargicMechanic
 	criteria ConceptPlayerHelp IsMechanic IsNotCoughing IsTalk IsTalkMechanic IsIncappedLethargic IsIncapacitated NotCalledForHelpRecently IsWorldTalkMechanic
 	ApplyContext "CalledForHelp:1:30"
 	Response PlayerHelpIncappedLethargicMechanic
+}
+
+Rule PlayerHelpIncappedWitchMechanic
+{
+	criteria ConceptPlayerHelp IsMechanic IsIncapacitated IsWitchPresent IsWitchAggro
+	ApplyContext "CalledForHelp:1:10"
+	forceweight 30
+	Response NoResponse
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -11823,6 +11831,40 @@ Rule PlayerIncapacitatedInitialMechanic
 	criteria ConceptPlayerIncapacitated IsNotCoughing  IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	ApplyContext "TalkMechanic:1:2"
 	Response PlayerIncapacitatedInitialMechanic
+}
+
+Response PlayerIncapacitatedInitialWitchMechanic
+{
+	scene "scenes/Mechanic/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+}
+Rule PlayerIncapacitatedInitialWitchMechanic
+{
+	criteria ConceptPlayerIncapacitated IsMechanic IsWitchPresent IsWitchAggro IsCriticalPain
+	ApplyContext "TalkMechanic:1:2"
+	forceweight 30
+	Response PlayerIncapacitatedInitialWitchMechanic
+}
+
+Response WitchDownedMechanic
+{
+	scene "scenes/Mechanic/GrabbedBySmoker01.vcd"  //no, No,  No, NO!!!!!!!!
+	scene "scenes/Mechanic/GrabbedBySmoker01c.vcd"  //NO!
+	scene "scenes/Mechanic/GrabbedBySmoker02.vcd"  //no, No, NOOOOOOO!!!!!!!!!
+	scene "scenes/Mechanic/GrabbedBySmoker02a.vcd"  //NO!
+	scene "scenes/Mechanic/GrabbedBySmoker03.vcd"  //no, No,  No, NO, NO!!!!!!!!
+	scene "scenes/Mechanic/GrabbedBySmoker03a.vcd"  //Ah, NO!
+	scene "scenes/Mechanic/GrabbedBySmoker03b.vcd"  //NO!
+	scene "scenes/Mechanic/GrabbedBySmoker06.vcd"  //no, No,  No, NO!!!!!!!!
+}
+Rule WitchDownedMechanic
+{
+	criteria ConceptWitchDowned IsMechanic IsWitchPresent IsWitchAggro
+	Response WitchDownedMechanic
 }
 
 Response PlayerIncapacitatedInitialC1M2Mechanic

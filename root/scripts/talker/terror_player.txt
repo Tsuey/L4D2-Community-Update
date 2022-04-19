@@ -1273,7 +1273,11 @@ Criterion "IsNotSaidTankWarn" "worldWarnHeardTank" "!=1" "required" weight 0
 Criterion "IsNotSaidWitchWarn" "worldWarnHeardWitch" "!=1" "required" weight 0
 Criterion "SawManyMudMen" "worldSawMudMen" ">3" "required" weight 0
 Criterion "SawFirstMudMen" "worldSawMudMen" "<1" "required" weight 0
+Criterion "SickOfMudMen" "worldSickOfMudMen" "<1" "required" weight 0
 Criterion "SawFirstClown" "worldSawClowns" "<1" "required" weight 0
+Criterion "SawFirstArmored" "worldSawArmored" "<1" "required" weight 0
+Criterion "SawFirstHazmat" "worldSawHazmat" "<1" "required" weight 0
+Criterion "SawJimmyGibbs" "worldSawJimmyGibbs" "<1" "required" weight 0
 
 Criterion "IsNotSaidSpecialWarn" "worldSaidSpecialWarn" "!=1" "required" weight 0
 

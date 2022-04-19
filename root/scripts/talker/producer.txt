@@ -4852,8 +4852,8 @@ Response SurvivorSpottedCedaC1M1Producer
 }
 Rule SurvivorSpottedCedaC1M1Producer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Producer
 }
@@ -4945,7 +4945,7 @@ Response SurvivorSpottedClownProducer
 Rule SurvivorSpottedClownProducer
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidClownWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
+	ApplyContext "SaidClownWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedClownProducer
 }
@@ -4958,8 +4958,8 @@ Response SurvivorSpottedClownC2M2Producer
 }
 Rule SurvivorSpottedClownC2M2Producer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:0,SawClowns:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 SawFirstClown IsNotSpeakingWeight0
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedClownC2M2Producer
 }
@@ -5083,8 +5083,8 @@ Response SurvivorSpottedJimmyProducer
 }
 Rule SurvivorSpottedJimmyProducer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidJimmyWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidJimmyWarn:1:3"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated SawJimmyGibbs IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SawJimmyGibbs:++1"
 	applycontexttoworld
 	Response SurvivorSpottedJimmyProducer
 }
@@ -5191,8 +5191,8 @@ Response SurvivorSpottedMudmenFirstProducer
 }
 Rule SurvivorSpottedMudmenFirstProducer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp IsNotSpeakingWeight0
-	ApplyContext "SaidMudmenWarn:1:0,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp SawFirstMudMen IsNotSpeakingWeight0
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmenFirstProducer
 }
@@ -6156,6 +6156,13 @@ Rule PlayerHelpIncappedLethargicProducer
 	Response PlayerHelpIncappedLethargicProducer
 }
 
+Rule PlayerHelpIncappedWitchProducer
+{
+	criteria ConceptPlayerHelp IsProducer IsIncapacitated IsWitchPresent IsWitchAggro
+	ApplyContext "CalledForHelp:1:10"
+	forceweight 30
+	Response NoResponse
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Remarkable Vocalize
@@ -10359,6 +10366,37 @@ Rule PlayerIncapacitatedInitialProducer
 	criteria ConceptPlayerIncapacitated IsNotCoughing  IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	ApplyContext "TalkProducer:1:2"
 	Response PlayerIncapacitatedInitialProducer
+}
+
+Response PlayerIncapacitatedInitialWitchProducer
+{
+	scene "scenes/Producer/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //
+	scene "scenes/Producer/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //
+	scene "scenes/Producer/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //
+	scene "scenes/Producer/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //
+}
+Rule PlayerIncapacitatedInitialWitchProducer
+{
+	criteria ConceptPlayerIncapacitated IsProducer IsWitchPresent IsWitchAggro IsCriticalPain
+	ApplyContext "TalkProducer:1:2"
+	forceweight 30
+	Response PlayerIncapacitatedInitialWitchProducer
+}
+
+Response WitchDownedProducer
+{
+	scene "scenes/Producer/GrabbedBySmoker02.vcd"  //no, No, No, NO, NOOOOOOO!!!!!!!!!
+	scene "scenes/Producer/GrabbedBySmoker02a.vcd"  //NO!
+	scene "scenes/Producer/GrabbedBySmoker02b.vcd"  //NO!
+	scene "scenes/Producer/GrabbedBySmoker02c.vcd"  //NO!
+	scene "scenes/Producer/GrabbedBySmoker02d.vcd"  //NO!
+	scene "scenes/Producer/GrabbedBySmoker02e.vcd"  //NO!
+	scene "scenes/Producer/GrabbedBySmoker04.vcd"  //no, No,  No, NO!!!!!!!!
+}
+Rule WitchDownedProducer
+{
+	criteria ConceptWitchDowned IsProducer IsWitchPresent IsWitchAggro
+	Response WitchDownedProducer
 }
 
 Response PlayerIncapacitatedInitialC1M2Producer

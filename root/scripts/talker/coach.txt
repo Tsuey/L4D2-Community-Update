@@ -4960,8 +4960,8 @@ Response SurvivorSpottedArmoredC5M1Coach
 }
 Rule SurvivorSpottedArmoredC5M1Coach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidArmoredWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront SawFirstArmored IsNotSpeakingWeight0
+	ApplyContext "SaidArmoredWarn:1:0,SawArmored:++1"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Coach
 }
@@ -5060,8 +5060,8 @@ Rule SurvivorSpottedCedaCoach
 
 Rule SurvivorSpottedCedaC1M1Coach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
 	applycontexttoworld
 	Response SurvivorSpottedCedaCoach
 }
@@ -5151,7 +5151,7 @@ Response SurvivorSpottedClownCoach
 Rule SurvivorSpottedClownCoach
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidClownWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
+	ApplyContext "SaidClownWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedClownCoach
 }
@@ -5181,8 +5181,8 @@ Response SurvivorSpottedFirstClownCoach
 }
 Rule SurvivorSpottedFirstClownCoach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:0,SawClowns:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidClownWarn ismap_c2m2 SawFirstClown IsNotSpeakingWeight0
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedFirstClownCoach
 }
@@ -5291,8 +5291,8 @@ Response SurvivorSpottedJimmyCoach
 }
 Rule SurvivorSpottedJimmyCoach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidJimmyWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidJimmyWarn:1:3"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated SawJimmyGibbs IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SpottedJimmyGibbs:++1"
 	applycontexttoworld
 	Response SurvivorSpottedJimmyCoach
 }
@@ -5375,7 +5375,6 @@ Rule SurvivorSpottedJockeyAlsoC1M2Coach
 
 Response SurvivorSpottedMudmenCoach
 {
-	norepeat
 	scene "scenes/Coach/SeeMudmen02.vcd"  //Shoot the mudmen!
 }
 Rule SurvivorSpottedMudmenCoach
@@ -5392,8 +5391,8 @@ Response SurvivorSpottedMudmenC3M2Coach
 }
 Rule SurvivorSpottedMudmenC3M2Coach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidMudmenWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidMudmenWarn:1:0,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp SawFirstMudMen IsNotSpeakingWeight0
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmenC3M2Coach
 }
@@ -6432,6 +6431,21 @@ Rule PlayerHelpIncappedLethargicCoach
 	Response PlayerHelpIncappedLethargicCoach
 }
 
+Rule PlayerHelpIncappedWitchCoach
+{
+	criteria ConceptPlayerHelp IsCoach IsIncapacitated IsWitchPresent IsWitchAggro IsSaidWitchAttacking
+	ApplyContext "CalledForHelp:1:10"
+	forceweight 30
+	Response NoResponse
+}
+
+Rule PlayerHelpIncappedWitchCoach
+{
+	criteria ConceptPlayerHelp IsCoach IsIncapacitated IsWitchPresent IsWitchAggro
+	ApplyContext "CalledForHelp:1:10"
+	forceweight 30
+	Response NoResponse
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -11169,6 +11183,43 @@ Rule PlayerIncapacitatedInitialCoach
 	criteria ConceptPlayerIncapacitated IsNotCoughing  IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	ApplyContext "TalkCoach:1:2"
 	Response PlayerIncapacitatedInitialCoach
+}
+
+Response PlayerIncapacitatedInitialWitchCoach
+{
+	scene "scenes/Coach/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical08.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+}
+Rule PlayerIncapacitatedInitialWitchCoach
+{
+	criteria ConceptPlayerIncapacitated IsCoach IsWitchPresent IsWitchAggro IsCriticalPain
+	ApplyContext "TalkCoach:1:2"
+	Response PlayerIncapacitatedInitialWitchCoach
+}
+
+Response WitchDownedCoach
+{
+	scene "scenes/Coach/GrabbedBySmoker01a.vcd"  //No...
+	scene "scenes/Coach/GrabbedBySmoker01b.vcd"  //NO...
+	scene "scenes/Coach/GrabbedBySmoker02b.vcd"  //NO!
+	scene "scenes/Coach/GrabbedBySmoker02c.vcd"  //NO!
+	scene "scenes/Coach/GrabbedBySmoker02d.vcd"  //AUGH!
+	scene "scenes/Coach/GrabbedBySmoker03b.vcd"  //No!
+	scene "scenes/Coach/GrabbedBySmoker03c.vcd"  //NO!!!
+	scene "scenes/Coach/GrabbedBySmoker04a.vcd"  //No!
+	scene "scenes/Coach/GrabbedBySmoker04b.vcd"  //No!
+	scene "scenes/Coach/GrabbedBySmoker04c.vcd"  //NO!
+}
+Rule WitchDownedCoach
+{
+	criteria ConceptWitchDowned IsCoach IsWitchPresent IsWitchAggro
+	Response WitchDownedCoach
 }
 
 Response PlayerIncapacitatedInitialC1M2Coach
