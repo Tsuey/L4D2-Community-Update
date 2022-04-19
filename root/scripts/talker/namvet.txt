@@ -3018,6 +3018,13 @@ Rule L4D1PlayerHelpIncapped3NamVet
 	Response L4D1PlayerHelpIncapped3NamVet
 }
 
+Rule L4D1PlayerHelpIncappedWitchNamVet
+{
+	criteria ConceptPlayerHelp IsNamVet IsIncapacitated IsWitchPresent IsWitchAggro
+	ApplyContext "CalledForHelp:1:10"
+	forceweight 30
+	Response NoResponse
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -5450,6 +5457,38 @@ Rule L4D1PlayerIncapacitatedInitialNamVet
 	criteria ConceptPlayerIncapacitated IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	ApplyContext "TalkNamVet:1:2"
 	Response L4D1PlayerIncapacitatedInitialNamVet
+}
+
+Response L4D1PlayerIncapacitatedInitialWitchNamVet
+{
+	scene "scenes/NamVet/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical03.vcd" //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical06.vcd" //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical08.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical09.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+}
+Rule L4D1PlayerIncapacitatedInitialWitchNamVet
+{
+	criteria ConceptPlayerIncapacitated IsNamVet IsWitchPresent IsWitchAggro IsCriticalPain
+	ApplyContext "TalkNamVet:1:2"
+	forceweight 30
+	Response L4D1PlayerIncapacitatedInitialWitchNamVet
+}
+
+Response L4D1WitchDownedNamVet
+{
+	scene "scenes/NamVet/GrabbedBySmoker01a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+	scene "scenes/NamVet/GrabbedBySmoker02a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+	scene "scenes/NamVet/GrabbedBySmoker03.vcd"  //no, NO!
+}
+Rule L4D1WitchDownedNamVet
+{
+	criteria ConceptWitchDowned IsNamVet IsWitchPresent IsWitchAggro
+	Response L4D1WitchDownedNamVet
 }
 
 Response L4D1PlayerKillConfirmationNamVet

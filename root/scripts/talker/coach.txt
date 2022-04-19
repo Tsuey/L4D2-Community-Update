@@ -6433,14 +6433,6 @@ Rule PlayerHelpIncappedLethargicCoach
 
 Rule PlayerHelpIncappedWitchCoach
 {
-	criteria ConceptPlayerHelp IsCoach IsIncapacitated IsWitchPresent IsWitchAggro IsSaidWitchAttacking
-	ApplyContext "CalledForHelp:1:10"
-	forceweight 30
-	Response NoResponse
-}
-
-Rule PlayerHelpIncappedWitchCoach
-{
 	criteria ConceptPlayerHelp IsCoach IsIncapacitated IsWitchPresent IsWitchAggro
 	ApplyContext "CalledForHelp:1:10"
 	forceweight 30

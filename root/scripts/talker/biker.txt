@@ -95,17 +95,17 @@ Rule L4D1ReviveMeInterruptedMajorBiker
 
 Response L4D1ReviveMeInterruptedCriticalBiker
 {
-	scene "scenes/Biker/HurtCritical01.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical02.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical03.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical04.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical05.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical06.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical07.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical08.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical09.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical10.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical11.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical01.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical02.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical03.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical04.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical05.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical06.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical07.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical08.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical09.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical10.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical11.vcd" predelay "0.75" //[Pain noise - loud major pain]
 }
 Rule L4D1ReviveMeInterruptedCriticalBiker
 {
@@ -4411,6 +4411,14 @@ Rule L4D1PlayerHelpIncappedLethargicBiker
 	Response L4D1PlayerHelpIncappedLethargicBiker
 }
 
+Rule L4D1PlayerHelpIncappedWitchManager
+{
+	criteria ConceptPlayerHelp IsManager IsIncapacitated IsWitchPresent IsWitchAggro
+	ApplyContext "CalledForHelp:1:10"
+	forceweight 30
+	Response NoResponse
+}
+
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -7233,6 +7241,39 @@ Rule L4D1PlayerIncapacitatedInitialBiker
 	criteria ConceptPlayerIncapacitated IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	ApplyContext "TalkBiker:1:2"
 	Response L4D1PlayerIncapacitatedInitialBiker
+}
+
+Response L4D1PlayerIncapacitatedInitialWitchBiker
+{
+	scene "scenes/Biker/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical08.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical09.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical10.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical11.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+}
+Rule L4D1PlayerIncapacitatedInitialWitchBiker
+{
+	criteria ConceptPlayerIncapacitated IsBiker IsWitchPresent IsWitchAggro IsCriticalPain
+	ApplyContext "TalkBiker:1:2"
+	forceweight 30
+	Response L4D1PlayerIncapacitatedInitialWitchBiker
+}
+
+Response L4D1WitchDownedBiker
+{
+	scene "scenes/Biker/GrabbedBySmoker01a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+	scene "scenes/Biker/GrabbedBySmoker02a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+}
+Rule L4D1WitchDownedBiker
+{
+	criteria ConceptWitchDowned IsBiker IsWitchPresent IsWitchAggro
+	Response L4D1WitchDownedBiker
 }
 
 Response L4D1PlayerKillConfirmationBiker
