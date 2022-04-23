@@ -58,7 +58,7 @@ function DoRoundFixes()
 	{
 		make_brush( "_losfix_bus",		"-1 -96 -14",	"1 128 14",	"-868 -1515 -363" );
 		make_brush( "_losfix_van",		"-100 -1 -12",	"100 1 12",	"-918 -1852 -365" );
-		make_clip( "_ladder_endbluehouse_clipleft", "Everyone", 1, "-2 -8 -160", "2 8 160", "-3804.95 52.25 -200", "0 45 0" );
+		make_clip( "_ladder_endbluehouse_clipleft", "Everyone", 1, "-2 -8 -160", "2 8 160", "-3805 52.25 -200", "0 45 0" );
 		make_clip( "_ladder_endgutterm2mirr_clip", "Everyone", 1, "-4.09 -13 0", "0 23 338", "-3196 -1079 -376" );
 		make_ladder( "_ladder_backpropladder_cloned_waterfrontfence", "-920 438 -304", "-367 -2821 -8" );
 		make_ladder( "_ladder_bienville_cloned_brickgutter", "-2086 -1984 -216", "1428 1278 -93" );
