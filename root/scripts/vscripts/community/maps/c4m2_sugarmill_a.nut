@@ -123,13 +123,13 @@ function DoRoundFixes()
 		make_ladder( "_ladder_jaggedchainlinkback2_cloned_stacksfenceback", "258 -4883.67 156.145", "4269 -10550 -19", "0 180 0", "0 0 1" );
 		make_ladder( "_ladder_jaggedchainlinkfront_cloned_stacksfenceback", "258 -4883.67 156.145", "3750 -1083 -19" );
 		make_ladder( "_ladder_parkourouthouse_cloned_rubbleshortpipe", "1988.06 -4910.53 164.268", "-2152 -260 -33", "0 14.76 0", "0.26 -0.97 0" );
-		make_ladder( "_ladder_parkoursiloleft_cloned_marshtrailer", "-74.9665 -7000.47 202.25", "-728 -10692 139", "0 162.42 0", "-0.94 -0.34 0" );
-		make_ladder( "_ladder_parkoursiloright_cloned_marshtrailer", "-74.9665 -7000.47 202.25", "-717 -10720 139", "0 162.42 0", "-0.94 -0.34 0" );
+		make_ladder( "_ladder_parkoursiloleft_cloned_stacksfencebackr", "258 -4883.67 156.145", "-650.26 362.19 193.85", "0 22.5 0", "-0.92 -0.38 0" );
+		make_ladder( "_ladder_parkoursiloright_cloned_stacksfenceback", "258 -4883.67 156.145", "-640.26 338.19 193.85", "0 22.5 0", "-0.92 -0.38 0" );
 		make_ladder( "_ladder_pipeyardsemi_cloned_millgrinder", "2001.5 -5712 273.75", "9997 -1842 -98", "0 -90 0" "0 -1 0" );
 		make_ladder( "_ladder_saferoofpipe_cloned_bricksemitrailer", "4319.5 -3675.85 264.25", "7776 -5566 -8", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_siloplatform_cloned_grinderwheel", "1080.5 -6085.5 237.133", "1839 -12326.5 -2", "0 180 0", "1 0 0" );
-		make_ladder( "_ladder_silosemirearleft_cloned_millgrinder", "2001.5 -5712 273.75", "-3643 -11764 -75", "0 128 0" "-0.6 0.8 0" );
-		make_ladder( "_ladder_silosemirearright_cloned_millgrinder", "2001.5 -5712 273.75", "-3946 -11936 -75", "0 128 0" "-0.6 0.8 0" );
+		make_ladder( "_ladder_silosemirearleft_cloned_millgrinder", "2001.5 -5712 273.75", "-3687 -11733 -75", "0 127.5 0" "-0.6 0.79 0" );
+		make_ladder( "_ladder_silosemirearright_cloned_millgrinder", "2001.5 -5712 273.75", "-3990 -11905 -75", "0 127.5 0" "-0.6 0.79 0" );
 		make_ladder( "_ladder_stacksfencefront_cloned_stacksfenceback", "258 -4883.67 156.145", "524 -9863 0", "0 180 0" "0 0 1" );
 		make_ladder( "_ladder_talleventpillar1_cloned_talleventpipe", "-1497 -9117.13 400.25", "-10269 -7652 0", "0 90 0" "0 1 0" );
 		make_ladder( "_ladder_talleventpillar2_cloned_talleventpipe", "-1497 -9117.13 400.25", "7965 -10268 0", "0 -90 0" "0 -1 0" );
