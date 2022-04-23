@@ -116,8 +116,8 @@ function DoRoundFixes()
 		make_brush( "_losfix_truck",		"-1 -70 -12",	"1 70 12",	"4106 -2935 115" );
 		make_clip( "_ladder_parkourouthouse_clip", "SI Players", 1, "-31 -28 0", "29 29 10", "1017 -4471 200", "0 15 0" );
 		make_ladder( "_ladder_ducatelelecbox_cloned_ducateldumpsters", "-1586.2 -13843.5 218.25", "11911 -15404 0", "0 -90 0", "-1 0 0" );
-		make_ladder( "_ladder_ducatelroofl_cloned_brokenlocker", "2756 -3833.5 392.25", "-5049 -16360 0", "0 90 0", "-1 0 0" );
-		make_ladder( "_ladder_ducatelroofr_cloned_brokenlocker", "2756 -3833.5 392.25", "-5049 -16410 0", "0 90 0", "-1 0 0" );
+		make_ladder( "_ladder_ducatelroofl_cloned_brokenlocker", "2756 -3833.5 392.25", "-5049 -16350 0", "0 90 0", "-1 0 0" );
+		make_ladder( "_ladder_ducatelroofr_cloned_brokenlocker", "2756 -3833.5 392.25", "-5049 -16384 0", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_grindergirder_cloned_bricksemitrailer", "4319.5 -3675.85 264.25", "-1856 -1939 -23" );
 		make_ladder( "_ladder_jaggedchainlinkback1_cloned_stacksfenceback", "258 -4883.67 156.145", "4269 -10900 -19", "0 180 0", "0 0 1" );
 		make_ladder( "_ladder_jaggedchainlinkback2_cloned_stacksfenceback", "258 -4883.67 156.145", "4269 -10550 -19", "0 180 0", "0 0 1" );
