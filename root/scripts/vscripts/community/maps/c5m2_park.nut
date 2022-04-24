@@ -72,7 +72,8 @@ function DoRoundFixes()
 		make_brush( "_losfix_fence",	"0 -64 -4",	"1 64 5",	"-6583 -5678 -252" );
 		make_brush( "_losfix_gen",		"-1 -28 -8",	"1 28 8",	"-9918 -4878.21 -249" );
 		make_brush( "_losfix_van",		"-1 -108 -10",	"1 108 10",	"-3360 -1422 -371" );
-		make_clip( "_ladder_billboard_clip", "SI Players", 1, "-32 -6 -4", "30 4 4", "-9158 -6944 154" );
+		make_clip( "_ladder_billboard_clip_a", "SI Players", 1, "-255 -3 -4", "255 3 4", "-9160 -6943 160" );
+		make_clip( "_ladder_billboard_clip_b", "SI Players", 1, "-32 -4 -4", "32 4 4", "-9162 -6951 160" );
 		make_clip( "_ladder_deadendbalconies_clip", "SI Players", 1, "0 -1 0", "1 1 128", "-8576 -4001 -208" );
 		make_clip( "_ladder_endlightpole_clippole", "Everyone", 1, "-15 -9 0", "17 9 446", "-8812 -7872 -249" );
 		make_clip( "_ladder_endlightpole_cliptop", "SI Players", 1, "-69 -6 0", "18 3 1", "-8812 -7871 197" );
@@ -82,8 +83,8 @@ function DoRoundFixes()
 		make_clip( "_commentary_fencegates_b", "Survivors", 1, "0 -8 -8", "6 120 1808", "-9217 -3320 -144" );
 		make_clip( "_commentary_eventtent", "Survivors", 1, "-64 -64 -899", "64 64 899", "-6853 -5598.37 765" );
 		make_ladder( "_ladder_archright_cloned_archleft", "-8110 -2848 -200", "-11 1310 0" );
-		make_ladder( "_ladder_billboardleft_cloned_watchtower", "-8000 -5874 -128", "-1172 -1855 -2782", "0 0 -30" );
-		make_ladder( "_ladder_billboardright_cloned_watchtower", "-8000 -5874 -128", "-1146 -1855 -2782", "0 0 -30" );
+		make_ladder( "_ladder_billboardleft_cloned_watchtower", "-8000 -5874 -128", "-1178 -1760 -2595", "0 0 -28", "0 -0.88 0.46" );
+		make_ladder( "_ladder_billboardright_cloned_watchtower", "-8000 -5874 -128", "-1144 -1760 -2595", "0 0 -28", "0 -0.88 0.46" );
 		make_ladder( "_ladder_busroofright_cloned_busroofleft", "-7646 -7052 64", "-16317 -13972 0", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_busrooftop_cloned_eventladderfence", "-6970 -5824 -188", "-999 -1726 336" );
 		make_ladder( "_ladder_deadendbalconies_cloned_busstationphones", "-7477.93 -7051.48 -120", "-1100 3036 40" );
@@ -100,10 +101,10 @@ function DoRoundFixes()
 		make_ladder( "_ladder_generatortent_cloned_archleft", "-8110 -2848 -200", "-16249 -6496 0", "0 -180 0", "-1 0 0" );
 		make_ladder( "_ladder_guardtowerhigh_cloned_cedatrailerfence", "-9557 -5536 -176", "-404 100 253" );
 		make_ladder( "_ladder_guardtowerlow_cloned_restrictedbarricade", "-9544 -5266 -128", "-580 -15 48" );
-		make_ladder( "_ladder_hmmwvawning_cloned_startcopcarfence", "-3128 -2204 -304", "-3197 -3550 112", "0 -7.5 0" );
+		make_ladder( "_ladder_hmmwvawning_cloned_cedatrailerfence", "-9557 -5536 -176", "2974 281 -14" );
 		make_ladder( "_ladder_longempty_cloned_archleft", "-8110 -2848 -200", "-11 2105 0" );
 		make_ladder( "_ladder_mehacvent_cloned_hedgemazecorner", "-7564 -352 -195.966", "141 -4810 208" );
-		make_ladder( "_ladder_overpasshigh_cloned_cedatrailerfence", "-9557 -5536 -176", "-437 2900 254" );
+		make_ladder( "_ladder_overpasshigh_cloned_cedatrailerfence", "-9557 -5536 -176", "-441 2900 254" );
 		make_ladder( "_ladder_overpasslow_cloned_watchtowerbags", "-8000 -5874 -128", "-2095 2947 24" );
 		make_ladder( "_ladder_restroomsplatforml_cloned_startcopcarfence", "-3128 -2204 -304", "-7101 529 80", "0 90 0", "0 -1 0" );
 		make_ladder( "_ladder_restroomsplatformr_cloned_startleftfence", "-3460 -1310 -304", "-8356 -3127 80", "0 180 0", "0 1 0" );
