@@ -1,0 +1,21 @@
+VertexLitGeneric
+{
+$baseTexture "models\destruction_tanker\destruction_tanker_trailer"
+$allowdiffusemodulation 0
+$detail "models\destruction_tanker\destruction_tanker_trailer_detail"
+$detailscale 1
+$surfaceprop metal
+$model 1
+$phong 1
+$phongboost 2
+$phongexponent 30
+$phongfresnelranges "[.6 1 2]"
+$envmap env_cubemap
+$envmaptint "[ .5 .5 .5 ]"
+$basemapalphaphongmask 1
+$basealphaenvmapmask 1
+$detailblendmode 0
+
+
+
+}
