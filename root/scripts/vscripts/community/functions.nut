@@ -1791,7 +1791,7 @@ function devchap( mode )
 	{
 		printl( "Community Map Fixes: Run or bind \"script ShowUpdate()\" and \"script HideUpdate()\"" );
 		printl( "to draw new blockers and glow new props. They are named according to purpose and" );
-		printl( "you can see entity definitions above. If you make/delete \"community_update\"-prefixed" );
+		printl( "you can see entity definitions above. If you make/delete \"" + ::CommunityUpdate().PrefixName() + "\"-prefixed" );
 		printl( "entities, toggle Hide/Show to apply changes. Please report all issues and concerns" );
 		printl( "to Tsuey's Workshop https://steamcommunity.com/sharedfiles/filedetails/?id=1959405608\n" );
 	}
