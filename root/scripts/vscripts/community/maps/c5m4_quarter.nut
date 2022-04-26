@@ -75,8 +75,8 @@ function DoRoundFixes()
 		make_clip( "_ladder_garagerooftops_cliptop", "SI Players", 1, "-47 -19 0", "66 2 44", "-1346 2974 64" );
 		make_ladder( "_ladder_balconygutter_cloned_eventacvent", "-1414 1288 592", "830 -984 -96" );
 		make_ladder( "_ladder_billiards_cloned_billiardsdrop", "-1392 2489 240", "545 -493.9 -120" );
-		make_ladder( "_ladder_busjazzclub_cloned_startwhitefence", "-3296 3698 134", "-1427 -2032 -3", "0 -54.6 0", "-0.82 -0.58 0" );
-		make_ladder( "_ladder_endsemifront_cloned_endsemiback", "1122.36 -2274.4004 146.7381", "2144 -4483 0", "0 180 0", "-0.96 0.28 0" );
+		make_ladder( "_ladder_busjazzclub_cloned_startwhitefence", "-3296 3698 134", "-1335 -2050 -4", "0 306.5 0", "-0.8 -0.59 0" );
+		make_ladder( "_ladder_endsemiwrecked_cloned_streetendfence", "-510 -800 140.24", "500.15 -2789.49 -52", "0 168.5 0", "-0.97 0.19 0" );
 		make_ladder( "_ladder_endtriplewindow_cloned_firstgutterladder", "-3706 4400 170", "3706 -6704 22" );
 		make_ladder( "_ladder_floatfarcorner_cloned_floatreartall", "-1722 -288 248", "-62 1265 -16" );
 		make_ladder( "_ladder_floatfronttall_cloned_floatreartall", "-1722 -288 248", "0 400 0" );
