@@ -7100,13 +7100,13 @@ Rule PlayerHelpIncappedLethargicMechanic
 	Response PlayerHelpIncappedLethargicMechanic
 }
 
-Rule PlayerHelpIncappedWitchMechanic
-{
-	criteria ConceptPlayerHelp IsMechanic IsIncapacitated IsWitchPresent IsWitchAggro
-	ApplyContext "CalledForHelp:1:10"
-	forceweight 30
-	Response NoResponse
-}
+//Rule PlayerHelpIncappedWitchMechanic
+//{
+//	criteria ConceptPlayerHelp IsMechanic IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // Remarkable Vocalize
@@ -11833,34 +11833,34 @@ Rule PlayerIncapacitatedInitialMechanic
 	Response PlayerIncapacitatedInitialMechanic
 }
 
-Response PlayerIncapacitatedInitialWitchMechanic
-{
-	scene "scenes/Mechanic/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-}
-Rule PlayerIncapacitatedInitialWitchMechanic
-{
-	criteria ConceptPlayerIncapacitated IsMechanic IsWitchPresent IsWitchAggro IsCriticalPain
-	ApplyContext "TalkMechanic:1:2"
-	forceweight 30
-	Response PlayerIncapacitatedInitialWitchMechanic
-}
+//Response PlayerIncapacitatedInitialWitchMechanic
+//{
+//	scene "scenes/Mechanic/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//}
+//Rule PlayerIncapacitatedInitialWitchMechanic
+//{
+//	criteria ConceptPlayerIncapacitated IsMechanic IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkMechanic:1:2"
+//	forceweight 30
+//	Response PlayerIncapacitatedInitialWitchMechanic
+//}
 
-Response WitchDownedMechanic
-{
-	scene "scenes/Mechanic/GrabbedBySmoker01.vcd"  //no, No,  No, NO!!!!!!!!
-	scene "scenes/Mechanic/GrabbedBySmoker01c.vcd"  //NO!
-	scene "scenes/Mechanic/GrabbedBySmoker02.vcd"  //no, No, NOOOOOOO!!!!!!!!!
-	scene "scenes/Mechanic/GrabbedBySmoker02a.vcd"  //NO!
-	scene "scenes/Mechanic/GrabbedBySmoker03.vcd"  //no, No,  No, NO, NO!!!!!!!!
-	scene "scenes/Mechanic/GrabbedBySmoker03a.vcd"  //Ah, NO!
-	scene "scenes/Mechanic/GrabbedBySmoker03b.vcd"  //NO!
-	scene "scenes/Mechanic/GrabbedBySmoker06.vcd"  //no, No,  No, NO!!!!!!!!
-}
+//Response WitchDownedMechanic
+//{
+//	scene "scenes/Mechanic/GrabbedBySmoker01.vcd"  //no, No,  No, NO!!!!!!!!
+//	scene "scenes/Mechanic/GrabbedBySmoker01c.vcd"  //NO!
+//	scene "scenes/Mechanic/GrabbedBySmoker02.vcd"  //no, No, NOOOOOOO!!!!!!!!!
+//	scene "scenes/Mechanic/GrabbedBySmoker02a.vcd"  //NO!
+//	scene "scenes/Mechanic/GrabbedBySmoker03.vcd"  //no, No,  No, NO, NO!!!!!!!!
+//	scene "scenes/Mechanic/GrabbedBySmoker03a.vcd"  //Ah, NO!
+//	scene "scenes/Mechanic/GrabbedBySmoker03b.vcd"  //NO!
+//	scene "scenes/Mechanic/GrabbedBySmoker06.vcd"  //no, No,  No, NO!!!!!!!!
+//}
 Rule WitchDownedMechanic
 {
 	criteria ConceptWitchDowned IsMechanic IsWitchPresent IsWitchAggro

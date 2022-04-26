@@ -3542,13 +3542,13 @@ Rule L4D1PlayerHelpIncappedLethargicManager
 	Response L4D1PlayerHelpIncappedLethargicManager
 }
 
-Rule L4D1PlayerHelpIncappedWitchManager
-{
-	criteria ConceptPlayerHelp IsManager IsIncapacitated IsWitchPresent IsWitchAggro
-	ApplyContext "CalledForHelp:1:10"
-	forceweight 30
-	Response NoResponse
-}
+//Rule L4D1PlayerHelpIncappedWitchManager
+//{
+//	criteria ConceptPlayerHelp IsManager IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -5967,32 +5967,32 @@ Rule L4D1PlayerIncapacitatedInitialManager
 	Response L4D1PlayerIncapacitatedInitialManager
 }
 
-Response L4D1PlayerIncapacitatedInitialWitchManager
-{
-	scene "scenes/Manager/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-}
-Rule L4D1PlayerIncapacitatedInitialWitchManager
-{
-	criteria ConceptPlayerIncapacitated IsManager IsWitchPresent IsWitchAggro IsCriticalPain
-	ApplyContext "TalkManager:1:2"
-	forceweight 30
-	Response L4D1PlayerIncapacitatedInitialWitchManager
-}
+//Response L4D1PlayerIncapacitatedInitialWitchManager
+//{
+//	scene "scenes/Manager/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//}
+//Rule L4D1PlayerIncapacitatedInitialWitchManager
+//{
+//	criteria ConceptPlayerIncapacitated IsManager IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkManager:1:2"
+//	forceweight 30
+//	Response L4D1PlayerIncapacitatedInitialWitchManager
+//}
 
-Response L4D1WitchDownedManager
-{
-	scene "scenes/Manager/GrabbedBySmoker01a.vcd"  //no, No, NO, NO!!!!!
-	scene "scenes/Manager/GrabbedBySmoker02a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
-}
-Rule L4D1WitchDownedManager
-{
-	criteria ConceptWitchDowned IsManager IsWitchPresent IsWitchAggro
-	Response L4D1WitchDownedManager
-}
+//Response L4D1WitchDownedManager
+//{
+//	scene "scenes/Manager/GrabbedBySmoker01a.vcd"  //no, No, NO, NO!!!!!
+//	scene "scenes/Manager/GrabbedBySmoker02a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+//}
+//Rule L4D1WitchDownedManager
+//{
+//	criteria ConceptWitchDowned IsManager IsWitchPresent IsWitchAggro
+//	Response L4D1WitchDownedManager
+//}
 
 Response L4D1PlayerKillConfirmationManager
 {

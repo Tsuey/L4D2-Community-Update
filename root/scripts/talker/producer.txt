@@ -6156,13 +6156,13 @@ Rule PlayerHelpIncappedLethargicProducer
 	Response PlayerHelpIncappedLethargicProducer
 }
 
-Rule PlayerHelpIncappedWitchProducer
-{
-	criteria ConceptPlayerHelp IsProducer IsIncapacitated IsWitchPresent IsWitchAggro
-	ApplyContext "CalledForHelp:1:10"
-	forceweight 30
-	Response NoResponse
-}
+//Rule PlayerHelpIncappedWitchProducer
+//{
+//	criteria ConceptPlayerHelp IsProducer IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // Remarkable Vocalize
@@ -10368,36 +10368,36 @@ Rule PlayerIncapacitatedInitialProducer
 	Response PlayerIncapacitatedInitialProducer
 }
 
-Response PlayerIncapacitatedInitialWitchProducer
-{
-	scene "scenes/Producer/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //
-	scene "scenes/Producer/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //
-	scene "scenes/Producer/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //
-	scene "scenes/Producer/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //
-}
-Rule PlayerIncapacitatedInitialWitchProducer
-{
-	criteria ConceptPlayerIncapacitated IsProducer IsWitchPresent IsWitchAggro IsCriticalPain
-	ApplyContext "TalkProducer:1:2"
-	forceweight 30
-	Response PlayerIncapacitatedInitialWitchProducer
-}
+//Response PlayerIncapacitatedInitialWitchProducer
+//{
+//	scene "scenes/Producer/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //
+//	scene "scenes/Producer/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //
+//	scene "scenes/Producer/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //
+//	scene "scenes/Producer/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //
+//}
+//Rule PlayerIncapacitatedInitialWitchProducer
+//{
+//	criteria ConceptPlayerIncapacitated IsProducer IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkProducer:1:2"
+//	forceweight 30
+//	Response PlayerIncapacitatedInitialWitchProducer
+//}
 
-Response WitchDownedProducer
-{
-	scene "scenes/Producer/GrabbedBySmoker02.vcd"  //no, No, No, NO, NOOOOOOO!!!!!!!!!
-	scene "scenes/Producer/GrabbedBySmoker02a.vcd"  //NO!
-	scene "scenes/Producer/GrabbedBySmoker02b.vcd"  //NO!
-	scene "scenes/Producer/GrabbedBySmoker02c.vcd"  //NO!
-	scene "scenes/Producer/GrabbedBySmoker02d.vcd"  //NO!
-	scene "scenes/Producer/GrabbedBySmoker02e.vcd"  //NO!
-	scene "scenes/Producer/GrabbedBySmoker04.vcd"  //no, No,  No, NO!!!!!!!!
-}
-Rule WitchDownedProducer
-{
-	criteria ConceptWitchDowned IsProducer IsWitchPresent IsWitchAggro
-	Response WitchDownedProducer
-}
+//Response WitchDownedProducer
+//{
+//	scene "scenes/Producer/GrabbedBySmoker02.vcd"  //no, No, No, NO, NOOOOOOO!!!!!!!!!
+//	scene "scenes/Producer/GrabbedBySmoker02a.vcd"  //NO!
+//	scene "scenes/Producer/GrabbedBySmoker02b.vcd"  //NO!
+//	scene "scenes/Producer/GrabbedBySmoker02c.vcd"  //NO!
+//	scene "scenes/Producer/GrabbedBySmoker02d.vcd"  //NO!
+//	scene "scenes/Producer/GrabbedBySmoker02e.vcd"  //NO!
+//	scene "scenes/Producer/GrabbedBySmoker04.vcd"  //no, No,  No, NO!!!!!!!!
+//}
+//Rule WitchDownedProducer
+//{
+//	criteria ConceptWitchDowned IsProducer IsWitchPresent IsWitchAggro
+//	Response WitchDownedProducer
+//}
 
 Response PlayerIncapacitatedInitialC1M2Producer
 {

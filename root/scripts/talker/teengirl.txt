@@ -3775,13 +3775,13 @@ Rule L4D1PlayerHelpIncappedLethargicTeenGirl
 	Response L4D1PlayerHelpIncappedLethargicTeenGirl
 }
 
-Rule L4D1PlayerHelpIncappedWitchTeenGirl
-{
-	criteria ConceptPlayerHelp IsTeenGirl IsIncapacitated IsWitchPresent IsWitchAggro
-	ApplyContext "CalledForHelp:1:10"
-	forceweight 30
-	Response NoResponse
-}
+//Rule L4D1PlayerHelpIncappedWitchTeenGirl
+//{
+//	criteria ConceptPlayerHelp IsTeenGirl IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -6410,23 +6410,23 @@ Rule L4D1PlayerIncapacitatedInitialTeenGirl
 	Response L4D1PlayerIncapacitatedInitialTeenGirl
 }
 
-Response L4D1PlayerIncapacitatedInitialWitchTeenGirl
-{
-	scene "scenes/TeenGirl/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-}
-Rule L4D1PlayerIncapacitatedInitialWitchTeenGirl
-{
-	criteria ConceptPlayerIncapacitated IsTeenGirl IsWitchPresent IsWitchAggro IsCriticalPain
-	ApplyContext "TalkTeenGirl:1:2"
-	forceweight 30
-	Response L4D1PlayerIncapacitatedInitialWitchTeenGirl
-}
+//Response L4D1PlayerIncapacitatedInitialWitchTeenGirl
+//{
+//	scene "scenes/TeenGirl/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//}
+//Rule L4D1PlayerIncapacitatedInitialWitchTeenGirl
+//{
+//	criteria ConceptPlayerIncapacitated IsTeenGirl IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkTeenGirl:1:2"
+//	forceweight 30
+//	Response L4D1PlayerIncapacitatedInitialWitchTeenGirl
+//}
 
 Response L4D1WitchDownedTeenGirl
 {

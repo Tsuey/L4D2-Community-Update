@@ -6538,13 +6538,13 @@ Rule PlayerHelpIncappedLethargicGambler
 	Response PlayerHelpIncappedLethargicGambler
 }
 
-Rule PlayerHelpIncappedWitchGambler
-{
-	criteria ConceptPlayerHelp IsGambler IsIncapacitated IsWitchPresent IsWitchAggro
-	ApplyContext "CalledForHelp:1:10"
-	forceweight 30
-	Response NoResponse
-}
+//Rule PlayerHelpIncappedWitchGambler
+//{
+//	criteria ConceptPlayerHelp IsGambler IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -11178,39 +11178,39 @@ Rule PlayerIncapacitatedInitialGambler
 	Response PlayerIncapacitatedInitialGambler
 }
 
-Response PlayerIncapacitatedInitialWitchGambler
-{
-	scene "scenes/Gambler/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
-}
-Rule PlayerIncapacitatedInitialWitchGambler
-{
-	criteria ConceptPlayerIncapacitated IsGambler IsWitchPresent IsWitchAggro IsCriticalPain
-	ApplyContext "TalkGambler:1:2"
-	forceweight 30
-	Response PlayerIncapacitatedInitialWitchGambler
-}
+//Response PlayerIncapacitatedInitialWitchGambler
+//{
+//	scene "scenes/Gambler/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//}
+//Rule PlayerIncapacitatedInitialWitchGambler
+//{
+//	criteria ConceptPlayerIncapacitated IsGambler IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkGambler:1:2"
+//	forceweight 30
+//	Response PlayerIncapacitatedInitialWitchGambler
+//}
 
-Response WitchDownedGambler
-{
-	scene "scenes/Gambler/GrabbedBySmoker01.vcd"  //no, No, No, NO, NOOOOOOO!!!!!!!!!
-	scene "scenes/Gambler/GrabbedBySmoker01a.vcd"  //No, No!
-	scene "scenes/Gambler/GrabbedBySmoker04.vcd"  //no, No,  No, NO, NO!!!!!!!!
-	scene "scenes/Gambler/GrabbedBySmoker05.vcd"  //no, No,  No, NO!!!!!!!!
-	scene "scenes/Gambler/GrabbedBySmoker05a.vcd"  //NO!
-	scene "scenes/Gambler/GrabbedBySmoker05b.vcd"  //NO, NO!
-	scene "scenes/Gambler/GrabbedBySmoker05c.vcd"  //NO!!!!!!!!
-}
-Rule WitchDownedGambler
-{
-	criteria ConceptWitchDowned IsGambler IsWitchPresent IsWitchAggro
-	Response WitchDownedGambler
-}
+//Response WitchDownedGambler
+//{
+//	scene "scenes/Gambler/GrabbedBySmoker01.vcd"  //no, No, No, NO, NOOOOOOO!!!!!!!!!
+//	scene "scenes/Gambler/GrabbedBySmoker01a.vcd"  //No, No!
+//	scene "scenes/Gambler/GrabbedBySmoker04.vcd"  //no, No,  No, NO, NO!!!!!!!!
+//	scene "scenes/Gambler/GrabbedBySmoker05.vcd"  //no, No,  No, NO!!!!!!!!
+//	scene "scenes/Gambler/GrabbedBySmoker05a.vcd"  //NO!
+//	scene "scenes/Gambler/GrabbedBySmoker05b.vcd"  //NO, NO!
+//	scene "scenes/Gambler/GrabbedBySmoker05c.vcd"  //NO!!!!!!!!
+//}
+//Rule WitchDownedGambler
+//{
+//	criteria ConceptWitchDowned IsGambler IsWitchPresent IsWitchAggro
+//	Response WitchDownedGambler
+//}
 
 Response PlayerIncapacitatedInitialC1M2Gambler
 {

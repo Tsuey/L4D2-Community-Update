@@ -6431,13 +6431,13 @@ Rule PlayerHelpIncappedLethargicCoach
 	Response PlayerHelpIncappedLethargicCoach
 }
 
-Rule PlayerHelpIncappedWitchCoach
-{
-	criteria ConceptPlayerHelp IsCoach IsIncapacitated IsWitchPresent IsWitchAggro
-	ApplyContext "CalledForHelp:1:10"
-	forceweight 30
-	Response NoResponse
-}
+//Rule PlayerHelpIncappedWitchCoach
+//{
+//	criteria ConceptPlayerHelp IsCoach IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -11177,23 +11177,23 @@ Rule PlayerIncapacitatedInitialCoach
 	Response PlayerIncapacitatedInitialCoach
 }
 
-Response PlayerIncapacitatedInitialWitchCoach
-{
-	scene "scenes/Coach/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical08.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
-}
-Rule PlayerIncapacitatedInitialWitchCoach
-{
-	criteria ConceptPlayerIncapacitated IsCoach IsWitchPresent IsWitchAggro IsCriticalPain
-	ApplyContext "TalkCoach:1:2"
-	Response PlayerIncapacitatedInitialWitchCoach
-}
+//Response PlayerIncapacitatedInitialWitchCoach
+//{
+//	scene "scenes/Coach/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical08.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//}
+//Rule PlayerIncapacitatedInitialWitchCoach
+//{
+//	criteria ConceptPlayerIncapacitated IsCoach IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkCoach:1:2"
+//	Response PlayerIncapacitatedInitialWitchCoach
+//}
 
 Response WitchDownedCoach
 {
