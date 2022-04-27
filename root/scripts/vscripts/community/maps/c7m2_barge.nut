@@ -34,24 +34,24 @@ function DoRoundFixes()
 		kill_funcinfclip( 196.497 );	// Allow SI access into end closet (the only funcinfclip in entire map)
 
 		make_ladder( "_ladder_bluecontback_cloned_bluecontfront", "6787.2104 2431.76 196", "13183 4909 -6", "0 180 0", "-1 0 0" );
-		make_ladder( "_ladder_comicboatsleftL_cloned_toolhouse", "-633 2008 254.462", "2764 -592 -344", "6 64.4 0", "0.43 0.9 0" );
-		make_ladder( "_ladder_comicboatsleftR_cloned_toolhouse", "-633 2008 254.462", "2738 -580 -344", "6 64.4 0", "0.43 0.9 0" );
+		make_ladder( "_ladder_comicboatsleftL_cloned_toolhouse", "-633 2008 254.462", "2761 -620 -335", "5 63.5 0", "0.43 0.9 -0.08" );
+		make_ladder( "_ladder_comicboatsleftR_cloned_toolhouse", "-633 2008 254.462", "2733 -606 -335", "5 63.5 0", "0.43 0.9 -0.08" ); 
 		make_ladder( "_ladder_comicboatsright_cloned_toolhouse", "-633 2008 254.462", "1602 555 -222", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_comicpylonleft_cloned_toolhouse", "-633 2008 254.462", "1190 -2732 -8", "-2 -19 -5", "0.93 -0.35 0" );
 		make_ladder( "_ladder_comicpylonright_cloned_toolhouse", "-633 2008 254.462", "783 -2540 26", "-2 -19 -5", "0.93 -0.35 0" );
-		make_ladder( "_ladder_comicwitchboat_cloned_toolhouse", "-633 2008 254.462", "971 3616 -216", "-6 155.8 1", "-0.91 0.4 0" );
-		make_ladder( "_ladder_endbarricadeleft_cloned_vanishbarricade", "-8918.5 1728 198.5", "-1940 4860 -3", "0 30 0", "0.86 0.5 0" );
-		make_ladder( "_ladder_endbarricaderight_cloned_nomanssemi", "-6769.9307 249.9129 83.622", "-2373 430 103", "0 -12 0", "-0.87 -0.5 0" );
+		make_ladder( "_ladder_comicwitchboat_cloned_toolhouse", "-633 2008 254.462", "964 3616 -220", "-6 156 1", "-0.90 0.4 0.1" );
+		make_ladder( "_ladder_endbarricadeleft_cloned_vanishbarricade", "-8918.5 1728 198.5", "-1939 4861 -3", "0 30 0", "0.86 0.5 0" );
+		make_ladder( "_ladder_endbarricaderight_cloned_nomanssemi", "-6769.9307 249.9129 83.622", "-2360 485 103", "0 -11.5 0", "-0.86 -0.5 0" );
 		make_ladder( "_ladder_overpassgapleft_cloned_fourcontainers", "2024 2585 312", "1089 7 -48" );
 		make_ladder( "_ladder_overpassgapright_cloned_fourcontainers", "2024 2585 312", "1410 7 -48" );
-		make_ladder( "_ladder_permstuckend_cloned_toolhouse", "-633 2008 254.462", "-8964 3427 -54", "0 105 0", "-0.24 0.96 0" );
+		make_ladder( "_ladder_permstuckend_cloned_toolhouse", "-633 2008 254.462", "-8957 3411 -54", "0 104.5 0", "-0.25 0.96 0" );
 		make_ladder( "_ladder_pondareafence_cloned_startflatnosefence", "9572 914 204", "-741 841 0" );
 		make_ladder( "_ladder_shedwindow_cloned_barrelshort", "3576 2015 165.579", "5985 4958 -100", "0 -90 0", "-1 0 0" );
 		make_ladder( "_ladder_silofenceclone1_cloned_silofencesource", "6816 321 248.1575", "-1250 127 0" );
 		make_ladder( "_ladder_spectroleumtanker_cloned_spectroleumfence", "6269 632 204.057", "-676 -1582 -6", "0 20.17 0", "-0.94 -0.33 0" );
 		make_ladder( "_ladder_startroombrick_cloned_startareasemi", "10355 1488 210.5", "-94 911 13" );
 		make_ladder( "_ladder_tankpolesfenceleft_cloned_tankpolesfenceright", "1617 544 332", "0 -515 0" );
-		make_ladder( "_ladder_tankpoleswallL_cloned_tankpolesfenceright", "1617 544 332", "1532 960 -152", "0 -102.11 0", "-0.2 -0.97 0" );
-		make_ladder( "_ladder_tankpoleswallR_cloned_tankpolesfenceright", "1617 544 332", "1560 954 -152", "0 -102.11 0", "-0.2 -0.97 0" );
+		make_ladder( "_ladder_tankpoleswallL_cloned_tankpolesfenceright", "1617 544 332", "1532 960 -152", "0 -102 0", "-0.2 -0.97 0" );
+		make_ladder( "_ladder_tankpoleswallR_cloned_tankpolesfenceright", "1617 544 332", "1560 954 -152", "0 -102 0", "-0.2 -0.97 0" );
 	}
 }
