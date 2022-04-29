@@ -24,6 +24,7 @@ DirectorOptions <-
 	A_CustomFinaleValue4 	= StageDelay
 	A_CustomFinale5			= ONSLAUGHT
 	A_CustomFinaleValue5 	= "c14m2_gauntlet"
+	A_CustomFinaleMusic5	= "Event.FinaleWave4"
 	A_CustomFinale6 		= DELAY
 	A_CustomFinaleValue6 	= StageDelay
 	A_CustomFinale7			= TANK
@@ -32,6 +33,10 @@ DirectorOptions <-
 	A_CustomFinale8 		= DELAY
 	A_CustomFinaleValue8 	= PreEscapeDelay
 	//-----------------------------------------------------
+
+	MusicDynamicMobSpawnSize = 8
+	MusicDynamicMobStopSize = 2
+	MusicDynamicMobScanStopSize = 1
 
 	ProhibitBosses = true
 	HordeEscapeCommonLimit = 20
@@ -63,12 +68,14 @@ else
 {
 	if ( difficulty == 2 || difficulty == 3 )
 	{
+		DirectorOptions.rawdelete("A_CustomFinaleMusic5");
 		DirectorOptions.rawdelete("A_CustomFinaleMusic7");
 		DirectorOptions.A_CustomFinale_StageCount = 12;
 		DirectorOptions.A_CustomFinaleValue7 = 1;
 		DirectorOptions.A_CustomFinaleValue8 = StageDelay;
 		DirectorOptions.A_CustomFinale9 <- PANIC;
 		DirectorOptions.A_CustomFinaleValue9 <- 2;
+		DirectorOptions.A_CustomFinaleMusic9 <- "Event.FinaleWave4"
 		DirectorOptions.A_CustomFinale10 <- DELAY;
 		DirectorOptions.A_CustomFinaleValue10 <- StageDelay;
 		DirectorOptions.A_CustomFinale11 <- TANK;
@@ -192,6 +199,42 @@ switch( difficulty )
 	}
 	default:
 		break;
+}
+
+// fewer cans in single player since bots don't help much
+if ( Director.IsSinglePlayerGame() )
+{
+	NumCansNeeded <- 4
+
+	switch( difficulty )
+	{
+		case 0:
+		{
+			NumCansNeeded = 4;
+			EntFire( "relay_outro_easy", "Enable" );
+			break;
+		}
+		case 1:
+		{
+			NumCansNeeded = 6;
+			EntFire( "relay_outro_normal", "Enable" );
+			break;
+		}
+		case 2:
+		{
+			NumCansNeeded = 8;
+			EntFire( "relay_outro_advanced", "Enable" );
+			break;
+		}
+		case 3:
+		{
+			NumCansNeeded = 10;
+			EntFire( "relay_outro_expert", "Enable" );
+			break;
+		}
+		default:
+			break;
+	}
 }
 
 EntFire( "progress_display", "SetTotalItems", NumCansNeeded );
