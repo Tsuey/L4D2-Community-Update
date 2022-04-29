@@ -25,6 +25,7 @@ DirectorOptions <-
 	 
 	 A_CustomFinale5 = PANIC
 	 A_CustomFinaleValue5 = 2
+	A_CustomFinaleMusic5 	= "Event.FinaleWave4"
 	 
 	 A_CustomFinale6 = DELAY
 	 A_CustomFinaleValue6 = 15
