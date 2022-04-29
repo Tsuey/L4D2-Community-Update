@@ -26,7 +26,7 @@ DirectorOptions <-
 	weaponsToConvert =
 	{
 		weapon_shotgun_spas				= "weapon_autoshotgun_spawn"
-		weapon_defibrillator			= "weapon_first_aid_kit_spawn"
+		weapon_defibrillator			= "weapon_pain_pills_spawn"
 		weapon_ammo_pack				= "weapon_first_aid_kit_spawn"
 		weapon_sniper_awp				= "weapon_hunting_rifle_spawn"
 		weapon_sniper_military			= "weapon_hunting_rifle_spawn"
