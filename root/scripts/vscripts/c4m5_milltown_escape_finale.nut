@@ -55,6 +55,7 @@ DirectorOptions <-
 	 
 	 A_CustomFinale5 = PANIC
 	 A_CustomFinaleValue5 = 1
+	 A_CustomFinaleMusic5 	= "Event.FinaleWave4"
 	 
 	 A_CustomFinale6 = DELAY
 	 A_CustomFinaleValue6 = 10
@@ -70,9 +71,17 @@ DirectorOptions <-
 	CommonLimit = 20
 	SpecialRespawnInterval = 80
 
+	MusicDynamicMobSpawnSize = 8
+	MusicDynamicMobStopSize = 2
+	MusicDynamicMobScanStopSize = 1
 
 }
 
+if ( Director.GetGameModeBase() == "versus" )
+{
+	DirectorOptions.A_CustomFinaleValue1 = 2
+	DirectorOptions.A_CustomFinaleValue5 = 2
+}
 
 if ( "DirectorOptions" in LocalScript && "ProhibitBosses" in LocalScript.DirectorOptions )
 {
