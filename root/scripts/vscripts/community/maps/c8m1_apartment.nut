@@ -98,7 +98,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_fencefrontL_cloned_fencebackL", "841 2039.5 76", "2294 4095 0", "0 180 0", "0 1 0" );
 		make_ladder( "_ladder_fencefrontM_cloned_fencebackM", "1173 2048.5 68", "2346 4105 0", "0 180 0", "0 1 0" );
 		make_ladder( "_ladder_fencefrontR_cloned_fencebackR", "1453 2044.5 75.717", "2294 4095 0", "0 180 0", "0 1 0" );
-		make_ladder( "_ladder_flatnose_cloned_chaintilt", "3268.5 4088 83.9941", "-1708 205 -20", "0 -7 0", "0.96 -0.26 0" );
+		make_ladder( "_ladder_flatnose_cloned_chaintilt", "3268.5 4088 83.9941", "-1766 284 -21", "0 -8 0", "0.96 -0.26 0" );
 		make_ladder( "_ladder_ominouswin_cloned_helloworld", "2066 1783.5 328", "-242 3464 -112" );
 		make_ladder( "_ladder_parkourstartB_cloned_tallpipecopcar", "1531 2570 255.99", "1029.5 -1500 144" );
 		make_ladder( "_ladder_parkourstartT_cloned_thinwhiteledge", "3310 4020.5 151.9882", "5852 5120 523", "0 180 0", "0 -1 0" );
