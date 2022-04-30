@@ -2,7 +2,7 @@
 
 Current up to and including: `Commits on Apr 29, 2022`
 
-#### Links:
+### Links:
 
 The [start of all commit history](https://github.com/Tsuey/L4D2-Community-Update/commits/master?after=b418718db8a95de3b0260c13a9244de58c5097d8+279&branch=master) on Sep 24, 2020.
 
@@ -10,13 +10,13 @@ Everything up to and including [this Oct 29, 2020 Versus update commit](https://
 
 Commits stop and start again with [this Jul 1, 2021 commit that split map scripts](https://github.com/Tsuey/L4D2-Community-Update/commit/3de182728f8de818466980d11888032f7672c48f).
 
-#### Template:
+### Template:
 
 	&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
 
 	Mark all `"models"` and wildcards `[folder/file*]` with in-line code braces. Escape character not needed if code braced.
 
-#### Rules:
+### Rules:
 
 Commits are always preferred over Pull Requests since the commits are always guaranteed and give the quickest glimpse of changed lines. We could optionally link to exact lines. Uncommonly, change notes are only mentioned in the Pull Request -- but that's okay because they're all in this changelog.
 
