@@ -2,7 +2,7 @@
 
 This changelog comprehensively summarizes all differences from the live game to the current Github state.
 
-![alt text](https://github.com/Tsuey/L4D2-Community-Update/tree/master/changelogs/Guide.png?raw=true)
+![Guide](https://raw.githubusercontent.com/Tsuey/L4D2-Community-Update/master/changelogs/Guide.png)
 
 --------------------------------
 --------------------------------
