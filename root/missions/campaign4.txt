@@ -14,9 +14,6 @@
 
 	"meleeweapons"	"katana;crowbar;frying_pan;fireaxe;shovel;baseball_bat;knife;pitchfork"
 
-	"allow_cola"	"0"
-	"no_female_boomers"	"1"		// Can't have female Boomers because there's no audio support
-
 	"allow_diesel"	"1"
 
 	// Loading poster data
