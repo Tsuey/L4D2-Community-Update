@@ -111,8 +111,8 @@ function DoRoundFixes()
 		make_ladder( "_ladder_firebarrelroofB_cloned_vandropelecbox", "4462 4992 104", "-1329 609 -8" );
 		make_ladder( "_ladder_firebarrelroofT_cloned_vandropelecbox", "4462 4992 104", "-1063 609 123" );
 		make_ladder( "_ladder_firefence_cloned_mobilehome", "4510 3224 76", "-161 3462 -16" );
-		make_ladder( "_ladder_holefenceback_cloned_firstcrypt", "7022 -4849 197.016", "10353 7086 -124", "0 -105.5 0", "0.96 -0.26 0" ); //10303 7146 -124
-		make_ladder( "_ladder_holefencefront_cloned_firstcrypt", "7022 -4849 197.016", "-2650 -3919 -124", "0 75.5 0", "-0.96 0.26 0" ); //-2650 -3919 -124 - +47 -53 0
+		make_ladder( "_ladder_holefenceback_cloned_firstcrypt", "7022 -4849 197.016", "10353 7086 -124", "0 -105.5 0", "0.96 -0.26 0" );
+		make_ladder( "_ladder_holefencefront_cloned_firstcrypt", "7022 -4849 197.016", "-2650 -3919 -124", "0 75.5 0", "-0.96 0.26 0" );
 		make_ladder( "_ladder_manholechaintran_cloned_manholeblue", "4374 1576 76.1509", "-5 -1940 -9" );
 		make_ladder( "_ladder_onewayshedback_cloned_firstcrypt", "7022 -4849 197.016", "-2 825 -10" );
 		make_ladder( "_ladder_onewaybackfence_cloned_middlecrypt", "7604.02 -5653.63 184", "-1657.1 1144 -16" );
