@@ -198,7 +198,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 4:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 #### Map 5:
 
@@ -230,7 +230,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 5:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 ### The Passing
 
@@ -254,7 +254,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 1:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 #### Map 2:
 
@@ -262,7 +262,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 3:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 ### No Mercy
 
@@ -291,7 +291,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 4:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 #### Map 5:
 
@@ -334,7 +334,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 5:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 ### Dead Air
 
@@ -358,7 +358,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 5:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 ### Blood Harvest
 
@@ -388,7 +388,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 5:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 ### Cold Stream
 
@@ -411,7 +411,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 4:
 
-&emsp;[+](URL_HERE) NOTE_ENDING_WITH_PERIOD<br/>
+Nothing.
 
 ### The Last Stand
 
