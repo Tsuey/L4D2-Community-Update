@@ -11,6 +11,14 @@ Population
 	
 
 	//------------------------------------------------------------------------
+	deepswamp_parachutist
+	{
+		common_female_tshirt_skirt_swamp	25
+		common_male_tankTop_overalls_swamp	40
+		common_male_tshirt_cargos_swamp		25
+		common_male_mud				10
+	}
+
 	riverbank
 	{
 		common_female_tshirt_skirt		45
