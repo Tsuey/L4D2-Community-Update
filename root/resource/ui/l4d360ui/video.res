@@ -57,7 +57,7 @@
 		"navUp"					"Btn3rdPartyCredits"
 		"navDown"				"DrpAspectRatio"
 		"conCommand"			"mat_monitorgamma"
-		"inverseFill"			"0"
+		"inverseFill"			"1"
 
 		//button and label
 		"BtnDropButton"
