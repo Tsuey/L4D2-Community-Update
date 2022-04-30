@@ -198,7 +198,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 4:
 
-Nothing.
+&emsp;Nothing.
 
 #### Map 5:
 
@@ -230,7 +230,7 @@ Nothing.
 
 #### Map 5:
 
-Nothing.
+&emsp;Nothing.
 
 ### The Passing
 
@@ -254,7 +254,7 @@ Nothing.
 
 #### Map 1:
 
-Nothing.
+&emsp;Nothing.
 
 #### Map 2:
 
@@ -262,7 +262,7 @@ Nothing.
 
 #### Map 3:
 
-Nothing.
+&emsp;Nothing.
 
 ### No Mercy
 
@@ -291,7 +291,7 @@ Nothing.
 
 #### Map 4:
 
-Nothing.
+&emsp;Nothing.
 
 #### Map 5:
 
@@ -334,7 +334,7 @@ Nothing.
 
 #### Map 5:
 
-Nothing.
+&emsp;Nothing.
 
 ### Dead Air
 
@@ -358,7 +358,7 @@ Nothing.
 
 #### Map 5:
 
-Nothing.
+&emsp;Nothing.
 
 ### Blood Harvest
 
@@ -388,7 +388,7 @@ Nothing.
 
 #### Map 5:
 
-Nothing.
+&emsp;Nothing.
 
 ### Cold Stream
 
@@ -411,7 +411,7 @@ Nothing.
 
 #### Map 4:
 
-Nothing.
+&emsp;Nothing.
 
 ### The Last Stand
 
