@@ -76,7 +76,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/3474db1fa0544ab2eca0f3537346c43a59ff863d)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/6202c444e4fbe805803d40059b62b70af2afcc05) Various nav fixes for -9999 flow areas.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/a36af7e04c4151905b7a3d62db9ed1ddcf2ebf2e)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Lots of bad connections fixed for better bot navigation.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/59d23d1b4be5daf487fbcfcaad1da4c559c4d541) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/c16ecdc60ad8ba196ce6ebbd233cb17697165e23) Survivor bots can save you in more places.<br/>
-&emsp;[+](URL_HERE) File size optimization and merging.<br/>
+&emsp;[+](URL_HERE) File size optimization through merging, deletion and ID compression.<br/>
 &emsp;[+](URL_HERE) Lump edits to account for changed weapon density values.<br/>
 
 # Map Fixes
@@ -442,6 +442,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 ### Death's Door (community5.nut):
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Enabled B&W state when under 25% health.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Fixed heartbeat sound when taking over bot.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e22276cb4251e750a307d001067110e6130b4feb) Fixed Fallen Survivors being able to drop medkits.<br/>
 
 ### Hard Eight (mutation4.nut):
@@ -485,15 +486,12 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Fixed RemarkC13M1DownHereMechanic rule having the wrong name (thanks Haruko).<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Swapped Louis' ArriveChopper line placements.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Deleted C6M3_ElevatorCancel rules for the L4D2 survivors (they had no real functionality).<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added IsNotAlone to the C1M1Elevator lines for Coach, Gambler, Mechanic and Producer.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added NoOneInsafeSpot to the "outside" vehicle nags.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added NoOneInSafeSpot to the "outside" vehicle nags.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Split the vehicle nags for C6M3 for Coach, Gambler and Producer.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added NotAloneOutsideSafeSpot to C5M5RunToHeliRareCoach.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added the FinalVehicleArrived concept for Dark Carnival and Swamp Fever.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/c8fe9e183af665e951c6510fffe8072ac4384abd) Added missing IntroEnd concept for Coach, Gambler, Producer and TeenGirl.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e15a2c765b1b805ce876cc5cb50b968c024682b3) Updated criteria definitions for IsIncappedStarted and IsIncappedBleeding.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e15a2c765b1b805ce876cc5cb50b968c024682b3) Removed IsNotAlone from C1M1Elevator remarks.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e15a2c765b1b805ce876cc5cb50b968c024682b3) Added missing IsNotAlone to the c1m1_enter_elevator concept for Gambler, Mechanic and Producer.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/e15a2c765b1b805ce876cc5cb50b968c024682b3) Added IsNotAlone to the c1m1_enter_elevator concept for Coach, Gambler, Mechanic and Producer.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5b3efa8647208078fe890978d955e841a11b4d3d) Rules for picking up donated items having the wrong donor designated (thanks Haruko).<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb33704106a77ae74336435f24deea8a3d34f5af) Donor rules for specific donors (thanks Haruko).<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ee96f6e5f7119bb906485f1b4f60a195cbdab449) Fixed Donor rule in case of biker (thanks Rise).<br/>

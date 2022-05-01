@@ -25,8 +25,14 @@ For the few commits that were reverted, only the last-most commit that made the 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) `[Sep 18, 2021]` Medkits are no longer converted into pills.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/a310f379c5003c0efc9337443016d2c651804695) `[Sep 19, 2021]` Reverted change to allow pills to replace medkits again.<br/>
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) `[Sep 18, 2021]` Removed unreachable pill spawn.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) `[Sep 18, 2021]` Removed unreachable pill spawn from c12m4.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5710b35a74a7b5099de18a2badb9af7688eced9) `[Oct 3, 2021]` Restored previously removed pain pill spawn.<br/>
+
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) `[Sep 26, 2021]` Many tweaks to rules referring to leaving the starting area?</br>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/c8fe9e183af665e951c6510fffe8072ac4384abd) `[Sep 27, 2021]` Added missing IntroEnd concept for Coach, Gambler, Producer and TeenGirl.</br>
+
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) `[Sep 26, 2021]` Added IsNotAlone to the C1M1Elevator lines for Coach, Gambler, Mechanic and Producer.</br>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e15a2c765b1b805ce876cc5cb50b968c024682b3) `[Sep 30, 2021]` Removed IsNotAlone from C1M1Elevator remarks.</br>
 
 All commits related to Valve's required source files were ignored as all were moved to private repo.
 
