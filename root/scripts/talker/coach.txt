@@ -3352,6 +3352,29 @@ Rule EllisStoryReac01Coach
 	Response EllisStoryReac01Coach
 }
 
+Rule EllisStoryInterruptC13M2Coach
+{
+	criteria ConceptEllisInterrupt IsCoach IsMapc13m2_southpinestream _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericCoach
+}
+
+Rule EllisStoryInterruptC13M3Coach
+{
+	criteria ConceptEllisInterrupt IsCoach IsMapc13m3_memorialbridge _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericCoach
+}
+
+Rule EllisStoryInterruptC13M4Coach
+{
+	criteria ConceptEllisInterrupt IsCoach IsMapc13m4_cutthroatcreek _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericCoach
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // C5M5
@@ -4941,6 +4964,7 @@ Rule SurvivorSpottedWorldCloseCoach
 Response SurvivorSpottedArmoredCoach
 {
 	norepeat
+	scene "scenes/Coach/SeeArmored01.vcd"  //That zombie's got armor. I want armor!
 	scene "scenes/Coach/SeeArmored03.vcd"  //Shoot that zombie in the back!
 	scene "scenes/Coach/SeeArmored04.vcd"  //Shoot that zombie in the back!
 }
@@ -4954,14 +4978,14 @@ Rule SurvivorSpottedArmoredCoach
 
 Response SurvivorSpottedArmoredC5M1Coach
 {
-	scene "scenes/Coach/SeeArmored01.vcd"  //That zombie's got armor. I want armor!
+	norepeat
 	scene "scenes/Coach/SeeArmored02.vcd"  //Well I'll be damned, that zombie's wearin' armor!
 	scene "scenes/Coach/SeeArmored05.vcd"  //Those zombies are goddamn bullet proof!
 }
 Rule SurvivorSpottedArmoredC5M1Coach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront SawFirstArmored IsNotSpeakingWeight0
-	ApplyContext "SaidArmoredWarn:1:0,SawArmored:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront IsNotSpeakingWeight0
+	ApplyContext "SaidArmoredWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Coach
 }
@@ -5060,8 +5084,8 @@ Rule SurvivorSpottedCedaCoach
 
 Rule SurvivorSpottedCedaC1M1Coach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaCoach
 }
@@ -5144,6 +5168,7 @@ Rule SurvivorSpottedChargerAlsoC1M2Coach
 
 Response SurvivorSpottedClownCoach
 {
+	norepeat
 	scene "scenes/Coach/SeeClowns05.vcd"  //Shoot the clown!
 	scene "scenes/Coach/SeeClowns06.vcd"  //That clown's attracting zombies!
 	scene "scenes/Coach/SeeClowns07.vcd"  //Shoot the clown!
@@ -5151,7 +5176,7 @@ Response SurvivorSpottedClownCoach
 Rule SurvivorSpottedClownCoach
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidClownWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidClownWarn:1:20"
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedClownCoach
 }
@@ -5375,6 +5400,8 @@ Rule SurvivorSpottedJockeyAlsoC1M2Coach
 
 Response SurvivorSpottedMudmenCoach
 {
+	norepeat
+	scene "scenes/Coach/SeeMudmen01.vcd"  //Mudmen!
 	scene "scenes/Coach/SeeMudmen02.vcd"  //Shoot the mudmen!
 }
 Rule SurvivorSpottedMudmenCoach
@@ -5387,7 +5414,8 @@ Rule SurvivorSpottedMudmenCoach
 
 Response SurvivorSpottedMudmenC3M2Coach
 {
-	scene "scenes/Coach/SeeMudmen01.vcd"  //Mudmen!
+	scene "scenes/Coach/WorldC3M1B11.vcd"  //I ain't a prejudiced man, but living in the swamp? That's sorta crazy.
+	scene "scenes/Coach/WorldC3M1B13.vcd"  //I ain't a prejudiced man, but living in the swamp? That's sorta crazy.
 }
 Rule SurvivorSpottedMudmenC3M2Coach
 {

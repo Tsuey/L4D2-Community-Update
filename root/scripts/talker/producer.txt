@@ -2682,6 +2682,30 @@ Rule EllisStoryReac01Producer
 	Response EllisStoryReac01Producer
 }
 
+Rule EllisStoryInterruptC13M2Producer
+{
+	criteria ConceptEllisInterrupt IsProducer IsMapc13m2_southpinestream _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
+}
+
+Rule EllisStoryInterruptC13M3Producer
+{
+	criteria ConceptEllisInterrupt IsProducer IsMapc13m3_memorialbridge _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
+}
+
+Rule EllisStoryInterruptC13M4Producer
+{
+	criteria ConceptEllisInterrupt IsProducer IsMapc13m4_cutthroatcreek _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // C5M5
 //--------------------------------------------------------------------------------------------------------------
@@ -4729,12 +4753,13 @@ Rule SurvivorSpottedWorldCloseProducer
 //--------------------------------------------------------------------------------------------------------------
 Response SurvivorSpottedArmoredC5M1Producer
 {
+	norepeat
 	scene "scenes/Producer/SeeArmored01.vcd"  //Are these things bulletproof?
 }
 Rule SurvivorSpottedArmoredC5M1Producer
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn IsNotSpeakingWeight0
-	ApplyContext "SaidArmoredWarn:1:0"
+	ApplyContext "SaidArmoredWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Producer
 }
@@ -4835,7 +4860,7 @@ Rule SurvivorSpottedBoomerAlsoC1M2Producer
 Response SurvivorSpottedCedaProducer
 {
 	norepeat
-	scene "scenes/Producer/SeeHazmat02.vcd"  //Fireproof zombies. Hooray!
+	scene "scenes/Producer/SeeHazmat02.vcd" //Fireproof zombies. Hooray!
 	scene "scenes/Producer/SeeHazmat03.vcd" //Shit. I think these guys are fireproof.
 }
 Rule SurvivorSpottedCedaProducer
@@ -4848,12 +4873,13 @@ Rule SurvivorSpottedCedaProducer
 
 Response SurvivorSpottedCedaC1M1Producer
 {
+	norepeat
 	scene "scenes/Producer/SeeHazmat01.vcd"  //Great. Infected in hazmat suits.
 }
 Rule SurvivorSpottedCedaC1M1Producer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Producer
 }
@@ -4937,6 +4963,7 @@ Rule SurvivorSpottedChargerAlsoC1M2Producer
 
 Response SurvivorSpottedClownProducer
 {
+	norepeat
 	scene "scenes/Producer/SeeClowns03.vcd"  //Somebody shut that clown up!
 	scene "scenes/Producer/SeeClowns04.vcd"  //Somebody shut up that clown!
 	scene "scenes/Producer/SeeClowns05.vcd"  //Kill the clown!
@@ -4945,7 +4972,7 @@ Response SurvivorSpottedClownProducer
 Rule SurvivorSpottedClownProducer
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidClownWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidClownWarn:1:20"
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedClownProducer
 }
@@ -5080,6 +5107,7 @@ Response SurvivorSpottedJimmyProducer
 {
 	scene "scenes/Producer/WorldC1M3B17.vcd"  //Take that, Jimmy Gibbs!
 	scene "scenes/Producer/WorldC1M3B18.vcd"  //Eat lead, Jimmy Gibbs.
+	scene "scenes/Producer/WorldC1M4B12.vcd"  //Dibs on Gibbs!
 }
 Rule SurvivorSpottedJimmyProducer
 {
