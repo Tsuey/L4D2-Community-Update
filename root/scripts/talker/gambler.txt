@@ -5046,8 +5046,8 @@ Response SurvivorSpottedArmoredC5M1Gambler
 }
 Rule SurvivorSpottedArmoredC5M1Gambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn IsNotSpeakingWeight0
-	ApplyContext "SaidArmoredWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn SawFirstArmored IsNotSpeakingWeight0
+	ApplyContext "SaidArmoredWarn:1:20,SawArmored:++1"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Gambler
 }
@@ -5271,7 +5271,7 @@ Response SurvivorSpottedClownC2M2Gambler
 Rule SurvivorSpottedClownC2M2Gambler
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated Ismap_c2m2 IsNotSaidClownWarn SawFirstClown IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:20"
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedClownC2M2Gambler
 }
@@ -5286,7 +5286,7 @@ Response SurvivorSpottedClownGambler
 Rule SurvivorSpottedClownGambler
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidClownWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
+	ApplyContext "SaidClownWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedClownGambler
 }

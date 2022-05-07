@@ -5706,8 +5706,8 @@ Response SurvivorSpottedArmoredC5M1Mechanic
 }
 Rule SurvivorSpottedArmoredC5M1Mechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront IsNotSpeakingWeight0
-	ApplyContext "SaidArmoredWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront SawFirstArmored IsNotSpeakingWeight0
+	ApplyContext "SaidArmoredWarn:1:20,SawArmored:++1"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Mechanic
 }

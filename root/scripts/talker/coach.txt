@@ -4961,7 +4961,7 @@ Response SurvivorSpottedArmoredC5M1Coach
 Rule SurvivorSpottedArmoredC5M1Coach
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidArmoredWarn ismap_c5m1_waterfront SawFirstArmored IsNotSpeakingWeight0
-	ApplyContext "SaidArmoredWarn:1:0,SawArmored:++1"
+	ApplyContext "SaidArmoredWarn:1:20,SawArmored:++1"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Coach
 }
