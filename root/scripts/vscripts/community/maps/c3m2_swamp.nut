@@ -12,7 +12,7 @@ function DoRoundFixes()
 	// This map is clipped like a tunnel. No known gamebreaking exploits.
 
 	make_clip( "_boat_smoother", "Everyone", 1, "-16 -24 0", "16 24 30", "-7863 5391 -8", "-10 -30 0" );
-	make_clip( "_permastuck_behindrocks", "Everyone", 1, "-14 -40 -24", "14 40 24", "-5326 5524 16" );
+	make_clip( "_permstuck_behindrocks", "Everyone", 1, "-14 -40 -24", "14 40 24", "-5326 5524 16" );
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
