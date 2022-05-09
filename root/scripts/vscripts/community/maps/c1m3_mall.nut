@@ -15,8 +15,8 @@ function DoRoundFixes()
 	make_clip( "_cliprework_skylightc", "Survivors", 1, "-194 -544 -1", "190 544 32", "2274 -672 793" );
 	make_clip( "_cliprework_skylightd", "Survivors", 1, "-1017 -167 0", "1018 149 32", "1465 -3418 794", "0 45 0" );
 	make_clip( "_permstuck_colddrinks", "Everyone", 1, "-1 -1 -1", "1 1 1", "736 -548 363" );
-	make_clip( "_commentary_shortcut_storeceiling", "Everyone", 1, "0 0 0", "196 196 32", "1159.05 -2466.62 442" );
-	make_clip( "_commentary_shortcut_storevent", "Everyone", 1, "0 0 0", "48 48 64", "1680 -2526.44 384" );
+	make_clip( "_commentary_shortcut_storeceiling", "Survivors", 1, "0 0 0", "196 196 32", "1159.05 -2466.62 442" );
+	make_clip( "_commentary_shortcut_storevent", "Survivors", 1, "0 0 0", "48 48 64", "1680 -2526.44 384" );
 	make_trigduck( "_duckqol_shopliftscanners", "-2 -88 0", "2 64 77", "5247 -2685 280" );
 
 	con_comment( "FIX:\tMoved an exposed stairwell hurt trigger down inside a vending machine." );

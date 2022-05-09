@@ -12,6 +12,7 @@ function DoRoundFixes()
 	// This map is clipped like a tunnel. No known gamebreaking exploits.
 
 	make_clip( "_boat_smoother", "Everyone", 1, "-16 -24 0", "16 24 30", "-7863 5391 -8", "-10 -30 0" );
+	make_clip( "_permstuck_behindrocks", "Everyone", 1, "-14 -40 -24", "14 40 24", "-5326 5524 16" );
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
@@ -114,10 +115,10 @@ function DoRoundFixes()
 		make_ladder( "_ladder_brokenhomeright_cloned_airplanewingmini", "-1690.5 2951.13 38.3488", "-2030.5 6344 98", "0 93.74 0", "1 0 0" );
 		make_ladder( "_ladder_corrugatedhome_cloned_airplaneleft", "-2060 3278 96", "3919.22 26.78 66" );
 		make_ladder( "_ladder_crashedplanetail_cloned_crashedplaneright", "-2060.0002 2942.0005 102", "1558 994 -28", "0 33.5 0", "-0.83 -0.55 0" );
-		make_ladder( "_ladder_endbarricadeleft1_cloned_airplaneleft", "-2060 3278 96", "4940 -1169 88", "0 -100 0", "0.17 0.98 0" );
-		make_ladder( "_ladder_endbarricadeleft2_cloned_airplaneleft", "-2060 3278 96", "4962 -1169 88", "0 -100 0", "0.17 0.98 0" );
-		make_ladder( "_ladder_endbarricaderight1_cloned_airplaneleft", "-2060 3278 96", "4775 -1169 88", "0 -100 0", "0.17 0.98 0" );
-		make_ladder( "_ladder_endbarricaderight2_cloned_airplaneleft", "-2060 3278 96", "4753 -1169 88", "0 -100 0", "0.17 0.98 0" );
+		make_ladder( "_ladder_endbarricadeleft1_cloned_airplaneleft", "-2060 3278 96", "4933 -1163 88", "0 -100 0", "0.17 0.98 0" );
+		make_ladder( "_ladder_endbarricadeleft2_cloned_airplaneleft", "-2060 3278 96", "4955 -1167 88", "0 -100 0", "0.17 0.98 0" );
+		make_ladder( "_ladder_endbarricaderight1_cloned_airplaneleft", "-2060 3278 96", "4779 -1165 88", "0 -100 0", "0.17 0.98 0" );
+		make_ladder( "_ladder_endbarricaderight2_cloned_airplaneleft", "-2060 3278 96", "4757 -1161 88", "0 -100 0", "0.17 0.98 0" );
 		make_ladder( "_ladder_endfence_cloned_airplaneleft", "-2060 3278 96", "9772 -3705 32" );
 		make_ladder( "_ladder_finalhome_cloned_airplaneleft", "-2060 3278 96", "4611 4947 -37", "0 180 0", "1 0 0" );
 		make_prop( "dynamic",		"_propladder_endcratea",	"models/props_crates/static_crate_40.mdl",	"8045 79 118.63",		"0 221.5 0",		"shadow_no" );

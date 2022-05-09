@@ -66,7 +66,11 @@ function DoRoundFixes()
 		make_clip( "_ladder_longtiltedlog_cliptop", "SI Players", 1, "-19 -16 0", "19 10 17", "-4103 -835 268", "0 64 -60" );
 		make_clip( "_ladder_plankhomeroof_clipleft", "Everyone", 1, "-8 5 -124", "13 6 105", "59 -4103 109", "0 45 0" );
 		make_clip( "_ladder_plankhomeroof_clipright", "Everyone", 1, "-8 5 -1", "13 6 105", "33 -4099 109", "0 -45 0" );
-		make_clip( "_ladder_startsafehouse_solidify", "SI Players", 1, "-87 -50 0", "78 35 16", "-5948 1913 244" );
+		make_clip( "_ladder_startsafehouse_solidify_a", "SI Players", 1, "-86 -5 -3", "86 5 3", "-5950 1872 244", "0 8 0" );
+		make_clip( "_ladder_startsafehouse_solidify_b", "SI Players", 1, "-3 -54 -3", "3 54 3", "-5983 1922 257", "0 0 6" );
+		make_clip( "_ladder_startsafehouse_solidify_c", "SI Players", 1, "-2 -54 -3", "2 54 3", "-5953 1922 257", "0 2 6" );
+		make_clip( "_ladder_startsafehouse_solidify_d", "SI Players", 1, "-2 -54 -3", "2 54 3", "-5926 1922 257", "0 -2 6" );
+		make_clip( "_ladder_startsafehouse_solidify_e", "SI Players", 1, "-2 -54 -3", "2 54 3", "-5897 1922 257", "0 -2 6" );
 		make_ladder( "_ladder_afterplankfront_cloned_afterplankback", "795 -4272 104", "1185 -8350 -10", "0 -180 0", "-1 0 0" );
 		make_ladder( "_ladder_boatpanel_cloned_metalfence", "-4411 1178 136", "64 -1898 -85" );
 		make_ladder( "_ladder_bridgehouseB_cloned_logfencefirst", "-4256 132 69", "-6200 -577.1 -58", "0 -180 0", "0 -1 0" );
@@ -83,12 +87,12 @@ function DoRoundFixes()
 		make_ladder( "_ladder_outhouseroof_cloned_metalfence", "-4411 1178 136", "-1263 -4067 42", "0 -0.14 0", "0 1 0" );
 		make_ladder( "_ladder_plankhomeroof_cloned_afterplankback", "795 -4272 104", "-4224 -4882 6", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_safehouselow_cloned_highgenerator", "-4504 -2644 41", "9230 -881 238" );
-		make_ladder( "_ladder_shortcuttrailerfront_cloned_shortcuttrailerback", "-3949 -2333 81.0389", "-7827 -4970 -8", "0 -174.6 0", "-1 0 0" );
+		make_ladder( "_ladder_shortcuttrailerfront_cloned_privateproperty", "-5539 306 229", "1424.64 -2005.34 -173", "0 6 0", "-0.99 -0.1 0" );
 		make_ladder( "_ladder_smalltrailerlogs_cloned_startsmalltrailer", "-5813.92 1030.64 192", "-2866 5580 -132", "0 90 0", "-0.26 -0.96 0" );
 		make_ladder( "_ladder_startbehindrooftop_cloned_startshantyshop", "-4900 1510 229", "277 -1 0" );
 		make_ladder( "_ladder_startnodrawfence_cloned_shantyshop", "-4900 1510 229", "-487.218 532.125 0" );
 		make_ladder( "_ladder_startpicketqol_cloned_startpicketroof", "-4660 643 205.5", "-3999 4832 -43", "0 90 0", "-1 0 0" );
-		make_ladder( "_ladder_startsafehouse_cloned_highgenerator", "-4504 -2644 41", "-9209 5970 128", "0 97.7 0", "0.13 -1 0" );
+		make_ladder( "_ladder_startsafehouse_cloned_shantyshop", "-4900 1094 229", "-1107 763 -85" );
 		make_ladder( "_ladder_tarptrailerwood_cloned_startouthouse", "-5121 306 229", "200 -1056 -175" );
 		make_prop( "dynamic", "_permstuck_cratebot", "models/props_crates/static_crate_40.mdl", "-3749.85 -183.67 -3.164", "0 0 0" );
 		make_prop( "dynamic", "_permstuck_cratetop", "models/props_crates/static_crate_40.mdl", "-3749.85 -182.67 36.837", "0 -30 0" );

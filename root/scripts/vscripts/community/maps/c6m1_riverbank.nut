@@ -117,10 +117,10 @@ function DoRoundFixes()
 		make_clip( "_semiperm_endsaferoof", "SI Players", 1, "-8 0 0", "104 270 144", "-4344 482 1192" );
 		make_clip( "_ladder_startalternativeB_clipleft", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4025 96", "0 -45 0" );
 		make_clip( "_ladder_startalternativeB_clipright", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4071 96", "0 45 0" );
-		make_clip( "_ladder_upperbalconynear_clip", "Everyone", 1, "-3 0 0", "3 16 372", "3968 1822 199", "0 11 0" );
+		make_clip( "_ladder_upperbalconynear_clip", "Everyone", 1, "-3 0 0", "3 16 372", "3968 1825 199", "0 11 0" );
 		make_clip( "_infected_mapescape", "SI Players", 1, "-1000 -350 -20", "40 808 245", "-1997 1497 192" );
 		make_ladder( "_ladder_brideentryleft_cloned_brideentryright", "196 422 574", "1199 -13 -20" );
-		make_ladder( "_ladder_elecbox_cloned_bluebin", "2528 1030 342", "-2652 -253 42" );
+		make_ladder( "_ladder_elecbox_cloned_bluebin", "2528 1030 342", "-2645 -251 42" );
 		make_ladder( "_ladder_elecboxsafehouse_cloned_bluebin", "2528 1030 342", "-6434 498 516" );
 		make_ladder( "_ladder_endfencefront_cloned_endfenceback", "-3879.68 1645.6 787", "-7751 3326 -2", "0 180 0", "1 0 0" );
 		make_ladder( "_ladder_endsafehouse_cloned_windowtallright", "1664 2662 228", "-6535 2676 610", "0 -90 0", "1 0 0" );
@@ -133,7 +133,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_startpermstuck_cloned_endleftfence", "-3575 -1142 777.5", "4159 3762 -608" );
 		make_ladder( "_ladder_tankfenceback_cloned_startfence", "527 2940 162.12", "-1927 -1661 107" );
 		make_ladder( "_ladder_tankfencefront_cloned_dispcrouchfence", "4673 994 239.551", "-6066 228 26" );
-		make_ladder( "_ladder_upperbalconynear_cloned_upperbalconyfar", "3078 1644 376", "890 161 10" );
+		make_ladder( "_ladder_upperbalconynear_cloned_upperbalconyfar", "3078 1644 376", "890 164 10" );
 		make_ladder( "_ladder_witchentryfrontleft_cloned_witchentryback", "-1356.6 412.195 698.459", "-2713 805 0", "0 -180 0", "0 -1 0" );
 		make_ladder( "_ladder_witchentryfrontright_cloned_witchentryback", "-1356.6 412.195 698.459", "-2016 805 0", "0 -180 0", "0 -1 0" );
 		make_ladder( "_ladder_witchfarbackL_cloned_witchentryback", "-1356.6 412.195 698.459", "-3434 -730 65", "0 -180 0", "0 -1 0" );

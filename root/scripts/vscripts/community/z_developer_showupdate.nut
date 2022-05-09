@@ -11,10 +11,10 @@
 **  ShowUpdate() creates the Timer Think, displays a tutorial regarding CLIP
 **  (blocker) color coding which correspond with "r_drawclipbrushes 2" or 1,
 **  then draws all new blockers and glows new props. Also useful to force a
-**  re-catalog of any created/deleted "mapfixes"-prefixed entities.
+**  re-catalog of any created/deleted "community_update"-prefixed entities.
 **
 **  DebugRedraw() is only called programmatically and isn't manual like the
-**  others. It loops through all "mapfixes"-prefixed blockers and props
+**  others. It loops through all "community_update"-prefixed blockers and props
 **  and uses DebugDrawBox() or "StartGlowing" on them accordingly, also drawing
 **  their names as overlays with DebugDrawText(). DebugDrawText() has a couple
 **  limitations: (1) "useViewCheck" parameter as "false" is the best setting
@@ -189,7 +189,7 @@ function ShowUpdate( showGroup = "community" )
 		g_TutorialShown = true;
 	}
 
-	// Catalog all "mapfixes"-prefixed entities by populating a Handle array.
+	// Catalog all "community_update"-prefixed entities by populating a Handle array.
 	// The "find" returns the earliest character index where 0 means it's a match.
 	// The Timer (and any "helper entities") have no reason to be in this array.
 
@@ -674,7 +674,7 @@ function DebugRedrawName( origin, name, entityType, index, extraText = "" )
 		{
 			case "CLIP":
 			case "PLAYER CLIP":
-				entTypeText = "LUMP"; // Prefix for non-mapfixes entities.
+				entTypeText = "LUMP"; // Prefix for all non "community_update"-prefixed blockers.
 				break;
 			default:
 				break;

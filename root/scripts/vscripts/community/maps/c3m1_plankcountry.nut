@@ -133,9 +133,9 @@ function DoRoundFixes()
 		make_ladder( "_ladder_jonesvines_cloned_railroadgate", "-11658 10272 255.354", "3079 -2960 -120" );
 		make_ladder( "_ladder_rightafterchains_cloned_railroadgate", "-11658 10272 255.354", "1539 -1572 -24" );
 		make_ladder( "_ladder_startsemirear_cloned_boardwalkhole", "-551 7596 74", "-9373 2500 172" );
-		make_ladder( "_ladder_startsemitire_cloned_boardwalkhole", "-551 7596 74", "-16047 4401 168", "0 -46 0", "0.69 -0.72 0" );
-		make_ladder( "_ladder_starttrainfront1_cloned_boardwalkhole", "-551 7596 74", "-15700 3747 209", "0 -30 0", "0.87 -0.5 0" );
-		make_ladder( "_ladder_starttrainfront2_cloned_boardwalkhole", "-551 7596 74", "-11159 2086 209", "0 8 0", "1 0.16 0" );
+		make_ladder( "_ladder_startsemitire_cloned_boardwalkhole", "-551 7596 74", "-15948 4312 173.5", "0 315 0", "0.7 -0.7 0" );
+		make_ladder( "_ladder_starttrainfront1_cloned_boatshack", "-6864 6202 110", "-3572.91 13449.39 182", "0 60 0", "0.86 -0.49 0" );
+		make_ladder( "_ladder_starttrainfront2_cloned_boardwalkhole", "-551 7596 74", "-11220 2066 213", "0 7.5 0", "0.99 0.13 0" );
 		make_ladder( "_ladder_starttrainvalve_cloned_starttrainyellow", "-12837 9094 299.0643", "2575 13964 0", "0 49 0", "-0.5 -0.86 0" );
 		make_navblock( "_nav_startshrubwall1", "Everyone", "Apply", "-24 -24 -24", "24 24 24", "-12524 10074 161" );
 		make_navblock( "_nav_startshrubwall2", "Everyone", "Apply", "-48 -16 -32", "48 16 32", "-12588 9075 168" );

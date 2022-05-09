@@ -132,7 +132,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_tankerfrontmid_cloned_tankerfencemid", "-6032 -126 510", "-12063 -269 -5", "0 180 0", "0 -1 0" );
 		make_ladder( "_ladder_tankerfrontright_cloned_tankerfenceright", "-6288 -126 506", "-12063 -269 -5", "0 180 0", "0 -1 0" );
 		make_ladder( "_ladder_tankhedge_cloned_stairsbus", "-2800 1182 66", "5389 2072 572" );
-		make_ladder( "_ladder_tentbus_cloned_stairsbus", "2446 4732 518", "2409.7 -2499.03 112", "0 30 0", "0.86 0.5 0" );
+		make_ladder( "_ladder_tentbus_cloned_startfenceback", "2446 4732 518", "2409.7 -2499.03 112", "0 30 0", "0.86 0.5 0" );
 		make_ladder( "_ladder_truckandtent_cloned_carthedge", "-6034 -2592 480", "-1460 8465 153", "0 90 0", "0 -1 0" );
 		make_ladder( "_ladder_turnpikeleft_cloned_turnpikemid", "-1026 1280 256", "3 780 0" );
 		make_ladder( "_ladder_turnpikeright_cloned_turnpikemid", "-1026 1280 256", "-1053 -1275 -41", "0 -27.42 0", "-0.89 0.46 0" );

@@ -68,10 +68,11 @@ function DoRoundFixes()
 		make_brush( "_losfix_strangebalcony",	"-400 -2 -8",	"240 2 8",	"1552 1854 344" );
 		make_brush( "_losfix_van1",		"-72 -1 -8",	"72 1 8",	"535 4275 -153" );
 		make_brush( "_losfix_van2",		"-72 -1 -8",	"72 1 8",	"1592 4299 -153" );
+		make_clip( "_ladderqol_forkliftvines", "SI Players", 1, "-32 -38 -4", "32 38 4", "1276 2870 -160", "-40 -20 0" );
 		make_ladder( "_ladder_barplankqolB_cloned_barelecbox", "421 1994 136", "2394 2455 -256", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_barplankqolT_cloned_barelecbox", "421 1994 136", "2394 2455 0", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_crawfishelecbox_cloned_sucktheheads", "2080 -836 168", "4138 -1342 0", "0 180 0", "0 1 0" );
-		make_ladder( "_ladder_forkliftvines_cloned_startfenceback", "2408 -1284 -64", "-1130 4196 -48" );
+		make_ladder( "_ladder_forkliftvines_cloned_vinefence", "1320 2864 -108" "2636 5750 0", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
 		make_ladder( "_ladder_pipesfencefront_cloned_pipesfenceback", "2384 1566 1", "4757 3130 0", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_poolhalldropleft_cloned_poolhalldropright", "1113 1308 -94.8019", "250 0 0" );
