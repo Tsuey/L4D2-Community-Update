@@ -70,9 +70,18 @@ DirectorOptions <-
 	CommonLimit = 20
 	SpecialRespawnInterval = 80
 
+	MusicDynamicMobSpawnSize = 8
+	MusicDynamicMobStopSize = 2
+	MusicDynamicMobScanStopSize = 1
 
 }
 
+
+if ( Director.GetGameModeBase() == "versus" )
+{
+	DirectorOptions.A_CustomFinaleValue1 = 2
+	DirectorOptions.A_CustomFinaleValue5 = 2
+}
 
 if ( "DirectorOptions" in LocalScript && "ProhibitBosses" in LocalScript.DirectorOptions )
 {
