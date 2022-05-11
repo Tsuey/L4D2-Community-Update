@@ -4,5 +4,8 @@ include "materials/models/infected/common/l4d2/ci_body_include.vmt"
 insert
 {
 $basetexture "models/infected/common/l4d2/cif_tanktop_jeans_swamp"
+$DETAIL "models/infected/common/l4d2/detail/ci_detail_algae"
+$DETAILSCALE 6
+$phongboost 2
 }
 }
