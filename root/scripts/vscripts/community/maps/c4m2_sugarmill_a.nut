@@ -78,9 +78,7 @@ function DoRoundFixes()
 		make_clip( "_commentary_upperfactory_n", "Survivors", 1, "-38 -57 -192", "38 57 1976", "2263 -5694 552" );
 		make_clip( "_commentary_upperfactory_o", "Survivors", 1, "-255 -10 -192", "255 10 1976", "514 -5322 552" );
 		make_clip( "_commentary_upperfactory_p", "Survivors", 1, "-10 -388 -192", "10 388 1976", "249 -5700 552" );
-
 	}
-
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -91,7 +89,6 @@ function DoRoundFixes()
 		make_clip( "_truck_fence2", "Survivors", 1, "-92 -3 -1546", "92 3 1546", "4388 -2865 1642" );
 		make_clip( "_commentary_factoryhopup_a", "Survivors", 1, "-70 -11 -8", "38 11 28", "1214 -4856 168" );
 		make_clip( "_commentary_factoryhopup_b", "Survivors", 1, "-48 -11 -8", "8 11 88", "1136 -4856 108" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -103,7 +100,6 @@ function DoRoundFixes()
 		make_clip( "_survival_extendpipe", "Survivors", 1, "-77 -203 -260", "67 302 2032", "-703 -8229 511" );
 		make_clip( "_nav_semitrailer", "Survivors", 1, "-274 -63 0", "263 53 2262", "70 -8187 261" );
 		make_clip( "_nav_jumptotree", "Survivors", 1, "-78 -66 0", "128 46 2202", "-1250 -7925 331" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

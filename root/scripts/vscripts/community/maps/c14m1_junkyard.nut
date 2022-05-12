@@ -49,14 +49,16 @@ function DoRoundFixes()
 	if ( g_BaseMode != "versus" )
 	{
 		local wep_spawners = null;
+
 		while ( wep_spawners = Entities.FindByClassname( wep_spawners, "weapon_*" ) )
 		{
 			if ( wep_spawners.IsValid() )
 			{
 				if ( !NetProps.HasProp( wep_spawners, "m_weaponID" ) )
 					continue;
-				
+
 				local spawnflags = NetProps.GetPropInt( wep_spawners, "m_spawnflags" );
+
 				if ( spawnflags == ( spawnflags | 4 ) )
 					NetProps.SetPropInt( wep_spawners, "m_spawnflags", ( spawnflags & ~4 ) );
 			}

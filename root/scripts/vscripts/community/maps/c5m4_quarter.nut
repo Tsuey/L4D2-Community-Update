@@ -56,7 +56,6 @@ function DoRoundFixes()
 
 		make_clip( "_shortcut_fence_TMP", "Survivors", 1, "-84 -12 0", "86 9 149", "-1836 -1212 208" );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_shortcut_fence_TMP:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -1540, -1604, 314 ), 1 ) );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

@@ -28,7 +28,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_treehouse_whitefence", "Survivors", 1, "-17 -80 0", "17 77 1125", "1767 2219 267" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

@@ -60,9 +60,9 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_rockslide_static_2b", "models/props/cs_militia/militiarock02.mdl", "4494.4688 -23.4688 -136.5", "10.415 39.7266 329.0625", "shadow_no", "solid_yes", "222 222 222" );
 		make_prop( "dynamic", "_rockslide_static_2c", "models/props/cs_militia/militiarock02.mdl", "4450.1875 -119.8125 -83.0938", "342.1143 278.4375 110.7861", "shadow_no", "solid_yes", "177 177 177" );
 
-		//make_navblock( "_rockslide_navblockera", "Everyone", "Apply", "-1116 -128 -216", "0 128 666", "5194 245 -216" );
-		//make_navblock( "_rockslide_navblockerb", "Everyone", "Apply", "-128 -845 -216", "128 500 666", "3950 -127 -216" );
-		//make_navblock( "_rockslide_navblockerc", "Everyone", "Apply", "-1337 -32 -216", "216 64 666", "6310 501 -216" );
+		// make_navblock( "_rockslide_navblockera", "Everyone", "Apply", "-1116 -128 -216", "0 128 666", "5194 245 -216" );
+		// make_navblock( "_rockslide_navblockerb", "Everyone", "Apply", "-128 -845 -216", "128 500 666", "3950 -127 -216" );
+		// make_navblock( "_rockslide_navblockerc", "Everyone", "Apply", "-1337 -32 -216", "216 64 666", "6310 501 -216" );
 
 		make_clip( "_rockslide_survivorclipa", "Survivors", 1, "-572 -120 0", "399 -100 1100", "4455 -54 -224", "0 35 0" );
 		make_clip( "_rockslide_survivorclipb", "Survivors", 1, "-17 -17 -17", "17 17 17", "4187 -415 -153" );
@@ -83,7 +83,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_indoor_roof",			"Survivors",	1,	"-60 -84 -28",		"60 84 28",		"2244 4076 100" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -92,7 +91,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_survival_docksrocks", "Survivors", 1, "-78 -161 0", "87 153 1462", "2201 -4720 -174", "0 24 0" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

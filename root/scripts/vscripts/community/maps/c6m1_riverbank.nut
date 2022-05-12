@@ -74,7 +74,6 @@ function DoRoundFixes()
 		con_comment( "KILL:\tOut of bounds fences unpatched for Coop (popular request)." );
 
 		EntFire( g_UpdateName + "_fence*", "Kill" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -106,7 +105,6 @@ function DoRoundFixes()
 		make_clip( "_survival_tree_22", "Survivors", 1, "-189 -188 0", "188 188 2288", "800 -64 747" );
 		make_clip( "_survival_tree_23", "Survivors", 1, "-80 -80 0", "80 80 2288", "-1502 -606 850" );
 		make_clip( "_survival_tree_tent", "Survivors", 1, "-18 -171 0", "95 97 2205", "-2633 222 963" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

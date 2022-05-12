@@ -39,7 +39,7 @@ function DoRoundFixes()
 	make_clip( "_commentary_booster_crumpstore_b", "Survivors", 1, "-43 -147 -352", "43 147 352", "-6523 6352 672" );
 	make_clip( "_commentary_dockprops_poleclip", "Survivors", 1, "-16 -16 -8", "20 20 324", "-5379 6768 -26" );
 	make_clip( "_commentary_dockprops_shelfclip", "Everyone", 1, "-3 -2 -8", "3 2 80", "-5346 6795 -56" );
-	make_clip( "_commentary_dock_ledge", "Everyone", 1, "-8 -17 -46", "8 17 46", "-5374 5998 -18")
+	make_clip( "_commentary_dock_ledge", "Everyone", 1, "-8 -17 -46", "8 17 46", "-5374 5998 -18" );
 	make_prop( "dynamic", "_commentary_dockprops_pole", "models/props_docks/dock02_pole02a.mdl", "-5381.1 6767.52 89.1467", "0 0 0", "shadow_no", "solid_yes", "255 255 255", "1800", "2000" );
 	make_prop( "dynamic", "_commentary_dockprops_light", "models/props_urban/porch_light003.mdl", "-5380 6775 277.271", "0 270 0", "shadow_no", "solid_no", "255 255 255", "1000", "1200" );
 	make_prop( "dynamic", "_commentary_dockprops_boat", "models/props_urban/boat002.mdl", "-5411.46 6783.37 88.6317", "61.9321 199.129 4.5769", "shadow_no", "solid_yes", "255 255 255", "1700", "1900" );
@@ -73,7 +73,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_cliprework_jonesroof",	"Survivors",	1,	"-276 -296 -396",	"276 296 396",		"-8304 7216 628" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -87,7 +86,6 @@ function DoRoundFixes()
 		make_clip( "_survival_brushextendc", "Survivors", 1, "-289 -16 0", "439 20 717", "-9471 7496 384" );
 		make_clip( "_nav_pubsign", "Survivors", 1, "-4 -34 0", "4 31 822", "-7264 7167 202" );
 		make_clip( "_nav_trailertree", "Survivors", 1, "-48 -26 0", "78 36 742", "-7742 7721 287" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

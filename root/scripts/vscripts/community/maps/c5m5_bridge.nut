@@ -65,7 +65,6 @@ function DoRoundFixes()
 		make_clip( "_solidify_alt_stuckwarp2", "Survivors", 1, "-26 -10 -37", "61 11 32", "6795 6034 729" );
 		make_clip( "_solidify_alt_stuckwarp3", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6034 729" );
 		make_clip( "_solidify_alt_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6617 729" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -78,7 +77,6 @@ function DoRoundFixes()
 		make_clip(	"_booster_helipada",		"Survivors",	1,	"-1640 -17 -240",	"32 17 2882",		"7481 2202 175" );
 		make_clip(	"_booster_helipadb",		"Survivors",	1,	"-17 -1800 -240",	"17 1240 2882",		"5856 4019 176" );
 		make_clip(	"_booster_helipadc",		"Survivors",	1,	"-1640 -17 -240",	"1240 17 2882",		"7479 5276 176" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -96,7 +94,8 @@ function DoRoundFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move all bridge tank spawns a bit further down the bridge to discourage rushing
+	// Move all bridge Tank spawns a bit further down the bridge to discourage rushing.
+
 	if ( CheckToWarpTank( hndTank, [-1450, 5955, -100, 6705] ) )
 	{
 		hndTank.SetOrigin( Vector( 830, 6328, 792 ) );

@@ -36,7 +36,6 @@ function DoRoundFixes()
 		make_trighurt( "_finalstreet_trighurtb", "Survivor", "-1753 -823 0", "59 935 32", "8261 4759 196" );
 		make_trighurt( "_finalstreet_trighurtc", "Survivor", "-781 -361 0", "359 599 32", "9101 4969 196" );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_finalstreet_trighurt*:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( 8616, 4320, 140 ), 1 ) );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -45,7 +44,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_survival_electricgod", "Survivors", 1, "-40 -28 0", "79 43 273", "8328 3196 783" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

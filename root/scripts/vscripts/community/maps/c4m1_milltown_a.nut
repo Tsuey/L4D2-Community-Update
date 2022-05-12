@@ -36,15 +36,15 @@ function DoRoundFixes()
 	make_clip( "_commentary_smoother_burgersuv_a", "All and Physics", 1, "0 -5 0", "70 10 10", "-6577 7549 169.753", "0 30 0" );
 	make_clip( "_commentary_smoother_burgersuv_b", "All and Physics", 1, "0 -10 0", "70 8 10", "-6582 7554 161.753", "0 30 0" );
 	make_clip( "_commentary_smoother_burgersuv_c", "All and Physics", 1, "0 -10 0", "70 5 10", "-6586 7562 153.753", "0 30 0" );
-	make_clip( "_commentary_booster_burgertree_a1", "Survivors", 1, "-148 -99 -608", "148 99 608", "-6255 6674 928");
-	make_clip( "_commentary_booster_burgertree_a2", "Survivors", 1, "-37 -93 -552", "37 93 552", "-6257 6827 984");
-	make_clip( "_commentary_booster_burgertree_b1", "Survivors", 1, "-100 -81 -604", "100 81 604", "-4726 6761 932");
-	make_clip( "_commentary_booster_burgertree_b2", "Survivors", 1, "-46 -112 -584", "46 112 584", "-4783 6887 952");
-	make_clip( "_commentary_booster_burgertree_c1", "Survivors", 1, "-142 -123 -608", "142 123 608", "-7004 8145 928");
-	make_clip( "_commentary_booster_burgertree_c2", "Survivors", 1, "-58 -61 -616", "58 61 616", "-6824 8307 920");
-	make_clip( "_commentary_booster_burgertree_d", "Survivors", 1, "-148 -145 -612", "148 145 612", "-4701 8538 924");
-	make_clip( "_commentary_booster_burgertree_e", "Survivors", 1, "-178 -136 -608", "178 136 608", "-5397 7956 928");
-	make_clip( "_commentary_booster_burgertree_f", "Survivors", 1, "-178 -134 -628", "178 134 628", "-6806 7205 908");
+	make_clip( "_commentary_booster_burgertree_a1", "Survivors", 1, "-148 -99 -608", "148 99 608", "-6255 6674 928" );
+	make_clip( "_commentary_booster_burgertree_a2", "Survivors", 1, "-37 -93 -552", "37 93 552", "-6257 6827 984" );
+	make_clip( "_commentary_booster_burgertree_b1", "Survivors", 1, "-100 -81 -604", "100 81 604", "-4726 6761 932" );
+	make_clip( "_commentary_booster_burgertree_b2", "Survivors", 1, "-46 -112 -584", "46 112 584", "-4783 6887 952" );
+	make_clip( "_commentary_booster_burgertree_c1", "Survivors", 1, "-142 -123 -608", "142 123 608", "-7004 8145 928" );
+	make_clip( "_commentary_booster_burgertree_c2", "Survivors", 1, "-58 -61 -616", "58 61 616", "-6824 8307 920" );
+	make_clip( "_commentary_booster_burgertree_d", "Survivors", 1, "-148 -145 -612", "148 145 612", "-4701 8538 924" );
+	make_clip( "_commentary_booster_burgertree_e", "Survivors", 1, "-178 -136 -608", "178 136 608", "-5397 7956 928" );
+	make_clip( "_commentary_booster_burgertree_f", "Survivors", 1, "-178 -134 -628", "178 134 628", "-6806 7205 908" );
 	make_clip( "_commentary_edgeshrubs_a", "Survivors", 1, "-50 -52 -80", "50 1200 3000", "-957.801 3798.52 351.499" );
 	make_clip( "_commentary_edgeshrubs_b", "Survivors", 1, "-50 -52 -80", "50 300 2000", "-2852.78 5296.57 290.201" );
 	make_clip( "_commentary_edgeshrubs_c", "Survivors", 1, "-50 -52 -80", "50 1000 2000", "-2948.78 5232.57 290.201" );
@@ -60,7 +60,7 @@ function DoRoundFixes()
 	{
 		if ( item.IsValid() )
 		{
-			if ( item.GetClassname().find("weapon_") != null )
+			if ( item.GetClassname().find( "weapon_" ) != null )
 				NetProps.SetPropInt( item, "m_fEffects", 32 );
 		}
 	}
@@ -72,7 +72,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_treehouse_whitefence", "Survivors", 1, "-17 -80 0", "17 77 1125", "1767 2219 267" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -81,7 +80,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1742 -907 0", "1706 1757 32", "-5802 7499 1248" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

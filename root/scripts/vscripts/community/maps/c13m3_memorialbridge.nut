@@ -51,7 +51,6 @@ function DoRoundFixes()
 		// FIXES
 
 		patch_ladder( "-410.09 -4121.79 1386", "15 15 10" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -63,7 +62,6 @@ function DoRoundFixes()
 
 		make_clip( "_shortcut_tanker", "Survivors", 1, "-58 -577 0", "58 271 527", "1092 -3999 1328", "0 27 0" );
 		EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_shortcut_tanker:Kill::0:-1" );
-
 	}
 
 	// FIX: Prevent using water (or ladder) as a cushion to shortcut jump off bridge.

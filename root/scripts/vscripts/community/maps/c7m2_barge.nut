@@ -35,7 +35,7 @@ function DoRoundFixes()
 
 		make_ladder( "_ladder_bluecontback_cloned_bluecontfront", "6787.2104 2431.76 196", "13183 4909 -6", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_comicboatsleftL_cloned_toolhouse", "-633 2008 254.462", "2761 -620 -335", "5 63.5 0", "0.43 0.9 -0.08" );
-		make_ladder( "_ladder_comicboatsleftR_cloned_toolhouse", "-633 2008 254.462", "2733 -606 -335", "5 63.5 0", "0.43 0.9 -0.08" ); 
+		make_ladder( "_ladder_comicboatsleftR_cloned_toolhouse", "-633 2008 254.462", "2733 -606 -335", "5 63.5 0", "0.43 0.9 -0.08" );
 		make_ladder( "_ladder_comicboatsright_cloned_toolhouse", "-633 2008 254.462", "1602 555 -222", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_comicpylonleft_cloned_toolhouse", "-633 2008 254.462", "1190 -2732 -8", "-2 -19 -5", "0.93 -0.35 0" );
 		make_ladder( "_ladder_comicpylonright_cloned_toolhouse", "-633 2008 254.462", "783 -2540 26", "-2 -19 -5", "0.93 -0.35 0" );
