@@ -47,6 +47,7 @@ function AddModelToFilter( path )
 function RemoveModelFromFilter( path )
 {
 	local index = rgFilterModels.find( path );
+
 	if ( index != null )
 	{
 		rgFilterModels.remove( index );
@@ -76,8 +77,8 @@ local FindTrackedObject = function ( hndlEntity )
 local RemoveTrackedObjectByIndex = function ( index )
 {
 	local objectData = rgTrackedObjects[ index ];
-
 	local hndlEntity = objectData.m_hndlEntity;
+
 	if ( hndlEntity != null && hndlEntity.IsValid() && !objectData.rawin( "m_flGlowAfter" ) )
 	{
 		DoEntFire( "!caller", "StopGlowing", "", 0, hndlEntity, hndlEntity );
@@ -88,26 +89,31 @@ local RemoveTrackedObjectByIndex = function ( index )
 	if ( rgTrackedObjects.len() == 0 )
 	{
 		// BUG: Unable to remove think callback from callback
+
 		DoEntFire( "!caller", "CallScriptFunction", "MaybeStopThinking", 0, self, self );
 	}
 }
 
 // Callbacks
+
 function HandleObjectTouch()
 {
 	// Msg( "HandleObjectTouch() " );
 	// printl( activator );
 
 	// Validate model
+
 	if ( rgFilterModels.len() > 0 && rgFilterModels.find( activator.GetModelName() ) == null )
 	{
 		return;
 	}
-	
+
 	local index = FindTrackedObject( activator );
+
 	if ( index != null )
 	{
 		// Reset tracking data for object
+
 		RemoveTrackedObjectByIndex( index );
 	}
 
@@ -123,11 +129,12 @@ function HandleObjectTouch()
 	}
 
 	rgTrackedObjects.push( tblObjectData );
-	
+
 	if ( rgTrackedObjects.len() == 1 )
 	{
 		// Msg( "Starting to Think()! \n" );
 		// NOTE: Timer frequency depends on sv_script_think_interval value
+
 		AddThinkToEnt( self, "HandleAtomizerThink" );
 	}
 }
@@ -136,8 +143,9 @@ function HandleObjectEndTouch()
 {
 	// Msg( "HandleObjectEndTouch() " );
 	// printl( activator );
-	
+
 	local index = FindTrackedObject( activator );
+
 	if ( index != null )
 	{
 		RemoveTrackedObjectByIndex( index );
@@ -151,9 +159,11 @@ function HandleAtomizerThink()
 	foreach ( index, tblObjectData in rgTrackedObjects )
 	{
 		local hndlEntity = tblObjectData.m_hndlEntity;
+
 		if ( hndlEntity == null || !hndlEntity.IsValid() )
 		{
 			// Msg( "Dead entity handle!\n" );
+
 			RemoveTrackedObjectByIndex( index );
 
 			continue;
@@ -184,9 +194,11 @@ function HandleAtomizerThink()
 function MaybeStopThinking()
 {
 	// Since DoEntFire is asynchronous, we can't guarantee safety to remove think func - do the check first
+
 	if ( rgTrackedObjects.len() == 0 )
 	{
 		// Msg( "Stopped Think()-ing! \n" );
+
 		AddThinkToEnt( self, null );
 	}
 }
