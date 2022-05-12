@@ -91,20 +91,23 @@
 
 	// Blocks like this search for existing entities, using "find_by_modelname" or "find_by_targetname"
 	// and apply the settings found inside the "modify" block to all matching entities.
+
 //	"modify_entity"
 //	{
 //		// first find the entity or entities to modify
+//
 //		"find_by_modelname"		"models/props_interiors/door_sliding_breakable01.mdl"
-//		
-//		// AND / OR 
-//		
-//		//"find_by_targetname"	"some_targetname"
-//		
+//
+//		// AND / OR
+//
+//		// "find_by_targetname"	"some_targetname"
+//
 //		// then the changes contained in this block are applied to all found ents
+//
 //		"modify"
 //		{
 //			"minhealthdmg"	"180"
-//			"targetname" "warehouse_door"
+//			"targetname"	"warehouse_door"
 //		}
 //	}
 }

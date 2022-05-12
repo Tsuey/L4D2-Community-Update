@@ -112,5 +112,4 @@
 		"angles" "0 -16.9449272156 0"
 		"contextsubject" "C3M2Bathtub"
 	}
-
 }

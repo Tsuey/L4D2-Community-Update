@@ -1,6 +1,6 @@
 "Entities"
-{	
-	entity
+{
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M3DownHere"

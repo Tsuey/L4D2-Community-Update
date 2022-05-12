@@ -1,6 +1,5 @@
 "Entities"
 {
-
 	"entity"
 	{
 		"classname" "info_remarkable"
@@ -329,5 +328,4 @@
 		"angles" "0 -20.6582279205 0"
 		"contextsubject" "c2m2_thistall"
 	}
-
 }

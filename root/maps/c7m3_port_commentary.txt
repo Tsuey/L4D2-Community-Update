@@ -8,7 +8,6 @@
 		"angles" "23.269028 -9.398746 0.000000"
 		"contextsubject" "c7m3_generatora"
 	}
-
 	"entity"
 	{
 		"classname" "info_remarkable"
@@ -17,7 +16,6 @@
 		"angles" "18.583029 68.253006 0.000000"
 		"contextsubject" "c7m3_generatorb"
 	}
-
 	"entity"
 	{
 		"classname" "info_remarkable"
@@ -26,7 +24,6 @@
 		"angles" "23.269028 -9.398746 0.000000"
 		"contextsubject" "c7m3_generatora"
 	}
-
 	"entity"
 	{
 		"classname" "info_remarkable"

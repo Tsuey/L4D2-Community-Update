@@ -304,5 +304,4 @@
 		"angles" "0 175.8572998047 0"
 		"contextsubject" "c2m1_followriver"
 	}
-	
 }

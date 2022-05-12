@@ -128,5 +128,4 @@
 		"angles" "0 -100.5968475342 0"
 		"contextsubject" "C1M1AroundFire"
 	}
-
 }
