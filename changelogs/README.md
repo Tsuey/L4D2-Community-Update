@@ -1,6 +1,6 @@
 # Changelog Standards
 
-Current up to and including: `Commits on Apr 29, 2022`
+Current up to and including: `Commits on May 11, 2022`
 
 ### Links:
 
@@ -20,13 +20,13 @@ Commits stop and start again with [this Jul 1, 2021 commit that split map script
 
 Commits are always preferred over Pull Requests since the commits are always guaranteed and give the quickest glimpse of changed lines. We could optionally link to exact lines. Uncommonly, change notes are only mentioned in the Pull Request -- but that's okay because they're all in this changelog.
 
-For the few commits that were reverted, only the last-most commit that made the change is linked (like we ignore the [BOM incident](https://github.com/Tsuey/L4D2-Community-Update/commit/2257108296a7408415172c727f9f16f395b2ecf3) since it was re-uploaded later) or on two cases where a change was completely removed. Examples of the latter: the top change note was removed because it was reverted later on (instead of removing unreachables we make them reachable):
+For any commits that were reverted, only the last-most commit that made the change is linked (like we ignore the [BOM incident](https://github.com/Tsuey/L4D2-Community-Update/commit/2257108296a7408415172c727f9f16f395b2ecf3) since it was re-uploaded later) or in some cases where a change was completely removed. Examples of the latter: the top change note was removed because it was reverted later on (instead of removing unreachables we make them reachable):
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) `[Sep 18, 2021]` Medkits are no longer converted into pills.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/a310f379c5003c0efc9337443016d2c651804695) `[Sep 19, 2021]` Reverted change to allow pills to replace medkits again.<br/>
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) `[Sep 18, 2021]` Removed unreachable pill spawn.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5710b35a74a7b5099de18a2badb9af7688eced9) `[Oct 3, 2021]` Restored previously removed pain pill spawn.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) `[Sep 18, 2021]` Removed unreachable pills spawn.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5710b35a74a7b5099de18a2badb9af7688eced9) `[Oct 3, 2021]` Restored previously removed pain pills spawn.<br/>
 
 All commits related to Valve's required source files were ignored as all were moved to private repo.
 
@@ -34,15 +34,21 @@ In one case where the edits are profoundly boring ([Thickened 24 clips across 10
 
 All commits that add the "unchanged" (original) files or deal with any of the 3 `README.md` or past changelog revisions are not linked here. We'll also ignore commits that exclusively resolve [minor typos](https://github.com/Tsuey/L4D2-Community-Update/commit/3cfc426967faee39918b625b277518cfb6e378d6) or clean up [whitespace issues](https://github.com/Tsuey/L4D2-Community-Update/commit/629046f33875fc9c20f3516e9b2f57e5b5590cc9) since they add nothing to the discussion.
 
-For assets, the use of brackets `[]` **after the period** is extra info used to clue modders in which Workshop addons may be impacted. If changes are limited to only one prop, then the entire `"*.mdl"` path is specified (phy/vtx/vvd are assumed) -- for paths, `/` is enforced instead of `\`. Lastly, use a wildcard with escape character in form of `"\*"` to specify when the model has more than one distinct suffix (like different variations of the model or skins). Enforce each change note to be only one sentence through use of semicolons.
-
 Ignore targetnames of clips and ladders as those are only informative internally, as they communicate purpose poorly to the public. Similarly, even if a fix may be for all <ins>PvP</ins> modes, we just specify <ins>Versus</ins> for this changelog -- making this distinction within this changelog would only add to public confusion. Fix spawns for all modes if one isn't specified. Survivor's "black and white" state is always referred to as "B&W".
+
+For Talker, changes have always been [tracked chronologically](https://github.com/Tsuey/L4D2-Community-Update/blob/master/changelogs/The_Last_Stand_Update.md#SectionH) so reverts may be included, especially in cases that the diff is not readily identifiable. With exception for Talker change notes and filename references, avoid referring to maps in the c#m# format.
 
 If Mutation filenames aren't obvious, then specify the *.nut in parenthesis ([Valve Wiki reference](https://developer.valvesoftware.com/w/index.php?title=L4D2_Gamemodes.txt_File&oldid=216435)).
 
+For Navmesh, focus is placed on edits that may impact Coop (like speedrunner boost setups) or Survival (we need to avoid leaderboard wipes), and we refrain from use of destructive words like "deletion" when it comes to optimization.
+
+For Assets, the use of brackets `[]` **after the period** is extra info used to clue modders in which Workshop addons may be impacted. If changes are limited to only one prop, then the entire `"*.mdl"` path is specified (phy/vtx/vvd are assumed) -- for paths, `/` is enforced instead of `\`. Lastly, use a wildcard with escape character in form of `"\*"` to specify when the model has more than one distinct suffix (like different variations of the model or skins).
+
 For prop fixes, if they're like the "GuardShack" and its use is unique or specific to a map, add the map name (like `[Crash Course 1]`) after the period and duplicate the change note under map fixes. A couple fixes are counted twice in this manner.
 
-For now: on a per-header basis, changes are listed in the same order they were committed. This order can be changed, such as to pool all <ins>Versus</ins> changes back-to-back.
+Enforce each change note to be only one sentence through use of semicolons.
+
+On a per-header basis, always prioritize chronological sorting by commit date. If there's a specified category for each change, sort them alphabetically (e.g. all modes first -> <ins>Commentary</ins> -> <ins>Navmesh</ins> -> <ins>Taaannnk!!</ins> -> <ins>VS Survival</ins>). Some exceptions are made, such as ordering the new "footlocker" props above all other fixes, or <ins>VS Survival</ins> may be ordered before <ins>Versus</ins> to keep Mutations back-to-back.
 
 --------------------------------
 --------------------------------
