@@ -43,10 +43,12 @@ g_BaseMode	<- Director.GetGameModeBase();
 g_Chapter	<- null;		// Stores each "friendly" mapname
 g_UpdateName	<- "community_update";	// Prefix "community_update" to all targetnames
 
-// Entity creation, modification and debug functions
+// Entity creation, modification and debug functions.
+
 IncludeScript( "community/functions" );
 
-// CommunityUpdate logic
+// CommunityUpdate logic.
+
 IncludeScript( "community/mapfixes" );
 
 /////////////////////////////////////////////////////////////////////////////////
