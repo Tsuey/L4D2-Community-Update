@@ -30,7 +30,7 @@ function c11m5_planecrash_pre()
 	make_navblock( "_debris_navblock_2",	"Infected",		"Apply",	"-288 54 -104",		"38 556 217",	"-3735 10741 -88" );
 	make_navblock( "_debris_navblock_3",	"Infected",		"Apply",	"-288 174 -104",	"38 556 217",	"-3575 10531 -88" );
 	make_navblock( "_debris_navblock_4",	"Infected",		"Apply",	"-338 249 -104",	"-22 376 217",	"-3435 10361 -88" );
-	//make_navblock( "_debris_navblock_5",	"Infected",		"Apply",	"-192 287 -104",	"-52 339 217",	"-3435 10271 -88" );
+	// make_navblock( "_debris_navblock_5",	"Infected",		"Apply",	"-192 287 -104",	"-52 339 217",	"-3435 10271 -88" );
 	make_navblock( "_debris_navblock_6",	"Infected",		"Apply",	"-288 137 -104",	"28 469 267",	"-3085 10771 -88" );
 	make_navblock( "_debris_navblock_7",	"Infected",		"Apply",	"-288 195 -104",	"198 409 267",	"-2795 10681 -88" );
 	make_navblock( "_debris_navblock_8",	"Infected",		"Apply",	"-204 115 -104",	"198 409 267",	"-2795 10471 -88" );

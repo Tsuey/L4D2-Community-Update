@@ -32,12 +32,12 @@
 *****************************************************************************/
 
 function make_clip ( user_strTargetname,
-			user_strBlockType,
-			user_intInitialState,
-			user_strMins,
-			user_strMaxs,
-			user_strOrigin,
-			user_strAngles = "0 0 0" )
+		     user_strBlockType,
+		     user_intInitialState,
+		     user_strMins,
+		     user_strMaxs,
+		     user_strOrigin,
+		     user_strAngles = "0 0 0" )
 {
 	local intBlockType = null;
 
@@ -95,9 +95,9 @@ function make_clip ( user_strTargetname,
 *****************************************************************************/
 
 function make_brush ( user_strTargetname,
-			user_strMins,
-			user_strMaxs,
-			user_strOrigin )
+		      user_strMins,
+		      user_strMaxs,
+		      user_strOrigin )
 {
 	local brush = SpawnEntityFromTable( "func_brush",
 	{
@@ -135,11 +135,11 @@ function make_brush ( user_strTargetname,
 *****************************************************************************/
 
 function make_navblock ( user_strTargetname,
-			user_strTeamBlock,
-			user_strState,
-			user_strMins,
-			user_strMaxs,
-			user_strOrigin )
+			 user_strTeamBlock,
+			 user_strState,
+			 user_strMins,
+			 user_strMaxs,
+			 user_strOrigin )
 {
 	local intTeamBlock = null;
 
@@ -210,14 +210,14 @@ function make_navblock ( user_strTargetname,
 *****************************************************************************/
 
 function make_trigpush ( user_strTargetname,
-			user_strActivator,
-			user_intSpeed,
-			user_strDirection,
-			user_strMins,
-			user_strMaxs,
-			user_strOrigin,
-			user_strAngles		=	"0 0 0",
-			user_strFilterOverride	=	"" )
+			 user_strActivator,
+			 user_intSpeed,
+			 user_strDirection,
+			 user_strMins,
+			 user_strMaxs,
+			 user_strOrigin,
+			 user_strAngles		=	"0 0 0",
+			 user_strFilterOverride	=	"" )
 {
 	// Determine activator filter. Type always Clients (1) unless explicitly not.
 
@@ -295,10 +295,10 @@ function make_trigpush ( user_strTargetname,
 *****************************************************************************/
 
 function make_trighurt ( user_strTargetname,
-			user_strActivator,
-			user_strMins,
-			user_strMaxs,
-			user_strOrigin )
+			 user_strActivator,
+			 user_strMins,
+			 user_strMaxs,
+			 user_strOrigin )
 {
 	// Both trigger_hurt and trigger_hurt_ghost have these in common.
 
@@ -378,9 +378,9 @@ function make_trighurt ( user_strTargetname,
 *****************************************************************************/
 
 function make_trigduck ( user_strTargetname,
-			user_strMins,
-			user_strMaxs,
-			user_strOrigin )
+			 user_strMins,
+			 user_strMaxs,
+			 user_strOrigin )
 {
 	local trigger = SpawnEntityFromTable( "trigger_auto_crouch",
 	{
@@ -420,10 +420,10 @@ function make_trigduck ( user_strTargetname,
 *****************************************************************************/
 
 function make_trigmove ( user_strTargetname,
-			user_strOption,
-			user_strMins,
-			user_strMaxs,
-			user_strOrigin )
+			 user_strOption,
+			 user_strMins,
+			 user_strMaxs,
+			 user_strOrigin )
 {
 	// Always Clients (1) with Option added.
 
@@ -518,16 +518,16 @@ function make_trigmove ( user_strTargetname,
 *****************************************************************************/
 
 function make_prop ( user_strType,
-			user_strTargetname,
-			user_strModel,
-			user_strOrigin,
-			user_strAngles		=	"0 0 0",
-			user_strShadows		=	"shadow_yes",
-			user_strSolidity		=	"solid_yes",
-			user_strRenderColor	=	"255 255 255",
-			user_flFadeMinDist		=	-1.0,
-			user_flFadeMaxDist		=	 0.0,
-			user_flMassScale		=	 1.0 )
+		     user_strTargetname,
+		     user_strModel,
+		     user_strOrigin,
+		     user_strAngles		=	"0 0 0",
+		     user_strShadows		=	"shadow_yes",
+		     user_strSolidity		=	"solid_yes",
+		     user_strRenderColor	=	"255 255 255",
+		     user_flFadeMinDist		=	-1.0,
+		     user_flFadeMaxDist		=	 0.0,
+		     user_flMassScale		=	 1.0 )
 {
 	local tblKeyvalues =
 	{
@@ -1486,7 +1486,7 @@ function make_atomizer( user_strTargetname,
 	{
 		targetname	= g_UpdateName + user_strTargetname + "_trigmult",
 		origin		= StringToVector_Valve( user_strOrigin, " " ),
-		spawnflags	= 8, // SF_TRIGGER_ALLOW_PHYSICS
+		spawnflags	= 8,	// SF_TRIGGER_ALLOW_PHYSICS
 		vscripts	= "community/utility/atomizer_logic"
 	} );
 
@@ -1496,6 +1496,7 @@ function make_atomizer( user_strTargetname,
 
 	hndlTrigger.ValidateScriptScope();
 	local hndlScope = hndlTrigger.GetScriptScope();
+
 	if ( hndlScope != null && "InitAtomizer" in hndlScope )
 	{
 		hndlScope.InitAtomizer( user_strModel, user_intKillTimer );
@@ -1793,7 +1794,7 @@ function devchap( mode )
 		printl( "to draw new blockers and glow new props. They are named according to purpose and" );
 		printl( "you can see entity definitions above. If you make/delete \"" + ::CommunityUpdate().PrefixName() + "\"-prefixed" );
 		printl( "entities, toggle Hide/Show to apply changes. Please report all issues and concerns" );
-		printl( "to Tsuey's Workshop https://steamcommunity.com/sharedfiles/filedetails/?id=1959405608\n" );
+		printl( "to the Update Team's Github repo at https://github.com/Tsuey/L4D2-Community-Update\n" );
 	}
 	else if ( mode == "TUTORIAL" )
 	{
