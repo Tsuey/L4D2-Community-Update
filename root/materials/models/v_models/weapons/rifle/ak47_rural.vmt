@@ -1,0 +1,16 @@
+VertexLitGeneric
+{
+$baseTexture "models\v_models\Weapons\rifle/ak47_rural"
+$phong 1
+$phongboost 3
+$halflambert 1
+$phongfresnelranges "[.83 .83 1]"
+$phongexponenttexture "models\v_models\Weapons\rifle/ak47_rural_exp"
+$basemapalphaphongmask 1
+$basemapalphaenvmapmask 1
+$envmap env_cubemap
+$envmapfresnel 1
+$envmapFresnelMinMaxExp "[0 5 .4]"
+$envmaptint "[.13 .13 .13]"
+$phongalbedotint 1
+}
