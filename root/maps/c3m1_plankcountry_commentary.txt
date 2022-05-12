@@ -136,5 +136,4 @@
 		"angles" "0 19.070772171 0"
 		"contextsubject" "C3M1NoSwimming"
 	}
-
 }

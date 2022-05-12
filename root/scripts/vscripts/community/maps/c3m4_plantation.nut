@@ -37,7 +37,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_commentary_shortcut_startfence", "Survivors", 1, "-8 -272 -80", "8 280 80", "-2380 -1616 78.2673" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -50,7 +49,6 @@ function DoRoundFixes()
 		con_comment( "FIX:\tPoint-of-no-return clip Enabled instantly to block Survivalists from boosting out." );
 
 		EntFire( g_UpdateName + "_point_of_no_return", "Enable" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

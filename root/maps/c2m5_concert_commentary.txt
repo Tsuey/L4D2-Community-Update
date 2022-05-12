@@ -16,5 +16,4 @@
 		"angles" "0 0.7896283269 0"
 		"contextsubject" "c2m5_seestage"
 	}
-
 }

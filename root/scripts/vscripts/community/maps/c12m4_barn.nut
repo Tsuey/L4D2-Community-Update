@@ -83,7 +83,6 @@ function DoRoundFixes()
 
 		EntFire( g_UpdateName + "_eventskip_commonhop*", "Kill", null, 4 );
 	}
-
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -151,7 +150,8 @@ function DoRoundFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move tank spawn from hillside before event area to top of trains (~60% boss flow)
+	// Move Tank spawn from hillside before event area to top of trains (~60% boss flow).
+
 	if ( CheckToWarpTank( hndTank, [10535, -5508, 11360, -4625] ) )
 	{
 		hndTank.SetOrigin( Vector( 10492, -4633, 57.9 ) );

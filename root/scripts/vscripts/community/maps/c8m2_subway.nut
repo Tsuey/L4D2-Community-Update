@@ -59,7 +59,6 @@ function DoRoundFixes()
 		make_clip( "_nav_backlightright", "Survivors", 1, "6 -13 -61", "9 15 84", "5243 4210 -265" );
 		make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
 		make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -68,7 +67,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_survival_vendors",		"Survivors",	1,	"-80 -32 0",		"80 55 284",		"7406 3769 381.4" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

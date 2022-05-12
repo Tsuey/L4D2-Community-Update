@@ -51,7 +51,6 @@ function DoRoundFixes()
 
 		make_clip(	"_allmodes_griefrooma",		"Survivors",	1,	"0 0 0",		"530 126 950",		"156 -6648 -22" );
 		make_clip(	"_allmodes_griefroomb",		"Survivors",	1,	"0 -770 0",		"130 0 950",		"28 -6652 -22" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

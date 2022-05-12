@@ -64,7 +64,6 @@ function DoRoundFixes()
 		make_navblock( "_nav_tol_hedge_b", "Survivors", "Apply", "-256 -8 -16", "256 8 16", "-3264 -5187 -8" );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_tol_clip_brush*:Kill::-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -2496, -6544, 4 ), 1 ) );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_nav_tol_hedge*:UnblockNav::-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -2496, -6544, 4 ), 1 ) );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -174,6 +173,7 @@ function DoRoundFixes()
 		make_trigduck( "_duckqol_carouselroof", "-30 1 0", "30 3 1", "-2240 -5259 303" );
 
 		// Manually fix the 2009 forklift since it is spawned after mapfixes runs
+
 		NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_iMinHealthDmg", 400 );
 		NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_takedamage", 3 );
 	}
@@ -201,7 +201,8 @@ function DoMapSpawnFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move tank spawn inside carousel fence to behind the carousel (~80% boss flow)
+	// Move Tank spawn inside carousel fence to behind the carousel (~80% boss flow).
+
 	if ( CheckToWarpTank( hndTank, [-2750, -5450, -1450, -4925] ) )
 	{
 		hndTank.SetOrigin( Vector( -1725, -5900, 68.0 ) );

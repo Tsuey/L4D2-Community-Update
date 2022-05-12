@@ -58,7 +58,6 @@ function DoRoundFixes()
 		make_clip( "_commentary_shortcut_barricade_b", "Survivors", 1, "-21 -52 -232", "21 52 232", "3830 1741 408" );
 		make_clip( "_commentary_shortcut_barricade_c", "Survivors", 1, "-21 -52 -232", "21 52 232", "3809 1637 408" );
 		make_clip( "_commentary_shortcut_barricade_d", "Survivors", 1, "-9 -100 -232", "9 100 232", "3794 1492 408" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

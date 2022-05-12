@@ -55,7 +55,6 @@ function DoRoundFixes()
 		con_comment( "KILL:\tSafe roof exploit unpatched for Coop (popular request)." );
 
 		EntFire( g_UpdateName + "_outhouse_saferoof", "Kill" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -68,7 +67,6 @@ function DoRoundFixes()
 
 		make_clip( "_commentary_shortcut_generator_a", "Survivors", 1, "-5 -5 -98", "5 5 98", "-1721 373 -94" );
 		make_clip( "_commentary_shortcut_generator_b", "Survivors", 1, "-28 -20 -504", "28 20 504", "-1718.5 376 520" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -86,7 +84,6 @@ function DoRoundFixes()
 		make_ladder( "_ladder_askewhedgebotr2_cloned_askewhedgebotl", "610 1209.88 -123.984", "0 52 0" );
 		make_ladder( "_ladder_askewhedgetopl1_cloned_askewhedgetopr", "594 1262 -24", "0 -26 0" );
 		make_ladder( "_ladder_askewhedgetopl2_cloned_askewhedgetopr", "594 1262 -24", "0 -52 0" );
-
 	}
 
 	// FIX: Prevent various common hops straight to barns roof with a large clip.

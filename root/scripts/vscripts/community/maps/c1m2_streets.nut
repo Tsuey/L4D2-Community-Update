@@ -48,7 +48,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_tanker_blowfish", "Survivors", 1, "-85 -435 -6", "33 331 791", "-6740 -758 681", "0 328 0" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -203,7 +202,8 @@ function DoRoundFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move tank spawn at ceda truck drop to the top of the stairs (~44% boss flow)
+	// Move Tank spawn at CEDA truck drop to the top of the stairs (~44% boss flow).
+
 	if ( CheckToWarpTank( hndTank, [-4755, 555, -4295, 1110] ) )
 	{
 		hndTank.SetOrigin( Vector( -5025, 725, 384.1 ) );

@@ -51,7 +51,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_clipgap_fence",		"Survivors",	1,	"-32 -12 -82",		"32 12 82",		"-1740 -1284 -134" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

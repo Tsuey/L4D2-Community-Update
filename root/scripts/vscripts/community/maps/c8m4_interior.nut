@@ -79,6 +79,7 @@ function DoRoundFixes()
 		EntFire( g_UpdateName + "_ladder_ventceiling02left_cloned_sinkvent", "SetParent", g_UpdateName + "_ventceiling02_static" );
 
 		con_comment( "QOL:\tThe breakable railings in the cafeteria have had their health reduced for Versus-only QoL." );
+
 		DoEntFire( "!self", "AddOutput", "health 18", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( 12423, 12014, 244.5 ), 1 ) );
 		DoEntFire( "!self", "AddOutput", "health 18", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( 12278, 12150.5, 308.5 ), 1 ) );
 		DoEntFire( "!self", "AddOutput", "health 18", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( 12278, 12716, 308.5 ), 1 ) );

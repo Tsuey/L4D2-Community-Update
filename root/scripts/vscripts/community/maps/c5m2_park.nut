@@ -42,7 +42,7 @@ function DoRoundFixes()
 		// FIXES
 
 		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the button to open the doors is pressed." );
-		
+
 		EntFire( "finale_alarm_stop_button", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_shortcut_station:Kill::0:-1" );
 	}
 	if ( g_BaseMode == "survival" )
@@ -53,7 +53,6 @@ function DoRoundFixes()
 
 		make_clip(	"_nav_eventsign",		"Survivors",	1,	"-4 -10 -908",		"4 10 908",		"-8552 -6310 756" );
 		patch_ladder( "-9260 -5130 -152", "1 14 0" );
-
 	}
 	if ( g_BaseMode == "scavenge" )
 	{
@@ -62,7 +61,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_safedoor_antighost", "SI Players", 1, "-2 -32 0", "2 32 107", "-3775 -1368 -344" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

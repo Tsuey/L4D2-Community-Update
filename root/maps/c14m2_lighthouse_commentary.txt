@@ -1,6 +1,6 @@
 "Entities"
 {
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "c14m2_gate"
@@ -8,7 +8,7 @@
 		"angles" "-7.257380 105.521957 0.000000"
 		"contextsubject" "c14m2_gate"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "c14m2_drop"
@@ -16,7 +16,7 @@
 		"angles" "8.262826 175.597931 0.000000"
 		"contextsubject" "c14m2_drop"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "c14m2_note_lighthouse"

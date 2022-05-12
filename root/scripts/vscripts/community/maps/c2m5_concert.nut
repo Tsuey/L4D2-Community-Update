@@ -34,7 +34,6 @@ function DoRoundFixes()
 	make_clip( "_backstairs_right", "Survivors", 1, "-8 -158 0", "8 197 760", "-951 2073 264", "0 -45 0" );
 	make_clip( "_commentary_infectedwindows", "Survivors", 1, "-8 -10 -8", "258 10 1064", "-3325 3720 -40" );
 
-
 	// FIX: Prevent interior stadium trigger from deleting players by re-creating it.
 
 	con_comment( "TRIG:\tPlayer-deleting trigger_multiple replaced with trigger_hurt." );
@@ -76,7 +75,6 @@ function DoRoundFixes()
 
 	kill_entity( hndBadTrigger );
 
-
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -85,7 +83,6 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -95,7 +92,6 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

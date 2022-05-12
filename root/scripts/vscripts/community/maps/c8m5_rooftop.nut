@@ -53,7 +53,6 @@ function DoRoundFixes()
 		// Already present in anv_versus.nut just mirroring it here so Coopers can meme, too.
 
 		make_ladder( "_ladder_saferoomlulz_cloned_rooftopmain", "5924 8561.1 6018", "13896 2362 -447", "0 90 0", "0 1 0", 0 );
-
 	}
 	if ( g_BaseMode == "scavenge" )
 	{
@@ -68,7 +67,6 @@ function DoRoundFixes()
 		con_comment( "SCAV:\tSpawned physics clip to prevent can falling through displacement." );
 
 		make_clip( "_dispcollision_rooftop", "All and Physics", 1, "-101 -64 0", "160 64 32", "6825 9535 5612", "0 -37.5 0" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -100,8 +98,8 @@ function DoRoundFixes()
 
 function DoMapSpawnFixes()
 {
-	make_decal( "decals/decalstain002a", "6480 8794 6161" );
-	make_decal( "decals/prodconcrete05", "7281 8960 6191" );
+	make_decal( "decals/decalstain002a",		"6480 8794 6161" );
+	make_decal( "decals/prodconcrete05",		"7281 8960 6191" );
 	make_decal( "decals/debris_concrete001a",	"7283 8926 6088" );
 	make_decal( "decals/prodconcrete04",		"5942 9424 5983" );
 	make_decal( "decals/infstains",			"6188 7616 5967" );

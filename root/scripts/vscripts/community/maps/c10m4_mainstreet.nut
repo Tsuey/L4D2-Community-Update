@@ -48,7 +48,6 @@ function DoRoundFixes()
 		make_clip( "_cliprework_eventskip2", "Survivors", 1, "-209 -2 0", "192 2 1588", "661 -2569 140", "0 45 0" );
 		make_clip( "_cliprework_eventskip3", "Survivors", 1, "-156 -1 0", "141 1 1588", "372 -2717 140" );
 		make_clip( "_cliprework_eventskip4", "Survivors", 1, "-26 -59 0", "-24 41 1588", "242 -2757 140" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -57,7 +56,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_booster_eatsign", "Survivors", 1, "-10 -64 -48", "10 69 1442", "-1649 -3723 293" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

@@ -94,7 +94,7 @@
 		"commentaryfile" "#commentary\com-welcome.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Gabe Newell"
 		"synopsis" ""
 	}
@@ -109,123 +109,123 @@
 		"commentaryfile" "#commentary\com-uniquecampaigns.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Scott Dalton"
 		"synopsis" ""
 	}
-"entity"
-{
-	"id" "4"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"targetname" "wound_relay"
-	"connections"
+	"entity"
 	{
-		"OnTrigger" "wound_spawnerSpawnZombiecommon_male_tanktop_jeans common_wound0-1"
-		"OnTrigger" "wound_timerEnable0-1"
-		"OnTrigger" "shotgun_relayTrigger0-1"
-		"OnTrigger" "common_wound,Kill,,5,-1"
+		"id" "4"
+		"classname" "logic_relay"
+		"spawnflags" "0"
+		"targetname" "wound_relay"
+		"connections"
+		{
+			"OnTrigger" "wound_spawnerSpawnZombiecommon_male_tanktop_jeans common_wound0-1"
+			"OnTrigger" "wound_timerEnable0-1"
+			"OnTrigger" "shotgun_relayTrigger0-1"
+			"OnTrigger" "common_wound,Kill,,5,-1"
+		}
+		"origin" "-64 224 -352"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-	"origin" "-64 224 -352"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
+		"id" "6"
+		"classname" "logic_timer"
+		"RefireTime" "5"
+		"spawnflags" "0"
+		"StartDisabled" "1"
+		"targetname" "wound_timer"
+		"UseRandomTime" "0"
+		"connections"
+		{
+			"OnTimer" "wound_spawnerSpawnZombiecommon_male_tanktop_jeans common_wound0.1-1"
+			"OnTimer" "common_wound,Kill,,0,-1"
+		}
+		"origin" "-64 224 -320"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-}
-"entity"
-{
-	"id" "6"
-	"classname" "logic_timer"
-	"RefireTime" "5"
-	"spawnflags" "0"
-	"StartDisabled" "1"
-	"targetname" "wound_timer"
-	"UseRandomTime" "0"
-	"connections"
+	"entity"
 	{
-		"OnTimer" "wound_spawnerSpawnZombiecommon_male_tanktop_jeans common_wound0.1-1"
-		"OnTimer" "common_wound,Kill,,0,-1"
+		"id" "8"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 0 0"
+		"targetname" "wound_spawner"
+		"origin" "-96 224 -376"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-	"origin" "-64 224 -320"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
+		"id" "14"
+		"classname" "weapon_shotgun_spas_spawn"
+		"angles" "0 150 -90"
+		"count" "1"
+		"solid" "6"
+		"spawnflags" "2"
+		"targetname" "shotgun_spawn"
+		"origin" "-34 239 -373.876"
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
 	}
-}
-"entity"
-{
-	"id" "8"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 0 0"
-	"targetname" "wound_spawner"
-	"origin" "-96 224 -376"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "16"
+		"classname" "point_template"
+		"spawnflags" "2"
+		"targetname" "shotgun_template"
+		"Template01" "shotgun_spawn"
+		"origin" "-32 288 -352"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "14"
-	"classname" "weapon_shotgun_spas_spawn"
-	"angles" "0 150 -90"
-	"count" "1"
-	"solid" "6"
-	"spawnflags" "2"
-	"targetname" "shotgun_spawn"
-	"origin" "-34 239 -373.876"
-	"editor"
+	"entity"
 	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
+		"id" "18"
+		"classname" "logic_relay"
+		"spawnflags" "1"
+		"targetname" "shotgun_relay"
+		"connections"
+		{
+			"OnTrigger" "shotgun_templateForceSpawn0-1"
+		}
+		"origin" "-32 288 -320"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-}
-"entity"
-{
-	"id" "16"
-	"classname" "point_template"
-	"spawnflags" "2"
-	"targetname" "shotgun_template"
-	"Template01" "shotgun_spawn"
-	"origin" "-32 288 -352"
-	"editor"
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
-	}
-}
-"entity"
-{
-	"id" "18"
-	"classname" "logic_relay"
-	"spawnflags" "1"
-	"targetname" "shotgun_relay"
-	"connections"
-	{
-		"OnTrigger" "shotgun_templateForceSpawn0-1"
-	}
-	"origin" "-32 288 -320"
-	"editor"
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
-	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -237,7 +237,7 @@
 		"commentaryfile" "#commentary\com-wounds.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Gray Horsfield"
 		"synopsis" ""
 		"connections"
@@ -258,7 +258,7 @@
 		"commentaryfile" "#commentary\com-bodypiles.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Marc Nagel"
 		"synopsis" ""
 	}
@@ -273,130 +273,130 @@
 		"commentaryfile" "#commentary\com-sounddesign.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Mike Morasky"
 		"synopsis" ""
 	}
-"entity"
-{
-	"id" "15"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"targetname" "variation_relay"
-	"connections"
+	"entity"
 	{
-		"OnTrigger" "variation_spawner,SpawnZombie,common_male_tanktop_jeans common_variation,0,-1"
-		"OnTrigger" "variation_timer,Enable,,0,-1"
-		"OnTrigger" "variation_relay,Disable,,0.1,-1"
-		"OnTrigger" "common_variation,Kill,,1.9,-1"
+		"id" "15"
+		"classname" "logic_relay"
+		"spawnflags" "0"
+		"targetname" "variation_relay"
+		"connections"
+		{
+			"OnTrigger" "variation_spawner,SpawnZombie,common_male_tanktop_jeans common_variation,0,-1"
+			"OnTrigger" "variation_timer,Enable,,0,-1"
+			"OnTrigger" "variation_relay,Disable,,0.1,-1"
+			"OnTrigger" "common_variation,Kill,,1.9,-1"
+		}
+		"origin" "-992 -1344 -352.966"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-	"origin" "-992 -1344 -352.966"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
+		"id" "17"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 90 0"
+		"targetname" "variation_spawner"
+		"origin" "-992 -1376 -376.966"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "17"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 90 0"
-	"targetname" "variation_spawner"
-	"origin" "-992 -1376 -376.966"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "19"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 90 0"
+		"targetname" "variation_spawner"
+		"origin" "-928 -1376 -376.966"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "19"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 90 0"
-	"targetname" "variation_spawner"
-	"origin" "-928 -1376 -376.966"
-	editor
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "21"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 90 0"
+		"targetname" "variation_spawner"
+		"origin" "-1056 -1376 -376.966"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "21"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 90 0"
-	"targetname" "variation_spawner"
-	"origin" "-1056 -1376 -376.966"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "23"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 90 0"
+		"targetname" "variation_spawner"
+		"origin" "-1024 -1440 -376.966"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "23"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 90 0"
-	"targetname" "variation_spawner"
-	"origin" "-1024 -1440 -376.966"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "25"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 90 0"
+		"targetname" "variation_spawner"
+		"origin" "-960 -1440 -376.966"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "25"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 90 0"
-	"targetname" "variation_spawner"
-	"origin" "-960 -1440 -376.966"
-	editor
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "27"
+		"classname" "logic_timer"
+		"RefireTime" "2"
+		"spawnflags" "0"
+		"StartDisabled" "1"
+		"targetname" "variation_timer"
+		"UseRandomTime" "0"
+		"connections"
+		{
+			"OnTimer" "variation_spawner,SpawnZombie,common_male_tanktop_jeans common_variation,0,-1"
+			"OnTimer" "common_variation,kill,,1.9,-1"
+		}
+		"origin" "-992 -1344 -320.966"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-}
-"entity"
-{
-	"id" "27"
-	"classname" "logic_timer"
-	"RefireTime" "2"
-	"spawnflags" "0"
-	"StartDisabled" "1"
-	"targetname" "variation_timer"
-	"UseRandomTime" "0"
-	"connections"
-	{
-		"OnTimer" "variation_spawner,SpawnZombie,common_male_tanktop_jeans common_variation,0,-1"
-		"OnTimer" "common_variation,kill,,1.9,-1"
-	}
-	"origin" "-992 -1344 -320.966"
-	"editor"
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
-	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -408,7 +408,7 @@
 		"commentaryfile" "#commentary\com-infectedvariation.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Ricardo Ariza"
 		"synopsis" ""
 		"connections"
@@ -430,94 +430,94 @@
 		"commentaryfile" "#commentary\com-localmusic.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Erik Wolpaw"
 		"synopsis" ""
 	}
-"entity"
-{
-	"id" "37"
-	"classname" "logic_case"
-	"targetname" "texture_case"
-	connections
+	"entity"
 	{
-		"OnCase01" "smoker_spawnerSpawnZombiecommon_female_tanktop_jeans common_texture0-1"
-		"OnCase02" "boomer_spawnerSpawnZombiecommon_female_tshirt_skirt common_texture0-1"
-		"OnCase03" "hunter_spawnerSpawnZombiecommon_male_tshirt_cargos common_texture0-1"
+		"id" "37"
+		"classname" "logic_case"
+		"targetname" "texture_case"
+		connections
+		{
+			"OnCase01" "smoker_spawnerSpawnZombiecommon_female_tanktop_jeans common_texture0-1"
+			"OnCase02" "boomer_spawnerSpawnZombiecommon_female_tshirt_skirt common_texture0-1"
+			"OnCase03" "hunter_spawnerSpawnZombiecommon_male_tshirt_cargos common_texture0-1"
+		}
+		"origin" "-2304 -992 -320"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-	"origin" "-2304 -992 -320"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
+		"id" "39"
+		"classname" "logic_relay"
+		"spawnflags" "0"
+		"targetname" "texture_relay"
+		"connections"
+		{
+			"OnTrigger" "texture_casePickRandomShuffle0-1"
+		}
+		"origin" "-2304 -992 -352"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-}
-"entity"
-{
-	"id" "39"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"targetname" "texture_relay"
-	"connections"
+	"entity"
 	{
-		"OnTrigger" "texture_casePickRandomShuffle0-1"
+		"id" "41"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 0 0"
+		"targetname" "boomer_spawner"
+		"origin" "-2496 -928 -372"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-	"origin" "-2304 -992 -352"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
+		"id" "43"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 0 0"
+		"targetname" "smoker_spawner"
+		"origin" "-2496 -928 -372"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "41"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 0 0"
-	"targetname" "boomer_spawner"
-	"origin" "-2496 -928 -372"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "45"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 0 0"
+		"targetname" "hunter_spawner"
+		"origin" "-2496 -928 -372"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "43"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 0 0"
-	"targetname" "smoker_spawner"
-	"origin" "-2496 -928 -372"
-	"editor"
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
-	}
-}
-"entity"
-{
-	"id" "45"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 0 0"
-	"targetname" "hunter_spawner"
-	"origin" "-2496 -928 -372"
-	"editor"
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
-	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -529,7 +529,7 @@
 		"commentaryfile" "#commentary\com-secretingredients.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Bronwen Grimes"
 		"synopsis" ""
 		"connections"
@@ -539,72 +539,72 @@
 			"oncommentarystopped" "texture_relay,Enable,,0.1,-1"
 		}
 	}
-"entity"
-{
-	"id" "51"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 315 0"
-	"targetname" "ceda_spawner"
-	"origin" "-2304 -16 -368"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "51"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 315 0"
+		"targetname" "ceda_spawner"
+		"origin" "-2304 -16 -368"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "53"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 0 0"
-	"targetname" "construction_spawner"
-	"origin" "-2336 -64 -368"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "53"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 0 0"
+		"targetname" "construction_spawner"
+		"origin" "-2336 -64 -368"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "55"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 270 0"
-	"targetname" "eyes_spawner"
-	"origin" "-2256 0 -368"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "55"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 270 0"
+		"targetname" "eyes_spawner"
+		"origin" "-2256 0 -368"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "57"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"targetname" "eyes_relay"
-	"connections"
+	"entity"
 	{
-		"OnTrigger" "eyes_spawnerSpawnZombiecommon_female_tshirt_skirt common_eyes0-1"
-		"OnTrigger" "ceda_spawnerSpawnZombiecommon_male_ceda common_ceda0-1"
-		"OnTrigger" "construction_spawnerSpawnZombiecommon_male_roadcrew common_construction0-1"
+		"id" "57"
+		"classname" "logic_relay"
+		"spawnflags" "0"
+		"targetname" "eyes_relay"
+		"connections"
+		{
+			"OnTrigger" "eyes_spawnerSpawnZombiecommon_female_tshirt_skirt common_eyes0-1"
+			"OnTrigger" "ceda_spawnerSpawnZombiecommon_male_ceda common_ceda0-1"
+			"OnTrigger" "construction_spawnerSpawnZombiecommon_male_roadcrew common_construction0-1"
+		}
+		"origin" "-2256 -96 -344"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-	"origin" "-2256 -96 -344"
-	"editor"
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
-	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -616,7 +616,7 @@
 		"commentaryfile" "#commentary\com-glowingeyes.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Thorsten Scheuermann"
 		"synopsis" ""
 		"connections"
@@ -628,40 +628,40 @@
 			"oncommentarystopped" "eyes_relay,Enable,,0.1,-1"
 		}
 	}
-"entity"
-{
-	"id" "2"
-	"classname" "commentary_zombie_spawner"
-	"angles" "0 0 0"
-	"targetname" "furniture_spawner"
-	"origin" "-2848 -160 -364"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "2"
+		"classname" "commentary_zombie_spawner"
+		"angles" "0 0 0"
+		"targetname" "furniture_spawner"
+		"origin" "-2848 -160 -364"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "4"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"targetname" "furniture_relay"
-	"connections"
+	"entity"
 	{
-		"OnTrigger" "furniture_spawnerSpawnZombieboomer boomer0-1"
+		"id" "4"
+		"classname" "logic_relay"
+		"spawnflags" "0"
+		"targetname" "furniture_relay"
+		"connections"
+		{
+			"OnTrigger" "furniture_spawnerSpawnZombieboomer boomer0-1"
+		}
+		"origin" "-2816 -160 -352"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-	"origin" "-2816 -160 -352"
-	"editor"
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
-	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -673,7 +673,7 @@
 		"commentaryfile" "#commentary\com-furniture.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Sergiy Migdalsky"
 		"synopsis" ""
 		"connections"
@@ -683,77 +683,77 @@
 			"oncommentarystopped" "furniture_relay,Enable,,0.1,-1"
 		}
 	}
-"entity"
-{
-	"id" "26"
-	"classname" "logic_relay"
-	"spawnflags" "1"
-	"targetname" "pipebomb_relay"
-	"connections"
+	"entity"
 	{
-		"OnTrigger" "pipebomb_templateForceSpawn0-1"
+		"id" "26"
+		"classname" "logic_relay"
+		"spawnflags" "1"
+		"targetname" "pipebomb_relay"
+		"connections"
+		{
+			"OnTrigger" "pipebomb_templateForceSpawn0-1"
+		}
+		"origin" "-3456 -704 -344"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-	"origin" "-3456 -704 -344"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
+		"id" "20"
+		"classname" "point_template"
+		"spawnflags" "2"
+		"targetname" "pipebomb_template"
+		"Template01" "pipebomb_spawn"
+		"origin" "-3456 -704 -368"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "20"
-	"classname" "point_template"
-	"spawnflags" "2"
-	"targetname" "pipebomb_template"
-	"Template01" "pipebomb_spawn"
-	"origin" "-3456 -704 -368"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
+		"id" "22"
+		"classname" "weapon_pipe_bomb_spawn"
+		"angles" "0 0 0"
+		"count" "1"
+		"solid" "6"
+		"spawnflags" "2"
+		"targetname" "pipebomb_spawn"
+		"origin" "-3455 -805 -375"
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "22"
-	"classname" "weapon_pipe_bomb_spawn"
-	"angles" "0 0 0"
-	"count" "1"
-	"solid" "6"
-	"spawnflags" "2"
-	"targetname" "pipebomb_spawn"
-	"origin" "-3455 -805 -375"
-	"editor"
+	"entity"
 	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1500]"
+		"id" "24"
+		"classname" "weapon_pipe_bomb_spawn"
+		"angles" "90 45 0"
+		"count" "1"
+		"solid" "6"
+		"spawnflags" "2"
+		"targetname" "pipebomb_spawn"
+		"origin" "-3444 -798 -378"
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-}
-"entity"
-{
-	"id" "24"
-	"classname" "weapon_pipe_bomb_spawn"
-	"angles" "90 45 0"
-	"count" "1"
-	"solid" "6"
-	"spawnflags" "2"
-	"targetname" "pipebomb_spawn"
-	"origin" "-3444 -798 -378"
-	"editor"
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
-	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -765,12 +765,12 @@
 		"commentaryfile" "#commentary\com-pipebombs.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Torsten Zabka"
 		"synopsis" ""
 		"connections"
 		{
-			"oncommentarystarted" "pipebomb_relay,trigger,0,-1"	
+			"oncommentarystarted" "pipebomb_relay,trigger,0,-1"
 		}
 	}
 }

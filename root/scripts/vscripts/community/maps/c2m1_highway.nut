@@ -65,7 +65,6 @@ function DoRoundFixes()
 		con_comment( "KILL:\tShrubwall shortcut unpatched for Coop (popular request)." );
 
 		EntFire( g_UpdateName + "_shortcut_start*", "Kill" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -77,7 +76,6 @@ function DoRoundFixes()
 		make_clip( "_tank_busleft", "Survivors", 1, "-258 -56 0", "271 52 430", "1731 6723 -574", "0 -28 0" );
 		make_clip( "_tank_busright", "Survivors", 1, "-284 -48 -200", "284 48 200", "1688 7008 -344", "0 22 0" );
 		make_clip( "_tank_fence", "Survivors", 1, "-780 -14 -130", "780 14 156", "2588 7168 -412" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -89,7 +87,6 @@ function DoRoundFixes()
 		make_clip( "_survival_midnightsign", "Survivors", 1, "-190 -155 -37", "190 145 162", "2338 6131 -415" );
 		make_clip( "_survival_boostshrub", "Survivors", 1, "-24 -208 0", "27 280 112", "3079 6479 -343" );
 		make_clip( "_survival_fence_extend", "Survivors", 1, "0 -234 0", "77 0 360", "2042 3837 -640" );
-
 	}
 	if ( g_BaseMode == "scavenge" )
 	{
@@ -98,7 +95,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_scavenge_fence_painthop", "Survivors", 1, "0 -234 -145", "77 0 360", "2042 3837 -640" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

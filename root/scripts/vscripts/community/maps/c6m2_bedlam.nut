@@ -44,11 +44,10 @@ function DoRoundFixes()
 		// FIXES
 
 		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
-		
-		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
-		
-		EntFire( "button_minifinale", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_minifinale_clip:Kill::0:-1" );
 
+		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
+
+		EntFire( "button_minifinale", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_minifinale_clip:Kill::0:-1" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -59,7 +58,6 @@ function DoRoundFixes()
 		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
 
 		// MESS == make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1093 -3406 -40", "1759 2002 382", "581 3150 387" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

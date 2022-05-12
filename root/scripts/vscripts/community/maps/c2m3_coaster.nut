@@ -59,18 +59,16 @@ function DoRoundFixes()
 	make_clip( "_onewayhole_blockclip", "Everyone", 1, "-64 -13 -20", "64 13 28", "336 3777 180", "0 160 0" );
 	make_prop( "dynamic", "_onewayhole_blockpipe", "models/props_pipes/pipeset08d_128_001a.mdl", "336 3777 180", "0 160 90", "shadow_no" );
 
-	//con_comment( "LOGIC:\tBeta Coaster Rubble restored for Campaign and Survival relays." );
+	// con_comment( "LOGIC:\tBeta Coaster Rubble restored for Campaign and Survival relays." );
 
-	//make_prop( "dynamic", "_dynamic_coaster_rubble", "models/rollercoaster/coaster_debris.mdl", "0 0 -8", "0 0 0", "shadow_no", "solid_no" );
-	//EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
-	//EntFire( "relay_panicevent", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
+	// make_prop( "dynamic", "_dynamic_coaster_rubble", "models/rollercoaster/coaster_debris.mdl", "0 0 -8", "0 0 0", "shadow_no", "solid_no" );
+	// EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
+	// EntFire( "relay_panicevent", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" || g_BaseMode == "versus" )
 	{
-
 		make_clip( "_commentary_fencewalk_a", "Survivors", 1, "-4 0 0", "8 256 512", "-2868 1844 122.859" );
 		make_clip( "_commentary_fencewalk_b", "Survivors", 1, "-4 0 0", "8 256 512", "-2700 1964 122.859" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -99,7 +97,6 @@ function DoRoundFixes()
 		make_clip( "_commentary_pretunnel_supports", "Survivors", 1, "0 0 0", "8 350 1600", "-3540.08 2368 128" );
 		make_clip( "_commentary_shortcut_bush_a", "Survivors", 1, "-16 -64 -772", "16 64 772", "-4097 2048 956" );
 		make_clip( "_commentary_shortcut_bush_b", "Survivors", 1, "-16 -78 -772", "16 78 772", "-4133 2174 956", "0 31 0" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -154,17 +151,22 @@ function DoMapSpawnFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move tank spawn in the swan room to the next room forward (~25% boss flow)
+	// Move Tank spawn in the swan room to the next room forward (~25% boss flow).
+
 	if ( CheckToWarpTank( hndTank, [-300, 4100, 720, 4850] ) )
 	{
 		hndTank.SetOrigin( Vector( -312, 4155, 128.1 ) );
 	}
-	// move tank spawn after the coaster one way drop to the button area (76-79% boss flow)
+
+	// Move Tank spawn after the coaster one-way drop to the button area (76-79% boss flow).
+
 	else if ( CheckToWarpTank( hndTank, [-3700, 400, -3100, 1775] ) )
 	{
 		hndTank.SetOrigin( Vector( -3810, 1845, 160.1 ) );
 	}
-	// additional warp for the coaster one way drop area (80-83% boss flow)
+
+	// Additional warp for the coaster one-way drop area (80-83% boss flow).
+
 	else if ( CheckToWarpTank( hndTank, [-3700, 1775, -3100, 2850] ) )
 	{
 		hndTank.SetOrigin( Vector( -3423, 3480, 368.1 ) );

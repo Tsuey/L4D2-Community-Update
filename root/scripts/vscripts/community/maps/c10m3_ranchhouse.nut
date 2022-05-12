@@ -54,7 +54,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_cliprework_smokertrolling", "Survivors", 1, "-207 -21 0", "219 8 259", "-11857 -5323 85" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

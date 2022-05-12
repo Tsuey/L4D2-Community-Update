@@ -12,7 +12,7 @@ function DoRoundFixes()
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip( "_commentary_lower_windows", "Everyone", 1, "-4 -560 -240", "4 560 240", "1652 6960 2144" );
-		
+
 		// FIX: Prevent the earliest press-forward balcony window shortcut.
 
 		// Teamwork shortcut. Will only patch for Coop if the Community wills so for parkour-esque shortcuts.
@@ -60,7 +60,7 @@ function DoRoundFixes()
 		make_clip( "_commentary_lower_windows_e", "Everyone", 1, "-8 -56 -570", "4 8 8", "1654 6584 2473" );
 		make_clip( "_commentary_lower_windows_f", "Everyone", 1, "-8 -56 -570", "4 8 8", "1654 6456 2473" );
 	}
-	if ( g_BaseMode == "versus")
+	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 

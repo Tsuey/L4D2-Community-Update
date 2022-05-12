@@ -1,6 +1,6 @@
 "Entities"
 {
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1Uphill"
@@ -8,7 +8,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1Uphill"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1DownHere"
@@ -16,7 +16,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1DownHere"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1ThroughHere"
@@ -24,7 +24,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1ThroughHere"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1ThroughWindow"
@@ -32,7 +32,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1ThroughWindow"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1DownHere2"
@@ -40,7 +40,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1DownHere"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1UpSteps"
@@ -48,7 +48,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1UpSteps"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1CrossHere"
@@ -56,7 +56,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1CrossHere"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1SearchHouses"
@@ -64,7 +64,7 @@
 		"angles" "0 -0.5143264532 0"
 		"contextsubject" "C13M1SearchHouses"
 	}
-	entity
+	"entity"
 	{
 		"classname" "info_remarkable"
 		"targetname" "C13M1PreBunkerOpen"

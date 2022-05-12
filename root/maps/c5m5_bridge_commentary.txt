@@ -2,6 +2,14 @@
 {
 	"entity"
 	{
+		"classname" "info_remarkable"
+		"targetname" "C5M5Truck"
+		"origin" "3658.275391 6444.389160 455.531250"
+		"angles" "21.638504 -2.366174 0.000000"
+		"contextsubject" "C5M5Truck"
+	}
+	"entity"
+	{
 		"classname" "point_clientcommand"
 		"targetname" "comm_cmd"
 		"origin" "0 0 0"
@@ -38,7 +46,7 @@
 		"commentaryfile" "#commentary\com-straightforward.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Ido Magal"
 		"synopsis" ""
 	}
@@ -53,7 +61,7 @@
 		"commentaryfile" "#commentary\com-assets.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Matt Wright"
 		"synopsis" ""
 	}
@@ -68,40 +76,40 @@
 		"commentaryfile" "#commentary\com-L4dictionary.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Steve Bond"
 		"synopsis" ""
 	}
-"entity"
-{
-	"id" "2"
-	"classname" "info_target"
-	"angles" "0 0 0"
-	"targetname" "elevation_camera"
-	"origin" "-4224 5760 640"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
+		"id" "2"
+		"classname" "info_target"
+		"angles" "0 0 0"
+		"targetname" "elevation_camera"
+		"origin" "-4224 5760 640"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
 	}
-}
-"entity"
-{
-	"id" "4"
-	"classname" "info_target"
-	"angles" "0 0 0"
-	"targetname" "elevation_target"
-	"origin" "-3680 6048 576"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
+		"id" "4"
+		"classname" "info_target"
+		"angles" "0 0 0"
+		"targetname" "elevation_target"
+		"origin" "-3680 6048 576"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
 	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -113,7 +121,7 @@
 		"commentaryfile" "#commentary\com-elevation.wav"
 		"viewtarget" "elevation_target"
 		"viewposition" "elevation_camera"
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Chris Chin"
 		"synopsis" ""
 	}
@@ -128,66 +136,66 @@
 		"commentaryfile" "#commentary\com-weatherfx.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Tim Larkin"
 		"synopsis" ""
 	}
-"entity"
-{
-	"id" "20"
-	"classname" "point_template"
-	"spawnflags" "2"
-	"targetname" "grenade_template"
-	"Template01" "grenade_spawn"
-	"origin" "2944 6336 512"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1500]"
+		"id" "20"
+		"classname" "point_template"
+		"spawnflags" "2"
+		"targetname" "grenade_template"
+		"Template01" "grenade_spawn"
+		"origin" "2944 6336 512"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1500]"
+		}
 	}
-}
-"entity"
-{
-	"id" "22"
-	"classname" "logic_relay"
-	"targetname" "grenade_relay"
-	"spawnflags" "1"
-	"connections"
+	"entity"
 	{
-		"OnTrigger" "grenade_templateForceSpawn0-1"
+		"id" "22"
+		"classname" "logic_relay"
+		"targetname" "grenade_relay"
+		"spawnflags" "1"
+		"connections"
+		{
+			"OnTrigger" "grenade_templateForceSpawn0-1"
+		}
+		"origin" "2944 6336 480"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 1000]"
+		}
 	}
-	"origin" "2944 6336 480"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
+		"id" "24"
+		"classname" "weapon_grenade_launcher_spawn"
+		"angles" "0 90 -90"
+		"body" "0"
+		"count" "5"
+		"disableshadows" "1"
+		"skin" "0"
+		"solid" "6"
+		"spawnflags" "2"
+		"targetname" "grenade_spawn"
+		"origin" "3108 6244 528.533"
+		"editor"
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[2500 -4268]"
+		}
 	}
-}
-"entity"
-{
-	"id" "24"
-	"classname" "weapon_grenade_launcher_spawn"
-	"angles" "0 90 -90"
-	"body" "0"
-	"count" "5"
-	"disableshadows" "1"
-	"skin" "0"
-	"solid" "6"
-	"spawnflags" "2"
-	"targetname" "grenade_spawn"
-	"origin" "3108 6244 528.533"
-	"editor"
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[2500 -4268]"
-	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -199,7 +207,7 @@
 		"commentaryfile" "#commentary\com-grenadelauncher.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Noel McGinn"
 		"synopsis" ""
 		"connections"
@@ -207,36 +215,36 @@
 			"oncommentarystarted" "grenade_relay,Trigger,,0,-1"
 		}
 	}
-"entity"
-{
-	"id" "16"
-	"classname" "info_target"
-	"angles" "0 0 0"
-	"targetname" "water_camera"
-	"origin" "4896 5568 320"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
+		"id" "16"
+		"classname" "info_target"
+		"angles" "0 0 0"
+		"targetname" "water_camera"
+		"origin" "4896 5568 320"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
 	}
-}
-"entity"
-{
-	"id" "18"
-	"classname" "info_target"
-	"angles" "0 0 0"
-	"targetname" "water_target"
-	"origin" "4576 5856 224"
-	"editor"
+	"entity"
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
+		"id" "18"
+		"classname" "info_target"
+		"angles" "0 0 0"
+		"targetname" "water_target"
+		"origin" "4576 5856 224"
+		"editor"
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
 	}
-}
 	"entity"
 	{
 		"classname" "point_commentary_node"
@@ -248,7 +256,7 @@
 		"commentaryfile" "#commentary\com-flowingwater.wav"
 		"viewtarget" "water_target"
 		"viewposition" "water_camera"
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Alex Vlachos"
 		"synopsis" ""
 	}
@@ -263,7 +271,7 @@
 		"commentaryfile" "#commentary\com-serverbrowsing.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Vitaliy Genkin"
 		"synopsis" ""
 	}
@@ -278,7 +286,7 @@
 		"commentaryfile" "#commentary\com-engineoptimizations.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Brian Jacobson "
 		"synopsis" ""
 	}
@@ -293,17 +301,8 @@
 		"commentaryfile" "#commentary\com-hybridenviron.wav"
 		"viewtarget" ""
 		"viewposition" ""
-		"prevent_movement" 0
+		"prevent_movement" "0"
 		"speakers" "Yasser Malaika"
 		"synopsis" ""
-	}
-
-	"entity"
-	{
-		"classname" "info_remarkable"
-		"targetname" "C5M5Truck"
-		"origin" "3658.275391 6444.389160 455.531250"
-		"angles" "21.638504 -2.366174 0.000000"
-		"contextsubject" "C5M5Truck"
 	}
 }

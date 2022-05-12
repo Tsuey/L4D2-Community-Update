@@ -8,10 +8,10 @@ function DoRoundFixes()
 	make_clip(	"_booster_bridge_TMP1",		"Survivors",	1,	"-234 -550 -17",	"255 0 0",		"0 -638 216" );
 	make_clip(	"_booster_bridge_TMP2",		"Survivors",	1,	"-234 -17 -17",		"210 0 1017",		"0 -1200 216" );
 	make_brush( "_losblock_plywoodc7only", "-1 -93 0", "1 7 72", "193 -1124 16" );
-	//make_clip( "_cliprework_newsandelec1", "Everyone", 1, "-9 -98 0", "11 98 176", "245 -509 0" );
-	//make_clip( "_cliprework_newsandelec2", "Everyone", 1, "-17 0 0", "17 5 132", "241 -404 44", "0 27 0" );
-	//make_clip( "_cliprework_newsandelec3", "Everyone", 1, "-5 -48 0", "0 48 132", "229 -456 44" );
-	//make_clip( "_cliprework_newsandelec4", "Everyone", 1, "-17 0 0", "17 5 132", "239 -512 44", "0 -26 0" );
+	// make_clip( "_cliprework_newsandelec1", "Everyone", 1, "-9 -98 0", "11 98 176", "245 -509 0" );
+	// make_clip( "_cliprework_newsandelec2", "Everyone", 1, "-17 0 0", "17 5 132", "241 -404 44", "0 27 0" );
+	// make_clip( "_cliprework_newsandelec3", "Everyone", 1, "-5 -48 0", "0 48 132", "229 -456 44" );
+	// make_clip( "_cliprework_newsandelec4", "Everyone", 1, "-17 0 0", "17 5 132", "239 -512 44", "0 -26 0" );
 	make_clip( "_booster_windows", "Survivors", 1, "-8 -400 0", "8 400 96", "-1032 568 352" );
 	make_clip( "_booster_skylight_c7only", "Survivors", 1, "-90 -90 -17", "90 90 29", "-768 930 325" );
 	make_clip( "_booster_coolingtanks", "Survivors", 1, "-117 -56 -120", "117 56 80", "-1473 958 402" );

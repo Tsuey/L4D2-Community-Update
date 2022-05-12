@@ -20,6 +20,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 ### Items:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/21c4eae3b3ddb92388c9550d7f55f3f6be299f65) Fixed an animation queue error on idle-use for `"v_models/v_adrenaline.mdl"` viewmodel; also tweaked the look poses for a smoother transition.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/4843a658accc7d92319d7c2aea77580571f67586) Fixed a UV error for the vomitjar `"w_eq_bile_flask.mdl"` world model.<br/>
 
 ### Effects:
 
@@ -63,10 +64,14 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/eff889d1814e3db223291e99a43eb153fa1c399b) Added render coloring support to burned Hunters and Smoker tongue. `[infected/*.vmt]`<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/256db2e542b49735322f679c5f9d43f831ea1134) Adjusted L4D1 Hunter's model animations to better fit model. `[v_models]`<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/439f1ce55ba3810bb998b198b365232ae1e9ad39) Sacrifice Tank used the wrong normal map, leading to shading issues mostly on his legs. `[hulk_traincar_01.vmt]`<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/acdd3d5473e64bebcafc67671b1becd531431b43) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/3cc291558e87eeb16e3117ed95cf7eb631229996) Added missing footstep action events to shoved sequences for Hunter, Smoker and Boomer. `[ani & mdl]`<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/acdd3d5473e64bebcafc67671b1becd531431b43) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/13fb84a819af117e6552c3791ccba69053659de0)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/bb03d040a3dbbb8d119b9119bb302a3350d501b7) Ladder idle animations for Hunter, Smoker and Boomer. `[ani & mdl]`<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/acdd3d5473e64bebcafc67671b1becd531431b43) Replaced broken locational flinches with generic ones for Hunter and Smoker. `[ani & mdl]`<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/acdd3d5473e64bebcafc67671b1becd531431b43) Removed locational crouch flinches from Hunter and replaced them with non-locational, better looking ones. `[ani & mdl]`<br/>
 
 ### Accessibility:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/3e4ba0817605dae7dc55a0f62c61c6ab98c7be2b) Fixed Audio and Keyboard / Mouse menus in the Options flyout having broken navigation keys when trying to use the arrow keys or a controller. `[keyboardmouse & video.res]`<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/3e4ba0817605dae7dc55a0f62c61c6ab98c7be2b) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/a1a9d40044ff7427f511f0ba2568e8b1da9ccd6f) Fixed Audio and Keyboard / Mouse menus in the Options flyout having broken navigation keys when trying to use the arrow keys or a controller. `[keyboardmouse & video.res]`<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/400c97ed40803004485dee9a03f95af19df21a0c) "Tank Claw" hint had incorrect binding "+attack2". `[instructor_lessons.txt]`<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/400c97ed40803004485dee9a03f95af19df21a0c) "Tank Rock" hint had incorrect binding "+attack". `[instructor_lessons.txt]`<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/400c97ed40803004485dee9a03f95af19df21a0c) "Jockey Leap" hint had the incorrect ability_use of "ability_spit", and now uses the correct "ability_leap". `[instructor_lessons.txt]`<br/>
@@ -75,38 +80,41 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/3474db1fa0544ab2eca0f3537346c43a59ff863d)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/6202c444e4fbe805803d40059b62b70af2afcc05) Various nav fixes for -9999 flow areas.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/a36af7e04c4151905b7a3d62db9ed1ddcf2ebf2e)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Lots of bad connections fixed for better bot navigation.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/59d23d1b4be5daf487fbcfcaad1da4c559c4d541) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/c16ecdc60ad8ba196ce6ebbd233cb17697165e23) Survivor bots can save you in more places.<br/>
-&emsp;[+](URL_HERE) File size optimization and merging.<br/>
-&emsp;[+](URL_HERE) Lump edits to account for changed weapon density values.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/59d23d1b4be5daf487fbcfcaad1da4c559c4d541) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/c16ecdc60ad8ba196ce6ebbd233cb17697165e23)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/8ac40eb533cd7d774938ab9eb6240a1b4ce53ab9) Survivor bots can save you in more places.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/dc747df90b852f77494c546f16a1a8a2dea9b538) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/f94320612ccbc8083cdeb37a3ac878ad91276153)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/de7010043611cda949dec23b9ee3c66ded2a56a0) File size optimization through merging and ID compression.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/824fa8d339784746bc1e65b34b65a440bce400af) Lump edits to account for changed weapon density values.<br/>
 
 # Map Fixes
 
 ### General:
 
+> **Developer Note:** When it comes to shortcuts in non-competitive modes, Valve sides with letting players have reasonable fun. Patching via <ins>Commentary</ins> files has been deprecated, which previously added all blockers to all modes.
+
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/a030ffa08aa465cc4d3886b7e8caa29ab8e66c2f) Replaced most of `make_atomizer` I/O logic with VScript to increase reliability in tracking hittable griefs.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/3216072b6047c70a8485675aa4fb4085111a89a9) `7 "props_vehicles"` glass props and van interior textures had diffuse modulation support removed to avoid accidental painting along with the actual vehicles.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/pull/131) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/23b34a9c4d3d6e0cea327f2255b0ff21a89ec9c9)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/3b562de785bd118ff328bf069c209086991ad85b)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/8796036509a5086345e31662707b8ce195b10fc8)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/40e419c1c48ee04d652bdb5b9221b3252225229e) <ins>Commentary</ins>: Convert [original _commentary.txt](https://github.com/Tsuey/L4D2-Community-Update/commit/38811e5b20b72f86bf56df4567d96e6d77a3a69d) mapfix clips and props [to VScript](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) so those files are [now reserved](https://github.com/Tsuey/L4D2-Community-Update/commit/44a95623460c5bbb880c2b54f42f8a6feee02719) for dialogue info_remarkables and Commentary Mode; changes are only specified for the few cases where there is an observable difference. `[Pull Request]`<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/pull/131) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/23b34a9c4d3d6e0cea327f2255b0ff21a89ec9c9)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/3b562de785bd118ff328bf069c209086991ad85b)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/8796036509a5086345e31662707b8ce195b10fc8)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/40e419c1c48ee04d652bdb5b9221b3252225229e) <ins>Commentary</ins>: Convert [original _commentary.txt](https://github.com/Tsuey/L4D2-Community-Update/commit/38811e5b20b72f86bf56df4567d96e6d77a3a69d) mapfix clips and props [to VScript](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) so those files are [now reserved](https://github.com/Tsuey/L4D2-Community-Update/commit/44a95623460c5bbb880c2b54f42f8a6feee02719) for dialogue info_remarkables and Commentary Mode; changes are only specified for cases where there is an observable difference or are somehow unique. `[Pull Request]`<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ff0090ce6a6b886b767e70ef6e3dc8b46fae79ce) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/d17c14dec506c157e4dbe82aacff0bb1a34d030a)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/5f84fcb0d51296bc1b17351a9baa4fbde170ae1f)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/57d1b2f5353c6811f83942d91e7689748c5cfac1)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/37c8b3b26e44077f661aea86bb04b647a3eb982f) <ins>Commentary</ins>: Fixed extremely minor regressions on various maps (flipped signs / wrong blocktype / edgebugs) that occurred when converting and improving clips.<br/>
 
 ### Dead Center
 
 #### Map 1:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Move Ghost SI exploit kill trigger down a lot to solve a rare issue.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/fae86cb8f5abf0f090d05ab8086454f3f776383c) Don't spawn Versus-specific changes for modes such as Scavenge.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/640e1c07ae5ac9d6a465a35a57b109d64bab93e5) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/5d8ea68b88b880cc1eb093f1b81eeb20036ffce0) <ins>Commentary</ins>: Improved retail clips that blocked various window drops.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/640e1c07ae5ac9d6a465a35a57b109d64bab93e5)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/5d8ea68b88b880cc1eb093f1b81eeb20036ffce0) <ins>Commentary</ins>: Restored old Coop shortcuts by unblocking suite balcony, long ledge and window drops.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Move Ghost SI exploit kill trigger down a lot to solve a rare issue.<br/>
 
 #### Map 2:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) Added navblocker under destroyed Tanker truck.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/44a95623460c5bbb880c2b54f42f8a6feee02719) <ins>Commentary</ins>: Removed a redundant point_nav_attribute_region that set NOTHREAT by the one-way drop as it's already saved into the nav.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) <ins>Navmesh</ins>: Survivor bots can now rescue you atop the hedges.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) <ins>Navmesh</ins>: Fixed end saferoom areas for `"warp_all_survivors_to_checkpoint"` to work properly.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/df956ee43031bc8d7ec936e5e024c0bcb9c5d9e2) <ins>Versus</ins>: Improve clip that blocks a boost onto mall roof and outside of map.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) <ins>Navmesh</ins>: Minor SI stuck fixes and some optimizations.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) Added navblocker under destroyed Tanker truck.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/df956ee43031bc8d7ec936e5e024c0bcb9c5d9e2) <ins>Versus</ins>: Improve clip that blocks a boost onto mall roof and outside of map.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/b6e41ed07771e2fbef404814efd17603df07bd15) <ins>Versus</ins>: Restored 4 Infected ladders behind the Tanker fence for modded server use.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/b6e41ed07771e2fbef404814efd17603df07bd15) <ins>Versus</ins>: Polished 3 glitchy TLS Infected ladders.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/b6e41ed07771e2fbef404814efd17603df07bd15) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 3 glitchy TLS Infected ladders.<br/>
 
 #### Map 3:
 
@@ -122,26 +130,33 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 1:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Add navblocker at fence/car to prevent Tank spawn flow exploit.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5414200ed1ccb0492bc0bef99d9e7a5324075dd2) `"props_urban/diving_board001.mdl"` handle collision was too cheap and didn't allow bullets through the big gap.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Add navblocker at fence/car to prevent Tank spawn flow exploit.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 7 glitchy TLS Infected ladders and removed some redundant duplicates.<br/>
 
 #### Map 2:
 
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/44a95623460c5bbb880c2b54f42f8a6feee02719) <ins>Commentary</ins>: Removed clip that creates a permstuck spot by the trailers outside the warehouse; didn't block anything in particular.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Versus</ins>: Added navblockers that prevent Survivors from getting full distance points jumping from light to hedge at carousel; unblocked once trigger at benches is passed.<br/>
 
 #### Map 3:
 
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop shortcuts by unblocking various Coaster supports, railings and the bush.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/54b54f91e1192c6e4256d32dfcc4d0184d64fc7f) <ins>Commentary</ins>: Don't spawn the shortcut clips over the fences for modes such as Scavenge.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/befce94f3d414d16b10282937319ce2f1f4882f3) <ins>Commentary</ins>: Raised railing and support clips to skybox just before the tunnel.<br/>
 
 #### Map 4:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Food cart ladder replaced with better clone and smoothed with new clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Extended a clip to prevent Survivors from being hit out of bounds at benches near strongman game.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop and Survival shortcut by removing blocker above generator light at barn entrance.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ef8160b38cd3c1f5e5fafc92aeb4cc7ff7a66087) <ins>Survival</ins>: Moved clip above fence blockade to Survival-only instead of all modes.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Food cart ladder replaced with better clone and smoothed with new clip.<br/>
 
 #### Map 5:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Prevent bass and anvil cases from disappearing.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 2 glitchy TLS Infected ladders just outside saferoom.<br/>
 
 ### Swamp Fever
 
@@ -149,29 +164,36 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Patched janky ladder near the ferry event.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Swamp gator has been given a proper name... and some bite.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip, a TLS clip, added tree axiswarp.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete all func SI clip, a TLS clip, added tree axiswarp.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/df956ee43031bc8d7ec936e5e024c0bcb9c5d9e2) Improve two clips that block hedges and gap over fence in start area to get outside of map.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete all func SI clip, a TLS clip, added tree axiswarp.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip, a TLS clip, added tree axiswarp.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 3 glitchy TLS Infected ladders in the start area.<br/>
 
 #### Map 2:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f6096efb6f8817654805cb187b93d1defbe78215) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/eb2d3a83bf80df1faf8b294e38e10688655caddb) <ins>Commentary</ins>: Improved TLS clip behavior when forcing plane horde even if the plane door is skipped.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/feed7b1523cbd47600a670b122258c3c6ff5530b) Improved TLS triggers by adding more when forcing plane horde even if the plane door is skipped.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) Blocked a permstuck spot behind some rocks at the start near the parachutist.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f6096efb6f8817654805cb187b93d1defbe78215) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/eb2d3a83bf80df1faf8b294e38e10688655caddb) <ins>Commentary</ins>: Improved TLS clip behavior when forcing plane horde even if the plane door is skipped.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 4 glitchy TLS Infected ladders on the end barricade.<br/>
 
 #### Map 3:
 
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Fixed bridge lever prop remaining glowing after being lowered.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Set bridge lowering speed to 24 from 5 (in order to match the audio).<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Slightly adjusted a ladder to prevent getting stuck while climbing.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Item density adjustments.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/23b34a9c4d3d6e0cea327f2255b0ff21a89ec9c9) <ins>Commentary</ins>: Restored old Coop and Survival shortcut by removing blocker that prevented jump onto roof from fire barrel.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) <ins>Navmesh</ins>: Typical fixes.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) <ins>Navmesh</ins>: Bots won't fall to water all the time from walkways and shacks.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) <ins>Navmesh</ins>: A lot of bad connections fixed (like just going through the roof for example).<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) <ins>Navmesh</ins>: Added a ladder to an area where SI have almost no way to get to you.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) <ins>Navmesh</ins>: Should be a lot less stuckage on prop_wall_breakables. `[c3m3_breakablewalls.nut]`<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Fixed bridge lever prop remaining glowing after being lowered.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Set bridge lowering speed to 24 from 5 (in order to match the audio).<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Slightly adjusted a ladder to prevent getting stuck while climbing.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f1c685f88740b2efb833c9b793f1edca6e9601cc) Item density adjustments.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Improve SI clipping of first ladder outside saferoom to allow drop through a large gap.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Moved a TLS Infected ladder out of the Survivor's way at the start and polished another at a trailer.<br/>
 
 #### Map 4:
 
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/d17c14dec506c157e4dbe82aacff0bb1a34d030a) <ins>Commentary</ins>: Restored old Coop shortcut by unblocking top of fence near hedge at the start of town.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/59d23d1b4be5daf487fbcfcaad1da4c559c4d541) <ins>Navmesh</ins>: Typical stuff.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/59d23d1b4be5daf487fbcfcaad1da4c559c4d541) <ins>Navmesh</ins>: Some bad connections fixed.<br/>
 
@@ -180,6 +202,8 @@ This changelog comprehensively summarizes all differences from the live game to 
 #### Map 1:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Prevent Survivor bots from picking up items inside map 4's saferoom.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/44a95623460c5bbb880c2b54f42f8a6feee02719) <ins>Commentary</ins>: Removed a lazy washer box off a table in the Burger Tank since its godspot has been fixed in nav.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Moved up 2 TLS Infected ladders that were too low and added QoL clip.<br/>
 
 #### Map 2:
 
@@ -187,63 +211,87 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/70fa2b79b2c16994e9c782f994e3eb04328407e3) Fixed unreachable pipe_bomb and adrenaline spawn.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/70fa2b79b2c16994e9c782f994e3eb04328407e3) Moved two upgrade spawns over to a new shelf prop so they spawn when transitioning from map 1.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) Added invisible prop at the mill to make it easier for SI bots to navigate.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/42732e4bdaaf95fcfc27b0284ae4c5e36d9b388f) Added debris flag to 2 broken windows in order to prevent getting stuck on them.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Drastically improved upper floor mill factory clips so you no longer bump your head when jumping in some places; clips removed for Coop which also restores a boost shortcut.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop shortcut by removing broken wall clips that blocked a jump up to a pipe to get into the factory early.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/de7010043611cda949dec23b9ee3c66ded2a56a0) <ins>Navmesh</ins>: Fixed player SI being able to spawn in starting saferoom before Survivors left.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/de7010043611cda949dec23b9ee3c66ded2a56a0) <ins>Navmesh</ins>: Visible set fixes and misc optimizations.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 6 glitchy TLS Infected ladders at the silos, semi trailers, and gas station roof.<br/>
 
 #### Map 3:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) Added invisible prop at the mill to make it easier for SI bots to navigate.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) <ins>Navmesh</ins>: Typical nav fixes.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) <ins>Navmesh</ins>: Changed default population from "defaultsugarmill" to "defaultsugarmill_rain".<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) Fixes for various items falling on ground, stuck or unreachable, etc.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) Fixed prop_physics entities being broken on map start; this will allow oxygen and propane tanks to spawn.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Drastically improved upper floor mill factory clips so you no longer bump your head when jumping in some places; clips removed for Coop which also restores a boost shortcut.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) <ins>Navmesh</ins>: Typical nav fixes.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) <ins>Navmesh</ins>: Changed default population from "defaultsugarmill" to "defaultsugarmill_rain".<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 6 glitchy TLS Infected ladders at the silos, semi trailers, and gas station roof.<br/>
 
 #### Map 4:
 
-&emsp;Nothing.
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/dc747df90b852f77494c546f16a1a8a2dea9b538) <ins>Navmesh</ins>: Changed default population from "defaultmilltown" to "defaultmilltown_rain".<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Moved up a TLS Infected ladder that was too low and added QoL clip.<br/>
 
 #### Map 5:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/6202c444e4fbe805803d40059b62b70af2afcc05) Fixed pistol not spawning in saferoom.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/6202c444e4fbe805803d40059b62b70af2afcc05) Slightly moved an item spawn so it doesn't fall underground.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/44a95623460c5bbb880c2b54f42f8a6feee02719) <ins>Commentary</ins>: Removed a lazy washer box off a table in the Burger Tank since its godspot has been fixed in nav.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/44a95623460c5bbb880c2b54f42f8a6feee02719) <ins>Commentary</ins>: Removed godspot clip just off the pier behind the dock since it has been fixed in nav.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/dc747df90b852f77494c546f16a1a8a2dea9b538) <ins>Navmesh</ins>: Changed default population from "defaultmilltown" to "defaultmilltown_rain".<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Moved up a TLS Infected ladder that was too low.<br/>
 
 ### The Parish
 
 #### Map 1:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Improved a clip that blocks getting stuck in skybox.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Rotated a TLS Infected ladder in end area to be up against a building facade.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Versus</ins>: Added new Infected ladder behind fence next to the end saferoom to better fix a permstuck.<br/>
 
 #### Map 2:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Eliminate a permstuck spot that a previous ladder patch created.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Solidify a prop_static chimney so it blocks LOS.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot on start roof.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop ability for Survivors to stand on the fences in the alley and on the tent by the event.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/71fa9f9526e3df9ca7a2b83da6c0c0d10692035a) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/deb238b007af1d812f4620992bbbf98a946c2c00) <ins>Commentary</ins>: Unblock shortcut over fence at tower event when the button to open the doors is pressed.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot on start roof.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Solidify a prop_static chimney so it blocks LOS.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 4 glitchy TLS Infected ladders and clipping around the overpass and event area.<br/>
 
 #### Map 3:
 
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop shortcut to commonhop over the barricade before the sewer.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Versus</ins>: New ladder in far corner of manhole drop area to fix permstuck.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Rotated 2 TLS Infected ladders to be up against a fence instead of a wall and polished 4 others at a dumpster and barricade.<br/>
 
 #### Map 4:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Fixed "mins" for a commonhop clip at an electrical box.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop shortcut to jump over right-side fence to skip first interior.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Moved a TLS Infected ladder to a more useful lower wrecked semi trailer in end area and polished another at a bus.<br/>
 
 #### Map 5:
 
-&emsp;Nothing.
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 3 glitchy TLS Infected ladders in the end area.<br/>
 
 ### The Passing
 
 #### Map 1:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot behind start fence.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/2ca919b8e027ee5673938c0103db09a413543387) Added new itempile `"w_models"` for use with the footlockers and remove old overrides to dramatically free up edicts.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f3ca33702fd3ba826beca04dee0313fda4658e10) Removed 26 unused info_survivor_position entities.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot behind start fence.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 2 glitchy TLS Infected ladders at the car alarm area.<br/>
 
 #### Map 2:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/2ca919b8e027ee5673938c0103db09a413543387) Added new itempile `"w_models"` for use with the footlockers and remove old overrides to dramatically free up edicts.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/7338b3d0f4d6d41a39d4898baf07d21b7076f514) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/6bd019587e678b64086c933134a4c2ada77828ca) Fixed collision issue with clips on the stairs by the saferoom that caused noticeable teleporting when not on a local server.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop alternative path through gap in fence; clip is deleted when the event is started.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Rotated a TLS Infected ladder at plank crossing to be up against fence instead of wall and added QoL clip for trash bags.<br/>
 
 #### Map 3:
 
@@ -259,6 +307,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 #### Map 2:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Versus</ins>: Delete func clip that blocks SI access into end closet.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 8 glitchy TLS Infected ladders in the latter half of the map.<br/>
 
 #### Map 3:
 
@@ -269,25 +318,33 @@ This changelog comprehensively summarizes all differences from the live game to 
 #### Map 1:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Lift anti-grief kill trigger off the ground to prevent an incap glitch.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Add clip to patch a ladder shortcut at the start.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete 1 func SI clip and add 2 anti-stuck clips.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/ca1ccd389a17d2381aebc581bd06911142bf5ff8) Made a specific lamp start asleep in order to restore flashing alarm clock.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Restored old Coop ability to boost up on top of a bus stop roof as a start for more parkour jumps.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) <ins>Commentary</ins>: Conversion from player to physics blocker resolved commonly reported instance of "pushy" collision when standing on a ledge.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8ac40eb533cd7d774938ab9eb6240a1b4ce53ab9) <ins>Navmesh</ins>: Added some empty attributes on top of railings.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8ac40eb533cd7d774938ab9eb6240a1b4ce53ab9) <ins>Navmesh</ins>: Added no_mobs attribute on some escape stairs that are on the buildings.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8ac40eb533cd7d774938ab9eb6240a1b4ce53ab9) <ins>Navmesh</ins>: Improved some jump up connections on cars.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete 1 func SI clip and add 2 anti-stuck clips.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Add clip to patch a ladder shortcut at the start.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished a glitchy TLS Infected ladder at the flatnose truck.<br/>
 
 #### Map 2:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Added visual vending machine step to get back in-bounds.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Add anti-stuck 6 clips for rubble and end area.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Added visual vending machine step to get back in-bounds.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/82d6685775b1ad32118a26c6dbee6e247e20b1a5) <ins>Versus</ins>: Fixed clips that block Survivors from unattackable areas outside of map.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Polished 6 glitchy TLS Infected ladders around subway cars, rubble, and a tanker.<br/>
 
 #### Map 3:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) Mitigator axiswarp for getting stuck in scissor lift.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>QoL</ins>: Fred?!<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Versus</ins>: Thicken SI warehouse clip Tanks could potentially spawn behind.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete 3 func SI clips and add anti-stuck clip on start rooftops.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/a36af7e04c4151905b7a3d62db9ed1ddcf2ebf2e) <ins>Navmesh</ins>: When warehouse door opens flow numbers won't drastically change.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/a36af7e04c4151905b7a3d62db9ed1ddcf2ebf2e) <ins>Navmesh</ins>: Boss spawning variation in Versus when one team opens the warehouse door should be fixed hopefully without any side effects.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/a36af7e04c4151905b7a3d62db9ed1ddcf2ebf2e) <ins>Navmesh</ins>: Some random minor stuff.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete 3 func SI clips and add anti-stuck clip on start rooftops.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Versus</ins>: Thicken SI warehouse clip Tanks could potentially spawn behind.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) <ins>Versus</ins>: Moved up a TLS Infected ladder that was too low on scissor lift roof and polished another at nearby overturned semi.<br/>
 
 #### Map 4:
 
@@ -307,8 +364,8 @@ This changelog comprehensively summarizes all differences from the live game to 
 #### Map 2:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>QoL</ins>: Clip to prevent gascans from falling between finale buses.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete 1 fence model to direct SI players in-bounds.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot far behind start area.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete 1 fence model to direct SI players in-bounds.<br/>
 
 ### Death Toll
 
@@ -319,8 +376,8 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 2:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip, 1 fence model, and add 3 ladders to assist in-bounds.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete all func SI clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete all func SI clip, 1 fence model, and add 3 ladders to assist in-bounds.<br/>
 
 #### Map 3:
 
@@ -329,8 +386,8 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 4:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Add 2 anti-stuck clips for behind event barricade and far corner.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Add 2 anti-stuck clips from VS Survival and 1 along house row.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Add 2 anti-stuck clips for behind event barricade and far corner.<br/>
 
 #### Map 5:
 
@@ -344,8 +401,8 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 2:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete 1 func SI clip for final street left barricade.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete 2 func SI clip for final street and add anti-stuck fence clip.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete 1 func SI clip for final street left barricade.<br/>
 
 #### Map 3:
 
@@ -353,8 +410,8 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 4:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Fix SI permstuck spot inside the end rubble.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) Rubble axiswarp with QoL and OoB clips to reduce stuck bot and player Tank spawns.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Fix SI permstuck spot inside the end rubble.<br/>
 
 #### Map 5:
 
@@ -368,23 +425,23 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 2:
 
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/f12522bbd3501783ab260dfaab89de1cf1c1fee9) Added missing breakwall texture to wall in starting warehouse and removed prop shadow.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot at end of tunnel.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Fix prop from slightly hovering above vent.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Versus</ins>: SI permstuck beyond the end of tunnel just before end safe room.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot at end of tunnel.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/32daf1fa36cbc4b44742e480543466b57e9dd4d6) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/f12522bbd3501783ab260dfaab89de1cf1c1fee9) Added missing breakwall texture to wall in starting warehouse and removed prop shadow.<br/>
 
 #### Map 3:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) Permstuck in tree near shed (for SI / RocketDude).<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete 1 func SI clip for wrongway at end of train tunnel.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Delete 1 func SI clip for wrongway at end of train tunnel.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>VS Survival</ins>: Delete 1 func SI clip for wrongway at end of train tunnel.<br/>
 
 #### Map 4:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Patched fence Infected ladder next to lawnmower room.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot behind start safe room.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5710b35a74a7b5099de18a2badb9af7688eced9) Made a Tier 1 near a Tier 2 spawn properly.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e5710b35a74a7b5099de18a2badb9af7688eced9) Moved unreachable items to allow them to be picked up.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) <ins>Taaannnk!!</ins>: Clip for Tank stuck spot behind start safe room.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) <ins>Versus</ins>: Patched fence Infected ladder next to lawnmower room.<br/>
 
 #### Map 5:
 
@@ -394,12 +451,18 @@ This changelog comprehensively summarizes all differences from the live game to 
 
 #### Map 1:
 
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/pull/131) <ins>Commentary</ins>: Dramatically improved radio tower clip; unblocked for Coop and kept for PvP.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5cf03ceca59c9174268e3f7eb3dba776a09e205e) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/37c8b3b26e44077f661aea86bb04b647a3eb982f) <ins>Commentary</ins>: Dramatically improved radio tower clip; unblocked for Coop and kept for Versus.<br/>
 
 #### Map 2:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/474cd5c039356baca6c9b1ed7c5e8bf550819090) Fix permstuck next to military truck leading to barricade.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/8a5e1ff03f06bf0aaed68dc693ed66b1b4d77611) Fix a regression with easy event skip clip and a permstuck clip nearby.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cf3fb0903fc48b28cec500c4b7877ddf39a6dafe) Added a ladder on a truck to make it easier for SI and Survivor bots to follow players up there.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cd9d52b9c191a87936801e9cdb0c1b70bd7f4858) Fixed an item spawn so adrenaline will no longer fall underground.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cd9d52b9c191a87936801e9cdb0c1b70bd7f4858) Added a nav attribute region for some stairs, in order for Commons to run up the stairs properly instead of trying to climb them.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f94320612ccbc8083cdeb37a3ac878ad91276153) <ins>Navmesh</ins>: Optimized a lot of areas.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f94320612ccbc8083cdeb37a3ac878ad91276153) <ins>Navmesh</ins>: Adjusted a lot of jump up connections.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/f94320612ccbc8083cdeb37a3ac878ad91276153) <ins>Navmesh</ins>: Added empty attributes on several places on the hills.<br/>
 
 #### Map 3:
 
@@ -442,6 +505,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 ### Death's Door (community5.nut):
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Enabled B&W state when under 25% health.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Fixed heartbeat sound when taking over bot.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e22276cb4251e750a307d001067110e6130b4feb) Fixed Fallen Survivors being able to drop medkits.<br/>
 
 ### Hard Eight (mutation4.nut):
@@ -467,14 +531,11 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Players no longer need to wait for incapped Survivors in order to progress at areas like elevators.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/0cf288008145f667909154daae8187b2ec186902) Fixed Director variable typo from "BehindSurvivorsSpawnDistance" to "SpawnBehindSurvivorsDistance".<br/>
 
-### L4D1 Coop:
-
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Set `"z_tank_autoshotgun_dmg_scale"` to 1.<br/>
-
-### L4D1 Survival:
+### L4D1 Coop & Survival:
 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Set `"z_tank_autoshotgun_dmg_scale"` to 1.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/26bc4e36fe657a23b89f6f611edde121bfcff9b8) Disabled water slowdown.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/0f29cbf65dcc174a1fc142f3d2b62ae5e70426e6) Defibrillators now convert to pain pills instead of medkits; previously, when converted to medkits the game kept trying to spawn more defibs which led to an oversaturation of medkits.<br/>
 
 # Talker
 
@@ -486,7 +547,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Swapped Louis' ArriveChopper line placements.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Deleted C6M3_ElevatorCancel rules for the L4D2 survivors (they had no real functionality).<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added IsNotAlone to the C1M1Elevator lines for Coach, Gambler, Mechanic and Producer.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added NoOneInsafeSpot to the "outside" vehicle nags.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added NoOneInSafeSpot to the "outside" vehicle nags.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Split the vehicle nags for C6M3 for Coach, Gambler and Producer.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added NotAloneOutsideSafeSpot to C5M5RunToHeliRareCoach.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/cb021fd1dc5ae20bb0062964c2d2002aa940ae4e) Added the FinalVehicleArrived concept for Dark Carnival and Swamp Fever.<br/>
@@ -533,6 +594,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/c8180fec1f90e4294a9f956a9f21ac1b0c8c4e67) Nick and Ellis getting annoyed with calling out MudMen will only happen once per map (after at least 3 rule executions).<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/aec0e35f58a1d7104264a8ed90520c9818e66c98) Removed duplicate PlayerHelp Rule for Coach should the Witch be in aggro state.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/aec0e35f58a1d7104264a8ed90520c9818e66c98) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/bc291097ec1f6fb3c8e9c0d122e1a8fca8892aa0) Commented out new rules that await engine criteria; nothing was changed and this is for reference only.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e1013bf9738b884c333ae1a816ac335d5cff0ae3) First time map-specific Uncommon Infected callouts will happen once, as usual, but subsequent instances will use generic variants; they see it for the first time, then get adjusted to it, like Dead Center SI.<br/>
 
 # Miscellaneous
 
@@ -565,7 +627,7 @@ This changelog comprehensively summarizes all differences from the live game to 
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/5c5241974398047ced5de1147f0885c39d4da077) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/6cee4d3f1c42fbc3cae3ff100a32843d3dc6521a)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/7ae51c4fa8b7780d8ff7846e0828eeeda9b64452) Moved `"scripts"` folder into `"root"` to keep actual VPK content separate from other repository files.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/bf92b09cedfcd5a88817efaaa2d29d2c06feb921) Moved community files and references into dedicated `"community"` folder.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/9aa7aa823891270f3ef4c485fc21c3e5c139ff8c) Added `"scriptedmode.nut"` and `"director_base.nut"` for future reference.<br/>
-&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/83a211c873ad5c307af058bdc8ef999e2269e21d) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/ff5cbb54244db4c7141dd55299956400b8e3fee8) Replaced "g_UpdateName" value from `"anv_mapfixes"` to `"community_update"`.<br/>
+&emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/83a211c873ad5c307af058bdc8ef999e2269e21d) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/ff5cbb54244db4c7141dd55299956400b8e3fee8)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/e5fa745620edc175d7beafef41c1d0fc52b40f8b) Replaced "g_UpdateName" value from `"anv_mapfixes"` to `"community_update"`.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/da92dcdff92876071c09c38ae3a4291094bb9607) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/57868b057baf8fbc09d39c52b755f3120bce2f07) Changed unsafe EntFire calls to DoEntFire.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/e89eee07d69509ed97e387473c598bbaa95037b0) [*](https://github.com/Tsuey/L4D2-Community-Update/commit/de2c7774bdc8d608ca57ddccbc742c95d7e1f4b8)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/6dcc291c48395f5647ddcdf4a3a3687282ba09a0)[*](https://github.com/Tsuey/L4D2-Community-Update/commit/68e74eb4cd7fc6c464a8f59a3508e8021c650cd1) Added "PrecacheModel" calls where they were missing.<br/>
 &emsp;[+](https://github.com/Tsuey/L4D2-Community-Update/commit/6e46f4be88ee6ca1252061776c2d14ccaf4df426) Updated readme/credits and added some of the team's tools for community reference.<br/>

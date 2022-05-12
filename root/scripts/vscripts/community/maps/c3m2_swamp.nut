@@ -21,7 +21,7 @@ function DoRoundFixes()
 		// FIXES
 
 		// FIX: Prevent skipping the plane horde by forcing it even if the plane door is skipped.
-		
+
 		con_comment( "TRIG:\tNew triggers will enforce panic event even if plane door is skipped." );
 
 		SpawnEntityFromTable( "trigger_once",
@@ -62,7 +62,7 @@ function DoRoundFixes()
 		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "mins -46 -440 -228" );
 		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "maxs 46 440 228" );
 		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "solid 2" );
-		
+
 		SpawnEntityFromTable( "trigger_once",
 		{
 			targetname	= g_UpdateName + "_eventskip_plane_trigonce_d",
@@ -84,7 +84,6 @@ function DoRoundFixes()
 		// Kill the trigger if the door is opened normally.
 
 		EntFire( "Blow_door", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_plane_trigonce*:Kill::0:-1" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -102,7 +101,6 @@ function DoRoundFixes()
 		make_clip( "_commentary_planeclimb_a", "Survivors", 1, "-29 -3 -44", "29 3 44", "-1931 2612 124" );
 		make_clip( "_commentary_planeclimb_b", "Survivors", 1, "-36 -14 -44", "36 14 44", "-1908 2578 124", "0 300 0" );
 		EntFire( "Blow_door", "AddOutput", "OnTrigger " + g_UpdateName + "_cabin_door_button*:Kill::0:-1" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
