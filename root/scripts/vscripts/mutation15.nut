@@ -6,7 +6,7 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_ProhibitBosses = 0
+	cm_ProhibitBosses = false
 	cm_CommonLimit = 25
 	cm_TankLimit = 1
 	ZombieTankHealth = 2667

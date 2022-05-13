@@ -6,7 +6,7 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_SingleScavengeCluster = 1
+	cm_SingleScavengeCluster = true
 
 	ScavengeScoreBonusTime = 30
 }

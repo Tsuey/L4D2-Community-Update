@@ -23,9 +23,9 @@ DirectorOptions <-
 	}
 
 	// Challenge vars
-	cm_TempHealthOnly = 1
-	cm_AllowPillConversion = 0
-	cm_HealingGnome = 1
+	cm_TempHealthOnly = true
+	cm_AllowPillConversion = false
+	cm_HealingGnome = true
 	
 	TempHealthDecayRate = 0.001
 	function RecalculateHealthDecay()

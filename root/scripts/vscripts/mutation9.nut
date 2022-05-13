@@ -6,7 +6,7 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_VIPTarget = 1
-	cm_ShouldHurry = 1
+	cm_VIPTarget = true
+	cm_ShouldHurry = true
 }
 

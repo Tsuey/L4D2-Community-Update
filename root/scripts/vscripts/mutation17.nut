@@ -6,7 +6,7 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_NoSurvivorBots = 1
+	cm_NoSurvivorBots = true
 
 	cm_CommonLimit = 10
 	cm_BaseCommonAttackDamage = 15

@@ -6,7 +6,7 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_AllowSurvivorRescue = 0
+	cm_AllowSurvivorRescue = false
 
 	weaponsToRemove =
 	{

@@ -9,10 +9,10 @@ DirectorOptions <-
 	cm_DominatorLimit = 8
 	cm_MaxSpecials = 8
 	cm_SpecialRespawnInterval = 30
-	cm_AutoReviveFromSpecialIncap = 1
-	cm_AllowPillConversion = 0
+	cm_AutoReviveFromSpecialIncap = true
+	cm_AllowPillConversion = false
 	cm_TankLimit = 4
-	ProhibitBosses = 0
+	ProhibitBosses = false
 
 	BoomerLimit = 0
 	SurvivorMaxIncapacitatedCount = 3

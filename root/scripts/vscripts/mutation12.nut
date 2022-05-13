@@ -6,7 +6,7 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_AllowPillConversion = 0
+	cm_AllowPillConversion = false
 
 	ZombieGhostDelayMin = 15
 	ZombieGhostDelayMax = 25

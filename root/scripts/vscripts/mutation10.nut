@@ -6,6 +6,6 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_FirstManOut = 1
+	cm_FirstManOut = true
 }
 

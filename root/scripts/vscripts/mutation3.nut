@@ -21,9 +21,9 @@ DirectorOptions <-
 	}	
 
 	// Challenge vars
-	cm_TempHealthOnly = 1
-	cm_AllowPillConversion = 0
-	cm_ShouldHurry = 1
+	cm_TempHealthOnly = true
+	cm_AllowPillConversion = false
+	cm_ShouldHurry = true
 	cm_MaxSpecials = 4
 	cm_SpecialRespawnInterval = 45
 	cm_WanderingZombieDensityModifier = 0.003

@@ -6,6 +6,6 @@ DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_HeadshotOnly = 1
+	cm_HeadshotOnly = true
 }
 
