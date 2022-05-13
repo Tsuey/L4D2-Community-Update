@@ -13,7 +13,7 @@
 // See scripted_c5m4_quarter_dash.nut, c5m4_quarter_entities_dash.txt for an example.
 //
 // When survivors reach the final waypoint, we do a TANK wave, and they get a final time based on when they finish
-// 
+//
 // The waypoint itself has a fairly big script to detect nearby players, and track which ones have reached it
 //   as well as to trigger visual indications of progress, and "waypoint finished" calls back to this script
 // And this script on startup has to sort the waypoints to make the in-order list
@@ -21,7 +21,7 @@
 // printl(" Loading Dash mode")
 
 MutationOptions <-
-{   
+{
 	// since we are going to move the spawn point to "ahead" on the track as we hit waypoints
 	PreferredMobDirection = SPAWN_NEAR_POSITION
 	PreferredMobPositionRange = 600
@@ -46,9 +46,9 @@ MutationOptions <-
 	SmokerLimit  = 0
 	MaxSpecials  = 0
 	CommonLimit  = 20
-	MegaMobSize	 = 20
+	MegaMobSize  = 20
 	TankLimit    = 0
-	WitchLimit	 = 0
+	WitchLimit   = 0
 
 	function EndScriptedMode()
 	{
@@ -107,13 +107,13 @@ MutationOptions <-
 			return DefaultItems[idx];
 		}
 		return 0;
-	}	
+	}
 }
 
 // SessionState for this mode - mostly about the waypoint tracking/which on next/etc/etc
 MutationState <-
 {
-	StartActive = true	
+	StartActive = true
 	CurrentWaypoint = 0
 	FinalWaypoint = 0
 	JustHitWaypoint = false
@@ -130,7 +130,6 @@ function SetWaypointCB( waypointObj, rarity )
 	local waypointScr = waypointObj.GetScriptScope()
 	waypointScr.myID <- g_ModeScript.MutationState.FinalWaypoint++
 
-	
 	// if we're using a custom list set the initial touch count on this waypoint
 	if( "CustomWaypointList" in g_MapScript )
 		waypointScr.initialTouchCount = g_MapScript.CustomWaypointList[ g_RoundState.WaypointList.len() ].startingTouchCount
@@ -203,7 +202,7 @@ function SpawnCustomWaypointList()
 	foreach( idx, val in CustomWaypointList )
 	{
 		currentEnt = Entities.FindByName( null, val.targetName )
-		
+
 		// store the waypoint if we found it, otherwise complain
 		if( currentEnt )
 		{
@@ -219,7 +218,7 @@ function SpawnCustomWaypointList()
 }
 
 //=========================================================
-// Collect all the info_item_position entities that are named 
+// Collect all the info_item_position entities that are named
 // "short_waypoint_*" OR "waypoint_*", put them into a list
 // and sort it by suffix.  This will allow us to spawn all
 // the waypoints in order so they can know their touch order
@@ -240,7 +239,7 @@ function SortAndSpawnWaypointList()
 		currentWaypoint = Entities.FindByClassname( currentWaypoint, "info_item_position" )
 	}
 
-	// sort the list by suffix	
+	// sort the list by suffix
 	tempWaypointList.sort(@(a,b) a.GetName().slice(-4) <=> b.GetName().slice(-4) )
 
 	SpawnWaypointList( tempWaypointList )
@@ -258,7 +257,7 @@ function SpawnWaypointList( list )
 	shortWaypointGroup.SpawnTables[ "waypoint" ].PostPlaceCB <- SetWaypointCB
 	waypointGroup.SpawnTables[ "waypoint" ].PostPlaceCB <- SetWaypointCB
 
-	// spawn the waypoints	
+	// spawn the waypoints
 	foreach( idx, ent in list )
 	{
 		// does our waypoint start with "short_"?  If so, it is a short waypoint! Spawn it.
@@ -313,7 +312,7 @@ function GetNextStage()
 		DashDisplayScores()
 	}
 	else if ( SessionState.JustHitWaypoint && SessionState.FinalWaypoint > 0 )
-	{	
+	{
 		if ( !SessionState.FirstWaypointHit ) // could be start line, or waypoint 0
 		{  // hit firstone, kick things off
 			smDbgPrint("Hit First Waypoint!")
@@ -322,13 +321,13 @@ function GetNextStage()
 
 			// calculate the number of common infected to add each time a waypoint is completed
 			SessionState.CommonIncrement = (100 - SessionOptions.CommonLimit) / SessionState.FinalWaypoint
-		}  
-		
+		}
+
 		if( !MapOverrideOptions() )
 		{
 			// really, do we need this? or can we just always do panic here else a delay???
 			local PercentageComplete = SessionState.CurrentWaypoint * 1.0 / SessionState.FinalWaypoint
-		
+
 			SessionState.JustHitWaypoint = false
 			SessionOptions.ScriptedStageType = STAGE_PANIC
 			SessionOptions.ScriptedStageValue = 1
@@ -357,7 +356,7 @@ function GetNextStage()
 					case 1:
 						Ticker_NewStr( "Each time you activate a new waypoint more infected will attack.", 15 )
 						break
-					
+
 					case 2:
 						Ticker_NewStr( "You cleared the waypoint! Here come more infected!", 15 )
 						break
@@ -441,7 +440,7 @@ function SetupModeHUD( )
 {
 	DashHUD =
 	{
-		Fields = 
+		Fields =
 		{
 			waypoint = { slot = HUD_RIGHT_TOP, name = "waypoint", staticstring = "Waypoint: ", datafunc = @() SessionState.CurrentWaypoint },
 			timer    = { slot = HUD_LEFT_TOP, name = "timer", staticstring = "Time: ", special = HUD_SPECIAL_TIMER1 },

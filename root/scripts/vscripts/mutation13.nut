@@ -1,8 +1,7 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 13\n");
 
-
-DirectorOptions <- 
+DirectorOptions <-
 {
 	ActiveChallenge = 1
 
@@ -10,4 +9,3 @@ DirectorOptions <-
 
 	ScavengeScoreBonusTime = 30
 }
-

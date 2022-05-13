@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 15\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
@@ -50,7 +49,7 @@ function OnGameEvent_survival_round_start( params )
 					local outputTarget = Entities.FindByName( null, outputs.target );
 					if ( !outputTarget )
 						continue;
-					
+
 					if ( outputTarget.GetClassname() == "info_director" && outputs.input.find( "PanicEvent" ) != null )
 						return outputTarget;
 					else
@@ -74,11 +73,11 @@ function OnGameEvent_survival_round_start( params )
 			{
 				if ( !EntityOutputs.HasAction( ent, output ) )
 					continue;
-				
+
 				local target = CheckOutputs( ent, output );
 				if ( (!target) || (target.GetClassname() != "info_director") )
 					continue;
-				
+
 				return ent;
 			}
 		}

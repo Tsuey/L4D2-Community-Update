@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Nightmare\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
@@ -18,6 +17,5 @@ DirectorOptions <-
 	SurvivorMaxIncapacitatedCount = 3
 	SpecialInitialSpawnDelayMin = 5
 	SpecialInitialSpawnDelayMax = 30
-	TankHitDamageModifierCoop = 0.25	
+	TankHitDamageModifierCoop = 0.25
 }
-

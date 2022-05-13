@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 12\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
@@ -24,7 +23,7 @@ DirectorOptions <-
 			return false;
 		}
 		return true;
-	}		
+	}
 
 	DefaultItems =
 	[
@@ -39,5 +38,5 @@ DirectorOptions <-
 			return DefaultItems[idx];
 		}
 		return 0;
-	}	
+	}
 }

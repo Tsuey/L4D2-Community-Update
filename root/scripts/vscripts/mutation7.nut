@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 7\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1

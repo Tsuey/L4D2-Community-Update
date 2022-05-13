@@ -60,8 +60,8 @@ MutationOptions <-
 
 	WanderingZombieDensityModifier = 0
 	BoomerLimit  = 0
- 	ChargerLimit = 0
- 	HunterLimit  = 0
+	ChargerLimit = 0
+	HunterLimit  = 0
 	JockeyLimit  = 0
 	SpitterLimit = 0
 	SmokerLimit  = 0
@@ -113,7 +113,7 @@ function CanPickupObject( object )
 	{
 		return true
 	}
-	
+
 	// resource drops
 	if ( object.GetName().find( "prop_resource" ) )
 	{
@@ -127,7 +127,7 @@ function CanPickupObject( object )
 	{
 		canPickup = g_MapScript.PickupObject( object )
 	}
-	
+
 	return canPickup
 }
 
@@ -186,7 +186,7 @@ function BotQuery( queryflag, entity, defaultvalue )
 			return true;
 		}
 	}
-	
+
 	return defaultvalue;
 }
 
@@ -214,7 +214,7 @@ function OnGameplayStart()
 function OnActivate()
 {
 	// @todo: put scoring back into holdout!
-	Scoring_LoadTable( SessionState.MapName, SessionState.ModeName )	
+	Scoring_LoadTable( SessionState.MapName, SessionState.ModeName )
 
 	// this is so we can do some non-wave-based thinking
 	ScriptedMode_AddSlowPoll( HoldoutSlowPollUpdate )
@@ -237,7 +237,7 @@ function SetupModeHUD()
 {
 	HoldoutHUD =
 	{
-		Fields = 
+		Fields =
 		{
 			cooldown_time = { slot = HUD_LEFT_TOP, name = "cooldown", special = HUD_SPECIAL_COOLDOWN, flags = HUD_FLAG_COUNTDOWN_WARN | HUD_FLAG_BEEP },
 			supply        = { slot = HUD_RIGHT_TOP, name = "supply", staticstring = "Supplies: ", datafunc = @() g_MapScript.Resources.CurrentCount },
@@ -250,15 +250,15 @@ function SetupModeHUD()
 			score4   = { slot = HUD_RIGHT_BOT, name = "score4", dataval = "Score4", flags = HUD_FLAG_NOTVISIBLE | HUD_FLAG_ALIGN_LEFT },
 		}
 	}
-	
+
 	if ( "HUDRescueTimer" in SessionState && SessionState.HUDRescueTimer )
-	{   
+	{
 		RescueTimer_Init( HoldoutHUD, HUD_MID_BOX, HUD_MID_BOT )
- 		if (SessionState.HUDWaveInfo)
- 			printl("Warning: Cannot have both Rescuetimer and Wave HUD elements at once");
- 	}
- 	else if ( "HUDWaveInfo" in SessionState && SessionState.HUDWaveInfo )
- 	{
+		if (SessionState.HUDWaveInfo)
+			printl("Warning: Cannot have both Rescuetimer and Wave HUD elements at once");
+	}
+	else if ( "HUDWaveInfo" in SessionState && SessionState.HUDWaveInfo )
+	{
 		HoldoutHUD.Fields.wave <- {slot = HUD_MID_TOP, name = "wave", staticstring = "Wave: ", datafunc = @() SessionState.ScriptedStageWave }
 	}
 
@@ -266,20 +266,20 @@ function SetupModeHUD()
 	{
 		TickerTimeout = SessionState.HUDTickerTimeout
 	}
-	
- 	if ( "HUDTickerText" in SessionState )
- 	{
- 		if ( SessionState.HUDTickerText.len() > 0 )
- 		{
- 			Ticker_AddToHud( HoldoutHUD, SessionState.HUDTickerText )
- 		}
- 	}
+
+	if ( "HUDTickerText" in SessionState )
+	{
+		if ( SessionState.HUDTickerText.len() > 0 )
+		{
+			Ticker_AddToHud( HoldoutHUD, SessionState.HUDTickerText )
+		}
+	}
 
 	HUDSetLayout( HoldoutHUD );
 }
 
 //=========================================================
-// The scripted mode calls this function each time the generator turns on. 
+// The scripted mode calls this function each time the generator turns on.
 // The generator usually turns on because someone poured a can of fuel into it.
 //=========================================================
 function OnGeneratorStart()
@@ -309,7 +309,7 @@ function HoldoutSlowPollUpdate()
 		if ( "HUDRescueTimer" in SessionState && SessionState.HUDRescueTimer )
 		{
 			local seconds = g_MapScript.RescueTimer_Get()
-		
+
 			// start the rescue if the generator has run long enough
 			if( seconds <= 0 )
 			{
@@ -374,7 +374,7 @@ function JournalFunc()
 //  But from script, one can use a Poll function and GetInfectedStats to manage it yourself
 //  See sm_utilities for the actual code/systems if you want to do something like it
 
-// Whether to use the new Script based clearout or not - false here just means use the default c++ one 
+// Whether to use the new Script based clearout or not - false here just means use the default c++ one
 ::g_ScriptClearout <- true
 
 // if you are going to use the new clearout - here is the table for determining it's behavior
@@ -393,7 +393,7 @@ holdout_ClearoutTable <-
 ///////////////////////////////////////////////////////////////////////////////
 //
 // "Main Loop" of Holdout
-// 
+//
 // GetNextStage gets called whenever the director finishes the last thing you told it to do
 //   or if you do a ForceNextStage yourself
 // In holdout, we use GetNextStage to manage the game, cycling through 3 types of Stage (as described at top)
@@ -414,7 +414,7 @@ function GetNextStage()
 
 	// first, special event management
 	DoMapEventCheck()
-	
+
 	// fire game events as we begin and end cooldown states - initial map stage 0 is considered a cooldown state
 	if( ( stageNum % 3 ) == PHASE_PANIC )
 		FireScriptEvent( "on_cooldown_end", null )
@@ -427,7 +427,7 @@ function GetNextStage()
 
 	if ( stageNum == 1) // 1st real attack stage
 	{
-		SessionState.RealStartTime <- Time() 
+		SessionState.RealStartTime <- Time()
 		Director.ResetSpecialTimers()
 	}
 
@@ -484,7 +484,7 @@ function GetNextStage()
 			StageInfo_Execute( use_stage, stageDefaults )        // should use_stage just delegate?
 		else
 			StageInfo_Execute( use_stage )
-		
+
 		if ( "NextDelay" in use_stage )
 			SessionState.NextDelayTime <- use_stage.NextDelay    // just overwrite, so we dont need to if check
 		else

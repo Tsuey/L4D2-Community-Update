@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 20\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
@@ -26,7 +25,7 @@ DirectorOptions <-
 	cm_TempHealthOnly = true
 	cm_AllowPillConversion = false
 	cm_HealingGnome = true
-	
+
 	TempHealthDecayRate = 0.001
 	function RecalculateHealthDecay()
 	{

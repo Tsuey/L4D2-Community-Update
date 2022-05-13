@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 1\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
@@ -20,7 +19,7 @@ DirectorOptions <-
 	SpecialInitialSpawnDelayMin = 5
 	SpecialInitialSpawnDelayMax = 30
 	TankHitDamageModifierCoop = 0.5
-	
+
 	// convert items that aren't useful
 	weaponsToConvert =
 	{
@@ -42,7 +41,7 @@ DirectorOptions <-
 			return weaponsToConvert[classname];
 		}
 		return 0;
-	}	
+	}
 }
 
 function OnGameEvent_round_start_post_nav( params )
@@ -50,7 +49,7 @@ function OnGameEvent_round_start_post_nav( params )
 	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
 		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-		
+
 		if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
 			|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
 				|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
@@ -58,10 +57,10 @@ function OnGameEvent_round_start_post_nav( params )
 		else
 			spawner.Kill();
 	}
-	
+
 	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
 		DirectorOptions.cm_MaxSpecials = 0;
-	
+
 	foreach( wep, val in DirectorOptions.weaponsToConvert )
 	{
 		for ( local wep_spawner; wep_spawner = Entities.FindByClassname( wep_spawner, wep + "_spawn" ); )

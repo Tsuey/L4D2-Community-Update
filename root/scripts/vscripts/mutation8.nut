@@ -1,8 +1,7 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 8\n");
 
-
-DirectorOptions <- 
+DirectorOptions <-
 {
 	ActiveChallenge = 1
 
@@ -20,6 +19,5 @@ DirectorOptions <-
 			return false;
 		}
 		return true;
-	}	
+	}
 }
-

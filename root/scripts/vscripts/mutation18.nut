@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 18\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
@@ -18,7 +17,7 @@ DirectorOptions <-
 			return weaponsToConvert[classname];
 		}
 		return 0;
-	}	
+	}
 
 	// Challenge vars
 	cm_TempHealthOnly = true
