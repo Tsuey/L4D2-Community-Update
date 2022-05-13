@@ -51,11 +51,11 @@ MutationOptions <-
 	PreferredMobDirection = SPAWN_NO_PREFERENCE
 	SpawnSetRule = SPAWN_ANYWHERE
 	JournalString = ""
-	SpecialInfectedAssault = 0
-	AllowWitchesInCheckpoints = 1
-	AllowCrescendoEvents = 0
-	EnforceFinaleNavSpawnRules = 0
-	IgnoreNavThreatAreas = 1
+	SpecialInfectedAssault = false
+	AllowWitchesInCheckpoints = true
+	AllowCrescendoEvents = false
+	EnforceFinaleNavSpawnRules = false
+	IgnoreNavThreatAreas = true
 	ZombieDiscardRange = 10000
 
 	WanderingZombieDensityModifier = 0
@@ -79,11 +79,11 @@ MutationOptions <-
 	ZombieTankHealth = 6000 // SP default is 4000
 	BileMobSize = 20
 	EscapeSpawnTanks = true
-	ZombieDontClear = 1
+	ZombieDontClear = true
 	MegaMobSize = 50       // i have no idea why this defaults to not between min and max
 
-	cm_ShouldEscortHumanPlayers = 1
-	cm_AggressiveSpecials = 1
+	cm_ShouldEscortHumanPlayers = true
+	cm_AggressiveSpecials = true
 }
 
 //=========================================================
@@ -472,10 +472,10 @@ function GetNextStage()
 		case STAGE_CLEAROUT:
 		case STAGE_DELAY:
 		case STAGE_ESCAPE:
-			DirectorOptions.SpecialInfectedAssault = 1
+			DirectorOptions.SpecialInfectedAssault = true
 			break;
 		default:
-			DirectorOptions.SpecialInfectedAssault = 0
+			DirectorOptions.SpecialInfectedAssault = false
 	}
 
 	if ( use_stage != null )

@@ -35,8 +35,8 @@ MutationOptions <-
 
 	WanderingZombieDensityModifier = 0 // get rid of wanderers
 
-	cm_ShouldEscortHumanPlayers = 1
-	cm_AggressiveSpecials = 1
+	cm_ShouldEscortHumanPlayers = true
+	cm_AggressiveSpecials = true
 
 	BoomerLimit  = 0
 	ChargerLimit = 0
@@ -89,7 +89,7 @@ MutationOptions <-
 	*/
 
 	// challenge mode experiment - make sure old CM type stuff works fine in new mutation code
-	cm_HeadshotOnly = 0
+	cm_HeadshotOnly = false
 
 	DefaultItems =
 	[
