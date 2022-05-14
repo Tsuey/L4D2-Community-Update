@@ -64,7 +64,6 @@ function DoRoundFixes()
 		make_clip( "_ladder_aftertanker_clipleft", "Everyone", 1, "-14 -4 0", "15 4 608", "-2248 -5372 -224", "0 -55 0" );
 		make_clip( "_ladder_aftertanker_clipright", "Everyone", 1, "-15 -4 0", "14 4 608", "-2292 -5372 -224", "0 55 0" );
 		make_clip( "_ladder_dualwindowshared_clip", "SI Players and AI", 1, "-8 -186 0", "32 186 16", "-7960 -10924 191", "42 0 0" );
-		make_clip( "_solidify_acunit", "Everyone", 1, "-4 -59 -7", "4 59 136", "-708 -1224 23" );
 		make_ladder( "_ladder_aftertankerB_cloned_flatnosetruck", "-6318 -10227 191.524", "4048 4867 -384" );
 		make_ladder( "_ladder_aftertankerT_cloned_flatnosetruck", "-6318 -10227 191.524", "4048 4867 0" );
 		make_ladder( "_ladder_armybarricadeleftfront_cloned_armybarricadeleftback", "-1601 -4847 126", "-3226 -9766 0", "0 -180 0", "0 -1 0" );
