@@ -132,7 +132,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_endsaferoofa_cloned_fixdontdelete", "-187 -1725 -1018.05", "-599 -667 5" );
 		make_ladder( "_ladder_endsaferoofb_cloned_fixdontdelete", "-187 -1725 -1018.05", "875 -3001 5", "0 270 0", "0 -1 0" );
 		make_ladder( "_ladder_highwaysign_cloned_whispsign", "9531 8445.5 -414.5", "-811 -365 -10" );
-		make_ladder( "_ladder_hilltoptruck_cloned_fixdontdelete", "-187 -1725 -1018.05", "702 -1008 10", "0 270 0", "0 -1 0" );
+		make_ladder( "_ladder_hilltoptruck_cloned_motelalarmright", "1379 5428 -868", "-6451 554 -164", "0 270 0", "0 -1 0" );
 		make_ladder( "_ladder_motelfrontleftB_cloned_motelalarmright", "1379 5428 -868", "8197 2343 -8", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_motelfrontleftT_cloned_motelalarmright", "1379 5428 -868", "8197 2343 120", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_motelfrontrightB_cloned_motelalarmright", "1379 5428 -868", "7 -740 -8" );
