@@ -50,7 +50,7 @@ function DoRoundFixes()
 		make_brush( "_losfix_semi1a",		"-1 -32 -13",	"1 32 13",	"4519 -91 -206" );
 		make_brush( "_losfix_semi1b",		"-40 -1 -13",	"41 1 13",	"4477 -121 -206" );
 		make_brush( "_losfix_semi2",		"-1 -50 -15",	"1 50 15",	"3560 4539 10" );
-		make_ladder( "_ladder_armybusfront_cloned_finalebus", "6547.86 6579 107.421", "623 -9374 -262", "0 34.7 0", "-0.57 0.82 0" );
+		make_ladder( "_ladder_armybusfront_cloned_finalebus", "6547.86 6579 107.421", "588 -9368 -262", "0 34.5 0", "-0.566 0.824 0" );
 		make_ladder( "_ladder_backfenceright_cloned_backfenceleft", "4631 4016 76", "18 579 0" );
 		make_ladder( "_ladder_bluecontainerplus_cloned_bluecontainer", "3952 2421 -55.5", "1464 6691 11", "0 -90 0", "-1 0 0" );
 		make_ladder( "_ladder_buggycullfix_cloned_bluecontainer", "3952 2421 -55.5", "1810 4245 -124", "0 -144.2 0", "-0.58 0.81 0" );
@@ -61,7 +61,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_startareasemi_cloned_metalsupplysemi", "4388 2361 -33.3145", "-1583 4005 -114", "0 -93.25 0", "0 1 0" );
 		make_ladder( "_ladder_startfenceright_cloned_startfenceleft", "1456 -1675 -148", "-370 0 0" );
 		make_ladder( "_ladder_startroofbrick_cloned_startroofpipe", "1788.5 -1545 -60", "-697 -3531 -24", "0 90 0", "1 0 0" );
-		make_ladder( "_ladder_warehousesemi_cloned_metalsupplysemi", "4388 2361 -33.3145", "-538 7796 115", "0 -70.42 0", "-0.34 0.94 0" );
+		make_ladder( "_ladder_warehousesemi_cloned_metalsupplysemi", "4388 2361 -33.3145", "-560 7769 115", "0 -70 0", "-0.34 0.94 0" );
 		make_ladder( "_ladder_whitecontainer_cloned_bluecontainer", "3952 2421 -55.5", "625 7652 24", "0 -96.9 0", "-1 0.1 0" );
 		make_prop( "dynamic", "_solidify_startacvent1", "models/props_rooftop/acvent01.mdl", "-99.0076 -574.692 310.902", "18.5 0 0", "shadow_no" );
 		make_prop( "dynamic", "_solidify_startacvent2", "models/props_rooftop/acvent01.mdl", "-99.2042 -750.692 310.934", "18.5 0 0", "shadow_no" );
