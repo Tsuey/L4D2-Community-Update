@@ -20,5 +20,5 @@ DirectorOptions <-
 			return false;
 		}
 		return true;
-	}		
+	}
 }
