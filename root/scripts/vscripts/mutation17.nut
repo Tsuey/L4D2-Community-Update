@@ -1,17 +1,25 @@
 //-----------------------------------------------------
-Msg("Activating Mutation 7\n");
+Msg("Activating Mutation 17\n");
 
 DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_InfiniteFuel = true
-	cm_ShouldHurry = true
+	cm_NoSurvivorBots = true
+
+	cm_CommonLimit = 10
+	cm_BaseCommonAttackDamage = 15
+	cm_WanderingZombieDensityModifier = 0.015
+
+	HunterLimit = 0
+	SmokerLimit = 0
+	ChargerLimit = 0
+	JockeyLimit = 0
+	SpitterLimit = 0
 
 	weaponsToRemove =
 	{
 		weapon_pistol = 0
-		weapon_pistol_magnum = 0
 		weapon_smg = 0
 		weapon_pumpshotgun = 0
 		weapon_autoshotgun = 0
@@ -31,8 +39,7 @@ DirectorOptions <-
 		weapon_rifle_m60 = 0
 		weapon_melee = 0
 		weapon_chainsaw = 0
-		weapon_upgradepack_incendiary = 0
-		weapon_upgradepack_explosive = 0
+		weapon_rifle_m60 = 0
 		ammo = 0
 		upgrade_item = 0
 	}
@@ -46,19 +53,9 @@ DirectorOptions <-
 		return true;
 	}
 
-	function ShouldAvoidItem( classname )
-	{
-		if ( ( classname != "weapon_chainsaw" ) && ( classname in weaponsToRemove ) )
-		{
-			return true;
-		}
-		return false;
-	}
-
 	DefaultItems =
 	[
-		"weapon_chainsaw",
-		//"weapon_pistol",
+		"weapon_pistol_magnum",
 	]
 
 	function GetDefaultItem( idx )

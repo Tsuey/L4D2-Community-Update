@@ -1,12 +1,9 @@
 //-----------------------------------------------------
-Msg("Activating Mutation 7\n");
+Msg("Activating Mutation 14\n");
 
 DirectorOptions <-
 {
 	ActiveChallenge = 1
-
-	cm_InfiniteFuel = true
-	cm_ShouldHurry = true
 
 	weaponsToRemove =
 	{
@@ -31,10 +28,7 @@ DirectorOptions <-
 		weapon_rifle_m60 = 0
 		weapon_melee = 0
 		weapon_chainsaw = 0
-		weapon_upgradepack_incendiary = 0
-		weapon_upgradepack_explosive = 0
 		ammo = 0
-		upgrade_item = 0
 	}
 
 	function AllowWeaponSpawn( classname )
@@ -48,7 +42,7 @@ DirectorOptions <-
 
 	function ShouldAvoidItem( classname )
 	{
-		if ( ( classname != "weapon_chainsaw" ) && ( classname in weaponsToRemove ) )
+		if ( ( classname != "weapon_rifle_m60" && classname != "weapon_pistol_magnum" ) && ( classname in weaponsToRemove ) )
 		{
 			return true;
 		}
@@ -57,8 +51,8 @@ DirectorOptions <-
 
 	DefaultItems =
 	[
-		"weapon_chainsaw",
-		//"weapon_pistol",
+		"weapon_rifle_m60",
+		"weapon_pistol_magnum",
 	]
 
 	function GetDefaultItem( idx )

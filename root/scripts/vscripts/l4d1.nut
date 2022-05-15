@@ -87,7 +87,7 @@ function OnGameEvent_round_start_post_nav( params )
 	EntFire( "weapon_*", "AddOutput", "skin 0" );
 	EntFire( "weapon_*", "AddOutput", "weaponskin -1" );
 	EntFire( "trigger_upgrade_laser_sight", "Kill" );
-	
+
 	foreach( wep, val in DirectorOptions.weaponsToRemove )
 		EntFire( wep + "_spawn", "Kill" );
 	foreach( wep, val in DirectorOptions.weaponsToConvert )
@@ -106,11 +106,11 @@ function OnGameEvent_round_start_post_nav( params )
 			SpawnEntityFromTable(val, spawnTable);
 		}
 	}
-	
+
 	if ( Director.IsL4D1Campaign() )
 	{
 		DirectorOptions.WaterSlowsMovement <- false;
-		
+
 		if ( SessionState.ModeName == "l4d1coop" || SessionState.ModeName == "l4d1vs" )
 		{
 			if ( IsMissionFinalMap() )
@@ -175,14 +175,14 @@ function OnGameEvent_round_start_post_nav( params )
 function OnGameEvent_player_spawn( params )
 {
 	local player = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( ( !player ) || ( player.IsSurvivor() ) )
 		return;
-	
+
 	local modelName = player.GetModelName();
 	if ( ( modelName.find( "l4d1" ) != null ) || ( modelName == "models/infected/hulk_dlc3.mdl" ) )
 		return;
-	
+
 	switch( player.GetZombieType() )
 	{
 		case 1:
@@ -214,11 +214,11 @@ function OnGameEvent_player_death( params )
 {
 	if ( !("userid" in params) )
 		return;
-	
+
 	local victim = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( ( !victim ) || ( !victim.IsSurvivor() ) )
 		return;
-	
+
 	EntFire( "survivor_death_model", "BecomeRagdoll" );
 }

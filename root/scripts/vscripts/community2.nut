@@ -23,7 +23,7 @@ DirectorOptions <-
 	// convert items that aren't useful
 	weaponsToConvert =
 	{
-		weapon_vomitjar = 	"weapon_molotov_spawn"
+		weapon_vomitjar = "weapon_molotov_spawn"
 	}
 
 	function ConvertWeaponSpawn( classname )
@@ -41,7 +41,7 @@ function OnGameEvent_round_start_post_nav( params )
 	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
 		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-		
+
 		if ( population == "boomer" || population == "spitter" || population == "church" || population == "river_docks_trap" )
 			continue;
 		else
