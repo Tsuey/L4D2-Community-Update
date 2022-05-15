@@ -80,6 +80,7 @@ function DoRoundFixes()
 		make_clip( "_ladderqol_mountaincrawl",	"SI Players", 1, "-32 -6 -4", "32 6 4", "-10920 -3149 330", "0 -131.9 0" );
 		make_clip( "_ladderqol_churchcampperimeter_a",	"SI Players", 1, "-5 -2 -85", "5 2 85", "-3558 -164 137" );
 		make_clip( "_ladderqol_churchcampperimeter_a",	"SI Players", 1, "-2 -5 -85", "2 5 85", "-3537 -150 137" );
+		make_clip( "_ladderqol_churchleft",	"SI Players", 1, "-11 -2 -4", "11 2 4", "-2785 12.5 342", "0 0 45" );
 		make_ladder( "_ladder_brokenwallL_cloned_graveshort", "-4808 706 6", "2295 383 193" );
 		make_ladder( "_ladder_brokenwallM_cloned_graveshort", "-4808 706 6", "2327 383 193" );
 		make_ladder( "_ladder_brokenwallR_cloned_graveshort", "-4808 706 6", "2359 383 193" );
