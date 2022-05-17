@@ -3342,6 +3342,14 @@ Rule EllisStoryInterruptGenericC5M5Coach
 	Response EllisStoryInterruptGenericCoach
 }
 
+Rule EllisStoryInterruptGenericC13M4Coach
+{
+	criteria ConceptEllisInterrupt IsCoach IsMapc13m4_cutthroatcreek _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericCoach
+}
+
 Response EllisStoryReac01Coach
 {
 	scene "scenes/Coach/DLC1_C6M2_SafeRoomConvo15.vcd"  then Producer EllisStoryReac01 foo:0 -.5 //Girl! What are you doing?
@@ -5060,8 +5068,8 @@ Rule SurvivorSpottedCedaCoach
 
 Rule SurvivorSpottedCedaC1M1Coach
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaCoach
 }
@@ -5375,6 +5383,8 @@ Rule SurvivorSpottedJockeyAlsoC1M2Coach
 
 Response SurvivorSpottedMudmenCoach
 {
+	norepeat
+	scene "scenes/Coach/SeeMudmen01.vcd"  //Mudmen!
 	scene "scenes/Coach/SeeMudmen02.vcd"  //Shoot the mudmen!
 }
 Rule SurvivorSpottedMudmenCoach
@@ -5387,7 +5397,7 @@ Rule SurvivorSpottedMudmenCoach
 
 Response SurvivorSpottedMudmenC3M2Coach
 {
-	scene "scenes/Coach/SeeMudmen01.vcd"  //Mudmen!
+	scene "scenes/Coach/GooedBySpitterC103.vcd"  //You have got to be kidding me.
 }
 Rule SurvivorSpottedMudmenC3M2Coach
 {

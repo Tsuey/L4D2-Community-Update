@@ -2682,6 +2682,14 @@ Rule EllisStoryReac01Producer
 	Response EllisStoryReac01Producer
 }
 
+Rule EllisStoryInterruptC13M4Producer
+{
+	criteria ConceptEllisInterrupt IsProducer IsMapc13m4_cutthroatcreek _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptGenericProducer
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // C5M5
 //--------------------------------------------------------------------------------------------------------------
@@ -4848,12 +4856,13 @@ Rule SurvivorSpottedCedaProducer
 
 Response SurvivorSpottedCedaC1M1Producer
 {
+	norepeat
 	scene "scenes/Producer/SeeHazmat01.vcd"  //Great. Infected in hazmat suits.
 }
 Rule SurvivorSpottedCedaC1M1Producer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Producer
 }
@@ -5080,6 +5089,7 @@ Response SurvivorSpottedJimmyProducer
 {
 	scene "scenes/Producer/WorldC1M3B17.vcd"  //Take that, Jimmy Gibbs!
 	scene "scenes/Producer/WorldC1M3B18.vcd"  //Eat lead, Jimmy Gibbs.
+	scene "scenes/Producer/WorldC1M4B12.vcd"  //Dibs on Gibbs!
 }
 Rule SurvivorSpottedJimmyProducer
 {

@@ -4922,6 +4922,19 @@ Rule C4M4EllisStoryMechanic
 	Response C4M4EllisStoryMechanic
 }
 
+Response C4M5EllisStoryMechanic
+{
+	scene "scenes/Mechanic/DLC1_COMMUNITYE23.vcd"  then any EllisInterrupt foo:0 -4.20	//"I ever tell you about the time my buddy Keith told me that he was picked up by some little green men and they..."
+}
+Rule C4M5EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking isc4m5 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C4M5EllisStoryMechanic
+}
+
 Response C5M2EllisStoryMechanic
 {
 	scene "scenes/Mechanic/EllisStoriesF01.vcd"  then any EllisInterrupt foo:0 -8.54 //Do you know what suck the heads means?  Because I came down here with Keith once and he didn't know and... It ain't nothin' bad.  It's about eatin'.
@@ -5056,6 +5069,44 @@ Rule EllisStoryReac01GoatMechanic
 	Response EllisStoryReac01GoatMechanic
 }
 
+Response C13M2EllisStoryMechanic
+{
+	scene "scenes/Mechanic/EllisStoriesL01.vcd"  then any EllisInterrupt foo:0 -15.53 //I ever tell you guys about the time my buddy Keith got rolled by a gator in a swamp? He didn't antagonize it or nothing, we were just trying to grab two so we could piss them off and get 'em to fight.
+}
+Rule C13M2EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc13m2_southpinestream IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C13M2EllisStoryMechanic
+}
+
+Response C13M3EllisStoryMechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories01.vcd"  then any EllisInterrupt foo:0 -16.0 //This one time, my buddy, Keith, got a tattoo. "I'M A MORON!" Right across his forehead. Of course, he made $200 off of that. So you ask yourself. Who's the REAL moron, huh?
+}
+Rule C13M3EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc13m3_memorialbridge IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C13M3EllisStoryMechanic
+}
+
+Response C13M4EllisStoryMechanic
+{
+	scene "scenes/Mechanic/EllisStoriesS01.vcd"  then any EllisInterrupt foo:0 -18.21 //One the time the army bombed my buddy Keith. He went camping and didn't bother reading the signs, and I guess they were testing bombs that day-all sorts of stuff too, not just regular bombs.
+}
+Rule C13M4EllisStoryMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc13m4_cutthroatcreek IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	forceweight 1
+	Response C13M4EllisStoryMechanic
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech
@@ -5809,12 +5860,13 @@ Rule SurvivorSpottedCedaMechanic
 
 Response SurvivorSpottedCedaC1M1Mechanic
 {
+	norepeat
 	scene "scenes/Mechanic/SeeHazmat02.vcd"  //Watch out for the ones in the hazmat suits.
 }
 Rule SurvivorSpottedCedaC1M1Mechanic
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Mechanic
 }

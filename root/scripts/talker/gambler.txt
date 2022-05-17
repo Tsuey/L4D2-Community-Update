@@ -3166,8 +3166,10 @@ Rule EllisStoryInterruptGambler
 Response EllisStoryInterruptGenericGambler
 {
 	scene "scenes/Gambler/EllisInterrupt12.vcd"  //Ohhh, not again...
+	scene "scenes/Gambler/EllisInterrupt07.vcd" odds 5 //Hey Ellis, why don't you tell us about the time you SHUT UP?
 	scene "scenes/Gambler/EllisInterrupt08.vcd"  then mechanic EllisStoryReac01 foo:0 0.01 //Ellis. Is now the best time?
 	scene "scenes/Gambler/EllisInterrupt19.vcd"  //You know what I like best about your stories? The sound they make when they stop.
+	scene "scenes/Gambler/EllisInterrupt20.vcd" odds 5 //You know what I like best about your stories, Ellis? NOTHING!
 }
 Rule EllisStoryInterruptGenericGambler
 {
@@ -3272,6 +3274,13 @@ Rule EllisStoryInterruptC5M5Gambler
 	Response EllisStoryInterruptC5M5Gambler
 }
 
+Rule EllisStoryInterruptC13M4Gambler
+{
+	criteria ConceptEllisInterrupt IsGambler ismapc13m4_cutthroatcreek _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_DidInterrupt:1:0,_auto_TellingStory:0:0"
+	applycontexttoworld
+	Response EllisStoryInterruptC5M5Gambler
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // C5M5
@@ -5176,12 +5185,13 @@ Rule SurvivorSpottedCedaGambler
 
 Response SurvivorSpottedCedaC1M1Gambler
 {
+	norepeat
 	scene "scenes/Gambler/SeeHazmat02.vcd"  //Guess those suits don't stop bites.
 }
 Rule SurvivorSpottedCedaC1M1Gambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Gambler
 }
@@ -5409,6 +5419,7 @@ Rule SurvivorSpottedInfectedGambler
 Response SurvivorSpottedJimmyGambler
 {
 	scene "scenes/Gambler/ReactionNegative07.vcd"  //Holy Shit!
+	scene "scenes/Gambler/WorldC2M1B03.vcd"  //God DAMN you, Jimmy Gibbs, Jr.
 }
 Rule SurvivorSpottedJimmyGambler
 {
