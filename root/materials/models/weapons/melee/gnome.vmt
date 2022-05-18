@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+    "$baseTexture" "models\Weapons\melee/Gnome"
+	"$phong" "1"
+	"$phongexponent" "150"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[.7 15 20]"
+	"$bumpmap" "models/weapons/melee/gnome_normal" 
+
+
+//   "$envmap" "env_cubemap"
+
+//////////////////////////////////////////////////////
+
+	"$detail" "models/infected/hunter/hunter_01_detail.vtf"
+
+	"$detailscale" "1.75"
+	"$detailblendfactor" .001	// effectively turns the detail texture off in hlmv.  need something non-zero to enable it in-game though.
+	"$detailblendmode" 0
+	"$detailAmount" "0"
+
+	"Proxies"
+	{
+		"BloodyHands"
+		{
+			"resultVar" "$detailAmount" 
+		}
+
+		"Equals"
+		{
+			"srcVar1" "$detailAmount" 
+			"resultVar" "$detailblendfactor"
+		}
+	}
+}
