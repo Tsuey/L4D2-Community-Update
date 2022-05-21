@@ -118,7 +118,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_endbarricaderight1_cloned_airplaneleft", "-2060 3278 96", "4779 -1165 88", "0 -100 0", "0.17 0.98 0" );
 		make_ladder( "_ladder_endbarricaderight2_cloned_airplaneleft", "-2060 3278 96", "4757 -1161 88", "0 -100 0", "0.17 0.98 0" );
 		make_ladder( "_ladder_endfence_cloned_airplaneleft", "-2060 3278 96", "9772 -3705 32" );
-		make_ladder( "_ladder_finalhome_cloned_airplaneleft", "-2060 3278 96", "4611 4947 -37", "0 180 0", "1 0 0" );
+		make_ladder( "_ladder_finalhome_cloned_airplaneleft", "-2060 3278 96", "4610 4959 -25", "0 180 0", "1 0 0" );
 		make_prop( "dynamic",		"_propladder_endcratea",	"models/props_crates/static_crate_40.mdl",	"8045 79 118.63",		"0 221.5 0",		"shadow_no" );
 		make_prop( "dynamic",		"_propladder_endcrateb",	"models/props_crates/static_crate_40.mdl",	"8083 102 118.63",		"0 297 0",		"shadow_no" );
 		make_prop( "dynamic", "_ladder_corrugatedhome_panel", "models/props_highway/corrugated_panel_damaged_01.mdl", "1855 3334 82", "80 180 2", "shadow_no" );
