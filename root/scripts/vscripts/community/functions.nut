@@ -1446,6 +1446,44 @@ function patch_spawninfront( strOrigin, strMins, strMaxs )
 }
 
 /*****************************************************************************
+**  PATCH_OUTRO
+**
+**  The official gauntlet finales have an issue where the outro sequence is
+**  broken if the rescue trigger is activated before the trigger_finale is
+**  spawned by its template (which happens after the first button press). This
+**  can occur in many ways: skipping the finale by grenade boosting, GL
+**  boosting, low gravity, noclip, warping, ent_fire... The consequence is
+**  that inputs, such as FinaleEscapeForceSurvivorPositions and
+**  FinaleEscapeFinished, fail because the outro relay assumes that
+**  trigger_finale exists (survivors fall through or glitch in the rescue
+**  vehicle, and the stats are not counted, respectively). This patch
+**  increases robustness in these finales.
+*****************************************************************************/
+
+function patch_outro( strOutroRelay, strFinaleTemplate )
+{
+	local relay;
+
+	if ( relay = Entities.FindByName( null, strOutroRelay ) )
+	{
+		EntityOutputs.AddOutput( relay, "OnTrigger", "!self", "RunScriptCode", "CheckFinale(\"" + strFinaleTemplate + "\")", 0.0, 1 );
+
+		if ( developer() > 0 )
+		{
+			printl( "Enforced that " + strFinaleTemplate + " spawned for the " + strOutroRelay + " outro\n" );
+		}
+	}
+}
+
+function CheckFinale( strFinaleTemplate )
+{
+	if ( !Entities.FindByClassname( null, "trigger_finale" ) )
+	{
+		EntFire( strFinaleTemplate, "ForceSpawn" );
+	}
+}
+
+/*****************************************************************************
 **  MAKE_ATOMIZER
 **
 **  Tanks are able to hit prop_physics with rocks which causes them to never
