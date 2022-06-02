@@ -1,0 +1,3 @@
+If you are reporting a vulnerability (such as [this one](https://github.com/Tsuey/L4D2-Community-Update/issues/115)), please review [responsible disclosure](https://en.wikipedia.org/wiki/Coordinated_vulnerability_disclosure) guidelines and Valve's [HackerOne policy](https://hackerone.com/valve) before posting.
+
+If you have any doubt about severity, we highly encourage you to [reach out to us privately](/CODE_OF_CONDUCT.md#Contact) for these cases, or please contact Valve through legal channels.

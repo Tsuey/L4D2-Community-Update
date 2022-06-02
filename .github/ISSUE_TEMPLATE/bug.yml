@@ -1,0 +1,35 @@
+name: Bug
+description: Report a game or vanilla map bug
+labels: [bug]
+body:
+- type: markdown
+  attributes:
+    value: |
+      Before we begin, please confirm there is not already an [issue](https://github.com/Tsuey/L4D2-Community-Update/issues?q=is%3Aopen) for this bug, and that it is not already [fixed](https://github.com/Tsuey/L4D2-Community-Update/tree/master/changelogs).
+
+      Tip: You can upload images by simply pasting them in.
+- type: textarea
+  attributes:
+    label: Description
+    description: What happened that shouldn't, and what should happen instead?
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Reproduction steps
+    description: |
+      Is there a simple way to reproduce the bug?
+
+      Please reduce the test-case as much as possible and specify if you are using any client or server mods.
+    placeholder: When I load <map> on <gamemode> and do <this>...
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Additional files
+    description: |
+      Drag any demos, crash minidumps and other log files into this box.
+
+      Video or SourceMod plugins can further help narrow bugs down.
+  validations:
+    required: false
