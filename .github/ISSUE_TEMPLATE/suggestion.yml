@@ -12,8 +12,8 @@ body:
   attributes:
     label: Suggestion
     description: |
-      Requests are preferably achievable [without C++ access](https://github.com/Tsuey/L4D2-Community-Update/blob/main/CODE_OF_CONDUCT.md#Ingenuity), are focused, necessary, and useful to both modders and players.
+      Requests are preferably achievable [without C++ access](https://github.com/Tsuey/L4D2-Community-Update/blob/master/CODE_OF_CONDUCT.md#Ingenuity), are focused, necessary, and useful to both modders and players.
 
-      Keep in mind that the [least astonishing](https://github.com/Tsuey/L4D2-Community-Update/blob/main/CONTRIBUTING.md#Submissions) solution is probably the best one.
+      Keep in mind that the [least astonishing](https://github.com/Tsuey/L4D2-Community-Update/blob/master/CONTRIBUTING.md#Submissions) solution is probably the best one.
   validations:
     required: true
