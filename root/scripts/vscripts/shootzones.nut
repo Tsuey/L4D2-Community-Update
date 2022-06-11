@@ -19,14 +19,14 @@ MutationState <-
 MutationOptions <-
 {
     cm_CommonLimit = 30 // Maximum number of common zombies alive in the world at the same time
- 	//MegaMobSize = 20 // Total number of common zombies in a mob. (never more than CommonLimit at one time)
- 	//cm_WanderingZombieDensityModifier = 0 // lets get rid of the wandering zombies
- 	cm_MaxSpecials  = 0 // removes all special infected from spawning
- 	cm_TankLimit    = 0 // removes all tanks from spawning
- 	cm_WitchLimit   = 0 // removes all witches from spawning
+	//MegaMobSize = 20 // Total number of common zombies in a mob. (never more than CommonLimit at one time)
+	//cm_WanderingZombieDensityModifier = 0 // lets get rid of the wandering zombies
+	cm_MaxSpecials  = 0 // removes all special infected from spawning
+	cm_TankLimit    = 0 // removes all tanks from spawning
+	cm_WitchLimit   = 0 // removes all witches from spawning
 	//BoomerLimit  = 0
- 	//ChargerLimit = 0
- 	//HunterLimit  = 0
+	//ChargerLimit = 0
+	//HunterLimit  = 0
 	//JockeyLimit  = 0
 	//SpitterLimit = 0
 	//SmokerLimit  = 0
@@ -35,7 +35,7 @@ MutationOptions <-
 
 ShootzonesHUD <-
 {
-	Fields = 
+	Fields =
 	{
 		player1   = { slot = HUD_LEFT_TOP,  name = "player1", dataval = "OUT", flags = HUD_FLAG_NOTVISIBLE | HUD_FLAG_ALIGN_LEFT },
 		player2   = { slot = HUD_LEFT_BOT,  name = "player2", dataval = "OUT", flags = HUD_FLAG_NOTVISIBLE | HUD_FLAG_ALIGN_LEFT },
@@ -95,7 +95,7 @@ function OnGameplayStart()
 		{
 			SpawnTables =
 			{
-				shootzone_think = 
+				shootzone_think =
 				{
 					initialSpawn = true
 					SpawnInfo =
@@ -116,7 +116,6 @@ function OnGameplayStart()
 	shootzoneThinkGroup.SpawnTables[ "shootzone_think" ].PostPlaceCB <- ShootzoneThinkSpawnCB
 	g_MapScript.SpawnSingleAt( shootzoneThinkGroup, Vector( 0, 0, 0 ) , QAngle( 0, 0, 0 ) )
 	g_MapScript.SpawnSingleAt( g_MapScript.GetEntityGroup( "ShootzoneSound" ), Vector( 0, 0, 0 ) , QAngle( 0, 0, 0 ) )
-
 }
 
 
@@ -143,7 +142,7 @@ function ShootzoneScriptSpawnCB( entity, rarity )
 	//Set the id of the shootzone
 	shootzoneScope.id = SessionState.allShootzones.len()
 	printl( "Shootzone ID: " + shootzoneScope.id )
-	
+
 	//Flow distance for the shootzone
 	shootzoneScope.flowDistance = GetFlowDistanceForPosition( shootzoneScope.origin )
 	shootzoneScope.flowPercent = GetFlowPercentForPosition( shootzoneScope.origin, true )
@@ -153,7 +152,6 @@ function ShootzoneScriptSpawnCB( entity, rarity )
 
 	//Add the shootzone to the list of all the shootzones
 	SessionState.allShootzones.append( entity )
-	
 }
 
 
@@ -222,7 +220,7 @@ function RecomputePlayersInShootzones()
 //			local shootzoneScope = shootzone.GetScriptScope()
 //			DebugDrawText( shootzoneScope.origin, "Distance: " + shootzoneScope.flowDistance + "\nPercent: " + shootzoneScope.flowPercent + "%", false, 100000 )
 //		}
-//		
+//
 //		SessionState.FirstTime = false;
 //	}
 
@@ -249,7 +247,7 @@ function RecomputePlayersInShootzones()
 					break;
 				}
 			}
-		}	
+		}
 	}
 
 	//foreach ( shootzone in SessionState.allShootzones )
