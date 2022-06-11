@@ -33,22 +33,22 @@ MutationOptions <-
 	SpawnSetRadius = 2000
 	SpawnSetPosition = Vector( -7150, -3647, -97 )
 
-	WanderingZombieDensityModifier = 0 // get rid of wanderers
+	cm_WanderingZombieDensityModifier = 0 // get rid of wanderers
 
 	cm_ShouldEscortHumanPlayers = true
 	cm_AggressiveSpecials = true
 
-	BoomerLimit  = 0
-	ChargerLimit = 0
-	HunterLimit  = 0
-	JockeyLimit  = 0
-	SpitterLimit = 0
-	SmokerLimit  = 0
-	MaxSpecials  = 0
-	CommonLimit  = 20
-	MegaMobSize  = 20
-	TankLimit    = 0
-	WitchLimit   = 0
+	BoomerLimit    = 0
+	ChargerLimit   = 0
+	HunterLimit    = 0
+	JockeyLimit    = 0
+	SpitterLimit   = 0
+	SmokerLimit    = 0
+	cm_MaxSpecials = 0
+	cm_CommonLimit = 20
+	MegaMobSize    = 20
+	cm_TankLimit   = 0
+	cm_WitchLimit  = 0
 
 	function EndScriptedMode()
 	{
@@ -320,7 +320,7 @@ function GetNextStage()
 			HUDManageTimers( 1 , TIMER_COUNTUP, 0)   // generalize this?
 
 			// calculate the number of common infected to add each time a waypoint is completed
-			SessionState.CommonIncrement = (100 - SessionOptions.CommonLimit) / SessionState.FinalWaypoint
+			SessionState.CommonIncrement = (100 - SessionOptions.cm_CommonLimit) / SessionState.FinalWaypoint
 		}
 
 		if( !MapOverrideOptions() )
@@ -336,9 +336,9 @@ function GetNextStage()
 				local limit = RandomInt(1,3) + PercentageComplete * 3
 				SessionOptions[val + "Limit"] = limit
 			}
-			SessionOptions.MaxSpecials = RandomInt(2,6) + PercentageComplete * 3
-			if (SessionOptions.CommonLimit < 100)
-				SessionOptions.CommonLimit += SessionState.CommonIncrement
+			SessionOptions.cm_MaxSpecials = RandomInt(2,6) + PercentageComplete * 3
+			if (SessionOptions.cm_CommonLimit < 100)
+				SessionOptions.cm_CommonLimit += SessionState.CommonIncrement
 
 			if (SessionOptions.MegaMobSize < 50 )
 				SessionOptions.MegaMobSize += SessionState.CommonIncrement
@@ -346,7 +346,7 @@ function GetNextStage()
 			if (SessionState.CurrentWaypoint == SessionState.FinalWaypoint - 1 )
 			{
 				Ticker_NewStr("One gate to go!")
-				SessionOptions.TankLimit = 1 // how do i force a tank from script?
+				SessionOptions.cm_TankLimit = 1 // how do i force a tank from script?
 				SessionOptions.ScriptedStageType = STAGE_ESCAPE  // i guess i do an escape stage
 			}
 			else // display some help text on the ticker
@@ -368,7 +368,7 @@ function GetNextStage()
 	{
 		SessionOptions.ScriptedStageType = STAGE_DELAY
 		SessionOptions.ScriptedStageValue = 1000
-		SessionOptions.MaxSpecials = 0
+		SessionOptions.cm_MaxSpecials = 0
 	}
 
 	smDbgPrint("Dash setting Mode " + SessionOptions.ScriptedStageType + " val " + SessionOptions.ScriptedStageValue)

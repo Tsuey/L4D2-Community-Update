@@ -18,12 +18,12 @@ MutationState <-
 
 MutationOptions <-
 {
-    CommonLimit = 30 // Maximum number of common zombies alive in the world at the same time
+    cm_CommonLimit = 30 // Maximum number of common zombies alive in the world at the same time
  	//MegaMobSize = 20 // Total number of common zombies in a mob. (never more than CommonLimit at one time)
- 	//WanderingZombieDensityModifier = 0 // lets get rid of the wandering zombies
- 	MaxSpecials  = 0 // removes all special infected from spawning
- 	TankLimit    = 0 // removes all tanks from spawning
- 	WitchLimit   = 0 // removes all witches from spawning
+ 	//cm_WanderingZombieDensityModifier = 0 // lets get rid of the wandering zombies
+ 	cm_MaxSpecials  = 0 // removes all special infected from spawning
+ 	cm_TankLimit    = 0 // removes all tanks from spawning
+ 	cm_WitchLimit   = 0 // removes all witches from spawning
 	//BoomerLimit  = 0
  	//ChargerLimit = 0
  	//HunterLimit  = 0

@@ -58,16 +58,16 @@ MutationOptions <-
 	IgnoreNavThreatAreas = true
 	ZombieDiscardRange = 10000
 
-	WanderingZombieDensityModifier = 0
-	BoomerLimit  = 0
-	ChargerLimit = 0
-	HunterLimit  = 0
-	JockeyLimit  = 0
-	SpitterLimit = 0
-	SmokerLimit  = 0
-	MaxSpecials  = 0
-	CommonLimit  = 20
-	TankLimit    = 0
+	cm_WanderingZombieDensityModifier = 0
+	BoomerLimit    = 0
+	ChargerLimit   = 0
+	HunterLimit    = 0
+	JockeyLimit    = 0
+	SpitterLimit   = 0
+	SmokerLimit    = 0
+	cm_MaxSpecials = 0
+	cm_CommonLimit = 20
+	cm_TankLimit   = 0
 	MegaMobMaxSize = 100
 	MegaMobMinSize = 75
 	PanicWavePauseMax = 5

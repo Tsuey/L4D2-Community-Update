@@ -11,7 +11,7 @@ DirectorOptions <-
 	cm_AutoReviveFromSpecialIncap = true
 	cm_AllowPillConversion = false
 	cm_TankLimit = 4
-	ProhibitBosses = false
+	cm_ProhibitBosses = false
 
 	BoomerLimit = 0
 	SurvivorMaxIncapacitatedCount = 3
