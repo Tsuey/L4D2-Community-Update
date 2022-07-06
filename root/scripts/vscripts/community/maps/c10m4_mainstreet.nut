@@ -113,7 +113,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_naturalstains_cloned_awningpipe", "2720 -1734 231.5", "-460 -794 97" );
 		make_ladder( "_ladder_semitrucknose_cloned_startgenerator", "-2932 -770.5 1", "3793 -1881 -16", "0 -29 0", "-0.485 -0.875 0" );
 		make_ladder( "_ladder_stainedboard_cloned_surplusfluff", "99 -4310.5 224", "5683 -3552 24", "0 -90 0", "1 0 0" );
-		make_ladder( "_ladder_starthilltopB_cloned_awningpipe", "2720 -1734 231.5", "-6648.9 759.8 259", "4 -17.7 14", "0.311 0.919 0.241" ); //6639.9 754.3    6648.9 759.29
+		make_ladder( "_ladder_starthilltopB_cloned_awningpipe", "2720 -1734 231.5", "-6648.9 759.8 259", "4 -17.7 14", "0.311 0.919 0.241" );
 		make_ladder( "_ladder_starthilltopM_cloned_awningpipe", "2720 -1734 231.5", "-6651.8 687.2 538", "4 -17.7 14", "0.311 0.919 0.241" );
 		make_ladder( "_ladder_starthilltopT_cloned_awningpipe", "2720 -1734 231.5", "-6654 631 755", "4 -17.7 14", "0.311 0.919 0.241" );
 		make_ladder( "_ladder_theatreleft_cloned_theatreright", "1142 -4311.5 20", "474 -4 0" );
