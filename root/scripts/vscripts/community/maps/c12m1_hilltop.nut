@@ -38,7 +38,7 @@ function DoRoundFixes()
 		kill_funcinfclip( 1081.48 );	// Delete clip for fence right of end safe room (all SI)
 		kill_funcinfclip( 741.805 );	// Delete clip above RICHARDSON ATLANTIC building for Hunter-only
 		EntFire( "worldspawn", "RunScriptCode", "kill_funcinfclip( 1364.13 )", 1 );	// Undesirably deletes clip behind start area (_meticulous repair)
-		make_clip( "_ladder_rockcliffback_clip", "SI Players", 1, "-24 -15 0", "27 56 25", "-10172 -10751 813", "0 49 0" );
+		make_clip( "_ladder_rockcliffback_clip", "SI Players", 1, "-24 -15 0", "27 56 25", "-10172 -10751 818", "0 49 0" );
 		make_clip( "_ladderqol_rockcliff", "SI Players", 1, "-32 -77 0", "32 100 32", "-10235 -12716 528", "0 30 -30" );
 		make_clip( "_meticulous_funcinfclip00", "SI Players", 1, "-32 -217 -640", "32 177 1935", "-7624 -14554 257" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-492 -6 -977", "553 6 657", "-7806 -7614 1536", "0 38 0" );
@@ -52,19 +52,21 @@ function DoRoundFixes()
 		make_clip( "_meticulous_funcinfclip09", "SI Players", 1, "-205 -8 0", "1000 960 885", "-5988 -6941 -65" );
 		make_clip( "_meticulous_stuckspot", "SI Players", 1, "-420 -128 -640", "640 32 600", "-9801 -13140 120", "-20 -40 0" );
 		make_clip( "_meticulous_slidespot", "SI Players", 1, "-108 -56 0", "643 16 88", "-10932 -8918 432" );
-		make_ladder( "_ladder_1stcliffback_cloned_startwide", "-8180.8638 -14508.2334 12.3855", "-12520 3632 3095", "0 37.14 10", "-0.61 0.79 0" );
-		make_ladder( "_ladder_1stclifffront_cloned_prebridgewide", "-11628.5 -12194.834 161", "1441 -1480 -1124", "0 0 -8" );
-		make_ladder( "_ladder_2ndcliffback_cloned_endfencewide", "-6124 -7222.7998 175.5", "-4620 -2295 2337", "0 0 15" );
-		make_ladder( "_ladder_2ndclifffront_cloned_postbridgewide", "-11328 -11030 -70", "4300 -10407 -2705", "0 -46.6 -17", "-0.73 -0.69 0" );
+		make_clip( "_ladderqol_2ndclifffront_stuckspot", "Everyone", 1, "-12 -12 -36", "12 12 36", "-11204 -9392 484" );
+		make_clip( "_ladderqol_2ndcliffback_stuckspot", "Everyone", 1, "-30 -24 -230", "30 24 230", "-10742 -9372 650" );
+		make_ladder( "_ladder_1stcliffback_cloned_startwide", "-8180.8638 -14508.2334 12.3855", "-12475 3648 3095", "0 37 10", "-0.59 0.79 0.17" );
+		make_ladder( "_ladder_1stclifffront_cloned_prebridgewide", "-11628.5 -12194.834 161", "1428 -1485 -1124", "0 0 -8", "0 -0.99 0.139" );
+		make_ladder( "_ladder_2ndcliffback_cloned_endfencewide", "-6124 -7222.7998 175.5", "-4618 -2162.25 1724.89", "0 0 10", "0 0.98 0.17" );
+		make_ladder( "_ladder_2ndclifffront_cloned_postbridgewide", "-11328 -11030 -70", "4280 -10517 -2705", "0 -47 -17", "-0.7 -0.65 0.29" );
 		make_ladder( "_ladder_2ndclifftank_cloned_elecboxchairs", "-11227.5 -9748 517", "1026 750 40" );
 		make_ladder( "_ladder_endelecbox_cloned_elecboxchairs", "-11227.5 -9748 517", "4652 1595 -24" );
 		make_ladder( "_ladder_endfenceback_cloned_farunused", "-11520 -8870 168", "5386 1595 124" );
 		make_ladder( "_ladder_endfencefront_cloned_freighttripipe", "-7252 -8192.5 370", "1104 891 4" );
-		make_ladder( "_ladder_rockcliffback_cloned_unusedladder", "-10213 -12939 834.173", "6102 -7889 560", "-4 -41.58 0", "0.73 -0.69 0" );
-		make_ladder( "_ladder_skybridgeleftB_cloned_trackstoshed", "-7726 -8871.5 120", "78 -605 97", "0 0 -2" );
-		make_ladder( "_ladder_skybridgeleftT_cloned_trackstoshed", "-7726 -8871.5 120", "78 -597.45 321", "0 0 -2" );
-		make_ladder( "_ladder_skybridgerightB_cloned_trackstoshed", "-7726 -8871.5 120", "-242 -605 97", "0 0 -2" );
-		make_ladder( "_ladder_skybridgerightT_cloned_trackstoshed", "-7726 -8871.5 120", "-242 -597.45 321", "0 0 -2" );
+		make_ladder( "_ladder_rockcliffback_cloned_unusedladder", "-10213 -12939 834.173", "6125.06 -8010.88 559.92", "-4 -42 0", "0.74 -0.67 0.07" );
+		make_ladder( "_ladder_skybridgeleftB_cloned_trackstoshed", "-7726 -8871.5 120", "78 -601.48 82.91", "0 0 -1.5", "0 1 -0.026" );
+		make_ladder( "_ladder_skybridgeleftT_cloned_trackstoshed", "-7726 -8871.5 120", "78 -593.18 401.91", "0 0 -1.5", "0 1 -0.026" );
+		make_ladder( "_ladder_skybridgerightB_cloned_trackstoshed", "-7726 -8871.5 120", "-241 -600.48 82.91", "0 0 -1.5", "0 1 -0.026" );
+		make_ladder( "_ladder_skybridgerightT_cloned_trackstoshed", "-7726 -8871.5 120", "-241 -592.18 401.91", "0 0 -1.5", "0 1 -0.026" );
 		patch_ladder( "-10213 -12939 834.173", "22 0 0" );
 	}
 
