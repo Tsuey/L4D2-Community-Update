@@ -5,6 +5,7 @@ insert
 {
 $basetexture "models/infected/common/l4d2/cif_tanktop_jeans_rain"
 $detail "models/infected/common/l4d2/detail/ci_detail_mud"
+$GRADIENTTEXTURE "models/infected/common/l4d2/ci_gradient_palette_rain"
 $DETAILSCALE 6
 $phongboost 2
 $BURNING 1
