@@ -3301,6 +3301,7 @@ Rule C5M5_GateDownGambler
 
 Response C5M5_saferoom001Gambler
 {
+	scene "scenes/Gambler/WorldC5M5B02.vcd" then self IntroEnd foo:0 0.1 //Oh yeah.
 	scene "scenes/Gambler/WorldC5M5B05.vcd"  then any C5M5_saferoom005 foo:0 0.1 //Or they're gonna line us up against a wall and shoot us.
 }
 Rule C5M5_saferoom001Gambler
@@ -3311,7 +3312,6 @@ Rule C5M5_saferoom001Gambler
 
 Response C5M5_saferoom003Gambler
 {
-	scene "scenes/Gambler/WorldC5M5B02.vcd" then self IntroEnd foo:0 0.1 //Oh yeah.
 	scene "scenes/Gambler/WorldC5M5B03.vcd" then self IntroEnd foo:0 0.1 //[chuckles] Allright, let's go.
 	scene "scenes/Gambler/WorldC5M5B04.vcd" then self IntroEnd foo:0 0.1 //[chuckles] Okay, allright, let's go.
 }
