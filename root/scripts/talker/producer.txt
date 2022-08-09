@@ -9662,31 +9662,31 @@ Response PlayerHeardBoomerC1Producer
 }
 Rule PlayerHeardBoomerC1Producer
 {
-	criteria ConceptPlayerHeardBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowBoomer
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowBoomer IsNotSurvival
 	Response PlayerHeardBoomerC1Producer
 }
 
 Rule PlayerHeardHunterC1Producer
 {
-	criteria ConceptPlayerHeardHunter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowHunter
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowHunter IsNotSurvival
 	Response PlayerHeardBoomerC1Producer
 }
 
 Rule PlayerHeardSmokerC1Producer
 {
-	criteria ConceptPlayerHeardSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowSmoker
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowSmoker IsNotSurvival
 	Response PlayerHeardBoomerC1Producer
 }
 
 Rule PlayerHeardChargerC1Producer
 {
-	criteria ConceptPlayerHeardCharger IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowCharger
+	criteria ConceptPlayerHeardCharger IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowCharger IsNotSurvival
 	Response PlayerHeardBoomerC1Producer
 }
 
 Rule PlayerHeardSpitterC1Producer
 {
-	criteria ConceptPlayerHeardSpitter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowSpitter
+	criteria ConceptPlayerHeardSpitter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowSpitter IsNotSurvival
 	Response PlayerHeardBoomerC1Producer
 }
 

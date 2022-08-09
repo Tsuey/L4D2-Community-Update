@@ -10488,32 +10488,31 @@ Response PlayerHeardBoomerC1Gambler
 }
 Rule PlayerHeardBoomerC1Gambler
 {
-	criteria ConceptPlayerHeardBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowBoomer
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowBoomer IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardHunterC1Gambler
 {
-	criteria ConceptPlayerHeardHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowHunter
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowHunter IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardSmokerC1Gambler
 {
-	criteria ConceptPlayerHeardSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSmoker
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSmoker IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardChargerC1Gambler
 {
-	criteria ConceptPlayerHeardCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowCharger
+	criteria ConceptPlayerHeardCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowCharger IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardSpitterC1Gambler
 {
-	criteria ConceptPlayerHeardSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSpitter
-	Response PlayerHeardBoomerC1Gambler
+	criteria ConceptPlayerHeardSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSpitter IsNotSurvival
 }	
 
 Response PlayerHeardJockeyC1Gambler
