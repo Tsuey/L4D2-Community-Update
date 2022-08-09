@@ -9696,7 +9696,7 @@ Response PlayerHeardJockeyC1Producer
 }
 Rule PlayerHeardJockeyC1Producer
 {
-	criteria ConceptPlayerHeardJockey IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowJockey
+	criteria ConceptPlayerHeardJockey IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2 NoKnowJockey IsNotSurvival
 	Response PlayerHeardJockeyC1Producer
 }
 

@@ -10494,7 +10494,7 @@ Response PlayerHeardJockeyC1Coach
 }
 Rule PlayerHeardJockeyC1Coach
 {
-	criteria ConceptPlayerHeardJockey IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowJockey
+	criteria ConceptPlayerHeardJockey IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowJockey IsNotSurvival
 	Response PlayerHeardJockeyC1Coach
 }
 

@@ -10513,6 +10513,7 @@ Rule PlayerHeardChargerC1Gambler
 Rule PlayerHeardSpitterC1Gambler
 {
 	criteria ConceptPlayerHeardSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSpitter IsNotSurvival
+	Response PlayerHeardBoomerC1Gambler
 }	
 
 Response PlayerHeardJockeyC1Gambler
@@ -10527,7 +10528,7 @@ Response PlayerHeardJockeyC1Gambler
 }
 Rule PlayerHeardJockeyC1Gambler
 {
-	criteria ConceptPlayerHeardJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowJockey
+	criteria ConceptPlayerHeardJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowJockey IsNotSurvival
 	Response PlayerHeardJockeyC1Gambler
 }
 
