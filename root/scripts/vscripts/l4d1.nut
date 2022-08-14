@@ -172,6 +172,73 @@ function OnGameEvent_round_start_post_nav( params )
 	}
 }
 
+if ( HasPlayerControlledZombies() )
+{
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_smoker_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_smoker_l4d1.mdl" );
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_boomer_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_boomer_l4d1.mdl" );
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_hunter_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_hunter_l4d1.mdl" );
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_hulk_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_hulk_l4d1.mdl" );
+
+	function OnGameEvent_item_pickup( params )
+	{
+		local player = GetPlayerFromUserID( params["userid"] );
+
+		if ( ( !player ) || ( player.IsSurvivor() ) )
+			return;
+
+		local modelName = player.GetModelName();
+		if ( ( modelName.find( "l4d1" ) != null ) || ( modelName == "models/infected/hulk_dlc3.mdl" ) )
+			return;
+
+		local function SetClawModel( modelName )
+		{
+			local claw = player.GetActiveWeapon();
+			local viewmodel = NetProps.GetPropEntity( player, "m_hViewModel" );
+
+			if ( ( !claw ) || ( !viewmodel ) )
+				return;
+
+			claw.SetModel( modelName );
+			NetProps.SetPropInt( viewmodel, "m_nModelIndex", NetProps.GetPropInt( claw, "m_nModelIndex" ) );
+			NetProps.SetPropString( viewmodel, "m_ModelName", modelName );
+		}
+
+		switch( player.GetZombieType() )
+		{
+			case 1:
+			{
+				player.SetModel( "models/infected/smoker_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_smoker_l4d1.mdl" );
+				break;
+			}
+			case 2:
+			{
+				player.SetModel( "models/infected/boomer_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_boomer_l4d1.mdl" );
+				break;
+			}
+			case 3:
+			{
+				player.SetModel( "models/infected/hunter_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_hunter_l4d1.mdl" );
+				break;
+			}
+			case 8:
+			{
+				player.SetModel( "models/infected/hulk_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_hulk_l4d1.mdl" );
+				break;
+			}
+			default:
+				break;
+		}
+	}
+}
+
 function OnGameEvent_player_spawn( params )
 {
 	local player = GetPlayerFromUserID( params["userid"] );
