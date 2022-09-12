@@ -13,7 +13,7 @@ MeleeWeaponData
 	"anim_prefix"	"anim"
 	
 	// Damage per hit
-	"damage"		"80"
+	"damage"		"50"
 	
 	// Damage flag value
 	// right now you can enter the integer values, or logical OR them together
