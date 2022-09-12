@@ -1,0 +1,131 @@
+MeleeWeaponData
+{
+	// Time before you can swing the weapon again
+	"refire_delay"	"1.0"
+	
+	// Model to show in firstperson
+	"viewmodel"		"models/weapons/melee/v_shovel.mdl"
+	
+	// Model to show in thirdperson
+	"playermodel"	"models/weapons/melee/w_shovel.mdl"
+	
+	// Animation prefix - not sure what this is used for just yet
+	"anim_prefix"	"anim"
+	
+	// Damage per hit
+	"damage"		"80"
+	
+	// Damage flag value
+	// right now you can enter the integer values, or logical OR them together
+	// supported damage types
+	//DMG_SLASH			(1 << 2) = 4 - cuts off parts of infected
+	//DMG_BURN			(1 << 3) = 8 - lights zombies on fire
+	//DMG_CLUB			(1 << 7) = 128 - knocks them back?
+	"damage_flags"	"128 | 4"
+	
+	// Rumble effect to play on 360 when we swing
+	// RUMBLE_CROWBAR_SWING = 9
+	// RUMBLE_L4D_PLAYER_MELEE_HIT = 42
+	"rumble_effect"	"42"
+
+	//"decapitates" "1"
+
+	// Third person animations
+	"activity_idle"		"ACT_IDLE_AXE"
+	"activity_walk" 	"ACT_WALK_AXE"
+	"activity_run" 		"ACT_RUN_AXE"
+	"activity_crouchidle" 	"ACT_CROUCHIDLE_AXE"
+	"activity_crouchwalk" 	"ACT_RUN_CROUCH_AXE"  	// there isn't a crouched walk with an axe
+	"activity_crouchrun" 	"ACT_RUN_CROUCH_AXE"
+	"activity_idleinjured"  "ACT_IDLE_INJURED_AXE"
+	"activity_walkinjured" 	"ACT_WALK_INJURED_AXE"
+	"activity_runinjured"   "ACT_RUN_INJURED_AXE"
+	"activity_idlecalm" 	"ACT_IDLE_CALM_AXE"
+	"activity_walkcalm"	"ACT_WALK_AXE"  	// there isn't a calm walk with an axe
+	"activity_runcalm" 	"ACT_RUN_AXE"		// there isn't a calm run with an axe
+	"activity_pulled" 	"ACT_TERROR_PULLED_RUN_RIFLE"
+	"activity_jump" 	"ACT_JUMP_AXE"
+
+	"activity_deploy"		"ACT_DEPLOY_RIFLE"
+	
+	"activity_shove"		"ACT_TERROR_SHOVED_FORWARD_BAT"
+
+	"addon_attachment"		"melee"
+	"addon_offset"			"20 -3 1"
+	"addon_angles"			"0 80 -90"
+
+	// Sound data
+	// define the hit and miss sounds
+	SoundData
+	{
+		"melee_miss"		"Shovel.Miss"
+		"melee_hit"		"Shovel.ImpactFlesh"
+		"melee_hit_world"	"Shovel.ImpactWorld"
+	}
+		
+	// Player animation to fire, 0 = PLAYERANIMEVENT_MELEE for now
+	"player_anim_event"		"0"		// TODO - convert from string to PlayerAnimEvent_t
+	
+	// How long after attacking until the weapon enters its idle animation state
+	"weapon_idle_time"	"2.1"
+	
+	// Attack animations (primary and secondary)
+	"primaryattacks"
+	{
+		"bonk1"
+		{
+			"startdir"		"E"
+			"enddir"		"W"
+			"duration"		"1.3"
+			"starttime"		"0.1"
+			"endtime"		"0.36"
+			"activity"		"ACT_VM_PRIMARYATTACK"
+			"player_activity"	"ACT_SHOOT_E2W_GUITAR"
+			"player_activity_idle"	"ACT_SHOOT_E2W_IDLE_GUITAR"
+			"force_dir"		"10 -80 20"
+		}	
+		"bonk2"
+		{
+			"startdir"		"W"
+			"enddir"		"E"
+			"duration"		"1.34"
+			"starttime"		"0.07"
+			"endtime"		"0.38"
+			"activity"		"ACT_VM_HITLEFT"
+			"player_activity"	"ACT_SHOOT_E2W_GUITAR"
+			"player_activity_idle"	"ACT_SHOOT_E2W_IDLE_GUITAR"
+			"force_dir"		"10 80 20"
+		}	
+	}	
+	"strongattacks"
+	{
+
+	}
+	"secondaryattacks"
+	{
+		"shove1"
+		{
+			"startdir"		"E"
+			"enddir"		"W"
+			"duration"		".73"
+			"starttime"		"0.1"
+			"endtime"		"0.26"
+			"activity"		"ACT_VM_SECONDARYATTACK"
+			"player_activity"	"ACT_SHOOT_SECONDARY_AXE"
+			"player_activity_idle"	"ACT_SHOOT_SECONDARY_AXE"
+		}	
+	}	
+	
+	// hud textures
+	"TextureData"
+	{
+		"sprite_active"
+		{
+				"file"		"vgui/hud/icon_shovel"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"64"	
+		}
+	}
+}

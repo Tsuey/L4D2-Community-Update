@@ -1,0 +1,142 @@
+MeleeWeaponData
+{
+	// Time before you can swing the weapon again
+	"refire_delay"	"1.0"
+	
+	// Model to show in firstperson
+	"viewmodel"		"models/weapons/melee/v_electric_guitar.mdl"
+	
+	// Model to show in thirdperson
+	"playermodel"	"models/weapons/melee/w_electric_guitar.mdl"
+	
+	// Animation prefix - not sure what this is used for just yet
+	"anim_prefix"	"anim"
+	
+	// Damage per hit
+	"damage"		"70"
+	
+	// Damage flag value
+	// right now you can enter the integer values, or logical OR them together
+	// supported damage types
+	//DMG_SLASH			(1 << 2) = 4 - cuts off parts of infected
+	//DMG_BURN			(1 << 3) = 8 - lights zombies on fire
+	//DMG_CLUB			(1 << 7) = 128 - knocks them back?
+	"damage_flags"	"128"
+	
+	// Rumble effect to play on 360 when we swing
+	// RUMBLE_CROWBAR_SWING = 9
+	// RUMBLE_L4D_PLAYER_MELEE_HIT = 42
+	"rumble_effect"	"42"
+	
+	"decapitates" "1"
+
+	// Third person animations
+	"activity_idle"		"ACT_IDLE_GUITAR"
+	"activity_walk" 	"ACT_WALK_GUITAR"
+	"activity_run" 		"ACT_RUN_GUITAR"
+	"activity_crouchidle" 	"ACT_CROUCHIDLE_GUITAR"
+	"activity_crouchwalk" 	"ACT_RUN_CROUCH_GUITAR"  	// there isn't a crouched walk with an axe
+	"activity_crouchrun" 	"ACT_RUN_CROUCH_GUITAR"
+	"activity_idleinjured"  "ACT_IDLE_INJURED_GUITAR"
+	"activity_walkinjured" 	"ACT_WALK_INJURED_GUITAR"
+	"activity_runinjured"   "ACT_RUN_INJURED_GUITAR"
+	"activity_idlecalm" 	"ACT_IDLE_CALM_GUITAR"
+	"activity_walkcalm"	"ACT_WALK_GUITAR"  	// there isn't a calm walk with an axe
+	"activity_runcalm" 	"ACT_RUN_GUITAR"		// there isn't a calm run with an axe
+	"activity_pulled" 	"ACT_TERROR_PULLED_RUN_RIFLE"
+	"activity_jump" 	"ACT_JUMP_GUITAR"
+
+	"activity_deploy"		"ACT_DEPLOY_RIFLE"
+	
+	"activity_shove"		"ACT_TERROR_SHOVED_FORWARD_BAT"
+
+	"addon_attachment"		"melee"
+	"addon_offset"			"4 0 0"
+	"addon_angles"			"175 100 95"	
+		
+	// Sound data
+	// define the hit and miss sounds
+	SoundData
+	{
+		"melee_miss"		"Guitar.Miss"
+		"melee_hit"		"Guitar.ImpactFlesh"
+		"melee_hit_world"	"Guitar.ImpactWorld"
+	}
+		
+	// Player animation to fire, 0 = PLAYERANIMEVENT_MELEE for now
+	"player_anim_event"		"0"		// TODO - convert from string to PlayerAnimEvent_t
+	
+	// How long after attacking until the weapon enters its idle animation state
+	"weapon_idle_time"	"1.6"
+	
+	// Attack animations (primary and secondary)
+	"primaryattacks"
+	{
+		"slash1"
+		{
+			"startdir"		"E"
+			"enddir"		"W"
+			"duration"		"1.23"
+			"starttime"		"0.1"
+			"endtime"		"0.33"
+			"activity"		"ACT_VM_PRIMARYATTACK"
+			"player_activity"	"ACT_SHOOT_E2W_GUITAR"
+			"player_activity_idle"	"ACT_SHOOT_E2W_IDLE_GUITAR"
+			"force_dir"		"0 -15 0"
+		}	
+		"slash2"
+		{
+			"startdir"		"W"
+			"enddir"		"E"
+			"duration"		"1.23"
+			"starttime"		"0.1"
+			"endtime"		"0.33"
+			"activity"		"ACT_VM_HITLEFT"
+			"player_activity"	"ACT_SHOOT_E2W_GUITAR"
+			"player_activity_idle"	"ACT_SHOOT_E2W_IDLE_GUITAR"
+			"force_dir"		"0 15 0"
+		}		
+	}	
+	"strongattacks"
+	{
+		"strongattack1"
+		{
+				"startdir"		"N"
+				"enddir"		"S"
+				"duration"		"1.24"
+				"starttime"		"0.35"
+				"endtime"		"0.60"
+				"activity"		"ACT_VM_SWINGHARD"
+				"player_activity"	"ACT_SHOOT_STRONG_AXE"
+				"player_activity_idle"	"ACT_SHOOT_STRONG_IDLE_AXE"
+				"force_dir"		"0 0 18"
+		}
+	}
+	"secondaryattacks"
+	{
+		"shove1"
+		{
+			"startdir"		"E"
+			"enddir"		"W"
+			"duration"		".73"
+			"starttime"		"0.1"
+			"endtime"		"0.26"
+			"activity"		"ACT_VM_SECONDARYATTACK"
+			"player_activity"	"ACT_SHOOT_SECONDARY_GUITAR"
+			"player_activity_idle"	"ACT_SHOOT_SECONDARY_GUITAR"
+		}	
+	}	
+	
+	// hud textures
+	"TextureData"
+	{
+		"sprite_active"
+		{
+				"file"		"vgui/hud/icon_electric_guitar"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"64"	
+		}
+	}
+}
