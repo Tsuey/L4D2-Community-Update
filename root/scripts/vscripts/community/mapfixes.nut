@@ -245,9 +245,12 @@ local s_CommunityUpdate =
 
 		if ( IsMissionFinalMap() )
 		{
-			local finale = Entities.FindByClassname( null, "trigger_finale" );
+			local finale = Entities.FindByClassname( null, "trigger_finale" ), code;
 
-			EntityOutputs.AddOutput( finale, "EscapeVehicleLeaving", "!self", "RunScriptCode", "Convars.SetValue( \"sb_all_bot_game\", 1 );", 0.0, 1 );
+			code = "sb_all_bot_game <- Convars.GetStr( \"sb_all_bot_game\" ); Convars.SetValue( \"sb_all_bot_game\", 1 );"
+			EntityOutputs.AddOutput( finale, "EscapeVehicleLeaving", "!self", "RunScriptCode", code, 0.0, 1 );
+			code = "if ( \"sb_all_bot_game\" in this ) Convars.SetValue( \"sb_all_bot_game\", sb_all_bot_game );"
+			EntityOutputs.AddOutput( finale, "FinaleLost", "!self", "RunScriptCode", code, 0.0, 1 );
 		}
 
 		// Fix forklifts so they can start obstructed but still be destroyed.
