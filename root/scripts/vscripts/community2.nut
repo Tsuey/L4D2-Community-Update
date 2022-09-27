@@ -38,7 +38,7 @@ DirectorOptions <-
 
 function OnGameEvent_round_start_post_nav( params )
 {
-	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" || Director.GetMapName() == "c13m4_cutthroatcreek" )
+	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
 		DirectorOptions.cm_MaxSpecials = 0;
 
 	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
@@ -60,6 +60,6 @@ function OnGameEvent_finale_start( params )
 
 function OnGameEvent_gauntlet_finale_start( params )
 {
-	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c13m4_cutthroatcreek" )
+	if ( Director.GetMapName() == "c5m5_bridge" )
 		DirectorOptions.cm_MaxSpecials = 8;
 }
