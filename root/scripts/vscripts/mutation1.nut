@@ -58,7 +58,7 @@ function OnGameEvent_round_start_post_nav( params )
 			spawner.Kill();
 	}
 
-	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
+	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" || Director.GetMapName() == "c13m4_cutthroatcreek" )
 		DirectorOptions.cm_MaxSpecials = 0;
 
 	foreach( wep, val in DirectorOptions.weaponsToConvert )
@@ -87,7 +87,7 @@ function OnGameEvent_finale_start( params )
 
 function OnGameEvent_gauntlet_finale_start( params )
 {
-	if ( Director.GetMapName() == "c5m5_bridge" )
+	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c13m4_cutthroatcreek" )
 		DirectorOptions.cm_MaxSpecials = 2;
 }
 
