@@ -1467,16 +1467,14 @@ Rule c2m3_DownHoleCoach
 	Response c2m3_DownHoleCoach
 }
 
-Response c2m3CoasterEndCoach
+Response c2m3CoasterEndResponseCoach
 {
 	scene "scenes/Coach/WorldC2M3B22.vcd"  //Okay, alarm's off!
 }
-Rule c2m3CoasterEndCoach
+Rule c2m3CoasterEndResponseCoach
 {
-	criteria Conceptc2m3CoasterEnd IsCoach AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_Alarm:2:0"
-	applycontexttoworld
-	Response c2m3CoasterEndCoach
+	criteria Conceptc2m3CoasterEndResponse IsCoach AutoIsNotScavenge AutoIsNotSurvival
+	Response c2m3CoasterEndResponseCoach
 }
 
 Response C2M3CoasterRunGoCoach
@@ -1491,17 +1489,15 @@ Rule C2M3CoasterRunGoCoach
 	Response C2M3CoasterRunGoCoach
 }
 
-Response C2M3CoasterStartCoach
+Response C2M3CoasterStartResponseCoach
 {
 	scene "scenes/Coach/WorldC2M319.vcd"  then mechanic _c2m3_howcool foo:0 1.0 //Get ready to run, I'm hittin' it.
 	scene "scenes/Coach/WorldC2M320.vcd"  then mechanic _c2m3_howcool foo:0 1.0 //That set off the alarm!
 }
-Rule C2M3CoasterStartCoach
+Rule C2M3CoasterStartResponseCoach
 {
-	criteria Conceptc2m3CoasterStart IsCoach AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
-	applycontexttoworld
-	Response C2M3CoasterStartCoach
+	criteria Conceptc2m3CoasterStartResponse IsCoach AutoIsNotScavenge AutoIsNotSurvival
+	Response C2M3CoasterStartResponseCoach
 }
 
 Response c2m3SeeChopperCoach
@@ -3865,7 +3861,7 @@ Rule WorldC6M1_PostWedding01aCoach
 
 Response WorldC6M1_WeddingWarn03aCoach
 {
-	scene "scenes/Coach/DLC1_C6M1_WeddingWitch01.vcd"  then Producer WorldC6M1_WeddingWarn03b foo:0 -2.229 //Come on, Nick, not the time.
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitch01.vcd" //Come on, Nick, not the time.
 }
 Rule WorldC6M1_WeddingWarn03aCoach
 {
@@ -4100,7 +4096,7 @@ Response WorldC6M2_InSewer102aCoach
 {
 	scene "scenes/Coach/DLC1_C6M2_Phase2InWater02.vcd"  //Hey Nick, try and keep your head above water.
 	scene "scenes/Coach/DLC1_C6M2_Phase2InWater03.vcd"  //Don't trip, Nick. [laughs]
-	scene "scenes/Coach/DLC1_C6M2_Phase2InWater04.vcd"  then Gambler WorldC6M2_InSewer102b foo:0 -3.563 //Gotta keep your head above water, man.[laughs]
+	scene "scenes/Coach/DLC1_C6M2_Phase2InWater04.vcd"  //Gotta keep your head above water, man.[laughs]
 	scene "scenes/Coach/DLC1_C6M2_Phase2InWater05.vcd"  then Gambler WorldC6M2_InSewer102b foo:0 -4.289 //Nick, if I give you a piggy back ride, will you shut up about the sewer?
 	scene "scenes/Coach/DLC1_C6M2_Phase2InWater06.vcd"  then Gambler WorldC6M2_InSewer102b foo:0 -5.061 //Nick, if I give you a piggy back ride, will you shut up about the sewer?
 }
@@ -7924,7 +7920,6 @@ Rule PlayerRemarkc4m1_nogasCoach
 Response PlayerRemarkc4m1_playgroundfarCoach
 {
 	scene "scenes/Coach/WorldC4M1B23.vcd"  //Through that playground!
-	scene "scenes/Coach/WorldC4M1B22.vcd"  //Through this playground!
 }
 Rule PlayerRemarkc4m1_playgroundfarCoach
 {
@@ -7934,12 +7929,16 @@ Rule PlayerRemarkc4m1_playgroundfarCoach
 	Response PlayerRemarkc4m1_playgroundfarCoach
 }
 
+Response PlayerRemarkc4m1_playgroundnearCoach
+{
+	scene "scenes/Coach/WorldC4M1B22.vcd"  //Through this playground!
+}
 Rule PlayerRemarkc4m1_playgroundnearCoach
 {
 	criteria ConceptRemark IsCoach Isc4m1_playground IsNotSaidc4m1_playground IsNotCoughing NotInCombat IsTalk IsTalkCoach IsSubjectNear300 IsWorldTalkCoach AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "Saidc4m1_playground:1:0"
 	applycontexttoworld
-	Response PlayerRemarkc4m1_playgroundfarCoach
+	Response PlayerRemarkc4m1_playgroundnearCoach
 }
 
 Response PlayerRemarkc4m1_throughhereACoach
@@ -9271,7 +9270,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownCoach
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownCoach
 {
-	criteria ConceptRemark IsCoach IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsCoach IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat NotInIntenseCombat IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownCoach
@@ -9286,7 +9285,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownIntenseCoach
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownIntenseCoach
 {
-	criteria ConceptRemark IsCoach IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsCoach IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing InIntenseCombat IsTalk IsTalkCoach IsWorldTalkCoach IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownIntenseCoach
@@ -9662,7 +9661,7 @@ Response PlayerRemarkWorldSignRestrictedAreaCoach
 Rule PlayerRemarkWorldSignRestrictedAreaCoach
 {
 	criteria ConceptRemark IsCoach IsWorldSignRestrictedArea IsNotSaidWorldSignRestrictedArea IsNotCoughing NotInCombat IsTalk IsTalkCoach IsSubjectNear200 IsWorldTalkCoach AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
-	ApplyContext "SaidWorldSignRestrictedArea:1:0,Talk:1:1.580"
+	ApplyContext "SaidWorldSignRestrictedArea:1:0,Talk:1:1.332"
 	applycontexttoworld
 	Response PlayerRemarkWorldSignRestrictedAreaCoach
 }
@@ -9863,7 +9862,7 @@ Response PlayerHurryUpC4M2Coach
 }
 Rule PlayerHurryUpC4M2Coach
 {
-	criteria ConceptPlayerHurryUp IsCoach IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkCoach ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank IsWorldTalkCoach _auto_IsCoachInWitchville
+	criteria ConceptPlayerHurryUp IsCoach IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkCoach IsWorldTalkCoach ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsCoachInWitchville
 	Response PlayerHurryUpC4M2Coach
 }
 
@@ -10217,7 +10216,7 @@ Rule YouAreWelcomeCoach
 
 Response NickC1AttitudeCoach
 {
-	scene "scenes/Coach/YouAreWelcome09.vcd"  //What? I said thanks!
+	scene "scenes/Coach/Thanks09.vcd"  //What? I said thanks!
 }
 Rule NickC1AttitudeCoach
 {
@@ -11346,7 +11345,7 @@ Rule PlayerKillTankNotHealthyCoach
 
 Response PlayerKillTankConfirmationC1M2Coach
 {
-	scene "scenes/Coach/Blank.vcd" then mechanic C1M2TankInfo foo:0 0.1 //
+	print " " then mechanic C1M2TankInfo foo:0 0.1 //
 }
 Rule PlayerKillTankConfirmationC1M2Coach
 {
@@ -12598,6 +12597,21 @@ Rule SurvivorVocalizeEmphaticGoCoach
 {
 	criteria ConceptPlayerEmphaticGo IsCoach IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkCoach IsWorldTalkCoach
 	Response SurvivorVocalizeEmphaticGoCoach
+}
+
+Response SurvivorVocalizeEmphaticGoC4M2Coach
+{
+	scene "scenes/Coach/EmphaticGo01.vcd"  //GO!
+	scene "scenes/Coach/EmphaticGo02.vcd"  //Let's go people.
+	scene "scenes/Coach/EmphaticGo03.vcd"  //Move your ass.
+	scene "scenes/Coach/EmphaticGo04.vcd"  //Go go go!
+	scene "scenes/Coach/EmphaticGo05.vcd"  //Go go GO!
+	scene "scenes/Coach/EmphaticGo06.vcd"  //MOVE IT!
+}
+Rule SurvivorVocalizeEmphaticGoC4M2Coach
+{
+	criteria ConceptPlayerEmphaticGo IsCoach IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkCoach IsWorldTalkCoach ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsCoachInWitchville
+	Response SurvivorVocalizeEmphaticGoC4M2Coach
 }
 
 Response SurvivorVocalizeGoingToDieCoach
@@ -14676,7 +14690,7 @@ Rule _C1M1_ElevatorHello3AliveName1Coach
 
 Response _C1M1_ElevatorHello3AliveName2Coach
 {
-	scene "scenes/Coach/WorldC1M1B98.vcd"  then any _C1M1_ElevatorHello3WhoIsDead foo:0 -1.524 //People just call me Coach.
+	scene "scenes/Coach/WorldC1M1B98.vcd"  then any _C1M1_ElevatorHello3AliveWhoIsDead foo:0 -1.524 //People just call me Coach.
 }
 Rule _C1M1_ElevatorHello3AliveName2Coach
 {

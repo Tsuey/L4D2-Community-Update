@@ -2,9 +2,9 @@
 // CRITERIA
 //--------------------------------------------------------------------------------------------------------------
 
-Response NoResponse //Blank Response: Any rule with this as the response will fire, but won't have any effect on speech that may be occuring 
+Response NoResponse //Blank Response: Any rule with this as the response will fire, but won't have any effect on speech that may be occuring
 {
-	print " " 
+	print " "
 }
 
 criterion "Conceptcommentjockey" "Concept" "commentjockey" required
@@ -50,14 +50,14 @@ criterion "Score5MoreSC"			"ToWin"	"5"		required weight 5
 criterion "Score3MoreSC"			"ToWin"	"3"		required weight 5
 criterion "Score2MoreSC"			"ToWin"	"2"		required weight 5
 criterion "Score1MoreSC"			"ToWin"	"1"		required weight 5
-criterion "ScoreDoneSC"				"ToWin"	"0"		required weight 5                                                                                                                                                                                      
+criterion "ScoreDoneSC"				"ToWin"	"0"		required weight 5
 
-criterion "Joined1"				"worldJoinLast" ">=1"		required 
-criterion "Joined2"				"worldJoinLast" ">=2"		required 
-criterion "Joined3"				"worldJoinLast" ">=3"		required 
-criterion "Joined4"				"worldJoinLast" ">=4"		required 
-criterion "JoinedLess3"			"worldJoinLast" "<3"		required 
-criterion "JoinedLess5"			"worldJoinLast" "<5"		required 
+criterion "Joined1"				"worldJoinLast" ">=1"		required
+criterion "Joined2"				"worldJoinLast" ">=2"		required
+criterion "Joined3"				"worldJoinLast" ">=3"		required
+criterion "Joined4"				"worldJoinLast" ">=4"		required
+criterion "JoinedLess3"			"worldJoinLast" "<3"		required
+criterion "JoinedLess5"			"worldJoinLast" "<5"		required
 
 
 criterion "ConceptBashWithItem"	"Concept" "BashWithItem" required
@@ -68,7 +68,7 @@ Criterion "IsNotSaidAlertGiveItemStop" "SaidAlertGiveItemStop" "!=1" "required" 
 Criterion "IsNotSaidAlertGiveItemStopFirstAid" "SaidAlertGiveItemStopFirstAid" "!=1" "required" weight 0
 
 criterion "ConceptSurvivorLeavingCheckpoint"	"Concept" "SurvivorLeavingCheckpoint" required
- 
+
 
 
 criterion "ConceptBotMovingToBattleStation"	"Concept" "SurvivorBotMovingToBattleStation"		required
@@ -90,7 +90,7 @@ criterion "ConceptHealedByFriend" "Concept" "HealedByFriend" required
 criterion "ConceptReviveFriendDownFinal" "Concept" "ReviveFriendDownFinal" required
 criterion "ConceptYouWelcome" "Concept" "YouWelcome" required
 criterion "ConceptReviveMeInterrupted" "Concept" "ReviveMeInterrupted" required
-criterion "IsNotReviveInterrupt"   "worldReviveInterrupt" "<1" required                                                                                                                                                                                        
+criterion "IsNotReviveInterrupt"   "worldReviveInterrupt" "<1" required
 
 criterion "SecondsSinceCombat2" "TimeSinceCombat" ">2.0" required
 criterion "SecondsSinceCombatLess2" "TimeSinceCombat" "<=2.0" required
@@ -98,23 +98,23 @@ criterion "SecondsSinceCombatLess2" "TimeSinceCombat" "<=2.0" required
 criterion "SecondsSinceCombat3" "TimeSinceCombat" ">3.0" required
 
 
-criterion "IsNotTalk"   "worldTalk" "1" required                                                                                                                                                                                        
+criterion "IsNotTalk"   "worldTalk" "1" required
 criterion "IsTalk"   "worldTalk" "!=1" required      //default and should be on every record that can be squelched
 
 
-criterion "IsNotTalkCoach"   "TalkCoach" "1" required                                                                                                                                                                                        
+criterion "IsNotTalkCoach"   "TalkCoach" "1" required
 criterion "IsTalkCoach"   "TalkCoach" "!=1" required      //default and should be on every record that can be squelched
 
-criterion "IsNotTalkGambler"   "TalkGambler" "1" required                                                                                                                                                                                        
+criterion "IsNotTalkGambler"   "TalkGambler" "1" required
 criterion "IsTalkGambler"   "TalkGambler" "!=1" required      //default and should be on every record that can be squelched
 
-criterion "IsNotTalkProducer"   "TalkProducer" "1" required                                                                                                                                                                                        
+criterion "IsNotTalkProducer"   "TalkProducer" "1" required
 criterion "IsTalkProducer"   "TalkProducer" "!=1" required      //default and should be on every record that can be squelched
 
-criterion "IsNotTalkMechanic"   "TalkMechanic" "1" required                                                                                                                                                                                        
+criterion "IsNotTalkMechanic"   "TalkMechanic" "1" required
 criterion "IsTalkMechanic"   "TalkMechanic" "!=1" required      //default and should be on every record that can be squelched
 
-criterion "IsNotTalkUnknown"   "TalkUnknown" "1" required                                                                                                                                                                                        
+criterion "IsNotTalkUnknown"   "TalkUnknown" "1" required
 criterion "IsTalkUnknown"   "TalkUnknown" "!=1" required      //default and should be on every record that can be squelched
 
 criterion "IsWorldTalkCoach"   "worldTalkCoach" "!=1" required      //default and should be on every record that can be squelched
@@ -125,15 +125,15 @@ criterion "IsWorldTalkUnknown"   "worldTalkUnknown" "!=1" required      //defaul
 
 
 
-criterion "IsProducerNotAlive"   "IsProducerAlive" "!=1" required      
-criterion "IsMechanicNotAlive"   "IsMechanicAlive" "!=1" required      
-criterion "IsCoachNotAlive"   "IsCoachAlive" "!=1" required      
-criterion "IsGamblerNotAlive"   "IsGamblerAlive" "!=1" required      
+criterion "IsProducerNotAlive"   "IsProducerAlive" "!=1" required
+criterion "IsMechanicNotAlive"   "IsMechanicAlive" "!=1" required
+criterion "IsCoachNotAlive"   "IsCoachAlive" "!=1" required
+criterion "IsGamblerNotAlive"   "IsGamblerAlive" "!=1" required
 
-criterion "IsProducerAlive"   "IsProducerAlive" "1" required weight 0      
-criterion "IsMechanicAlive"   "IsMechanicAlive" "1" required weight 0            
-criterion "IsCoachAlive"   "IsCoachAlive" "1" required weight 0            
-criterion "IsGamblerAlive"   "IsGamblerAlive" "1" required weight 0            
+criterion "IsProducerAlive"   "IsProducerAlive" "1" required weight 0
+criterion "IsMechanicAlive"   "IsMechanicAlive" "1" required weight 0
+criterion "IsCoachAlive"   "IsCoachAlive" "1" required weight 0
+criterion "IsGamblerAlive"   "IsGamblerAlive" "1" required weight 0
 
 
 criterion "NotCalledForHelpRecently" "CalledForHelp" "<1" required
@@ -142,30 +142,31 @@ criterion "ConceptVampiresBeata" "concept" "VampiresBeata" required
 criterion "ConceptVampiresBeatb" "concept" "VampiresBeatb" required
 
 
-criterion "IsSmallTownBarricadeMechanic"   "worldSmallTownBarricadeMechanic" "!=1" required      
-criterion "IsSmallTownBarricadeGambler"   "worldSmallTownBarricadeGambler" "!=1" required      
-criterion "IsSmallTownBarricadeProducer"   "worldSmallTownBarricadeProducer" "!=1" required      
+criterion "IsSmallTownBarricadeMechanic"   "worldSmallTownBarricadeMechanic" "!=1" required
+criterion "IsSmallTownBarricadeGambler"   "worldSmallTownBarricadeGambler" "!=1" required
+criterion "IsSmallTownBarricadeProducer"   "worldSmallTownBarricadeProducer" "!=1" required
 
-criterion "IsNotAirport02CraneStarted"   "worldAirport02CraneStarted" "!=1" required      
-criterion "IsAirport02CraneStarted"   "worldAirport02CraneStarted" "!=1" required      
-
-
-criterion "ConceptHealThanks" Concept "HealThanks" required  
-
-criterion "Isfarm01_camping"   "subject" "farm01_camping" required  
-criterion "Isairport01_burning"   "subject" "airport01_burning" required  
-criterion "Isairport01_path01"   "subject" "airport01_path01" required  
-criterion "ConceptIntroAirport" Concept "IntroAirport" required  
-criterion "ConceptIntroAirport01zb" Concept "IntroAirport01zb" required  
-criterion "ConceptIntroAirport01fb" Concept "IntroAirport01fb" required  
-criterion "ConceptIntroAirport01bb" Concept "IntroAirport01bb" required  
-criterion "ConceptIntroAirport01bc" Concept "IntroAirport01bc" required  
-criterion "ConceptAirport02CraneStarted" Concept "Airport02CraneStarted" required  
-criterion "Conceptairport02_creshendoCrane" Concept "airport02_creshendoCrane" required  
-criterion "Conceptairport02_creshendo03" Concept "airport02_creshendo03" required  
+criterion "IsNotAirport02CraneStarted"   "worldAirport02CraneStarted" "!=1" required
+criterion "IsAirport02CraneStarted"   "worldAirport02CraneStarted" "!=1" required
 
 
-criterion "ConceptAirport02DumpsterDown" Concept "Airport02DumpsterDown" required  
+criterion "ConceptHealThanks" Concept "HealThanks" required
+
+criterion "Isfarm01_camping"   "subject" "farm01_camping" required
+criterion "Isairport01_burning"   "subject" "airport01_burning" required
+criterion "Isairport01_path01"   "subject" "airport01_path01" required
+criterion "ConceptIntroAirport" Concept "IntroAirport" required
+criterion "ConceptIntroAirport01zb" Concept "IntroAirport01zb" required
+criterion "ConceptIntroAirport01fb" Concept "IntroAirport01fb" required
+criterion "ConceptIntroAirport01bb" Concept "IntroAirport01bb" required
+criterion "ConceptIntroAirport01bc" Concept "IntroAirport01bc" required
+criterion "ConceptAirport02CraneStarted" Concept "Airport02CraneStarted" required
+criterion "Conceptairport02_creshendoCrane" Concept "airport02_creshendoCrane" required
+criterion "Conceptairport02_creshendo03" Concept "airport02_creshendo03" required
+
+Criterion "IsNotSaidairport01_burning" "worldSaidairport01_burning" "!=1" "required" weight 0
+
+criterion "ConceptAirport02DumpsterDown" Concept "Airport02DumpsterDown" required
 
 
 
@@ -310,33 +311,33 @@ criterion "IsClosestSurvivorFar600"   "DistToClosestSurvivor" ">600" required
 criterion "IsClosestSurvivorFar3000"   "DistToClosestSurvivor" ">3000" required
 
 
-criterion "IsGamblerNear200"   "DistToGambler" "<200" required      
-criterion "IsGamblerNear400"   "DistToGambler" "<400" required      
-criterion "IsGamblerNear800"   "DistToGambler" "<800" required      
-criterion "IsGamblerFar400"   "DistToGambler" ">=400" required      
+criterion "IsGamblerNear200"   "DistToGambler" "<200" required
+criterion "IsGamblerNear400"   "DistToGambler" "<400" required
+criterion "IsGamblerNear800"   "DistToGambler" "<800" required
+criterion "IsGamblerFar400"   "DistToGambler" ">=400" required
 
-criterion "IsCoachNear125"   "DistToCoach" "<125" required      
-criterion "IsCoachNear200"   "DistToCoach" "<200" required      
-criterion "IsCoachNear400"   "DistToCoach" "<400" required      
-criterion "IsCoachNear800"   "DistToCoach" "<800" required      
-criterion "IsCoachFar400"   "DistToCoach" ">=400" required      
+criterion "IsCoachNear125"   "DistToCoach" "<125" required
+criterion "IsCoachNear200"   "DistToCoach" "<200" required
+criterion "IsCoachNear400"   "DistToCoach" "<400" required
+criterion "IsCoachNear800"   "DistToCoach" "<800" required
+criterion "IsCoachFar400"   "DistToCoach" ">=400" required
 
-criterion "IsProducerNear200"   "DistToProducer" "<200" required      
-criterion "IsProducerNear400"   "DistToProducer" "<400" required      
-criterion "IsProducerNear800"   "DistToProducer" "<800" required      
-criterion "IsProducerFar400"   "DistToProducer" ">=400" required      
+criterion "IsProducerNear200"   "DistToProducer" "<200" required
+criterion "IsProducerNear400"   "DistToProducer" "<400" required
+criterion "IsProducerNear800"   "DistToProducer" "<800" required
+criterion "IsProducerFar400"   "DistToProducer" ">=400" required
 
-criterion "IsMechanicNear200"   "DistToMechanic" "<200" required      
-criterion "IsMechanicNear300"   "DistToMechanic" "<300" required      
-criterion "IsMechanicNear400"   "DistToMechanic" "<400" required      
+criterion "IsMechanicNear200"   "DistToMechanic" "<200" required
+criterion "IsMechanicNear300"   "DistToMechanic" "<300" required
+criterion "IsMechanicNear400"   "DistToMechanic" "<400" required
 criterion "IsMechanicNear400Weight0"   "DistToMechanic" "<400" required weight 0
-criterion "IsMechanicNear800"   "DistToMechanic" "<800" required      
-criterion "IsMechanicFar400"   "DistToMechanic" ">=400" required      
+criterion "IsMechanicNear800"   "DistToMechanic" "<800" required
+criterion "IsMechanicFar400"   "DistToMechanic" ">=400" required
 
-criterion "IsCoachFar1000" "DistToCoach" ">600" required      
-criterion "IsProducerFar1000" "DistToProducer" ">600" required      
-criterion "IsMechanicFar1000" "DistToMechanic" ">600" required      
-criterion "IsGamblerFar1000" "DistToGambler" ">600" required      
+criterion "IsCoachFar1000" "DistToCoach" ">600" required
+criterion "IsProducerFar1000" "DistToProducer" ">600" required
+criterion "IsMechanicFar1000" "DistToMechanic" ">600" required
+criterion "IsGamblerFar1000" "DistToGambler" ">600" required
 
 //Dead Survivor Distance
 
@@ -362,9 +363,9 @@ criterion "IsGrenadeVomitJar"	"GrenadeType"	"VomitJar"	required
 
 
 
-criterion "ConceptPanicEvent"		"concept"	"PanicEvent" required		// Car alarm 
+criterion "ConceptPanicEvent"		"concept"	"PanicEvent" required		// Car alarm
 
-Criterion "ConceptSafeSpotAheadResponse" "concept" "SafeSpotAheadResponse" required 
+Criterion "ConceptSafeSpotAheadResponse" "concept" "SafeSpotAheadResponse" required
 Criterion "ConceptAynRandResponse" "concept" "AynRandResponse" required
 
 
@@ -435,7 +436,7 @@ criterion "IsNotSaidFirstWeapon" "worldSaidFirstWeapon" "!=1" required weight 10
 
 
 criterion "IsNotSaidSpot" "worldSaidSpot" "!=1" required
-                                                                                                             
+
 //criterion "IsNotSurvivorsShowBoating" "worldSurvivorShowBoat" "!=1" required
 
 //Faults
@@ -507,7 +508,7 @@ criterion "IsHangingFromTongue"		"HangingFromTongue"	"1"		required
 criterion "IsNotHangingFromTongue"	"HangingFromTongue"	"0"		required
 criterion "IsNotBeingJockeyed"		"BeingJockeyed"		"0"		required
 criterion "IsBeingJockeyed"		"BeingJockeyed"		"1"		required
- 
+
 
 criterion "ConceptPlayerGroundPoundedByTank"	"Concept"	"PlayerGroundPoundedByTank"		required
 
@@ -519,7 +520,7 @@ criterion "IsWithThree"	"NumberOfTeamAlive"	">2"		required
 criterion "IsWithTwo"	"NumberOfTeamAlive"	"2"		required
 criterion "IsNotTwo"	"NumberOfTeamAlive"	"!=2"		required
 criterion "IsWithOnlyThree"	"NumberOfTeamAlive"	"3"		required
-criterion "IsEveryoneNotAlive"	"NumberOfTeamAlive"	"<4"		required 
+criterion "IsEveryoneNotAlive"	"NumberOfTeamAlive"	"<4"		required
 criterion "IsEveryoneAlive"	"NumberOfTeamAlive"	">=4"		required
 
 //Number Dead
@@ -535,43 +536,43 @@ criterion "IsWitchPresent" "ZombiePresentWitch" "1" required
 Criterion "IsFriendlyFire" "FriendlyFire" "1" "required" weight 0
 Criterion "IsNotFriendlyFire" "FriendlyFire" "!=1" "required" weight 0
 
-criterion "IsNotSaidFaultFriendlyFireGeneral" "worldSaidFaultFriendlyFire" "!=1" required 
-criterion "IsSaidFaultFriendlyFireGeneral" "worldSaidFaultFriendlyFire" "1" required 
+criterion "IsNotSaidFaultFriendlyFireGeneral" "worldSaidFaultFriendlyFire" "!=1" required
+criterion "IsSaidFaultFriendlyFireGeneral" "worldSaidFaultFriendlyFire" "1" required
 
-criterion "IsNotSaidFaultFriendlyFireCoach" "worldSaidFaultFriendlyFireCoach" "!=1" required 
-criterion "IsSaidFaultFriendlyFireCoach" "worldSaidFaultFriendlyFireCoach" "1" required 
-criterion "IsNotSaidFaultFriendlyFireMechanic" "worldSaidFaultFriendlyFireMechanic" "!=1" required 
-criterion "IsSaidFaultFriendlyFireMechanic" "worldSaidFaultFriendlyFireMechanic" "1" required 
-criterion "IsNotSaidFaultFriendlyFireGambler" "worldSaidFaultFriendlyFireGambler" "!=1" required 
-criterion "IsSaidFaultFriendlyFireGambler" "worldSaidFaultFriendlyFireGambler" "1" required 
-criterion "IsNotSaidFaultFriendlyFireProducer" "worldSaidFaultFriendlyFireProducer" "!=1" required 
-criterion "IsSaidFaultFriendlyFireProducer" "worldSaidFaultFriendlyFireProducer" "1" required 
+criterion "IsNotSaidFaultFriendlyFireCoach" "worldSaidFaultFriendlyFireCoach" "!=1" required
+criterion "IsSaidFaultFriendlyFireCoach" "worldSaidFaultFriendlyFireCoach" "1" required
+criterion "IsNotSaidFaultFriendlyFireMechanic" "worldSaidFaultFriendlyFireMechanic" "!=1" required
+criterion "IsSaidFaultFriendlyFireMechanic" "worldSaidFaultFriendlyFireMechanic" "1" required
+criterion "IsNotSaidFaultFriendlyFireGambler" "worldSaidFaultFriendlyFireGambler" "!=1" required
+criterion "IsSaidFaultFriendlyFireGambler" "worldSaidFaultFriendlyFireGambler" "1" required
+criterion "IsNotSaidFaultFriendlyFireProducer" "worldSaidFaultFriendlyFireProducer" "!=1" required
+criterion "IsSaidFaultFriendlyFireProducer" "worldSaidFaultFriendlyFireProducer" "1" required
 
-criterion "IsNotSaidFaultFriendlyFireNamVet" "worldSaidFaultFriendlyFireNamVet" "!=1" required 
-criterion "IsSaidFaultFriendlyFireNamVet" "worldSaidFaultFriendlyFireNamVet" "1" required 
-criterion "IsNotSaidFaultFriendlyFireManager" "worldSaidFaultFriendlyFireManager" "!=1" required 
-criterion "IsSaidFaultFriendlyFireManager" "worldSaidFaultFriendlyFireManager" "1" required 
-criterion "IsNotSaidFaultFriendlyFireBiker" "worldSaidFaultFriendlyFireBiker" "!=1" required 
-criterion "IsSaidFaultFriendlyFireBiker" "worldSaidFaultFriendlyFireBiker" "1" required 
-criterion "IsNotSaidFaultFriendlyFireTeenGirl" "worldSaidFaultFriendlyFireTeenGirl" "!=1" required 
-criterion "IsSaidFaultFriendlyFireTeenGirl" "worldSaidFaultFriendlyFireTeenGirl" "1" required 
+criterion "IsNotSaidFaultFriendlyFireNamVet" "worldSaidFaultFriendlyFireNamVet" "!=1" required
+criterion "IsSaidFaultFriendlyFireNamVet" "worldSaidFaultFriendlyFireNamVet" "1" required
+criterion "IsNotSaidFaultFriendlyFireManager" "worldSaidFaultFriendlyFireManager" "!=1" required
+criterion "IsSaidFaultFriendlyFireManager" "worldSaidFaultFriendlyFireManager" "1" required
+criterion "IsNotSaidFaultFriendlyFireBiker" "worldSaidFaultFriendlyFireBiker" "!=1" required
+criterion "IsSaidFaultFriendlyFireBiker" "worldSaidFaultFriendlyFireBiker" "1" required
+criterion "IsNotSaidFaultFriendlyFireTeenGirl" "worldSaidFaultFriendlyFireTeenGirl" "!=1" required
+criterion "IsSaidFaultFriendlyFireTeenGirl" "worldSaidFaultFriendlyFireTeenGirl" "1" required
 
-Criterion "IsShotTeammateCoach" "worldShotTeammateCoach" "1" required weight 0 
-Criterion "IsNotShotTeammateCoach" "worldShotTeammateCoach" "!=1" required weight 0 
-Criterion "IsShotTeammateGambler" "worldShotTeammateGambler" "1" required weight 0 
+Criterion "IsShotTeammateCoach" "worldShotTeammateCoach" "1" required weight 0
+Criterion "IsNotShotTeammateCoach" "worldShotTeammateCoach" "!=1" required weight 0
+Criterion "IsShotTeammateGambler" "worldShotTeammateGambler" "1" required weight 0
 Criterion "IsNotShotTeammateGambler" "worldShotTeammateGambler" "!=1" required weight 0
-Criterion "IsShotTeammateMechanic" "worldShotTeammateMechanic" "1" required weight 0 
+Criterion "IsShotTeammateMechanic" "worldShotTeammateMechanic" "1" required weight 0
 Criterion "IsNotShotTeammateMechanic" "worldShotTeammateMechanic" "!=1" required weight 0
-Criterion "IsShotTeammateProducer" "worldShotTeammateProducer" "1" required weight 0 
-Criterion "IsNotShotTeammateProducer" "worldShotTeammateProducer" "!=1" required weight 0 
+Criterion "IsShotTeammateProducer" "worldShotTeammateProducer" "1" required weight 0
+Criterion "IsNotShotTeammateProducer" "worldShotTeammateProducer" "!=1" required weight 0
 
-Criterion "IsShotTeammateBiker" "worldShotTeammateBiker" "1" required weight 0 
-Criterion "IsNotShotTeammateBiker" "worldShotTeammateBiker" "!=1" required weight 0 
-Criterion "IsShotTeammateManager" "worldShotTeammateManager" "1" required weight 0 
-Criterion "IsNotShotTeammateManager" "worldShotTeammateManager" "!=1" required weight 0 
-Criterion "IsShotTeammateNamVet" "worldShotTeammateNamVet" "1" required weight 0 
-Criterion "IsNotShotTeammateNamVet" "worldShotTeammateNamVet" "!=1" required weight 0 
-Criterion "IsShotTeammateTeenGirl" "worldShotTeammateTeenGirl" "1" required weight 0 
+Criterion "IsShotTeammateBiker" "worldShotTeammateBiker" "1" required weight 0
+Criterion "IsNotShotTeammateBiker" "worldShotTeammateBiker" "!=1" required weight 0
+Criterion "IsShotTeammateManager" "worldShotTeammateManager" "1" required weight 0
+Criterion "IsNotShotTeammateManager" "worldShotTeammateManager" "!=1" required weight 0
+Criterion "IsShotTeammateNamVet" "worldShotTeammateNamVet" "1" required weight 0
+Criterion "IsNotShotTeammateNamVet" "worldShotTeammateNamVet" "!=1" required weight 0
+Criterion "IsShotTeammateTeenGirl" "worldShotTeammateTeenGirl" "1" required weight 0
 Criterion "IsNotShotTeammateTeenGirl" "worldShotTeammateTeenGirl" "!=1" required weight 0
 
 // being incapacitated, reviving incaps, and healing yourself
@@ -603,45 +604,45 @@ criterion "ConceptPlayerSpotWeapon"		"Concept"	"PlayerSpotWeapon"	required
 criterion "IsPipeBomb"				"weaponname"	"PipeBomb"		required
 criterion "IsMolotov"				"weaponname"	"Molotov"		required
 criterion "IsRifle_desert"			"weaponname"	"Rifle_desert"		required
-criterion "IsSniper_military"			"weaponname"	"Sniper_military"	required 
-criterion "IsHuntingRifle"			"weaponname"	"HuntingRifle"		required 
-criterion "IsSmg_silenced"			"weaponname"	"Smg_silenced"		required 
-criterion "IsSMG"				"weaponname"	"SMG"		required 
-criterion "IsShotgun_spas"			"weaponname"	"Shotgun_spas"		required 
-criterion "IsShotgun_chrome"			"weaponname"	"Shotgun_chrome"	required 
-criterion "IsSecondPistol"			"weaponname"	"SecondPistol"		required 
-criterion "IsFirstAidKit"			"weaponname"	"FirstAidKit"		required 
-criterion "IsPainPills"				"weaponname"	"PainPills"		required 
-criterion "IsAdrenaline"			"weaponname"	"Adrenaline"		required 
-criterion "IsVomitJar"				"weaponname"	"VomitJar"		required 
-criterion "IsItemTypeRifle"			"ItemType"	"rifle"			required 
-criterion "IsIncendiary"			"weaponname"	"UpgradePack_Incendiary"		required 
-criterion "IsKatana"			"weaponname"	"Katana"		required 
-criterion "Isgrenade_launcher"			"weaponname"	"GrenadeLauncher"	required 
-criterion "IsDefibrillator"			"weaponname"	"Defibrillator"	required 
-criterion "IsPumpShotgun"			"weaponname"	"PumpShotgun"	required 
-criterion "IsAmmo"			"weaponname"	"Ammo"	required 
-criterion "Isbaseball_bat"			"weaponname"	"baseball_bat"	required 
-criterion "Iscricket_bat"			"weaponname"	"cricket_bat"	required 
-criterion "IsGuitar"			"weaponname"	"electric_guitar"	required 
-criterion "IsMachete"			"weaponname"	"Machete"	required 
-criterion "IsMagnum"			"weaponname"	"magnum"	required 
-criterion "IsChainsaw"			"weaponname"	"chainsaw"	required 
-criterion "IsRifle_AK47"			"weaponname"	"Rifle_AK47"	required 
-criterion "IsRifle"			"weaponname"	"Rifle"	required 
-criterion "IsAutoShotgun"			"weaponname"	"AutoShotgun"	required 
-criterion "Iscrowbar"			"weaponname"	"crowbar"	required 
-criterion "Istonfa"			"weaponname"	"tonfa"	required 
-criterion "IsFireAxe"			"weaponname"	"fireaxe"	required 
-criterion "IsFryingPan"			"weaponname"	"frying_pan"	required 
-criterion "IsSmg_mp5"			"weaponname"	"Smg_mp5"		required 
-criterion "IsRifle_sg552"			"weaponname"	"Rifle_sg552"		required 
-criterion "IsSniper_scout"			"weaponname"	"Sniper_scout"		required 
-criterion "IsSniper_awp"			"weaponname"	"Sniper_awp"		required 
+criterion "IsSniper_military"			"weaponname"	"Sniper_military"	required
+criterion "IsHuntingRifle"			"weaponname"	"HuntingRifle"		required
+criterion "IsSmg_silenced"			"weaponname"	"Smg_silenced"		required
+criterion "IsSMG"				"weaponname"	"SMG"		required
+criterion "IsShotgun_spas"			"weaponname"	"Shotgun_spas"		required
+criterion "IsShotgun_chrome"			"weaponname"	"Shotgun_chrome"	required
+criterion "IsSecondPistol"			"weaponname"	"SecondPistol"		required
+criterion "IsFirstAidKit"			"weaponname"	"FirstAidKit"		required
+criterion "IsPainPills"				"weaponname"	"PainPills"		required
+criterion "IsAdrenaline"			"weaponname"	"Adrenaline"		required
+criterion "IsVomitJar"				"weaponname"	"VomitJar"		required
+criterion "IsItemTypeRifle"			"ItemType"	"rifle"			required
+criterion "IsIncendiary"			"weaponname"	"UpgradePack_Incendiary"		required
+criterion "IsKatana"			"weaponname"	"Katana"		required
+criterion "Isgrenade_launcher"			"weaponname"	"GrenadeLauncher"	required
+criterion "IsDefibrillator"			"weaponname"	"Defibrillator"	required
+criterion "IsPumpShotgun"			"weaponname"	"PumpShotgun"	required
+criterion "IsAmmo"			"weaponname"	"Ammo"	required
+criterion "Isbaseball_bat"			"weaponname"	"baseball_bat"	required
+criterion "Iscricket_bat"			"weaponname"	"cricket_bat"	required
+criterion "IsGuitar"			"weaponname"	"electric_guitar"	required
+criterion "IsMachete"			"weaponname"	"Machete"	required
+criterion "IsMagnum"			"weaponname"	"magnum"	required
+criterion "IsChainsaw"			"weaponname"	"chainsaw"	required
+criterion "IsRifle_AK47"			"weaponname"	"Rifle_AK47"	required
+criterion "IsRifle"			"weaponname"	"Rifle"	required
+criterion "IsAutoShotgun"			"weaponname"	"AutoShotgun"	required
+criterion "Iscrowbar"			"weaponname"	"crowbar"	required
+criterion "Istonfa"			"weaponname"	"tonfa"	required
+criterion "IsFireAxe"			"weaponname"	"fireaxe"	required
+criterion "IsFryingPan"			"weaponname"	"frying_pan"	required
+criterion "IsSmg_mp5"			"weaponname"	"Smg_mp5"		required
+criterion "IsRifle_sg552"			"weaponname"	"Rifle_sg552"		required
+criterion "IsSniper_scout"			"weaponname"	"Sniper_scout"		required
+criterion "IsSniper_awp"			"weaponname"	"Sniper_awp"		required
 criterion "IsLaserSights"			"weaponname"	"LaserSights"	required
-criterion "IsShovel"			"weaponname"	"Shovel"		required 
-criterion "IsPitchfork"			"weaponname"	"Pitchfork"		required 
-criterion "IsKnife"			"weaponname"	"Knife"		required 
+criterion "IsShovel"			"weaponname"	"Shovel"		required
+criterion "IsPitchfork"			"weaponname"	"Pitchfork"		required
+criterion "IsKnife"			"weaponname"	"Knife"		required
 
 criterion "IsHoldingRifle"			"ActiveWeapon"	"Rifle"		required
 criterion "IsHoldingDesertRifle"			"ActiveWeapon"	"Rifle_desert"		required
@@ -652,13 +653,13 @@ criterion "IsHoldingAR" { IsHoldingRifle IsHoldingDesertRifle IsHoldingAK47Rifle
 criterion "IsUsingFirearm"			"ActiveWeapon"	"!=Melee"		required
 criterion "EquippedMeleeWeapon"			"ActiveWeapon"	"Melee"		required
 
-criterion "IsHealingItem"			"ItemType"	"healing"			required 
+criterion "IsHealingItem"			"ItemType"	"healing"			required
 
 criterion "Hasgrenade_launcher"			"ActiveWeapon"	"grenadelauncher"		required
 criterion "HasNotGrenadeLauncher"		"ActiveWeapon"	"!=GrenadeLauncher"		required
 criterion "ConceptChainsawUsed"			"Concept" "ChainsawUsed"			required
 criterion "IsNotSaidChainSawUsed"			"worldSaidChainSawUsed" "!=1"			required
- 
+
  // Triggered Smartlook Vocalizations
 criterion "ConceptPlayerSpotFirstAid"		"Concept" "PlayerSpotFirstAid"		required
 criterion "ConceptPlayerSpotPills"			"Concept" "PlayerSpotPills"			required
@@ -684,20 +685,20 @@ criterion "ConceptPlayerWarnSpecial"			"Concept" "PlayerWarnSpecial"		required
 criterion "ConceptPlayerAlsoWarnSpecial"		"Concept" "PlayerAlsoWarnSpecial"		required
 
 
-criterion "IsSpecialTypeSmoker"				"SpecialType"		"Smoker"	required 
-criterion "IsSpecialTypeBoomer"				"SpecialType"		"Boomer"	required 
-criterion "IsSpecialTypeHunter"				"SpecialType"		"Hunter"	required 
-criterion "IsSpecialTypeTank"				"SpecialType"		"Tank"		required 
-criterion "IsSpecialTypeWitch"				"SpecialType"		"Witch"		required 
-criterion "IsSpecialTypeJockey"				"SpecialType"		"Jockey"	required 
-criterion "IsSpecialTypeCharger"			"SpecialType"		"Charger"	required 
-criterion "IsSpecialTypeSpitter"			"SpecialType"		"Spitter"	required 
-criterion "IsSpecialTypeCeda"				"SpecialType"		"Ceda"	required 
-criterion "IsSpecialTypeMudmen"				"SpecialType"		"crawler"	required 
-criterion "IsSpecialTypeArmored"			"SpecialType"		"riot_control"	required 
-criterion "IsSpecialTypeClown"				"SpecialType"		"clown"		required 
-criterion "IsSpecialTypeRoadcrew"				"SpecialType"		"undistractable"	required 
-criterion "IsSpecialTypeJimmy"				"SpecialType"		"jimmy"	required 
+criterion "IsSpecialTypeSmoker"				"SpecialType"		"Smoker"	required
+criterion "IsSpecialTypeBoomer"				"SpecialType"		"Boomer"	required
+criterion "IsSpecialTypeHunter"				"SpecialType"		"Hunter"	required
+criterion "IsSpecialTypeTank"				"SpecialType"		"Tank"		required
+criterion "IsSpecialTypeWitch"				"SpecialType"		"Witch"		required
+criterion "IsSpecialTypeJockey"				"SpecialType"		"Jockey"	required
+criterion "IsSpecialTypeCharger"			"SpecialType"		"Charger"	required
+criterion "IsSpecialTypeSpitter"			"SpecialType"		"Spitter"	required
+criterion "IsSpecialTypeCeda"				"SpecialType"		"Ceda"	required
+criterion "IsSpecialTypeMudmen"				"SpecialType"		"crawler"	required
+criterion "IsSpecialTypeArmored"			"SpecialType"		"riot_control"	required
+criterion "IsSpecialTypeClown"				"SpecialType"		"clown"		required
+criterion "IsSpecialTypeRoadcrew"				"SpecialType"		"undistractable"	required
+criterion "IsSpecialTypeJimmy"				"SpecialType"		"jimmy"	required
 
 criterion "ConceptPlayerWarnMegaMob"			"Concept" "PlayerWarnMegaMob"			required
 criterion "ConceptPlayerWarnScout"			"Concept" "PlayerWarnScout"			required
@@ -782,7 +783,7 @@ criterion "ConceptSurvivorBotHurrahManyKills"			"Concept" "SurvivorBotHurrahMany
 criterion "ConceptSurvivorBotHelpOverwhelmed"			"Concept" "SurvivorBotHelpOverwhelmed"		required
 
 criterion "ConceptSurvivorBotReunitedWithOrphanedFriend"	"Concept" "SurvivorBotReunitedWithOrphanedFriend"		required
- 
+
 
 
 // Automatic Vocalizer vocalizations
@@ -815,7 +816,7 @@ criterion "Conceptchargerpound"			"Concept" "chargerpound"			required
 criterion "ConceptFinalVehicleSpotted" "Concept" "FinalVehicleSpotted" required
 criterion "ConceptFinalVehicleArrived" "Concept" "FinalVehicleArrived" required
 
-// Saferoom 
+// Saferoom
 criterion "ConceptPlayerOutsideCheckpoint" "Concept" "PlayerOutsideCheckpoint" required
 criterion "ConceptPlayerLockTheDoorCheckpoint" "Concept" "PlayerLockTheDoorCheckpoint" required
 criterion "ConceptPlayerGetInsideCheckPoint" "Concept" "PlayerGetInsideCheckPoint" required
@@ -848,10 +849,10 @@ criterion "IsPickedUpShotgun_Chrome"  "ItemPickedUp" "Shotgun_Chrome" required
 criterion "IsPickedUpShotgun_Spas"  "ItemPickedUp" "Shotgun_Spas" required
 criterion "IsPickedUpRifle_AK47"  "ItemPickedUp" "Rifle_AK47" required
 criterion "IsPickedUpRifle_Desert"  "ItemPickedUp" "Rifle_Desert" required
-criterion "IsPickedUpSmg_mp5"  "ItemPickedUp" "Smg_mp5"	required 
-criterion "IsPickedUpRifle_sg552"  "ItemPickedUp" "Rifle_sg552"	required 
-criterion "IsPickedUpSniper_scout"  "ItemPickedUp" "Sniper_scout" required 
-criterion "IsPickedUpSniper_awp"  "ItemPickedUp" "Sniper_awp" required 
+criterion "IsPickedUpSmg_mp5"  "ItemPickedUp" "Smg_mp5"	required
+criterion "IsPickedUpRifle_sg552"  "ItemPickedUp" "Rifle_sg552"	required
+criterion "IsPickedUpSniper_scout"  "ItemPickedUp" "Sniper_scout" required
+criterion "IsPickedUpSniper_awp"  "ItemPickedUp" "Sniper_awp" required
 criterion "IsPickedUpLaserSights"  "ItemPickedUp" "LaserSight" required
 criterion "IsNotPickedUpLaserSights"  "ItemPickedUp" "!=LaserSight" required
 criterion "IsNotPickedUpAmmo"  "ItemPickedUp" "!=Ammo" required
@@ -887,7 +888,7 @@ Criterion "NotSaidGrabbingCan" "SaidGrabbingCan" "!=1" "required" weight 0
 
 Criterion "NotPickedUpItem" "PickedUpItem" "!=1" "required" weight 0
 
-criterion "IsPickedUpValidHealingItem" { IsPickedUpPainPills IsPickedUpAdrenaline } required 
+criterion "IsPickedUpValidHealingItem" { IsPickedUpPainPills IsPickedUpAdrenaline } required
 
 criterion "IsItemFirstAidKit"  "Item" "FirstAidKit" required
 criterion "IsItemPainPills"  "Item" "PainPills" required
@@ -1014,11 +1015,11 @@ criterion "SubjectIsProducer"        "Subject"     "Producer"        required we
 criterion "SubjectIsMechanic"        "Subject"     "Mechanic"        required weight 1
 criterion "SubjectIsUnknown"        "Subject"     "Unknown"        required weight 1
 
-criterion "SubjectIsNotCoach"        "Subject"     "!=Coach"        required 
-criterion "SubjectIsNotGambler"        "Subject"     "!=Gambler"        required 
-criterion "SubjectIsNotProducer"        "Subject"     "!=Producer"        required 
-criterion "SubjectIsNotMechanic"        "Subject"     "!=Mechanic"        required 
-criterion "SubjectIsNotUnknown"        "Subject"     "!=Unknown"        required 
+criterion "SubjectIsNotCoach"        "Subject"     "!=Coach"        required
+criterion "SubjectIsNotGambler"        "Subject"     "!=Gambler"        required
+criterion "SubjectIsNotProducer"        "Subject"     "!=Producer"        required
+criterion "SubjectIsNotMechanic"        "Subject"     "!=Mechanic"        required
+criterion "SubjectIsNotUnknown"        "Subject"     "!=Unknown"        required
 
 
 
@@ -1056,7 +1057,7 @@ Criterion "IsNotSaidBeenJockeyedCoach" "worldSaidBeenJockeyedCoach" "!=1" "requi
 Criterion "IsNotSaidBeenJockeyedGambler" "worldSaidBeenJockeyedGambler" "!=1" "required" weight 0
 Criterion "IsNotSaidBeenJockeyedMechanic" "worldSaidBeenJockeyedMechanic" "!=1" "required" weight 0
 Criterion "IsNotSaidBeenJockeyedProducer" "worldSaidBeenJockeyedProducer" "!=1" "required" weight 0
-Criterion "IsNotSaidBeenJockeyedUnknown" "worldSaidBeenJockeyedUnknown" "!=1" "required" weight 0 
+Criterion "IsNotSaidBeenJockeyedUnknown" "worldSaidBeenJockeyedUnknown" "!=1" "required" weight 0
 
 Criterion "IsSaidBeenJockeyedCoach" "worldSaidBeenJockeyedCoach" "1" "required" weight 0
 Criterion "IsSaidBeenJockeyedGambler" "worldSaidBeenJockeyedGambler" "1" "required" weight 0
@@ -1071,9 +1072,9 @@ criterion "IsCriticalPain"		"PainLevel"	"Critical"		required
 criterion "IsDamageTypeBullet"		"DamageType"	"DMG_BULLET"		required
 criterion "IsNotDamageTypeBullet"	"DamageType"	"!=DMG_BULLET"		required
 criterion "IsNotDamageTypeExplosive"		"DamageType"	"!=DMG_BLAST"		required
-   
-   
-   
+
+
+
 // new since previous link up, will move later, just here to make life easy
 criterion "ConceptPlayerNiceJob"		"Concept" "PlayerNiceJob"	required
 criterion "ConceptPlayerNiceShot"		"Concept" "PlayerNiceShot"	required
@@ -1156,7 +1157,7 @@ criterion "IssuerClose" "dist_from_issuer" "<400" required
 criterion "IssuerReallyClose" "dist_from_issuer" "<200" required
 criterion "IssuerMediumClose" "dist_from_issuer" "<300" required
 criterion "IsNotSaidSmell" "worldSaidSmell" "!=1" required
-					    
+
 //Generic Chapter 1 Intro Criterion
 
 criterion "IsNotSaidCXM1Intro" "worldCXM1Intro" "!=1" required
@@ -1198,10 +1199,10 @@ criterion "ConceptWorldC502NotZombies3"	"Concept" "WorldC502NotZombies3"	require
 criterion "ConceptWorldC502NotZombies3b"	"Concept" "WorldC502NotZombies3b"	required
 criterion "ConceptWorldSignStayInGroup2"	"Concept" "WorldSignStayInGroup2"	required
 criterion "ConceptWorldSignWhereIsCEDA2"	"Concept" "WorldSignWhereIsCEDA2"	required
-criterion "ConceptC502AlarmTriggered"	"Concept" "C502AlarmTriggered"	required                                                                                                                           
-criterion "ConceptC502AlarmStopped"	"Concept" "C502AlarmStopped"	required                                                                                                                           
-criterion "ConceptWorldC502AlarmStopped"	"Concept" "WorldC502AlarmStopped"	required  
-criterion "ConceptWorldC502AlarmStopped2"	"Concept" "WorldC502AlarmStopped2"	required                                                                                                                          
+criterion "ConceptC502AlarmTriggered"	"Concept" "C502AlarmTriggered"	required
+criterion "ConceptC502AlarmStopped"	"Concept" "C502AlarmStopped"	required
+criterion "ConceptWorldC502AlarmStopped"	"Concept" "WorldC502AlarmStopped"	required
+criterion "ConceptWorldC502AlarmStopped2"	"Concept" "WorldC502AlarmStopped2"	required
 
 
 
@@ -1233,15 +1234,15 @@ Criterion "IsSaidCreshendoStartNear" "worldSaidCreshendoStartNear" "1" "required
 
 Criterion "IsNotSaidReunited" "worldSaidReunited" "!=1" "required" weight 0
 Criterion "IsNotBotAttention" "worldSaidBotAttention" "!=1" "required" weight 0
-Criterion "IsNotSaidSafeSpotAhead" "worldSaidSafeSpotAhead" "!=1" "required" 
-Criterion "IsNotSaidFinaleAhead" "worldSaidFinaleAhead" "!=1" "required" 
-Criterion "IsNotSaidSomeoneDied" "worldSaidSomeoneDied" "!=1" "required" 
-Criterion "IsSaidSomeoneDiedKill" "worldSaidSomeoneDiedKill" "1" "required" 
-Criterion "IsNotSaidTankDead" "worldSaidTankDead" "!=1" "required" 
-Criterion "IsNotSaidSomeoneDiedDouble" "worldSaidSomeoneDiedDouble" "!=1" "required" 
-Criterion "IsNotSaidSomeoneDiedDouble2" "worldSaidSomeoneDiedDouble2" "!=1" "required" 
+Criterion "IsNotSaidSafeSpotAhead" "worldSaidSafeSpotAhead" "!=1" "required"
+Criterion "IsNotSaidFinaleAhead" "worldSaidFinaleAhead" "!=1" "required"
+Criterion "IsNotSaidSomeoneDied" "worldSaidSomeoneDied" "!=1" "required"
+Criterion "IsSaidSomeoneDiedKill" "worldSaidSomeoneDiedKill" "1" "required"
+Criterion "IsNotSaidTankDead" "worldSaidTankDead" "!=1" "required"
+Criterion "IsNotSaidSomeoneDiedDouble" "worldSaidSomeoneDiedDouble" "!=1" "required"
+Criterion "IsNotSaidSomeoneDiedDouble2" "worldSaidSomeoneDiedDouble2" "!=1" "required"
 
-Criterion "IsSaidSomeoneDied" "worldSaidSomeoneDied" "1" "required" 
+Criterion "IsSaidSomeoneDied" "worldSaidSomeoneDied" "1" "required"
 Criterion "IsNotSaidNervous" "SaidNervous" "!=1" "required"
 
 Criterion "IsNotSaidPlayerTransition" "worldSaidPlayerTransition" "!=1" "required"
@@ -1269,7 +1270,7 @@ Criterion "IsNotSaidJockeyWarn" "worldSaidJockeyWarn" "!=1" "required" weight 0
 Criterion "IsNotSaidHunterWarn" "worldSaidHunterWarn" "!=1" "required" weight 0
 Criterion "IsNotSaidBoomerWarn" "worldSaidBoomerWarn" "!=1" "required" weight 0
 Criterion "IsNotSaidChargerWarn" "worldSaidChargerWarn" "!=1" "required" weight 0
-Criterion "IsNotSaidTankWarn" "worldWarnHeardTank" "!=1" "required" weight 0
+Criterion "IsNotSaidTankWarn" "worldSaidTankWarn" "!=1" "required" weight 0
 Criterion "IsNotSaidWitchWarn" "worldWarnHeardWitch" "!=1" "required" weight 0
 Criterion "SawManyMudMen" "worldSawMudMen" ">3" "required" weight 0
 Criterion "SawFirstMudMen" "worldSawMudMen" "<1" "required" weight 0
@@ -1290,7 +1291,7 @@ Criterion "IsNotSaidUnknownPounced" "worldSaidUnknownPounced" "!=1" "required" w
 
 Criterion "IsNotSuggestedHealth" "worldSuggestedHealth" "!=1" "required" weight 0
 
-Criterion "IsNotSaidHurrahAlso" "worldSaidHurrahAlso" "!=1" "required" weight 0                                                                                                                             
+Criterion "IsNotSaidHurrahAlso" "worldSaidHurrahAlso" "!=1" "required" weight 0
 
 Criterion "IsNotSaidc5m4_01" "worldSaidc5m4_01" "!=1" "required" weight 0
 
@@ -1832,7 +1833,7 @@ criterion "IsC3M3BridgeDown"   "subject" "C3M3BridgeDown"	  required
 
 
 criterion "ConceptPlayerNegative"   "Concept" "PlayerNegative"	  required
- 
+
 
 //Then response concepts
 criterion "ConceptBounceReaction"   "Concept" "BounceReaction"	  required
@@ -1885,7 +1886,7 @@ Criterion "IsProfanity" "worldNoProfanity" "!=1" "required" weight 0
 //Ellis Story criteria
 criterion "ConceptEllisInterrupt"   "Concept" "EllisInterrupt"	  required
 
-//Saferoom door open 
+//Saferoom door open
 criterion "Conceptopen_safedoor"   "Concept" "open_safedoor"	  required  //Trigger_multiple just outside starting safe doors (needs to be placed manually in maps)
 
 //Map related criterias
@@ -1934,7 +1935,9 @@ Criterion "EllisNotTall" "worldEllisTallJoke" "1" "required" weight 1
 //C2M3
 Criterion "ismap_c2m3" "map" "c2m3_coaster" "required" weight 100
 criterion "Conceptc2m3CoasterStart"   "Concept" "c2m3CoasterStart"	  required
+criterion "Conceptc2m3CoasterStartResponse"   "Concept" "c2m3CoasterStart"	  required
 criterion "Conceptc2m3CoasterEnd"   "Concept" "c2m3CoasterEnd"	  required
+criterion "Conceptc2m3CoasterEndResponse"   "Concept" "c2m3CoasterEndResponse"	  required
 criterion "Conceptc2m3SeeChopper"   "Concept" "C2M3SeeChopper"	  required
 criterion "Conceptc2m3downhole"   "Concept" "c2m3downhole"	  required
 criterion "Conceptc2m3NearRubble"   "Concept" "c2m3NearRubble"	  required
@@ -2009,7 +2012,7 @@ Criterion "IsNotSaidc4m1_rainresponse" "worldSaidc4m1_rainresponse" "!=1" requir
 
 //C4M2
 Criterion "ismap_c4m2_sugarmill_a" "map" "c4m2_sugarmill_a" "required" weight 100
-Criterion "IsNotmap_c4m2" "map" "!=c4m2_sugarmill_a" required 
+Criterion "IsNotmap_c4m2" "map" "!=c4m2_sugarmill_a" required
 criterion "Conceptc4m2_enter_canefield"   "Concept" "c4m2_enter_canefield"	  required
 criterion "Conceptc4m2_exit_canefield"   "Concept" "c4m2_exit_canefield"	  required
 criterion "Conceptc4m2_elevator_top_button"   "Concept" "c4m2_elevator_top_button"	  required
@@ -2155,7 +2158,7 @@ response TheDumpsterIsDown
 }
 rule TheDumpsterIsDown
 {
-	criteria ConceptAirport02DumpsterDown 
+	criteria ConceptAirport02DumpsterDown
 	response TheDumpsterIsDown
 }
 
@@ -2259,7 +2262,7 @@ rule Airport04PathClearVan
 //DLC 3 Take along
 Criterion "TheSacrifice" "campaign" "l4d2_7" "required"
 criterion "ismapc7m1_docks"  "map" "c7m1_docks" required weight 100
-criterion "ismapc7m2_barge"  "map" "c7m2_barge" required weight 100 
+criterion "ismapc7m2_barge"  "map" "c7m2_barge" required weight 100
 criterion "ismapc7m3_port"  "map" "c7m3_port" required weight 100
 
 

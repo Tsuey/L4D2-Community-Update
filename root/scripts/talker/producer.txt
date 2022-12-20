@@ -1286,16 +1286,14 @@ Rule c2m3_DownHoleProducer
 	Response c2m3_DownHoleProducer
 }
 
-Response c2m3CoasterEndProducer
+Response c2m3CoasterEndResponseProducer
 {
 	scene "scenes/Producer/WorldC2M3B18.vcd"  //Alarm's off!
 }
-Rule c2m3CoasterEndProducer
+Rule c2m3CoasterEndResponseProducer
 {
-	criteria Conceptc2m3CoasterEnd IsProducer AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_Alarm:2:0"
-	applycontexttoworld
-	Response c2m3CoasterEndProducer
+	criteria Conceptc2m3CoasterEndResponse IsProducer AutoIsNotScavenge AutoIsNotSurvival
+	Response c2m3CoasterEndResponseProducer
 }
 
 Response C2M3CoasterRunGoProducer
@@ -1310,16 +1308,14 @@ Rule C2M3CoasterRunGoProducer
 	Response C2M3CoasterRunGoProducer
 }
 
-Response C2M3CoasterStartProducer
+Response C2M3CoasterStartResponseProducer
 {
 	scene "scenes/Producer/WorldC2M3B30.vcd"  then mechanic _c2m3_howcool foo:0 1.0 //I'm starting it!
 }
-Rule C2M3CoasterStartProducer
+Rule C2M3CoasterStartResponseProducer
 {
-	criteria Conceptc2m3CoasterStart IsProducer AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
-	applycontexttoworld
-	Response C2M3CoasterStartProducer
+	criteria Conceptc2m3CoasterStartResponse IsProducer AutoIsNotScavenge AutoIsNotSurvival
+	Response C2M3CoasterStartResponseProducer
 }
 
 Response c2m3SeeChopperProducer
@@ -8823,7 +8819,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownProducer
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownProducer
 {
-	criteria ConceptRemark IsProducer IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkProducer IsWorldTalkProducer IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsProducer IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat NotInIntenseCombat IsTalk IsTalkProducer IsWorldTalkProducer IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownProducer
@@ -8835,7 +8831,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownIntenseProducer
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownIntenseProducer
 {
-	criteria ConceptRemark IsProducer IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkProducer IsWorldTalkProducer IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsProducer IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing InIntenseCombat IsTalk IsTalkProducer IsWorldTalkProducer IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownIntenseProducer
@@ -10521,7 +10517,7 @@ Rule PlayerKillConfirmationEllisCloseProducer
 
 Response PlayerKillTankConfirmationC1M2Producer
 {
-	scene "scenes/Producer/Blank.vcd" then mechanic C1M2TankInfo foo:0 0.1 //
+	print " " then mechanic C1M2TankInfo foo:0 0.1 //
 }
 Rule PlayerKillTankConfirmationC1M2Producer
 {
@@ -11609,6 +11605,18 @@ Rule SurvivorVocalizeEmphaticGoProducer
 	Response SurvivorVocalizeEmphaticGoProducer
 }
 
+Response SurvivorVocalizeEmphaticGoC4M2Producer
+{
+	scene "scenes/Producer/EmphaticGoQuiet01.vcd"  //No time to stop, go.
+	scene "scenes/Producer/EmphaticGoQuiet02.vcd"  //Keep moving.
+	scene "scenes/Producer/EmphaticGoQuiet03.vcd"  //Keep going.
+}
+Rule SurvivorVocalizeEmphaticGoC4M2Producer
+{
+	criteria ConceptPlayerEmphaticGo IsProducer IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkProducer IsWorldTalkProducer ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsProducerInWitchville
+	Response SurvivorVocalizeEmphaticGoC4M2Producer
+}
+
 Response SurvivorVocalizeGoingToDieProducer
 {
 	scene "scenes/Producer/GoingToDie01.vcd"  //Okay this was a mistake.
@@ -11658,12 +11666,11 @@ Rule SurvivorVocalizeGoingToDie3Producer
 
 Response SurvivorVocalizeGoingToDieC5M5Producer
 {
-	norepeat
 	scene "scenes/Producer/GoingToDie19.vcd"  //I haven't fought through all of this to die now.
 }
 Rule SurvivorVocalizeGoingToDieC5M5Producer
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsProducer IsOnThirdStrike IsTalk IsTalkProducer ChanceToFire30Percent IsNotSaidGoingToDieC5M5 IsMapc5m5_bridge IsNotComplainBlock IsWorldTalkProducer IsNotInStartArea IsNotInCheckpoint
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsProducer IsOnThirdStrike IsTalk IsTalkProducer ChanceToFire30Percent IsNotSaidGoingToDieC5M5 IsMapc5m5_bridge IsNotComplainBlock IsWorldTalkProducer IsNotInStartArea IsNotInCheckpoint _auto_IsFinaleStartedV2
 	ApplyContext "IsComplain:1:25,TalkProducer:1:8,SaidGoingToDieC5M5:1:0"
 	Response SurvivorVocalizeGoingToDieC5M5Producer
 }

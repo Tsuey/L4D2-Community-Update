@@ -1590,19 +1590,17 @@ Rule c2m3_DownHoleMechanic
 	Response c2m3_DownHoleMechanic
 }
 
-Response c2m3CoasterEndMechanic
+Response c2m3CoasterEndResponseMechanic
 {
 	scene "scenes/Mechanic/WorldC2M3B27.vcd"  //Alarm's off!
 	scene "scenes/Mechanic/WorldC2M3B28.vcd"  //It's off!
 	scene "scenes/Mechanic/WorldC2M3B29.vcd"  //OFF!
 	scene "scenes/Mechanic/WorldC2M3B30.vcd"  //It's off, can you hear me? It's off!
 }
-Rule c2m3CoasterEndMechanic
+Rule c2m3CoasterEndResponseMechanic
 {
-	criteria Conceptc2m3CoasterEnd IsMechanic AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_Alarm:2:0"
-	applycontexttoworld
-	Response c2m3CoasterEndMechanic
+	criteria Conceptc2m3CoasterEndResponse IsMechanic AutoIsNotScavenge AutoIsNotSurvival
+	Response c2m3CoasterEndResponseMechanic
 }
 
 Response C2M3CoasterRunGoMechanic
@@ -1616,16 +1614,14 @@ Rule C2M3CoasterRunGoMechanic
 	Response C2M3CoasterRunGoMechanic
 }
 
-Response C2M3CoasterStartMechanic
+Response C2M3CoasterStartResponseMechanic
 {
 	scene "scenes/Mechanic/WorldC2M3B46.vcd"  then self _c2m3_howcool foo:0 1.0 //I'm starting it!
 }
-Rule C2M3CoasterStartMechanic
+Rule C2M3CoasterStartResponseMechanic
 {
 	criteria Conceptc2m3CoasterStart IsMechanic AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
-	applycontexttoworld
-	Response C2M3CoasterStartMechanic
+	Response C2M3CoasterStartResponseMechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -2053,7 +2049,7 @@ Response C2M5LeaveSafeMechanic
 }
 Rule C2M5LeaveSafeMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic ismap_c2m5 IsNotSaidLeavingSafeArea IsNotAlone AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic ismap_c2m5 IsNotSaidLeavingSafeArea IsNotAlone AutoIsNotScavenge AutoIsNotSurvival _auto_NotTellingStory
 	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0"
 	applycontexttoworld
 	Response C2M5LeaveSafeMechanic
@@ -2061,6 +2057,7 @@ Rule C2M5LeaveSafeMechanic
 
 Response C2M5ReloadingTankMechanic
 {
+	norepeat
 	scene "scenes/Mechanic/WorldC2M5B54.vcd"  //Kill the Tank so he can land!
 	scene "scenes/Mechanic/WorldC2M5B55.vcd"  //He can't lank until we kill the Tank!
 	scene "scenes/Mechanic/WorldC2M5B56.vcd"  //He ain't gonna land until we kill the Tank, man. Kill the Tank!
@@ -3151,7 +3148,7 @@ Response PlayerRemarkc5m3manholeMechanic
 Rule PlayerRemarkc5m3manholeMechanic
 {
 	criteria ConceptRemark IsMechanic Isc5m3manhole IsNotSaidc5m3manhole IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear300 AutoIsNotScavenge AutoIsNotSurvival _auto_NotInSewer IsNotSpeakingWeight0
-	ApplyContext "Saidc5m3manhole:1:0,Talk:1:12,_auto_TellingStory:1:0"
+	ApplyContext "Saidc5m3manhole:1:0,Talk:1:12,_auto_TellingStory:1:0,_auto_DidInterrupt:0:0"
 	applycontexttoworld
 	forceweight 100
 	Response PlayerRemarkc5m3manholeMechanic
@@ -3265,8 +3262,6 @@ Rule C5M4BombIntAMechanic
 
 Response C5M4BombInt02Mechanic
 {
-	norepeat
-	scene "scenes/Mechanic/World301.vcd"  //I'm all turned around.  Where's the bridge?
 	scene "scenes/Mechanic/WorldC5M4B05.vcd"  //They must not see us.
 }
 Rule C5M4BombInt02Mechanic
@@ -3313,6 +3308,7 @@ Response PlayerRemarkc5m4alleyMechanic
 {
 	scene "scenes/Mechanic/World311.vcd"  //Man, I don't know which way to go.
 	scene "scenes/Mechanic/World312.vcd"  //Never been through so many back alley's in my life.
+	scene "scenes/Mechanic/World301.vcd"  //I'm all turned around.  Where's the bridge?
 }
 Rule PlayerRemarkc5m4alleyMechanic
 {
@@ -3651,7 +3647,7 @@ Response C5M5LeaveSafeMechanic
 }
 Rule C5M5LeaveSafeMechanic
 {
-	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotAlone IsMapc5m5_bridge IsNotSaidLeavingSafeArea
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotAlone IsMapc5m5_bridge IsNotSaidLeavingSafeArea _auto_NotTellingStory
 	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
 	applycontexttoworld
 	Response C5M5LeaveSafeMechanic
@@ -3664,6 +3660,14 @@ Response C5M5LeaveSafeAloneMechanic
 Rule C5M5LeaveSafeAloneMechanic
 {
 	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsAlone IsMapc5m5_bridge IsNotSaidLeavingSafeArea
+	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
+	applycontexttoworld
+	Response C5M5LeaveSafeAloneMechanic
+}
+
+Rule C5M5LeaveSafeAloneStoryMechanic
+{
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsMapc5m5_bridge IsNotSaidLeavingSafeArea _auto_IsTellingStory
 	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
 	applycontexttoworld
 	Response C5M5LeaveSafeAloneMechanic
@@ -4208,7 +4212,7 @@ Response DLC1_C6M2_SafeRoomConvo03bMechanic
 }
 Rule DLC1_C6M2_SafeRoomConvo03bMechanic
 {
-	criteria ConceptDLC1_C6M2_SafeRoomConvo03b IsMechanic AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptDLC1_C6M2_SafeRoomConvo03b IsMechanic IsInStartArea AutoIsNotScavenge AutoIsNotSurvival
 	Response DLC1_C6M2_SafeRoomConvo03bMechanic
 }
 
@@ -4343,7 +4347,7 @@ Rule DLC1_C6M2_SafeRoomConvo19eMechanic
 
 Response DLC1_C6M2_SafeRoomConvo19gMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M2_SafeRoomConv21.vcd" then self IntroEnd foo:0 0.1 //Naw, he gained like thirty pounds. But he invented a shitload of tasty drinks. I was always partial to Keith's Kiwi Kamikaze.
+	scene "scenes/Mechanic/DLC1_C6M2_SafeRoomConvo21.vcd" then self IntroEnd foo:0 0.1 //Naw, he gained like thirty pounds. But he invented a shitload of tasty drinks. I was always partial to Keith's Kiwi Kamikaze.
 }
 Rule DLC1_C6M2_SafeRoomConvo19gMechanic
 {
@@ -4756,7 +4760,7 @@ Response C1M2EllisStoryMechanic
 }
 Rule C1M2EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c1m2_streets IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c1m2_streets IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4769,7 +4773,7 @@ Response C1M3EllisStoryMechanic
 }
 Rule C1M3EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c1m3_mall IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c1m3_mall IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4782,7 +4786,7 @@ Response C1M4EllisStoryMechanic
 }
 Rule C1M4EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c1m4_atrium IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c1m4_atrium IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4796,7 +4800,7 @@ Response C2M2EllisStoryMechanic
 }
 Rule C2M2EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c2m2 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c2m2 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4810,7 +4814,7 @@ Response C2M3EllisStoryMechanic
 }
 Rule C2M3EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c2m3 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c2m3 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4824,7 +4828,7 @@ Response C2M4EllisStoryMechanic
 }
 Rule C2M4EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c2m4 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c2m4 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4837,7 +4841,7 @@ Response C2M5EllisStoryMechanic
 }
 Rule C2M5EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c2m5 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c2m5 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4850,7 +4854,7 @@ Response C3M2EllisStoryMechanic
 }
 Rule C3M2EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismapc3m2_swamp IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismapc3m2_swamp IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4863,7 +4867,7 @@ Response C3M3EllisStoryMechanic
 }
 Rule C3M3EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismapc3m3_shantytown IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismapc3m3_shantytown IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4876,7 +4880,7 @@ Response C3M4EllisStoryMechanic
 }
 Rule C3M4EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismapc3m4_plantation IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismapc3m4_plantation IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4889,7 +4893,7 @@ Response C4M2EllisStoryMechanic
 }
 Rule C4M2EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking ismap_c4m2_sugarmill_a IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking ismap_c4m2_sugarmill_a IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4902,7 +4906,7 @@ Response C4M3EllisStoryMechanic
 }
 Rule C4M3EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking isc4m3 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking isc4m3 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4915,7 +4919,7 @@ Response C4M4EllisStoryMechanic
 }
 Rule C4M4EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking isc4m4 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking isc4m4 IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4928,7 +4932,7 @@ Response C5M2EllisStoryMechanic
 }
 Rule C5M2EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc5m2_park IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking IsMapc5m2_park IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4941,7 +4945,7 @@ Response C5M3EllisStoryMechanic
 }
 Rule C5M3EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc5m3_cemetery IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking IsMapc5m3_cemetery IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4954,7 +4958,7 @@ Response C5M4EllisStoryMechanic
 }
 Rule C5M4EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc5m4_quarter IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking IsMapc5m4_quarter IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4967,7 +4971,7 @@ Response C5M5EllisStoryMechanic
 }
 Rule C5M5EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking IsMapc5m5_bridge IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking IsMapc5m5_bridge IsACoopMode ChanceToFire10Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -4984,7 +4988,7 @@ Response C6M2EllisStoryMechanic
 }
 Rule C6M2EllisStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotSpeaking isc6m2_bedlam IsACoopMode ChanceToFire20Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
+	criteria ConceptTalkIdle IsMechanic IsInStartArea IsNotSaidLeavingSafeArea IsNotAlone IsNotSpeaking isc6m2_bedlam IsACoopMode ChanceToFire20Percent IsNotSrcGrp_ELLISSTORY _auto_IsStoryWait _auto_NotStoryGate
 	ApplyContext "_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0"
 	applycontexttoworld
 	Response C6M2EllisStoryMechanic
@@ -5007,7 +5011,7 @@ Response C6M3EllisBridgeStoryMechanic
 }
 Rule C6M3EllisBridgeStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsNotSpeaking isc6m3_port IsACoopMode IsNotInStartArea ChanceToFire20Percent IsSaidFinaleExchange IsEndEllisBridgeStoryStart IsNotSaidEllisBridgeStoryStart IsNotSaidC6M3Elevator
+	criteria ConceptTalkIdle IsMechanic IsNotSpeaking isc6m3_port IsACoopMode IsNotInStartArea ChanceToFire20Percent IsNotSrcGrp_ELLISSTORY IsSaidFinaleExchange IsEndEllisBridgeStoryStart IsNotSaidEllisBridgeStoryStart IsNotSaidC6M3Elevator IsBikerAlive IsManagerAlive IsTeenGirlAlive
 	ApplyContext "Talk:1:0,_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0,SaidEllisBridgeStoryStart:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -5020,7 +5024,7 @@ Response C6M3EllisBridgeStory1Mechanic
 }
 Rule C6M3EllisBridgeStory1Mechanic
 {
-	criteria ConceptC6M3EllisBridgeStory1 IsMechanic IsNotSaidC6M3Elevator _auto_NotDidInterrupt
+	criteria ConceptC6M3EllisBridgeStory1 IsMechanic IsNotSaidC6M3Elevator FromIsMechanic _auto_NotDidInterrupt
 	Response C6M3EllisBridgeStory1Mechanic
 }
 
@@ -5030,7 +5034,7 @@ Response C6M3EllisBridgeStory1aMechanic
 }
 Rule C6M3EllisBridgeStory1aMechanic
 {
-	criteria ConceptC6M3EllisBridgeStory1a IsMechanic IsNotSaidC6M3Elevator _auto_NotDidInterrupt
+	criteria ConceptC6M3EllisBridgeStory1a IsMechanic IsNotSaidC6M3Elevator FromIsMechanic _auto_NotDidInterrupt
 	Response C6M3EllisBridgeStory1aMechanic
 }
 
@@ -7766,7 +7770,7 @@ Rule PlayerRemarkc2m3_coollightMechanic
 
 Response PlayerRemarkc2m3_coollightNickMechanic
 {
-	scene "scenes/Mechanic/WorldC2M302.vcd" then gambler _c2m3_coollight foo:0 0.1 //Dang, look at Nick's jacket.
+	scene "scenes/Mechanic/WorldC2M302.vcd" then gambler _c2m3_coollight02 foo:0 0.1 //Dang, look at Nick's jacket.
 }
 Rule PlayerRemarkc2m3_coollightNickMechanic
 {
@@ -9944,7 +9948,7 @@ Rule PlayerRemarkWorldC6M2_InJazzClubMechanic
 
 Response PlayerRemarkWorldC6M2_InSewer2Mechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater02.vcd"  then Producer WorldC6M2_InSewer202a foo:0 -4.622 //Oh man, I found a candy bar! [beat] Whup. False alarm.
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater02.vcd"  then any WorldC6M2_InSewer202a foo:0 -4.622 //Oh man, I found a candy bar! [beat] Whup. False alarm.
 }
 Rule PlayerRemarkWorldC6M2_InSewer2Mechanic
 {
@@ -10114,7 +10118,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownMechanic
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownMechanic
 {
-	criteria ConceptRemark IsMechanic IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsMechanic IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat NotInIntenseCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownMechanic
@@ -10127,7 +10131,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownIntenseMechanic
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownIntenseMechanic
 {
-	criteria ConceptRemark IsMechanic IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsMechanic IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing InIntenseCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownIntenseMechanic
@@ -10170,7 +10174,7 @@ Response PlayerRemarkWorldC6M2_TattooStoryMechanic
 Rule PlayerRemarkWorldC6M2_TattooStoryMechanic
 {
 	criteria ConceptRemark IsMechanic IsWorldC6M2_Tattoo IsNotSaidWorldC6M2_Tattoo ExtraWeight10 ChanceToFire10Percent IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear300 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
-	ApplyContext "SaidWorldC6M2_Tattoo:1:0,_auto_TellingStory:1:14"
+	ApplyContext "SaidWorldC6M2_Tattoo:1:0,_auto_TellingStory:1:0,_auto_DidInterrupt:0:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_TattooStoryMechanic
 }
@@ -12017,7 +12021,7 @@ Rule PlayerKillTankNotHealthyMechanic
 
 Response PlayerKillTankConfirmationC1M2Mechanic
 {
-	scene "scenes/Mechanic/Blank.vcd" then self C1M2TankInfo foo:0 0.1 //
+	print " " then self C1M2TankInfo foo:0 0.1 //
 }
 Rule PlayerKillTankConfirmationC1M2Mechanic
 {
@@ -13183,6 +13187,19 @@ Rule SurvivorVocalizeEmphaticGoMechanic
 {
 	criteria ConceptPlayerEmphaticGo IsMechanic IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response SurvivorVocalizeEmphaticGoMechanic
+}
+
+Response SurvivorVocalizeEmphaticGoC4M2Mechanic
+{
+	scene "scenes/Mechanic/EmphaticGoQuiet01.vcd"  //Let's go.
+	scene "scenes/Mechanic/EmphaticGoQuiet02.vcd"  //Move out.
+	scene "scenes/Mechanic/EmphaticGoQuiet03.vcd"  //Keep going.
+	scene "scenes/Mechanic/EmphaticGoQuiet04.vcd"  //Just run, damn it.
+}
+Rule SurvivorVocalizeEmphaticGoC4M2Mechanic
+{
+	criteria ConceptPlayerEmphaticGo IsMechanic IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkMechanic IsWorldTalkMechanic ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsMechanicInWitchville
+	Response SurvivorVocalizeEmphaticGoC4M2Mechanic
 }
 
 Response SurvivorVocalizeGoingToDieMechanic
@@ -15641,8 +15658,8 @@ Rule _C1M1_ElevatorHello3AliveName2RMechanic
 
 Response _C1M1_ElevatorHello3AliveName2Mechanic
 {
-	scene "scenes/Mechanic/WorldC1M1B91.vcd"  then any _C1M1_ElevatorHello3WhoIsDead foo:0 -0.911 //You can call me Ellis.
-	scene "scenes/Mechanic/WorldC1M1B93.vcd"  then any _C1M1_ElevatorHello3WhoIsDead foo:0 -2.554 //Ellis, my name is Ellis.
+	scene "scenes/Mechanic/WorldC1M1B91.vcd"  then any _C1M1_ElevatorHello3AliveWhoIsDead foo:0 -0.911 //You can call me Ellis.
+	scene "scenes/Mechanic/WorldC1M1B93.vcd"  then any _C1M1_ElevatorHello3AliveWhoIsDead foo:0 -2.554 //Ellis, my name is Ellis.
 }
 Rule _C1M1_ElevatorHello3AliveName2Mechanic
 {

@@ -1400,16 +1400,14 @@ Rule c2m3_DownHoleGambler
 	Response c2m3_DownHoleGambler
 }
 
-Response c2m3CoasterEndGambler
+Response c2m3CoasterEndResponseGambler
 {
 	scene "scenes/Gambler/WorldC2M3B22.vcd"  //Alarm's off!
 }
-Rule c2m3CoasterEndGambler
+Rule c2m3CoasterEndResponseGambler
 {
-	criteria Conceptc2m3CoasterEnd IsGambler AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_Alarm:2:0"
-	applycontexttoworld
-	Response c2m3CoasterEndGambler
+	criteria Conceptc2m3CoasterEndResponse IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response c2m3CoasterEndResponseGambler
 }
 
 Response C2M3CoasterRunGoGambler
@@ -1422,16 +1420,14 @@ Rule C2M3CoasterRunGoGambler
 	Response C2M3CoasterRunGoGambler
 }
 
-Response C2M3CoasterStartGambler
+Response C2M3CoasterStartResponseGambler
 {
 	scene "scenes/Gambler/MiscDirectional35.vcd"  then mechanic _c2m3_howcool foo:0 1.0 //I hit it!
 }
-Rule C2M3CoasterStartGambler
+Rule C2M3CoasterStarResponsetGambler
 {
-	criteria Conceptc2m3CoasterStart IsGambler AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
-	applycontexttoworld
-	Response C2M3CoasterStartGambler
+	criteria Conceptc2m3CoasterStartResponse IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response C2M3CoasterStartResponseGambler
 }
 
 Response c2m3SpotIncendiaryGambler
@@ -2283,12 +2279,11 @@ Rule C5GoingToDieGambler
 
 Response C5M5GoingToDieGambler
 {
-	norepeat
 	scene "scenes/Gambler/WorldC5MGoingToDie02.vcd"  //I have not come this far to die now.
 }
 Rule C5M5GoingToDieGambler
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsGambler IsOnThirdStrike IsNotSaidGoingToDieC5M5 IsTalk IsTalkGambler IsNotComplainBlock ChanceToFire30Percent IsWorldTalkGambler IsNotInStartArea IsNotInCheckpoint IsMapc5m5_bridge _auto_NotSpottedVehicle
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsGambler IsOnThirdStrike IsNotSaidGoingToDieC5M5 IsTalk IsTalkGambler IsNotComplainBlock ChanceToFire30Percent IsWorldTalkGambler IsNotInStartArea IsNotInCheckpoint IsMapc5m5_bridge _auto_IsFinaleStartedV2
 	ApplyContext "IsComplain:1:25,TalkGambler:1:8,SaidGoingToDieC5M5:1:0"
 	forceweight 200
 	Response C5M5GoingToDieGambler
@@ -2467,7 +2462,6 @@ Response C5M3AlarmFieldNagsGambler
 {
 	norepeat
 	scene "scenes/Gambler/World215.vcd"  //Do not shoot any of the cars!
-	scene "scenes/Gambler/World216.vcd"  //What a nightmare.
 	scene "scenes/Gambler/WorldC5M3B16.vcd"  then self C5M3AlarmFieldNags01 foo:0 0.1 //Do you still smell sewer?
 	scene "scenes/Gambler/WorldC5M3B20.vcd"  //Careful. Carefuuulll.
 }
@@ -9437,7 +9431,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownGambler
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownGambler
 {
-	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat NotInIntenseCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownGambler
@@ -9453,7 +9447,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownIntenseGambler
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownIntenseGambler
 {
-	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing InIntenseCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownIntenseGambler
@@ -9896,6 +9890,18 @@ Rule PlayerStayTogetherGambler
 {
 	criteria ConceptPlayerStayTogether IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response PlayerStayTogetherGambler
+}
+
+Response PlayerStayTogetherSaferoomC2M2Gambler
+{
+	scene "scenes/Gambler/WorldC2M225.vcd"  //Keep running, keep running.
+	scene "scenes/Gambler/WorldC2M226.vcd"  //Run into the tunnel of love!
+	scene "scenes/Gambler/WorldC2M228.vcd"  //Go go go.  Cut in line.
+}
+Rule PlayerStayTogetherSaferoomC2M2Gambler
+{
+	criteria ConceptPlayerStayTogether ismap_c2m2 IsNotCoughing IsGambler IsInSafeSpot IsTalk IsTalkGambler SomeoneOutsideSafeSpot IsWorldTalkGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response PlayerStayTogetherSaferoomC2M2Gambler
 }
 
 Response PlayerWatchOutBehindGambler
@@ -11329,7 +11335,7 @@ Rule PlayerKillTankNotHealthyGambler
 
 Response PlayerKillTankConfirmationC1M2Gambler
 {
-	scene "scenes/Gambler/Blank.vcd" then mechanic C1M2TankInfo foo:0 0.1 //
+	print " " then mechanic C1M2TankInfo foo:0 0.1 //
 }
 Rule PlayerKillTankConfirmationC1M2Gambler
 {
@@ -12572,6 +12578,20 @@ Rule SurvivorVocalizeEmphaticGoGambler
 	Response SurvivorVocalizeEmphaticGoGambler
 }
 
+Response SurvivorVocalizeEmphaticGoC4M2Gambler
+{
+	scene "scenes/Gambler/EmphaticGoQuiet01.vcd"  //Everybody keep moving.
+	scene "scenes/Gambler/EmphaticGoQuiet02.vcd"  //Just go.
+	scene "scenes/Gambler/EmphaticGoQuiet03.vcd"  //Just go. Go.
+	scene "scenes/Gambler/EmphaticGoQuiet04.vcd"  //Don't stop, don't stop.
+	scene "scenes/Gambler/EmphaticGoQuiet05.vcd"  //Keep moving.
+}
+Rule SurvivorVocalizeEmphaticGoC4M2Gambler
+{
+	criteria ConceptPlayerEmphaticGo IsGambler IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsGamblerInWitchville
+	Response SurvivorVocalizeEmphaticGoC4M2Gambler
+}
+
 Response SurvivorVocalizeGoingToDieGambler
 {
 	scene "scenes/Gambler/GoingToDie01.vcd"  //I really screwed the pooch back there.
@@ -13455,7 +13475,7 @@ Response SurvivorPickupRifleGambler
 }
 Rule SurvivorPickupRifleGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle IsNotSpeaking IsInSafeSpot ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleGambler
 }
