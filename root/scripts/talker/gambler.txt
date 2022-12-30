@@ -1424,7 +1424,7 @@ Response C2M3CoasterStartResponseGambler
 {
 	scene "scenes/Gambler/MiscDirectional35.vcd"  then mechanic _c2m3_howcool foo:0 1.0 //I hit it!
 }
-Rule C2M3CoasterStarResponsetGambler
+Rule C2M3CoasterStarResponseGambler
 {
 	criteria Conceptc2m3CoasterStartResponse IsGambler AutoIsNotScavenge AutoIsNotSurvival
 	Response C2M3CoasterStartResponseGambler
