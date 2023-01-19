@@ -5011,7 +5011,7 @@ Response C6M3EllisBridgeStoryMechanic
 }
 Rule C6M3EllisBridgeStoryMechanic
 {
-	criteria ConceptTalkIdle IsMechanic IsNotSpeaking isc6m3_port IsACoopMode IsNotInStartArea ChanceToFire20Percent IsNotSrcGrp_ELLISSTORY IsSaidFinaleExchange IsEndEllisBridgeStoryStart IsNotSaidEllisBridgeStoryStart IsNotSaidC6M3Elevator IsBikerAlive IsManagerAlive IsTeenGirlAlive
+	criteria ConceptTalkIdle IsMechanic IsNotSpeaking isc6m3_port IsACoopMode IsNotInStartArea ChanceToFire20Percent IsNotSrcGrp_ELLISSTORY IsSaidFinaleExchange IsEndEllisBridgeStoryStart IsNotSaidEllisBridgeStoryStart IsNotSaidC6M3Elevator
 	ApplyContext "Talk:1:0,_auto_TellingStory:1:0,SrcGrp_ELLISSTORY:1:0,SaidEllisBridgeStoryStart:1:0"
 	applycontexttoworld
 	forceweight 1
@@ -10332,15 +10332,7 @@ Response WorldC6M3LossMechanic
 }
 Rule WorldC6M3LossLouisMechanic
 {
-	criteria ConceptPlayerLook IsNotCoughing IsMechanic IsTalk IsTalkMechanic Isc6m3_port IsNotSmartLookAuto IsSubjectNone IsManagerNear500 IsWorldTalkMechanic _auto_SawC6M3Bill _auto_MechanicSawC6M3Bill
-	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
-	applycontexttoworld
-	Response WorldC6M3LossMechanic
-}
-
-Rule WorldC6M3LossLouis2Mechanic
-{
-	criteria ConceptPlayerLookHere IsNotCoughing IsMechanic IsTalk IsTalkMechanic Isc6m3_port IsNotSmartLookAuto IsSubjectNone IsManagerNear500 IsWorldTalkMechanic _auto_SawC6M3Bill _auto_MechanicSawC6M3Bill
+	criteria ConceptRemark IsNotCoughing IsMechanic IsWorldC6M3_Loss NotInCombat IsTalk IsTalkMechanic IsSubjectNear600 IsWorldTalkMechanic _auto_SawC6M3Bill _auto_MechanicSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossMechanic
