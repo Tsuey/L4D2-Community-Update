@@ -9443,7 +9443,7 @@ Response WorldC6M3LossCoach
 }
 Rule WorldC6M3LossZoeyCoach
 {
-	criteria ConceptPlayerLook IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsTeenGirlNear400 IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
+	criteria ConceptPlayerLook IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossCoach
@@ -9451,7 +9451,7 @@ Rule WorldC6M3LossZoeyCoach
 
 Rule WorldC6M3LossFrancisCoach
 {
-	criteria ConceptPlayerLook IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsBikerNear400 IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
+	criteria ConceptPlayerLook IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossCoach
@@ -9459,7 +9459,7 @@ Rule WorldC6M3LossFrancisCoach
 
 Rule WorldC6M3LossZoey2Coach
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsTeenGirlNear400 IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
+	criteria ConceptPlayerLookHere IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossCoach
@@ -9467,7 +9467,7 @@ Rule WorldC6M3LossZoey2Coach
 
 Rule WorldC6M3LossFrancis2Coach
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsBikerNear400 IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
+	criteria ConceptPlayerLookHere IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsWorldTalkCoach _auto_SawC6M3Bill _auto_CoachSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossCoach

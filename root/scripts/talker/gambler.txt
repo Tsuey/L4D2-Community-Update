@@ -9642,7 +9642,7 @@ Response WorldC6M3LossGambler
 }
 Rule WorldC6M3LossZoeyGambler
 {
-	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsTeenGirlNear400 IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossGambler
@@ -9650,7 +9650,23 @@ Rule WorldC6M3LossZoeyGambler
 
 Rule WorldC6M3LossFrancisGambler
 {
-	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsBikerNear400 IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
+	applycontexttoworld
+	Response WorldC6M3LossGambler
+}
+
+Rule WorldC6M3LossZoey2Gambler
+{
+	criteria ConceptPlayerLookHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto ThePassing3DS SubjectIsTeenGirl IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
+	applycontexttoworld
+	Response WorldC6M3LossGambler
+}
+
+Rule WorldC6M3LossFrancis2Gambler
+{
+	criteria ConceptPlayerLookHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto ThePassing3DS SubjectIsBiker IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossGambler
