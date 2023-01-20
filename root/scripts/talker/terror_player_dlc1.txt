@@ -348,6 +348,7 @@ criterion "IsWorldC6M2_SafeRoom"   "subject" "WorldC6M2_SafeRoom"	  required
 criterion "IsWorldC6M3_ByBridge"   "subject" "WorldC6M3_ByBridge"	  required
 criterion "IsWorldC6M3_BridgeRun"   "subject" "WorldC6M3_BridgeRun"	  required
 criterion "IsWorldC6M3_Bill"   "subject" "WorldC6M3_Bill"	  required
+criterion "IsWorldC6M3_Loss"   "subject" "WorldC6M3_Loss"	  required
 criterion "IsWorldC6M2_PostGate1"   "subject" "WorldC6M2_PostGate1"	  required
 criterion "Isremark_MidnightRidersBus"   "subject" "remark_MidnightRidersBus"	  required
 criterion "IsWorldFootLocker"   "subject" "WorldFootLocker"	  required
