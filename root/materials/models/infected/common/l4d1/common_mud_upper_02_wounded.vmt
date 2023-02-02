@@ -1,6 +1,6 @@
 patch
 {
-include "materials/models/infected/common/L4D1/common_mud_upper_01.vmt"
+include "materials/models/infected/common/L4D1/common_mud_upper_02.vmt"
 insert
 {
 $wounded 1
