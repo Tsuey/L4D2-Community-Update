@@ -267,7 +267,7 @@ function MergeSessionOptionTables()
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-scriptedModeLastSlowPoll <- 0
+scriptedModeLastSlowPoll <- Time()
 scriptedModeUpdateFuncs <- []
 scriptedModeSlowPollFuncs <- []
 scriptedModeSlowPollInterval <- 3
@@ -316,7 +316,7 @@ function ScriptedMode_AddUpdate( updateFunc )
 // Adds a function to the slowpoll list
 function ScriptedMode_AddSlowPoll( updateFunc )
 {
-	if (!scriptedModeSlowPollFuncs.find(updateFunc))
+	if (scriptedModeSlowPollFuncs.find(updateFunc) == null)
 		scriptedModeSlowPollFuncs.append( updateFunc )
 	else
 		printl("You already have a SlowPoll for " + updateFunc.tostring())
