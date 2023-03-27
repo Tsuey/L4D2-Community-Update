@@ -376,8 +376,9 @@ _entHelper <- function ( ent, funcname )
 		}
 		else if (typeof(funcname) == "string")
 		{
-			if (funcname in ent)
-				ent[funcname]()
+			local ent_scope = ent.GetScriptScope()
+			if (ent_scope != null && funcname in ent_scope)
+				ent_scope[funcname]()
 			else if (funcname in g_ModeScript)
 				g_ModeScript[funcname](ent)
 			else if (funcname in g_MapScript)
