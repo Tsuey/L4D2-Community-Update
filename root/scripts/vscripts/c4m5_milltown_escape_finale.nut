@@ -70,9 +70,7 @@ DirectorOptions <-
 	CommonLimit = 20
 	SpecialRespawnInterval = 80
 
-	MusicDynamicMobSpawnSize = 8
-	MusicDynamicMobStopSize = 2
-	MusicDynamicMobScanStopSize = 1
+	MusicDynamicMobSpawnSize = 20
 
 }
 
