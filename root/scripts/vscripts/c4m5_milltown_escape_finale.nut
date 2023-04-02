@@ -69,7 +69,6 @@ DirectorOptions <-
 	HordeEscapeCommonLimit = 15
 	CommonLimit = 20
 	SpecialRespawnInterval = 80
-
 	MusicDynamicMobSpawnSize = 20
 
 }
