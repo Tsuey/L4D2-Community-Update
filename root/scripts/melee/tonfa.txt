@@ -21,7 +21,7 @@ MeleeWeaponData
 	//DMG_SLASH			(1 << 2) = 4 - cuts off parts of infected
 	//DMG_BURN			(1 << 3) = 8 - lights zombies on fire
 	//DMG_CLUB			(1 << 7) = 128 - knocks them back?
-	"damage_flags"	"128 | 4"
+	"damage_flags"	"132"
 	
 	// Rumble effect to play on 360 when we swing
 	// RUMBLE_CROWBAR_SWING = 9
