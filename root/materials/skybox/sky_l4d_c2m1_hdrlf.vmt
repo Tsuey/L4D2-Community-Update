@@ -1,0 +1,11 @@
+sky
+{
+"GPU<1"
+{
+$fallbackmaterial "skybox/sky_l4d_c2m1_ldrlf"
+}
+$hdrcompressedTexture "skybox/sky_l4d_c2m1_hdrlf"
+$nofog 1
+$ignorez 1
+$basetexturetransform "center 0 0 scale 1 2 rotate 0 translate 0 0"
+}
