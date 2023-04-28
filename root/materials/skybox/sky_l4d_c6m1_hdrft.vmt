@@ -1,9 +1,5 @@
 sky
 {
-"GPU<1"
-{
-$fallbackmaterial "skybox/sky_l4d_c6m1_ldrft"
-}
 $hdrcompressedTexture "skybox/sky_l4d_c6m1_hdrft"
 $nofog 1
 $ignorez 1
