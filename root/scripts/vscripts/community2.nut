@@ -75,7 +75,22 @@ function AllowTakeDamage( damageTable )
 		{
 			if ( damageTable.Attacker.GetZombieType() == 2 )
 			{
-				damageTable.DamageDone = Convars.GetFloat( "boomer_pz_claw_dmg" );
+				if ( Convars.GetStr( "z_difficulty" ).tolower() == "easy" )
+				{
+					damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) / 2 );
+				}
+				else if ( Convars.GetStr( "z_difficulty" ).tolower() == "normal" )
+				{
+					damageTable.DamageDone = Convars.GetFloat( "boomer_pz_claw_dmg" );
+				}
+				else if ( Convars.GetStr( "z_difficulty" ).tolower() == "hard" )
+				{
+					damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 3 );
+				}
+				else if ( Convars.GetStr( "z_difficulty" ).tolower() == "impossible" )
+				{
+					damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 18 );
+				}
 			}
 		}
 	}
