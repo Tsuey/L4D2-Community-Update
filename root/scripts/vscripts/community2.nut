@@ -63,3 +63,21 @@ function OnGameEvent_gauntlet_finale_start( params )
 	if ( Director.GetMapName() == "c5m5_bridge" )
 		DirectorOptions.cm_MaxSpecials = 8;
 }
+
+function AllowTakeDamage( damageTable )
+{
+	if ( !damageTable.Attacker || !damageTable.Victim )
+		return true;
+
+	if ( damageTable.Attacker.IsPlayer() && damageTable.Victim.IsPlayer() )
+	{
+		if ( damageTable.Victim.IsSurvivor() && damageTable.DamageType == 128 )
+		{
+			if ( damageTable.Attacker.GetZombieType() == 2 )
+			{
+				damageTable.DamageDone = Convars.GetFloat( "boomer_pz_claw_dmg" );
+			}
+		}
+	}
+	return true;
+}
