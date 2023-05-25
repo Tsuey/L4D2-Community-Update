@@ -916,6 +916,11 @@ criterion "IsZombiePresentTank"        "ZombiePresentTank"     "1"        requir
 criterion "IsNotZombiePresentTank"        "ZombiePresentTank"     "<1"        required
 criterion "IsSaidTankWarn2"        "worldSaidTankWarn2"     "1"        required
 
+criterion "IsTankAggro"        "tankactive"     "1"        required
+criterion "NotTankAggro"        "tankactive"     "0"        required
+
+criterion "ActiveCombatSituation" { InIntenseCombat IsTankAggro } required
+
 criterion "IsZombiePresentWitch"        "ZombiePresentWitch"     "1"        required
 
 criterion "NotKilledByCr0wn" "oneshot" "<1" required

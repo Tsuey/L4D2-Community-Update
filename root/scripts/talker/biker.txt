@@ -3955,7 +3955,7 @@ Response L4D1PlayerFriendlyFireBiker
 }
 Rule L4D1PlayerFriendlyFireBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireBiker
 }
@@ -3968,7 +3968,7 @@ Response L4D1PlayerFriendlyFire2Biker
 }
 Rule L4D1PlayerFriendlyFire2Biker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2Biker
 }
@@ -3983,7 +3983,7 @@ Response L4D1PlayerFriendlyFireFromBillBiker
 }
 Rule L4D1PlayerFriendlyFireFromBillBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsNamVet ChanceToFire30Percent IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsNamVet ChanceToFire30Percent IsWorldTalkBiker NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromBillBiker
 }
@@ -3996,7 +3996,7 @@ Response L4D1PlayerFriendlyFireFromLouisBiker
 }
 Rule L4D1PlayerFriendlyFireFromLouisBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsManager ChanceToFire30Percent IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsManager ChanceToFire30Percent IsWorldTalkBiker NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromLouisBiker
 }
@@ -4008,7 +4008,7 @@ Response L4D1PlayerFriendlyFireFromZoeyBiker
 }
 Rule L4D1PlayerFriendlyFireFromZoeyBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkBiker NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromZoeyBiker
 }
@@ -4021,7 +4021,7 @@ Response L4D1PlayerFriendlyFireNoBulletBiker
 }
 Rule L4D1PlayerFriendlyFireNoBulletBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletBiker
 }
@@ -4311,7 +4311,7 @@ Response L4D1SurvivorReloadingBiker
 }
 Rule L4D1SurvivorReloadingBiker
 {
-	criteria ConceptPlayerReloading IsASurvivor IsNotSpeaking IsBiker IsNotIncapacitated IsTalk IsTalkBiker RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkBiker IsNotZombiePresentTank ChanceToFire50Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerReloading IsASurvivor IsNotSpeaking IsBiker IsNotIncapacitated IsTalk IsTalkBiker RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkBiker NotTankAggro ChanceToFire50Percent _auto_NotSpottedVehicle
 	Response L4D1SurvivorReloadingBiker
 }
 
@@ -6013,7 +6013,7 @@ Response PlayerRemarkc7m1_tankcarBiker
 }
 Rule PlayerRemarkc7m1_tankcarBiker
 {
-	criteria ConceptRemark IsBiker Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkBiker IsWorldTalkBiker IsNamVetAlive IsNamVetNear400 IsSubjectNear400 IsNotZombiePresentTank _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptRemark IsBiker Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkBiker IsWorldTalkBiker IsNamVetAlive IsNamVetNear400 IsSubjectNear400 NotTankAggro _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Saidc7m1_tankcar:1:0"
 	applycontexttoworld
 	Response PlayerRemarkc7m1_tankcarBiker
@@ -7226,7 +7226,7 @@ Rule L4D1PlayerGrenadeBiker
 //}
 //Rule L4D1PlayerGrenadeCarefulBiker
 //{
-//	criteria ConceptGrenadeCareful IsNotCoughing IsBiker IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+//	criteria ConceptGrenadeCareful IsNotCoughing IsBiker IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
 //	Response L4D1PlayerGrenadeCarefulBiker
 //}
 
@@ -8843,7 +8843,7 @@ Response L4D1PlayerHealOtherBiker
 }
 Rule L4D1PlayerHealOtherBiker
 {
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker NotInIntenseCombat IsWorldTalkBiker
+	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker NotInIntenseCombat NotTankAggro IsWorldTalkBiker
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerHealOtherBiker
 }
@@ -8860,16 +8860,8 @@ Response L4D1PlayerHealOtherCombatBiker
 }
 Rule L4D1PlayerHealOtherCombatBiker
 {
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker InIntenseCombat IsWorldTalkBiker
+	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker ActiveCombatSituation IsWorldTalkBiker
 	ApplyContext "TalkBiker:1:5"
-	Response L4D1PlayerHealOtherCombatBiker
-}
-
-Rule L4D1PlayerHealOtherTankBiker
-{
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkBiker
-	ApplyContext "TalkBiker:1:5"
-	forceweight 30
 	Response L4D1PlayerHealOtherCombatBiker
 }
 
@@ -8891,7 +8883,7 @@ Response L4D1PlayerReviveFriendBiker
 }
 Rule L4D1PlayerReviveFriendBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:2"
 	Response L4D1PlayerReviveFriendBiker
 }
@@ -8909,7 +8901,7 @@ Response L4D1PlayerReviveFriendCriticalBiker
 }
 Rule L4D1PlayerReviveFriendCriticalBiker
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendCriticalBiker
 }
@@ -8923,31 +8915,15 @@ Response L4D1PlayerReviveFriendLoudBiker
 }
 Rule L4D1PlayerReviveFriendLoudBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker InIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker ActiveCombatSituation _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
-	Response L4D1PlayerReviveFriendLoudBiker
-}
-
-Rule L4D1PlayerReviveFriendLoud2Biker
-{
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
-	ApplyContext "TalkBiker:1:5"
-	forceweight 30
 	Response L4D1PlayerReviveFriendLoudBiker
 }
 
 Rule L4D1PlayerReviveFriendLoudCritBiker
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker InIntenseCombat IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker ActiveCombatSituation IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
-	Response L4D1PlayerReviveFriendLoudBiker
-}
-
-Rule L4D1PlayerReviveFriendLoudCrit2Biker
-{
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
-	ApplyContext "TalkBiker:1:5"
-	forceweight 30
 	Response L4D1PlayerReviveFriendLoudBiker
 }
 
@@ -8960,7 +8936,7 @@ Response L4D1PlayerReviveFriendLoudBillBiker
 }
 Rule L4D1PlayerReviveFriendLoudBillBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker InIntenseCombat IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsNamVet IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker ActiveCombatSituation IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsNamVet IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendLoudBillBiker
 }
@@ -8972,7 +8948,7 @@ Response L4D1PlayerReviveFriendLoudLouisBiker
 }
 Rule L4D1PlayerReviveFriendLoudLouisBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker InIntenseCombat IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsManager IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker ActiveCombatSituation IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsManager IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendLoudLouisBiker
 }
@@ -8984,7 +8960,7 @@ Response L4D1PlayerReviveFriendLoudZoeyBiker
 }
 Rule L4D1PlayerReviveFriendLoudZoeyBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker InIntenseCombat IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsTeenGirl IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker ActiveCombatSituation IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsTeenGirl IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendLoudZoeyBiker
 }
@@ -9061,6 +9037,20 @@ Rule L4D1PlayerLedgeSaveCriticalBiker
 	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response PlayerLedgeSaveBiker
+}
+
+Rule PlayerLedgeSaveLoudBiker
+{
+	criteria ConceptPlayerLedgeSave IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker ActiveCombatSituation _auto_NotSpottedVehicle
+	ApplyContext "TalkBiker:1:5"
+	Response L4D1PlayerReviveFriendLoudBiker
+}
+
+Rule L4D1PlayerLedgeSaveLoudCriticalBiker
+{
+	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker ActiveCombatSituation _auto_NotSpottedVehicle
+	ApplyContext "TalkBiker:1:5"
+	Response L4D1PlayerReviveFriendLoudBiker
 }
 
 
