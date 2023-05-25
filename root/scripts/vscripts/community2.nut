@@ -71,20 +71,23 @@ function AllowTakeDamage( damageTable )
 
 	if ( damageTable.DamageType == 128 )
 	{
-		if ( damageTable.Attacker.IsPlayer() && damageTable.Victim.IsSurvivor() )
+		if ( damageTable.Attacker.IsPlayer() && damageTable.Victim.IsPlayer() )
 		{
-			if ( damageTable.Attacker.GetZombieType() == 2 )
+			if ( damageTable.Victim.IsSurvivor() )
 			{
-				switch ( GetDifficulty() )
+				if ( damageTable.Attacker.GetZombieType() == 2 )
 				{
-					case 0:
-						damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) / 2 ); break;
-					case 1:
-						damageTable.DamageDone = Convars.GetFloat( "boomer_pz_claw_dmg" ); break;
-					case 2:
-						damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 3 ); break;
-					case 3:
-						damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 18 ); break;
+					switch ( GetDifficulty() )
+					{
+						case 0:
+							damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) / 2 ); break;
+						case 1:
+							damageTable.DamageDone = Convars.GetFloat( "boomer_pz_claw_dmg" ); break;
+						case 2:
+							damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 3 ); break;
+						case 3:
+							damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 18 ); break;
+					}
 				}
 			}
 		}
