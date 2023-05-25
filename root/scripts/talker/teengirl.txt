@@ -9442,9 +9442,25 @@ Rule L4D1SurvivorFinalVehicleInsideBoatC14M2TeenGirl
 //--------------------------------------------------------------------------------------------------------------
 // Generic rules to keep track of contexts for all maps (Unless there's a seperate rule for special cases)
 //--------------------------------------------------------------------------------------------------------------
+Rule CampaignStartTeenGirl
+{
+	criteria ConceptTalkIdle IsTeenGirl IsInStartArea IsChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "Talk:1:60,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:20"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroChapter1TeenGirl
+{
+	criteria ConceptTalkIdle IsTeenGirl NotInCombat IsInStartArea IsChapter1 IsNotAlone IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,SaidCXM1Intro:1:0,_auto_SafeRoomStart:2:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule SafeRoomStartTeenGirl
 {
-	criteria ConceptTalkIdle IsTeenGirl IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	criteria ConceptTalkIdle IsTeenGirl IsInStartArea IsNotChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
 	applycontexttoworld
 	Response NoResponse
