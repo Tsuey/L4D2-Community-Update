@@ -1,0 +1,7 @@
+sky
+{
+$hdrcompressedTexture "skybox/sky_l4d_c1_2_hdrrt"
+$nofog 1
+$ignorez 1
+$basetexturetransform "center 0 0 scale 1 2 rotate 0 translate 0 0"
+}
