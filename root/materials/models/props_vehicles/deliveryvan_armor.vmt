@@ -1,0 +1,20 @@
+VertexLitGeneric
+{
+$baseTexture "models\props_vehicles\psds\deliveryvan_armor"
+$bumpmap "effects\flat_normal"
+$phong 1
+$phongexponent 15
+$phongboost 3
+$phongfresnelranges "[0.33 1.4 3]"
+$basemapluminancephongmask 1
+$envmap env_cubemap
+$envmaptint "[ 0.09 0.09 0.09 ]"
+$envmapfresnel 1
+$envmapfresnelminmaxexp "[.1 2 3]"
+$normalmapalphaenvmapmask 1
+$detail "detail/metal_detail_01"
+$detailblendfactor 0.5
+$detailscale 16
+$surfaceprop metal
+$model 1
+}
