@@ -4069,7 +4069,7 @@ Response L4D1SurvivorTauntResponseBiker
 }
 Rule L4D1SurvivorTauntResponseBiker
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	Response L4D1SurvivorTauntResponseBiker
 }
 

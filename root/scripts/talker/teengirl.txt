@@ -3496,7 +3496,7 @@ Response L4D1SurvivorTauntResponseTeenGirl
 }
 Rule L4D1SurvivorTauntResponseTeenGirl
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	Response L4D1SurvivorTauntResponseTeenGirl
 }
 

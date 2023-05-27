@@ -5710,7 +5710,7 @@ Response SurvivorTauntResponseProducer
 }
 Rule SurvivorTauntResponseProducer
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotSpeaking 
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer 
 	Response SurvivorTauntResponseProducer
 }
 

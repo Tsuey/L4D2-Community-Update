@@ -6647,7 +6647,7 @@ Response SurvivorTauntResponseMechanic
 }
 Rule SurvivorTauntResponseMechanic
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response SurvivorTauntResponseMechanic
 }
 

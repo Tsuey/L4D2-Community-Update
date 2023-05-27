@@ -2722,7 +2722,7 @@ Response L4D1SurvivorTauntResponseNamVet
 }
 Rule L4D1SurvivorTauntResponseNamVet
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSpeaking
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	Response L4D1SurvivorTauntResponseNamVet
 }
 

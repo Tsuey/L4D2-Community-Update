@@ -3260,7 +3260,7 @@ Response L4D1SurvivorTauntResponseManager
 }
 Rule L4D1SurvivorTauntResponseManager
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	Response L4D1SurvivorTauntResponseManager
 }
 

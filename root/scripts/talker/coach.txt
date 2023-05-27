@@ -5947,7 +5947,7 @@ Response SurvivorTauntResponseCoach
 }
 Rule SurvivorTauntResponseCoach
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	Response SurvivorTauntResponseCoach
 }
 

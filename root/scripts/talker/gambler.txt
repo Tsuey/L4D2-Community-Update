@@ -6067,7 +6067,7 @@ Response SurvivorTauntResponseGambler
 }
 Rule SurvivorTauntResponseGambler
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response SurvivorTauntResponseGambler
 }
 
