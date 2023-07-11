@@ -33,7 +33,7 @@
 		z_gun_swing_coop_max_penalty 999999999
 		z_gun_swing_coop_min_penalty 999999999
 		z_max_survivor_damage 100
-		z_noise_level_footstop 50
+		z_noise_level_footstep 50
 		z_noise_level_vocalize 75
 		z_tank_autoshotgun_dmg_scale 1
 		z_use_tolerance 0.98
