@@ -12524,8 +12524,7 @@ Response SurvivorPouncedByHunterGambler
 }
 Rule SurvivorPouncedByHunterGambler
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
-	ApplyContext "TalkGambler:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response SurvivorPouncedByHunterGambler
 }
 

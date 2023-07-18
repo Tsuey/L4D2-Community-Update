@@ -8170,8 +8170,7 @@ Response SurvivorPouncedByHunterBiker
 }
 Rule SurvivorPouncedByHunterBiker
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
-	ApplyContext "TalkBiker:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response SurvivorPouncedByHunterBiker
 }
 

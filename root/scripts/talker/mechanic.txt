@@ -13131,8 +13131,7 @@ Response SurvivorPouncedByHunterMechanic
 }
 Rule SurvivorPouncedByHunterMechanic
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	ApplyContext "TalkMechanic:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotSpeaking
 	Response SurvivorPouncedByHunterMechanic
 }
 

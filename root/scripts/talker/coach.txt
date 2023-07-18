@@ -12528,8 +12528,7 @@ Response SurvivorPouncedByHunterCoach
 }
 Rule SurvivorPouncedByHunterCoach
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	ApplyContext "TalkCoach:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotSpeaking
 	Response SurvivorPouncedByHunterCoach
 }
 

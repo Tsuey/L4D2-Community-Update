@@ -6875,8 +6875,7 @@ Response SurvivorPouncedByHunterManager
 }
 Rule SurvivorPouncedByHunterManager
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
-	ApplyContext "TalkManager:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response SurvivorPouncedByHunterManager
 }
 

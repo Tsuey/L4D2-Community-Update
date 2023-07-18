@@ -7468,8 +7468,7 @@ Response SurvivorPouncedByHunterTeenGirl
 }
 Rule SurvivorPouncedByHunterTeenGirl
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
-	ApplyContext "TalkTeenGirl:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotSpeaking
 	Response SurvivorPouncedByHunterTeenGirl
 }
 
