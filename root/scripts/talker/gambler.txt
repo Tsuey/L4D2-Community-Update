@@ -5078,7 +5078,7 @@ Rule SurvivorSpottedBoomerGambler
 
 Rule SurvivorSpottedBoomerAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerGambler
@@ -5110,7 +5110,7 @@ Rule SurvivorSpottedBoomerC1M1Gambler
 
 Rule SurvivorSpottedBoomerAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Gambler
@@ -5148,7 +5148,7 @@ Rule SurvivorSpottedBoomerC1M2Gambler
 
 Rule SurvivorSpottedBoomerAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Gambler
@@ -5197,7 +5197,7 @@ Rule SurvivorSpottedChargerGambler
 
 Rule SurvivorSpottedChargerAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger  IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerGambler
@@ -5226,7 +5226,7 @@ Rule SurvivorSpottedChargerC1M1Gambler
 
 Rule SurvivorSpottedChargerAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerC1M1Gambler
@@ -5252,7 +5252,7 @@ Rule SurvivorSpottedChargerC1M2Gambler
 
 Rule SurvivorSpottedChargerAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowCharger IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowCharger IsNotSurvival
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerC1M1Gambler
@@ -5322,7 +5322,7 @@ Rule SurvivorSpottedHunterGambler
 
 Rule SurvivorSpottedHunterAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterGambler
@@ -5351,7 +5351,7 @@ Rule SurvivorSpottedHunterC1M1Gambler
 
 Rule SurvivorSpottedHunterAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterC1M1Gambler
@@ -5377,7 +5377,7 @@ Rule SurvivorSpottedHunterC1M2Gambler
 
 Rule SurvivorSpottedHunterAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowHunter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowHunter IsNotSurvival
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterC1M1Gambler
@@ -5428,7 +5428,7 @@ Rule SurvivorSpottedJockeyGambler
 
 Rule SurvivorSpottedJockeyAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyGambler
@@ -5456,7 +5456,7 @@ Rule SurvivorSpottedJockeyC1M1Gambler
 
 Rule SurvivorSpottedJockeyAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyC1M1Gambler
@@ -5483,7 +5483,7 @@ Rule SurvivorSpottedJockeyC1M2Gambler
 
 Rule SurvivorSpottedJockeyAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowJockey IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowJockey IsNotSurvival
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyC1M1Gambler
@@ -5545,7 +5545,7 @@ Rule SurvivorSpottedSmokerGambler
 
 Rule SurvivorSpottedSmokerAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerGambler
@@ -5572,7 +5572,7 @@ Rule SurvivorSpottedSmokerC1Gambler
 
 Rule SurvivorSpottedSmokerAlsoC1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated C1M1orC1M2 NoKnowSmoker IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated C1M1orC1M2 NoKnowSmoker IsNotSurvival
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerC1Gambler
@@ -5600,7 +5600,7 @@ Rule SurvivorSpottedSpitterGambler
 
 Rule SurvivorSpottedSpitterAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterGambler
@@ -5628,7 +5628,7 @@ Rule SurvivorSpottedSpitterC1M1Gambler
 
 Rule SurvivorSpottedSpitterAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1M1Gambler
@@ -5654,7 +5654,7 @@ Rule SurvivorSpottedSpitterC1M2Gambler
 
 Rule SurvivorSpottedSpitterAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowSpitter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowSpitter IsNotSurvival
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1M1Gambler

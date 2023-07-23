@@ -2350,7 +2350,7 @@ Rule L4D1SpottedBoomerNamVet
 
 Rule L4D1SpottedBoomerAlsoNamVet
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedBoomerNamVet
@@ -2378,7 +2378,7 @@ Rule L4D1SpottedHunterNamVet
 
 Rule L4D1SpottedHunterAlsoNamVet
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedHunterNamVet
@@ -2407,7 +2407,7 @@ Rule L4D1SpottedSmokerNamVet
 
 Rule L4D1SpottedSmokerAlsoNamVet
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSmokerNamVet
@@ -2449,7 +2449,7 @@ Rule SurvivorSpottedChargerNamVet
 
 Rule SurvivorSpottedChargerAlsoNamVet
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerNamVet
@@ -2477,7 +2477,7 @@ Rule SurvivorSpottedJockeyNamVet
 
 Rule SurvivorSpottedJockeyAlsoNamVet
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyNamVet
@@ -2505,7 +2505,7 @@ Rule SurvivorSpottedSpitterNamVet
 
 Rule SurvivorSpottedSpitterAlsoNamVet
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterNamVet

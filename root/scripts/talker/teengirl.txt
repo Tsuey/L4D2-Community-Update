@@ -3068,7 +3068,7 @@ Rule L4D1SpottedBoomerTeenGirl
 
 Rule L4D1SpottedBoomerAlsoTeenGirl
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedBoomerTeenGirl
@@ -3096,7 +3096,7 @@ Rule L4D1SpottedHunterTeenGirl
 
 Rule L4D1SpottedHunterAlsoTeenGirl
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedHunterTeenGirl
@@ -3124,7 +3124,7 @@ Rule L4D1SpottedSmokerTeenGirl
 
 Rule L4D1SpottedSmokerAlsoTeenGirl
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSmokerTeenGirl
@@ -3152,7 +3152,7 @@ Rule L4D1SpottedChargerTeenGirl
 
 Rule L4D1SpottedChargerAlsoTeenGirl
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedChargerTeenGirl
@@ -3180,7 +3180,7 @@ Rule L4D1SpottedJockeyTeenGirl
 
 Rule L4D1SpottedJockeyAlsoTeenGirl
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedJockeyTeenGirl
@@ -3208,7 +3208,7 @@ Rule L4D1SpottedSpitterTeenGirl
 
 Rule L4D1SpottedSpitterAlsoTeenGirl
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSpitterTeenGirl

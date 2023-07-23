@@ -3638,7 +3638,7 @@ Rule L4D1SpottedBoomerBiker
 
 Rule L4D1SpottedBoomerAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedBoomerBiker
@@ -3666,7 +3666,7 @@ Rule L4D1SpottedHunterBiker
 
 Rule L4D1SpottedHunterAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedHunterBiker
@@ -3692,7 +3692,7 @@ Rule L4D1SpottedCanadianHunterBiker
 
 Rule L4D1SpottedCanadianHunterAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsCrashCourse2 IsNotIncapacitated CanadaBikerHate NotCanadaBikerHatedYet ChanceToFire10Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsCrashCourse2 IsNotIncapacitated CanadaBikerHate NotCanadaBikerHatedYet ChanceToFire10Percent _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30,CanadaBikerHated:1:0"
 	applycontexttoworld
 	Response L4D1SpottedCanadianHunterBiker
@@ -3720,7 +3720,7 @@ Rule L4D1SpottedSmokerBiker
 
 Rule L4D1SpottedSmokerAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSmokerBiker
@@ -3748,7 +3748,7 @@ Rule L4D1SpottedChargerBiker
 
 Rule L4D1SpottedChargerAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedChargerBiker
@@ -3778,7 +3778,7 @@ Rule L4D1SpottedJockeyBiker
 
 Rule L4D1SpottedJockeyAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedJockeyBiker
@@ -3806,7 +3806,7 @@ Rule L4D1SpottedSpitterBiker
 
 Rule L4D1SpottedSpitterAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSpitterBiker

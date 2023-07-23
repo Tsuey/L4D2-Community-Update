@@ -2857,7 +2857,7 @@ Rule L4D1SpottedBoomerManager
 
 Rule L4D1SpottedBoomerAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedBoomerManager
@@ -2885,7 +2885,7 @@ Rule L4D1SpottedHunterManager
 
 Rule L4D1SpottedHunterAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedHunterManager
@@ -2913,7 +2913,7 @@ Rule L4D1SpottedSmokerManager
 
 Rule L4D1SpottedSmokerAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSmokerManager
@@ -2941,7 +2941,7 @@ Rule L4D1SpottedChargerManager
 
 Rule L4D1SpottedChargerAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedChargerManager
@@ -2969,7 +2969,7 @@ Rule L4D1SpottedJockeyManager
 
 Rule L4D1SpottedJockeyAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedJockeyManager
@@ -2997,7 +2997,7 @@ Rule L4D1SpottedSpitterManager
 
 Rule L4D1SpottedSpitterAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSpitterManager

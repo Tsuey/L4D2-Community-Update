@@ -4764,7 +4764,7 @@ Rule SurvivorSpottedBoomerProducer
 
 Rule SurvivorSpottedBoomerAlsoProducer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerProducer
@@ -4796,7 +4796,7 @@ Rule SurvivorSpottedBoomerC1M1Producer
 
 Rule SurvivorSpottedBoomerAlsoC1M1Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Producer
@@ -4822,7 +4822,7 @@ Rule SurvivorSpottedBoomerC1M2Producer
 
 Rule SurvivorSpottedBoomerAlsoC1M2Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Producer
@@ -4870,7 +4870,7 @@ Rule SurvivorSpottedChargerProducer
 
 Rule SurvivorSpottedChargerAlsoProducer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerProducer
@@ -4898,7 +4898,7 @@ Rule SurvivorSpottedChargerC1M1Producer
 
 Rule SurvivorSpottedChargerAlsoC1M1Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerC1M1Producer
@@ -4924,7 +4924,7 @@ Rule SurvivorSpottedChargerC1M2Producer
 
 Rule SurvivorSpottedChargerAlsoC1M2Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowCharger IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowCharger IsNotSurvival
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerC1M1Producer
@@ -4991,7 +4991,7 @@ Rule SurvivorSpottedHunterProducer
 
 Rule SurvivorSpottedHunterAlsoProducer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterProducer
@@ -5021,7 +5021,7 @@ Rule SurvivorSpottedHunterC1M1Producer
 
 Rule SurvivorSpottedHunterAlsoC1M1Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterC1M1Producer
@@ -5049,7 +5049,7 @@ Rule SurvivorSpottedHunterC1M2Producer
 
 Rule SurvivorSpottedHunterAlsoC1M2Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowHunter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowHunter IsNotSurvival
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterC1M1Producer
@@ -5100,7 +5100,7 @@ Rule SurvivorSpottedJockeyProducer
 
 Rule SurvivorSpottedJockeyAlsoProducer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyProducer
@@ -5129,7 +5129,7 @@ Rule SurvivorSpottedJockeyC1M1Producer
 
 Rule SurvivorSpottedJockeyAlsoC1M1Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyC1M1Producer
@@ -5155,7 +5155,7 @@ Rule SurvivorSpottedJockeyC1M2Producer
 
 Rule SurvivorSpottedJockeyAlsoC1M2Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowJockey IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowJockey IsNotSurvival
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyC1M1Producer
@@ -5209,7 +5209,7 @@ Rule SurvivorSpottedSmokerProducer
 
 Rule SurvivorSpottedSmokerAlsoProducer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerProducer
@@ -5240,7 +5240,7 @@ Rule SurvivorSpottedSmokerC1M1Producer
 
 Rule SurvivorSpottedSmokerAlsoC1M1Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerC1M1Producer
@@ -5267,7 +5267,7 @@ Rule SurvivorSpottedSmokerC1M2Producer
 
 Rule SurvivorSpottedSmokerAlsoC1M2Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowSmoker IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowSmoker IsNotSurvival
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerC1M1Producer
@@ -5309,7 +5309,7 @@ Response SurvivorSpottedSpitterC1M1Producer
 }
 Rule SurvivorSpottedSpitterC1M1Producer
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel IsNotSpeakingWeight0
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel IsNotSpeakingWeight0
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1M1Producer
@@ -5317,7 +5317,7 @@ Rule SurvivorSpottedSpitterC1M1Producer
 
 Rule SurvivorSpottedSpitterAlsoC1M1Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1M1Producer
@@ -5343,7 +5343,7 @@ Rule SurvivorSpottedSpitterC1M2Producer
 
 Rule SurvivorSpottedSpitterAlsoC1M2Producer
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowSpitter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated ismap_c1m2_streets NoKnowSpitter IsNotSurvival
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1M1Producer

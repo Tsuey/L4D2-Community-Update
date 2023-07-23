@@ -5736,7 +5736,7 @@ Rule SurvivorSpottedBoomerMechanic
 
 Rule SurvivorSpottedBoomerAlsoMechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30,EllisAlsoWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerMechanic
@@ -5765,7 +5765,7 @@ Rule SurvivorSpottedBoomerC1M1Mechanic
 
 Rule SurvivorSpottedBoomerAlsoC1M1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Mechanic
@@ -5791,7 +5791,7 @@ Rule SurvivorSpottedBoomerC1M2Mechanic
 
 Rule SurvivorSpottedBoomerAlsoC1M2Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Mechanic
@@ -5840,7 +5840,7 @@ Rule SurvivorSpottedChargerMechanic
 
 Rule SurvivorSpottedChargerAlsoMechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30,EllisAlsoWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerMechanic
@@ -5868,7 +5868,7 @@ Rule SurvivorSpottedChargerC1Mechanic
 
 Rule SurvivorSpottedChargerAlsoC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowCharger IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowCharger IsNotSurvival
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerC1Mechanic
@@ -5946,7 +5946,7 @@ Rule SurvivorSpottedHunterMechanic
 
 Rule SurvivorSpottedHunterAlsoMechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30,EllisAlsoWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterMechanic
@@ -5974,7 +5974,7 @@ Rule SurvivorSpottedHunterC1Mechanic
 
 Rule SurvivorSpottedHunterAlsoC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowHunter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowHunter IsNotSurvival
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterC1Mechanic
@@ -6028,7 +6028,7 @@ Rule SurvivorSpottedJockeyMechanic
 
 Rule SurvivorSpottedJockeyAlsoMechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30,EllisAlsoWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyMechanic
@@ -6056,7 +6056,7 @@ Rule SurvivorSpottedJockeyC1Mechanic
 
 Rule SurvivorSpottedJockeyAlsoC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowJockey IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowJockey IsNotSurvival
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyC1Mechanic
@@ -6130,7 +6130,7 @@ Rule SurvivorSpottedSmokerMechanic
 
 Rule SurvivorSpottedSmokerAlsoMechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30,EllisAlsoWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerMechanic
@@ -6160,7 +6160,7 @@ Rule SurvivorSpottedSmokerC1Mechanic
 
 Rule SurvivorSpottedSmokerAlsoC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowSmoker IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowSmoker IsNotSurvival
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerC1Mechanic
@@ -6189,7 +6189,7 @@ Rule SurvivorSpottedSpitterMechanic
 
 Rule SurvivorSpottedSpitterAlsoMechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30,EllisAlsoWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterMechanic
@@ -6219,7 +6219,7 @@ Rule SurvivorSpottedSpitterC1Mechanic
 
 Rule SurvivorSpottedSpitterAlsoC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowSpitter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated C1M1orC1M2 NoKnowSpitter IsNotSurvival
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1Mechanic
