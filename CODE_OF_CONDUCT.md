@@ -42,9 +42,9 @@ Project maintainers are responsible for clarifying the standards of acceptable b
 
 ## Contact
 
-- **Rayman1103** (Discord: `Rayman1103#9557`)
-- **shqke** (Discord: `shqke#2172`)
-- **Tsuey** (Discord: `G-Force#7777`)
+- **Rayman1103** (Discord: `rayman1103`)
+- **shqke** (Discord: `shqke`)
+- **Tsuey** (Discord: `l4d3`)
 
 If reporting vulnerabilities [directly to Valve](https://github.com/Tsuey/L4D2-Community-Update/security/policy) feels like overkill, feel free to contact us instead.
 
