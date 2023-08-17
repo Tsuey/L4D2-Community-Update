@@ -17,8 +17,8 @@ WeaponData
 	"ResponseRulesName"		"Rifle_AK47"
 
 	// particle muzzle flash effect to play when fired
-	"MuzzleFlashEffect_1stPerson"		"weapon_muzzle_flash_smg_FP"
-	"MuzzleFlashEffect_3rdPerson"		"weapon_muzzle_flash_smg"
+	"MuzzleFlashEffect_1stPerson"		"weapon_muzzle_flash_assaultrifle_FP"
+	"MuzzleFlashEffect_3rdPerson"		"weapon_muzzle_flash_assaultrifle"
 
 	// model for the shell casing to eject when we fire bullets
 	"EjectBrassEffect"		"weapon_shell_casing_rifle"
