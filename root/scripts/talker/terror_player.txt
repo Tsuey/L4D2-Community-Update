@@ -1895,8 +1895,8 @@ criterion "ConceptEllisInterrupt"   "Concept" "EllisInterrupt"	  required
 criterion "Conceptopen_safedoor"   "Concept" "open_safedoor"	  required  //Trigger_multiple just outside starting safe doors (needs to be placed manually in maps)
 
 //Chapter tracker
-Criterion "IsChapter1" "worldChapter" "0" required
-Criterion "IsNotChapter1" "worldChapter" "!=0" required
+Criterion "IsChapter1" "chapter" "0" required
+Criterion "IsNotChapter1" "chapter" "!=0" required
 
 //Map related criterias
 
