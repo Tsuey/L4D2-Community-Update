@@ -1,0 +1,650 @@
+//--------------------------------------------------------------------------------------------------------------
+// Whitaker Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------
+// AutoConvo
+//--------------------------------------------------------------------------------------------------------------
+Response NPCC1M2WhitakerPutCola
+{
+	scene "scenes/npcs/Whitaker_MissionCompleted01.vcd"  //Put the cola in the slot.
+	scene "scenes/npcs/Whitaker_MissionCompleted02.vcd"  //Put the cola in the slot.
+	scene "scenes/npcs/Whitaker_MissionCompleted03.vcd"  //You got the cola. Put it in the slot.
+	scene "scenes/npcs/Whitaker_MissionCompleted04.vcd"  //There's my cola. Quick, put it in the slot.
+	scene "scenes/npcs/Whitaker_MissionCompleted05.vcd"  //Yeah, put it in the damn slot.
+	scene "scenes/npcs/Whitaker_MissionCompleted13.vcd"  //Hey, put the cola in the slot.
+	scene "scenes/npcs/Whitaker_MissionCompleted14.vcd"  //Put the cola in the slot, will ya?
+	scene "scenes/npcs/Whitaker_MissionCompleted15.vcd"  //Okay, that's my cola. Yes, yes. Put it in the slot!
+}
+Rule NPCC1M2WhitakerPutCola
+{
+	criteria Conceptwhitakerputcola
+	Response NPCC1M2WhitakerPutCola
+}
+
+Response C1M2ColaInDoorWhitaker
+{
+	scene "scenes/npcs/Whitaker_MissionCompleted09.vcd" fire tanker_destroy_relay Trigger 3.5 //I'll take you at your word that ain't diet. Cover your ears. This might get loud.
+	scene "scenes/npcs/Whitaker_MissionCompleted10.vcd" fire tanker_destroy_relay Trigger 4.0 //Thank you, generous strangers. Now, let me get rid of that barricade for you.
+	scene "scenes/npcs/Whitaker_MissionCompleted06.vcd" fire tanker_destroy_relay Trigger 2.5 //Thank you kindly. And to prove I'm a man of my word...
+	scene "scenes/npcs/Whitaker_MissionCompleted07.vcd" fire tanker_destroy_relay Trigger 3.0 //Thank you for that! Now, turn around. Y'all ever see a tanker explode?
+	scene "scenes/npcs/Whitaker_MissionCompleted08.vcd" fire tanker_destroy_relay Trigger 6.0 //Just a six-pack? I'll go through that in a day! Ahh, hell. A deal's a deal. Here y'are...
+	scene "scenes/npcs/Whitaker_MissionCompleted11.vcd" fire tanker_destroy_relay Trigger 9.5 //Much obliged. Now go screw yourselves, I ain't helpin'. [laughs] I just wanted to see the looks on your faces. Here you go.
+	scene "scenes/npcs/Whitaker_MissionCompleted12.vcd" fire tanker_destroy_relay Trigger 11.5 //Much obliged. Now go screw yourselves, I ain't helpin'. [laughs] I just wanted to see the looks on your faces. Here you go.
+}
+Rule C1M2ColaInDoorWhitaker
+{
+	criteria ConceptC1M2ColaInDoor IsNotSaidC1M2ColaInDoor ColaDelivered IsNotVersus AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "SaidC1M2ColaInDoor:1:0"
+	applycontexttoworld
+	Response C1M2ColaInDoorWhitaker
+}
+
+Response C1M2ColaInDoorVersusWhitaker
+{
+	scene "scenes/npcs/Orator_Blank.vcd" fire tanker_destroy_relay Trigger 0.1 //
+}
+Rule C1M2ColaInDoorVersusWhitaker
+{
+	criteria ConceptC1M2ColaInDoor IsNotSaidC1M2ColaInDoor ColaDelivered IsVersus AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "SaidC1M2ColaInDoor:1:0"
+	applycontexttoworld
+	Response C1M2ColaInDoorVersusWhitaker
+}
+
+Response C1M2ColaDeliveryInProgress
+{
+	scene "scenes/npcs/Whitaker_DefendChatter06.vcd"  //Back, you creatures!
+	scene "scenes/npcs/Whitaker_DefendChatter08.vcd"  //Remember the cola, leave a man behind if you must, but get the cola!!
+	scene "scenes/npcs/Whitaker_DefendChatter09.vcd"  //Sacrifice yourselves if you have to the cola is that important!
+	scene "scenes/npcs/Whitaker_DefendChatter17.vcd"  //That's a lot of zombies. If they kill you, I don't need the cola that bad.
+	scene "scenes/npcs/Whitaker_DefendChatter18.vcd"  //Back, you sons of bitches! Let 'em through!
+}
+Rule C1M2ColaDeliveryInProgress
+{
+	criteria ConceptC1M2WhitakerErrandInProgress
+	Response C1M2ColaDeliveryInProgress
+}
+
+Response C1M2NickDown
+{
+	scene "scenes/npcs/Whitaker_DefendChatter12.vcd"  //Leave white-suit behind, just get the cola!
+}
+Rule C1M2NickDown
+{
+	criteria ConceptC1M2SurvivorDown IsWhitaker FromIsGambler IsTalk
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2NickDown
+}
+
+Response C1M2EllisDown
+{
+	scene "scenes/npcs/Whitaker_DefendChatter11.vcd"  //Leave the little fella. Just get the cola!
+}
+Rule C1M2EllisDown
+{
+	criteria ConceptC1M2SurvivorDown IsWhitaker FromIsMechanic IsTalk
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2EllisDown
+}
+
+Response C1M2CoachDown
+{
+	scene "scenes/npcs/Whitaker_DefendChatter13.vcd"  //Forget the fat man, just get the cola!
+}
+Rule C1M2CoachDown
+{
+	criteria ConceptC1M2SurvivorDown IsWhitaker FromIsCoach IsTalk
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2CoachDown
+}
+
+Response C1M2RochelleDown
+{
+	scene "scenes/npcs/Whitaker_DefendChatter10.vcd"  //Leave the girl behind, just get the cola!
+}
+Rule C1M2RochelleDown
+{
+	criteria ConceptC1M2SurvivorDown IsWhitaker FromIsProducer IsTalk
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2RochelleDown
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// C1M2
+//--------------------------------------------------------------------------------------------------------------
+Response C1M2GoodLuckGettingToTheMall
+{
+	scene "scenes/npcs/Whitaker_MissionCompleted17.vcd"  //Good luck now!
+	scene "scenes/npcs/Whitaker_MissionCompleted20.vcd"  //Good luck to you, gang.
+	scene "scenes/npcs/Whitaker_MissionCompleted21.vcd"  //God watch over you.
+	scene "scenes/npcs/Whitaker_MissionCompleted22.vcd"  //Good luck gettin' to that mall.
+	scene "scenes/npcs/Whitaker_MissionCompleted23.vcd"  //Good luck gettin' to that mall.
+}
+Rule C1M2GoodLuckGettingToTheMall
+{
+	criteria ConceptC1M2GoodLuckGettingToTheMall AutoIsNotScavenge AutoIsNotSurvival
+	Response C1M2GoodLuckGettingToTheMall
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// FirstOutside
+//--------------------------------------------------------------------------------------------------------------
+Response C1M2FirstOutsideStartCoopWhit
+{
+	scene "scenes/npcs/Whitaker_WayBlockedLongerA01.vcd" then orator C1M2FirstOutside2 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerB01.vcd" then orator C1M2FirstOutside2 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlocked02.vcd" then any C1M2FirstOutsideResponse foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerK01.vcd" then orator C1M2FirstOutside8 foo:0 0.01 //
+}
+Rule C1M2FirstOutsideStartCoopWhit
+{
+	criteria ConceptC1M2FirstOutside IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff IsNotVersus
+	ApplyContext "Talk:1:7.713,C1M2FirstOutside:1:0"
+	applycontexttoworld
+	Response C1M2FirstOutsideStartCoopWhit
+}
+
+Response C1M2FirstOutsideStartVersusWhit
+{
+	scene "scenes/npcs/Whitaker_WayBlockedLongerK01.vcd" then orator C1M2FirstOutside8 foo:0 0.01 //
+}
+Rule C1M2FirstOutsideStartVersusWhit
+{
+	criteria ConceptC1M2FirstOutside IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff IsVersus
+	ApplyContext "Talk:1:7.713,C1M2FirstOutside:1:0"
+	applycontexttoworld
+	Response C1M2FirstOutsideStartVersusWhit
+}
+
+Response C1M2FirstOutside2Whit
+{
+	scene "scenes/npcs/Whitaker_WayBlockedLongerA02.vcd"  then orator C1M2FirstOutside3 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerB02.vcd"  then orator C1M2FirstOutside4 foo:0 0.01 //
+}
+Rule C1M2FirstOutside2Whit
+{
+	criteria ConceptC1M2FirstOutside2 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	ApplyContext "Talk:1:8"
+	applycontexttoworld
+	Response C1M2FirstOutside2Whit
+}
+
+Response C1M2FirstOutside3Whit
+{
+	scene "scenes/npcs/Whitaker_WayBlockedLongerA03.vcd"  then orator C1M2FirstOutside4 foo:0 0.01 //
+}
+Rule C1M2FirstOutside3Whit
+{
+	criteria ConceptC1M2FirstOutside3 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	ApplyContext "Talk:1:5"
+	applycontexttoworld
+	Response C1M2FirstOutside3Whit
+}
+
+Response C1M2FirstOutside4Whit
+{
+	scene "scenes/npcs/Whitaker_WayBlockedLongerA04.vcd"  then orator C1M2FirstOutside5 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerB03.vcd"  then orator C1M2FirstOutside5 foo:0 0.01 //
+}
+Rule C1M2FirstOutside4Whit
+{
+	criteria ConceptC1M2FirstOutside4 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	ApplyContext "Talk:1:3"
+	applycontexttoworld
+	Response C1M2FirstOutside4Whit
+}
+
+Response C1M2FirstOutside5Whit
+{
+	scene "scenes/npcs/Whitaker_WayBlocked03.vcd"  then any C1M2FirstOutsideResponse foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerC01.vcd"  then orator C1M2FirstOutside6 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerE01.vcd"  then orator C1M2FirstOutside6 foo:0 0.01 //
+}
+Rule C1M2FirstOutside5Whit
+{
+	criteria ConceptC1M2FirstOutside5 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	ApplyContext "Talk:1:15"
+	applycontexttoworld
+	Response C1M2FirstOutside5Whit
+}
+
+Response C1M2FirstOutside6Whit
+{
+	scene "scenes/npcs/Whitaker_WayBlockedLongerE02.vcd"  then orator C1M2FirstOutside7 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerC02.vcd"  then orator C1M2FirstOutside7 foo:0 0.01 //
+}
+Rule C1M2FirstOutside6Whit
+{
+	criteria ConceptC1M2FirstOutside6 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2FirstOutside6Whit
+}
+
+Response C1M2FirstOutside7Whit
+{
+	scene "scenes/npcs/Whitaker_WayBlockedLongerF01.vcd"  then any C1M2FirstOutsideResponse foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerG01.vcd"  then any C1M2FirstOutsideResponse foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerH01.vcd"  then any C1M2FirstOutsideResponse foo:0 0.01 //
+}
+Rule C1M2FirstOutside7Whit
+{
+	criteria ConceptC1M2FirstOutside7 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	ApplyContext "Talk:1:6"
+	applycontexttoworld
+	Response C1M2FirstOutside7Whit
+}
+
+Response C1M2FirstOutside8Whit
+{
+	sequential
+	norepeat
+	scene "scenes/npcs/Whitaker_WayBlockedLongerK02.vcd"  then orator C1M2FirstOutside8 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerK03.vcd"  then any C1M2FirstOutsideResponse foo:0 0.01 //
+}
+Rule C1M2FirstOutside8Whit
+{
+	criteria ConceptC1M2FirstOutside8 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2FirstOutside8Whit
+}
+
+Response C1M2FirstOutsideResponse1Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation03.vcd"  then orator Whitaker.Nags foo:0 10 //I am a man of my word, sir. Procure my colas and I'll clear a path to the mall for you. The guns are on the house.
+	scene "scenes/npcs/Whitaker_Conversation04.vcd"  then orator Whitaker.Nags foo:0 10 //Procure my colas and my help is guaranteed, sir. Consider the guns a generous donation to the cause. 
+	scene "scenes/npcs/Whitaker_Conversation08.vcd"  then orator Whitaker.Nags foo:0 10 //On my word as a gentleman I will do no screwing, sir. I'd come down there and shake on it, but I already welded the door shut.
+}
+Rule C1M2FirstOutsideResponse1Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse1 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse1Whitaker
+}
+
+Response C1M2FirstOutsideResponse2Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation12.vcd"  then orator Whitaker.Nags foo:0 10 //If they can be of service to you in your endeavor, please keep them.
+}
+Rule C1M2FirstOutsideResponse2Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse2 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse2Whitaker
+}
+
+Response C1M2FirstOutsideResponse3Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation16.vcd"  then from C1M2FirstOutsideResponse3a foo:0 0.1 //Those are my terms, sir.
+}
+Rule C1M2FirstOutsideResponse3Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse3 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse3Whitaker
+}
+
+Response C1M2FirstOutsideResponse4Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation13.vcd"  then orator Whitaker.Nags foo:0 10 //Only your promise that you'll put them to good use.
+	scene "scenes/npcs/Whitaker_Conversation14.vcd"  then orator Whitaker.Nags foo:0 10 //Only your promise that you'll put them to good use. And, of course, the colas.
+}
+Rule C1M2FirstOutsideResponse4Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse4 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse4Whitaker
+}
+
+Response C1M2FirstOutsideResponse5Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation06.vcd"  then orator Whitaker.Nags foo:0 10 //I been on this world sixty years, ma'am, and I've weaseled nothing from nobody. You got my word as a gentleman.
+	scene "scenes/npcs/Whitaker_Conversation05.vcd"  then orator Whitaker.Nags foo:0 10 //I'm not a man to weasel out of a deal. I'd shake on it. But... There's no way in hell I'm going back down there.
+	scene "scenes/npcs/Whitaker_Conversation07.vcd"  then orator Whitaker.Nags foo:0 10 //I'm a man of my word, ma'am. You got my word on that.
+}
+Rule C1M2FirstOutsideResponse5Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse5 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse5Whitaker
+}
+
+Response C1M2FirstOutsideResponse6Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation19.vcd"  then orator Whitaker.Nags foo:0 10 //I love a woman who appreciates the subtle perfection of a well-made firearm.
+}
+Rule C1M2FirstOutsideResponse6Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse6 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse6Whitaker
+}
+
+Response C1M2FirstOutsideResponse7Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation09.vcd"  then any C1M2FirstOutsideResponse8a foo:0 0 //Cola, ma'am. For my cola and nuts.
+}
+Rule C1M2FirstOutsideResponse7Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse7 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse7Whitaker
+}
+
+Response C1M2FirstOutsideResponse8bWhitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation11.vcd"  then gambler C1M2FirstOutsideResponse8a foo:0 0 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerD01.vcd"  then orator C1M2FirstOutsideResponse8c foo:0 0 //
+}
+Rule C1M2FirstOutsideResponse8bWhitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse8b IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse8bWhitaker
+}
+
+Response C1M2FirstOutsideResponse8cWhitaker
+{
+	sequential
+	norepeat
+	scene "scenes/npcs/Whitaker_WayBlockedLongerJ01.vcd"  then orator C1M2FirstOutsideResponse8c foo:0 0 //
+	scene "scenes/npcs/Whitaker_WayBlockedLongerJ02.vcd"  then orator Whitaker.Nags foo:0 10 //
+}
+Rule C1M2FirstOutsideResponse8cWhitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse8c IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse8cWhitaker
+}
+
+Response C1M2FirstOutsideResponse8dWhitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation10.vcd"  then Whitaker.Nags foo:0 10 //And how fortuitous that we do, or else you would have nothing to bargin with. And no way to the mall.
+}
+Rule C1M2FirstOutsideResponse8dWhitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse8d IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse8dWhitaker
+}
+
+Response C1M2FirstOutsideResponse8Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation15.vcd"  then orator Whitaker.Nags foo:0 10 //No, thank you, ma'am. I already have five resturant-sized boxes of em up here.
+}
+Rule C1M2FirstOutsideResponse8Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse8 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse8Whitaker
+}
+
+Response C1M2FirstOutsideResponse9Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation04.vcd"  then orator Whitaker.Nags foo:0 10 //Procure my colas and my help is guaranteed, sir. Consider the guns a generous donation to the cause. 
+}
+Rule C1M2FirstOutsideResponse9Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse9 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse9Whitaker
+}
+
+Response C1M2FirstOutsideResponse10Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation01.vcd"  then orator Whitaker.Nags foo:0 10 //You could try. I own a LOT of guns, son.
+}
+Rule C1M2FirstOutsideResponse10Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse10 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse10Whitaker
+}
+
+Response C1M2FirstOutsideResponse11Whitaker
+{
+	scene "scenes/npcs/Whitaker_Conversation02.vcd"  then orator Whitaker.Nags foo:0 10 //Not only will I help you get to the mall, I'll even throw in the guns you stole from me, free of charge.
+}
+Rule C1M2FirstOutsideResponse11Whitaker
+{
+	criteria ConceptC1M2FirstOutsideResponse11 IsWhitaker AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2AlarmSetoff
+	Response C1M2FirstOutsideResponse11Whitaker
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// GunRoomDoor
+//--------------------------------------------------------------------------------------------------------------
+Response C1M2GunRoomDoorCoopWhit
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairs01.vcd" fire relay_gunshop_door Trigger 6.0 then producer C1M2GunRoomDoorResponseGod foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairs02.vcd" fire relay_gunshop_door Trigger 6.0 then any C1M2GunRoomDoorResponseGratitude foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairs03.vcd" fire relay_gunshop_door Trigger 3.0 then producer C1M2GunRoomDoorResponseGod foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerA01.vcd"  then orator C1M2GunRoomDoorABStart foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerB01.vcd"  then orator C1M2GunRoomDoorABStart foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerC01.vcd"  then orator C1M2GunRoomDoorCStart foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD01.vcd"  then orator C1M2GunRoomDoorDStart foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorCoopWhit
+{
+	criteria ConceptC1M2GunRoomDoor AutoIsNotScavenge AutoIsNotSurvival PanicEventDS IsWhitaker _auto_NotButton1 IsNotSaidC1M2FirstOutside IsNotVersus
+	ApplyContext "Talk:1:13,_auto_Button1:1:0"
+	applycontexttoworld
+	Response C1M2GunRoomDoorCoopWhit
+}
+
+Response C1M2GunRoomDoorVersusWhit
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairs03.vcd" fire relay_gunshop_door Trigger 3.0 then producer C1M2GunRoomDoorResponseGod foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorVersusWhit
+{
+	criteria ConceptC1M2GunRoomDoor AutoIsNotScavenge AutoIsNotSurvival PanicEventDS IsWhitaker _auto_NotButton1 IsNotSaidC1M2FirstOutside IsVersus
+	ApplyContext "Talk:1:13,_auto_Button1:1:0"
+	applycontexttoworld
+	Response C1M2GunRoomDoorVersusWhit
+}
+
+Response C1M2GunRoomDoorABStartWhitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerA02.vcd"  then orator C1M2GunRoomDoorAEnd1 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerB02.vcd"  then orator C1M2GunRoomDoorBEnd1 foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorABStartWhitaker
+{
+	criteria ConceptC1M2GunRoomDoorABStart IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:7"
+	applycontexttoworld
+	Response C1M2GunRoomDoorABStartWhitaker
+}
+
+Response C1M2GunRoomDoorAEnd1Whitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerA03.vcd"  then orator C1M2GunRoomDoorABEnd2 foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorAEnd1Whitaker
+{
+	criteria ConceptC1M2GunRoomDoorAEnd1 IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:7"
+	applycontexttoworld
+	Response C1M2GunRoomDoorAEnd1Whitaker
+}
+
+Response C1M2GunRoomDoorBEnd1Whitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerA03.vcd"  then orator C1M2GunRoomDoorABEnd2 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerB03.vcd" fire relay_gunfire Trigger 4.38 then orator C1M2GunRoomDoorBInterrupt foo:0 1.5 //
+}
+Rule C1M2GunRoomDoorBEnd1Whitaker
+{
+	criteria ConceptC1M2GunRoomDoorBEnd1 IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:7"
+	applycontexttoworld
+	Response C1M2GunRoomDoorBEnd1Whitaker
+}
+
+Response C1M2GunRoomDoorBInterruptWhitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerB04.vcd"  then orator C1M2GunRoomDoorBResume foo:0 1.5 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD07.vcd"  then orator C1M2GunRoomDoorBResume foo:0 1.5 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD04.vcd"  then orator C1M2GunRoomDoorBResume foo:0 1.5 //
+}
+Rule C1M2GunRoomDoorBInterruptWhitaker
+{
+	criteria ConceptC1M2GunRoomDoorBInterrupt IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:5"
+	applycontexttoworld
+	Response C1M2GunRoomDoorBInterruptWhitaker
+}
+
+Response C1M2GunRoomDoorBResumeWhitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerB05.vcd"  then orator C1M2GunRoomDoorABEnd2 foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorBResumeWhitaker
+{
+	criteria ConceptC1M2GunRoomDoorBResume IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2GunRoomDoorBResumeWhitaker
+}
+
+Response C1M2GunRoomDoorABEnd2Whitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerA04.vcd" fire relay_gunshop_door Trigger 1.0 then producer C1M2GunRoomDoorResponseGod foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerB06.vcd" fire relay_gunshop_door Trigger 1.0 then producer C1M2GunRoomDoorResponseGod foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorABEnd2Whitaker
+{
+	criteria ConceptC1M2GunRoomDoorABEnd2 IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2GunRoomDoorABEnd2Whitaker
+}
+
+Response C1M2GunRoomDoorDStartWhitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD02.vcd"  then orator C1M2GunRoomDoorCStart foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorDStartWhitaker
+{
+	criteria ConceptC1M2GunRoomDoorDStart IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:8"
+	applycontexttoworld
+	Response C1M2GunRoomDoorDStartWhitaker
+}
+
+Response C1M2GunRoomDoorCStartWhitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerC02.vcd"  then orator C1M2GunRoomDoorCDEnd1 foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD03.vcd" fire relay_gunfire Trigger 2.4 then orator C1M2GunRoomDoorCDInterrupt foo:0 1.5 //
+}
+Rule C1M2GunRoomDoorCStartWhitaker
+{
+	criteria ConceptC1M2GunRoomDoorCStart IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:4"
+	applycontexttoworld
+	Response C1M2GunRoomDoorCStartWhitaker
+}
+
+Response C1M2GunRoomDoorCDInterruptWhitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerB04.vcd"  then orator C1M2GunRoomDoorDResume foo:0 1.5 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD04.vcd"  then orator C1M2GunRoomDoorDResume foo:0 1.5 //
+}
+Rule C1M2GunRoomDoorCDInterruptWhitaker
+{
+	criteria ConceptC1M2GunRoomDoorCDInterrupt IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:5"
+	applycontexttoworld
+	Response C1M2GunRoomDoorCDInterruptWhitaker
+}
+
+Response C1M2GunRoomDoorDResumeWhitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD05.vcd"  then orator C1M2GunRoomDoorCDEnd1 foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorDResumeWhitaker
+{
+	criteria ConceptC1M2GunRoomDoorDResume IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:3"
+	applycontexttoworld
+	Response C1M2GunRoomDoorDResumeWhitaker
+}
+
+Response C1M2GunRoomDoorCDEnd1Whitaker
+{
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerC03.vcd" fire relay_gunshop_door Trigger 3.0 then any C1M2GunRoomDoorResponseGod foo:0 0.01 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD06.vcd" fire relay_gunfire Trigger 5.02 then orator C1M2GunRoomDoorCDEnd2 foo:0 1.5 //
+}
+Rule C1M2GunRoomDoorCDEnd1Whitaker
+{
+	criteria ConceptC1M2GunRoomDoorCDEnd1 IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:5.5"
+	applycontexttoworld
+	Response C1M2GunRoomDoorCDEnd1Whitaker
+}
+
+Response C1M2GunRoomDoorCDEnd2Whitaker
+{
+	sequential
+	norepeat
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD07.vcd"  then orator C1M2GunRoomDoorCDEnd2 foo:0 1.5 //
+	scene "scenes/npcs/Whitaker_ComeUpStairsLongerD08.vcd" fire relay_gunshop_door Trigger 1.0 then producer C1M2GunRoomDoorResponseGod foo:0 0.01 //
+}
+Rule C1M2GunRoomDoorCDEnd2Whitaker
+{
+	criteria ConceptC1M2GunRoomDoorCDEnd2 IsWhitaker FromIsAnOrator AutoIsNotScavenge AutoIsNotSurvival IsNotSaidC1M2FirstOutside
+	ApplyContext "Talk:1:6"
+	applycontexttoworld
+	Response C1M2GunRoomDoorCDEnd2Whitaker
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// The alarm goes off...
+//--------------------------------------------------------------------------------------------------------------
+
+Response C1M2AlarmDoorStore_Doors
+{
+	scene "scenes/npcs/Orator_Blank.vcd" then Any C1M2AlarmDoor2 foo:0 0.1 // [BLANK]	
+}
+Rule C1M2AlarmDoorStore_Doors
+{
+	criteria ConceptC1M2AlarmDoor IsWhitaker IsNotSaidC1M2AlarmSetoff
+	ApplyContext "C1M2AlarmSetOff:1:0,WarnMegaMob:1:300,SaidSpecialWarn:1:30"
+	applycontexttoworld
+	Response C1M2AlarmDoorStore_Doors
+}
+
+Response WorldC1M2StoreAlarm
+{
+	scene "scenes/npcs/Whitaker_DefendChatter01.vcd"  //There's the alarm, now go!
+	scene "scenes/npcs/Whitaker_DefendChatter02.vcd"  //There's the alarm, now move!
+	scene "scenes/npcs/Whitaker_DefendChatter14.vcd"  //Here they come!
+	scene "scenes/npcs/Whitaker_DefendChatter19.vcd"  //Aw hell, I regret this agreement already. What a waste of guns.
+	scene "scenes/npcs/Whitaker_DefendChatter15.vcd"  //Aw, hell. Here they come! It was nice knowing you!
+	scene "scenes/npcs/Whitaker_DefendChatter16.vcd"  //Aw, hell. Here they come! It was nice knowing you!
+}
+Rule WorldC1M2StoreAlarm
+{
+	criteria ConceptC1M2StoreAlarm IsWhitaker
+	Response WorldC1M2StoreAlarm
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Vocalizer Convo (AUTO)
+//--------------------------------------------------------------------------------------------------------------
+Response Whitaker.NagsWhitaker
+{
+	scene "scenes/npcs/Whitaker_Nags01.vcd"  //I didn't realize you'd need this much preparation. Can I bring y'all a pillow and blankets while you sleep on it?
+	scene "scenes/npcs/Whitaker_Nags02.vcd"  //You folks best hurry before I change my mind.
+	scene "scenes/npcs/Whitaker_Nags03.vcd"  //Y'all don't get moving, I might just rescind my generous offer. I got a hell of a view up here to watch y'all die.
+	scene "scenes/npcs/Whitaker_Nags04.vcd"  //Perhaps I should have mentioned this bein' a limited time offer.
+	scene "scenes/npcs/Whitaker_Nags05.vcd"  //You folks wanna get a move on?
+	scene "scenes/npcs/Whitaker_Nags06.vcd"  //I'm getting mighty thirsty up here...
+	scene "scenes/npcs/Whitaker_Nags07.vcd"  //Any time now...
+	scene "scenes/npcs/Whitaker_Nags08.vcd"  //Throat... so dry... can't think straight... must... rescind offer... to these lazy people...
+	scene "scenes/npcs/Whitaker_WayBlockedLongerI01.vcd"  //I'd be able to get you to the mall if I wasn't so parched from thirst.
+}
+Rule Whitaker.NagsWhitaker
+{
+	criteria ConceptWhitaker.Nags IsWhitaker IsNotSaidC1M2AlarmSetoff
+	Response Whitaker.NagsWhitaker
+}
+

@@ -8264,7 +8264,7 @@ Rule CampaignStartNamVet
 Rule NoIntroChapter1NamVet
 {
 	criteria ConceptTalkIdle IsNamVet NotInCombat IsInStartArea IsChapter1 IsNotAlone IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
-	ApplyContext "Talk:0:0,SaidCXM1Intro:1:0,_auto_SafeRoomStart:2:0"
+	ApplyContext "Talk:0:0,CXM1Intro:1:0,_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response NoResponse
 }

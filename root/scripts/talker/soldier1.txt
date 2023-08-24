@@ -1,0 +1,241 @@
+//--------------------------------------------------------------------------------------------------------------
+// Soldier1 Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------
+// C5M5
+//--------------------------------------------------------------------------------------------------------------
+Response C5M5_Soldier1Soldier1
+{
+	sequential
+	norepeat
+	scene "scenes/npcs/Soldier1_CHATTER01.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //Rescue Seven, this is Papa Gator. Over.
+	scene "scenes/npcs/Soldier1_CHATTER02.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //Rescue 7, what is your repair status. Over.
+	scene "scenes/npcs/Soldier1_CHATTER03.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //Did not copy. Say again, Rescue 7. Over.
+	scene "scenes/npcs/Soldier1_CHATTER04.vcd"  then orator C5M5_Soldier2Bomb foo:0 0.01 //Copy that. All lambs extracted. Last Buzzard starts run in fifteen minutes. Copy that? Over
+	scene "scenes/npcs/Soldier1_CHATTER05.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //West bank is clear, Rescue 7. Ah, sector is clear. Over.
+	scene "scenes/npcs/Soldier1_CHATTER06.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //Rescue Seven, are you, ah, seeing Whiskey Delta? Or friendly? Over.
+	scene "scenes/npcs/Soldier1_CHATTER07.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //Whisky Delta or, ah, friendly? Over.
+	scene "scenes/npcs/Soldier1_CHATTER08.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //Rescue 7, all lost lambs are accounted for. Targets should be considered hostile. Only prosecute targets that are a clear threat. Over.
+	scene "scenes/npcs/Soldier1_CHATTER09.vcd"  then orator C5M5_Soldier2 foo:0 0.01 //Affirmative, Rescue 7. Keep the bridge deck clear. Last Buzzard will start run in fifteen minutes. Out.
+}
+Rule C5M5_Soldier1Soldier1
+{
+	criteria ConceptC5M5_Soldier1 AutoIsNotScavenge AutoIsNotSurvival _auto_IsSoldierChatter _auto_NotBetaSoldiersV2 _auto_NotButton1
+	ApplyContext "_auto_BetaSoldiers:2:0"
+	applycontexttoworld
+	Response C5M5_Soldier1Soldier1
+}
+
+Response C5M5_Soldier1Conv01Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK01.vcd"  then orator C5M5_Soldier2Conv01 foo:0 0.1 //Rescue 7, that's coming from the bridge!
+}
+Rule C5M5_Soldier1Conv01Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv01 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	Response C5M5_Soldier1Conv01Soldier1
+}
+
+Response C5M5_Soldier1Conv02Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK02.vcd"  then any C5M5_SurvivorConv01 foo:0 0.01 //Bridge, identify yourself.
+	scene "scenes/npcs/Soldier1_SURVIVORTALK03.vcd"  then any C5M5_SurvivorConv01 foo:0 0.01 //Bridge, who is this?
+}
+Rule C5M5_Soldier1Conv02Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv02 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	Response C5M5_Soldier1Conv02Soldier1
+}
+
+Response C5M5_Soldier1Conv03Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK04.vcd"  then any C5M5_SurvivorConv02 foo:0 0.01 //Bridge, are you immune?
+}
+Rule C5M5_Soldier1Conv03Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv03 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	Response C5M5_Soldier1Conv03Soldier1
+}
+
+Response C5M5_Soldier1Conv04Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK05.vcd"  then any C5M5_SurvivorConv03 foo:0 0.01 //Negative Bridge. Are you IMMUNE? Have you encountered the infected?
+}
+Rule C5M5_Soldier1Conv04Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv04 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	Response C5M5_Soldier1Conv04Soldier1
+}
+
+Response C5M5_Soldier1Conv05Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK06.vcd"  then orator C5M5_Soldier2Conv02 foo:0 0.1 //Rescue Seven, are you equipped for carriers?
+}
+Rule C5M5_Soldier1Conv05Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv05 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	Response C5M5_Soldier1Conv05Soldier1
+}
+
+Response C5M5_Soldier1Conv06Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK07.vcd"  then any C5M5_SurvivorConv04 foo:0 0.01 //Bridge, we have pulled out of that sector. Your only remaining pickup is available on the other end of the bridge. Our last chopper is leaving in 10 minutes. You need to lower the span and get across the bridge. God be with you.
+	scene "scenes/npcs/Soldier1_SURVIVORTALK08.vcd"  then orator C5M5_Soldier1Conv07 foo:0 0.01 //Bridge, that sector is clear of friendlies. Your only remaining pickup is on the east bank of the bridge. Our last chopper is leaving in 10 minutes. You need to lower the span and get across to the east end.
+}
+Rule C5M5_Soldier1Conv06Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv06 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	Response C5M5_Soldier1Conv06Soldier1
+}
+
+Response C5M5_Soldier1Conv07Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK10.vcd"  then any C5M5_SurvivorConv05 foo:0 0.01 //Be advised: The bridge is crawling with infected.
+	scene "scenes/npcs/Soldier1_SURVIVORTALK09.vcd"  then any C5M5_SurvivorConv05 foo:0 0.01 //Be advised: The bridge is crawling with Whisky Delta
+}
+Rule C5M5_Soldier1Conv07Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv07 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	Response C5M5_Soldier1Conv07Soldier1
+}
+
+Response C5M5_Soldier1Conv08Soldier1
+{
+	scene "scenes/npcs/Soldier1_SURVIVORTALK11.vcd" //Good luck.
+	scene "scenes/npcs/Soldier1_SURVIVORTALK12.vcd" //Good luck, Bridge.
+	scene "scenes/npcs/Soldier1_SURVIVORTALK13.vcd" //God be with you, bridge.
+}
+Rule C5M5_Soldier1Conv08Soldier1
+{
+	criteria ConceptC5M5_Soldier1Conv08 AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_NotButton2
+	ApplyContext "_auto_BridgeNag:1:0"
+	applycontexttoworld
+	Response C5M5_Soldier1Conv08Soldier1
+}
+
+Response C5M5StartHeliNagSoldier1
+{
+	scene "scenes/npcs/Soldier1_Chopper01.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get into the helicopter
+	scene "scenes/npcs/Soldier1_Chopper02.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get to the chopper.
+	scene "scenes/npcs/Soldier1_Chopper03.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //To the chopper!
+	scene "scenes/npcs/Soldier1_Chopper04.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get in here!
+	scene "scenes/npcs/Soldier1_Chopper05.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Everyone in the chopper!
+	scene "scenes/npcs/Soldier1_Chopper07.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Let's go! Everyone to the chopper!
+	scene "scenes/npcs/Soldier1_Chopper08.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Let's go, let's go, LET'S GO!
+	scene "scenes/npcs/Soldier2_ChopperNag01.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get into the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag02.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get to the chopper.
+	scene "scenes/npcs/Soldier2_ChopperNag03.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get to the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag04.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //To the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag05.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get in here.
+	scene "scenes/npcs/Soldier2_ChopperNag06.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Everyone in the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag09.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Let's go! Everyone to the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag10.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get into the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag11.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get to the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag12.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //To the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag13.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Get in here.
+	scene "scenes/npcs/Soldier2_ChopperNag14.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Everyone in the helicopter
+	scene "scenes/npcs/Soldier2_ChopperNag16.vcd"  then orator_chopper C5M5SoldierHeliNag foo:0 5 //Let's go! Everyone to the helicopter
+}
+Rule C5M5StartHeliNagSoldier1
+{
+	criteria ConceptC5M5SoldierHeliNag AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2 _auto_IsEscapeReady NotSaidOutro
+	Response C5M5StartHeliNagSoldier1
+}
+
+Response C5M5OutroSoldier1
+{
+	scene "scenes/npcs/Papa_Gator_MISC09.vcd" then orator C5M5SurvivorOutroEnable foo:0 0.1 //Extracted.
+	scene "scenes/npcs/Papa_Gator_MISC14.vcd" then orator C5M5SurvivorOutroEnable foo:0 0.1 //Evacuation zone is clear.
+	scene "scenes/npcs/Rescue_7_CHOPPERNAG07.vcd" then self C5M5Outro3 foo:0 0.1 //We're taking off!
+	scene "scenes/npcs/Rescue_7_CHOPPERNAG08.vcd" then self C5M5Outro3 foo:0 0.1 //We're taking off!
+	scene "scenes/npcs/Rescue_7_CHOPPERNAG15.vcd" then self C5M5Outro3 foo:0 0.1 //We're taking off!
+}
+Rule C5M5OutroSoldier1
+{
+	criteria ConceptC5M5Outro AutoIsNotScavenge AutoIsNotSurvival _auto_NotBetaSoldiersV2
+	ApplyContext "Talk:1:0,SaidOutro:1:0"
+	applycontexttoworld
+	Response C5M5OutroSoldier1
+}
+
+//Rule C5M5OutroBetaSoldier1
+//{
+//	criteria ConceptC5M5Outro AutoIsNotScavenge AutoIsNotSurvival _auto_IsBetaSoldiers
+//	ApplyContext "C5M5SurvivorOutro:1:0"
+//	applycontexttoworld
+//	Response NoResponse
+//}
+
+Response C5M5Outro3Soldier1
+{
+	scene "scenes/npcs/Papa_Gator_MISC10.vcd" then self C5M5Outro4 foo:0 0.1 //Rescue seven, affirmative. Visual inspection in Five.
+	scene "scenes/npcs/Papa_Gator_MISC11.vcd" then self C5M5Outro4 foo:0 0.1 //Papa Gator, affirmative. Visual inspection in Five.
+}
+Rule C5M5Outro3Soldier1
+{
+	criteria ConceptC5M5Outro3 AutoIsNotScavenge AutoIsNotSurvival
+	Response C5M5Outro3Soldier1
+}
+
+Response C5M5OutroBuzzardStrike2Soldier1
+{
+	scene "scenes/npcs/Papa_Gator_MISC12.vcd" //Papa Gator, roger out.
+}
+Rule C5M5OutroBuzzardStrike2Soldier1
+{
+	criteria ConceptC5M5Outro5 AutoIsNotScavenge AutoIsNotSurvival
+	Response C5M5OutroBuzzardStrike2Soldier1
+}
+
+//Response C5M5_Soldier1BetaSoldier1
+//{
+//	norepeat
+//	scene "scenes/npcs/05_military_bridge04a-01.vcd"  then orator C5M5_Soldier1 foo:0 3 //West bank clear...
+//}
+//Rule C5M5_Soldier1BetaSoldier1
+//{
+//	criteria ConceptC5M5_Soldier1 AutoIsNotScavenge AutoIsNotSurvival _auto_IsSoldierChatter _auto_NotBetaSoldiers ChanceToFire50Percent _auto_NotButton1
+//	ApplyContext "_auto_BetaSoldiers:1:0"
+//	applycontexttoworld
+//	Response C5M5_Soldier1BetaSoldier1
+//}
+
+//Response C5M5_BetaSoldier1BetaSoldier1
+//{
+//	sequential
+//	norepeat
+//	scene "scenes/npcs/05_military_bridge04a-02.vcd"  then orator C5M5_Soldier1 foo:0 3 //Bridge clear...
+//	scene "scenes/npcs/05_military_bridge04a-03.vcd"  then orator C5M5_Soldier2 foo:0 0.1 //Reports of gunfire on the East Bank.
+//	scene "scenes/npcs/05_military_bridge04a-04.vcd"  then orator C5M5_Soldier2 foo:0 0.1 //Negative. The gunfire has ceased.
+//	scene "scenes/npcs/05_military_bridge04a-05.vcd"  then orator C5M5_Soldier2 foo:0 0.1 //Negative. ETA on repairs is 10 minutes.
+//}
+//Rule C5M5_BetaSoldier1BetaSoldier1
+//{
+//	criteria ConceptC5M5_Soldier1 AutoIsNotScavenge AutoIsNotSurvival _auto_IsSoldierChatter _auto_IsBetaSoldiers _auto_NotButton1
+//	Response C5M5_BetaSoldier1BetaSoldier1
+//}
+
+//Response C5M5_BetaSoldier1Conv01BetaSoldier1
+//{
+//	scene "scenes/npcs/05_military_bridge04a-06.vcd"  then orator C5M5_Soldier1Conv02 foo:0 0.1 //Cease fire! Cease fire!
+//}
+//Rule C5M5_BetaSoldier1Conv01BetaSoldier1
+//{
+//	criteria ConceptC5M5_Soldier1Conv01 AutoIsNotScavenge AutoIsNotSurvival _auto_IsBetaSoldiers _auto_NotButton2
+//	Response C5M5_BetaSoldier1Conv01BetaSoldier1
+//}
+
+//Response C5M5_BetaSoldier1Conv02BetaSoldier1
+//{
+//	scene "scenes/npcs/05_military_bridge04a-07.vcd"  then orator C5M5_Soldier2Conv01 foo:0 0.01 //We have contact from the east bank. They're using Lt. Maverick's radio.
+//}
+//Rule C5M5_BetaSoldier1Conv02BetaSoldier1
+//{
+//	criteria ConceptC5M5_Soldier1Conv02 AutoIsNotScavenge AutoIsNotSurvival _auto_IsBetaSoldiers _auto_NotButton2
+//	Response C5M5_BetaSoldier1Conv02BetaSoldier1
+//}
+

@@ -10889,73 +10889,6 @@ Rule C4M2LockTheDoorCheckPointCoach
 	Response C4M2LockTheDoorCheckPointCoach
 }
 
-Response GoingToDieCoachCoachCoach
-{
-	scene "scenes/Coach/GoingToDie01.vcd"  //This here is some serious bullshit.
-	scene "scenes/Coach/GoingToDie02.vcd"  //This ain't how i thought this would go.
-	scene "scenes/Coach/GoingToDie03.vcd"  //I can walk this shit off.
-	scene "scenes/Coach/GoingToDie04.vcd"  //Ahhhhhhh.
-	scene "scenes/Coach/GoingToDie05.vcd"  //Damn, they messed me up.
-	scene "scenes/Coach/GoingToDie07.vcd"  //Man, this shit hurts.
-	scene "scenes/Coach/GoingToDie08.vcd"  //Man said there was nothing to worry about, well buullshit.
-	scene "scenes/Coach/GoingToDie09.vcd"  //Ya'll crazy if you don't think this hurts.
-	scene "scenes/Coach/GoingToDie10.vcd"  //Shit, I'm messed up.
-	scene "scenes/Coach/GoingToDie11.vcd"  //It hurts, but ain't nothin.
-	scene "scenes/Coach/GoingToDie12.vcd"  //This shit ain't pretty.
-	scene "scenes/Coach/GoingToDie13.vcd"  //Ahh damnit. (frustrated)
-	scene "scenes/Coach/GoingToDie14.vcd"  //Man, this right here hurts somethin' fierce.
-	scene "scenes/Coach/GoingToDie15.vcd"  //This is some outrageous shit.
-	scene "scenes/Coach/GoingToDie16.vcd"  //Crazy sons of a bitches messed me up.
-	scene "scenes/Coach/GoingToDie17.vcd"  //Damn. They beat me good.
-	scene "scenes/Coach/GoingToDie18.vcd"  //They beat my ass fair and square.
-	scene "scenes/Coach/GoingToDie19.vcd"  //I shoulda learned to drive a tank or some shit.
-	scene "scenes/Coach/GoingToDie20.vcd"  //Ahh damnit now.
-	scene "scenes/Coach/GoingToDie21.vcd"  //No pain, no gain. I must be about to gain some serious shit.
-	scene "scenes/Coach/GoingToDie22.vcd"  //I ain't ready to lay down yet.
-	scene "scenes/Coach/GoingToDie23.vcd"  //Hey. Now this here is some bullshit.
-	scene "scenes/Coach/GoingToDie24.vcd"  //I can walk this off.
-	scene "scenes/Coach/GoingToDie25.vcd"  //Tryin' to walk this off.
-	scene "scenes/Coach/GoingToDie27.vcd"  //I'm gotta get right.
-	scene "scenes/Coach/GoingToDie28.vcd"  //I ain't dead yet.
-	scene "scenes/Coach/GoingToDie32.vcd"  //Man, those zombies beat my ass.
-}
-Rule GoingToDieCoachCoachCoach
-{
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotComplainBlock IsCoachNear200 ChanceToFire30Percent IsWorldTalkCoach _auto_NotSpottedVehicle
-	ApplyContext "IsComplain:1:25"
-	Response GoingToDieCoachCoachCoach
-}
-
-Response SurvivorVocalizeGoingToDie3Coach
-{
-	scene "scenes/Coach/GoingToDie301.vcd"  //I'm just gonna admit it, I need some help.
-	scene "scenes/Coach/GoingToDie302.vcd"  //I need to get right.
-	scene "scenes/Coach/GoingToDie303.vcd"  //Sheeeeeet, I ain't gonna make it.
-	scene "scenes/Coach/HeavyBreathing01.vcd"  //
-	scene "scenes/Coach/HeavyBreathing06.vcd"  //
-	scene "scenes/Coach/HeavyBreathing07.vcd"  //
-	scene "scenes/Coach/HeavyBreathing08.vcd"  //
-	scene "scenes/Coach/HeavyBreathing09.vcd"  //
-	scene "scenes/Coach/HeavyBreathing10.vcd"  //
-}
-Rule SurvivorVocalizeGoingToDie3Coach
-{
-	criteria ConceptPlayerGoingToDie IsNotCoughing IsNotSpeaking IsCoach IsOnThirdStrike IsTalk IsTalkCoach IsNotComplainBlock IsWorldTalkCoach IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
-	ApplyContext "IsComplain:1:25"
-	Response SurvivorVocalizeGoingToDie3Coach
-}
-
-Response SurvivorVocalizeGoingToDie3C5M5Coach
-{
-	scene "scenes/Coach/WorldC5M5B19.vcd"  //I walked through a WORLD OF SHIT to get here! I am not gonna die now! I am NOT gonna DIE NOW!
-}
-Rule SurvivorVocalizeGoingToDie3C5M5Coach
-{
-	criteria ConceptPlayerGoingToDie IsNotCoughing IsNotSpeaking IsCoach IsOnThirdStrike IsMapc5m5_bridge IsTalk IsTalkCoach IsNotComplainBlock IsWorldTalkCoach IsNotInStartArea IsNotInCheckpoint IsNotSaidGoingToDieC5M5 ChanceToFire50Percent
-	ApplyContext "IsComplain:1:25,TalkCoach:1:8,SaidGoingToDieC5M5:1:0"
-	Response SurvivorVocalizeGoingToDie3C5M5Coach
-}
-
 Response PlayerAlertGiveItemStopCoach
 {
 	scene "scenes/Coach/AlertGiveItemStop01.vcd"  //Hold on, I got something for you.
@@ -12636,7 +12569,7 @@ Response SurvivorVocalizeGoingToDieCoach
 }
 Rule SurvivorVocalizeGoingToDieCoach
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotComplainBlock IsWorldTalkCoach IsNotInStartArea IsNotInCheckpoint
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsCoach IsTalk IsTalkCoach IsNotComplainBlock IsWorldTalkCoach IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
 	ApplyContext "IsComplain:1:25"
 	Response SurvivorVocalizeGoingToDieCoach
 }
@@ -12646,12 +12579,29 @@ Response SurvivorVocalizeGoingToDie3Coach
 	scene "scenes/Coach/GoingToDie301.vcd"  //I'm just gonna admit it, I need some help.
 	scene "scenes/Coach/GoingToDie302.vcd"  //I need to get right.
 	scene "scenes/Coach/GoingToDie303.vcd"  //Sheeeeeet, I ain't gonna make it.
+	scene "scenes/Coach/HeavyBreathing01.vcd"  //
+	scene "scenes/Coach/HeavyBreathing06.vcd"  //
+	scene "scenes/Coach/HeavyBreathing07.vcd"  //
+	scene "scenes/Coach/HeavyBreathing08.vcd"  //
+	scene "scenes/Coach/HeavyBreathing09.vcd"  //
+	scene "scenes/Coach/HeavyBreathing10.vcd"  //
 }
 Rule SurvivorVocalizeGoingToDie3Coach
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsCoach IsOnThirdStrike IsTalk IsTalkCoach IsNotComplainBlock IsWorldTalkCoach IsNotInStartArea IsNotInCheckpoint
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsCoach IsOnThirdStrike IsTalk IsTalkCoach IsNotComplainBlock IsWorldTalkCoach IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
 	ApplyContext "IsComplain:1:25"
 	Response SurvivorVocalizeGoingToDie3Coach
+}
+
+Response SurvivorVocalizeGoingToDie3C5M5Coach
+{
+	scene "scenes/Coach/WorldC5M5B19.vcd"  //I walked through a WORLD OF SHIT to get here! I am not gonna die now! I am NOT gonna DIE NOW!
+}
+Rule SurvivorVocalizeGoingToDie3C5M5Coach
+{
+	criteria ConceptPlayerGoingToDie IsNotCoughing IsNotSpeaking IsCoach IsOnThirdStrike IsMapc5m5_bridge IsTalk IsTalkCoach IsNotComplainBlock IsWorldTalkCoach IsNotInStartArea IsNotInCheckpoint IsNotSaidGoingToDieC5M5 ChanceToFire50Percent _auto_IsFinaleStartedV2
+	ApplyContext "IsComplain:1:25,TalkCoach:1:8,SaidGoingToDieC5M5:1:0"
+	Response SurvivorVocalizeGoingToDie3C5M5Coach
 }
 
 Response SurvivorVocalizeLookOutCoach
@@ -16555,7 +16505,7 @@ Rule CampaignStartCoach
 Rule NoIntroChapter1Coach
 {
 	criteria ConceptTalkIdle IsCoach NotInCombat IsInStartArea IsChapter1 IsNotAlone IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
-	ApplyContext "Talk:0:0,SaidCXM1Intro:1:0,_auto_SafeRoomStart:2:0"
+	ApplyContext "Talk:0:0,CXM1Intro:1:0,_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response NoResponse
 }
