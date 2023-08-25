@@ -6964,7 +6964,7 @@ Rule L4D1PlayerReviveFriendNamVet
 {
 	criteria ConceptPlayerReviveFriend IsNotCoughing  IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkNamVet:1:2"
-	Response L4D1PlayerReviveFriendNamVetS
+	Response L4D1PlayerReviveFriendNamVet
 }
 
 Response L4D1PlayerReviveFriendCriticalNamVet
