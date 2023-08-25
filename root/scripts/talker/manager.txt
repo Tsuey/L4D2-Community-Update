@@ -267,11 +267,11 @@ Rule ItemDonorMechanicManager
 
 Response ItemDonorBikerManager
 {
-	scene "scenes/Manager/Thanks03.vcd" predelay "2,2.5" then coach YouAreWelcome foo:0 0.3 //Thanks, I owe you one.
-	scene "scenes/Manager/Thanks08.vcd" predelay "2,2.5" then coach YouAreWelcome foo:0 0.3 //Thanks, I owe ya a big one.
-	scene "scenes/Manager/Thanks09.vcd" predelay "2,2.5"  then coach YouAreWelcome foo:0 0.3 //Thanks a lot.
-	scene "scenes/Manager/Thanks12.vcd" predelay "2,2.5" odds 1 then coach YouAreWelcome foo:0 0.3 //Thanks Dog
-	scene "scenes/Manager/Thanks14.vcd" predelay "2,2.5" odds 1 then coach YouAreWelcome foo:0 0.3 //Thanks, Playa.
+	scene "scenes/Manager/Thanks03.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0.3 //Thanks, I owe you one.
+	scene "scenes/Manager/Thanks08.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0.3 //Thanks, I owe ya a big one.
+	scene "scenes/Manager/Thanks09.vcd" predelay "2,2.5"  then biker YouAreWelcome foo:0 0.3 //Thanks a lot.
+	scene "scenes/Manager/Thanks12.vcd" predelay "2,2.5" odds 1 then biker YouAreWelcome foo:0 0.3 //Thanks Dog
+	scene "scenes/Manager/Thanks14.vcd" predelay "2,2.5" odds 1 then biker YouAreWelcome foo:0 0.3 //Thanks, Playa.
 }
 Rule ItemDonorBikerManager
 {
@@ -2015,7 +2015,7 @@ Rule IntroCrashR31Manager
 
 Response IntroCrashR37Manager
 {
-	scene "scenes/Manager/DLC2Misc01.vcd"  then TeenGirl IntroCrashR39 foo:0 -4.369 //You know what? I don't think we're gonna see a witch from NOW ON. Who wants to bet me?
+	scene "scenes/Manager/DLC2Misc01.vcd"  then TeenGirl IntroCrashR04 foo:0 -4.369 //You know what? I don't think we're gonna see a witch from NOW ON. Who wants to bet me?
 }
 Rule IntroCrashR37Manager
 {
@@ -2026,7 +2026,7 @@ Rule IntroCrashR37Manager
 Response L4D1PlayerCrashCourseIntroManager
 {
 	scene "scenes/Manager/DLC2Intro06.vcd"  then Biker IntroCrashR21 foo:0 -1.408 //Well, I guess we're walking.
-	scene "scenes/Manager/DLC2Misc02.vcd"  then TeenGirl IntroCrashR04 foo:0 0.1 //So I'm thinkin': either we're IMMUNE from all this. Or we been getting REALLLL lucky.
+	scene "scenes/Manager/DLC2Misc02.vcd"  then TeenGirl IntroCrashR39 foo:0 0.1 //So I'm thinkin': either we're IMMUNE from all this. Or we been getting REALLLL lucky.
 }
 Rule L4D1PlayerCrashCourseIntroManager
 {
@@ -3145,7 +3145,7 @@ Response L4D1PlayerFriendlyFireManager
 }
 Rule L4D1PlayerFriendlyFireManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkManager IsWorldTalkManager NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkManager IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireManager
 }
@@ -3159,7 +3159,7 @@ Response L4D1PlayerFriendlyFire2Manager
 }
 Rule L4D1PlayerFriendlyFire2Manager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkManager IsWorldTalkManager NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkManager IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2Manager
 }
@@ -3177,7 +3177,7 @@ Response L4D1PlayerFriendlyFireFromBillManager
 }
 Rule L4D1PlayerFriendlyFireFromBillManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsNamVet ChanceToFire30Percent IsWorldTalkManager NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsNamVet ChanceToFire30Percent IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromBillManager
 }
@@ -3192,7 +3192,7 @@ Response L4D1PlayerFriendlyFireFromFrancisManager
 }
 Rule L4D1PlayerFriendlyFireFromFrancisManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsBiker ChanceToFire30Percent IsWorldTalkManager NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsBiker ChanceToFire30Percent IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromFrancisManager
 }
@@ -3205,7 +3205,7 @@ Response L4D1PlayerFriendlyFireFromZoeyManager
 }
 Rule L4D1PlayerFriendlyFireFromZoeyManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkManager NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromZoeyManager
 }
@@ -3221,7 +3221,7 @@ Response L4D1PlayerFriendlyFireNoBulletManager
 }
 Rule L4D1PlayerFriendlyFireNoBulletManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeBullet IsNotDamageTypeExplosive IsNotOnThirdStrike IsTalk IsTalkManager IsWorldTalkManager NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeBullet IsNotDamageTypeExplosive IsNotOnThirdStrike IsTalk IsTalkManager IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletManager
 }
@@ -6115,7 +6115,7 @@ Response L4D1PlayerLockTheDoorCheckPointManager
 }
 Rule L4D1PlayerLockTheDoorCheckPointManager
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsManager IsInSafeSpot IsTalk IsTalkManager IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsManager IsInSafeSpot IsNotAlone IsTalk IsTalkManager IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerLockTheDoorCheckPointManager
 }
 
@@ -6983,7 +6983,7 @@ Response L4D1TeamKillManager
 }
 Rule L4D1TeamKillManager
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsManager IsTalk IsTalkManager IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireNamVet IsWorldTalkManager
+	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsManager IsTalk IsTalkManager IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireManager IsWorldTalkManager
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillManager

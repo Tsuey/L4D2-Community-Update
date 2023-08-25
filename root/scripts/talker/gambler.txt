@@ -733,7 +733,7 @@ Rule ItemDonorCoachGambler
 
 Response ItemDonorMechanicGambler
 {
-	scene "scenes/Gambler/ThanksEllis01.vcd" predelay ".2,.5" then mechanic YouAreWelcome foo:0 0 //Thanks killer.
+	scene "scenes/Gambler/ThanksEllis01.vcd" predelay "2,2.5" then mechanic YouAreWelcome foo:0 0 //Thanks killer.
 }
 Rule ItemDonorMechanicGambler
 {
@@ -745,7 +745,7 @@ Rule ItemDonorMechanicGambler
 
 Response ItemDonorProducerGambler
 {
-	scene "scenes/Gambler/ThanksRochelle01.vcd" predelay ".2,.5" then producer YouAreWelcome foo:0 0 //Thanks Ro.
+	scene "scenes/Gambler/ThanksRochelle01.vcd" predelay "2,2.5" then producer YouAreWelcome foo:0 0 //Thanks Ro.
 }
 Rule ItemDonorProducerGambler
 {
@@ -757,9 +757,9 @@ Rule ItemDonorProducerGambler
 
 Response ItemDonorBikerGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then biker YouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd"  //Thanks, greaseball!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then biker YouAreWelcome foo:0 0 //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0 //Shit, thanks!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay "2,2.5" //Thanks, greaseball!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0 //Thanks, pal!
 }
 Rule ItemDonorBikerGambler
 {
@@ -771,9 +771,9 @@ Rule ItemDonorBikerGambler
 
 Response ItemDonorTeenGirlGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd" predelay ".2,.5" then teengirl YouAreWelcome foo:0 0 //Thanks, Zoey!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay ".2,.5" then teengirl YouAreWelcome foo:0 0 //Hey thanks, babe!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay ".2,.5" then teengirl YouAreWelcome foo:0 0 //Got it, thank you!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd" predelay "2,2.5" then teengirl YouAreWelcome foo:0 0 //Thanks, Zoey!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay "2,2.5" then teengirl YouAreWelcome foo:0 0 //Hey thanks, babe!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay "2,2.5" then teengirl YouAreWelcome foo:0 0 //Got it, thank you!
 }
 Rule ItemDonorTeenGirlGambler
 {
@@ -785,8 +785,8 @@ Rule ItemDonorTeenGirlGambler
 
 Response ItemDonorManagerGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then manager YouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then manager YouAreWelcome foo:0 0 //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay "2,2.5" then manager YouAreWelcome foo:0 0 //Shit, thanks!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then manager YouAreWelcome foo:0 0 //Thanks, pal!
 }
 Rule ItemDonorManagerGambler
 {
@@ -798,9 +798,9 @@ Rule ItemDonorManagerGambler
 
 Response ItemDonorNamVetGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then namvet YouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then namvet YouAreWelcome foo:0 0 //Thanks, pal!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay ".2,.5" then namvet YouAreWelcome foo:0 0 //Got it, thank you!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay "2,2.5" then namvet YouAreWelcome foo:0 0 //Shit, thanks!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then namvet YouAreWelcome foo:0 0 //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay "2,2.5" then namvet YouAreWelcome foo:0 0 //Got it, thank you!
 }
 Rule ItemDonorNamVetGambler
 {
@@ -5835,7 +5835,7 @@ Response PlayerFriendlyFireGambler
 }
 Rule PlayerFriendlyFireGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireGambler
 }
@@ -5847,7 +5847,7 @@ Response PlayerFriendlyFire2Gambler
 }
 Rule PlayerFriendlyFire2Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsTalk IsTalkGambler IsOnThirdStrike IsWorldTalkGambler NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsTalk IsTalkGambler IsOnThirdStrike IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFire2Gambler
 }
@@ -5876,7 +5876,7 @@ Response PlayerFriendlyFireFromCoachGambler
 }
 Rule PlayerFriendlyFireFromCoachGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromCoachGambler
 }
@@ -5887,7 +5887,7 @@ Response PlayerFriendlyFireFromCoachNBGambler
 }
 Rule PlayerFriendlyFireFromCoachNBGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromCoachNBGambler
 }
@@ -5898,7 +5898,7 @@ Response PlayerFriendlyFireFromMechanicGambler
 }
 Rule PlayerFriendlyFireFromMechanicGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromMechanicGambler
 }
@@ -5930,7 +5930,7 @@ Rule PlayerFriendlyFireFromMechanicNBC1Gambler
 
 Rule PlayerFriendlyFireFromMechanicNBGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromMechanicGambler
 }
@@ -5944,7 +5944,7 @@ Response PlayerFriendlyFireFromProducerGambler
 }
 Rule PlayerFriendlyFireFromProducerGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsProducer ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsProducer ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromProducerGambler
 }
@@ -5968,7 +5968,7 @@ Response PlayerFriendlyFireFromProducerNBGambler
 }
 Rule PlayerFriendlyFireFromProducerNBGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsProducer ChanceToFire50Percent IsWorldTalkGambler NotTankAggro isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsProducer ChanceToFire50Percent IsWorldTalkGambler NotTankAggro isNotmap_c1m1_hotel isNotmap_c1m2_streets _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromProducerNBGambler
 }
@@ -5979,7 +5979,7 @@ Response PlayerFriendlyFireNoBulletGambler
 }
 Rule PlayerFriendlyFireNoBulletGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireNoBulletGambler
 }
@@ -5991,7 +5991,7 @@ Response PlayerFriendlyFireNoBulletC1Gambler
 }
 Rule PlayerFriendlyFireNoBulletC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro ismap_c1m1_hotel isNotmap_c1m2_streets NoKnowNames
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro ismap_c1m1_hotel isNotmap_c1m2_streets NoKnowNames 
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireNoBulletC1Gambler
 }
@@ -6008,7 +6008,7 @@ Response PlayerFriendlyFireTankGambler
 }
 Rule PlayerFriendlyFireTankGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkGambler isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankGambler
 }
@@ -10254,7 +10254,7 @@ Response YouAreWelcomeMechanicGambler
 }
 Rule YouAreWelcomeMechanicGambler
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsNotSpeaking IsGambler IsTalk IsTalkGambler FromIsMechanic TimeSinceGroupInCombat05 ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	criteria ConceptYouAreWelcome IsNotCoughing IsNotSpeaking IsGambler IsTalk IsTalkGambler FromIsMechanic TimeSinceGroupInCombat05 ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets
 	Response YouAreWelcomeMechanicGambler
 }
 
@@ -10913,7 +10913,7 @@ Response C4M2LockTheDoorCheckPointGambler
 }
 Rule C4M2LockTheDoorCheckPointGambler
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsGambler IsInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsGambler IsInSafeSpot IsNotAlone IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a AutoIsNotScavenge AutoIsNotSurvival
 	Response C4M2LockTheDoorCheckPointGambler
 }
 
@@ -12841,40 +12841,6 @@ Rule TeamKillGambler
 	applycontexttoworld
 	Response TeamKillGambler
 }
-
-Response TeamKillFromMechanicGambler
-{
-	scene "scenes/Gambler/DLC1_C6M2_BridgeCollapse01.vcd" predelay "1,1.75" //Ellis, what did you just do?
-	scene "scenes/Gambler/DLC1_C6M2_FinalWater02.vcd" predelay "1,1.75" //I hate you, Ellis!
-}
-Rule TeamKillFromMechanicGambler
-{
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsSaidFaultFriendlyFireMechanic IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:2"
-	applycontexttoworld
-	Response TeamKillFromMechanicGambler
-}
-
-Response TeamKillFromProducerGambler
-{
-	scene "scenes/Gambler/ReactionNegative30.vcd" predelay "1,1.75" //Bitch.
-}
-Rule TeamKillFromProducerGambler
-{
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsSaidFaultFriendlyFireProducer IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:2"
-	applycontexttoworld
-	Response TeamKillFromProducerGambler
-}
-
-Rule TeamKillFromTeenGirlGambler
-{
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsSaidFaultFriendlyFireTeenGirl IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:2"
-	applycontexttoworld
-	Response TeamKillFromProducerGambler
-}
-
 
 //--------------------------------------------------------------------------------------------------------------
 // Vocalizer - Pickups

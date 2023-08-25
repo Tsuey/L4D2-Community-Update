@@ -2620,7 +2620,7 @@ Response L4D1PlayerFriendlyFireNamVet
 }
 Rule L4D1PlayerFriendlyFireNamVet
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkNamVet IsWorldTalkNamVet NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkNamVet IsWorldTalkNamVet NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNamVet
 }
@@ -2634,7 +2634,7 @@ Response L4D1PlayerFriendlyFire2NamVet
 }
 Rule L4D1PlayerFriendlyFire2NamVet
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkNamVet IsWorldTalkNamVet NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkNamVet IsWorldTalkNamVet NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2NamVet
 }
@@ -2651,7 +2651,7 @@ Response L4D1PlayerFriendlyFireFromFrancisNamVet
 }
 Rule L4D1PlayerFriendlyFireFromFrancisNamVet
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkNamVet SubjectIsBiker ChanceToFire30Percent IsWorldTalkNamVet NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkNamVet SubjectIsBiker ChanceToFire30Percent IsWorldTalkNamVet NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromFrancisNamVet
 }
@@ -2664,7 +2664,7 @@ Response L4D1PlayerFriendlyFireFromLouisNamVet
 }
 Rule L4D1PlayerFriendlyFireFromLouisNamVet
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkNamVet SubjectIsManager ChanceToFire30Percent IsWorldTalkNamVet NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkNamVet SubjectIsManager ChanceToFire30Percent IsWorldTalkNamVet NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromLouisNamVet
 }
@@ -2675,7 +2675,7 @@ Response L4D1PlayerFriendlyFireFromZoeyNamVet
 }
 Rule L4D1PlayerFriendlyFireFromZoeyNamVet
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkNamVet SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkNamVet NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkNamVet SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkNamVet NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromZoeyNamVet
 }
@@ -2689,7 +2689,7 @@ Response L4D1PlayerFriendlyFireNoBulletNamVet
 }
 Rule L4D1PlayerFriendlyFireNoBulletNamVet
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeBullet IsNotDamageTypeExplosive IsNotOnThirdStrike IsTalk IsTalkNamVet IsWorldTalkNamVet NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeBullet IsNotDamageTypeExplosive IsNotOnThirdStrike IsTalk IsTalkNamVet IsWorldTalkNamVet NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletNamVet
 }
@@ -5585,7 +5585,7 @@ Response L4D1PlayerLockTheDoorCheckPointNamVet
 }
 Rule L4D1PlayerLockTheDoorCheckPointNamVet
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsNamVet IsInSafeSpot IsTalk IsTalkNamVet IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsNamVet IsInSafeSpot IsNotAlone IsTalk IsTalkNamVet IsWorldTalkNamVet AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerLockTheDoorCheckPointNamVet
 }
 
@@ -6427,8 +6427,8 @@ Rule L4D1DeathOneNamVet
 
 Response L4D1TeamKillNamVet
 {
-	scene "scenes/NamVet/TeamKillAccident01.vcd" predelay ".5,1.25" //Be careful!
-	scene "scenes/NamVet/TeamKillAccident02.vcd" predelay ".5,1.25" //Have you lost your mind?
+	scene "scenes/NamVet/TeamKillAccident01.vcd" predelay "1,1.75" //Be careful!
+	scene "scenes/NamVet/TeamKillAccident02.vcd" predelay "1,1.75" //Have you lost your mind?
 }
 Rule L4D1TeamKillNamVet
 {

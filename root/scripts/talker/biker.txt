@@ -502,7 +502,7 @@ Response L4D1BotNoteHumanAttentionBiker
 }
 Rule L4D1BotNoteHumanAttentionBiker
 {
-	criteria ConceptSurvivorBotNoteHumanAttention IsNotCoughing IsBiker IsNotBotAttention IsTalk IsTalkBiker IsNotIncapacitated IsInSafeSpot IsWorldTalkBiker IsNotSpeakingWeight0
+	criteria ConceptSurvivorBotNoteHumanAttention IsNotCoughing IsBiker IsNotBotAttention IsTalk IsTalkBiker IsNotIncapacitated IsInStartArea IsWorldTalkBiker IsNotSpeakingWeight0
 	ApplyContext "SaidBotAttention:1:30"
 	applycontexttoworld
 	Response L4D1BotNoteHumanAttentionBiker
@@ -3955,7 +3955,7 @@ Response L4D1PlayerFriendlyFireBiker
 }
 Rule L4D1PlayerFriendlyFireBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireBiker
 }
@@ -3968,7 +3968,7 @@ Response L4D1PlayerFriendlyFire2Biker
 }
 Rule L4D1PlayerFriendlyFire2Biker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2Biker
 }
@@ -3983,7 +3983,7 @@ Response L4D1PlayerFriendlyFireFromBillBiker
 }
 Rule L4D1PlayerFriendlyFireFromBillBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsNamVet ChanceToFire30Percent IsWorldTalkBiker NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsNamVet ChanceToFire30Percent IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromBillBiker
 }
@@ -3996,7 +3996,7 @@ Response L4D1PlayerFriendlyFireFromLouisBiker
 }
 Rule L4D1PlayerFriendlyFireFromLouisBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsManager ChanceToFire30Percent IsWorldTalkBiker NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsManager ChanceToFire30Percent IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromLouisBiker
 }
@@ -4008,7 +4008,7 @@ Response L4D1PlayerFriendlyFireFromZoeyBiker
 }
 Rule L4D1PlayerFriendlyFireFromZoeyBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkBiker NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromZoeyBiker
 }
@@ -4021,7 +4021,7 @@ Response L4D1PlayerFriendlyFireNoBulletBiker
 }
 Rule L4D1PlayerFriendlyFireNoBulletBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletBiker
 }
@@ -7382,7 +7382,7 @@ Response L4D1PlayerLockTheDoorCheckPointBiker
 }
 Rule L4D1PlayerLockTheDoorCheckPointBiker
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsBiker IsInSafeSpot IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsBiker IsInSafeSpot IsNotAlone IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerLockTheDoorCheckPointBiker
 }
 
@@ -8277,9 +8277,9 @@ Rule L4D1DeathOneBiker
 
 Response L4D1TeamKillBiker
 {
-	scene "scenes/Biker/TeamKillAccident01.vcd" predelay ".5,1.25" //Be careful!
-	scene "scenes/Biker/TeamKillAccident02.vcd" predelay ".5,1.25" //That was not cool.
-	scene "scenes/Biker/TeamKillAccident03.vcd" predelay ".5,1.25" //That was not cool.
+	scene "scenes/Biker/TeamKillAccident01.vcd" predelay "1,1.75" //Be careful!
+	scene "scenes/Biker/TeamKillAccident02.vcd" predelay "1,1.75" //That was not cool.
+	scene "scenes/Biker/TeamKillAccident03.vcd" predelay "1,1.75" //That was not cool.
 }
 Rule L4D1TeamKillBiker
 {

@@ -531,7 +531,7 @@ Response L4D1BotNoteHumanAttentionTeenGirl
 }
 Rule L4D1BotNoteHumanAttentionTeenGirl
 {
-	criteria ConceptSurvivorBotNoteHumanAttention IsNotCoughing  IsTeenGirl IsNotBotAttention IsTalk IsTalkTeenGirl IsNotIncapacitated IsInSafeSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0
+	criteria ConceptSurvivorBotNoteHumanAttention IsNotCoughing  IsTeenGirl IsNotBotAttention IsTalk IsTalkTeenGirl IsNotIncapacitated IsInStartArea IsWorldTalkTeenGirl IsNotSpeakingWeight0
 	ApplyContext "SaidBotAttention:1:30"
 	applycontexttoworld
 	Response L4D1BotNoteHumanAttentionTeenGirl
@@ -2138,6 +2138,7 @@ Rule IntroCrashR01TeenGirl
 Response IntroCrashR04TeenGirl
 {
 	scene "scenes/TeenGirl/DLC2Intro11.vcd" then self IntroEnd foo:0 0.1 //Well, at least we got out of the city. And... into... a different city...
+	scene "scenes/TeenGirl/Generic15.vcd"  then self IntroEnd foo:0 0.1 //You're an optimist. I'll give you that, Louis.
 }
 Rule IntroCrashR04TeenGirl
 {
@@ -2204,6 +2205,16 @@ Rule IntroCrashR28TeenGirl
 {
 	criteria ConceptIntroCrashR28 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response IntroCrashR28TeenGirl
+}
+
+Response IntroCrashR39TeenGirl
+{
+	scene "scenes/TeenGirl/DLC2Misc01.vcd" then self IntroEnd foo:0 0.1 //[kind laugh] Yeah. We're on a HUGE lucky streak, aren't we?
+}
+Rule IntroCrashR39TeenGirl
+{
+	criteria ConceptIntroCrashR39 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	Response IntroCrashR39TeenGirl
 }
 
 Response L4D1PlayerCrashCourseIntroTeenGirl
@@ -3371,7 +3382,7 @@ Response L4D1PlayerFriendlyFireTeenGirl
 }
 Rule L4D1PlayerFriendlyFireTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireTeenGirl
 }
@@ -3385,7 +3396,7 @@ Response L4D1PlayerFriendlyFire2TeenGirl
 }
 Rule L4D1PlayerFriendlyFire2TeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2TeenGirl
 }
@@ -3397,7 +3408,7 @@ Response L4D1PlayerFriendlyFireFromBillTeenGirl
 }
 Rule L4D1PlayerFriendlyFireFromBillTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsNamVet ChanceToFire30Percent IsWorldTalkTeenGirl NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsNamVet ChanceToFire30Percent IsWorldTalkTeenGirl NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromBillTeenGirl
 }
@@ -3410,7 +3421,7 @@ Response L4D1PlayerFriendlyFireFromFrancisTeenGirl
 }
 Rule L4D1PlayerFriendlyFireFromFrancisTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsBiker ChanceToFire30Percent IsWorldTalkTeenGirl NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsBiker ChanceToFire30Percent IsWorldTalkTeenGirl NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromFrancisTeenGirl
 }
@@ -3421,7 +3432,7 @@ Response L4D1PlayerFriendlyFireFromLouisTeenGirl
 }
 Rule L4D1PlayerFriendlyFireFromLouisTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsManager ChanceToFire30Percent IsWorldTalkTeenGirl NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkTeenGirl SubjectIsManager ChanceToFire30Percent IsWorldTalkTeenGirl NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromLouisTeenGirl
 }
@@ -3444,7 +3455,7 @@ Response L4D1PlayerFriendlyFireNoBulletTeenGirl
 }
 Rule L4D1PlayerFriendlyFireNoBulletTeenGirl
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl NotTankAggro
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletTeenGirl
 }
@@ -6540,7 +6551,7 @@ Response L4D1PlayerLockTheDoorCheckPointTeenGirl
 }
 Rule L4D1PlayerLockTheDoorCheckPointTeenGirl
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsTeenGirl IsInSafeSpot IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsTeenGirl IsInSafeSpot IsNotAlone IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerLockTheDoorCheckPointTeenGirl
 }
 
@@ -7576,10 +7587,10 @@ Rule L4D1DeathOneTeenGirl
 
 Response L4D1TeamKillTeenGirl
 {
-	scene "scenes/TeenGirl/TeamKillAccident03.vcd" predelay ".5,1.25" //Oh, shit man, no. No. NO!
-	scene "scenes/TeenGirl/TeamKillAccident05.vcd" predelay ".5,1.25" //Be careful!
-	scene "scenes/TeenGirl/TeamKillAccident06.vcd" predelay ".5,1.25" //Stop Stop!
-	scene "scenes/TeenGirl/TeamKillAccident08.vcd" predelay ".5,1.25" //Woah.  Careful!
+	scene "scenes/TeenGirl/TeamKillAccident03.vcd" predelay "1,1.75" //Oh, shit man, no. No. NO!
+	scene "scenes/TeenGirl/TeamKillAccident05.vcd" predelay "1,1.75" //Be careful!
+	scene "scenes/TeenGirl/TeamKillAccident06.vcd" predelay "1,1.75" //Stop Stop!
+	scene "scenes/TeenGirl/TeamKillAccident08.vcd" predelay "1,1.75" //Woah.  Careful!
 }
 Rule L4D1TeamKillTeenGirl
 {
