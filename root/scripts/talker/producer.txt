@@ -5627,7 +5627,7 @@ Response PlayerFriendlyFireTankProducer
 }
 Rule PlayerFriendlyFireTankProducer
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankProducer
 }
@@ -5640,7 +5640,7 @@ Response PlayerFriendlyFireTankC1Producer
 }
 Rule PlayerFriendlyFireTankC1Producer
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkProducer C1M1orC1M2 IsNotSurvival
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 IsWorldTalkProducer C1M1orC1M2 IsNotSurvival
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankC1Producer
 }
@@ -5651,7 +5651,7 @@ Response PlayerFriendlyFireTankCoachProducer
 }
 Rule PlayerFriendlyFireTankCoachProducer
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent IsNotIncapacitated SubjectIsCoach IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent SubjectIsCoach IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankCoachProducer
 }
@@ -5662,7 +5662,7 @@ Response PlayerFriendlyFireTankGamblerProducer
 }
 Rule PlayerFriendlyFireTankGamblerProducer
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent IsNotIncapacitated SubjectIsGambler IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent SubjectIsGambler IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankGamblerProducer
 }
@@ -5673,7 +5673,7 @@ Response PlayerFriendlyFireTankMechanicProducer
 }
 Rule PlayerFriendlyFireTankMechanicProducer
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent IsNotIncapacitated SubjectIsMechanic IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsProducer IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkProducer IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent SubjectIsMechanic IsWorldTalkProducer isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankMechanicProducer
 }

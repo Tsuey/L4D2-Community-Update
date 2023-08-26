@@ -6008,7 +6008,7 @@ Response PlayerFriendlyFireTankGambler
 }
 Rule PlayerFriendlyFireTankGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkGambler isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsWorldTalkGambler isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankGambler
 }
@@ -6020,7 +6020,7 @@ Response PlayerFriendlyFireTankC1Gambler
 }
 Rule PlayerFriendlyFireTankC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankC1Gambler
 }

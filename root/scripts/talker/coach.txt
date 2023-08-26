@@ -5853,7 +5853,7 @@ Response PlayerFriendlyFireTankCoach
 }
 Rule PlayerFriendlyFireTankCoach
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankCoach
 }
@@ -5864,7 +5864,7 @@ Response PlayerFriendlyFireTankC1Coach
 }
 Rule PlayerFriendlyFireTankC1Coach
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkCoach C1M1orC1M2 IsNotSurvival
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 IsWorldTalkCoach C1M1orC1M2 IsNotSurvival
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankC1Coach
 }
@@ -5875,7 +5875,7 @@ Response PlayerFriendlyFireTankGamblerCoach
 }
 Rule PlayerFriendlyFireTankGamblerCoach
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent IsNotIncapacitated SubjectIsGambler IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent SubjectIsGambler IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankGamblerCoach
 }
@@ -5886,7 +5886,7 @@ Response PlayerFriendlyFireTankMechanicCoach
 }
 Rule PlayerFriendlyFireTankMechanicCoach
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent IsNotIncapacitated SubjectIsMechanic IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent SubjectIsMechanic IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankMechanicCoach
 }
@@ -5897,7 +5897,7 @@ Response PlayerFriendlyFireTankProducerCoach
 }
 Rule PlayerFriendlyFireTankProducerCoach
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent IsNotIncapacitated SubjectIsProducer IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsCoach IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkCoach IsTankAggro IsSaidTankWarn2 ChanceToFire30Percent SubjectIsProducer IsWorldTalkCoach isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankProducerCoach
 }
