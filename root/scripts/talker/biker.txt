@@ -10176,7 +10176,7 @@ Rule CampaignStartBiker
 
 Rule NoIntroChapter1Biker
 {
-	criteria ConceptTalkIdle IsBiker NotInCombat IsInStartArea IsChapter1 IsNotAlone IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	criteria ConceptTalkIdle IsBiker NotInCombat IsInStartArea IsChapter1 IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
 	ApplyContext "Talk:0:0,CXM1Intro:1:0,_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response NoResponse
@@ -10186,6 +10186,14 @@ Rule SafeRoomStartBiker
 {
 	criteria ConceptTalkIdle IsBiker IsInStartArea IsNotChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroBiker
+{
+	criteria ConceptTalkIdle IsBiker NotInCombat IsInStartArea IsNotChapter1 IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response NoResponse
 }
