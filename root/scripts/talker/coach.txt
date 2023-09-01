@@ -12510,6 +12510,18 @@ Rule SurvivorVocalizeBackUpCoach
 	Response SurvivorVocalizeBackUpCoach
 }
 
+Response SurvivorVocalizeBackUpC4M2Coach
+{
+	scene "scenes/Coach/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Coach/BackUpQuiet02.vcd"  //Back up, Back up.
+	scene "scenes/Coach/BackUpQuiet03.vcd"  //Back up.
+}
+Rule SurvivorVocalizeBackUpC4M2Coach
+{
+	criteria ConceptPlayerBackUp IsCoach IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkCoach IsWorldTalkCoach ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro _auto_IsCoachInWitchville
+	Response SurvivorVocalizeBackUpC4M2Coach
+}
+
 Response SurvivorVocalizeEmphaticGoCoach
 {
 	scene "scenes/Coach/EmphaticGo01.vcd"  //GO!

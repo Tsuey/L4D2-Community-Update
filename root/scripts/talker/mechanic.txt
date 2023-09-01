@@ -13178,6 +13178,21 @@ Rule SurvivorVocalizeBackUpMechanic
 	Response SurvivorVocalizeBackUpMechanic
 }
 
+Response SurvivorVocalizeBackUpC4M2Mechanic
+{
+	scene "scenes/Mechanic/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Mechanic/BackUpQuiet02.vcd"  //Move back.
+	scene "scenes/Mechanic/BackUpQuiet03.vcd"  //Get back.
+	scene "scenes/Mechanic/BackUpQuiet04.vcd"  //Get back.
+	scene "scenes/Mechanic/BackUpQuiet05.vcd"  //Hey, move back.
+	scene "scenes/Mechanic/BackUpQuiet06.vcd"  //Back up.
+}
+Rule SurvivorVocalizeBackUpC4M2Mechanic
+{
+	criteria ConceptPlayerBackUp IsMechanic IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkMechanic IsWorldTalkMechanic ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro _auto_IsMechanicInWitchville
+	Response SurvivorVocalizeBackUpC4M2Mechanic
+}
+
 Response SurvivorVocalizeEmphaticGoMechanic
 {
 	scene "scenes/Mechanic/EmphaticGo01.vcd"  //Let's  go!

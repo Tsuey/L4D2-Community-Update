@@ -11595,6 +11595,19 @@ Rule SurvivorVocalizeBackUpProducer
 	Response SurvivorVocalizeBackUpProducer
 }
 
+Response SurvivorVocalizeBackUpC4M2Producer
+{
+	scene "scenes/Producer/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Producer/BackUpQuiet02.vcd"  //Move back.
+	scene "scenes/Producer/BackUpQuiet03.vcd"  //Get back.
+	scene "scenes/Producer/BackUpQuiet04.vcd"  //Get back, get back.
+}
+Rule SurvivorVocalizeBackUpC4M2Producer
+{
+	criteria ConceptPlayerBackUp IsProducer IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkProducer IsWorldTalkProducer ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro _auto_IsProducerInWitchville
+	Response SurvivorVocalizeBackUpC4M2Producer
+}
+
 Response SurvivorVocalizeEmphaticGoProducer
 {
 	scene "scenes/Producer/EmphaticGo01.vcd"  //What are you doing? GO!

@@ -12571,6 +12571,19 @@ Rule SurvivorVocalizeBackUpGambler
 	Response SurvivorVocalizeBackUpGambler
 }
 
+Response SurvivorVocalizeBackUpC4M2Gambler
+{
+	scene "scenes/Gambler/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Gambler/BackUpQuiet02.vcd"  //Everyone back.
+	scene "scenes/Gambler/BackUpQuiet03.vcd"  //Let's get back.
+	scene "scenes/Gambler/BackUpQuiet04.vcd"  //Back up, back up.
+}
+Rule SurvivorVocalizeBackUpC4M2Gambler
+{
+	criteria ConceptPlayerBackUp IsGambler IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro _auto_IsGamblerInWitchville
+	Response SurvivorVocalizeBackUpC4M2Gambler
+}
+
 Response SurvivorVocalizeEmphaticGoGambler
 {
 	scene "scenes/Gambler/EmphaticGo01.vcd"  //Go!
