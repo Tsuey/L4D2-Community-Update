@@ -75,6 +75,11 @@ criterion "IsDeadBiker"			"DeadCharacter"	"biker"			required
 criterion "IsDeadTeenGirl"		"DeadCharacter"	"teengirl"		required
 criterion "IsDeadManager"		"DeadCharacter"	"manager"		required
 
+criterion "NamVetIncapacitated"   "IncapacitatedCharacter" "NamVet"	  required
+criterion "BikerIncapacitated"   "IncapacitatedCharacter" "Biker"	  required
+criterion "TeenGirlIncapacitated"   "IncapacitatedCharacter" "TeenGirl"	  required
+criterion "ManagerIncapacitated"   "IncapacitatedCharacter" "Manager"	  required
+
 criterion "IsTeam4Francis"		"name"	"silver_francis"			required
 criterion "IsTeam4Bill"		"name"	"silver_bill"			required
 criterion "IsTeam4Louis"		"name"	"silver_louis"			required

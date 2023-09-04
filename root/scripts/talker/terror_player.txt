@@ -984,6 +984,11 @@ criterion "IsNotDeadProducer"		"DeadCharacter"	"!=Producer"		required
 criterion "IsNotDeadMechanic"		"DeadCharacter"	"!=Mechanic"		required
 criterion "IsDeadUnknown"		"DeadCharacter"	"Unknown"		required
 
+criterion "GamblerIncapacitated"   "IncapacitatedCharacter" "Gambler"	  required
+criterion "CoachIncapacitated"   "IncapacitatedCharacter" "Coach"	  required
+criterion "ProducerIncapacitated"   "IncapacitatedCharacter" "Producer"	  required
+criterion "MechanicIncapacitated"   "IncapacitatedCharacter" "Mechanic"	  required
+
 
 // Infected states
 criterion "IsSurprised"   "InfectedState"   "Surprised"   required
