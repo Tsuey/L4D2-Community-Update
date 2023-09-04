@@ -1026,7 +1026,7 @@ Rule C7M3_saferoom003NamVet
 
 Response C7M3_saferoom003bNamVet
 {
-	scene "scenes/NamVet/C6DLC3SECONDSAFEROOM02.vcd"  then Any C7M3_saferoom003c foo:0 .1 //NOOOO!
+	scene "scenes/NamVet/C6DLC3SECONDSAFEROOM02.vcd"  then self C7M3_saferoom003c foo:0 .1 //NOOOO!
 	scene "scenes/NamVet/C6DLC3SECONDSAFEROOM04.vcd" then self IntroEnd foo:0 0.1 //No! They hadn't even invented the wheel when I was born.
 }
 Rule C7M3_saferoom003bNamVet
