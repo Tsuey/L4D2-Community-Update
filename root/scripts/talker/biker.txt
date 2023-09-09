@@ -8281,7 +8281,7 @@ Response L4D1TeamKillBiker
 }
 Rule L4D1TeamKillBiker
 {
-	criteria IsFaultConcept IsBiker IsATeamKiller
+	criteria IsFaultConcept IsBiker ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillBiker
