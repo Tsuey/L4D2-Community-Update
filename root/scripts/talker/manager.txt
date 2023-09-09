@@ -6986,7 +6986,7 @@ Rule L4D1TeamKillManager
 	Response L4D1TeamKillManager
 }
 
-esponse L4D1TeamKillResponseManager
+Response L4D1TeamKillResponseManager
 {
 	scene "scenes/Manager/TeamKillAccident01.vcd" //Woah man, you gotta be careful.
 	scene "scenes/Manager/TeamKillAccident02.vcd" //Woah man, you gotta be careful.
