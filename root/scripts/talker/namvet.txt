@@ -6427,15 +6427,25 @@ Rule L4D1DeathOneNamVet
 
 Response L4D1TeamKillNamVet
 {
-	scene "scenes/NamVet/TeamKillAccident01.vcd" predelay "1,1.75" //Be careful!
-	scene "scenes/NamVet/TeamKillAccident02.vcd" predelay "1,1.75" //Have you lost your mind?
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule L4D1TeamKillNamVet
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsNamVet IsTalk IsTalkNamVet IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireNamVet IsNotIncapacitated IsWorldTalkNamVet
+	criteria IsFaultConcept IsNamVet IsATeamKiller
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillNamVet
+}
+
+Response L4D1TeamKillResponseNamVet
+{
+	scene "scenes/NamVet/TeamKillAccident01.vcd" //Be careful!
+	scene "scenes/NamVet/TeamKillAccident02.vcd" //Have you lost your mind?
+}
+Rule L4D1TeamKillResponseNamVet
+{
+	criteria ConceptTeamKillResponse IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsWorldTalkNamVet
+	Response L4D1TeamKillResponseNamVet
 }
 
 //--------------------------------------------------------------------------------------------------------------

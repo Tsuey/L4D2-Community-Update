@@ -12784,18 +12784,28 @@ Rule DoubleDeathCoach
 
 Response TeamKillCoach
 {
-	scene "scenes/Coach/TeamKillAccident03.vcd" predelay "1,1.75" //Man, are you wrong in the head shootin like that?
-	scene "scenes/Coach/TeamKillAccident05.vcd" predelay "1,1.75" //What the f'...  don't be doin that.
-	scene "scenes/Coach/TeamKillAccident06.vcd" predelay "1,1.75" //Hey! Don't be doin that.
-	scene "scenes/Coach/TeamKillAccident07.vcd" predelay "1,1.75" //You try that shit on me and you'll be wishin' your momma never met ya father.
-	scene "scenes/Coach/TeamKillAccident08.vcd" predelay "1,1.75" //Keep goin at em like that and you gonna be the last man on earth.
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule TeamKillCoach
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsCoach IsTalk IsTalkCoach IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireCoach IsWorldTalkCoach
-	ApplyContext "SaidSomeoneDied:1:10,TalkCoach:1:5"
+	criteria IsFaultConcept IsCoach IsATeamkiller
+	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillCoach
+}
+
+Response TeamKillResponseCoach
+{
+	scene "scenes/Coach/TeamKillAccident03.vcd" //Man, are you wrong in the head shootin like that?
+	scene "scenes/Coach/TeamKillAccident05.vcd" //What the f'...  don't be doin that.
+	scene "scenes/Coach/TeamKillAccident06.vcd" //Hey! Don't be doin that.
+	scene "scenes/Coach/TeamKillAccident07.vcd" //You try that shit on me and you'll be wishin' your momma never met ya father.
+	scene "scenes/Coach/TeamKillAccident08.vcd" //Keep goin at em like that and you gonna be the last man on earth.
+}
+Rule TeamKillResponseCoach
+{
+	criteria ConceptTeamKillResponse IsCoach IsNotCoughing IsTalk IsTalkCoach IsWorldTalkCoach
+	Response TeamKillResponseCoach
 }
 
 //--------------------------------------------------------------------------------------------------------------

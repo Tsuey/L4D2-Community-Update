@@ -7587,17 +7587,27 @@ Rule L4D1DeathOneTeenGirl
 
 Response L4D1TeamKillTeenGirl
 {
+	print " " then any TeamKillResponse foo:0 1.5
+}
+Rule L4D1TeamKillTeenGirl
+{
+	criteria IsFaultConcept IsTeenGirl IsATeamKiller
+	ApplyContext "SaidSomeoneDied:1:10"
+	applycontexttoworld
+	Response L4D1TeamKillTeenGirl
+}
+
+Response L4D1TeamKillResponseTeenGirl
+{
 	scene "scenes/TeenGirl/TeamKillAccident03.vcd" predelay "1,1.75" //Oh, shit man, no. No. NO!
 	scene "scenes/TeenGirl/TeamKillAccident05.vcd" predelay "1,1.75" //Be careful!
 	scene "scenes/TeenGirl/TeamKillAccident06.vcd" predelay "1,1.75" //Stop Stop!
 	scene "scenes/TeenGirl/TeamKillAccident08.vcd" predelay "1,1.75" //Woah.  Careful!
 }
-Rule L4D1TeamKillTeenGirl
+Rule L4D1TeamKillResponseTeenGirl
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl
-	ApplyContext "SaidSomeoneDied:1:10"
-	applycontexttoworld
-	Response L4D1TeamKillTeenGirl
+	ConceptTeamKillResponse IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1TeamKillResponseTeenGirl
 }
 
 

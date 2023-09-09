@@ -12845,14 +12845,25 @@ Rule DoubleDeath2MechanicGambler
 
 Response TeamKillGambler
 {
-	scene "scenes/Gambler/TeamKillAccident03.vcd" predelay "1,1.75" //What?!!?  This is hard enough without you helping the freaks!
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule TeamKillGambler
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:4"
+	criteria IsFaultConcept IsGambler IsATeamkiller
+	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillGambler
+}
+
+
+Response TeamKillResponseGambler
+{
+	scene "scenes/Gambler/TeamKillAccident03.vcd" //What?!!?  This is hard enough without you helping the freaks!
+}
+Rule TeamKillResponseGambler
+{
+	criteria ConceptTeamKillResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler
+	Response TeamKillResponseGambler
 }
 
 //--------------------------------------------------------------------------------------------------------------

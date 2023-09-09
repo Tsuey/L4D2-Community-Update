@@ -6976,17 +6976,27 @@ Rule L4D1DeathAloneManager
 
 Response L4D1TeamKillManager
 {
-	scene "scenes/Manager/TeamKillAccident01.vcd" predelay "1,1.75" //Woah man, you gotta be careful.
-	scene "scenes/Manager/TeamKillAccident02.vcd" predelay "1,1.75" //Woah man, you gotta be careful.
-	scene "scenes/Manager/TeamKillAccident03.vcd" predelay "1,1.75" //What the hell man?
-	scene "scenes/Manager/TeamKillAccident04.vcd" predelay "1,1.75" //Be careful, what are you doing?
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule L4D1TeamKillManager
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsManager IsTalk IsTalkManager IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireManager IsWorldTalkManager
+	criteria IsFaultConcept IsManager IsATeamKiller
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillManager
+}
+
+esponse L4D1TeamKillResponseManager
+{
+	scene "scenes/Manager/TeamKillAccident01.vcd" //Woah man, you gotta be careful.
+	scene "scenes/Manager/TeamKillAccident02.vcd" //Woah man, you gotta be careful.
+	scene "scenes/Manager/TeamKillAccident03.vcd" //What the hell man?
+	scene "scenes/Manager/TeamKillAccident04.vcd" //Be careful, what are you doing?
+}
+Rule L4D1TeamKillResponseManager
+{
+	criteria ConceptTeamKillResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1TeamKillResponseManager
 }
 
 //--------------------------------------------------------------------------------------------------------------

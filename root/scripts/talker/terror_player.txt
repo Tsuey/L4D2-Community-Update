@@ -445,6 +445,13 @@ criterion "IsFaultBoomerBlunder"   "FaultName" "BoomerBlunder"	  required
 criterion "IsFaultWitchHarassment"   "FaultName" "WitchHarassment"	  required
 criterion "IsFaultReckless"   "FaultName" "Reckless"	  required
 criterion "IsFaultL4D"   "FaultName" "Left4Dead"	  required
+criterion "HasAbandonedSurvivor"   "FaultName" "Abandonment"	  required
+criterion "HasIncapacitatedSurvivor"   "FaultName" "Knockdown"	  required
+criterion "IsATeamkiller"   "FaultName" "Murder"	  required
+criterion "IsAJackass"   "FaultName" "AbusiveBehavior"	  required
+
+//Fault responses
+criterion "ConceptTeamKillResponse"   "Concept" "TeamKilLResponse"	  required
 
 //Awards
 

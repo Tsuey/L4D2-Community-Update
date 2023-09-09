@@ -13448,18 +13448,28 @@ Rule DoubleDeathProducerMechanic
 
 Response TeamKillMechanic
 {
-	scene "scenes/Mechanic/TeamKillAccident04.vcd" predelay "1,1.75" //Yo we're on the same team aren't we?
-	scene "scenes/Mechanic/TeamKillAccident01.vcd" predelay "1,1.75" //Woah! I didn't do that! Man, that ain't right!
-	scene "scenes/Mechanic/TeamKillAccident02.vcd" predelay "1,1.75" //That's just straight messed up, man.
-	scene "scenes/Mechanic/TeamKillAccident03.vcd" predelay "1,1.75" //Jumpin' Jesus! What are you doin'!?!?!
-	scene "scenes/Mechanic/TeamKillAccident05.vcd" predelay "1,1.75" //Jesus Christ, man!
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule TeamKillMechanic
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsMechanic IsTalk IsTalkMechanic IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireMechanic IsWorldTalkMechanic
-	ApplyContext "SaidSomeoneDied:1:10,TalkMechanic:1:4"
+	criteria IsFaultConcept IsMechanic IsATeamKiller
+	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillMechanic
+}
+
+Response TeamKillResponseMechanic
+{
+	scene "scenes/Mechanic/TeamKillAccident04.vcd" //Yo we're on the same team aren't we?
+	scene "scenes/Mechanic/TeamKillAccident01.vcd" //Woah! I didn't do that! Man, that ain't right!
+	scene "scenes/Mechanic/TeamKillAccident02.vcd" //That's just straight messed up, man.
+	scene "scenes/Mechanic/TeamKillAccident03.vcd" //Jumpin' Jesus! What are you doin'!?!?!
+	scene "scenes/Mechanic/TeamKillAccident05.vcd" //Jesus Christ, man!
+}
+Rule TeamKillResponseMechanic
+{
+	criteria ConceptTeamKillResponse IsMechanic IsNotCoughing IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response TeamKillResponseMechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------
