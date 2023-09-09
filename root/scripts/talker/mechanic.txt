@@ -13452,7 +13452,7 @@ Response TeamKillMechanic
 }
 Rule TeamKillMechanic
 {
-	criteria IsFaultConcept IsMechanic IsATeamKiller
+	criteria IsFaultConcept IsMechanic ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillMechanic

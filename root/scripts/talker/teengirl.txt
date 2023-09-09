@@ -7591,7 +7591,7 @@ Response L4D1TeamKillTeenGirl
 }
 Rule L4D1TeamKillTeenGirl
 {
-	criteria IsFaultConcept IsTeenGirl IsATeamKiller
+	criteria IsFaultConcept IsTeenGirl ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillTeenGirl

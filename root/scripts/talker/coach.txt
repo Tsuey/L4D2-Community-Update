@@ -12788,7 +12788,7 @@ Response TeamKillCoach
 }
 Rule TeamKillCoach
 {
-	criteria IsFaultConcept IsCoach IsATeamkiller
+	criteria IsFaultConcept IsCoach ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillCoach

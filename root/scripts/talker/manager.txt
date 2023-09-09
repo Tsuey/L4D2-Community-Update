@@ -6980,7 +6980,7 @@ Response L4D1TeamKillManager
 }
 Rule L4D1TeamKillManager
 {
-	criteria IsFaultConcept IsManager IsATeamKiller
+	criteria IsFaultConcept IsManager ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillManager

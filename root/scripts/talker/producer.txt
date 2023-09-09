@@ -11856,7 +11856,7 @@ Response TeamKillProducer
 }
 Rule TeamKillProducer
 {
-	criteria IsFaultConcept IsProducer IsATeamKiller
+	criteria IsFaultConcept IsProducer ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillProducer

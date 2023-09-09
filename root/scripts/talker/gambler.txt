@@ -12849,7 +12849,7 @@ Response TeamKillGambler
 }
 Rule TeamKillGambler
 {
-	criteria IsFaultConcept IsGambler IsATeamkiller
+	criteria IsFaultConcept IsGambler ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillGambler

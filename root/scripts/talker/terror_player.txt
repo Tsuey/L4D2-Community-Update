@@ -445,13 +445,16 @@ criterion "IsFaultBoomerBlunder"   "FaultName" "BoomerBlunder"	  required
 criterion "IsFaultWitchHarassment"   "FaultName" "WitchHarassment"	  required
 criterion "IsFaultReckless"   "FaultName" "Reckless"	  required
 criterion "IsFaultL4D"   "FaultName" "Left4Dead"	  required
-criterion "HasAbandonedSurvivor"   "FaultName" "Abandonment"	  required
-criterion "HasIncapacitatedSurvivor"   "FaultName" "Knockdown"	  required
-criterion "IsATeamkiller"   "FaultName" "Murder"	  required
-criterion "IsAJackass"   "FaultName" "AbusiveBehavior"	  required
+criterion "Rusher"   "FaultName" "Abandonment"	  required
+criterion "SkillIssue"   "FaultName" "Knockdown"	  required
+criterion "TerribleThrowingArm"   "FaultName" "GrenadeBlunder"	  required
+criterion "SkullCracker"   "FaultName" "Forgetful"	  required
+criterion "ShouldBeVoteKicked"   "FaultName" "Murder"	  required
+criterion "Jackass"   "FaultName" "AbusiveBehavior"	  required
+criterion "TemptsFate"   "FaultName" "SecurityFailure"	  required
 
 //Fault responses
-criterion "ConceptTeamKillResponse"   "Concept" "TeamKilLResponse"	  required
+criterion "ConceptTeamKillResponse"   "Concept" "TeamKillResponse"	  required
 
 //Awards
 
@@ -461,6 +464,7 @@ criterion "IsSharingSubject"   "AwardName" "Sharing"	  required
 criterion "IsAwardMedic"  "AwardName" "Medic" required
 criterion "IsRescuer"  "AwardName" "Rescuer" required
 criterion "IsTankDominated"  "AwardName" "HulkShutOut" required
+criterion "GaveHelpingGame"  "AwardName" "HelpingHand" required
 
 //PanicTypes
 

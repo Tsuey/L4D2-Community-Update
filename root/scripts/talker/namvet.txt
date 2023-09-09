@@ -6431,7 +6431,7 @@ Response L4D1TeamKillNamVet
 }
 Rule L4D1TeamKillNamVet
 {
-	criteria IsFaultConcept IsNamVet IsATeamKiller
+	criteria IsFaultConcept IsNamVet ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillNamVet
