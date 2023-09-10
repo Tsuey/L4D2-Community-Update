@@ -8310,7 +8310,7 @@ Rule L4D1DeathOneBiker
 
 Response L4D1TeamKillBiker
 {
-	print " " then any TeamKillResponse 1.5
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule L4D1TeamKillBiker
 {
