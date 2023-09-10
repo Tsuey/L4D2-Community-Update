@@ -445,6 +445,7 @@ criterion "IsFaultBoomerBlunder"   "FaultName" "BoomerBlunder"	  required
 criterion "IsFaultWitchHarassment"   "FaultName" "WitchHarassment"	  required
 criterion "IsFaultReckless"   "FaultName" "Reckless"	  required
 criterion "IsFaultL4D"   "FaultName" "Left4Dead"	  required
+criterion "Wasteful"   "FaultName" "Greed"	  required
 criterion "Rusher"   "FaultName" "Abandonment"	  required
 criterion "SkillIssue"   "FaultName" "Knockdown"	  required
 criterion "TerribleThrowingArm"   "FaultName" "GrenadeBlunder"	  required
@@ -455,6 +456,7 @@ criterion "TemptsFate"   "FaultName" "SecurityFailure"	  required
 
 //Fault responses
 criterion "ConceptTeamKillResponse"   "Concept" "TeamKillResponse"	  required
+criterion "ConceptGreedResponse"   "Concept" "GreedResponse"	  required
 
 //Awards
 

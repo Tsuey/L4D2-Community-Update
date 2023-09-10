@@ -2305,6 +2305,39 @@ Rule L4D1SurvivorBoomerBlunderTeenGirl
 	Response L4D1SurvivorBoomerBlunderTeenGirl
 }
 
+Response L4D1GreedTeenGirl
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule L4D1GreedTeenGirl
+{
+	criteria IsFaultConcept Wasteful IsTeenGirl
+	Response L4D1GreedTeenGirl
+}
+
+Response L4D1GreedResponseTeenGirl
+{
+	scene "scenes/TeenGirl/Swear09.vcd" //Ah bullshit.
+}
+
+Rule L4D1GreedResponseToManagerTeenGirl
+{
+	criteria ConceptGreedResponse IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl FromIsManager SubjectIsManager IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseTeenGirl
+}
+
+Rule L4D1GreedResponseToBikerTeenGirl
+{
+	criteria ConceptGreedResponse IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl FromIsBiker SubjectIsBiker IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseTeenGirl
+}
+
+Rule L4D1GreedResponseToNamVetTeenGirl
+{
+	criteria ConceptGreedResponse IsTeenGirl IsNotCoughing IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl FromIsNamVet SubjectIsNamVet IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseTeenGirl
+}
+
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech

@@ -5629,6 +5629,44 @@ Rule SurvivorSpottedWitchC1M2Coach
 }
 
 //--------------------------------------------------------------------------------------------------------------
+// Fault - Greed
+//--------------------------------------------------------------------------------------------------------------
+Response GreedCoach
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule GreedCoach
+{
+	criteria IsFaultConcept Wasteful IsCoach
+	Response GreedCoach
+}
+
+Response GreedResponseCoach
+{
+	scene "scenes/Coach/ReactionNegative12.vcd"  //Bullshit.
+	scene "scenes/Coach/ReactionNegative14.vcd"  //Bullshit.
+	scene "scenes/Coach/ReactionNegative20.vcd"  //Bullshit.
+}
+
+Rule GreedResponseToMechanicCoach
+{
+	criteria ConceptGreedResponse IsCoach IsNotCoughing IsTalk IsTalkCoach IsWorldTalkCoach FromIsMechanic SubjectIsMechanic IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseCoach
+}
+
+Rule GreedResponseToGamblerCoach
+{
+	criteria ConceptGreedResponse IsCoach IsNotCoughing IsTalk IsTalkCoach IsWorldTalkCoach FromIsGambler SubjectIsGambler IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseCoach
+}
+
+Rule GreedResponseToProducerCoach
+{
+	criteria ConceptGreedResponse IsCoach IsNotCoughing IsTalk IsTalkCoach IsWorldTalkCoach FromIsProducer SubjectIsProducer IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseCoach
+}
+
+//--------------------------------------------------------------------------------------------------------------
 // Not Rosetta - Responses
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerAlertGiveItemCoach

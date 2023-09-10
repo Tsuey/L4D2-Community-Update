@@ -6355,6 +6355,44 @@ Rule SurvivorSpottedWitch2C1Mechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------
+// Fault - Greed
+//--------------------------------------------------------------------------------------------------------------
+Response GreedMechanic
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule GreedMechanic
+{
+	criteria IsFaultConcept Wasteful IsMechanic
+	Response GreedMechanic
+}
+
+Response GreedResponseMechanic
+{
+	scene "scenes/Mechanic/ReactionNegative12.vcd"  //BULLSHIT!
+	scene "scenes/Mechanic/ReactionNegative13.vcd"  //Oh, hogwash, man!
+	scene "scenes/Mechanic/ReactionNegative16.vcd"  //Ain't that a load of shit.
+}
+
+Rule GreedResponseToGamblerMechanic
+{
+	criteria ConceptGreedResponse IsMechanic IsNotCoughing IsTalk IsTalkMechanic IsWorldTalkMechanic FromIsGambler SubjectIsGambler IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseMechanic
+}
+
+Rule GreedResponseToCoachMechanic
+{
+	criteria ConceptGreedResponse IsMechanic IsNotCoughing IsTalk IsTalkMechanic IsWorldTalkMechanic FromIsCoach SubjectIsCoach IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseMechanic
+}
+
+Rule GreedResponseToProducerMechanic
+{
+	criteria ConceptGreedResponse IsMechanic IsNotCoughing IsTalk IsTalkMechanic IsWorldTalkMechanic FromIsProducer SubjectIsProducer IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseMechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
 // Not Rosetta - Responses
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerAlertGiveItemMechanic

@@ -2114,6 +2114,38 @@ Rule L4D1SurvivorBoomerBlunderManager
 	Response L4D1SurvivorBoomerBlunderManager
 }
 
+Response L4D1GreedManager
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule L4D1GreedManager
+{
+	criteria IsFaultConcept Wasteful IsManager
+	Response L4D1GreedManager
+}
+
+Response L4D1GreedResponseManager
+{
+	scene "scenes/Manager/Swears16.vcd"  //That's some country-ass bullshit.
+}
+
+Rule L4D1GreedResponseToNamVetManager
+{
+	criteria ConceptGreedResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager FromIsNamVet SubjectIsNamVet IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseManager
+}
+
+Rule L4D1GreedResponseToBikerManager
+{
+	criteria ConceptGreedResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager FromIsBiker SubjectIsBiker IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseManager
+}
+
+Rule L4D1GreedResponseToTeenGirlManager
+{
+	criteria ConceptGreedResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager FromIsTeenGirl SubjectIsTeenGirl IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseManager
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech

@@ -2861,6 +2861,39 @@ Rule L4D1PlayerFaultFriendlyFireBiker
 	Response NoResponse
 }
 
+Response L4D1GreedBiker
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule L4D1GreedBiker
+{
+	criteria IsFaultConcept Wasteful IsBiker
+	Response L4D1GreedBiker
+}
+
+Response L4D1GreedResponseBiker
+{
+	scene "scenes/Biker/Swear08.vcd" //Ah bullshit.
+	scene "scenes/Biker/Swear10.vcd" //Bullshit.
+}
+
+Rule L4D1GreedResponseToNamVetBiker
+{
+	criteria ConceptGreedResponse IsBiker IsNotCoughing IsTalk IsTalkBiker IsWorldTalkBiker FromIsNamVet SubjectIsNamVet IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseBiker
+}
+
+Rule L4D1GreedResponseToManagerBiker
+{
+	criteria ConceptGreedResponse IsBiker IsNotCoughing IsTalk IsTalkBiker IsWorldTalkBiker FromIsManager SubjectIsManager IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseBiker
+}
+
+Rule L4D1GreedResponseToTeenGirlBiker
+{
+	criteria ConceptGreedResponse IsBiker IsNotCoughing IsTalk IsTalkBiker IsWorldTalkBiker FromIsTeenGirl SubjectIsTeenGirl IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseBiker
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech

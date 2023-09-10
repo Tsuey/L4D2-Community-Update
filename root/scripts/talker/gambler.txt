@@ -5753,6 +5753,57 @@ Rule SurvivorSpottedWitch2C1Gambler
 }
 
 //--------------------------------------------------------------------------------------------------------------
+// Fault - Greed
+//--------------------------------------------------------------------------------------------------------------
+Response GreedGambler
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule GreedGambler
+{
+	criteria IsFaultConcept Wasteful IsGambler
+	Response GreedGambler
+}
+
+Response GreedResponseGambler
+{
+	scene "scenes/Gambler/ReactionNegative05.vcd"  //Bullshit!
+	scene "scenes/Gambler/ReactionNegative11.vcd"  //Oh bullshit!
+	scene "scenes/Gambler/ReactionNegative17.vcd"  //Bullshit!
+	scene "scenes/Gambler/ReactionNegative22.vcd"  //Oh bullshit!
+	scene "scenes/Gambler/ReactionNegative24.vcd"  //Is this some kind of sick joke?
+	scene "scenes/Gambler/ReactionNegative25.vcd"  //Is this some kind of sick joke?
+	scene "scenes/Gambler/ReactionNegative27.vcd"  //Kiss my ass.
+	scene "scenes/Gambler/ReactionNegative28.vcd"  //Ass.
+	scene "scenes/Gambler/ReactionNegative29.vcd"  //Asshat.
+	scene "scenes/Gambler/ReactionNegative31.vcd"  //Asshole.
+	scene "scenes/Gambler/ReactionNegative32.vcd"  //Assclown.
+	scene "scenes/Gambler/ReactionNegative33.vcd"  //Dumbshit.
+	scene "scenes/Gambler/ReactionNegative35.vcd"  //Kiss my ass.
+	scene "scenes/Gambler/ReactionNegative36.vcd"  //Kiss my ass.
+	scene "scenes/Gambler/ReactionNegative37.vcd"  //What an assclown.
+	scene "scenes/Gambler/ReactionNegative38.vcd"  //Dumbshit.
+}
+
+Rule GreedResponseToMechanicGambler
+{
+	criteria ConceptGreedResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler FromIsMechanic SubjectIsMechanic IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseGambler
+}
+
+Rule GreedResponseToCoachGambler
+{
+	criteria ConceptGreedResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler FromIsCoach SubjectIsCoach IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseGambler
+}
+
+Rule GreedResponseToProducerGambler
+{
+	criteria ConceptGreedResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler FromIsProducer SubjectIsProducer IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseGambler
+}
+
+//--------------------------------------------------------------------------------------------------------------
 // Not Rosetta - Responses
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerAlertGiveItemGambler

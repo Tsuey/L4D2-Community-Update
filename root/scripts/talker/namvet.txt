@@ -1614,6 +1614,40 @@ Rule L4D1SurvivorBoomerBlunderNamVet
 	Response L4D1SurvivorBoomerBlunderNamVet
 }
 
+Response L4D1GreedNamVet
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule L4D1GreedNamVet
+{
+	criteria IsFaultConcept Wasteful IsNamVet
+	Response L4D1GreedNamVet
+}
+
+Response L4D1GreedResponseNamVet
+{
+	scene "scenes/NamVet/SwearCoupdeGrace02.vcd"  //Go to hell.
+	scene "scenes/NamVet/Swears05.vcd"  //Mother. Humper.
+}
+
+Rule L4D1GreedResponseToManagerNamVet
+{
+	criteria ConceptGreedResponse IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsWorldTalkNamVet FromIsManager SubjectIsManager IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseNamVet
+}
+
+Rule L4D1GreedResponseToBikerNamVet
+{
+	criteria ConceptGreedResponse IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsWorldTalkNamVet FromIsBiker SubjectIsBiker IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseNamVet
+}
+
+Rule L4D1GreedResponseToTeenGirlNamVet
+{
+	criteria ConceptGreedResponse IsNamVet IsNotCoughing IsTalk IsTalkNamVet IsWorldTalkNamVet FromIsTeenGirl SubjectIsTeenGirl IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseNamVet
+}
+
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech

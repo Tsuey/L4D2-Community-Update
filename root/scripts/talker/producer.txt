@@ -5467,6 +5467,41 @@ Rule SurvivorSpottedWitch2C1Producer
 	Response SurvivorSpottedWitch2C1Producer
 }
 
+//--------------------------------------------------------------------------------------------------------------
+// Fault - Greed
+//--------------------------------------------------------------------------------------------------------------
+Response GreedProducer
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule GreedProducer
+{
+	criteria IsFaultConcept Wasteful IsProducer
+	Response GreedProducer
+}
+
+Response GreedResponseProducer
+{
+	scene "scenes/Producer/ReactionNegative20.vcd"  //Argghh! (disgusted)
+}
+
+Rule GreedResponseToGamblerProducer
+{
+	criteria ConceptGreedResponse IsProducer IsNotCoughing IsTalk IsTalkProducer IsWorldTalkProducer FromIsGambler SubjectIsGambler IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseProducer
+}
+
+Rule GreedResponseToCoachProducer
+{
+	criteria ConceptGreedResponse IsProducer IsNotCoughing IsTalk IsTalkProducer IsWorldTalkProducer FromIsCoach SubjectIsCoach IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseProducer
+}
+
+Rule GreedResponseToMechanicProducer
+{
+	criteria ConceptGreedResponse IsProducer IsNotCoughing IsTalk IsTalkProducer IsWorldTalkProducer FromIsMechanic SubjectIsMechanic IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseProducer
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Not Rosetta - Responses
