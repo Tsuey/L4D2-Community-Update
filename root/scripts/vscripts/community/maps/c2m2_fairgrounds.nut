@@ -37,6 +37,12 @@ function DoRoundFixes()
 	make_clip( "_cliprework_blockergap", "Survivors", 1, "-121 -8 0", "123 8 384", "-4235 -3968 384" );
 	make_clip( "_unattackable_traintunnel", "Survivors", 1, "-324 -1040 -171", "220 1040 342", "-604 -1536 428" );
 	make_clip( "_dispcollision_fairgrounds", "All and Physics", 1, "-1400 -1700 -2", "1400 1700 0", "-1903 -142 -128" );
+	make_clip( "_commentary_generatorlights", "Survivors", 1, "-8 -56 -8", "44 8 524", "2876 -1700 244" );
+	make_clip( "_commentary_traintunnel_track", "Survivors", 1, "-64 -256 -64", "64 256 64", "-704 -256 192" );
+	make_clip( "_commentary_traintunnel_entrance", "Survivors", 1, "-192 -16 -64", "192 16 64", "-704 -528 192" );
+	make_clip( "_commentary_carouselgate_stuck", "All and Physics", 1, "-4 -24 -80", "4 24 80", "-2764 -5452 -48" );
+	make_clip( "_commentary_blockergap", "Survivors", 1, "-4 -324 -192", "4 324 192", "-4352 -4284 576" );
+	make_clip( "_commentary_electricalbox", "Survivors", 1, "-8 -132 -8", "40 8 786", "-4336 -4209 -18" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -54,8 +60,10 @@ function DoRoundFixes()
 
 		make_clip( "_tol_clip_brush_a", "Survivors", 1, "-818 -16 0", "82 599 572", "-3530 -5162 192" );
 		make_clip( "_tol_clip_brush_b", "Survivors", 1, "-9 -263 0", "488 -1 572", "-3439 -5178 192" );
+		make_navblock( "_nav_tol_hedge_a", "Survivors", "Apply", "-24 -256 -16", "24 256 16", "-3488 -4912 7" );
+		make_navblock( "_nav_tol_hedge_b", "Survivors", "Apply", "-256 -8 -16", "256 8 16", "-3264 -5187 -8" );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_tol_clip_brush*:Kill::-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -2496, -6544, 4 ), 1 ) );
-
+		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_nav_tol_hedge*:UnblockNav::-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -2496, -6544, 4 ), 1 ) );
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -165,6 +173,7 @@ function DoRoundFixes()
 		make_trigduck( "_duckqol_carouselroof", "-30 1 0", "30 3 1", "-2240 -5259 303" );
 
 		// Manually fix the 2009 forklift since it is spawned after mapfixes runs
+
 		NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_iMinHealthDmg", 400 );
 		NetProps.SetPropInt( Entities.FindByName( null, g_UpdateName + "_hittable_2009forklift" ), "m_takedamage", 3 );
 	}
@@ -192,7 +201,8 @@ function DoMapSpawnFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move tank spawn inside carousel fence to behind the carousel (~80% boss flow)
+	// Move Tank spawn inside carousel fence to behind the carousel (~80% boss flow).
+
 	if ( CheckToWarpTank( hndTank, [-2750, -5450, -1450, -4925] ) )
 	{
 		hndTank.SetOrigin( Vector( -1725, -5900, 68.0 ) );

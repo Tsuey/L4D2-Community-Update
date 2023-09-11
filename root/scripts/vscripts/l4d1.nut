@@ -26,7 +26,7 @@ DirectorOptions <-
 	weaponsToConvert =
 	{
 		weapon_shotgun_spas				= "weapon_autoshotgun_spawn"
-		weapon_defibrillator			= "weapon_first_aid_kit_spawn"
+		weapon_defibrillator			= "weapon_pain_pills_spawn"
 		weapon_ammo_pack				= "weapon_first_aid_kit_spawn"
 		weapon_sniper_awp				= "weapon_hunting_rifle_spawn"
 		weapon_sniper_military			= "weapon_hunting_rifle_spawn"
@@ -87,7 +87,7 @@ function OnGameEvent_round_start_post_nav( params )
 	EntFire( "weapon_*", "AddOutput", "skin 0" );
 	EntFire( "weapon_*", "AddOutput", "weaponskin -1" );
 	EntFire( "trigger_upgrade_laser_sight", "Kill" );
-	
+
 	foreach( wep, val in DirectorOptions.weaponsToRemove )
 		EntFire( wep + "_spawn", "Kill" );
 	foreach( wep, val in DirectorOptions.weaponsToConvert )
@@ -106,11 +106,11 @@ function OnGameEvent_round_start_post_nav( params )
 			SpawnEntityFromTable(val, spawnTable);
 		}
 	}
-	
+
 	if ( Director.IsL4D1Campaign() )
 	{
 		DirectorOptions.WaterSlowsMovement <- false;
-		
+
 		if ( SessionState.ModeName == "l4d1coop" || SessionState.ModeName == "l4d1vs" )
 		{
 			if ( IsMissionFinalMap() )
@@ -172,17 +172,84 @@ function OnGameEvent_round_start_post_nav( params )
 	}
 }
 
+if ( HasPlayerControlledZombies() )
+{
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_smoker_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_smoker_l4d1.mdl" );
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_boomer_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_boomer_l4d1.mdl" );
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_hunter_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_hunter_l4d1.mdl" );
+	if ( !IsModelPrecached( "models/v_models/weapons/v_claw_hulk_l4d1.mdl" ) )
+		PrecacheModel( "models/v_models/weapons/v_claw_hulk_l4d1.mdl" );
+
+	function OnGameEvent_item_pickup( params )
+	{
+		local player = GetPlayerFromUserID( params["userid"] );
+
+		if ( ( !player ) || ( player.IsSurvivor() ) )
+			return;
+
+		local modelName = player.GetModelName();
+		if ( ( modelName.find( "l4d1" ) != null ) || ( modelName == "models/infected/hulk_dlc3.mdl" ) )
+			return;
+
+		local function SetClawModel( modelName )
+		{
+			local claw = player.GetActiveWeapon();
+			local viewmodel = NetProps.GetPropEntity( player, "m_hViewModel" );
+
+			if ( ( !claw ) || ( !viewmodel ) )
+				return;
+
+			claw.SetModel( modelName );
+			NetProps.SetPropInt( viewmodel, "m_nModelIndex", NetProps.GetPropInt( claw, "m_nModelIndex" ) );
+			NetProps.SetPropString( viewmodel, "m_ModelName", modelName );
+		}
+
+		switch( player.GetZombieType() )
+		{
+			case 1:
+			{
+				player.SetModel( "models/infected/smoker_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_smoker_l4d1.mdl" );
+				break;
+			}
+			case 2:
+			{
+				player.SetModel( "models/infected/boomer_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_boomer_l4d1.mdl" );
+				break;
+			}
+			case 3:
+			{
+				player.SetModel( "models/infected/hunter_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_hunter_l4d1.mdl" );
+				break;
+			}
+			case 8:
+			{
+				player.SetModel( "models/infected/hulk_l4d1.mdl" );
+				SetClawModel( "models/v_models/weapons/v_claw_hulk_l4d1.mdl" );
+				break;
+			}
+			default:
+				break;
+		}
+	}
+}
+
 function OnGameEvent_player_spawn( params )
 {
 	local player = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( ( !player ) || ( player.IsSurvivor() ) )
 		return;
-	
+
 	local modelName = player.GetModelName();
 	if ( ( modelName.find( "l4d1" ) != null ) || ( modelName == "models/infected/hulk_dlc3.mdl" ) )
 		return;
-	
+
 	switch( player.GetZombieType() )
 	{
 		case 1:
@@ -214,11 +281,11 @@ function OnGameEvent_player_death( params )
 {
 	if ( !("userid" in params) )
 		return;
-	
+
 	local victim = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( ( !victim ) || ( !victim.IsSurvivor() ) )
 		return;
-	
+
 	EntFire( "survivor_death_model", "BecomeRagdoll" );
 }

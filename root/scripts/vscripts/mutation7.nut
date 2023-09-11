@@ -1,13 +1,12 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 7\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_InfiniteFuel = 1
-	cm_ShouldHurry = 1
+	cm_InfiniteFuel = true
+	cm_ShouldHurry = true
 
 	weaponsToRemove =
 	{

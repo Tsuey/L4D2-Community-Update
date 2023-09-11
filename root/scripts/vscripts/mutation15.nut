@@ -1,12 +1,11 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 15\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
 
-	cm_ProhibitBosses = 0
+	cm_ProhibitBosses = false
 	cm_CommonLimit = 25
 	cm_TankLimit = 1
 	ZombieTankHealth = 2667
@@ -50,7 +49,7 @@ function OnGameEvent_survival_round_start( params )
 					local outputTarget = Entities.FindByName( null, outputs.target );
 					if ( !outputTarget )
 						continue;
-					
+
 					if ( outputTarget.GetClassname() == "info_director" && outputs.input.find( "PanicEvent" ) != null )
 						return outputTarget;
 					else
@@ -74,11 +73,11 @@ function OnGameEvent_survival_round_start( params )
 			{
 				if ( !EntityOutputs.HasAction( ent, output ) )
 					continue;
-				
+
 				local target = CheckOutputs( ent, output );
 				if ( (!target) || (target.GetClassname() != "info_director") )
 					continue;
-				
+
 				return ent;
 			}
 		}

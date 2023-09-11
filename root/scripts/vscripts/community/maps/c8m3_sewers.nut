@@ -27,6 +27,8 @@ function DoRoundFixes()
 	make_clip( "_clipextend_alley", "Survivors", 1, "-54 -29 0", "236 29 782", "12774 8347 432" );
 	make_clip( "_clipextend_warehouse1", "Survivors", 1, "-270 -753 -43", "290 799 372", "10742 7529 843" );
 	make_clip( "_clipextend_warehouse2", "Survivors", 1, "-787 -413 0", "909 403 372", "11795 7941 800" );
+	make_clip( "_commentary_washerwindow", "Survivors", 1, "-4 -161 -301", "4 33 301", "12704 7036 499" );
+	make_clip( "_commentary_clipgap_gasfence", "Survivors", 1, "-36 -76 -444", "36 76 444", "12964 5828 764" );
 	make_trigduck( "_duckqol_warehousevent", "-9 -26 -28", "9 26 28", "12712 8148 304" );
 
 	make_clip(	"_gasstationroof_TMP",		"Survivors",	1,	"0 -794 0",		"503 0 700",		"12186 6694 324" );
@@ -69,7 +71,6 @@ function DoRoundFixes()
 
 		EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_shortcut_booster_TMP*:Kill::0:-1" );
 	}
-
 	if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
@@ -125,7 +126,7 @@ function DoRoundFixes()
 		make_clip( "_waterworks_collision", "SI Players", 1, "-41 -245 0", "32 247 110", "12761 7407 857" );
 		make_ladder( "_ladder_brickapartment_cloned_unusedmercyback", "11899.5 12470 232", "-460 -6825 112" );
 		make_ladder( "_ladder_gasstationfence_cloned_warehousepipe", "11904 8299.5 161", "959 -2392 14" );
-		make_ladder( "_ladder_overturnedsemiB_cloned_nodrawfence", "12930.5 5831 90", "-2546 3593 511", "0 -14.27 -5", "0.96 -0.27 0" );
+		make_ladder( "_ladder_overturnedsemiB_cloned_nodrawfence", "12930.5 5831 90", "-2530 3526 511", "0 -14 -5", "0.97 -0.24 0" );
 		make_ladder( "_ladder_overturnedsemiT_cloned_sewerdropB", "14128 8198 -476", "-2795 -2229 688" );
 		make_ladder( "_ladder_sewerup1_cloned_uppershafts", "12735 10083 -348", "278 445 88" );
 		make_ladder( "_ladder_sewerup2_cloned_uppershafts", "12735 10083 -348", "278 933 88" );
@@ -151,7 +152,7 @@ function DoRoundFixes()
 
 		con_comment( "VIS:\tInfected ladder \"_scissormini\" parented to its pipe to force render." );
 
-		make_ladder( "_ladder_scissormini_cloned_sewerdropB", "14128 8198 -476", "26197 15730 852.2", "0 -180 0", "0 -1 0" );
+		make_ladder( "_ladder_scissormini_cloned_sewerdropB", "14128 8198 -476", "26197 15730 860.2", "0 -180 0", "0 -1 0" );
 		EntFire( g_UpdateName + "_ladder_scissormini_cloned_sewerdropB", "SetParent", g_UpdateName + "_ladder_scissormini_pipeT" );
 
 		con_comment( "LOGIC:\tGas Station explosion will spawn a new Infected ladder." );

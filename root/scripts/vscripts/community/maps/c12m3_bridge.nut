@@ -32,7 +32,6 @@ function DoRoundFixes()
 
 		patch_spawninfront( "7136 -11876 394", "0 -164 -24", "800 4 134" );
 	}
-
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -41,7 +40,6 @@ function DoRoundFixes()
 
 		patch_spawninfront( "7136 -11876 394", "0 -164 -24", "800 4 134" );
 	}
-
 	if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );

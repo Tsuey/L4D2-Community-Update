@@ -6,6 +6,7 @@ PrecacheModel( "models/props_vehicles/van.mdl" );
 PrecacheModel( "models/props_vehicles/van_glass.mdl" );
 PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
 PrecacheModel( "models/props_trainstation/pole_384connection001a.mdl" );
+PrecacheModel( "models/props_crates/static_crate_40.mdl" );
 
 function DoRoundFixes()
 {
@@ -17,6 +18,9 @@ function DoRoundFixes()
 
 	make_prop( "dynamic", "_omg_valve_wrongwayc", "models/props_vehicles/van.mdl", "8815 2888 10", "0 45 3", "shadow_no" );
 	make_prop( "dynamic", "_omg_valve_wrongwayg", "models/props_vehicles/van_glass.mdl", "8815 2888 10", "0 45 3", "shadow_no" );
+	make_prop( "dynamic", "_commentary_propladder_crate_a", "models/props_crates/static_crate_40.mdl", "7517 3280 828", "0 346.5 0", "shadow_no" );
+	make_prop( "dynamic", "_commentary_propladder_crate_b", "models/props_crates/static_crate_40.mdl", "7517 3235 828", "0 90 0", "shadow_no" );
+	make_prop( "dynamic", "_commentary_propladder_crate_c", "models/props_crates/static_crate_40.mdl", "7517 3235 868", "0 0 0", "shadow_no" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -32,7 +36,6 @@ function DoRoundFixes()
 		make_trighurt( "_finalstreet_trighurtb", "Survivor", "-1753 -823 0", "59 935 32", "8261 4759 196" );
 		make_trighurt( "_finalstreet_trighurtc", "Survivor", "-781 -361 0", "359 599 32", "9101 4969 196" );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_finalstreet_trighurt*:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( 8616, 4320, 140 ), 1 ) );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -41,7 +44,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_survival_electricgod", "Survivors", 1, "-40 -28 0", "79 43 273", "8328 3196 783" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

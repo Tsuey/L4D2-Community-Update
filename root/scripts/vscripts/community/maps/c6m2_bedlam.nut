@@ -25,12 +25,13 @@ function DoRoundFixes()
 	make_clip( "_ghostgrief_noio_gate2", "Everyone", 1, "-3 -39 0", "3 39 32", "5187 5445 -950" );
 	make_clip( "_booster_electricalbox", "Survivors", 1, "-28 -5 -20", "32 5 836", "917 3163 -4" );
 	make_clip( "_booster_acunit", "Survivors", 1, "-64 -32 0", "64 32 721", "743 3135 111" );
-	make_clip( "_dispsteps_smoother1", "Everyone", 1, "-95 -104 -4", "150 104 4", "2553 -936 -186", "33.5 0 0" );
-	make_clip( "_dispsteps_smoother2", "Everyone", 1, "-95 -104 -4", "135 104 4", "2201 -936 -58", "33.5 0 0" );
+	make_clip( "_dispsteps_smoother1", "Everyone", 1, "-95 -104 -4", "150 104 4", "2553 -936 -185", "34 0 0" );
+	make_clip( "_dispsteps_smoother2", "Everyone", 1, "-95 -104 -4", "135 104 4", "2201 -936 -57", "34 0 0" );
 	make_clip( "_plankescape_smoother", "Everyone", 1, "-82 -30 0", "143 31 8", "190 2976 120", "45 0 0" );
 	make_clip( "_permstuck_orangefence", "Everyone", 1, "-32 -32 0", "32 32 64", "2188 1856 -64" );
 	make_clip( "_booster_awningnlights", "Survivors", 1, "-124 -41 0", "129 56 762", "1264 3705 8" );
 	make_clip( "_nav_bagselecbox", "Survivors", 1, "-7 -34 0", "4 28 822", "636 2243 -70" );
+	make_clip( "_commentary_minifinale_clip", "Survivors", 1, "-4 -64 -80", "4 64 80", "2544 5288 -1000" );
 	make_trigduck( "_duckqol_poolhallwin", "-2 -34 -46.5", "4 34 46.5", "1480 986.4 38.5" );
 	make_trigduck( "_duckqol_missingpipe", "-117 -40 -28", "117 40 28", "1824 1528 -164" );
 
@@ -44,6 +45,9 @@ function DoRoundFixes()
 
 		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
 
+		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
+
+		EntFire( "button_minifinale", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_minifinale_clip:Kill::0:-1" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -54,7 +58,6 @@ function DoRoundFixes()
 		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
 
 		// MESS == make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1093 -3406 -40", "1759 2002 382", "581 3150 387" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -63,10 +66,11 @@ function DoRoundFixes()
 		make_brush( "_losfix_strangebalcony",	"-400 -2 -8",	"240 2 8",	"1552 1854 344" );
 		make_brush( "_losfix_van1",		"-72 -1 -8",	"72 1 8",	"535 4275 -153" );
 		make_brush( "_losfix_van2",		"-72 -1 -8",	"72 1 8",	"1592 4299 -153" );
+		make_clip( "_ladderqol_forkliftvines", "SI Players", 1, "-32 -38 -4", "32 38 4", "1276 2870 -160", "-40 -20 0" );
 		make_ladder( "_ladder_barplankqolB_cloned_barelecbox", "421 1994 136", "2394 2455 -256", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_barplankqolT_cloned_barelecbox", "421 1994 136", "2394 2455 0", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_crawfishelecbox_cloned_sucktheheads", "2080 -836 168", "4138 -1342 0", "0 180 0", "0 1 0" );
-		make_ladder( "_ladder_forkliftvines_cloned_startfenceback", "2408 -1284 -64", "-1130 4196 -48" );
+		make_ladder( "_ladder_forkliftvines_cloned_vinefence", "1320 2864 -108" "2636 5750 0", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
 		make_ladder( "_ladder_pipesfencefront_cloned_pipesfenceback", "2384 1566 1", "4757 3130 0", "0 180 0", "-1 0 0" );
 		make_ladder( "_ladder_poolhalldropleft_cloned_poolhalldropright", "1113 1308 -94.8019", "250 0 0" );

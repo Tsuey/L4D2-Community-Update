@@ -733,7 +733,7 @@ Rule ItemDonorCoachGambler
 
 Response ItemDonorMechanicGambler
 {
-	scene "scenes/Gambler/ThanksEllis01.vcd" predelay ".2,.5" then mechanic YouAreWelcome foo:0 0 //Thanks killer.
+	scene "scenes/Gambler/ThanksEllis01.vcd" predelay "2,2.5" then mechanic YouAreWelcome foo:0 0 //Thanks killer.
 }
 Rule ItemDonorMechanicGambler
 {
@@ -745,7 +745,7 @@ Rule ItemDonorMechanicGambler
 
 Response ItemDonorProducerGambler
 {
-	scene "scenes/Gambler/ThanksRochelle01.vcd" predelay ".2,.5" then producer YouAreWelcome foo:0 0 //Thanks Ro.
+	scene "scenes/Gambler/ThanksRochelle01.vcd" predelay "2,2.5" then producer YouAreWelcome foo:0 0 //Thanks Ro.
 }
 Rule ItemDonorProducerGambler
 {
@@ -757,9 +757,9 @@ Rule ItemDonorProducerGambler
 
 Response ItemDonorBikerGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then biker YouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd"  //Thanks, greaseball!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then biker YouAreWelcome foo:0 0 //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0 //Shit, thanks!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay "2,2.5" //Thanks, greaseball!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0 //Thanks, pal!
 }
 Rule ItemDonorBikerGambler
 {
@@ -771,9 +771,9 @@ Rule ItemDonorBikerGambler
 
 Response ItemDonorTeenGirlGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd" predelay ".2,.5" then teengirl YouAreWelcome foo:0 0 //Thanks, Zoey!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay ".2,.5" then teengirl YouAreWelcome foo:0 0 //Hey thanks, babe!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay ".2,.5" then teengirl YouAreWelcome foo:0 0 //Got it, thank you!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd" predelay "2,2.5" then teengirl YouAreWelcome foo:0 0 //Thanks, Zoey!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay "2,2.5" then teengirl YouAreWelcome foo:0 0 //Hey thanks, babe!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay "2,2.5" then teengirl YouAreWelcome foo:0 0 //Got it, thank you!
 }
 Rule ItemDonorTeenGirlGambler
 {
@@ -785,8 +785,8 @@ Rule ItemDonorTeenGirlGambler
 
 Response ItemDonorManagerGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then manager YouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then manager YouAreWelcome foo:0 0 //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay "2,2.5" then manager YouAreWelcome foo:0 0 //Shit, thanks!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then manager YouAreWelcome foo:0 0 //Thanks, pal!
 }
 Rule ItemDonorManagerGambler
 {
@@ -798,9 +798,9 @@ Rule ItemDonorManagerGambler
 
 Response ItemDonorNamVetGambler
 {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay ".2,.5" then namvet YouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay ".2,.5" then namvet YouAreWelcome foo:0 0 //Thanks, pal!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay ".2,.5" then namvet YouAreWelcome foo:0 0 //Got it, thank you!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay "2,2.5" then namvet YouAreWelcome foo:0 0 //Shit, thanks!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "2,2.5" then namvet YouAreWelcome foo:0 0 //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay "2,2.5" then namvet YouAreWelcome foo:0 0 //Got it, thank you!
 }
 Rule ItemDonorNamVetGambler
 {
@@ -1295,7 +1295,7 @@ Response c1m4startelevatorGambler
 }
 Rule c1m4startelevatorGambler
 {
-	criteria Conceptc1m4startelevator IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	criteria Conceptc1m4startelevator IsGambler IsMechanicAlive AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Talk:1:0,ElevatorTimer:1:25"
 	applycontexttoworld
 	Response c1m4startelevatorGambler
@@ -1400,16 +1400,14 @@ Rule c2m3_DownHoleGambler
 	Response c2m3_DownHoleGambler
 }
 
-Response c2m3CoasterEndGambler
+Response c2m3CoasterEndResponseGambler
 {
 	scene "scenes/Gambler/WorldC2M3B22.vcd"  //Alarm's off!
 }
-Rule c2m3CoasterEndGambler
+Rule c2m3CoasterEndResponseGambler
 {
-	criteria Conceptc2m3CoasterEnd IsGambler AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "_auto_Alarm:2:0"
-	applycontexttoworld
-	Response c2m3CoasterEndGambler
+	criteria Conceptc2m3CoasterEndResponse IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response c2m3CoasterEndResponseGambler
 }
 
 Response C2M3CoasterRunGoGambler
@@ -1422,16 +1420,14 @@ Rule C2M3CoasterRunGoGambler
 	Response C2M3CoasterRunGoGambler
 }
 
-Response C2M3CoasterStartGambler
+Response C2M3CoasterStartResponseGambler
 {
 	scene "scenes/Gambler/MiscDirectional35.vcd"  then mechanic _c2m3_howcool foo:0 1.0 //I hit it!
 }
-Rule C2M3CoasterStartGambler
+Rule C2M3CoasterStartResponseGambler
 {
-	criteria Conceptc2m3CoasterStart IsGambler AutoIsNotScavenge AutoIsNotSurvival
-	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
-	applycontexttoworld
-	Response C2M3CoasterStartGambler
+	criteria Conceptc2m3CoasterStartResponse IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response C2M3CoasterStartResponseGambler
 }
 
 Response c2m3SpotIncendiaryGambler
@@ -2283,12 +2279,11 @@ Rule C5GoingToDieGambler
 
 Response C5M5GoingToDieGambler
 {
-	norepeat
 	scene "scenes/Gambler/WorldC5MGoingToDie02.vcd"  //I have not come this far to die now.
 }
 Rule C5M5GoingToDieGambler
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsGambler IsOnThirdStrike IsNotSaidGoingToDieC5M5 IsTalk IsTalkGambler IsNotComplainBlock ChanceToFire30Percent IsWorldTalkGambler IsNotInStartArea IsNotInCheckpoint IsMapc5m5_bridge _auto_NotSpottedVehicle
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsGambler IsOnThirdStrike IsNotSaidGoingToDieC5M5 IsTalk IsTalkGambler IsNotComplainBlock ChanceToFire30Percent IsWorldTalkGambler IsNotInStartArea IsNotInCheckpoint IsMapc5m5_bridge _auto_IsFinaleStartedV2
 	ApplyContext "IsComplain:1:25,TalkGambler:1:8,SaidGoingToDieC5M5:1:0"
 	forceweight 200
 	Response C5M5GoingToDieGambler
@@ -2467,7 +2462,6 @@ Response C5M3AlarmFieldNagsGambler
 {
 	norepeat
 	scene "scenes/Gambler/World215.vcd"  //Do not shoot any of the cars!
-	scene "scenes/Gambler/World216.vcd"  //What a nightmare.
 	scene "scenes/Gambler/WorldC5M3B16.vcd"  then self C5M3AlarmFieldNags01 foo:0 0.1 //Do you still smell sewer?
 	scene "scenes/Gambler/WorldC5M3B20.vcd"  //Careful. Carefuuulll.
 }
@@ -3301,6 +3295,7 @@ Rule C5M5_GateDownGambler
 
 Response C5M5_saferoom001Gambler
 {
+	scene "scenes/Gambler/WorldC5M5B02.vcd" then self IntroEnd foo:0 0.1 //Oh yeah.
 	scene "scenes/Gambler/WorldC5M5B05.vcd"  then any C5M5_saferoom005 foo:0 0.1 //Or they're gonna line us up against a wall and shoot us.
 }
 Rule C5M5_saferoom001Gambler
@@ -3311,7 +3306,6 @@ Rule C5M5_saferoom001Gambler
 
 Response C5M5_saferoom003Gambler
 {
-	scene "scenes/Gambler/WorldC5M5B02.vcd" then self IntroEnd foo:0 0.1 //Oh yeah.
 	scene "scenes/Gambler/WorldC5M5B03.vcd" then self IntroEnd foo:0 0.1 //[chuckles] Allright, let's go.
 	scene "scenes/Gambler/WorldC5M5B04.vcd" then self IntroEnd foo:0 0.1 //[chuckles] Okay, allright, let's go.
 }
@@ -3482,7 +3476,7 @@ Response C5M5RescueStartGambler
 }
 Rule C5M5RescueStartGambler
 {
-	criteria ConceptFinalVehicleSpotted IsGambler IsMapc5m5_bridge _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsGambler IsMapc5m5_bridge IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C5M5RescueStartGambler
@@ -3576,7 +3570,7 @@ Response PlayerC5M5TruckGambler
 }
 Rule PlayerC5M5TruckGambler
 {
-	criteria ConceptC5M5Truck IsGambler IsNotSaidC5M5Truck IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler IsNotZombiePresentTank _auto_IsFinaleStarted AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptC5M5Truck IsGambler IsNotSaidC5M5Truck IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro _auto_IsFinaleStarted AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "SaidC5M5Truck:1:0"
 	applycontexttoworld
 	Response PlayerC5M5TruckGambler
@@ -4473,7 +4467,7 @@ Response c6m3_outroGambler
 }
 Rule c6m3_outroGambler
 {
-	criteria Conceptc6m3_outro3 IsGambler isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent FromIsBiker
+	criteria Conceptc6m3_outro3 IsGambler isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroGambler
 }
@@ -4484,7 +4478,7 @@ Response c6m3_outroEllisGambler
 }
 Rule c6m3_outroEllisGambler
 {
-	criteria Conceptc6m3_outro3 IsGambler IsMechanicAlive ChanceToFire50Percent IsNotIncapacitated isC6m3_port IsNotVersus FromIsBiker
+	criteria Conceptc6m3_outro3 IsGambler IsMechanicAlive ChanceToFire50Percent IsNotIncapacitated isC6m3_port IsNotVersus HasAFrom
 	forceweight 5
 	Response c6m3_outroEllisGambler
 }
@@ -4496,7 +4490,7 @@ Response c6m3_outroZoeyOutroGambler
 }
 Rule c6m3_outroZoeyOutroGambler
 {
-	criteria Conceptc6m3_outroL4D1011a IsGambler IsNotIncapacitated FromIsMechanic
+	criteria Conceptc6m3_outroL4D1011a IsGambler IsNotIncapacitated HasAFrom
 	Response c6m3_outroZoeyOutroGambler
 }
 
@@ -5046,8 +5040,8 @@ Response SurvivorSpottedArmoredC5M1Gambler
 }
 Rule SurvivorSpottedArmoredC5M1Gambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidArmoredWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeArmored IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c5m1_waterfront IsNotSaidArmoredWarn SawFirstArmored IsNotSpeakingWeight0
+	ApplyContext "SaidArmoredWarn:1:20,SawArmored:++1"
 	applycontexttoworld
 	Response SurvivorSpottedArmoredC5M1Gambler
 }
@@ -5084,7 +5078,7 @@ Rule SurvivorSpottedBoomerGambler
 
 Rule SurvivorSpottedBoomerAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerGambler
@@ -5116,7 +5110,7 @@ Rule SurvivorSpottedBoomerC1M1Gambler
 
 Rule SurvivorSpottedBoomerAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Gambler
@@ -5154,7 +5148,7 @@ Rule SurvivorSpottedBoomerC1M2Gambler
 
 Rule SurvivorSpottedBoomerAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowBoomer IsNotSurvival
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedBoomerC1M1Gambler
@@ -5176,13 +5170,12 @@ Rule SurvivorSpottedCedaGambler
 
 Response SurvivorSpottedCedaC1M1Gambler
 {
-	norepeat
 	scene "scenes/Gambler/SeeHazmat02.vcd"  //Guess those suits don't stop bites.
 }
 Rule SurvivorSpottedCedaC1M1Gambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel IsNotSpeakingWeight0
-	ApplyContext "SaidCedaWarn:1:0"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeCeda IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidCedaWarn ismap_c1m1_hotel SawFirstHazmat IsNotSpeakingWeight0
+	ApplyContext "SaidCedaWarn:1:20,SawHazmat:++1"
 	applycontexttoworld
 	Response SurvivorSpottedCedaC1M1Gambler
 }
@@ -5204,7 +5197,7 @@ Rule SurvivorSpottedChargerGambler
 
 Rule SurvivorSpottedChargerAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger  IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerGambler
@@ -5233,7 +5226,7 @@ Rule SurvivorSpottedChargerC1M1Gambler
 
 Rule SurvivorSpottedChargerAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerC1M1Gambler
@@ -5259,7 +5252,7 @@ Rule SurvivorSpottedChargerC1M2Gambler
 
 Rule SurvivorSpottedChargerAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowCharger IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowCharger IsNotSurvival
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedChargerC1M1Gambler
@@ -5271,8 +5264,8 @@ Response SurvivorSpottedClownC2M2Gambler
 }
 Rule SurvivorSpottedClownC2M2Gambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated Ismap_c2m2 IsNotSaidClownWarn IsNotSpeakingWeight0
-	ApplyContext "SaidClownWarn:1:0,SawClowns:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated Ismap_c2m2 IsNotSaidClownWarn SawFirstClown IsNotSpeakingWeight0
+	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
 	applycontexttoworld
 	Response SurvivorSpottedClownC2M2Gambler
 }
@@ -5287,7 +5280,7 @@ Response SurvivorSpottedClownGambler
 Rule SurvivorSpottedClownGambler
 {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeClown IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidClownWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidClownWarn:1:20,SawClowns:++1"
+	ApplyContext "SaidClownWarn:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedClownGambler
 }
@@ -5329,7 +5322,7 @@ Rule SurvivorSpottedHunterGambler
 
 Rule SurvivorSpottedHunterAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterGambler
@@ -5358,7 +5351,7 @@ Rule SurvivorSpottedHunterC1M1Gambler
 
 Rule SurvivorSpottedHunterAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterC1M1Gambler
@@ -5384,7 +5377,7 @@ Rule SurvivorSpottedHunterC1M2Gambler
 
 Rule SurvivorSpottedHunterAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowHunter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowHunter IsNotSurvival
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedHunterC1M1Gambler
@@ -5410,12 +5403,11 @@ Rule SurvivorSpottedInfectedGambler
 Response SurvivorSpottedJimmyGambler
 {
 	scene "scenes/Gambler/ReactionNegative07.vcd"  //Holy Shit!
-	scene "scenes/Gambler/WorldC2M1B03.vcd"  //God DAMN you, Jimmy Gibbs, Jr.
 }
 Rule SurvivorSpottedJimmyGambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidJimmyWarn IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidJimmyWarn:1:3"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeJimmy IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated SawJimmyGibbs IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SawJimmyGibbs:++1"
 	applycontexttoworld
 	Response SurvivorSpottedJimmyGambler
 }
@@ -5436,7 +5428,7 @@ Rule SurvivorSpottedJockeyGambler
 
 Rule SurvivorSpottedJockeyAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyGambler
@@ -5464,7 +5456,7 @@ Rule SurvivorSpottedJockeyC1M1Gambler
 
 Rule SurvivorSpottedJockeyAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyC1M1Gambler
@@ -5491,7 +5483,7 @@ Rule SurvivorSpottedJockeyC1M2Gambler
 
 Rule SurvivorSpottedJockeyAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowJockey IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowJockey IsNotSurvival
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedJockeyC1M1Gambler
@@ -5502,7 +5494,6 @@ Response SurvivorSpottedMudmenGambler
 	norepeat
 	scene "scenes/Gambler/SeeMudmen01.vcd"  //Mudders!
 	scene "scenes/Gambler/SeeMudmen02.vcd"  //Mudders!
-	scene "scenes/Gambler/SeeMudmen03.vcd"  //Watch out, Mudmen!
 	scene "scenes/Gambler/SeeMudmen04.vcd"  //Mudders!
 }
 Rule SurvivorSpottedMudmenGambler
@@ -5513,12 +5504,16 @@ Rule SurvivorSpottedMudmenGambler
 	Response SurvivorSpottedMudmenGambler
 }
 
+Response SurvivorSpottedMudmenC3M2Gambler
+{
+	scene "scenes/Gambler/SeeMudmen03.vcd"  //Watch out, Mudmen!
+}
 Rule SurvivorSpottedMudmenC3M2Gambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp IsNotSpeakingWeight0
-	ApplyContext "SaidMudmenWarn:1:0,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidMudmenWarn ismapc3m2_swamp SawFirstMudMen IsNotSpeakingWeight0
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
 	applycontexttoworld
-	Response SurvivorSpottedMudmenGambler
+	Response SurvivorSpottedMudmenC3M2Gambler
 }
 
 Response SurvivorSpottedMudmen2Gambler
@@ -5527,8 +5522,8 @@ Response SurvivorSpottedMudmen2Gambler
 }
 Rule SurvivorSpottedMudmen2Gambler
 {
-	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidMudmenWarn SawManyMudMen IntensityUnder50 IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1"
+	criteria ConceptPlayerWarnSpecial IsSpecialTypeMudmen IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated IsNotSaidMudmenWarn SawManyMudMen SickofMudMen IntensityUnder50 IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidMudmenWarn:1:20,SawMudMen:++1,SickOfMudMen:++1"
 	applycontexttoworld
 	Response SurvivorSpottedMudmen2Gambler
 }
@@ -5550,7 +5545,7 @@ Rule SurvivorSpottedSmokerGambler
 
 Rule SurvivorSpottedSmokerAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerGambler
@@ -5577,7 +5572,7 @@ Rule SurvivorSpottedSmokerC1Gambler
 
 Rule SurvivorSpottedSmokerAlsoC1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated C1M1orC1M2 NoKnowSmoker IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated C1M1orC1M2 NoKnowSmoker IsNotSurvival
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSmokerC1Gambler
@@ -5605,7 +5600,7 @@ Rule SurvivorSpottedSpitterGambler
 
 Rule SurvivorSpottedSpitterAlsoGambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterGambler
@@ -5633,7 +5628,7 @@ Rule SurvivorSpottedSpitterC1M1Gambler
 
 Rule SurvivorSpottedSpitterAlsoC1M1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m1_hotel
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1M1Gambler
@@ -5659,7 +5654,7 @@ Rule SurvivorSpottedSpitterC1M2Gambler
 
 Rule SurvivorSpottedSpitterAlsoC1M2Gambler
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowSpitter IsNotSurvival
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated ismap_c1m2_streets NoKnowSpitter IsNotSurvival
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response SurvivorSpottedSpitterC1M1Gambler
@@ -5758,6 +5753,57 @@ Rule SurvivorSpottedWitch2C1Gambler
 }
 
 //--------------------------------------------------------------------------------------------------------------
+// Fault - Greed
+//--------------------------------------------------------------------------------------------------------------
+Response GreedGambler
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule GreedGambler
+{
+	criteria IsFaultConcept Wasteful IsGambler
+	Response GreedGambler
+}
+
+Response GreedResponseGambler
+{
+	scene "scenes/Gambler/ReactionNegative05.vcd"  //Bullshit!
+	scene "scenes/Gambler/ReactionNegative11.vcd"  //Oh bullshit!
+	scene "scenes/Gambler/ReactionNegative17.vcd"  //Bullshit!
+	scene "scenes/Gambler/ReactionNegative22.vcd"  //Oh bullshit!
+	scene "scenes/Gambler/ReactionNegative24.vcd"  //Is this some kind of sick joke?
+	scene "scenes/Gambler/ReactionNegative25.vcd"  //Is this some kind of sick joke?
+	scene "scenes/Gambler/ReactionNegative27.vcd"  //Kiss my ass.
+	scene "scenes/Gambler/ReactionNegative28.vcd"  //Ass.
+	scene "scenes/Gambler/ReactionNegative29.vcd"  //Asshat.
+	scene "scenes/Gambler/ReactionNegative31.vcd"  //Asshole.
+	scene "scenes/Gambler/ReactionNegative32.vcd"  //Assclown.
+	scene "scenes/Gambler/ReactionNegative33.vcd"  //Dumbshit.
+	scene "scenes/Gambler/ReactionNegative35.vcd"  //Kiss my ass.
+	scene "scenes/Gambler/ReactionNegative36.vcd"  //Kiss my ass.
+	scene "scenes/Gambler/ReactionNegative37.vcd"  //What an assclown.
+	scene "scenes/Gambler/ReactionNegative38.vcd"  //Dumbshit.
+}
+
+Rule GreedResponseToMechanicGambler
+{
+	criteria ConceptGreedResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler FromIsMechanic SubjectIsMechanic IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseGambler
+}
+
+Rule GreedResponseToCoachGambler
+{
+	criteria ConceptGreedResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler FromIsCoach SubjectIsCoach IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseGambler
+}
+
+Rule GreedResponseToProducerGambler
+{
+	criteria ConceptGreedResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler FromIsProducer SubjectIsProducer IsOnThirdStrike NoHasFirstAidKit
+	Response GreedResponseGambler
+}
+
+//--------------------------------------------------------------------------------------------------------------
 // Not Rosetta - Responses
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerAlertGiveItemGambler
@@ -5771,7 +5817,7 @@ Response PlayerAlertGiveItemGambler
 }
 Rule PlayerAlertGiveItemGambler
 {
-	criteria ConceptPlayerAlertGiveItem IsNotCoughing IsGambler IsTalk IsTalkGambler NotInIntenseCombat IsWorldTalkGambler
+	criteria ConceptPlayerAlertGiveItem IsNotCoughing IsGambler IsTalk IsTalkGambler NotInIntenseCombat NotTankAggro IsWorldTalkGambler
 	Response PlayerAlertGiveItemGambler
 }
 
@@ -5782,7 +5828,7 @@ Response PlayerAlertGiveItemC1Gambler
 }
 Rule PlayerAlertGiveItemC1Gambler
 {
-	criteria ConceptPlayerAlertGiveItem IsNotCoughing IsGambler IsTalk IsTalkGambler NotInIntenseCombat IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
+	criteria ConceptPlayerAlertGiveItem IsNotCoughing IsGambler IsTalk IsTalkGambler NotInIntenseCombat NotTankAggro IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
 	Response PlayerAlertGiveItemC1Gambler
 }
 
@@ -5794,13 +5840,7 @@ Response PlayerAlertGiveItemCombatGambler
 }
 Rule PlayerAlertGiveItemCombatGambler
 {
-	criteria ConceptPlayerAlertGiveItem IsNotCoughing IsGambler IsTalk IsTalkGambler InIntenseCombat IsWorldTalkGambler
-	Response PlayerAlertGiveItemCombatGambler
-}
-
-Rule PlayerAlertGiveItemTankGambler
-{
-	criteria ConceptPlayerAlertGiveItem IsNotCoughing IsGambler IsTalk IsTalkGambler IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkGambler
+	criteria ConceptPlayerAlertGiveItem IsNotCoughing IsGambler IsTalk IsTalkGambler ActiveCombatSituation IsWorldTalkGambler
 	Response PlayerAlertGiveItemCombatGambler
 }
 
@@ -5846,7 +5886,7 @@ Response PlayerFriendlyFireGambler
 }
 Rule PlayerFriendlyFireGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler IsWorldTalkGambler IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireGambler
 }
@@ -5858,7 +5898,7 @@ Response PlayerFriendlyFire2Gambler
 }
 Rule PlayerFriendlyFire2Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsTalk IsTalkGambler IsOnThirdStrike IsWorldTalkGambler IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsTalk IsTalkGambler IsOnThirdStrike IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFire2Gambler
 }
@@ -5875,7 +5915,7 @@ Response PlayerFriendlyFireC1Gambler
 }
 Rule PlayerFriendlyFireC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireC1Gambler
 }
@@ -5887,7 +5927,7 @@ Response PlayerFriendlyFireFromCoachGambler
 }
 Rule PlayerFriendlyFireFromCoachGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromCoachGambler
 }
@@ -5898,7 +5938,7 @@ Response PlayerFriendlyFireFromCoachNBGambler
 }
 Rule PlayerFriendlyFireFromCoachNBGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsCoach ChanceToFire50Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromCoachNBGambler
 }
@@ -5909,7 +5949,7 @@ Response PlayerFriendlyFireFromMechanicGambler
 }
 Rule PlayerFriendlyFireFromMechanicGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromMechanicGambler
 }
@@ -5922,7 +5962,7 @@ Response PlayerFriendlyFireFromMechanicC1Gambler
 }
 Rule PlayerFriendlyFireFromMechanicC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromMechanicC1Gambler
 }
@@ -5934,14 +5974,14 @@ Response PlayerFriendlyFireFromMechanicNBC1Gambler
 }
 Rule PlayerFriendlyFireFromMechanicNBC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromMechanicNBC1Gambler
 }
 
 Rule PlayerFriendlyFireFromMechanicNBGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsMechanic ChanceToFire50Percent IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromMechanicGambler
 }
@@ -5955,7 +5995,7 @@ Response PlayerFriendlyFireFromProducerGambler
 }
 Rule PlayerFriendlyFireFromProducerGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsProducer ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsProducer ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromProducerGambler
 }
@@ -5966,7 +6006,7 @@ Response PlayerFriendlyFireFromProducerC1Gambler
 }
 Rule PlayerFriendlyFireFromProducerC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsProducer ChanceToFire50Percent IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkGambler SubjectIsProducer ChanceToFire50Percent IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames NotTankAggro
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromProducerC1Gambler
 }
@@ -5979,7 +6019,7 @@ Response PlayerFriendlyFireFromProducerNBGambler
 }
 Rule PlayerFriendlyFireFromProducerNBGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsProducer ChanceToFire50Percent IsWorldTalkGambler IsNotZombiePresentTank isNotmap_c1m1_hotel
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler SubjectIsProducer ChanceToFire50Percent IsWorldTalkGambler NotTankAggro isNotmap_c1m1_hotel isNotmap_c1m2_streets _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireFromProducerNBGambler
 }
@@ -5990,7 +6030,7 @@ Response PlayerFriendlyFireNoBulletGambler
 }
 Rule PlayerFriendlyFireNoBulletGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireNoBulletGambler
 }
@@ -6002,7 +6042,7 @@ Response PlayerFriendlyFireNoBulletC1Gambler
 }
 Rule PlayerFriendlyFireNoBulletC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler IsNotZombiePresentTank ismap_c1m1_hotel NoKnowNames
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro ismap_c1m1_hotel isNotmap_c1m2_streets NoKnowNames 
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireNoBulletC1Gambler
 }
@@ -6019,7 +6059,7 @@ Response PlayerFriendlyFireTankGambler
 }
 Rule PlayerFriendlyFireTankGambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsZombiePresentTank IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsWorldTalkGambler isNotmap_c1m1_hotel _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankGambler
 }
@@ -6031,7 +6071,7 @@ Response PlayerFriendlyFireTankC1Gambler
 }
 Rule PlayerFriendlyFireTankC1Gambler
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsZombiePresentTank IsSaidTankWarn2 IsNotIncapacitated IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsGambler IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkGambler IsTankAggro IsSaidTankWarn2 IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
 	ApplyContext "FriendlyFire:1:10"
 	Response PlayerFriendlyFireTankC1Gambler
 }
@@ -6060,7 +6100,7 @@ Response PlayerToTheRescueRosGambler
 }
 Rule PlayerToTheRescueRosGambler
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerToTheRescueRosGambler
 }
 
@@ -6078,7 +6118,7 @@ Response SurvivorTauntResponseGambler
 }
 Rule SurvivorTauntResponseGambler
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response SurvivorTauntResponseGambler
 }
 
@@ -6189,7 +6229,7 @@ Response PlayerReloadingC502RunGambler
 }
 Rule PlayerReloadingC502RunGambler
 {
-	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsMapc5m2_park IsTalk IsTalkGambler IsWorldTalkGambler IsNotZombiePresentTank ChanceToFire50Percent _auto_IsAlarm
+	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsMapc5m2_park IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro ChanceToFire50Percent _auto_IsAlarm
 	Response PlayerReloadingC502RunGambler
 }
 
@@ -6205,7 +6245,7 @@ Response PlayerReloadingTankGambler
 }
 Rule PlayerReloadingTankGambler
 {
-	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler IsNotSaidReloadingTank IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets _auto_NotSpottedVehicle
+	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler IsNotSaidReloadingTank IsTankAggro IsSaidTankWarn2 IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets _auto_NotSpottedVehicle
 	ApplyContext "SaidReloadingTank:1:10,SaidTankWarn2:1:20"
 	applycontexttoworld
 	Response PlayerReloadingTankGambler
@@ -6226,7 +6266,7 @@ Response PlayerReloadingTankC1Gambler
 }
 Rule PlayerReloadingTankC1Gambler
 {
-	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler IsNotSaidReloadingTank IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
+	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler IsNotSaidReloadingTank IsTankAggro IsSaidTankWarn2 IsWorldTalkGambler C1M1orC1M2 IsNotSurvival
 	ApplyContext "SaidReloadingTank:1:10,SaidTankWarn2:1:20"
 	applycontexttoworld
 	Response PlayerReloadingTankC1Gambler
@@ -6459,7 +6499,7 @@ Response SurvivorReloadingGambler
 }
 Rule SurvivorReloadingGambler
 {
-	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkGambler ChanceToFire50Percent IsNotZombiePresentTank NotInIntenseCombat _auto_NotGamblerInWitchville _auto_NotAlarmV2 _auto_ConcertNotLive _auto_NotSpottedVehicle
+	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkGambler ChanceToFire50Percent NotTankAggro NotInIntenseCombat _auto_NotGamblerInWitchville _auto_NotAlarmV2 _auto_ConcertNotLive _auto_NotSpottedVehicle
 	Response SurvivorReloadingGambler
 }
 
@@ -6473,7 +6513,7 @@ Response SurvivorReloadingIntenseGambler
 }
 Rule SurvivorReloadingIntenseGambler
 {
-	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkGambler ChanceToFire50Percent IsNotZombiePresentTank InIntenseCombat _auto_NotGamblerInWitchville _auto_NotAlarmV2 _auto_ConcertNotLive _auto_NotSpottedVehicle
+	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkGambler ChanceToFire50Percent NotTankAggro InIntenseCombat _auto_NotGamblerInWitchville _auto_NotAlarmV2 _auto_ConcertNotLive _auto_NotSpottedVehicle
 	Response SurvivorReloadingIntenseGambler
 }
 
@@ -6485,7 +6525,7 @@ Response SurvivorReloadingC4M2Gambler
 }
 Rule SurvivorReloadingC4M2Gambler
 {
-	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkGambler ChanceToFire50Percent IsWitchPresent IsWarnHeardWitch ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsGamblerInWitchville
+	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsGambler IsNotIncapacitated IsTalk IsTalkGambler RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkGambler ChanceToFire50Percent IsWitchPresent IsWarnHeardWitch ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro _auto_IsGamblerInWitchville
 	Response SurvivorReloadingC4M2Gambler
 }
 
@@ -6537,6 +6577,13 @@ Rule PlayerHelpIncappedLethargicGambler
 	Response PlayerHelpIncappedLethargicGambler
 }
 
+//Rule PlayerHelpIncappedWitchGambler
+//{
+//	criteria ConceptPlayerHelp IsGambler IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -7763,7 +7810,7 @@ Response PlayerRemarkC3M2PlaneDoorNagaGambler
 }
 Rule PlayerRemarkC3M2PlaneDoorNagaGambler
 {
-	criteria ConceptTalkIdle IsGambler IsNotCoughing IsTalk IsTalkGambler IsSaidC3M2PlaneDoorNag ismapc3m2_swamp IsNotSaidC3M2OpenDoor IsNotZombiePresentTank AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler IsNotSpeakingWeight0 _auto_NotTimerLockA _auto_NotTimerLockGambler
+	criteria ConceptTalkIdle IsGambler IsNotCoughing IsTalk IsTalkGambler IsSaidC3M2PlaneDoorNag ismapc3m2_swamp IsNotSaidC3M2OpenDoor NotTankAggro AutoIsNotScavenge AutoIsNotSurvival IsWorldTalkGambler IsNotSpeakingWeight0 _auto_NotTimerLockA _auto_NotTimerLockGambler
 	ApplyContext "_auto_TimerLockA:1:20,_auto_TimerLockGambler:1:40,Talk:1:1.377"
 	applycontexttoworld
 	Response PlayerRemarkC3M2PlaneDoorNagaGambler
@@ -9429,7 +9476,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownGambler
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownGambler
 {
-	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat NotInIntenseCombat NotTankAggro IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownGambler
@@ -9445,7 +9492,7 @@ Response PlayerRemarkWorldC6M2_Phase2DownIntenseGambler
 }
 Rule PlayerRemarkWorldC6M2_Phase2DownIntenseGambler
 {
-	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing NotInCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 IntensityOver75 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	criteria ConceptRemark IsGambler IsWorldC6M2_Phase2Down IsNotSaidWorldC6M2_Phase2Down IsNotCoughing ActiveCombatSituation IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear200 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
 	ApplyContext "SaidWorldC6M2_Phase2Down:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldC6M2_Phase2DownIntenseGambler
@@ -9640,7 +9687,7 @@ Response WorldC6M3LossGambler
 }
 Rule WorldC6M3LossZoeyGambler
 {
-	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsTeenGirlNear400 IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsTeenGirl IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossGambler
@@ -9648,7 +9695,23 @@ Rule WorldC6M3LossZoeyGambler
 
 Rule WorldC6M3LossFrancisGambler
 {
-	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsBikerNear400 IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	criteria ConceptPlayerLook IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto Isc6m3_port SubjectIsBiker IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
+	applycontexttoworld
+	Response WorldC6M3LossGambler
+}
+
+Rule WorldC6M3LossZoey2Gambler
+{
+	criteria ConceptPlayerLookHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto ThePassing3DS SubjectIsTeenGirl IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
+	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
+	applycontexttoworld
+	Response WorldC6M3LossGambler
+}
+
+Rule WorldC6M3LossFrancis2Gambler
+{
+	criteria ConceptPlayerLookHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto ThePassing3DS SubjectIsBiker IsWorldTalkGambler _auto_SawC6M3Bill _auto_GamblerSawC6M3Bill
 	ApplyContext "_auto_C6M3Bill:2:0,Talk:1:15"
 	applycontexttoworld
 	Response WorldC6M3LossGambler
@@ -9816,7 +9879,7 @@ Response PlayerHurryUpGambler
 }
 Rule PlayerHurryUpGambler
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerHurryUp IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerHurryUpGambler
 }
 
@@ -9830,7 +9893,7 @@ Response PlayerHurryUpC4M2Gambler
 }
 Rule PlayerHurryUpC4M2Gambler
 {
-	criteria ConceptPlayerHurryUp IsGambler IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkGambler ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead IsNotZombiePresentTank IsWorldTalkGambler _auto_IsGamblerInWitchville
+	criteria ConceptPlayerHurryUp IsGambler IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkGambler ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro IsWorldTalkGambler _auto_IsGamblerInWitchville
 	Response PlayerHurryUpC4M2Gambler
 }
 
@@ -9860,7 +9923,7 @@ Response PlayerLeadOnGambler
 }
 Rule PlayerLeadOnGambler
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerLeadOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerLeadOnGambler
 }
 
@@ -9874,7 +9937,7 @@ Response PlayerMoveOnGambler
 }
 Rule PlayerMoveOnGambler
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerMoveOn IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerMoveOnGambler
 }
 
@@ -9888,6 +9951,18 @@ Rule PlayerStayTogetherGambler
 {
 	criteria ConceptPlayerStayTogether IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response PlayerStayTogetherGambler
+}
+
+Response PlayerStayTogetherSaferoomC2M2Gambler
+{
+	scene "scenes/Gambler/WorldC2M225.vcd"  //Keep running, keep running.
+	scene "scenes/Gambler/WorldC2M226.vcd"  //Run into the tunnel of love!
+	scene "scenes/Gambler/WorldC2M228.vcd"  //Go go go.  Cut in line.
+}
+Rule PlayerStayTogetherSaferoomC2M2Gambler
+{
+	criteria ConceptPlayerStayTogether ismap_c2m2 IsNotCoughing IsGambler IsInSafeSpot IsTalk IsTalkGambler SomeoneOutsideSafeSpot IsWorldTalkGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response PlayerStayTogetherSaferoomC2M2Gambler
 }
 
 Response PlayerWatchOutBehindGambler
@@ -9922,7 +9997,7 @@ Response PlayerAskReadyGambler
 }
 Rule PlayerAskReadyGambler
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerAskReadyGambler
 }
 
@@ -9934,7 +10009,7 @@ Response PlayerAskReadyC1Gambler
 }
 Rule PlayerAskReadyC1Gambler
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames
+	criteria ConceptPlayerAskReady IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler ismap_c1m1_hotel NoKnowNames IsNotSpeaking
 	Response PlayerAskReadyC1Gambler
 }
 
@@ -9948,7 +10023,7 @@ Response PlayerImWithYouGambler
 }
 Rule PlayerImWithYouGambler
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerImWithYouGambler
 }
 
@@ -9974,7 +10049,7 @@ Response PlayerLaughGambler
 }
 Rule PlayerLaughGambler
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerLaughGambler
 }
 
@@ -10007,7 +10082,7 @@ Response PlayerNiceJobResponseGambler
 }
 Rule PlayerNiceJobResponseGambler
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNiceJobResponseGambler
 }
 
@@ -10028,7 +10103,7 @@ Response PlayerNoGambler
 }
 Rule PlayerNoGambler
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerNo IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNoGambler
 }
 
@@ -10091,7 +10166,7 @@ Response PlayerSorryGambler
 }
 Rule PlayerSorryGambler
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerSorryGambler
 }
 
@@ -10106,7 +10181,7 @@ Response PlayerSorryFFGambler
 }
 Rule PlayerSorryFFGambler
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateGambler IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerSorryFFGambler
 }
 
@@ -10119,7 +10194,7 @@ Response PlayerThanksGambler
 }
 Rule PlayerThanksGambler
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerThanks IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerThanksGambler
 }
 
@@ -10152,7 +10227,7 @@ Response PlayerYesGambler
 }
 Rule PlayerYesGambler
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerYes IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerYesGambler
 }
 
@@ -10230,7 +10305,7 @@ Response YouAreWelcomeMechanicGambler
 }
 Rule YouAreWelcomeMechanicGambler
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsNotSpeaking IsGambler IsTalk IsTalkGambler FromIsMechanic TimeSinceGroupInCombat05 ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	criteria ConceptYouAreWelcome IsNotCoughing IsNotSpeaking IsGambler IsTalk IsTalkGambler FromIsMechanic TimeSinceGroupInCombat05 ChanceToFire30Percent IsWorldTalkGambler isNotmap_c1m1_hotel isNotmap_c1m2_streets
 	Response YouAreWelcomeMechanicGambler
 }
 
@@ -10338,7 +10413,7 @@ Response PlayerNegativeGambler
 }
 Rule PlayerNegativeGambler
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNegativeGambler
 }
 
@@ -10480,31 +10555,31 @@ Response PlayerHeardBoomerC1Gambler
 }
 Rule PlayerHeardBoomerC1Gambler
 {
-	criteria ConceptPlayerHeardBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowBoomer
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowBoomer IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardHunterC1Gambler
 {
-	criteria ConceptPlayerHeardHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowHunter
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowHunter IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardSmokerC1Gambler
 {
-	criteria ConceptPlayerHeardSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSmoker
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSmoker IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardChargerC1Gambler
 {
-	criteria ConceptPlayerHeardCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowCharger
+	criteria ConceptPlayerHeardCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowCharger IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }
 
 Rule PlayerHeardSpitterC1Gambler
 {
-	criteria ConceptPlayerHeardSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSpitter
+	criteria ConceptPlayerHeardSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowSpitter IsNotSurvival
 	Response PlayerHeardBoomerC1Gambler
 }	
 
@@ -10520,7 +10595,7 @@ Response PlayerHeardJockeyC1Gambler
 }
 Rule PlayerHeardJockeyC1Gambler
 {
-	criteria ConceptPlayerHeardJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowJockey
+	criteria ConceptPlayerHeardJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NoKnowJockey IsNotSurvival
 	Response PlayerHeardJockeyC1Gambler
 }
 
@@ -10569,7 +10644,7 @@ Response PlayerHurrahGambler
 }
 Rule PlayerHurrahGambler
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerHurrah IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerHurrahGambler
 }
 
@@ -10581,7 +10656,7 @@ Response PlayerWarnCarefulGambler
 }
 Rule PlayerWarnCarefulGambler
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response PlayerWarnCarefulGambler
 }
 
@@ -10889,7 +10964,7 @@ Response C4M2LockTheDoorCheckPointGambler
 }
 Rule C4M2LockTheDoorCheckPointGambler
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsGambler IsInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsGambler IsInSafeSpot IsNotAlone IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a AutoIsNotScavenge AutoIsNotSurvival
 	Response C4M2LockTheDoorCheckPointGambler
 }
 
@@ -11099,7 +11174,7 @@ Rule PlayerGrabbedByJockeyC1Gambler
 //}
 //Rule GrenadeCarefulGambler
 //{
-//	criteria ConceptGrenadeCareful IsNotCoughing IsGambler IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkGambler IsWorldTalkGambler IsNotZombiePresentTank
+//	criteria ConceptGrenadeCareful IsNotCoughing IsGambler IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkGambler IsWorldTalkGambler NotTankAggro
 //	Response GrenadeCarefulGambler
 //}
 
@@ -11169,6 +11244,40 @@ Rule PlayerIncapacitatedInitialGambler
 	ApplyContext "TalkGambler:1:2"
 	Response PlayerIncapacitatedInitialGambler
 }
+
+//Response PlayerIncapacitatedInitialWitchGambler
+//{
+//	scene "scenes/Gambler/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[pain noise - loud major pain]
+//}
+//Rule PlayerIncapacitatedInitialWitchGambler
+//{
+//	criteria ConceptPlayerIncapacitated IsGambler IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkGambler:1:2"
+//	forceweight 30
+//	Response PlayerIncapacitatedInitialWitchGambler
+//}
+
+//Response WitchDownedGambler
+//{
+//	scene "scenes/Gambler/GrabbedBySmoker01.vcd"  //no, No, No, NO, NOOOOOOO!!!!!!!!!
+//	scene "scenes/Gambler/GrabbedBySmoker01a.vcd"  //No, No!
+//	scene "scenes/Gambler/GrabbedBySmoker04.vcd"  //no, No,  No, NO, NO!!!!!!!!
+//	scene "scenes/Gambler/GrabbedBySmoker05.vcd"  //no, No,  No, NO!!!!!!!!
+//	scene "scenes/Gambler/GrabbedBySmoker05a.vcd"  //NO!
+//	scene "scenes/Gambler/GrabbedBySmoker05b.vcd"  //NO, NO!
+//	scene "scenes/Gambler/GrabbedBySmoker05c.vcd"  //NO!!!!!!!!
+//}
+//Rule WitchDownedGambler
+//{
+//	criteria ConceptWitchDowned IsGambler IsWitchPresent IsWitchAggro
+//	Response WitchDownedGambler
+//}
 
 Response PlayerIncapacitatedInitialC1M2Gambler
 {
@@ -11287,7 +11396,7 @@ Rule PlayerKillTankNotHealthyGambler
 
 Response PlayerKillTankConfirmationC1M2Gambler
 {
-	scene "scenes/Gambler/Blank.vcd" then mechanic C1M2TankInfo foo:0 0.1 //
+	print " " then mechanic C1M2TankInfo foo:0 0.1 //
 }
 Rule PlayerKillTankConfirmationC1M2Gambler
 {
@@ -12378,7 +12487,7 @@ Response SurvivorNearFinaleGambler
 }
 Rule SurvivorNearFinaleGambler
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response SurvivorNearFinaleGambler
@@ -12386,7 +12495,7 @@ Rule SurvivorNearFinaleGambler
 
 Rule SurvivorNearFinaleC1M4Gambler
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler ismap_c1m4_atrium AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler ismap_c1m4_atrium AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -12398,7 +12507,7 @@ Response SurvivorNearFinaleC2M5Gambler
 }
 Rule SurvivorNearFinaleC2M5Gambler
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler ismap_c2m5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler ismap_c2m5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response SurvivorNearFinaleC2M5Gambler
@@ -12410,7 +12519,7 @@ Response SurvivorNearFinaleC3M4Gambler
 }
 Rule SurvivorNearFinaleC3M4Gambler
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler ismapc3m4_plantation AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response SurvivorNearFinaleC3M4Gambler
@@ -12423,7 +12532,7 @@ Response SurvivorNearFinaleC4M5Gambler
 }
 Rule SurvivorNearFinaleC4M5Gambler
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler isc4m5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler isc4m5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response SurvivorNearFinaleC4M5Gambler
@@ -12431,7 +12540,7 @@ Rule SurvivorNearFinaleC4M5Gambler
 
 Rule SurvivorNearFinaleC5M5Gambler
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler IsMapc5m5_bridge AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler IsMapc5m5_bridge AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -12439,7 +12548,7 @@ Rule SurvivorNearFinaleC5M5Gambler
 
 Rule SurvivorNearFinaleC6M3Gambler
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler Isc6m3_port AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsGambler IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkGambler IsNotIncapacitated IsWorldTalkGambler Isc6m3_port AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -12466,8 +12575,7 @@ Response SurvivorPouncedByHunterGambler
 }
 Rule SurvivorPouncedByHunterGambler
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
-	ApplyContext "TalkGambler:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response SurvivorPouncedByHunterGambler
 }
 
@@ -12514,6 +12622,19 @@ Rule SurvivorVocalizeBackUpGambler
 	Response SurvivorVocalizeBackUpGambler
 }
 
+Response SurvivorVocalizeBackUpC4M2Gambler
+{
+	scene "scenes/Gambler/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Gambler/BackUpQuiet02.vcd"  //Everyone back.
+	scene "scenes/Gambler/BackUpQuiet03.vcd"  //Let's get back.
+	scene "scenes/Gambler/BackUpQuiet04.vcd"  //Back up, back up.
+}
+Rule SurvivorVocalizeBackUpC4M2Gambler
+{
+	criteria ConceptPlayerBackUp IsGambler IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro _auto_IsGamblerInWitchville
+	Response SurvivorVocalizeBackUpC4M2Gambler
+}
+
 Response SurvivorVocalizeEmphaticGoGambler
 {
 	scene "scenes/Gambler/EmphaticGo01.vcd"  //Go!
@@ -12528,6 +12649,20 @@ Rule SurvivorVocalizeEmphaticGoGambler
 {
 	criteria ConceptPlayerEmphaticGo IsGambler IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkGambler IsWorldTalkGambler
 	Response SurvivorVocalizeEmphaticGoGambler
+}
+
+Response SurvivorVocalizeEmphaticGoC4M2Gambler
+{
+	scene "scenes/Gambler/EmphaticGoQuiet01.vcd"  //Everybody keep moving.
+	scene "scenes/Gambler/EmphaticGoQuiet02.vcd"  //Just go.
+	scene "scenes/Gambler/EmphaticGoQuiet03.vcd"  //Just go. Go.
+	scene "scenes/Gambler/EmphaticGoQuiet04.vcd"  //Don't stop, don't stop.
+	scene "scenes/Gambler/EmphaticGoQuiet05.vcd"  //Keep moving.
+}
+Rule SurvivorVocalizeEmphaticGoC4M2Gambler
+{
+	criteria ConceptPlayerEmphaticGo IsGambler IsNotCoughing IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkGambler IsWorldTalkGambler ismap_c4m2_sugarmill_a IsNotSaidSafeSpotAhead NotTankAggro _auto_IsGamblerInWitchville
+	Response SurvivorVocalizeEmphaticGoC4M2Gambler
 }
 
 Response SurvivorVocalizeGoingToDieGambler
@@ -12623,7 +12758,7 @@ Response SurvivorVocalizeWaitHereGambler
 }
 Rule SurvivorVocalizeWaitHereGambler
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptPlayerWaitHere IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotSpeaking
 	Response SurvivorVocalizeWaitHereGambler
 }
 
@@ -12761,49 +12896,26 @@ Rule DoubleDeath2MechanicGambler
 
 Response TeamKillGambler
 {
-	scene "scenes/Gambler/TeamKillAccident03.vcd" predelay "1,1.75" //What?!!?  This is hard enough without you helping the freaks!
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule TeamKillGambler
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:4"
+	criteria IsFaultConcept IsGambler ShouldBeVoteKicked
+	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response TeamKillGambler
 }
 
-Response TeamKillFromMechanicGambler
-{
-	scene "scenes/Gambler/DLC1_C6M2_BridgeCollapse01.vcd" predelay "1,1.75" //Ellis, what did you just do?
-	scene "scenes/Gambler/DLC1_C6M2_FinalWater02.vcd" predelay "1,1.75" //I hate you, Ellis!
-}
-Rule TeamKillFromMechanicGambler
-{
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsSaidFaultFriendlyFireMechanic IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:2"
-	applycontexttoworld
-	Response TeamKillFromMechanicGambler
-}
 
-Response TeamKillFromProducerGambler
+Response TeamKillResponseGambler
 {
-	scene "scenes/Gambler/ReactionNegative30.vcd" predelay "1,1.75" //Bitch.
+	scene "scenes/Gambler/TeamKillAccident03.vcd" //What?!!?  This is hard enough without you helping the freaks!
 }
-Rule TeamKillFromProducerGambler
+Rule TeamKillResponseGambler
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsSaidFaultFriendlyFireProducer IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:2"
-	applycontexttoworld
-	Response TeamKillFromProducerGambler
+	criteria ConceptTeamKillResponse IsGambler IsNotCoughing IsTalk IsTalkGambler IsWorldTalkGambler
+	Response TeamKillResponseGambler
 }
-
-Rule TeamKillFromTeenGirlGambler
-{
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsGambler IsNotSaidSomeoneDied IsTalk IsTalkGambler IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireGambler IsSaidFaultFriendlyFireTeenGirl IsWorldTalkGambler
-	ApplyContext "SaidSomeoneDied:1:10,TalkGambler:1:2"
-	applycontexttoworld
-	Response TeamKillFromProducerGambler
-}
-
 
 //--------------------------------------------------------------------------------------------------------------
 // Vocalizer - Pickups
@@ -12927,7 +13039,7 @@ Response SurvivorPickupAdrenalineGambler
 }
 Rule SurvivorPickupAdrenalineGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAdrenalineGambler
 }
@@ -12941,14 +13053,14 @@ Response SurvivorPickupAutoShotgunGambler
 }
 Rule SurvivorPickupAutoShotgunGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAutoShotgunGambler
 }
 
 Rule SurvivorPickupSpasShotgunGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpShotgun_spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpShotgun_spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupAutoShotgunGambler
 }
@@ -12962,7 +13074,7 @@ Response SurvivorPickupbaseball_batGambler
 }
 Rule SurvivorPickupbaseball_batGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpbaseball_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpbaseball_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupbaseball_batGambler
 }
@@ -12975,7 +13087,7 @@ Response SurvivorPickupbaseShovelGambler
 }
 Rule SurvivorPickupbaseShovelGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpShovel IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpShovel IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupbaseShovelGambler
 }
@@ -12986,7 +13098,7 @@ Response SurvivorPickupchainsawGambler
 }
 Rule SurvivorPickupchainsawGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpchainsaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpchainsaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupchainsawGambler
 }
@@ -13000,7 +13112,7 @@ Response SurvivorPickupcricket_batGambler
 }
 Rule SurvivorPickupcricket_batGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupcricket_batGambler
 }
@@ -13016,7 +13128,7 @@ Response SurvivorPickupCricketBatGambler
 }
 Rule SurvivorPickupCricketBatGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupCricketBatGambler
 }
@@ -13031,7 +13143,7 @@ Response SurvivorPickupKnifeGambler
 }
 Rule SurvivorPickupKnifeGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpKnife IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea isNotmap_c1m1_hotel _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpKnife IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupKnifeGambler
 }
@@ -13045,7 +13157,7 @@ Response SurvivorPickupCrowBarGambler
 }
 Rule SurvivorPickupCrowBarGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupCrowBarGambler
 }
@@ -13057,7 +13169,7 @@ Response SurvivorPickupDefibrillatorGambler
 }
 Rule SurvivorPickupDefibrillatorGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpDefibrillator ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpDefibrillator ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupDefibrillatorGambler
 }
@@ -13068,7 +13180,7 @@ Response SurvivorPickupelectric_guitarGambler
 }
 Rule SurvivorPickupelectric_guitarGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpelectric_guitar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpelectric_guitar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupelectric_guitarGambler
 }
@@ -13080,7 +13192,7 @@ Response SurvivorPickupFireAxeGambler
 }
 Rule SurvivorPickupFireAxeGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpFireAxe IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpFireAxe IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupFireAxeGambler
 }
@@ -13095,7 +13207,7 @@ Response SurvivorPickupFirstAidKitGambler
 }
 Rule SurvivorPickupFirstAidKitGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler IsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupFirstAidKitGambler
 }
@@ -13123,7 +13235,7 @@ Response SurvivorPickupFirstSMGGambler2
 }
 Rule SurvivorPickupFirstSMGGambler2
 {
-	criteria ConceptPlayerPickupFirstSMG2 IsGambler IsWorldTalkGambler ChanceToFire80Percent
+	criteria ConceptPlayerPickupFirstSMG2 IsGambler IsWorldTalkGambler
 	Response SurvivorPickupFirstSMGGambler2
 }
 
@@ -13180,7 +13292,7 @@ Response SurvivorPickupFryingPanGambler
 }
 Rule SurvivorPickupFryingPanGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpFryingPan IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpFryingPan IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupFryingPanGambler
 }
@@ -13192,7 +13304,7 @@ Response SurvivorPickupGolfCLubGambler
 }
 Rule SurvivorPickupGolfCLubGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpGolfClub  IsNotSpeaking  ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpGolfClub  IsNotSpeaking  ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupGolfCLubGambler
 }
@@ -13204,7 +13316,7 @@ Response SurvivorPickupGrenadeLauncherGambler
 }
 Rule SurvivorPickupGrenadeLauncherGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpGrenadeLauncher NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpGrenadeLauncher NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupGrenadeLauncherGambler
 }
@@ -13230,28 +13342,28 @@ Response SurvivorPickupHuntingRifleGambler
 }
 Rule SurvivorPickupHuntingRifleGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleGambler
 }
 
 Rule SurvivorPickupMilitarySniperGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleGambler
 }
 
 Rule SurvivorPickupScoutSniperGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleGambler
 }
 
 Rule SurvivorPickupAWPSniperGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupHuntingRifleGambler
 }
@@ -13264,7 +13376,7 @@ Response SurvivorPickupIncendiaryAmmoGambler
 }
 Rule SurvivorPickupIncendiaryAmmoGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupIncendiaryAmmoGambler
 }
@@ -13278,7 +13390,7 @@ Response SurvivorPickupKatanaGambler
 }
 Rule SurvivorPickupKatanaGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpKatana IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpKatana IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupKatanaGambler
 }
@@ -13293,7 +13405,7 @@ Response SurvivorPickupPitchforkGambler
 }
 Rule SurvivorPickupPitchforkGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPitchfork IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPitchfork IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPitchforkGambler
 }
@@ -13304,7 +13416,7 @@ Response SurvivorPickupLaserSightsAlwaysGambler
 }
 Rule SurvivorPickupLaserSightsAlwaysGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupLaserSightsAlwaysGambler
 }
@@ -13317,7 +13429,7 @@ Response SurvivorPickupM60Gambler
 }
 Rule SurvivorPickupM60Gambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupM60Gambler
 }
@@ -13329,7 +13441,7 @@ Response SurvivorPickupMacheteGambler
 }
 Rule SurvivorPickupMacheteGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpMachete IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpMachete IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMacheteGambler
 }
@@ -13341,7 +13453,7 @@ Response SurvivorPickupMagnumGambler
 }
 Rule SurvivorPickupMagnumGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpMagnum IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpMagnum IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMagnumGambler
 }
@@ -13353,7 +13465,7 @@ Response SurvivorPickupMolotovGambler
 }
 Rule SurvivorPickupMolotovGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupMolotovGambler
 }
@@ -13367,7 +13479,7 @@ Response SurvivorPickupPainPillsGambler
 }
 Rule SurvivorPickupPainPillsGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler IsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPainPillsGambler
 }
@@ -13379,7 +13491,7 @@ Response SurvivorPickupPipeBombGambler
 }
 Rule SurvivorPickupPipeBombGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPipeBombGambler
 }
@@ -13392,14 +13504,14 @@ Response SurvivorPickupPumpShotgunGambler
 }
 Rule SurvivorPickupPumpShotgunGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPumpShotgunGambler
 }
 
 Rule SurvivorPickupChromeShotgunGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupPumpShotgunGambler
 }
@@ -13413,28 +13525,28 @@ Response SurvivorPickupRifleGambler
 }
 Rule SurvivorPickupRifleGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle IsNotSpeaking IsInSafeSpot ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleGambler
 }
 
 Rule SurvivorPickupDesertRifleGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleGambler
 }
 
 Rule SurvivorPickupAK47RifleGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleGambler
 }
 
 Rule SurvivorPickupSG552RifleGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupRifleGambler
 }
@@ -13446,7 +13558,7 @@ Response SurvivorPickupSecondPistolGambler
 }
 Rule SurvivorPickupSecondPistolGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSecondPistolGambler
 }
@@ -13458,21 +13570,21 @@ Response SurvivorPickupSMGGambler
 }
 Rule SurvivorPickupSMGGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGGambler
 }
 
 Rule SurvivorPickupSilencedSMGGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGGambler
 }
 
 Rule SurvivorPickupMP5SMGGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSMGGambler
 }
@@ -13485,7 +13597,7 @@ Response SurvivorPickuptonfaGambler
 }
 Rule SurvivorPickuptonfaGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUptonfa IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUptonfa IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickuptonfaGambler
 }
@@ -13496,7 +13608,7 @@ Response SurvivorPickupUpExplosiveAmmoGambler
 }
 Rule SurvivorPickupUpExplosiveAmmoGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpExplosiveAmmo ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpExplosiveAmmo ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpExplosiveAmmoGambler
 }
@@ -13507,7 +13619,7 @@ Response SurvivorPickupUpExplosivesGambler
 }
 Rule SurvivorPickupUpExplosivesGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpExplosivesGambler
 }
@@ -13518,7 +13630,7 @@ Response SurvivorPickupUpIncendiaryGambler
 }
 Rule SurvivorPickupUpIncendiaryGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpIncendiaryGambler
 }
@@ -13530,7 +13642,7 @@ Response SurvivorPickupVomitJarGambler
 }
 Rule SurvivorPickupVomitJarGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpVomitJar IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NotPickedUpItem IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpVomitJar IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NotPickedUpItem IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30,TalkGambler:1:3"
 	Response SurvivorPickupVomitJarGambler
 }
@@ -13600,7 +13712,7 @@ Response PlayerHealOtherGambler
 }
 Rule PlayerHealOtherGambler
 {
-	criteria ConceptPlayerHealingOther IsNotCoughing IsGambler IsTalk IsTalkGambler NotInIntenseCombat IsWorldTalkGambler
+	criteria ConceptPlayerHealingOther IsNotCoughing IsGambler IsTalk IsTalkGambler NotInIntenseCombat NotTankAggro IsWorldTalkGambler
 	ApplyContext "TalkGambler:1:5"
 	Response PlayerHealOtherGambler
 }
@@ -13615,7 +13727,7 @@ Response PlayerHealOtherC1Gambler
 }
 Rule PlayerHealOtherC1Gambler
 {
-	criteria ConceptPlayerHealingOther IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NotInIntenseCombat IsNotSurvival
+	criteria ConceptPlayerHealingOther IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2 NotInIntenseCombat NotTankAggro IsNotSurvival
 	ApplyContext "TalkGambler:1:5"
 	Response PlayerHealOtherC1Gambler
 }
@@ -13630,16 +13742,8 @@ Response PlayerHealOtherCombatGambler
 }
 Rule PlayerHealOtherCombatGambler
 {
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsGambler IsTalk IsTalkGambler InIntenseCombat IsWorldTalkGambler
+	criteria ConceptPlayerHealingOther IsNotCoughing  IsGambler IsTalk IsTalkGambler ActiveCombatSituation IsWorldTalkGambler
 	ApplyContext "TalkGambler:1:5"
-	Response PlayerHealOtherCombatGambler
-}
-
-Rule PlayerHealOtherTankGambler
-{
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsGambler IsTalk IsTalkGambler IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkGambler
-	ApplyContext "TalkGambler:1:5"
-	forceweight 30
 	Response PlayerHealOtherCombatGambler
 }
 
@@ -13652,7 +13756,7 @@ Response PlayerLedgeSaveGambler
 }
 Rule PlayerLedgeSaveGambler
 {
-	criteria ConceptPlayerLedgeSave IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerLedgeSave IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkGambler:1:5"
 	Response PlayerLedgeSaveGambler
 }
@@ -13693,7 +13797,7 @@ Response PlayerReviveFriendGambler
 }
 Rule PlayerReviveFriendGambler
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsGambler IsTalk IsTalkGambler IsWorldTalkGambler NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkGambler:1:2"
 	Response PlayerReviveFriendGambler
 }
@@ -13751,7 +13855,7 @@ Response PlayerReviveFriendCriticalGambler
 }
 Rule PlayerReviveFriendCriticalGambler
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkGambler:1:5"
 	Response PlayerReviveFriendCriticalGambler
 }
@@ -13767,15 +13871,28 @@ Response PlayerReviveFriendLoudGambler
 }
 Rule PlayerReviveFriendLoudGambler
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsGambler IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsGambler ActiveCombatSituation IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
 	ApplyContext "TalkGambler:1:5"
-	forceweight 30
+	Response PlayerReviveFriendLoudGambler
+}
+
+Rule PlayerLedgeSaveLoudGambler
+{
+	criteria ConceptPlayerLedgeSave IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler ActiveCombatSituation _auto_NotSpottedVehicle
+	ApplyContext "TalkGambler:1:5"
 	Response PlayerReviveFriendLoudGambler
 }
 
 Rule PlayerLedgeSaveCriticalGambler
 {
-	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
+	ApplyContext "TalkGambler:1:5"
+	Response PlayerLedgeSaveGambler
+}
+
+Rule PlayerLedgeSaveCriticalLoudGambler
+{
+	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler ActiveCombatSituation _auto_NotSpottedVehicle
 	ApplyContext "TalkGambler:1:5"
 	Response PlayerLedgeSaveGambler
 }
@@ -13787,7 +13904,7 @@ Response PlayerReviveFriendFFGambler
 }
 Rule PlayerReviveFriendFFGambler
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsGambler IsTalk IsTalkGambler IsShotTeammateGambler IsWorldTalkGambler NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsGambler IsTalk IsTalkGambler IsShotTeammateGambler IsWorldTalkGambler NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkGambler:1:5"
 	forceweight 20
 	Response PlayerReviveFriendFFGambler
@@ -13795,7 +13912,7 @@ Rule PlayerReviveFriendFFGambler
 
 Rule PlayerReviveFriendCriticalFFGambler
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsGambler IsTalk IsTalkGambler IsShotTeammateGambler IsWorldTalkGambler NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsGambler IsTalk IsTalkGambler IsShotTeammateGambler IsWorldTalkGambler NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkCoach:1:5"
 	forceweight 20
 	Response PlayerReviveFriendFFGambler
@@ -13805,25 +13922,10 @@ Rule PlayerReviveFriendCriticalFFGambler
 //--------------------------------------------------------------------------------------------------------------
 // Vocalizer - ZRescue
 //--------------------------------------------------------------------------------------------------------------
-Rule PlayerReviveFriendLoud2Gambler
-{
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsGambler InIntenseCombat IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
-	ApplyContext "TalkGambler:1:5"
-	Response PlayerReviveFriendLoudGambler
-}
-
 Rule PlayerReviveFriendLoudCritGambler
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing  IsGambler InIntenseCombat IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsGambler ActiveCombatSituation IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
 	ApplyContext "TalkGambler:1:5"
-	Response PlayerReviveFriendLoudGambler
-}
-
-Rule PlayerReviveFriendLoudCrit2Gambler
-{
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing  IsGambler IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
-	ApplyContext "TalkGambler:1:5"
-	forceweight 30
 	Response PlayerReviveFriendLoudGambler
 }
 
@@ -15803,7 +15905,7 @@ Rule SurvivorSpottedLaserSightsAutoGambler
 
 Rule SurvivorBotPickupLaserSightsSpottedGambler
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsNotSaidSpotWeapons IsTalk IsTalkGambler IsWorldTalkGambler _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsNotSaidSpotWeapons IsTalk IsTalkGambler IsWorldTalkGambler AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedLaserSightsGambler
@@ -16764,7 +16866,7 @@ Response C13M4SpottedVehicleGambler
 }
 Rule C13M4SpottedVehicleGambler
 {
-	criteria ConceptFinalVehicleSpotted IsGambler ismapc13m4_cutthroatcreek _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsGambler ismapc13m4_cutthroatcreek IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0,_auto_TimerLockA:1:5"
 	applycontexttoworld
 	Response C13M4SpottedVehicleGambler
@@ -16799,10 +16901,34 @@ Rule C13M4InsideVehicleGambler
 //--------------------------------------------------------------------------------------------------------------
 // Generic rules to keep track of contexts for all maps (Unless there's a seperate rule for special cases)
 //--------------------------------------------------------------------------------------------------------------
+Rule CampaignStartGambler
+{
+	criteria ConceptTalkIdle IsGambler IsInStartArea IsChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "Talk:1:60,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:20"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroChapter1Gambler
+{
+	criteria ConceptTalkIdle IsGambler NotInCombat IsInStartArea IsChapter1 IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,CXM1Intro:1:0,_auto_SafeRoomStart:2:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule SafeRoomStartGambler
 {
-	criteria ConceptTalkIdle IsGambler IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	criteria ConceptTalkIdle IsGambler IsInStartArea IsNotChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroGambler
+{
+	criteria ConceptTalkIdle IsGambler NotInCombat IsInStartArea IsNotChapter1 IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response NoResponse
 }

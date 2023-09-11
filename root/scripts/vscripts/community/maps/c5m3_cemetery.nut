@@ -11,7 +11,7 @@ PrecacheModel( "models/props_urban/chimney007.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-24 -4 -28",		"24 4 88",		"3080 1407 222" );
+	make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-48 -7 -208",		"48 7 208",		"3055.5 1410 432" );
 	make_clip(	"_sewer_holed",			"Survivors",	1,	"-4 -40 -44",		"4 40 44",		"5212 -112 -116" );
 	make_clip(	"_sewer_holec",			"Survivors",	1,	"-264 -4 -44",		"264 4 44",		"5968 -452 -116" );
 	make_clip(	"_sewer_holeb",			"Survivors",	1,	"-4 -376 -44",		"4 376 44",		"6532 224 -116" );
@@ -29,13 +29,20 @@ function DoRoundFixes()
 	make_clip(	"_permstuck_jetstrike",		"Everyone",	1,	"-46.5 -27.5 -25",	"46.5 27.5 25",		"6233 -2190 453" );
 	make_clip(	"_permstuck_cemetery",		"Everyone",	1,	"-145 -27 0",		"145 27 1234",		"7453 -6553 95" );
 	make_clip(	"_commonhop_endfence",		"Survivors",	1,	"-64 -4 -44",		"64 4 580",		"9152 -9004 380" );
-	make_clip(	"_stuckwarp_staircase",		"Everyone",	1,	"-32 -4 -64",		"64 4 458",		"3504 2668 182" );
+	make_clip(	"_stuckwarp_staircase",		"Everyone",	1,	"-32 -4 -64",		"64 4 12",		"3504 2668 182" );
 	make_clip(	"_permstuck_dualfence",		"Survivors",	1,	"-28 -445 0",		"28 445 654",		"3421 733 3.1" );
 	make_clip( "_cliprework_pinkhouse", "Survivors", 1, "-386 -270 0", "414 274 320", "3434 4094 360" );
 	make_clip( "_cliprework_perchroof", "Survivors", 1, "-136 -192 0", "136 192 487", "4856 3040 164" );
 	make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469", "2052 2534 160" );
 	make_clip( "_nav_opencrypt", "Survivors", 1, "-26 -47 0", "7 49 1000", "9604 -6659 344" );
 	make_clip( "_nav_cornertree", "Survivors", 1, "-83 -116 0", "97 180 935", "10459 -4981 409" );
+	make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
+	make_clip( "_commentary_nav_parkingtruck_a1", "Survivors", 1, "-8 -82 -8", "94 8 800", "5383 -1373 8" );
+	make_clip( "_commentary_nav_parkingtruck_a2", "Survivors", 1, "-8 -112 -8", "226 8 800", "5480 -1356 164" );
+	make_clip( "_commentary_nav_parkingtruck_b1", "Survivors", 1, "-8 -82 -8", "94 8 800", "5495 -1028 4" );
+	make_clip( "_commentary_nav_parkingtruck_b2", "Survivors", 1, "-8 -112 -8", "226 8 800", "5587 -1015 160" );
+	make_clip( "_commentary_oob_bridgeexplosion", "Everyone", 1, "-1338 -1128 -8", "8 8 857", "6489 -5161 103" );
+	make_clip( "_commentary_clipgap_bridge", "Survivors", 1, "-512 -8 -8", "8 8 735", "6969 -3864 225" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -47,7 +54,10 @@ function DoRoundFixes()
 
 		make_clip( "_nav_brokenhome_shortcuta", "Survivors", 1, "-5 -51 0", "5 66 130", "2301 958 31", "-10 0 0" );
 		make_clip( "_nav_brokenhome_shortcutb", "Survivors", 1, "-5 -51 0", "5 66 130", "2302 1290 31", "-10 0 0" );
-
+		make_clip( "_commentary_shortcut_barricade_a", "Survivors", 1, "-12 -144 -232", "12 144 232", "3821 1937 408" );
+		make_clip( "_commentary_shortcut_barricade_b", "Survivors", 1, "-21 -52 -232", "21 52 232", "3830 1741 408" );
+		make_clip( "_commentary_shortcut_barricade_c", "Survivors", 1, "-21 -52 -232", "21 52 232", "3809 1637 408" );
+		make_clip( "_commentary_shortcut_barricade_d", "Survivors", 1, "-9 -100 -232", "9 100 232", "3794 1492 408" );
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -81,8 +91,8 @@ function DoRoundFixes()
 		make_clip( "_burntbuild_collision15", "SI Players", 1, "-182 -80 -2", "182 80 2", "2243 2796 225", "14 0 13" );
 		make_clip( "_burntbuild_collision16", "SI Players", 1, "-100 -111 0", "115 17 4", "2155 2799 292", "-11 -6 10" );
 		make_clip( "_ladder_onewayshedback_clip", "Everyone", 1, "-17 -6 0", "8 0 141", "7000 -4026 117", "0 21 0" );
-		make_ladder( "_ladder_1stdumpster1_cloned_stuckfencefront", "3420 1168 56.5", "1330 3691 -20", "0 23 0", "0.39 -0.92 0" );
-		make_ladder( "_ladder_1stdumpster2_cloned_stuckfencefront", "3420 1168 56.5", "1071 3581 -20", "0 23 0", "0.39 -0.92 0" );
+		make_ladder( "_ladder_1stdumpster1_cloned_stuckfenceback", "3420 298 56.5", "7052.68 7711.61 -20", "0 203 0", "0.39 -0.92 0" );
+		make_ladder( "_ladder_1stdumpster2_cloned_stuckfenceback", "3420 298 56.5", "6794.68 7601.61 -20", "0 203 0", "0.39 -0.92 0" );
 		make_ladder( "_ladder_1stdumpster3_cloned_stuckfenceback", "3420 298 56.5", "677 4507 -20", "0 23 0", "-0.39 0.92 0" );
 		make_ladder( "_ladder_2nddumpster1_cloned_stuckfenceback", "3420 298 56.5", "-394 1654 -23" );
 		make_ladder( "_ladder_2nddumpster2_cloned_stuckfenceback", "3420 298 56.5", "-114 1654 -23" );
@@ -95,13 +105,13 @@ function DoRoundFixes()
 		make_ladder( "_ladder_elecbox_cloned_largetrailer", "2782 960 80", "663 357 55" );
 		make_ladder( "_ladder_endfenceback_cloned_lastcrypt", "8376 -7562 235", "16249 -16025 -42", "0 -180 0", "0 -1 0" );
 		make_ladder( "_ladder_endfencefront_cloned_lastcrypt", "8376 -7562 235", "-505 -887 -42" );
-		make_ladder( "_ladder_fencecornerleft_cloned_fencebackeastr", "2172 46 55.5", "900 -162 0" );
-		make_ladder( "_ladder_fencecornerright_cloned_fencebacksouthl", "2500 -142 55.5", "-302 655 0" );
+		make_ladder( "_ladder_fencecornerleft_cloned_fencebacflamingo", "2980 -142 55.5", "6010 -273 0", "0 180 0", "0 1 0" );
+		make_ladder( "_ladder_fencecornerright_cloned_fencebackheli", "2172 430 56.5", "4354 910 0", "0 180 0", "1 0 0" );
 		make_ladder( "_ladder_firebarrelroofB_cloned_vandropelecbox", "4462 4992 104", "-1329 609 -8" );
 		make_ladder( "_ladder_firebarrelroofT_cloned_vandropelecbox", "4462 4992 104", "-1063 609 123" );
 		make_ladder( "_ladder_firefence_cloned_mobilehome", "4510 3224 76", "-161 3462 -16" );
-		make_ladder( "_ladder_holefenceback_cloned_firstcrypt", "7022 -4849 197.016", "10303 7146 -124", "0 -105 0", "0.96 -0.26 0" );
-		make_ladder( "_ladder_holefencefront_cloned_firstcrypt", "7022 -4849 197.016", "-2697 -3866 -124", "0 75 0", "-0.96 0.26 0" );
+		make_ladder( "_ladder_holefenceback_cloned_firstcrypt", "7022 -4849 197.016", "10353 7086 -124", "0 -105.5 0", "0.96 -0.26 0" );
+		make_ladder( "_ladder_holefencefront_cloned_firstcrypt", "7022 -4849 197.016", "-2650 -3919 -124", "0 75.5 0", "-0.96 0.26 0" );
 		make_ladder( "_ladder_manholechaintran_cloned_manholeblue", "4374 1576 76.1509", "-5 -1940 -9" );
 		make_ladder( "_ladder_onewayshedback_cloned_firstcrypt", "7022 -4849 197.016", "-2 825 -10" );
 		make_ladder( "_ladder_onewaybackfence_cloned_middlecrypt", "7604.02 -5653.63 184", "-1657.1 1144 -16" );

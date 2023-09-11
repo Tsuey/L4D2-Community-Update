@@ -10,13 +10,20 @@ PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
 PrecacheModel( "models/props_foliage/swamp_shrubwall_block_128_deep.mdl" );
 PrecacheModel( "models/props_urban/fence_cover001_256.mdl" );
 PrecacheModel( "models/props_urban/fence_cover001_64.mdl" );
+PrecacheModel( "models/props_docks/dock02_pole02a.mdl" );
+PrecacheModel( "models/props_urban/porch_light003.mdl" );
+PrecacheModel( "models/props_urban/boat002.mdl" );
+PrecacheModel( "models/props/cs_office/shelves_metal.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_hedge_behindtrains",		"Survivors",	1,	"-532 -120 0",		"800 58 701",		"-11078 8237 320" );
-	make_clip(	"_commonhop_crossing",		"Survivors",	1,	"-99 -260 0",		"99 426 691",		"-1025 4859 332" );
-	make_clip(	"_clipgap_fence",		"Survivors",	1,	"-4 -124 -155",		"4 124 155",		"-11084 7220 428" );
-	make_clip(	"_permstuck_coolingtank",	"Everyone",	1,	"-62 -58 -56",		"21 21 56",		"-10754 8610 216" );
+	make_clip( "_hedge_behindtrains_a",	"Survivors",	1,	"-56 -520 -356",		"56 520 356",		"-10713 7656 668" );
+	make_clip( "_hedge_behindtrains_b",	"Survivors",	1,	"-431 -75 -356",		"431 75 356",		"-10237 8186 668" );
+	make_clip( "_hedge_behindtrains_c",	"Survivors",	1,	"-50.5 -174 -362",		"50.5 174 362",		"-9756.5 8114 662" );
+	make_clip( "_hedge_behindtrains_d",	"Survivors",	1,	"-41 -394 -362",		"41 394 362",		"-9767 7546 662" );
+	make_clip( "_commonhop_crossing",		"Survivors",	1,	"-99 -260 0",		"99 426 691",		"-1025 4859 332" );
+	make_clip( "_clipgap_fence",		"Survivors",	1,	"-4 -68 -376",		"4 68 376",		"-11100 7188 648" );
+	make_clip( "_permstuck_coolingtank",	"Everyone",	1,	"-62 -58 -56",		"21 21 56",		"-10754 8610 216" );
 	make_clip( "_commonhop_coolingtank", "Survivors", 1, "-74 -236 0", "70 156 880", "-6806 7572 144" );
 	make_clip( "_booster_treetop", "Survivors", 1, "-108 -186 0", "108 174 717", "-5696 7348 247" );
 	make_clip( "_chargerassist_trainwheel", "Survivors", 1, "-133 -444 -130", "28 131 765", "-12379 8416 259", "0 -19 0" );
@@ -28,6 +35,15 @@ function DoRoundFixes()
 	make_clip( "_chargerassist_commonhop1", "Survivors", 1, "-155 -16 0", "117 5 864", "-7093 6280 160" );
 	make_clip( "_chargerassist_commonhop2", "Survivors", 1, "-49 -170 0", "63 134 864", "-7093 6452 160", "0 -3 0" );
 	make_clip( "_booster_powerpole", "Survivors", 1, "-9 -8 0", "9 10 582", "-7630 6718 444" );
+	make_clip( "_commentary_booster_crumpstore_a", "Survivors", 1, "-148 -336 -352", "148 336 352", "-6332 6536 672" );
+	make_clip( "_commentary_booster_crumpstore_b", "Survivors", 1, "-43 -147 -352", "43 147 352", "-6523 6352 672" );
+	make_clip( "_commentary_dockprops_poleclip", "Survivors", 1, "-16 -16 -8", "20 20 324", "-5379 6768 -26" );
+	make_clip( "_commentary_dockprops_shelfclip", "Everyone", 1, "-3 -2 -8", "3 2 80", "-5346 6795 -56" );
+	make_clip( "_commentary_dock_ledge", "Everyone", 1, "-8 -17 -46", "8 17 46", "-5374 5998 -18" );
+	make_prop( "dynamic", "_commentary_dockprops_pole", "models/props_docks/dock02_pole02a.mdl", "-5381.1 6767.52 89.1467", "0 0 0", "shadow_no", "solid_yes", "255 255 255", "1800", "2000" );
+	make_prop( "dynamic", "_commentary_dockprops_light", "models/props_urban/porch_light003.mdl", "-5380 6775 277.271", "0 270 0", "shadow_no", "solid_no", "255 255 255", "1000", "1200" );
+	make_prop( "dynamic", "_commentary_dockprops_boat", "models/props_urban/boat002.mdl", "-5411.46 6783.37 88.6317", "61.9321 199.129 4.5769", "shadow_no", "solid_yes", "255 255 255", "1700", "1900" );
+	make_prop( "dynamic", "_commentary_dockprops_shelf", "models/props/cs_office/shelves_metal.mdl", "-5274 6819 40", "-87.3817 282.627 73.4003", "shadow_no", "solid_yes", "255 255 255", "800", "1000" );
 	patch_ladder( "-6084.5 6272 90", "6 0 0" );
 
 	// Tsuey's note: Special thanks to the person who originally complained
@@ -57,7 +73,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_cliprework_jonesroof",	"Survivors",	1,	"-276 -296 -396",	"276 296 396",		"-8304 7216 628" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -71,7 +86,6 @@ function DoRoundFixes()
 		make_clip( "_survival_brushextendc", "Survivors", 1, "-289 -16 0", "439 20 717", "-9471 7496 384" );
 		make_clip( "_nav_pubsign", "Survivors", 1, "-4 -34 0", "4 31 822", "-7264 7167 202" );
 		make_clip( "_nav_trailertree", "Survivors", 1, "-48 -26 0", "78 36 742", "-7742 7721 287" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -117,9 +131,9 @@ function DoRoundFixes()
 		make_ladder( "_ladder_jonesvines_cloned_railroadgate", "-11658 10272 255.354", "3079 -2960 -120" );
 		make_ladder( "_ladder_rightafterchains_cloned_railroadgate", "-11658 10272 255.354", "1539 -1572 -24" );
 		make_ladder( "_ladder_startsemirear_cloned_boardwalkhole", "-551 7596 74", "-9373 2500 172" );
-		make_ladder( "_ladder_startsemitire_cloned_boardwalkhole", "-551 7596 74", "-16047 4401 168", "0 -46 0", "0.69 -0.72 0" );
-		make_ladder( "_ladder_starttrainfront1_cloned_boardwalkhole", "-551 7596 74", "-15700 3747 209", "0 -30 0", "0.87 -0.5 0" );
-		make_ladder( "_ladder_starttrainfront2_cloned_boardwalkhole", "-551 7596 74", "-11159 2086 209", "0 8 0", "1 0.16 0" );
+		make_ladder( "_ladder_startsemitire_cloned_boardwalkhole", "-551 7596 74", "-15948 4312 173.5", "0 315 0", "0.7 -0.7 0" );
+		make_ladder( "_ladder_starttrainfront1_cloned_boatshack", "-6864 6202 110", "-3572.91 13449.39 182", "0 60 0", "0.86 -0.49 0" );
+		make_ladder( "_ladder_starttrainfront2_cloned_boardwalkhole", "-551 7596 74", "-11220 2066 213", "0 7.5 0", "0.99 0.13 0" );
 		make_ladder( "_ladder_starttrainvalve_cloned_starttrainyellow", "-12837 9094 299.0643", "2575 13964 0", "0 49 0", "-0.5 -0.86 0" );
 		make_navblock( "_nav_startshrubwall1", "Everyone", "Apply", "-24 -24 -24", "24 24 24", "-12524 10074 161" );
 		make_navblock( "_nav_startshrubwall2", "Everyone", "Apply", "-48 -16 -32", "48 16 32", "-12588 9075 168" );

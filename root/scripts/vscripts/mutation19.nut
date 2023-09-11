@@ -1,7 +1,6 @@
 //-----------------------------------------------------
 Msg("Activating Mutation 19\n");
 
-
 DirectorOptions <-
 {
 	ActiveChallenge = 1
@@ -12,7 +11,7 @@ DirectorOptions <-
 	cm_AutoSpawnInfectedGhosts = true
 
 	PreferredSpecialDirection = SPAWN_BEHIND_SURVIVORS
-	BehindSurvivorsSpawnDistance = 2000
+	SpawnBehindSurvivorsDistance = 2000
 	TankRunSpawnDelay = 15
 
 	MobMaxPending = 0
@@ -21,7 +20,7 @@ DirectorOptions <-
 	function ConvertZombieClass( iClass )
 	{
 		return 8;
-	}	
+	}
 
 	weaponsToConvert =
 	{
@@ -56,7 +55,7 @@ function OnGameEvent_round_start_post_nav( params )
 				local outputTarget = Entities.FindByName( null, outputs.target );
 				if ( !outputTarget )
 					continue;
-				
+
 				if ( outputs.input == "Unlock" || outputs.input == "Enable" || outputs.input == "SetValueTest" || outputs.input == "MoveToFloor" )
 					return outputTarget;
 				else
@@ -77,12 +76,12 @@ function OnGameEvent_round_start_post_nav( params )
 	{
 		if ( NetProps.GetPropInt( trigger, "m_bAllowIncapTouch" ) == 0 || !EntityOutputs.HasAction( trigger, "OnEntireTeamStartTouch" ) )
 			continue;
-		
+
 		NetProps.SetPropInt( trigger, "m_bAllowIncapTouch", 0 );
 		local target = CheckOutputs( trigger, "OnEntireTeamStartTouch" );
 		if ( !target )
 			continue;
-		
+
 		if ( target.GetClassname() == "logic_relay" )
 		{
 			for ( local button; button = Entities.FindByClassname( button, "func_button" ); )
@@ -113,7 +112,7 @@ function OnGameEvent_round_start_post_nav( params )
 						break;
 					}
 				}
-				
+
 				if ( foundListener )
 				{
 					local nElements = EntityOutputs.GetNumElements( listener, "OnAllTrue" );
@@ -135,7 +134,7 @@ function OnGameEvent_round_start_post_nav( params )
 		local validOutputs = { func_button_timed = "OnTimeUp", func_button = "OnPressed", script_func_button = "OnPressed", prop_door_rotating = "OnOpen" };
 		if ( !target.GetClassname() in validOutputs )
 			continue;
-		
+
 		target.ValidateScriptScope();
 		local targetScope = target.GetScriptScope();
 		targetScope.OverrideTrigger <- trigger;

@@ -4,6 +4,20 @@ devchap( "ALL MODES" );
 
 PrecacheModel( "models/props_rooftop/acvent04.mdl" );
 PrecacheModel( "models/props_industrial/brickpallets.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break01.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break02.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break03.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break04.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break05.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break06.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break07.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break08.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break09.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break10.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break11.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break12.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break13.mdl" );
+PrecacheModel( "models/props_industrial/brickpallets_break14.mdl" );
 
 function DoRoundFixes()
 {
@@ -37,7 +51,6 @@ function DoRoundFixes()
 		// FIXES
 
 		patch_ladder( "-410.09 -4121.79 1386", "15 15 10" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -49,7 +62,6 @@ function DoRoundFixes()
 
 		make_clip( "_shortcut_tanker", "Survivors", 1, "-58 -577 0", "58 271 527", "1092 -3999 1328", "0 27 0" );
 		EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_shortcut_tanker:Kill::0:-1" );
-
 	}
 
 	// FIX: Prevent using water (or ladder) as a cushion to shortcut jump off bridge.

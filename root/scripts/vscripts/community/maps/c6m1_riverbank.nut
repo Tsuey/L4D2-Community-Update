@@ -16,7 +16,7 @@ function DoRoundFixes()
 	make_clip(	"_ghostgrief_tarpledge",	"Survivors",	1,	"-4 -313 -145",		"4 466 1337",		"1148 4257 96" );
 	make_clip(	"_permstuck_tarptree",		"Everyone",	1,	"-17 -69 -17",		"17 17 17",		"1166 3794 191" );
 	make_clip(	"_commonhop_windowsill",	"Survivors",	1,	"-6 -216 0",		"6 216 800",		"539 2861 237" );
-	make_clip(	"_commonhop_awning",		"Survivors",	1,	"-117 -42 -17",		"107 55 2020",		"3824 2666 236" );
+	make_clip(	"_commonhop_awning",		"Survivors",	1,	"-106 -42 -1042",		"107 55 1042",		"3824 2666 1306" );
 	make_clip(	"_curvejump_pixelperfect",	"Survivors",	1,	"-24 -64 -128",		"24 64 128",		"4784 3785 83" );
 	make_clip(	"_permstuck_fence",		"Survivors",	1,	"-24 -48 0",		"24 48 92",		"-1391 1293 247" );
 	make_clip(	"_fence_onea",			"Survivors",	1,	"-450 -21 0",		"345 111 1216",		"96 1425 496" );
@@ -43,6 +43,14 @@ function DoRoundFixes()
 	make_clip( "_cliprework_endwindows2", "Survivors", 1, "-8 -160 0", "8 158 129", "-3911 561 863" );
 	make_clip( "_cliprework_endwindows3", "Survivors", 1, "-8 -161 0", "8 157 128", "-3880 1082 895" );
 	make_clip( "_dispcrouch_caralarm", "Everyone", 1, "-58 -8 0", "58 8 155", "1415 980 357", "0 -39 0" );
+	make_clip( "_commentary_rayfordcollision", "All and Physics", 1, "-57 -92 -76", "57 92 76", "641 3804 164" );
+	make_clip( "_commentary_clipgap_river_a", "Everyone", 1, "-128 -1552 -1592", "128 1552 1592", "-1408 5136 1504" );
+	make_clip( "_commentary_clipgap_river_b", "Everyone", 1, "-3365 -32 -1592", "3365 32 1592", "2085 6656 1504" );
+	make_clip( "_commentary_clipgap_river_c", "Everyone", 1, "-333 -1423 -1592", "333 1432 1592", "5783 5265 1504" );
+	make_clip( "_commentary_clipgap_river_d", "Everyone", 1, "-334 -746 -1015", "334 746 1015", "5782 3097 2081" );
+	make_clip( "_commentary_clipgap_streetbarricade", "Survivors", 1, "-100 -174 -884", "100 174 884", "4715 946 1044" );
+	make_clip( "_commentary_clipgap_wedding", "Everyone", 1, "-160 -297 -1196", "160 297 1196", "1120 -1912 1900" );
+	make_clip( "_commentary_clipgap_endsaferoom", "Everyone", 1, "-660 -616 -80", "8 700 600", "-3880 2380 1360" );
 
 	make_prop( "dynamic",		"_cosmetic_hifunreal",		"models/props_vehicles/racecar_damaged_glass.mdl",	"928 4016 90",			"0.0 0.0 -1.5",		"shadow_no" );
 
@@ -66,7 +74,6 @@ function DoRoundFixes()
 		con_comment( "KILL:\tOut of bounds fences unpatched for Coop (popular request)." );
 
 		EntFire( g_UpdateName + "_fence*", "Kill" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -98,7 +105,6 @@ function DoRoundFixes()
 		make_clip( "_survival_tree_22", "Survivors", 1, "-189 -188 0", "188 188 2288", "800 -64 747" );
 		make_clip( "_survival_tree_23", "Survivors", 1, "-80 -80 0", "80 80 2288", "-1502 -606 850" );
 		make_clip( "_survival_tree_tent", "Survivors", 1, "-18 -171 0", "95 97 2205", "-2633 222 963" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -109,10 +115,10 @@ function DoRoundFixes()
 		make_clip( "_semiperm_endsaferoof", "SI Players", 1, "-8 0 0", "104 270 144", "-4344 482 1192" );
 		make_clip( "_ladder_startalternativeB_clipleft", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4025 96", "0 -45 0" );
 		make_clip( "_ladder_startalternativeB_clipright", "Everyone", 1, "-8 -16 0", "8 16 249", "701 4071 96", "0 45 0" );
-		make_clip( "_ladder_upperbalconynear_clip", "Everyone", 1, "-3 0 0", "3 16 372", "3968 1822 199", "0 11 0" );
+		make_clip( "_ladder_upperbalconynear_clip", "Everyone", 1, "-3 0 0", "3 16 372", "3968 1825 199", "0 11 0" );
 		make_clip( "_infected_mapescape", "SI Players", 1, "-1000 -350 -20", "40 808 245", "-1997 1497 192" );
 		make_ladder( "_ladder_brideentryleft_cloned_brideentryright", "196 422 574", "1199 -13 -20" );
-		make_ladder( "_ladder_elecbox_cloned_bluebin", "2528 1030 342", "-2652 -253 42" );
+		make_ladder( "_ladder_elecbox_cloned_bluebin", "2528 1030 342", "-2645 -251 42" );
 		make_ladder( "_ladder_elecboxsafehouse_cloned_bluebin", "2528 1030 342", "-6434 498 516" );
 		make_ladder( "_ladder_endfencefront_cloned_endfenceback", "-3879.68 1645.6 787", "-7751 3326 -2", "0 180 0", "1 0 0" );
 		make_ladder( "_ladder_endsafehouse_cloned_windowtallright", "1664 2662 228", "-6535 2676 610", "0 -90 0", "1 0 0" );
@@ -125,7 +131,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_startpermstuck_cloned_endleftfence", "-3575 -1142 777.5", "4159 3762 -608" );
 		make_ladder( "_ladder_tankfenceback_cloned_startfence", "527 2940 162.12", "-1927 -1661 107" );
 		make_ladder( "_ladder_tankfencefront_cloned_dispcrouchfence", "4673 994 239.551", "-6066 228 26" );
-		make_ladder( "_ladder_upperbalconynear_cloned_upperbalconyfar", "3078 1644 376", "890 161 10" );
+		make_ladder( "_ladder_upperbalconynear_cloned_upperbalconyfar", "3078 1644 376", "890 164 10" );
 		make_ladder( "_ladder_witchentryfrontleft_cloned_witchentryback", "-1356.6 412.195 698.459", "-2713 805 0", "0 -180 0", "0 -1 0" );
 		make_ladder( "_ladder_witchentryfrontright_cloned_witchentryback", "-1356.6 412.195 698.459", "-2016 805 0", "0 -180 0", "0 -1 0" );
 		make_ladder( "_ladder_witchfarbackL_cloned_witchentryback", "-1356.6 412.195 698.459", "-3434 -730 65", "0 -180 0", "0 -1 0" );

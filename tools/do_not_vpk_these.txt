@@ -1,0 +1,13 @@
+maps/*.bsp
+maps/*.nav
+maps/*.lmp
+maps/soundcache/*
+materials/correction/*
+scenes/*
+resource/subtitles_*
+resource/closecaption_*
+resource/l4d360ui_tu_*
+resource/z captioncompiler.bat
+resource/z readme - caption compiling.txt
+reslists/*
+sound/*

@@ -18,7 +18,7 @@ MutationOptions <-
 	cm_MaxSpecials = 0
 	cm_ProhibitBosses = true
 	cm_AggressiveSpecials = true
-	
+
 	BoomerLimit = 0
 	SmokerLimit = 0
 	HunterLimit = 0
@@ -27,7 +27,7 @@ MutationOptions <-
 	JockeyLimit = 0
 	cm_WitchLimit = 0
 	cm_TankLimit = 8
-	
+
 	MobMinSize = 0
 	MobMaxSize = 0
 	NoMobSpawns = true
@@ -94,7 +94,7 @@ if ( IsMissionFinalMap() )
 	local triggerFinale = Entities.FindByClassname( null, "trigger_finale" );
 	if ( triggerFinale )
 		MutationState.FinaleType = NetProps.GetPropInt( triggerFinale, "m_type" );
-	
+
 	TankRunHUD <- {};
 	function SetupModeHUD()
 	{
@@ -107,7 +107,7 @@ if ( IsMissionFinalMap() )
 		}
 		HUDSetLayout( TankRunHUD );
 	}
-	
+
 	if ( MutationState.FinaleType != 4 )
 	{
 		function GetNextStage()
@@ -134,16 +134,16 @@ if ( IsMissionFinalMap() )
 			SessionState.TanksDisabled = false;
 			SessionState.SpawnTankThink = true;
 		}
-		
+
 		if ( SessionState.FinaleType == 4 )
 			return;
-		
+
 		SessionState.DoubleTanks = true;
 		SessionState.SpawnInterval = 40;
 		SessionState.FinaleStarted = true;
 		SessionState.FinaleStartTime = Time();
 		SessionState.TriggerRescueThink = true;
-		
+
 		HUDManageTimers( 0, TIMER_COUNTDOWN, SessionState.RescueDelay );
 		TankRunHUD.Fields.rescue_time.flags = TankRunHUD.Fields.rescue_time.flags & ~HUD_FLAG_NOTVISIBLE;
 	}
@@ -168,7 +168,7 @@ function AllowTakeDamage( damageTable )
 {
 	if ( !damageTable.Attacker || !damageTable.Victim || !damageTable.Inflictor )
 		return true;
-	
+
 	if ( damageTable.Victim.IsPlayer() && damageTable.Attacker.IsPlayer() )
 	{
 		if ( damageTable.Attacker.IsSurvivor() && damageTable.Victim.GetZombieType() == 8 )
@@ -177,7 +177,7 @@ function AllowTakeDamage( damageTable )
 				damageTable.DamageDone = 500;
 		}
 	}
-	
+
 	return true;
 }
 
@@ -195,7 +195,7 @@ function SpawnTankThink()
 {
 	if ( SessionOptions.cm_TankLimit == 0 )
 		return;
-	
+
 	if ( (SessionState.TanksAlive < 8) && ((Time() - SessionState.LastSpawnTime) >= SessionState.SpawnInterval || SessionState.LastSpawnTime == 0) )
 	{
 		if ( ZSpawn( { type = 8 } ) )
@@ -213,7 +213,7 @@ function LeftSafeAreaThink()
 	{
 		if ( NetProps.GetPropInt( player, "m_iTeamNum" ) != 2 )
 			continue;
-		
+
 		if ( ResponseCriteria.GetValue( player, "instartarea" ) == "0" )
 		{
 			SessionState.LeftSafeAreaThink = false;
@@ -253,15 +253,15 @@ if ( Director.IsFirstMapInScenario() )
 				break;
 			}
 		}
-		
+
 		if ( !startPos )
 			return;
-		
+
 		for ( local weapon; weapon = Entities.FindByClassnameWithin( weapon, "weapon_*", startPos, 1200 ); )
 		{
 			if ( weapon.GetOwnerEntity() )
 				continue;
-			
+
 			local weaponName = weapon.GetClassname();
 			local primaryNames = [ "smg", "rifle", "shotgun", "sniper", "grenade" ];
 			if ( weaponName == "weapon_spawn" )
@@ -271,14 +271,14 @@ if ( Director.IsFirstMapInScenario() )
 					continue;
 				primaryNames.append( "any" );
 			}
-			
+
 			foreach( name in primaryNames )
 			{
 				if ( weaponName.find( name ) != null )
 					return;
 			}
 		}
-		
+
 		local itemNames = [ "weapon_pistol_spawn", "weapon_pistol_magnum_spawn", "weapon_spawn", "weapon_melee_spawn" ];
 		foreach( name in itemNames )
 		{
@@ -291,12 +291,12 @@ if ( Director.IsFirstMapInScenario() )
 				break;
 			}
 		}
-		
+
 		local w = [ "any_smg", "tier1_shotgun" ];
 		for ( local i = 0; i < 2; i++ )
 			SpawnEntityFromTable( "weapon_spawn", { spawn_without_director = 1, weapon_selection = w[i], count = 5, spawnflags = 3, origin = (startArea.FindRandomSpot() + Vector(0,0,50)), angles = Vector(RandomInt(0,90),RandomInt(0,90),90) } );
 	}
-	
+
 	function OnGameplayStart()
 	{
 		SessionState.CheckPrimaryWeaponThink = true;
@@ -308,7 +308,7 @@ function OnGameEvent_round_start_post_nav( params )
 	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
 		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-		
+
 		if ( population == "tank" || population == "river_docks_trap" )
 			continue;
 		else
@@ -316,7 +316,7 @@ function OnGameEvent_round_start_post_nav( params )
 	}
 	for ( local ammo; ammo = Entities.FindByModel( ammo, "models/props/terror/ammo_stack.mdl" ); )
 		ammo.Kill();
-	
+
 	if ( SessionState.MapName == "c5m5_bridge" || SessionState.MapName == "c6m3_port" || SessionState.MapName == "c13m4_cutthroatcreek" )
 	{
 		SessionOptions.cm_TankLimit = 0;
@@ -327,7 +327,7 @@ function OnGameEvent_round_start_post_nav( params )
 		EntFire( "tank_touch_test", "Kill" );
 		EntFire( "tankdoorout_button", "Unlock" );
 	}
-	
+
 	CheckDifficultyForTankHealth( GetDifficulty() );
 }
 
@@ -340,14 +340,14 @@ function OnGameEvent_player_left_safe_area( params )
 {
 	if ( SessionState.TanksDisabled )
 		return;
-	
+
 	local player = GetPlayerFromUserID( params["userid"] );
 	if ( !player )
 	{
 		SessionState.SpawnTankThink = true;
 		return;
 	}
-	
+
 	if ( ResponseCriteria.GetValue( player, "instartarea" ) == "1" )
 		SessionState.LeftSafeAreaThink = true;
 	else
@@ -359,7 +359,7 @@ function OnGameEvent_player_incapacitated( params )
 	local player = GetPlayerFromUserID( params["userid"] );
 	if ( (!player) || (!player.IsSurvivor()) )
 		return;
-	
+
 	player.ReviveFromIncap();
 }
 
@@ -368,7 +368,7 @@ function ReviveFromLedgeHang( userid )
 	local player = GetPlayerFromUserID( userid );
 	if ( (!player) || (!player.IsSurvivor()) )
 		return;
-	
+
 	player.ReviveFromIncap();
 }
 
@@ -377,7 +377,7 @@ function OnGameEvent_player_ledge_grab( params )
 	local player = GetPlayerFromUserID( params["userid"] );
 	if ( (!player) || (!player.IsSurvivor()) )
 		return;
-	
+
 	EntFire( "worldspawn", "RunScriptCode", "g_ModeScript.ReviveFromLedgeHang(" + params["userid"] + ")", 0.1 );
 }
 
@@ -390,15 +390,15 @@ function OnGameEvent_player_now_it( params )
 {
 	local attacker = GetPlayerFromUserID( params["attacker"] );
 	local victim = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( !attacker || !victim )
 		return;
-	
+
 	if ( attacker.IsSurvivor() && victim.GetZombieType() == 8 )
 	{
 		if ( victim in SessionState.TankBiled )
 			return;
-		
+
 		victim.OverrideFriction( Convars.GetFloat( "vomitjar_duration_infected_bot" ), 2.0 );
 		SessionState.TankBiled.rawset( victim, attacker );
 		if ( SessionState.TankBiled.len() == 1 )
@@ -409,10 +409,10 @@ function OnGameEvent_player_now_it( params )
 function OnGameEvent_player_no_longer_it( params )
 {
 	local victim = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( !victim )
 		return;
-	
+
 	if ( victim.GetZombieType() == 8 )
 	{
 		if ( victim in SessionState.TankBiled )
@@ -438,23 +438,23 @@ function OnGameEvent_tank_spawn( params )
 	local tank = GetPlayerFromUserID( params["userid"] );
 	if ( !tank )
 		return;
-	
+
 	SessionState.TanksAlive++;
 	tank.SetMaxHealth( SessionState.TankHealth );
 	tank.SetHealth( SessionState.TankHealth );
 	local modelName = tank.GetModelName();
-	
+
 	if ( !SessionState.ModelCheck )
 	{
 		SessionState.ModelCheck = true;
-		
+
 		if ( SessionState.TankModelsBase.find( modelName ) == null )
 		{
 			SessionState.TankModelsBase.append( modelName );
 			SessionState.TankModels.append( modelName );
 		}
 	}
-	
+
 	local tankModels = SessionState.TankModels;
 	if ( tankModels.len() == 0 )
 		SessionState.TankModels.extend( SessionState.TankModelsBase );
@@ -464,27 +464,27 @@ function OnGameEvent_tank_spawn( params )
 		tankModels.remove( foundModel );
 		return;
 	}
-	
+
 	local randomElement = RandomInt( 0, tankModels.len() - 1 );
 	local randomModel = tankModels[ randomElement ];
 	tankModels.remove( randomElement );
-	
+
 	tank.SetModel( randomModel );
 }
 
 function OnGameEvent_tank_killed( params )
 {
 	SessionState.TanksAlive--;
-	
+
 	local tank = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( tank in SessionState.TankBiled )
 	{
 		SessionState.TankBiled.rawdelete( tank );
 		if ( SessionState.TankBiled.len() == 0 )
 			SessionState.BileHurtTankThink = false;
 	}
-	
+
 	if ( SessionState.FinaleStarted )
 	{
 		SessionState.RescueDelay -= 10;

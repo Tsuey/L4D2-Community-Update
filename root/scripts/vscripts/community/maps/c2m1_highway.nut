@@ -53,6 +53,8 @@ function DoRoundFixes()
 	make_clip( "_clipextend_umbrella1", "Survivors", 1, "-48 -50 0", "50 48 522", "2683 4055 -773" );
 	make_clip( "_clipextend_umbrella2", "Survivors", 1, "-48 -50 0", "50 48 522", "2483 3989 -773" );
 	make_clip( "_clipextend_umbrella3", "Survivors", 1, "-48 -52 0", "50 50 522", "2243 4047 -773" );
+	make_clip( "_commentary_motelroof_survivors", "Survivors", 1, "-1095 -296 -196", "1095 296 196", "1879 3428 -451" );
+	make_clip( "_commentary_slopetruck", "Survivors", 1, "-8 -84 -8", "90 8 800", "-1251 -734 -1081" );
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
@@ -63,7 +65,6 @@ function DoRoundFixes()
 		con_comment( "KILL:\tShrubwall shortcut unpatched for Coop (popular request)." );
 
 		EntFire( g_UpdateName + "_shortcut_start*", "Kill" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -75,7 +76,6 @@ function DoRoundFixes()
 		make_clip( "_tank_busleft", "Survivors", 1, "-258 -56 0", "271 52 430", "1731 6723 -574", "0 -28 0" );
 		make_clip( "_tank_busright", "Survivors", 1, "-284 -48 -200", "284 48 200", "1688 7008 -344", "0 22 0" );
 		make_clip( "_tank_fence", "Survivors", 1, "-780 -14 -130", "780 14 156", "2588 7168 -412" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -87,7 +87,6 @@ function DoRoundFixes()
 		make_clip( "_survival_midnightsign", "Survivors", 1, "-190 -155 -37", "190 145 162", "2338 6131 -415" );
 		make_clip( "_survival_boostshrub", "Survivors", 1, "-24 -208 0", "27 280 112", "3079 6479 -343" );
 		make_clip( "_survival_fence_extend", "Survivors", 1, "0 -234 0", "77 0 360", "2042 3837 -640" );
-
 	}
 	if ( g_BaseMode == "scavenge" )
 	{
@@ -96,13 +95,10 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_scavenge_fence_painthop", "Survivors", 1, "0 -234 -145", "77 0 360", "2042 3837 -640" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
 	{
-		kill_entity( Entities.FindByClassnameNearest( "env_player_blocker", Vector( 1388, 5660, -649 ), 1 ) );
-		kill_entity( Entities.FindByClassnameNearest( "env_player_blocker", Vector( 2972, 3724, -649 ), 1 ) );
 		make_navblock( "_nav_motelfencejump", "Survivors", "Apply", "-24 -108 -24", "24 24 24", "2105 3700 -820" );
 		make_brush( "_losfix_bush",		"-10 -190 -60",	"10 200 35",	"8224 8378 -536" );
 		make_brush( "_losfix_end_fence",	"-254 -1 -5",	"254 0 5",	"-522 -2416 -1083" );
@@ -128,9 +124,9 @@ function DoRoundFixes()
 		make_clip( "_saferoof_trollblock", "Survivors", 1, "-72 -282 0", "120 166 684", "-904 -2534 -940" );
 		make_clip( "_whispsign_infectedqol", "SI Players", 1, "-56 -3.5 -2", "64 3 2", "9526 8374 -169" );
 		make_clip( "_hrbillboard_infectedqol", "SI Players", 1, "-52 -3.5 -2", "58 3 2", "2334 6266 -501" );
-		make_ladder( "_ladder_barrelsemi_cloned_caralarmshort", "1378 4328 -888", "2761 11131 269", "0 -120.6 0", "-0.52 -0.85 0" );
-		make_ladder( "_ladder_endbusback_cloned_caralarmshort", "1378 4328 -888", "1026 1349 -147", "0 159 0", "-0.92 0.37 0" );
-		make_ladder( "_ladder_endbusfront_cloned_caralarmshort", "1378 4328 -888", "-4553 -5663 -147", "0 -21.65 0", "0.92 -0.37 0" );
+		make_ladder( "_ladder_barrelsemi_cloned_caralarmshort", "1378 4328 -888", "2758 11124 269", "0 -120.5 0", "-0.50 -0.86 0" );
+		make_ladder( "_ladder_endbusfront_cloned_caralarmbus", "1773 4270 -911", "1997 662.16 -112", "0 150 0", "0.9 -0.43 0" );
+		make_ladder( "_ladder_endbusback_cloned_caralarmbus", "1773 4270 -911", "-5485.06 -5007.16 -112", "0 330 0", "-0.9 0.43 0" );
 		make_ladder( "_ladder_endsafebackl_cloned_fixdontdelete", "-187 -1725 -1018.05", "-599 -949 5" );
 		make_ladder( "_ladder_endsafebackr_cloned_fixdontdelete", "-187 -1725 -1018.05", "-599 -917 5" );
 		make_ladder( "_ladder_endsaferoofa_cloned_fixdontdelete", "-187 -1725 -1018.05", "-599 -667 5" );
@@ -143,17 +139,15 @@ function DoRoundFixes()
 		make_ladder( "_ladder_motelfrontrightT_cloned_motelalarmright", "1379 5428 -868", "7 -740 120" );
 		make_ladder( "_ladder_motelroofleft_cloned_onewaycliff", "1126.1 2008.58 -1462", "-863 5299 570", "0 -105 0", "-1 0 0" );
 		make_ladder( "_ladder_motelroofright_cloned_onewaycliff", "1126.1 2008.58 -1462", "-863 6912 570", "0 -105 0", "-1 0 0" );
-		make_ladder( "_ladder_motelroofright_cloned_onewaycliff", "1126.1 2008.58 -1462", "-868 6907 570", "0 -104.8 0", "-1 0 0" );
-		make_ladder( "_ladder_motelroofright_cloned_onewaycliff", "1126.1 2008.58 -1462", "-868 6907 570", "0 -104.8 0", "-1 0 0" );
-		make_ladder( "_ladder_qolbus_cloned_caralarmshort", "1378 4328 -888", "2759 7157 306", "0 -62.95 0", "0.45 -0.89 0" );
+		make_ladder( "_ladder_qolbus_cloned_caralarmbuspool", "1878 4279 -911", "2571.03 7794.04 341", "0 295 0", "0.49 -0.87 0" );
 		make_ladder( "_ladder_sheriffbus_cloned_caralarmshort", "1378 4328 -888", "4814 11473 245", "0 -142 0", "-0.78 -0.62 0" );
 		make_ladder( "_ladder_shortcutsemiback_cloned_caralarmshort", "1378 4328 -888", "3604 2785 270" );
 		make_ladder( "_ladder_shortcutsemifront_cloned_caralarmshort", "1378 4328 -888", "5705 11403 234", "0 180 0", "-1 0 0" );
-		make_ladder( "_ladder_shrubberybus_cloned_caralarmshort", "1378 4328 -888", "9165 10696 188", "0 152.5 0", "-0.88 0.46 0" );
-		make_ladder( "_ladder_slopetruck_cloned_caralarmshort", "1378 4328 -888", "10246 5931 274", "0 76.27 0", "0.24 0.97 0" );
+		make_ladder( "_ladder_shrubberybus_cloned_caralarmbus", "1773 4270 -911", "2272.93 4677.83 225", "0 330 0", "-0.90 0.43 0" );
+		make_ladder( "_ladder_slopetruck_cloned_caralarmshort", "1378 4328 -888", "10246 5933 274", "0 76.27 0", "0.23 0.97 0" );
 		make_ladder( "_ladder_startbus_cloned_caralarmshort", "1378 4328 -888", "5004 9321 425", "0 -90 0", "0 -1 0" );
 		make_ladder( "_ladder_tankfence_cloned_caralarm", "1378 4328 -888", "1681 298 -31" );
-		make_ladder( "_ladder_tankfightsemi_cloned_caralarmshort", "1378 4328 -888", "6740 8684 -36", "0 150.47 0", "-0.87 0.5 0" );
+		make_ladder( "_ladder_tankfightsemi_cloned_caralarmshort", "1378 4328 -888", "6737 8686 -36", "0 150.5 0", "-0.87 0.49 0" );
 		make_ladder( "_ladder_whispsignextender_cloned_motelpoolfence", "2712 3850 -906", "6819 4600 639" );
 		make_prop( "dynamic",		"_losblocker_fence",		"models/props_urban/fence_cover001_256.mdl",	"3060 4819 -967",		"0 0 0",		"shadow_no" );
 		make_prop( "dynamic",		"_losblocker_fencea",		"models/props_urban/fence_cover001_256.mdl",	"-128 -1332 -1078.75",		"0 150.5 0",		"shadow_no" );
@@ -165,7 +159,6 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_ladder_motelfrontrightB_pipe", "models/props_rooftop/Gutter_Pipe_256.mdl", "1378 4688 -788", "0 90 0", "shadow_no" );
 		make_prop( "dynamic", "_ladder_motelfrontrightT_pipe", "models/props_rooftop/Gutter_Pipe_128.mdl", "1378 4688 -660", "0 90 0", "shadow_no" );
 		make_prop( "dynamic", "_ladder_motelroofleft_pipe", "models/props_mill/PipeSet08d_512_001a.mdl", "792 3695 -904", "90 90 0", "shadow_no" );
-		make_prop( "dynamic", "_ladder_motelroofright_pipe", "models/props_mill/PipeSet08d_512_001a.mdl", "792 5308 -904", "90 90 0", "shadow_no" );
 		make_prop( "dynamic", "_ladder_motelroofright_pipe", "models/props_mill/PipeSet08d_512_001a.mdl", "792 5308 -904", "90 90 0", "shadow_no" );
 		make_prop( "dynamic", "_losblocker_motelleft", "models/props_rooftop/acvent01.mdl", "2706 3541 -665", "0 0 0", "shadow_no" );
 		make_prop( "dynamic", "_losblocker_motelright", "models/props_rooftop/acvent01.mdl", "1205 5394 -668", "0 90 0", "shadow_no" );

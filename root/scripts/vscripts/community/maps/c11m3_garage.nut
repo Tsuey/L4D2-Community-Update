@@ -45,7 +45,6 @@ function DoRoundFixes()
 
 		make_clip(	"_booster_windows",		"Survivors",	1,	"-6 -80 0",		"6 80 128",		"-3082 3152 160" );
 		make_clip(	"_bunnyhop_windows",		"Survivors",	1,	"-6 -180 0",		"6 180 128",		"-2954 1393 160" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

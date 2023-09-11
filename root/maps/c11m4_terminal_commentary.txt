@@ -1,0 +1,123 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_01"
+		"origin" "810.4299926758 4067.6999511719 353.3399963379"
+		"angles" "0 179.1240386963 0"
+		"contextsubject" "airport04_01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_02"
+		"origin" "-120.2699966431 3791.4799804688 355.4200134277"
+		"angles" "0 92.9940414429 0"
+		"contextsubject" "airport04_02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_03"
+		"origin" "1127.0200195313 4567.8598632813 360.5199890137"
+		"angles" "0 176.4180450439 0"
+		"contextsubject" "airport04_03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_04"
+		"origin" "538.9000244141 1648.7199707031 383.4299926758"
+		"angles" "0 -138.6654663086 0"
+		"contextsubject" "airport04_04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_05"
+		"origin" "768.0900268555 1646.3199462891 396.3200073242"
+		"angles" "0 -93.4191894531 0"
+		"contextsubject" "airport04_05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_06"
+		"origin" "834.1099853516 1650.7199707031 69.3000030518"
+		"angles" "0 -105.7608413696 0"
+		"contextsubject" "airport04_06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_07                "
+		"origin" "1773.8100585938 1630.1199951172 62.3800010681"
+		"angles" "0 -55.7323417664 0"
+		"contextsubject" "airport04_07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_08"
+		"origin" "2903.5400390625 1698.7900390625 211.2899932861"
+		"angles" "0 0.8940262794 0"
+		"contextsubject" "airport04_08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_08"
+		"origin" "2884.6599121094 1569.5500488281 210.6300048828"
+		"angles" "0 0.2340262383 0"
+		"contextsubject" "airport04_08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_08"
+		"origin" "2878.3500976563 1409.9499511719 210.6699981689"
+		"angles" "0 1.7520259619 0"
+		"contextsubject" "airport04_08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_09"
+		"origin" "3114.5500488281 4551.2998046875 205.0800018311"
+		"angles" "0 14.5559558868 0"
+		"contextsubject" "airport04_09"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_van"
+		"origin" "-428.1400146484 4283.58984375 67.1699981689"
+		"angles" "0 -119.5220947266 0"
+		"contextsubject" "airport04_van"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_08"
+		"origin" "3177.6101074219 2259.9099121094 207.4199981689"
+		"angles" "0 179.7942047119 0"
+		"contextsubject" "airport04_08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_08"
+		"origin" "3178.1101074219 2399.4899902344 207.4199981689"
+		"angles" "0 179.7942047119 0"
+		"contextsubject" "airport04_08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "airport04_08"
+		"origin" "3178.7299804688 2573.1000976563 207.4199981689"
+		"angles" "0 179.7942047119 0"
+		"contextsubject" "airport04_08"
+	}
+}

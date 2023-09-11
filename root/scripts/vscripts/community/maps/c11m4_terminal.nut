@@ -61,7 +61,6 @@ function DoRoundFixes()
 
 		patch_spawninfront( "2552 4080 152", "0 -16 0", "614 16 244" );
 	}
-
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );

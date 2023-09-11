@@ -68,7 +68,7 @@ MutationOptions <-
 		}
 		return 0;
 	}
-	
+
 	DefaultItems =
 	[
 		"weapon_pistol_magnum",
@@ -110,7 +110,7 @@ function LeftSafeAreaThink()
 	{
 		if ( NetProps.GetPropInt( player, "m_iTeamNum" ) != 2 )
 			continue;
-		
+
 		if ( ResponseCriteria.GetValue( player, "instartarea" ) == "0" )
 		{
 			SessionOptions.cm_MaxSpecials = 8;
@@ -125,7 +125,7 @@ function OnGameEvent_round_start_post_nav( params )
 	for ( local spawner; spawner = Entities.FindByClassname( spawner, "info_zombie_spawn" ); )
 	{
 		local population = NetProps.GetPropString( spawner, "m_szPopulation" );
-		
+
 		if ( population == "boomer" || population == "hunter" || population == "smoker" || population == "jockey"
 			|| population == "charger" || population == "spitter" || population == "new_special" || population == "church"
 				|| population == "tank" || population == "witch" || population == "witch_bride" || population == "river_docks_trap" )
@@ -133,7 +133,7 @@ function OnGameEvent_round_start_post_nav( params )
 		else
 			spawner.Kill();
 	}
-	
+
 	if ( Director.GetMapName() == "c1m1_hotel" )
 		DirectorOptions.cm_TankLimit <- 0;
 	else if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
@@ -147,7 +147,7 @@ function OnGameEvent_player_left_safe_area( params )
 	local player = GetPlayerFromUserID( params["userid"] );
 	if ( !player )
 		return;
-	
+
 	if ( ResponseCriteria.GetValue( player, "instartarea" ) == "1" )
 	{
 		SessionOptions.cm_MaxSpecials = 0;
@@ -163,7 +163,7 @@ function OnGameEvent_triggered_car_alarm( params )
 		ZSpawn( { type = 8 } );
 		DirectorOptions.cm_AggressiveSpecials = false;
 	}
-	
+
 	StartAssault();
 }
 
@@ -182,16 +182,16 @@ function OnGameEvent_gauntlet_finale_start( params )
 function OnGameEvent_player_spawn( params )
 {
 	local player = GetPlayerFromUserID( params["userid"] );
-	
+
 	if ( ( !player ) || ( player.IsSurvivor() ) )
 		return;
-	
+
 	local zombieType = player.GetZombieType();
 	if ( zombieType > 6 )
 		return;
-	
+
 	local modelName = player.GetModelName();
-	
+
 	if ( !SessionState.ModelCheck[ zombieType - 1 ] )
 	{
 		if ( (zombieType == 2) && !("community1_no_female_boomers" in getroottable()) )
@@ -206,17 +206,17 @@ function OnGameEvent_player_spawn( params )
 		}
 		else
 			SessionState.ModelCheck[ zombieType - 1 ] = true;
-		
+
 		if ( SessionState.SIModelsBase[zombieType - 1].find( modelName ) == null )
 		{
 			SessionState.SIModelsBase[zombieType - 1].append( modelName );
 			SessionState.SIModels[zombieType - 1].append( modelName );
 		}
 	}
-	
+
 	if ( SessionState.SIModelsBase[zombieType - 1].len() == 1 )
 		return;
-	
+
 	local zombieModels = SessionState.SIModels[zombieType - 1];
 	if ( zombieModels.len() == 0 )
 		SessionState.SIModels[zombieType - 1].extend( SessionState.SIModelsBase[zombieType - 1] );
@@ -226,11 +226,11 @@ function OnGameEvent_player_spawn( params )
 		zombieModels.remove( foundModel );
 		return;
 	}
-	
+
 	local randomElement = RandomInt( 0, zombieModels.len() - 1 );
 	local randomModel = zombieModels[ randomElement ];
 	zombieModels.remove( randomElement );
-	
+
 	player.SetModel( randomModel );
 }
 

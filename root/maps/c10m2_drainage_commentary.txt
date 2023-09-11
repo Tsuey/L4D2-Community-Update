@@ -1,0 +1,75 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path01"
+		"origin" "-11244.8603515625 -8986.6796875 -463.6499938965"
+		"angles" "0 -170.4479827881 0"
+		"contextsubject" "smalltown02_path01"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path02"
+		"origin" "-10651.9697265625 -8408.33984375 -389.5899963379"
+		"angles" "0 -1.4813146591 0"
+		"contextsubject" "smalltown02_path02"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path03"
+		"origin" "-11115.1904296875 -8002.3798828125 -372.0400085449"
+		"angles" "0 87.2227478027 0"
+		"contextsubject" "smalltown02_path03"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path04"
+		"origin" "-9256 -7353.080078125 -768.8200073242"
+		"angles" "0 1.4526612759 0"
+		"contextsubject" "smalltown02_path04"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path05"
+		"origin" "-6173.4702148438 -7211.33984375 -3.4100000858"
+		"angles" "0 14.9831142426 0"
+		"contextsubject" "smalltown02_path05"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path06"
+		"origin" "-8411.0595703125 -8455.0302734375 -303.5"
+		"angles" "0 -85.7040100098 0"
+		"contextsubject" "smalltown02_path06"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path07"
+		"origin" "-8028.6801757813 -5559.7900390625 -1.7799999714"
+		"angles" "0 176.1179656982 0"
+		"contextsubject" "smalltown02_path07"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path08"
+		"origin" "-8687.9296875 -7846.080078125 -351.7900085449"
+		"angles" "0 -83.2917861938 0"
+		"contextsubject" "smalltown02_path08"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "smalltown02_path09"
+		"origin" "-7484.240234375 -5632.0600585938 6.1500000954"
+		"angles" "0 174.545135498 0"
+		"contextsubject" "smalltown02_path09"
+	}
+}

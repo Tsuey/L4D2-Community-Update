@@ -142,6 +142,101 @@ Rule c2m3OutOfRubbleOrator
 	Response OratorBlank
 }
 
+Response C2M3CoasterStartCOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then coach C2M3CoasterStartResponse foo:0 0.1 //
+}
+Rule C2M3CoasterStartCOrator
+{
+	criteria ConceptC2m3coasterStart PanicEventCoach AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
+	applycontexttoworld
+	Response C2M3CoasterStartCOrator
+}
+
+Response C2M3CoasterStartGOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then gambler C2M3CoasterStartResponse foo:0 0.1 //
+}
+Rule C2M3CoasterStartGOrator
+{
+	criteria ConceptC2m3coasterStart PanicEventGambler AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
+	applycontexttoworld
+	Response C2M3CoasterStartGOrator
+}
+
+Response C2M3CoasterStartMOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then mechanic C2M3CoasterStartResponse foo:0 0.1 //
+}
+Rule C2M3CoasterStartMOrator
+{
+	criteria ConceptC2m3coasterStart PanicEventMechanic AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
+	applycontexttoworld
+	Response C2M3CoasterStartMOrator
+}
+
+Response C2M3CoasterStartPOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then producer C2M3CoasterStartResponse foo:0 0.1 //
+}
+Rule C2M3CoasterStartPOrator
+{
+	criteria ConceptC2m3coasterStart PanicEventProducer AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "WarnMegaMob:1:30,_auto_Alarm:1:0"
+	applycontexttoworld
+	Response C2M3CoasterStartPOrator
+}
+
+Response C2M3CoasterEndCOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then coach C2M3CoasterEndResponse foo:0 0.1 //
+}
+Rule C2M3CoasterEndCOrator
+{
+	criteria ConceptC2m3coasterEnd PanicEventCoach AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "_auto_Alarm:2:0"
+	applycontexttoworld
+	Response C2M3CoasterEndCOrator
+}
+
+Response C2M3CoasterEndGOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then gambler C2M3CoasterEndResponse foo:0 0.1 //
+}
+Rule C2M3CoasterEndGOrator
+{
+	criteria ConceptC2m3coasterEnd PanicEventGambler AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "_auto_Alarm:2:0"
+	applycontexttoworld
+	Response C2M3CoasterEndGOrator
+}
+
+Response C2M3CoasterEndMOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then mechanic C2M3CoasterEndResponse foo:0 0.1 //
+}
+Rule C2M3CoasterEndMOrator
+{
+	criteria ConceptC2m3coasterEnd PanicEventMechanic AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "_auto_Alarm:2:0"
+	applycontexttoworld
+	Response C2M3CoasterEndMOrator
+}
+
+Response C2M3CoasterEndPOrator
+{
+	scene "scenes/npcs/orator_blank.vcd" then producer C2M3CoasterEndResponse foo:0 0.1 //
+}
+Rule C2M3CoasterEndPOrator
+{
+	criteria ConceptC2m3coasterEnd PanicEventProducer AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "_auto_Alarm:2:0"
+	applycontexttoworld
+	Response C2M3CoasterEndPOrator
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // C2M4
@@ -791,6 +886,21 @@ Rule C5M5BridgeDestroyedOrator
 {
 	criteria ConceptC5M5BridgeDestroyed AutoIsNotScavenge AutoIsNotSurvival
 	Response C5M5BridgeDestroyedOrator
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// C6M3
+//--------------------------------------------------------------------------------------------------------------
+Response c6m3_outro
+{
+	scene "scenes/npcs/orator_blank.vcd" then Any c6m3_outro3 foo:0 0.5 //
+}
+Rule c6m3_outro
+{
+	criteria Conceptc6m3_outro NotSaidOutro isC6m3_port IsNotVersus
+	ApplyContext "Talk:1:0,SaidOutro:1:0"
+	applycontexttoworld
+	Response c6m3_outro
 }
 
 //--------------------------------------------------------------------------------------------------------------

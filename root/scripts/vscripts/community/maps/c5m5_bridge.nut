@@ -65,7 +65,6 @@ function DoRoundFixes()
 		make_clip( "_solidify_alt_stuckwarp2", "Survivors", 1, "-26 -10 -37", "61 11 32", "6795 6034 729" );
 		make_clip( "_solidify_alt_stuckwarp3", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6034 729" );
 		make_clip( "_solidify_alt_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6617 729" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -78,14 +77,13 @@ function DoRoundFixes()
 		make_clip(	"_booster_helipada",		"Survivors",	1,	"-1640 -17 -240",	"32 17 2882",		"7481 2202 175" );
 		make_clip(	"_booster_helipadb",		"Survivors",	1,	"-17 -1800 -240",	"17 1240 2882",		"5856 4019 176" );
 		make_clip(	"_booster_helipadc",		"Survivors",	1,	"-1640 -17 -240",	"1240 17 2882",		"7479 5276 176" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_ladder( "_ladder_endcedatrailer_cloned_endchainlink", "9271.145 4057.18 273.355", "2144 -5516 8", "0 28.54 0", "-0.82 -0.56 0" );
-		make_ladder( "_ladder_endlosfence_cloned_backnodraw", "10073.0508 2663.2498 380.7315", "-1902 6582 -111", "0 -36.64 0", "0.9 -0.43 0" );
-		make_ladder( "_ladder_finalsidehouse_cloned_finalrungs", "9310.49 3329.52 330", "7708 -5521 87", "0 55.85 0", "-0.57 -0.82 0" );
+		make_ladder( "_ladder_endcedatrailer_cloned_endchainlink", "9271.145 4057.18 273.355", "2143 -5517 15", "0 28.54 0", "-0.82 -0.56 0" );
+		make_ladder( "_ladder_endlosfence_cloned_backnodraw", "10073.0508 2663.2498 380.7315", "-2019 6285 -111", "0 -35 0", "0.91 -0.4 0" );
+		make_ladder( "_ladder_finalsidehouse_cloned_finalrungs", "9310.49 3329.52 330", "7740 -5532 87", "0 56 0", "-0.49 -0.86 0" );
 		make_ladder( "_ladder_forconsistencysake_cloned_firstscaffrightback", "1027 6081.5 640", "-3583 -6 0" );
 		make_ladder( "_ladder_slantedbridgeup_cloned_farendfence", "9514.01 6428.48 528", "-4906 152 200" );
 		make_prop( "dynamic", "_solidify_finalsidehouse_acunit", "models/props_rooftop/acunit01.mdl", "10092.1 4520.26 491", "0 150 0", "shadow_no" );
@@ -96,7 +94,8 @@ function DoRoundFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move all bridge tank spawns a bit further down the bridge to discourage rushing
+	// Move all bridge Tank spawns a bit further down the bridge to discourage rushing.
+
 	if ( CheckToWarpTank( hndTank, [-1450, 5955, -100, 6705] ) )
 	{
 		hndTank.SetOrigin( Vector( 830, 6328, 792 ) );

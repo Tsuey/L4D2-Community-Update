@@ -15,7 +15,7 @@ function DoRoundFixes()
 	make_clip(	"_busstop_fence",		"Survivors",	1,	"-512 -76 -620",	"512 76 620",		"8600 5556 788" );
 	make_clip(	"_dispcrouch_cavea",		"Everyone",	1,	"-42 -120 -80",		"0 145 80",		"4354 3430 -174.7" );
 	make_clip(	"_dispcrouch_caveb",		"Everyone",	1,	"-120 -42 -80",		"470 0 80",		"4497 3316 -174.7" );
-	make_clip(	"_booster_windowandfence",	"Survivors",	1,	"0 -64 0",		"128 50 1068",		"8416 3888 344" );
+	make_clip(	"_booster_windowandfence",	"Survivors",	1,	"-66 -56 -604",	"66 56 604",	"8458 3880 804" );
 	make_clip(	"_booster_pipe",		"Survivors",	1,	"-64 -32 0",		"64 32 90",		"7351 3792 144" );
 	make_clip(	"_booster_beama",		"Survivors",	1,	"-9 -474 -24",		"9 686 192",		"7176 3138 424" );
 	make_clip(	"_booster_beamb",		"Survivors",	1,	"-9 -474 -24",		"9 686 192",		"7380 3138 424" );
@@ -26,7 +26,7 @@ function DoRoundFixes()
 	make_clip( "_stuckwarp_underspawn", "Everyone", 1, "-11 -7 0", "-3 10 70", "3111 2775 -70" );
 	make_clip( "_stuckwarp_tunnelend", "Everyone", 1, "-12 -24 -14", "137 73 70", "4182 2831 -70", "0 -1 0" );
 	make_clip( "_tankwarp_solidify", "SI Players and AI", 1, "-26 -30 0", "98 6 100", "5977 4742 -335", "0 -22 0" );
-	make_clip( "_unattackable_building", "Survivors", 1, "-126 -320 -32", "157 348 512", "9311 4256 704" );
+	make_clip( "_unattackable_building_top", "Survivors", 1, "-576 -336 -368", "576 336 368", "8896 4272 1040" );
 	make_clip( "_unattackable_backalley1", "Survivors", 1, "-252 -311 0", "260 337 772", "6780 4279 632" );
 	make_clip( "_unattackable_backalley2", "Survivors", 1, "-1191 -320 0", "1153 320 752", "8319 3520 660" );
 	make_clip( "_unattackable_backalley3", "Survivors", 1, "-58 -7 0", "70 7 1402", "10298 3765 16" );
@@ -40,6 +40,10 @@ function DoRoundFixes()
 	make_clip( "_genroomrail_smoother1", "Everyone", 1, "-1 -33 0", "0 34 40", "7285 3633 248" );
 	make_clip( "_genroomrail_smoother2", "Everyone", 1, "-1 -65 0", "0 66 40", "7285 2878 248" );
 	make_clip( "_nav_tankjukepipes", "Survivors", 1, "-37 -168 0", "28 168 95", "8276 3656 140" );
+	make_clip( "_commentary_stuckwarp_undersafe_a", "Everyone", 1, "-4 -250 -60", "24 102 58", "2708 3050 -57.6663" );
+	make_clip( "_commentary_stuckwarp_undersafe_b", "Everyone", 1, "-40 -40 -37", "8 8 75", "2744 2808 -75" );
+	make_clip( "_commentary_stuckwarp_undersafe_c", "Everyone", 1, "-48 -8 -37", "48 22 75", "2784 2776 -75" );
+	make_clip( "_commentary_electricalbox", "Survivors", 1, "-30 -5 -80", "30 5 148", "9638 5563 97" );
 
 	con_comment( "FIX:\tGenerator Room has 13 hanging lights and 9 need to be made non-solid." );
 
@@ -53,10 +57,8 @@ function DoRoundFixes()
 
 		make_clip( "_nav_backlightleft", "Survivors", 1, "6 -13 -61", "9 15 84", "5249 4124 -265" );
 		make_clip( "_nav_backlightright", "Survivors", 1, "6 -13 -61", "9 15 84", "5243 4210 -265" );
-
 		make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
 		make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -65,7 +67,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_survival_vendors",		"Survivors",	1,	"-80 -32 0",		"80 55 284",		"7406 3769 381.4" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -80,29 +81,29 @@ function DoRoundFixes()
 		make_clip( "_ladder_generatorwindow_clipa", "SI Players", 1, "-4 -40 -56", "376 128 231", "7944 2512 425" );
 		make_clip( "_ladder_generatorwindow_clipb", "SI Players", 1, "-400 -40 -56", "4 128 231", "7568 2512 425" );
 		make_clip( "_ladder_generatorwindow_clipc", "SI Players", 1, "-566 -216 -56", "586 10 231", "7734 2462 425" );
-		make_clip( "_ladder_tanksubqol_clip", "Everyone", 1, "-22 3 0", "9 7 152", "6290 3284 -336", "0 -20 0" );
+		make_clip( "_ladder_tanksubqol_clip", "Everyone", 1, "-22 3 0", "9 7 152", "6284 3290 -339", "0 -20 0" );
 		make_clip( "_ladder_tanksubway_clip", "SI Players", 1, "-17 -43 0", "16 -2 8", "6999 2919 -188" );
-		make_clip( "_ladder_tanksubwreck_clip", "Everyone", 1, "-38 -6 0", "38 1 8", "4306 4053 -231", "0 -21 0" );
-		make_ladder( "_ladder_deadendrubble_cloned_endfenceshortest", "10195 5726.5 67.766", "-5520 12737 -375", "0 -78.24 0", "0.98 0.2 0" );
+		make_clip( "_unattackable_building_bot", "Survivors", 1, "-576 -336 -192", "576 336 192", "8896 4272 480" );
+		make_ladder( "_ladder_deadendrubble_cloned_endfenceshortest", "10195 5726.5 67.766", "-5557 12709 -375", "0 -78 0", "0.97 0.2 0" );
 		make_ladder( "_ladder_endpawnbrick_cloned_trashbagdrop", "8233 3844.5 278", "14396 -3589 -228", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_endpolicefence_cloned_oneunitbroke", "8657 5483.5 92", "1625 240 -40" );
-		make_ladder( "_ladder_endquickroof_cloned_oneunitbroke", "8657 5483.5 92", "1458 13407 0", "0 -82 0", "-1 -0.14 0" );
+		make_ladder( "_ladder_endquickroof_cloned_oneunitbroke", "8657 5483.5 92", "1525 13450 0", "0 -82.5 0", "-0.99 -0.13 0" );
 		make_ladder( "_ladder_eventminigunnew_cloned_eventminigun", "7568 3663.5 184", "188 0 0" );
 		make_ladder( "_ladder_eventwindowleftB_cloned_endfenceshortest", "10195 5726.5 67.766", "2272 13074 18", "0 -90 0", "1 0 0" );
 		make_ladder( "_ladder_eventwindowleftT_cloned_eventwindowright", "7568 2816.5 178", "376 0 0" );
 		make_ladder( "_ladder_genwinglassleft_cloned_firebarrelfence", "8988 5513.5 92", "-1140 -2857 219" );
 		make_ladder( "_ladder_genwinglassright_cloned_firebarrelfence", "8988 5513.5 92", "-1327 -2857 219" );
-		make_ladder( "_ladder_innertanker_cloned_nodrawfence", "8419.5 3882 91.5", "-2478 5297 -35", "0 -25 0", "0.91 -0.42 0" );
+		make_ladder( "_ladder_innertanker_cloned_nodrawfence", "8419.5 3882 91.5", "-2472 5376 -35", "0 -25.5 0", "0.9 -0.43 0" );
 		make_ladder( "_ladder_newrocketboom_cloned_trashbagdrop", "8233 3844.5 278", "5620 12649 132", "0 -90 0", "1 0 0" );
 		make_ladder( "_ladder_permstuckpawnfence_cloned_endfenceshortest", "10195 5726.5 67.766", "4946 15517 -9", "0 -90 0", "1 0 0" );
 		make_ladder( "_ladder_permstuckpawnrear_cloned_eventminigun", "7568 3663.5 184", "3568 1208 -40" );
 		make_ladder( "_ladder_postsubrubble_cloned_firebarrelfence", "8988 5513.5 92", "13166 -6148 -410", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_quickstepqol_cloned_wrongwayfence", "10362.5 3936 91.5", "-891 704 -63" );
 		make_ladder( "_ladder_subwaynontrashside_cloned_endalleyfence", "8419.5 3882 91.5", "-856 12513 -352", "0 -90 0", "0 -1 0" );
-		make_ladder( "_ladder_tanksubqol_cloned_copcarsbrick", "9732.5 6199.5 104", "2905 -7753 -376", "0 40.35 0", "0.76 0.64 0" );
+		make_ladder( "_ladder_tanksubqol_cloned_copcarsbrick", "9732.5 6199.5 104", "2929 -7755 -379", "0 40.5 0", "0.76 0.64 0" );
 		make_ladder( "_ladder_tanksubway_cloned_copcarsbrick", "9732.5 6199.5 104", "-2712 -3295 -372" );
-		make_ladder( "_ladder_tanksubwreck_cloned_endfenceshortest", "10195 5726.5 67.766", "15871 5658 244.4", "0 158.73 -6", "-0.37 -0.93 0" );
-		make_ladder( "_ladder_tankwarprubble_cloned_warehousewindow", "8472 3819.5 312", "-3042 5533 -610", "0 -30 0", "-0.5 -0.86 0" );
+		make_ladder( "_ladder_tanksubwreck_cloned_endfenceshortest", "10195 5726.5 67.766", "15920 5429 -354", "0 157.5 0", "-0.38 -0.92 0" );
+		make_ladder( "_ladder_tankwarprubble_cloned_warehousewindow", "8472 3819.5 312", "-3056 5443 -610", "0 330.5 0", "-0.49 -0.87 0" );
 		make_ladder( "_ladder_windowdropleft_cloned_trashbagdrop", "8233 3844.5 278", "4344 12888 -124", "0 -90 0", "1 0 0" );
 		make_ladder( "_ladder_windowdropright_cloned_trashbagdrop", "8233 3844.5 278", "11007 -3519 -124", "0 90 0", "-1 0 0" );
 		make_prop( "dynamic", "_yesdraw_generatorroom", "models/props_update/c8m2_generatorroom.mdl", "7748 2448.1 513", "0 -90 0", "shadow_no", "solid_no" );

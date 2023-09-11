@@ -31,6 +31,7 @@ function DoRoundFixes()
 	make_clip( "_cliprework_unattackable", "Survivors", 1, "-28 -245 0", "28 235 704", "-3828 2709 448" );
 	make_clip( "_void_cliprework", "Survivors", 1, "-288 -223 0", "288 401 697", "-224 -1425 456" );
 	make_clip( "_void_filler", "SI Players", 1, "-64 17 -90", "65 301 -3", "-224 -1425 677" );
+	make_clip( "_commentary_poolwindow", "Everyone", 1, "-4 -2 -80", "70 4 224", "-1249 2460 152" );
 
 	con_comment( "FIX:\tTotal of 13 out of 13 traffic cones need to be made non-solid -- finally we can!" );
 
@@ -46,6 +47,8 @@ function DoRoundFixes()
 		make_clip(	"_commonhop_rollupdoor",	"Survivors",	1,	"-13 -65 -376",		"13 65 528",		"-1652 1745 573" );
 		make_clip(	"_commonhop_fountain",		"Survivors",	1,	"-71 -222 0",		"71 700 777",		"-2881 3746 399" );
 		make_clip( "_clipgap_leftfence", "Survivors", 1, "-32 -4 0", "32 4 208", "-2976 3452 184" );
+		make_clip( "_commentary_clipgap_rightfence", "Survivors", 1, "-32 -4 -104", "32 4 104", "-3424 3452 288" );
+		make_clip( "_commentary_sneakyhunter_endsaferoom", "SI Players", 1, "-8 -8 -8", "66 0 210", "1357 -3528 230" );
 
 		// Piggyback on Survivor-filtered trigger that queries Director for car alarm.
 
@@ -53,7 +56,6 @@ function DoRoundFixes()
 
 		make_clip( "_shortcut_fence_TMP", "Survivors", 1, "-84 -12 0", "86 9 149", "-1836 -1212 208" );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_shortcut_fence_TMP:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( -1540, -1604, 314 ), 1 ) );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -72,8 +74,8 @@ function DoRoundFixes()
 		make_clip( "_ladder_garagerooftops_cliptop", "SI Players", 1, "-47 -19 0", "66 2 44", "-1346 2974 64" );
 		make_ladder( "_ladder_balconygutter_cloned_eventacvent", "-1414 1288 592", "830 -984 -96" );
 		make_ladder( "_ladder_billiards_cloned_billiardsdrop", "-1392 2489 240", "545 -493.9 -120" );
-		make_ladder( "_ladder_busjazzclub_cloned_startwhitefence", "-3296 3698 134", "-1427 -2032 -3", "0 -54.6 0", "-0.82 -0.58 0" );
-		make_ladder( "_ladder_endsemifront_cloned_endsemiback", "1122.36 -2274.4004 146.7381", "2144 -4483 0", "0 180 0", "-0.96 0.28 0" );
+		make_ladder( "_ladder_busjazzclub_cloned_startwhitefence", "-3296 3698 134", "-1335 -2050 -4", "0 306.5 0", "-0.8 -0.59 0" );
+		make_ladder( "_ladder_endsemiwrecked_cloned_streetendfence", "-510 -800 140.24", "500.15 -2789.49 -52", "0 168.5 0", "-0.97 0.19 0" );
 		make_ladder( "_ladder_endtriplewindow_cloned_firstgutterladder", "-3706 4400 170", "3706 -6704 22" );
 		make_ladder( "_ladder_floatfarcorner_cloned_floatreartall", "-1722 -288 248", "-62 1265 -16" );
 		make_ladder( "_ladder_floatfronttall_cloned_floatreartall", "-1722 -288 248", "0 400 0" );

@@ -95,17 +95,17 @@ Rule L4D1ReviveMeInterruptedMajorBiker
 
 Response L4D1ReviveMeInterruptedCriticalBiker
 {
-	scene "scenes/Biker/HurtCritical01.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical02.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical03.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical04.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical05.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical06.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical07.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical08.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical09.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical10.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical11.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical01.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical02.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical03.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical04.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical05.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical06.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical07.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical08.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical09.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical10.vcd" predelay "0.75" //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical11.vcd" predelay "0.75" //[Pain noise - loud major pain]
 }
 Rule L4D1ReviveMeInterruptedCriticalBiker
 {
@@ -301,7 +301,7 @@ Response ItemDonorManagerBiker
 }
 Rule ItemDonorManagerBiker
 {
-	criteria ConceptPlayerPickup IsBiker IsDonorBiker ChanceToFire30Percent IsPickedUpValidHealingItem
+	criteria ConceptPlayerPickup IsBiker IsDonorManager ChanceToFire30Percent IsPickedUpValidHealingItem
 	ApplyContext "TalkBiker:1:3"
 	applycontexttoworld
 	Response ItemDonorManagerBiker
@@ -502,7 +502,7 @@ Response L4D1BotNoteHumanAttentionBiker
 }
 Rule L4D1BotNoteHumanAttentionBiker
 {
-	criteria ConceptSurvivorBotNoteHumanAttention IsNotCoughing IsBiker IsNotBotAttention IsTalk IsTalkBiker IsNotIncapacitated IsInSafeSpot IsWorldTalkBiker IsNotSpeakingWeight0
+	criteria ConceptSurvivorBotNoteHumanAttention IsNotCoughing IsBiker IsNotBotAttention IsTalk IsTalkBiker IsNotIncapacitated IsInStartArea IsWorldTalkBiker IsNotSpeakingWeight0
 	ApplyContext "SaidBotAttention:1:30"
 	applycontexttoworld
 	Response L4D1BotNoteHumanAttentionBiker
@@ -937,26 +937,13 @@ Rule C6M3_BridgeDownBiker
 	Response C6M3_BridgeDownBiker
 }
 
-Response c6m3_outroBiker
-{
-	scene "scenes/Biker/blank.vcd" then Any c6m3_outro3 foo:0 0.5 //
-	scene "scenes/Biker/blank.vcd" odds 50 then self c6m3_outro3 foo:0 0.5 //
-}
-Rule c6m3_outroBiker
-{
-	criteria Conceptc6m3_outro IsBiker NotSaidOutro isC6m3_port IsNotVersus
-	ApplyContext "Talk:1:0,SaidOutro:1:0"
-	applycontexttoworld
-	Response c6m3_outroBiker
-}
-
 Response c6m3_outroL4D1Biker
 {
 	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic13.vcd"  //I hate goodbyes.
 }
 Rule c6m3_outroL4D1Biker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	forceweight 1
 	Response c6m3_outroL4D1Biker
 }
@@ -967,7 +954,7 @@ Response c6m3_outroL4D1010aBiker
 }
 Rule c6m3_outroL4D1010aBiker
 {
-	criteria Conceptc6m3_outroL4D1010a IsBiker
+	criteria Conceptc6m3_outroL4D1010a IsBiker HasAFrom
 	Response c6m3_outroL4D1010aBiker
 }
 
@@ -977,7 +964,7 @@ Response c6m3_outroL4D104bBiker
 }
 Rule c6m3_outroL4D104bBiker
 {
-	criteria Conceptc6m3_outroL4D104b IsBiker
+	criteria Conceptc6m3_outroL4D104b IsBiker HasAFrom
 	Response c6m3_outroL4D104bBiker
 }
 
@@ -987,7 +974,7 @@ Response c6m3_outroL4D108aBiker
 }
 Rule c6m3_outroL4D108aBiker
 {
-	criteria Conceptc6m3_outroL4D108a IsBiker
+	criteria Conceptc6m3_outroL4D108a IsBiker HasAFrom
 	Response c6m3_outroL4D108aBiker
 }
 
@@ -998,7 +985,7 @@ Response c6m3_outroL4D1AllBiker
 }
 Rule c6m3_outroL4D1AllBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 8
 	Response c6m3_outroL4D1AllBiker
 }
@@ -1009,7 +996,7 @@ Response c6m3_outroL4D1CoachBiker
 }
 Rule c6m3_outroL4D1CoachBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsCoachAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsCoachAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 6
 	Response c6m3_outroL4D1CoachBiker
 }
@@ -1023,7 +1010,7 @@ Response c6m3_outroL4D1CopGibbsBiker
 }
 Rule c6m3_outroL4D1CopGibbsBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsFrancisIntroActor ChanceToFire10Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsFrancisIntroActor ChanceToFire10Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 10
 	Response c6m3_outroL4D1CopGibbsBiker
 }
@@ -1034,7 +1021,7 @@ Response c6m3_outroL4D1GamblerBiker
 }
 Rule c6m3_outroL4D1GamblerBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsGamblerAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsGamblerAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 5
 	Response c6m3_outroL4D1GamblerBiker
 }
@@ -1046,7 +1033,7 @@ Response c6m3_outroL4D1MechanicBiker
 }
 Rule c6m3_outroL4D1MechanicBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsMechanicAlive ChanceToFire60Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsMechanicAlive ChanceToFire60Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 4
 	Response c6m3_outroL4D1MechanicBiker
 }
@@ -1061,7 +1048,7 @@ Response c6m3_outroL4D1ProducerBiker
 }
 Rule c6m3_outroL4D1ProducerBiker
 {
-	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsProducerAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsProducerAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 7
 	Response c6m3_outroL4D1ProducerBiker
 }
@@ -1826,7 +1813,7 @@ Response C7M3PlayerGetToRescueVehicleBiker
 }
 Rule C7M3PlayerGetToRescueVehicleBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker ismapc7m3_port IsTalk IsTalkBiker IsWorldTalkBiker _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker ismapc7m3_port IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleBiker
@@ -2627,7 +2614,7 @@ Rule IntroCrashR06Biker
 
 Response IntroCrashR08Biker
 {
-	scene "scenes/Biker/DLC2Intro21.vcd"  //Whoah. Musta hit my head in the crash. I'm okay now. I hate helicopters.
+	scene "scenes/Biker/DLC2Intro21.vcd" then self IntroEnd foo:0 0.1 //Whoah. Musta hit my head in the crash. I'm okay now. I hate helicopters.
 }
 Rule IntroCrashR08Biker
 {
@@ -2874,6 +2861,39 @@ Rule L4D1PlayerFaultFriendlyFireBiker
 	Response NoResponse
 }
 
+Response L4D1GreedBiker
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule L4D1GreedBiker
+{
+	criteria IsFaultConcept Wasteful IsBiker
+	Response L4D1GreedBiker
+}
+
+Response L4D1GreedResponseBiker
+{
+	scene "scenes/Biker/Swear08.vcd" //Ah bullshit.
+	scene "scenes/Biker/Swear10.vcd" //Bullshit.
+}
+
+Rule L4D1GreedResponseToNamVetBiker
+{
+	criteria ConceptGreedResponse IsBiker IsNotCoughing IsTalk IsTalkBiker IsWorldTalkBiker FromIsNamVet SubjectIsNamVet IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseBiker
+}
+
+Rule L4D1GreedResponseToManagerBiker
+{
+	criteria ConceptGreedResponse IsBiker IsNotCoughing IsTalk IsTalkBiker IsWorldTalkBiker FromIsManager SubjectIsManager IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseBiker
+}
+
+Rule L4D1GreedResponseToTeenGirlBiker
+{
+	criteria ConceptGreedResponse IsBiker IsNotCoughing IsTalk IsTalkBiker IsWorldTalkBiker FromIsTeenGirl SubjectIsTeenGirl IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseBiker
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech
@@ -2988,7 +3008,7 @@ Response L4D1SurvivorFinalVehicleFarmSpottedBiker
 }
 Rule L4D1SurvivorFinalVehicleFarmSpottedBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsBloodHarvest5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsBloodHarvest5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmSpottedBiker
@@ -3050,7 +3070,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatBiker
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsDeathToll5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsDeathToll5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatBiker
@@ -3064,7 +3084,7 @@ Response L4D1SurvivorFinalVehicleSpottedRooftopBiker
 }
 Rule L4D1SurvivorFinalVehicleSpottedRooftopBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsNoMercy5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsNoMercy5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRooftopBiker
@@ -3076,7 +3096,7 @@ Response L4D1SurvivorFinalVehicleSpottedRunwayBiker
 }
 Rule L4D1SurvivorFinalVehicleSpottedRunwayBiker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsDeadAir5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsDeadAir5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRunwayBiker
@@ -3148,6 +3168,19 @@ Rule L4D1ResponseSoftDispleasureSwearBiker
 //--------------------------------------------------------------------------------------------------------------
 // Item Spotted
 //--------------------------------------------------------------------------------------------------------------
+Response L4D1SurvivorAskForHealthThirdStrikeBiker
+{
+	scene "scenes/Biker/GoingToDieAskForHeal01.vcd" //Anyone have some first aid, I'm about to die.
+	scene "scenes/Biker/GoingToDieAskForHeal02.vcd" //Sure could use a medkit. Just sayin'.
+	scene "scenes/Biker/GoingToDieAskForHeal03.vcd" //Can anyone patch me up?
+	scene "scenes/Biker/GoingToDieAskForHeal04.vcd" //Ahh. Hey. Someone wanna patch me up?
+}
+Rule L4D1SurvivorAskForHealthThirdStrikeBiker
+{
+	criteria ConceptAskForHealth2 IsBiker IssuerClose IsNotSpeaking IsOnThirdStrike
+	Response L4D1SurvivorAskForHealthThirdStrikeBiker
+}
+
 Response L4D1SurvivorAskBillForHealthBiker
 {
 	scene "scenes/Biker/PlayerSuggestHealthSpecific05.vcd" odds 5 //Bill, could I borrow your med kit? I just wanna look at it.
@@ -3156,7 +3189,7 @@ Response L4D1SurvivorAskBillForHealthBiker
 }
 Rule L4D1SurvivorAskBillForHealthBiker
 {
-	criteria ConceptAskForHealth2 IsBiker SubjectIsNamVet IsSubjectNear400
+	criteria ConceptAskForHealth2 IsBiker FromIsNamVet IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskBillForHealthBiker
 }
 
@@ -3166,7 +3199,15 @@ Response L4D1SurvivorAskForHealthBiker
 }
 Rule L4D1SurvivorAskForHealthBiker
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
+	criteria ConceptPlayerLookHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto HasASubject IsSubjectDistNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
+	ApplyContext "SaidAskForHealth:1:10"
+	applycontexttoworld
+	Response L4D1SurvivorAskForHealthBiker
+}
+
+Rule L4D1SurvivorAskForHealthV2Biker
+{
+	criteria ConceptPlayerLook IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto HasASubject IsSubjectDistNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkBiker
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthBiker
@@ -3181,7 +3222,7 @@ Response L4D1SurvivorAskLouisForHealthBiker
 }
 Rule L4D1SurvivorAskLouisForHealthBiker
 {
-	criteria ConceptAskForHealth2  IsBiker SubjectIsManager IsSubjectNear400
+	criteria ConceptAskForHealth2  IsBiker FromIsManager IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskLouisForHealthBiker
 }
 
@@ -3192,18 +3233,18 @@ Response L4D1SurvivorAskZoeyForHealthBiker
 }
 Rule L4D1SurvivorAskZoeyForHealthBiker
 {
-	criteria ConceptAskForHealth2  IsBiker SubjectIsTeenGirl IsSubjectNear400
+	criteria ConceptAskForHealth2  IsBiker FromIsTeenGirl IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskZoeyForHealthBiker
 }
 
-Response L4D1SurvivorFrancisHealthHereBiker
+Response L4D1SurvivorHealthHereBiker
 {
 	print " "  then From AskForHealth2 foo:0 0 //
 }
-Rule L4D1SurvivorFrancisHealthHereBiker
+Rule L4D1SurvivorHealthHereBiker
 {
-	criteria ConceptAskForHealth IsNotCoughing IsBiker IsTalk IsTalkBiker YesHasFirstAidKit IsHealthyHalf IsWorldTalkBiker
-	Response L4D1SurvivorFrancisHealthHereBiker
+	criteria ConceptAskForHealth IsNotCoughing IsBiker IsTalk IsTalkBiker YesHasFirstAidKit IsRocking IsWorldTalkBiker
+	Response L4D1SurvivorHealthHereBiker
 }
 
 Response L4D1SurvivorSpottedBillCloseBiker
@@ -3574,7 +3615,7 @@ Rule SurvivorSpottedLaserSightsAutoBiker
 
 Rule SurvivorBotPickupLaserSightsSpottedBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsNotSaidSpotWeapons IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInStartArea IsNotInCheckpoint IsNotInSafeSpot IsNotSaidSpotWeapons IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedAdrenalineBiker
@@ -3630,7 +3671,7 @@ Rule L4D1SpottedBoomerBiker
 
 Rule L4D1SpottedBoomerAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedBoomerBiker
@@ -3658,7 +3699,7 @@ Rule L4D1SpottedHunterBiker
 
 Rule L4D1SpottedHunterAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedHunterBiker
@@ -3684,7 +3725,7 @@ Rule L4D1SpottedCanadianHunterBiker
 
 Rule L4D1SpottedCanadianHunterAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsCrashCourse2 IsNotIncapacitated CanadaBikerHate NotCanadaBikerHatedYet ChanceToFire10Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsCrashCourse2 IsNotIncapacitated CanadaBikerHate NotCanadaBikerHatedYet ChanceToFire10Percent _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30,CanadaBikerHated:1:0"
 	applycontexttoworld
 	Response L4D1SpottedCanadianHunterBiker
@@ -3712,7 +3753,7 @@ Rule L4D1SpottedSmokerBiker
 
 Rule L4D1SpottedSmokerAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSmokerBiker
@@ -3740,7 +3781,7 @@ Rule L4D1SpottedChargerBiker
 
 Rule L4D1SpottedChargerAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedChargerBiker
@@ -3770,7 +3811,7 @@ Rule L4D1SpottedJockeyBiker
 
 Rule L4D1SpottedJockeyAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedJockeyBiker
@@ -3798,7 +3839,7 @@ Rule L4D1SpottedSpitterBiker
 
 Rule L4D1SpottedSpitterAlsoBiker
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSpitterBiker
@@ -3947,7 +3988,7 @@ Response L4D1PlayerFriendlyFireBiker
 }
 Rule L4D1PlayerFriendlyFireBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireBiker
 }
@@ -3960,7 +4001,7 @@ Response L4D1PlayerFriendlyFire2Biker
 }
 Rule L4D1PlayerFriendlyFire2Biker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2Biker
 }
@@ -3975,7 +4016,7 @@ Response L4D1PlayerFriendlyFireFromBillBiker
 }
 Rule L4D1PlayerFriendlyFireFromBillBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsNamVet ChanceToFire30Percent IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsNamVet ChanceToFire30Percent IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromBillBiker
 }
@@ -3988,7 +4029,7 @@ Response L4D1PlayerFriendlyFireFromLouisBiker
 }
 Rule L4D1PlayerFriendlyFireFromLouisBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsManager ChanceToFire30Percent IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsManager ChanceToFire30Percent IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromLouisBiker
 }
@@ -4000,7 +4041,7 @@ Response L4D1PlayerFriendlyFireFromZoeyBiker
 }
 Rule L4D1PlayerFriendlyFireFromZoeyBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsNotOnThirdStrike IsTalk IsTalkBiker SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromZoeyBiker
 }
@@ -4013,7 +4054,7 @@ Response L4D1PlayerFriendlyFireNoBulletBiker
 }
 Rule L4D1PlayerFriendlyFireNoBulletBiker
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeBullet IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletBiker
 }
@@ -4061,7 +4102,7 @@ Response L4D1SurvivorTauntResponseBiker
 }
 Rule L4D1SurvivorTauntResponseBiker
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	Response L4D1SurvivorTauntResponseBiker
 }
 
@@ -4108,7 +4149,7 @@ Response PlayerToTheRescueRosBiker
 }
 Rule PlayerToTheRescueRosBiker
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerToTheRescueRosBiker
 }
 
@@ -4303,7 +4344,7 @@ Response L4D1SurvivorReloadingBiker
 }
 Rule L4D1SurvivorReloadingBiker
 {
-	criteria ConceptPlayerReloading IsASurvivor IsNotSpeaking IsBiker IsNotIncapacitated IsTalk IsTalkBiker RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkBiker IsNotZombiePresentTank ChanceToFire50Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerReloading IsASurvivor IsNotSpeaking IsBiker IsNotIncapacitated IsTalk IsTalkBiker RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkBiker NotTankAggro ChanceToFire50Percent _auto_NotSpottedVehicle
 	Response L4D1SurvivorReloadingBiker
 }
 
@@ -4402,6 +4443,14 @@ Rule L4D1PlayerHelpIncappedLethargicBiker
 	ApplyContext "CalledForHelp:1:60"
 	Response L4D1PlayerHelpIncappedLethargicBiker
 }
+
+//Rule L4D1PlayerHelpIncappedWitchBiker
+//{
+//	criteria ConceptPlayerHelp IsBiker IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 
 //--------------------------------------------------------------------------------------------------------------
@@ -5997,7 +6046,7 @@ Response PlayerRemarkc7m1_tankcarBiker
 }
 Rule PlayerRemarkc7m1_tankcarBiker
 {
-	criteria ConceptRemark IsBiker Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkBiker IsWorldTalkBiker IsNamVetAlive IsNamVetNear400 IsSubjectNear400 IsNotZombiePresentTank _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptRemark IsBiker Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkBiker IsWorldTalkBiker IsNamVetAlive IsNamVetNear400 IsSubjectNear400 NotTankAggro _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Saidc7m1_tankcar:1:0"
 	applycontexttoworld
 	Response PlayerRemarkc7m1_tankcarBiker
@@ -6234,7 +6283,7 @@ Response L4D1SurvivorNearFinaleBiker
 }
 Rule L4D1SurvivorNearFinaleBiker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorNearFinaleBiker
@@ -6250,7 +6299,7 @@ Response L4D1PlayerNearFinaleC7M3Biker
 }
 Rule L4D1PlayerNearFinaleC7M3Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC7M3Biker
@@ -6258,7 +6307,7 @@ Rule L4D1PlayerNearFinaleC7M3Biker
 
 Rule L4D1SurvivorFinaleAheadC9M2Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,SaidCreshendoStartNear:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -6271,7 +6320,7 @@ Response L4D1PlayerNearFinaleC11M5Biker
 }
 Rule L4D1PlayerNearFinaleC11M5Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC11M5Biker
@@ -6284,7 +6333,7 @@ Response L4D1PlayerNearFinaleC12M5Biker
 }
 Rule L4D1PlayerNearFinaleC12M5Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsBloodHarvest5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsWorldTalkBiker IsBloodHarvest5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,WarnMegaMob:1:60,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC12M5Biker
@@ -6292,7 +6341,7 @@ Rule L4D1PlayerNearFinaleC12M5Biker
 
 Rule L4D1PlayerNearFinaleC14M2Biker
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsLastStand2 IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsBiker IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkBiker IsNotIncapacitated IsLastStand2 IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -6470,7 +6519,7 @@ Response L4D1PlayerCoverMeBiker
 }
 Rule L4D1PlayerCoverMeBiker
 {
-	criteria ConceptPlayerCoverMe IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerCoverMe IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerCoverMeBiker
 }
 
@@ -6527,7 +6576,7 @@ Response L4D1PlayerHurryUpBiker
 }
 Rule L4D1PlayerHurryUpBiker
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerHurryUp IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerHurryUpBiker
 }
 
@@ -6562,7 +6611,7 @@ Response L4D1PlayerLeadOnBiker
 }
 Rule L4D1PlayerLeadOnBiker
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerLeadOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerLeadOnBiker
 }
 
@@ -6582,7 +6631,7 @@ Response L4D1PlayerMoveOnBiker
 }
 Rule L4D1PlayerMoveOnBiker
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerMoveOn IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerMoveOnBiker
 }
 
@@ -6637,7 +6686,7 @@ Response L4D1PlayerAskReadyBiker
 }
 Rule L4D1PlayerAskReadyBiker
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerAskReady IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerAskReadyBiker
 }
 
@@ -6656,7 +6705,7 @@ Response L4D1PlayerImWithYouBiker
 }
 Rule L4D1PlayerImWithYouBiker
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerImWithYouBiker
 }
 
@@ -6676,7 +6725,7 @@ Response L4D1PlayerLaughBiker
 }
 Rule L4D1PlayerLaughBiker
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerLaughBiker
 }
 
@@ -6717,7 +6766,7 @@ Response L4D1PlayerNiceJobResponseBiker
 }
 Rule L4D1PlayerNiceJobResponseBiker
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerNiceJob IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerNiceJobResponseBiker
 }
 
@@ -6743,7 +6792,7 @@ Response L4D1PlayerNoBiker
 }
 Rule L4D1PlayerNoBiker
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerNo IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerNoBiker
 }
 
@@ -6755,7 +6804,7 @@ Response L4D1PlayerAnswerLostCallBiker
 }
 Rule L4D1PlayerAnswerLostCallBiker
 {
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerAnswerLostCallBiker
 }
 
@@ -6769,7 +6818,7 @@ Response L4D1PlayerSorryBiker
 }
 Rule L4D1PlayerSorryBiker
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerSorryBiker
 }
 
@@ -6790,7 +6839,7 @@ Response L4D1PlayerSorryFFBiker
 }
 Rule L4D1PlayerSorryFFBiker
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerSorry IsNotCoughing IsShotTeammateBiker IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerSorryFFBiker
 }
 
@@ -6812,7 +6861,7 @@ Response L4D1PlayerThanksBiker
 }
 Rule L4D1PlayerThanksBiker
 {
-	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerThanksBiker
 }
 
@@ -6827,7 +6876,7 @@ Response L4D1PlayerYesBiker
 }
 Rule L4D1PlayerYesBiker
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerYes IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerYesBiker
 }
 
@@ -6865,7 +6914,7 @@ Response PlayerYellRunBiker
 }
 Rule PlayerYellRunBiker
 {
-	criteria ConceptPlayerYellRun IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerYellRun IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerYellRunBiker
 }
 
@@ -6887,7 +6936,7 @@ Response L4D1PlayerNegativeBiker
 }
 Rule L4D1PlayerNegativeBiker
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerNegativeBiker
 }
 
@@ -6910,7 +6959,7 @@ Response L4D1PlayerAreaClearBiker
 }
 Rule L4D1PlayerAreaClearBiker
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerAreaClear IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1PlayerAreaClearBiker
 }
 
@@ -6948,7 +6997,7 @@ Response PlayerHurrahBiker
 }
 Rule PlayerHurrahBiker
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker 
+	criteria ConceptPlayerHurrah IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerHurrahBiker
 }
 
@@ -6966,7 +7015,7 @@ Response PlayerWarnCarefulBiker
 }
 Rule PlayerWarnCarefulBiker
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response PlayerWarnCarefulBiker
 }
 
@@ -7210,7 +7259,7 @@ Rule L4D1PlayerGrenadeBiker
 //}
 //Rule L4D1PlayerGrenadeCarefulBiker
 //{
-//	criteria ConceptGrenadeCareful IsNotCoughing IsBiker IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkBiker IsWorldTalkBiker IsNotZombiePresentTank
+//	criteria ConceptGrenadeCareful IsNotCoughing IsBiker IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro
 //	Response L4D1PlayerGrenadeCarefulBiker
 //}
 
@@ -7226,6 +7275,39 @@ Rule L4D1PlayerIncapacitatedInitialBiker
 	ApplyContext "TalkBiker:1:2"
 	Response L4D1PlayerIncapacitatedInitialBiker
 }
+
+//Response L4D1PlayerIncapacitatedInitialWitchBiker
+//{
+//	scene "scenes/Biker/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical06.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical07.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical08.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical09.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical10.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical11.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//}
+//Rule L4D1PlayerIncapacitatedInitialWitchBiker
+//{
+//	criteria ConceptPlayerIncapacitated IsBiker IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkBiker:1:2"
+//	forceweight 30
+//	Response L4D1PlayerIncapacitatedInitialWitchBiker
+//}
+
+//Response L4D1WitchDownedBiker
+//{
+//	scene "scenes/Biker/GrabbedBySmoker01a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+//	scene "scenes/Biker/GrabbedBySmoker02a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+//}
+//Rule L4D1WitchDownedBiker
+//{
+//	criteria ConceptWitchDowned IsBiker IsWitchPresent IsWitchAggro
+//	Response L4D1WitchDownedBiker
+//}
 
 Response L4D1PlayerKillConfirmationBiker
 {
@@ -7333,7 +7415,7 @@ Response L4D1PlayerLockTheDoorCheckPointBiker
 }
 Rule L4D1PlayerLockTheDoorCheckPointBiker
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsBiker IsInSafeSpot IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsBiker IsInSafeSpot IsNotAlone IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerLockTheDoorCheckPointBiker
 }
 
@@ -7927,7 +8009,7 @@ Response L4D1SurvivorVocalizeWaitHereBiker
 }
 Rule L4D1SurvivorVocalizeWaitHereBiker
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria ConceptPlayerWaitHere IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response L4D1SurvivorVocalizeWaitHereBiker
 }
 
@@ -8121,8 +8203,7 @@ Response SurvivorPouncedByHunterBiker
 }
 Rule SurvivorPouncedByHunterBiker
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
-	ApplyContext "TalkBiker:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking
 	Response SurvivorPouncedByHunterBiker
 }
 
@@ -8229,16 +8310,26 @@ Rule L4D1DeathOneBiker
 
 Response L4D1TeamKillBiker
 {
-	scene "scenes/Biker/TeamKillAccident01.vcd" predelay ".5,1.25" //Be careful!
-	scene "scenes/Biker/TeamKillAccident02.vcd" predelay ".5,1.25" //That was not cool.
-	scene "scenes/Biker/TeamKillAccident03.vcd" predelay ".5,1.25" //That was not cool.
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule L4D1TeamKillBiker
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedNearEnough IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireBiker IsNotIncapacitated IsWorldTalkBiker
+	criteria IsFaultConcept IsBiker ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillBiker
+}
+
+Response L4D1TeamKillResponseBiker
+{
+	scene "scenes/Biker/TeamKillAccident01.vcd" //Be careful!
+	scene "scenes/Biker/TeamKillAccident02.vcd" //That was not cool.
+	scene "scenes/Biker/TeamKillAccident03.vcd" //That was not cool.
+}
+Rule L4D1TeamKillResponseBiker
+{
+	criteria ConceptTeamKillResponse IsBiker IsNotCoughing IsTalk IsTalkBiker IsWorldTalkBiker
+	Response L4D1TeamKillResponseBiker
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -8250,14 +8341,14 @@ Response L4D1PickupAutoShotgunGroovyLouisBiker
 }
 Rule L4D1PickupAutoShotgunGroovyLouisBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAutoShotgun IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsManagerAlive IsManagerNear400 NotInCombat ChanceToFire10Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAutoShotgun IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsManagerAlive IsManagerNear400 NotInCombat ChanceToFire10Percent AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1PickupAutoShotgunGroovyLouisBiker
 }
 
 Rule L4D1PickupSpasShotgunGroovyLouisBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Spas IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsManagerAlive IsManagerNear400 NotInCombat ChanceToFire10Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Spas IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsManagerAlive IsManagerNear400 NotInCombat ChanceToFire10Percent AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1PickupAutoShotgunGroovyLouisBiker
 }
@@ -8268,14 +8359,14 @@ Response L4D1PickupAutoShotgunGroovyZoeyBiker
 }
 Rule L4D1PickupAutoShotgunGroovyZoeyBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAutoShotgun IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsTeenGirlAlive IsTeenGirlNear400 NotInCombat ChanceToFire10Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAutoShotgun IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsTeenGirlAlive IsTeenGirlNear400 NotInCombat ChanceToFire10Percent AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1PickupAutoShotgunGroovyZoeyBiker
 }
 
 Rule L4D1PickupSpasShotgunGroovyZoeyBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Spas IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsTeenGirlAlive IsTeenGirlNear400 NotInCombat ChanceToFire10Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Spas IsTalk IsTalkBiker IsNotInSafeSpot IsNotInStartArea IsTeenGirlAlive IsTeenGirlNear400 NotInCombat ChanceToFire10Percent AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1PickupAutoShotgunGroovyZoeyBiker
 }
@@ -8292,14 +8383,14 @@ Response L4D1SurvivorPickupAutoShotgunBiker
 }
 Rule L4D1SurvivorPickupAutoShotgunBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAutoShotgunBiker
 }
 
 Rule L4D1SurvivorPickupSpasShotgunBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAutoShotgunBiker
 }
@@ -8313,7 +8404,7 @@ Response L4D1SurvivorPickupFirstAidKitBiker
 }
 Rule L4D1SurvivorPickupFirstAidKitBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupFirstAidKitBiker
 }
@@ -8325,7 +8416,7 @@ Response L4D1SurvivorPickupHuntingRifleBiker
 }
 Rule L4D1SurvivorPickupHuntingRifleBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupHuntingRifleBiker
 }
@@ -8336,28 +8427,28 @@ Response L4D1SurvivorPickupMilitarySniperBiker
 }
 Rule L4D1SurvivorPickupMilitarySniperBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMilitarySniperBiker
 }
 
 Rule L4D1SurvivorPickupScoutSniperBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMilitarySniperBiker
 }
 
 Rule L4D1SurvivorPickupAWPSniperBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMilitarySniperBiker
 }
 
 Rule SurvivorPickupLaserSightsBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkBiker IsWorldTalkBiker IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkBiker IsWorldTalkBiker IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMilitarySniperBiker
 }
@@ -8369,7 +8460,7 @@ Response L4D1SurvivorPickupMolotovBiker
 }
 Rule L4D1SurvivorPickupMolotovBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMolotovBiker
 }
@@ -8382,7 +8473,7 @@ Response L4D1SurvivorPickupPainPillsBiker
 }
 Rule L4D1SurvivorPickupPainPillsBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPainPillsBiker
 }
@@ -8393,14 +8484,14 @@ Response L4D1SurvivorPickupAdrenalineBiker
 }
 Rule L4D1SurvivorPickupAdrenalineBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAdrenalineBiker
 }
 
 Rule SurvivorPickupDefibrillatorBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpDefibrillator IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpDefibrillator IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAdrenalineBiker
 }
@@ -8415,7 +8506,7 @@ Response L4D1SurvivorPickupPipeBombBiker
 }
 Rule L4D1SurvivorPickupPipeBombBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPipeBombBiker
 }
@@ -8429,14 +8520,14 @@ Response L4D1SurvivorPickupPumpShotgunBiker
 }
 Rule L4D1SurvivorPickupPumpShotgunBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPumpShotgunBiker
 }
 
 Rule L4D1SurvivorPickupChromeShotgunBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPumpShotgunBiker
 }
@@ -8452,28 +8543,28 @@ Response L4D1SurvivorPickupRifleBiker
 }
 Rule L4D1SurvivorPickupRifleBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleBiker
 }
 
 Rule L4D1SurvivorPickupDesertRifleBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleBiker
 }
 
 Rule L4D1SurvivorPickupAK47RifleBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleBiker
 }
 
 Rule L4D1SurvivorPickupSG552RifleBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleBiker
 }
@@ -8486,21 +8577,21 @@ Response L4D1SurvivorPickupSMGBiker
 }
 Rule L4D1SurvivorPickupSMGBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGBiker
 }
 
 Rule L4D1SurvivorPickupSilencedSMGBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGBiker
 }
 
 Rule L4D1SurvivorPickupMP5Biker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGBiker
 }
@@ -8556,7 +8647,7 @@ Response SurvivorPickupSecondPistolBiker
 }
 Rule SurvivorPickupSecondPistolBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSecondPistolBiker
 }
@@ -8569,14 +8660,14 @@ Response L4D1SurvivorPickupM60Biker
 }
 Rule L4D1SurvivorPickupM60Biker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupM60Biker
 }
 
 Rule L4D1SurvivorPickupGrenadeLauncherBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpGrenadeLauncher IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpGrenadeLauncher IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupM60Biker
 }
@@ -8592,91 +8683,91 @@ Response L4D1SurvivorPickupMeleeBiker
 
 Rule L4D1SurvivorPickupGolfClubBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpGolfClub IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpGolfClub IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupFireAxeBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpFireAxe IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpFireAxe IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupCrowbarBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpCrowBar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpCrowBar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupGuitarBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpelectric_guitar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpelectric_guitar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupKatanaBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpKatana IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpKatana IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupMacheteBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpMachete IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpMachete IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupFryingPanBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpFryingPan IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpFryingPan IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupTonfaBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUptonfa IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUptonfa IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupCricketBatBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpcricket_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpcricket_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupBaseballBatBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpbaseball_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpbaseball_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupKnifeBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpKnife IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpKnife IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupShovelBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShovel IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpShovel IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupPitchforkBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPitchfork IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPitchfork IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
@@ -8689,7 +8780,7 @@ Response L4D1SurvivorPickupChainsawBiker
 }
 Rule L4D1SurvivorPickupChainsawBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpChainSaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpChainSaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupChainsawBiker
 }
@@ -8725,21 +8816,21 @@ Response L4D1SurvivorPickupUpIncendiaryAmmoBiker
 }
 Rule L4D1SurvivorPickupUpIncendiaryAmmoBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpIncendiaryAmmo IsNotSpeaking IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpIncendiaryAmmo IsNotSpeaking IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupUpIncendiaryAmmoBiker
 }
 
 Rule L4D1SurvivorPickupUpExplosiveAmmoBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpExplosiveAmmo IsNotSpeaking IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpExplosiveAmmo IsNotSpeaking IsTalk IsTalkBiker IsWorldTalkBiker AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
 
 Rule L4D1SurvivorPickupUpIncendiaryBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkBiker IsWorldTalkBiker IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkBiker IsWorldTalkBiker IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeBiker
 }
@@ -8751,7 +8842,7 @@ Response L4D1SurvivorPickupUpExplosivesBiker
 }
 Rule L4D1SurvivorPickupUpExplosivesBiker
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkBiker IsWorldTalkBiker IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkBiker IsWorldTalkBiker IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupUpExplosivesBiker
 }
@@ -8794,7 +8885,7 @@ Response L4D1PlayerHealOtherBiker
 }
 Rule L4D1PlayerHealOtherBiker
 {
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker NotInIntenseCombat IsWorldTalkBiker
+	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker NotInIntenseCombat NotTankAggro IsWorldTalkBiker
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerHealOtherBiker
 }
@@ -8811,16 +8902,8 @@ Response L4D1PlayerHealOtherCombatBiker
 }
 Rule L4D1PlayerHealOtherCombatBiker
 {
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker InIntenseCombat IsWorldTalkBiker
+	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker ActiveCombatSituation IsWorldTalkBiker
 	ApplyContext "TalkBiker:1:5"
-	Response L4D1PlayerHealOtherCombatBiker
-}
-
-Rule L4D1PlayerHealOtherTankBiker
-{
-	criteria ConceptPlayerHealingOther IsNotCoughing  IsBiker IsTalk IsTalkBiker IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkBiker
-	ApplyContext "TalkBiker:1:5"
-	forceweight 30
 	Response L4D1PlayerHealOtherCombatBiker
 }
 
@@ -8842,7 +8925,7 @@ Response L4D1PlayerReviveFriendBiker
 }
 Rule L4D1PlayerReviveFriendBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:2"
 	Response L4D1PlayerReviveFriendBiker
 }
@@ -8860,7 +8943,7 @@ Response L4D1PlayerReviveFriendCriticalBiker
 }
 Rule L4D1PlayerReviveFriendCriticalBiker
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendCriticalBiker
 }
@@ -8874,31 +8957,15 @@ Response L4D1PlayerReviveFriendLoudBiker
 }
 Rule L4D1PlayerReviveFriendLoudBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker InIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker ActiveCombatSituation _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
-	Response L4D1PlayerReviveFriendLoudBiker
-}
-
-Rule L4D1PlayerReviveFriendLoud2Biker
-{
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
-	ApplyContext "TalkBiker:1:5"
-	forceweight 30
 	Response L4D1PlayerReviveFriendLoudBiker
 }
 
 Rule L4D1PlayerReviveFriendLoudCritBiker
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker InIntenseCombat IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker ActiveCombatSituation IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
-	Response L4D1PlayerReviveFriendLoudBiker
-}
-
-Rule L4D1PlayerReviveFriendLoudCrit2Biker
-{
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsBiker IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
-	ApplyContext "TalkBiker:1:5"
-	forceweight 30
 	Response L4D1PlayerReviveFriendLoudBiker
 }
 
@@ -8911,7 +8978,7 @@ Response L4D1PlayerReviveFriendLoudBillBiker
 }
 Rule L4D1PlayerReviveFriendLoudBillBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker InIntenseCombat IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsNamVet IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker ActiveCombatSituation IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsNamVet IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendLoudBillBiker
 }
@@ -8923,7 +8990,7 @@ Response L4D1PlayerReviveFriendLoudLouisBiker
 }
 Rule L4D1PlayerReviveFriendLoudLouisBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker InIntenseCombat IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsManager IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker ActiveCombatSituation IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsManager IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendLoudLouisBiker
 }
@@ -8935,7 +9002,7 @@ Response L4D1PlayerReviveFriendLoudZoeyBiker
 }
 Rule L4D1PlayerReviveFriendLoudZoeyBiker
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker InIntenseCombat IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsTeenGirl IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsBiker ActiveCombatSituation IsTalk IsTalkBiker ChanceToFire30Percent SubjectIsTeenGirl IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response L4D1PlayerReviveFriendLoudZoeyBiker
 }
@@ -9012,6 +9079,20 @@ Rule L4D1PlayerLedgeSaveCriticalBiker
 	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "TalkBiker:1:5"
 	Response PlayerLedgeSaveBiker
+}
+
+Rule PlayerLedgeSaveLoudBiker
+{
+	criteria ConceptPlayerLedgeSave IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker ActiveCombatSituation _auto_NotSpottedVehicle
+	ApplyContext "TalkBiker:1:5"
+	Response L4D1PlayerReviveFriendLoudBiker
+}
+
+Rule L4D1PlayerLedgeSaveLoudCriticalBiker
+{
+	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing  IsBiker IsTalk IsTalkBiker IsWorldTalkBiker ActiveCombatSituation _auto_NotSpottedVehicle
+	ApplyContext "TalkBiker:1:5"
+	Response L4D1PlayerReviveFriendLoudBiker
 }
 
 
@@ -9190,6 +9271,38 @@ Rule SurvivorSpottedChainsawAutoBiker
 	Response SurvivorSpottedChainsawBiker
 }
 
+Rule SurvivorSpottedM60Biker
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsNotSmartLookAuto IsM60 IsWorldTalkBiker _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawBiker
+}
+
+Rule SurvivorSpottedM60AutoBiker
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsM60 IsWorldTalkBiker IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawBiker
+}
+
+Rule SurvivorSpottedGrenadeLauncherBiker
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsProducer IsTalk IsTalkBiker IsNotSmartLookAuto Isgrenade_launcher IsWorldTalkBiker _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotgrenade_launcher:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawBiker
+}
+
+Rule SurvivorSpottedGrenadeLauncherAutoBiker
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsProducer IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotgrenade_launcher IsNotSaidSpot Isgrenade_launcher IsWorldTalkBiker IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotgrenade_launcher:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawBiker
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Spotted Firearms (Generic Lines)
 //--------------------------------------------------------------------------------------------------------------
@@ -9200,22 +9313,6 @@ Response SurvivorSpottedWeaponBiker
 	scene "scenes/Biker/SpotWeapons03.vcd"  //Buncha guns over here!
 	scene "scenes/Biker/SpotWeapons04.vcd"  //Weapon's over here!
 	scene "scenes/Biker/SpotWeapons05.vcd"  //We got weapons over here.
-}
-
-Rule SurvivorSpottedM60Biker
-{
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsNotSmartLookAuto IsM60 IsWorldTalkBiker _auto_NotSpottedVehicle
-	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedWeaponBiker
-}
-
-Rule SurvivorSpottedM60AutoBiker
-{
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsM60 IsWorldTalkBiker IsNotSpeakingWeight0 _auto_NotSpottedVehicle
-	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedWeaponBiker
 }
 
 Rule SurvivorSpottedMagnumBiker
@@ -10087,7 +10184,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Biker
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2Biker
 {
-	criteria ConceptFinalVehicleSpotted IsBiker IsLastStand2 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsBiker IsLastStand2 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockBiker:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Biker
@@ -10112,10 +10209,34 @@ Rule L4D1SurvivorFinalVehicleInsideBoatC14MBiker
 //--------------------------------------------------------------------------------------------------------------
 // Generic rules to keep track of contexts for all maps (Unless there's a seperate rule for special cases)
 //--------------------------------------------------------------------------------------------------------------
+Rule CampaignStartBiker
+{
+	criteria ConceptTalkIdle IsBiker IsInStartArea IsChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "Talk:1:60,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:20"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroChapter1Biker
+{
+	criteria ConceptTalkIdle IsBiker NotInCombat IsInStartArea IsChapter1 IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,CXM1Intro:1:0,_auto_SafeRoomStart:2:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule SafeRoomStartBiker
 {
-	criteria ConceptTalkIdle IsBiker IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	criteria ConceptTalkIdle IsBiker IsInStartArea IsNotChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroBiker
+{
+	criteria ConceptTalkIdle IsBiker NotInCombat IsInStartArea IsNotChapter1 IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response NoResponse
 }

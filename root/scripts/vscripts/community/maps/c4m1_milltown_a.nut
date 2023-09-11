@@ -5,6 +5,11 @@ devchap( "ALL MODES" );
 PrecacheModel( "models/props_downtown/gutter_downspout_straight_160_02.mdl" );
 PrecacheModel( "models/props_interiors/concretepillar01_dm_base.mdl" );
 PrecacheModel( "models/props_interiors/concretepillar01.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_1.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_2.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_3.mdl" );
+PrecacheModel( "models/props_interiors/concretepiller01_dm01_4.mdl" );
 PrecacheModel( "models/props_pipes/PipeSet02d_512_001a.mdl" );
 PrecacheModel( "models/props_mill/PipeSet08d_512_001a.mdl" );
 
@@ -27,6 +32,22 @@ function DoRoundFixes()
 	make_clip( "_burgertank_windowsmoother1", "Everyone", 1, "-5 -120 0", "6 120 4", "-5663 7268 135" );
 	make_clip( "_burgertank_windowsmoother2", "Everyone", 1, "-90 -5 0", "90 6 4", "-5798 7505 135" );
 	make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "-6022 7777 135" );
+	make_clip( "_commentary_clipgap_water", "Everyone", 1, "-500 -528 -80", "400 200 3000", "-7580.84 6948.33 -303" );
+	make_clip( "_commentary_smoother_burgersuv_a", "All and Physics", 1, "0 -5 0", "70 10 10", "-6577 7549 169.753", "0 30 0" );
+	make_clip( "_commentary_smoother_burgersuv_b", "All and Physics", 1, "0 -10 0", "70 8 10", "-6582 7554 161.753", "0 30 0" );
+	make_clip( "_commentary_smoother_burgersuv_c", "All and Physics", 1, "0 -10 0", "70 5 10", "-6586 7562 153.753", "0 30 0" );
+	make_clip( "_commentary_booster_burgertree_a1", "Survivors", 1, "-148 -99 -608", "148 99 608", "-6255 6674 928" );
+	make_clip( "_commentary_booster_burgertree_a2", "Survivors", 1, "-37 -93 -552", "37 93 552", "-6257 6827 984" );
+	make_clip( "_commentary_booster_burgertree_b1", "Survivors", 1, "-100 -81 -604", "100 81 604", "-4726 6761 932" );
+	make_clip( "_commentary_booster_burgertree_b2", "Survivors", 1, "-46 -112 -584", "46 112 584", "-4783 6887 952" );
+	make_clip( "_commentary_booster_burgertree_c1", "Survivors", 1, "-142 -123 -608", "142 123 608", "-7004 8145 928" );
+	make_clip( "_commentary_booster_burgertree_c2", "Survivors", 1, "-58 -61 -616", "58 61 616", "-6824 8307 920" );
+	make_clip( "_commentary_booster_burgertree_d", "Survivors", 1, "-148 -145 -612", "148 145 612", "-4701 8538 924" );
+	make_clip( "_commentary_booster_burgertree_e", "Survivors", 1, "-178 -136 -608", "178 136 608", "-5397 7956 928" );
+	make_clip( "_commentary_booster_burgertree_f", "Survivors", 1, "-178 -134 -628", "178 134 628", "-6806 7205 908" );
+	make_clip( "_commentary_edgeshrubs_a", "Survivors", 1, "-50 -52 -80", "50 1200 3000", "-957.801 3798.52 351.499" );
+	make_clip( "_commentary_edgeshrubs_b", "Survivors", 1, "-50 -52 -80", "50 300 2000", "-2852.78 5296.57 290.201" );
+	make_clip( "_commentary_edgeshrubs_c", "Survivors", 1, "-50 -52 -80", "50 1000 2000", "-2948.78 5232.57 290.201" );
 	make_trigduck( "_duckqol_greenposts1", "-60 -97 0", "60 97 142", "-2021 5568 98" );
 	make_trigduck( "_duckqol_greenposts2", "-60 -97 0", "60 97 142", "1069 6976 224" );
 	make_trigduck( "_duckqol_playground", "-156 -1 0", "156 1 77", "-1442 6968 119" );
@@ -39,7 +60,7 @@ function DoRoundFixes()
 	{
 		if ( item.IsValid() )
 		{
-			if ( item.GetClassname().find("weapon_") != null )
+			if ( item.GetClassname().find( "weapon_" ) != null )
 				NetProps.SetPropInt( item, "m_fEffects", 32 );
 		}
 	}
@@ -51,7 +72,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_treehouse_whitefence", "Survivors", 1, "-17 -80 0", "17 77 1125", "1767 2219 267" );
-
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -60,7 +80,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1742 -907 0", "1706 1757 32", "-5802 7499 1248" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -81,6 +100,7 @@ function DoRoundFixes()
 		make_clip( "_ladder_dumpsterhouse_clip", "Everyone", 1, "-8 -16 0", "26 8 168", "1638 4032 217", "0 45 0" );
 		make_clip( "_ladder_safehousetall_clip", "SI Players", 1, "-20 -2 -2", "8 2 310", "3725 -1537 101", "0 45 0" );
 		make_clip( "_ladder_sweetrelief_clip", "Everyone", 1, "-8 -16 0", "8 9 212", "-5746 6595 96", "0 53 0" );
+		make_clip( "_ladder_cornerhome_clip", "SI Players", 1, "-1 -10 -40", "1 14 40", "1130.02 7052 426", "0 -45 0" );
 		make_clip( "_ladder_yellowhousetree_topdenial", "SI Players", 1, "-8 -32 0", "8 32 62", "2244 3123 378", "-7 0 0" );
 		make_clip( "_playgroundhouse_clip", "Survivors", 1, "-54 -177 -35", "635 176 1176", "-2074 7312 360" );
 		make_clip( "_safehousehedge_blocker", "SI Players", 1, "-690 -122 -20", "139 93 2122", "4401 -2207 438" );
@@ -92,13 +112,13 @@ function DoRoundFixes()
 		make_ladder( "_ladder_dumpsterhouse_cloned_alarmtrailer", "677.5 2966 212.223", "-1309 4697 88", "0 270 0", "0 -1 0" );
 		make_ladder( "_ladder_finalhouse_cloned_yellowhouse", "3510.5 917 182.881", "2993 3583 -14", "0 -90 0", "0 1 0" );
 		make_ladder( "_ladder_gaselecbox_cloned_autosalvageback", "-5876.19 8673.97 236.888", "4059 13901 -58", "0 90 0", "-1 0 0" );
-		make_ladder( "_ladder_grocerypillar_cloned_garagesalehouse", "2468 2634 184", "-8299 8596 5", "0 -90 0", "1 0 0" );
+		make_ladder( "_ladder_grocerypillar_cloned_garagesalehouse", "2468 2634 184", "-8299 8596 12", "0 -90 0", "1 0 0" );
 		make_ladder( "_ladder_mobilepickup_cloned_alarmtrailer", "677.5 2966 212.223", "1675 8269 -36", "0 -180 0", "-1 0 0" );
 		make_ladder( "_ladder_safehousefenceback_cloned_cullingbuddy", "-4083 7580 170", "7421 -9698 -9" );
 		make_ladder( "_ladder_safehousetall_cloned_tallbuildingleft", "-885 5961 269.556", "9680 -675 -26", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_saferoofpipe_cloned_tallbuildingleft", "-885 5961 269.556", "9680 -880 -26", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_sweetrelief_cloned_autosalvageback", "-5876.19 8673.97 236.888", "112 -2069 -56" );
-		make_ladder( "_ladder_tallbuildingright_cloned_tallbuildingleft", "-885 5961 269.557", "5057 6467 -2", "0 90 0", "-1 0 0" );
+		make_ladder( "_ladder_tallbuildingright_cloned_tallbuildingleft", "-885 5961 269.557", "5057 6467 11", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_trailerqol_cloned_alarmtrailer", "677.5 2966 212.223", "2555 3388 -66", "0 66 0", "0.4 0.9 0" );
 		make_ladder( "_ladder_vinehouseqol_cloned_alarmtrailer", "677.5 2966 212.223", "-3107 6241 -32", "0 -90 0", "0 -1 0" );
 		make_ladder( "_ladder_woodhouseqol_cloned_alarmtrailer", "677.5 2966 212.223", "2908 4383 -40", "0 90 0", "0 1 0" );

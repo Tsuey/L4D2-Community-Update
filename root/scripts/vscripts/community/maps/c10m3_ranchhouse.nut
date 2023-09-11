@@ -54,7 +54,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_cliprework_smokertrolling", "Survivors", 1, "-207 -21 0", "219 8 259", "-11857 -5323 85" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -77,6 +76,7 @@ function DoRoundFixes()
 		make_clip(	"_solidify_permstuck07",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-8918 -860 -42" );
 		make_clip(	"_solidify_permstuck08",	"SI Players",	1,	"-17 -17 0",		"17 17 512",		"-8570 -994 -66" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-508 -290 -72", "1134 46 402", "-9348 -7694 584" );
+		make_clip( "_hellcade_permstuck",		"SI Players", 1, "-13 -188 -24", "13 188 24", "-4598 -1025 -54" );
 		make_ladder( "_ladder_brokenwallL_cloned_graveshort", "-4808 706 6", "2295 383 193" );
 		make_ladder( "_ladder_brokenwallM_cloned_graveshort", "-4808 706 6", "2327 383 193" );
 		make_ladder( "_ladder_brokenwallR_cloned_graveshort", "-4808 706 6", "2359 383 193" );

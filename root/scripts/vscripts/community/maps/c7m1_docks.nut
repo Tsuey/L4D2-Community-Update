@@ -31,7 +31,6 @@ function DoRoundFixes()
 
 		EntFire( "tankdoorin_button", "AddOutput", "OnPressed tank_door_clip:Kill::0:-1" );
 		EntFire( "tankdoorin_button", "AddOutput", "OnTimeUp tankdoorinnavblocker:UnblockNav::0:-1" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

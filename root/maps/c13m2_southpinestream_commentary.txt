@@ -1,0 +1,51 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M2DownHere"
+		"origin" "3954 1989 531"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M2DownHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M2DownHere2"
+		"origin" "664 2752 377"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M2DownHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M2Uphill"
+		"origin" "-892 4536 63"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M2Uphill"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M2UpLadder"
+		"origin" "6332 2089 430"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M2UpLadder"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M2DownHere3"
+		"origin" "340 6006 216"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M2DownHere"
+	}
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "C13M2UpStairs"
+		"origin" "3018.01 1451 253"
+		"angles" "0 -0.5143264532 0"
+		"contextsubject" "C13M2UpStairs"
+	}
+}

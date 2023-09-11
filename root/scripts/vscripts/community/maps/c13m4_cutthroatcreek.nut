@@ -39,7 +39,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_commonhop_endshortcut", "Survivors", 1, "-94 -35 -153", "93 -29 1437", "-693 4555 35", "0 5 0" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -77,7 +76,8 @@ function DoRoundFixes()
 
 function DoTankWarp( hndTank )
 {
-	// move tank spawns back a bit to discourage rushing
+	// Move Tank spawns back a bit to discourage rushing.
+
 	if ( CheckToWarpTank( hndTank, [-1910, -2100, -470, -850] ) )
 	{
 		hndTank.SetOrigin( Vector( -488, -516, -374.9 ) );

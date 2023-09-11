@@ -30,10 +30,9 @@ function DoRoundFixes()
 	make_clip( "_missing_staircase_clip", "Everyone", 1, "-40 -40 -1", "40 40 40", "-922 1933 173", "0 315 0" );
 	make_clip( "_booster_lightleft", "Survivors", 1, "-8 -104 0", "8 29 725", "-2472 3148 278" );
 	make_clip( "_booster_lightright", "Survivors", 1, "-8 -104 0", "8 29 725", "-2152 3148 278" );
-	//make_clip( "_commentary_replace_01", "Survivors", 1, "-40 -84 -256", "40 84 944", "-1248 3316 80" );
 	make_clip( "_backstairs_left", "Survivors", 1, "-8 -160 0", "8 160 760", "-4086 2688 264" );
 	make_clip( "_backstairs_right", "Survivors", 1, "-8 -158 0", "8 197 760", "-951 2073 264", "0 -45 0" );
-
+	make_clip( "_commentary_infectedwindows", "Survivors", 1, "-8 -10 -8", "258 10 1064", "-3325 3720 -40" );
 
 	// FIX: Prevent interior stadium trigger from deleting players by re-creating it.
 
@@ -76,7 +75,6 @@ function DoRoundFixes()
 
 	kill_entity( hndBadTrigger );
 
-
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -85,7 +83,6 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
-
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -95,7 +92,6 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -131,8 +127,8 @@ function DoRoundFixes()
 		make_ladder( "_ladder_fireworksL_cloned_scaffoldsinglefork", "-2980 3298 -152", "771 -834 4" );
 		make_ladder( "_ladder_fireworksR_cloned_scaffoldsinglefork", "-2980 3298 -152", "581 -834 4" );
 		make_ladder( "_ladder_leftchopperwindowl_cloned_leftchopperwindowr", "-763.5005 2285.4995 240", "263 263 0" );
-		make_ladder( "_ladder_startfenceback_cloned_fencecoverfront", "-3444 3528 -188", "3838 2073 5", "0 43.5 0", "0.7 0.7 0" );
-		make_ladder( "_ladder_startfencefront_cloned_fencecoverback", "-3468 3592 -188", "3857 2072 5", "0 43.5 0", "-0.7 -0.7 0" );
+		make_ladder( "_ladder_startfenceback_cloned_fencecoverfront", "-3444 3528 -188", "3845 2199 8", "0 45 0", "0.70 0.70 0" );
+		make_ladder( "_ladder_startfencefront_cloned_fencecoverback", "-3468 3592 -188", "3860 2114 8", "0 44 0", "-0.71 -0.69 0" );
 		make_prop( "dynamic", "_missing_staircase", "models/props_interiors/stair_metal_02.mdl", "-840 1792 136", "0 315 0", "shadow_yes" );
 		make_prop( "dynamic", "_yesdraw_infecteddoorway", "models/props_update/c2m5_infectedroom_doorway.mdl", "-3200 3972 0", "0 90 0", "shadow_yes" );
 		make_prop( "dynamic", "_yesdraw_infectedroom", "models/props_update/c2m5_infectedroom.mdl", "-3200 3727 0", "0 -90 0", "shadow_yes" );

@@ -24,6 +24,15 @@ function DoRoundFixes()
 	make_clip( "_kiosk_qol_2b", "Everyone", 1, "-100 -1 -1", "100 1 0", "-4081 -3949 94" );
 	make_clip( "_kiosk_qol_3a", "Everyone", 1, "-44 -44 -1", "44 44 0", "-4848 -3935 94" );
 	make_clip( "_kiosk_qol_3b", "Everyone", 1, "-1 -100 -1", "1 100 0", "-4796 -3936 94" );
+	make_clip( "_commentary_vendingmachines", "Survivors", 1, "-37 -64 -116", "37 64 116", "-1798 -4848 652" );
+	make_clip( "_commentary_escape_windows", "Survivors", 1, "-264 -6 -476", "264 6 476", "-4448 -2298 476" );
+	make_clip( "_commentary_escape_door_physics", "All and Physics", 1, "0 10 -200", "140 20 0", "-4513.47 -2304.41 128" );
+	make_clip( "_commentary_cornerledge", "Survivors", 1, "-68 -16 -104", "68 16 104", "-6140 -3504 640" );
+	make_clip( "_commentary_elevatorcorner", "Survivors", 1, "-205 -2 -92", "205 2 92", "-4009.8 -3101 636", "0 135 0" );
+	make_clip( "_commentary_fauntleroys_a", "Survivors", 1, "-200 -36 -124", "200 36 124", "-4192 -4188 884" );
+	make_clip( "_commentary_fauntleroys_b", "Survivors", 1, "-10 -26 -124", "10 26 124", "-4402 -4198 884" );
+	make_clip( "_commentary_fauntleroys_c", "Survivors", 1, "-10 -26 -124", "10 26 124", "-3982 -4198 884" );
+	make_clip( "_commentary_infopanel", "Survivors", 1, "-8 -42 -8", "96 8 222", "-4492 -2767 9" );
 	make_trigduck( "_duckqol_informationbooth", "-96 -8 0", "96 8 64", "-4448 -3865 44" );
 
 	if ( HasPlayerControlledZombies() )

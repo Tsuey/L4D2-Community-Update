@@ -1,0 +1,47 @@
+//--------------------------------------------------------------------------------------------------------------
+// ArenaHeli Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------
+// C2M5
+//--------------------------------------------------------------------------------------------------------------
+Response C2M5_PilotNagArenaHeli
+{
+	norepeat
+	scene "scenes/npcs/ArenaHeli_C2Finale01.vcd"  then self C2M5_PilotNag foo:0 8.0 //Get into the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale02.vcd"  then self C2M5_PilotNag foo:0 8.0 //Get to the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale03.vcd"  then self C2M5_PilotNag foo:0 8.0 //To the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale04.vcd"  then self C2M5_PilotNag foo:0 8.0 //Get in here!
+	scene "scenes/npcs/ArenaHeli_C2Finale05.vcd"  then self C2M5_PilotNag foo:0 8.0 //Everybody in the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale06.vcd"  then self C2M5_PilotNag foo:0 8.0 //We're taking off!
+	scene "scenes/npcs/ArenaHeli_C2Finale07.vcd"  then self C2M5_PilotNag foo:0 8.0 //Let's go! Everybody to the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale08.vcd"  then self C2M5_PilotNag foo:0 8.0 //Get into the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale09.vcd"  then self C2M5_PilotNag foo:0 8.0 //Get to the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale10.vcd"  then self C2M5_PilotNag foo:0 8.0 //To the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale11.vcd"  then self C2M5_PilotNag foo:0 8.0 //Get in here!
+	scene "scenes/npcs/ArenaHeli_C2Finale12.vcd"  then self C2M5_PilotNag foo:0 8.0 //Everyone in the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale13.vcd"  then self C2M5_PilotNag foo:0 8.0 //We're taking off!
+	scene "scenes/npcs/ArenaHeli_C2Finale14.vcd"  then self C2M5_PilotNag foo:0 8.0 //Let's go! Everybody to the chopper!
+	scene "scenes/npcs/ArenaHeli_C2Finale15.vcd"  then self C2M5_PilotNag foo:0 8.0 //Let's go! Let's go! Let's go!
+	scene "scenes/npcs/ArenaHeli_C2Finale16.vcd"  then self C2M5_PilotNag foo:0 8.0 //Let's go! Let's go! Let's go!
+}
+Rule C2M5_PilotNagArenaHeli
+{
+	criteria ConceptC2M5_PilotNag AutoIsNotScavenge AutoIsNotSurvival NotSaidOutro
+	Response C2M5_PilotNagArenaHeli
+}
+
+Response C2M5OutroArenaHeli
+{
+	scene "scenes/npcs/Orator_Blank.vcd" //
+}
+Rule C2M5OutroArenaHeli
+{
+	criteria ConceptC2M5Outro AutoIsNotScavenge AutoIsNotSurvival
+	ApplyContext "Talk:1:0,SaidOutro:1:0"
+	applycontexttoworld
+	Response C2M5OutroArenaHeli
+}

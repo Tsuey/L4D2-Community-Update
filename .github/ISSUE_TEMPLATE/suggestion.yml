@@ -1,0 +1,19 @@
+name: Suggestion
+description: Feature request or change (unrelated to bugs)
+labels: [suggestion]
+body:
+- type: markdown
+  attributes:
+    value: |
+      Before we begin, please confirm it is not already [suggested](https://github.com/Tsuey/L4D2-Community-Update/issues?q=label%3Asuggestion). If it is cvar related, consider posting it [in this pinned issue](https://github.com/Tsuey/L4D2-Community-Update/issues/208).
+
+      Tip: You can upload images by simply pasting them in.
+- type: textarea
+  attributes:
+    label: Suggestion
+    description: |
+      Requests are preferably achievable [without C++ access](https://github.com/Tsuey/L4D2-Community-Update/blob/master/CODE_OF_CONDUCT.md#Ingenuity), are focused, necessary, and useful to both modders and players.
+
+      Keep in mind that the [least astonishing](https://github.com/Tsuey/L4D2-Community-Update/blob/master/CONTRIBUTING.md#Submissions) solution is probably the best one.
+  validations:
+    required: true

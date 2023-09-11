@@ -267,7 +267,7 @@ function MergeSessionOptionTables()
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-scriptedModeLastSlowPoll <- 0
+scriptedModeLastSlowPoll <- Time()
 scriptedModeUpdateFuncs <- []
 scriptedModeSlowPollFuncs <- []
 scriptedModeSlowPollInterval <- 3
@@ -316,7 +316,7 @@ function ScriptedMode_AddUpdate( updateFunc )
 // Adds a function to the slowpoll list
 function ScriptedMode_AddSlowPoll( updateFunc )
 {
-	if (!scriptedModeSlowPollFuncs.find(updateFunc))
+	if (scriptedModeSlowPollFuncs.find(updateFunc) == null)
 		scriptedModeSlowPollFuncs.append( updateFunc )
 	else
 		printl("You already have a SlowPoll for " + updateFunc.tostring())
@@ -376,8 +376,9 @@ _entHelper <- function ( ent, funcname )
 		}
 		else if (typeof(funcname) == "string")
 		{
-			if (funcname in ent)
-				ent[funcname]()
+			local ent_scope = ent.GetScriptScope()
+			if (ent_scope != null && funcname in ent_scope)
+				ent_scope[funcname]()
 			else if (funcname in g_ModeScript)
 				g_ModeScript[funcname](ent)
 			else if (funcname in g_MapScript)

@@ -267,11 +267,11 @@ Rule ItemDonorMechanicManager
 
 Response ItemDonorBikerManager
 {
-	scene "scenes/Manager/Thanks03.vcd" predelay "2,2.5" then coach YouAreWelcome foo:0 0.3 //Thanks, I owe you one.
-	scene "scenes/Manager/Thanks08.vcd" predelay "2,2.5" then coach YouAreWelcome foo:0 0.3 //Thanks, I owe ya a big one.
-	scene "scenes/Manager/Thanks09.vcd" predelay "2,2.5"  then coach YouAreWelcome foo:0 0.3 //Thanks a lot.
-	scene "scenes/Manager/Thanks12.vcd" predelay "2,2.5" odds 1 then coach YouAreWelcome foo:0 0.3 //Thanks Dog
-	scene "scenes/Manager/Thanks14.vcd" predelay "2,2.5" odds 1 then coach YouAreWelcome foo:0 0.3 //Thanks, Playa.
+	scene "scenes/Manager/Thanks03.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0.3 //Thanks, I owe you one.
+	scene "scenes/Manager/Thanks08.vcd" predelay "2,2.5" then biker YouAreWelcome foo:0 0.3 //Thanks, I owe ya a big one.
+	scene "scenes/Manager/Thanks09.vcd" predelay "2,2.5"  then biker YouAreWelcome foo:0 0.3 //Thanks a lot.
+	scene "scenes/Manager/Thanks12.vcd" predelay "2,2.5" odds 1 then biker YouAreWelcome foo:0 0.3 //Thanks Dog
+	scene "scenes/Manager/Thanks14.vcd" predelay "2,2.5" odds 1 then biker YouAreWelcome foo:0 0.3 //Thanks, Playa.
 }
 Rule ItemDonorBikerManager
 {
@@ -540,7 +540,7 @@ Response c6m3_outroL4D1Manager
 }
 Rule c6m3_outroL4D1Manager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsNotVersus IsNotIncapacitated ChanceToFire100Percent HasAFrom
 	applycontexttoworld
 	forceweight 1
 	Response c6m3_outroL4D1Manager
@@ -553,7 +553,7 @@ Response c6m3_outroL4D102aManager
 }
 Rule c6m3_outroL4D102aManager
 {
-	criteria Conceptc6m3_outroL4D102a IsManager
+	criteria Conceptc6m3_outroL4D102a IsManager HasAFrom
 	Response c6m3_outroL4D102aManager
 }
 
@@ -563,7 +563,7 @@ Response c6m3_outroL4D106aManager
 }
 Rule c6m3_outroL4D106aManager
 {
-	criteria Conceptc6m3_outroL4D106a IsManager
+	criteria Conceptc6m3_outroL4D106a IsManager HasAFrom
 	Response c6m3_outroL4D106aManager
 }
 
@@ -577,7 +577,7 @@ Response c6m3_outroL4D1AllManager
 }
 Rule c6m3_outroL4D1AllManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsEveryoneAlive ChanceToFire20Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 8
 	Response c6m3_outroL4D1AllManager
 }
@@ -589,7 +589,7 @@ Response c6m3_outroL4D1CoachManager
 }
 Rule c6m3_outroL4D1CoachManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsCoachAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsCoachAlive ChanceToFire30Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 7
 	Response c6m3_outroL4D1CoachManager
 }
@@ -601,7 +601,7 @@ Response c6m3_outroL4D1GamblerManager
 }
 Rule c6m3_outroL4D1GamblerManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsGamblerAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsGamblerAlive ChanceToFire40Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 6
 	Response c6m3_outroL4D1GamblerManager
 }
@@ -612,7 +612,7 @@ Response c6m3_outroL4D1MechanicManager
 }
 Rule c6m3_outroL4D1MechanicManager
 {
-	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsMechanicAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated
+	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsMechanicAlive ChanceToFire50Percent IsNotVersus IsNotIncapacitated HasAFrom
 	forceweight 5
 	Response c6m3_outroL4D1MechanicManager
 }
@@ -1347,7 +1347,7 @@ Response C7M3PlayerGetToRescueVehicleManager
 }
 Rule C7M3PlayerGetToRescueVehicleManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager ismapc7m3_port IsTalk IsTalkManager IsWorldTalkManager _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager ismapc7m3_port IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response C7M3PlayerGetToRescueVehicleManager
@@ -2015,7 +2015,7 @@ Rule IntroCrashR31Manager
 
 Response IntroCrashR37Manager
 {
-	scene "scenes/Manager/DLC2Misc01.vcd"  then TeenGirl IntroCrashR39 foo:0 -4.369 //You know what? I don't think we're gonna see a witch from NOW ON. Who wants to bet me?
+	scene "scenes/Manager/DLC2Misc01.vcd"  then TeenGirl IntroCrashR04 foo:0 -4.369 //You know what? I don't think we're gonna see a witch from NOW ON. Who wants to bet me?
 }
 Rule IntroCrashR37Manager
 {
@@ -2026,7 +2026,7 @@ Rule IntroCrashR37Manager
 Response L4D1PlayerCrashCourseIntroManager
 {
 	scene "scenes/Manager/DLC2Intro06.vcd"  then Biker IntroCrashR21 foo:0 -1.408 //Well, I guess we're walking.
-	scene "scenes/Manager/DLC2Misc02.vcd"  then TeenGirl IntroCrashR04 foo:0 0.1 //So I'm thinkin': either we're IMMUNE from all this. Or we been getting REALLLL lucky.
+	scene "scenes/Manager/DLC2Misc02.vcd"  then TeenGirl IntroCrashR39 foo:0 0.1 //So I'm thinkin': either we're IMMUNE from all this. Or we been getting REALLLL lucky.
 }
 Rule L4D1PlayerCrashCourseIntroManager
 {
@@ -2114,6 +2114,38 @@ Rule L4D1SurvivorBoomerBlunderManager
 	Response L4D1SurvivorBoomerBlunderManager
 }
 
+Response L4D1GreedManager
+{
+	print " " then any GreedResponse foo:0 1
+}
+Rule L4D1GreedManager
+{
+	criteria IsFaultConcept Wasteful IsManager
+	Response L4D1GreedManager
+}
+
+Response L4D1GreedResponseManager
+{
+	scene "scenes/Manager/Swears16.vcd"  //That's some country-ass bullshit.
+}
+
+Rule L4D1GreedResponseToNamVetManager
+{
+	criteria ConceptGreedResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager FromIsNamVet SubjectIsNamVet IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseManager
+}
+
+Rule L4D1GreedResponseToBikerManager
+{
+	criteria ConceptGreedResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager FromIsBiker SubjectIsBiker IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseManager
+}
+
+Rule L4D1GreedResponseToTeenGirlManager
+{
+	criteria ConceptGreedResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager FromIsTeenGirl SubjectIsTeenGirl IsOnThirdStrike NoHasFirstAidKit
+	Response L4D1GreedResponseManager
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Finale Speech
@@ -2223,7 +2255,7 @@ Response L4D1SurvivorFinalVehicleFarmSpottedManager
 }
 Rule L4D1SurvivorFinalVehicleFarmSpottedManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsBloodHarvest5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsBloodHarvest5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleFarmSpottedManager
@@ -2284,7 +2316,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatManager
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsDeathToll5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsDeathToll5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatManager
@@ -2298,7 +2330,7 @@ Response L4D1SurvivorFinalVehicleSpottedRooftopManager
 }
 Rule L4D1SurvivorFinalVehicleSpottedRooftopManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsNoMercy5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsNoMercy5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRooftopManager
@@ -2310,7 +2342,7 @@ Response L4D1SurvivorFinalVehicleSpottedRunwayManager
 }
 Rule L4D1SurvivorFinalVehicleSpottedRunwayManager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsDeadAir5 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsDeadAir5 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedRunwayManager
@@ -2368,6 +2400,19 @@ Rule L4D1ResponseSoftDispleasureSwearManager
 //--------------------------------------------------------------------------------------------------------------
 // Item Spotted
 //--------------------------------------------------------------------------------------------------------------
+Response L4D1SurvivorAskForHealthThirdStrikeManager
+{
+	scene "scenes/Manager/GoingToDieAskForHeal01.vcd" //Someone got a first aid kit?
+	scene "scenes/Manager/GoingToDieAskForHeal02.vcd" //Can anybody spare a kit?
+	scene "scenes/Manager/GoingToDieAskForHeal03.vcd" //I can use a first aid kit.
+	scene "scenes/Manager/GoingToDieAskForHeal04.vcd" //I can use some first aid.
+}
+Rule L4D1SurvivorAskForHealthThirdStrikeManager
+{
+	criteria ConceptAskForHealth2 IsManager IssuerClose IsNotSpeaking IsOnThirdStrike
+	Response L4D1SurvivorAskForHealthThirdStrikeManager
+}
+
 Response L4D1SurvivorAskBillForHealthManager
 {
 	scene "scenes/Manager/PlayerSuggestHealthSpecific06.vcd"  //Bill, Bill... first aid kit?
@@ -2375,7 +2420,7 @@ Response L4D1SurvivorAskBillForHealthManager
 }
 Rule L4D1SurvivorAskBillForHealthManager
 {
-	criteria ConceptAskForHealth2  IsManager SubjectIsNamVet IsSubjectNear400
+	criteria ConceptAskForHealth2  IsManager FromIsNamVet IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskBillForHealthManager
 }
 
@@ -2385,7 +2430,15 @@ Response L4D1SurvivorAskForHealthManager
 }
 Rule L4D1SurvivorAskForHealthManager
 {
-	criteria ConceptPlayerLookHere IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto  IsSubjectNear400 NoHasPainPills  NoHasFirstAidKit IsNotHealthyHalf NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
+	criteria ConceptPlayerLookHere IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto HasASubject IsSubjectDistNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
+	ApplyContext "SaidAskForHealth:1:10"
+	applycontexttoworld
+	Response L4D1SurvivorAskForHealthManager
+}
+
+Rule L4D1SurvivorAskForHealthV2Manager
+{
+	criteria ConceptPlayerLook IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto HasASubject IsSubjectDistNear400 NoHasPainPills NoHasFirstAidKit IsNotHealthy NotInCombat IsNotSaidAskForHealth IsWorldTalkManager
 	ApplyContext "SaidAskForHealth:1:10"
 	applycontexttoworld
 	Response L4D1SurvivorAskForHealthManager
@@ -2399,7 +2452,7 @@ Response L4D1SurvivorAskFrancisForHealthManager
 }
 Rule L4D1SurvivorAskFrancisForHealthManager
 {
-	criteria ConceptAskForHealth2  IsManager SubjectIsBiker IsSubjectNear400
+	criteria ConceptAskForHealth2  IsManager FromIsBiker IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskFrancisForHealthManager
 }
 
@@ -2410,7 +2463,7 @@ Response L4D1SurvivorAskZoeyForHealthManager
 }
 Rule L4D1SurvivorAskZoeyForHealthManager
 {
-	criteria ConceptAskForHealth2  IsManager SubjectIsTeenGirl IsSubjectNear400
+	criteria ConceptAskForHealth2  IsManager FromIsTeenGirl IssuerClose IsNotSpeaking IsNotOnThirdStrike
 	Response L4D1SurvivorAskZoeyForHealthManager
 }
 
@@ -2741,7 +2794,7 @@ Rule SurvivorSpottedLaserSightsAutoManager
 
 Rule SurvivorBotPickupLaserSightsSpottedManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInSafeSpot IsNotInCheckpoint IsNotInStartArea IsNotSaidSpotWeapons IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpLaserSights IsNotSpeaking IsBotIsAvailable IsNotInSafeSpot IsNotInCheckpoint IsNotInStartArea IsNotSaidSpotWeapons IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedAdrenalineManager
@@ -2836,7 +2889,7 @@ Rule L4D1SpottedBoomerManager
 
 Rule L4D1SpottedBoomerAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeBoomer IsNotSaidBoomerWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidBoomerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedBoomerManager
@@ -2864,7 +2917,7 @@ Rule L4D1SpottedHunterManager
 
 Rule L4D1SpottedHunterAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeHunter IsNotSaidHunterWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidHunterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedHunterManager
@@ -2892,7 +2945,7 @@ Rule L4D1SpottedSmokerManager
 
 Rule L4D1SpottedSmokerAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSmoker IsNotSaidSmokerWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSmokerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSmokerManager
@@ -2920,7 +2973,7 @@ Rule L4D1SpottedChargerManager
 
 Rule L4D1SpottedChargerAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeCharger IsNotSaidChargerWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidChargerWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedChargerManager
@@ -2948,7 +3001,7 @@ Rule L4D1SpottedJockeyManager
 
 Rule L4D1SpottedJockeyAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeJockey IsNotSaidJockeyWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidJockeyWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedJockeyManager
@@ -2976,7 +3029,7 @@ Rule L4D1SpottedSpitterManager
 
 Rule L4D1SpottedSpitterAlsoManager
 {
-	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
+	criteria ConceptPlayerAlsoWarnSpecial IsSpecialTypeSpitter IsNotSaidSpitterWarn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotIncapacitated _auto_NotSpottedVehicle
 	ApplyContext "SaidSpitterWarn:1:20,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1SpottedSpitterManager
@@ -3124,7 +3177,7 @@ Response L4D1PlayerFriendlyFireManager
 }
 Rule L4D1PlayerFriendlyFireManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkManager IsWorldTalkManager IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsDamageTypeBullet IsTalk IsTalkManager IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireManager
 }
@@ -3138,7 +3191,7 @@ Response L4D1PlayerFriendlyFire2Manager
 }
 Rule L4D1PlayerFriendlyFire2Manager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkManager IsWorldTalkManager IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkManager IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2Manager
 }
@@ -3156,7 +3209,7 @@ Response L4D1PlayerFriendlyFireFromBillManager
 }
 Rule L4D1PlayerFriendlyFireFromBillManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsNamVet ChanceToFire30Percent IsWorldTalkManager IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsNamVet ChanceToFire30Percent IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromBillManager
 }
@@ -3171,7 +3224,7 @@ Response L4D1PlayerFriendlyFireFromFrancisManager
 }
 Rule L4D1PlayerFriendlyFireFromFrancisManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsBiker ChanceToFire30Percent IsWorldTalkManager IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsBiker ChanceToFire30Percent IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromFrancisManager
 }
@@ -3184,7 +3237,7 @@ Response L4D1PlayerFriendlyFireFromZoeyManager
 }
 Rule L4D1PlayerFriendlyFireFromZoeyManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkManager IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsDamageTypeBullet IsTalk IsTalkManager IsNotOnThirdStrike SubjectIsTeenGirl ChanceToFire30Percent IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireFromZoeyManager
 }
@@ -3200,7 +3253,7 @@ Response L4D1PlayerFriendlyFireNoBulletManager
 }
 Rule L4D1PlayerFriendlyFireNoBulletManager
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeBullet IsNotDamageTypeExplosive IsNotOnThirdStrike IsTalk IsTalkManager IsWorldTalkManager IsNotZombiePresentTank
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeBullet IsNotDamageTypeExplosive IsNotOnThirdStrike IsTalk IsTalkManager IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireNoBulletManager
 }
@@ -3239,7 +3292,7 @@ Response L4D1SurvivorTauntResponseManager
 }
 Rule L4D1SurvivorTauntResponseManager
 {
-	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotVersus
+	criteria ConceptPlayerTaunt IsSurvivor IsNotSpeaking IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	Response L4D1SurvivorTauntResponseManager
 }
 
@@ -3277,7 +3330,7 @@ Response PlayerToTheRescueRosManager
 }
 Rule PlayerToTheRescueRosManager
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response PlayerToTheRescueRosManager
 }
 
@@ -3440,7 +3493,7 @@ Response L4D1SurvivorReloadingManager
 }
 Rule L4D1SurvivorReloadingManager
 {
-	criteria ConceptPlayerReloading IsASurvivor IsNotSpeaking IsManager IsNotIncapacitated IsTalk IsTalkManager RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkManager IsNotZombiePresentTank ChanceToFire50Percent _auto_NotSpottedVehicle
+	criteria ConceptPlayerReloading IsASurvivor IsNotSpeaking IsManager IsNotIncapacitated IsTalk IsTalkManager RecentGroupInCombat10 HasNotgrenadelauncher IsWorldTalkManager NotTankAggro ChanceToFire50Percent _auto_NotSpottedVehicle
 	Response L4D1SurvivorReloadingManager
 }
 
@@ -3521,7 +3574,13 @@ Rule L4D1PlayerHelpIncappedLethargicManager
 	Response L4D1PlayerHelpIncappedLethargicManager
 }
 
-
+//Rule L4D1PlayerHelpIncappedWitchManager
+//{
+//	criteria ConceptPlayerHelp IsManager IsIncapacitated IsWitchPresent IsWitchAggro
+//	ApplyContext "CalledForHelp:1:10"
+//	forceweight 30
+//	Response NoResponse
+//}
 
 //--------------------------------------------------------------------------------------------------------------
 // PlayerIncappedResponse
@@ -4904,7 +4963,7 @@ Response PlayerRemarkc7m1_tankcarManager
 }
 Rule PlayerRemarkc7m1_tankcarManager
 {
-	criteria ConceptRemark IsManager Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear400 IsNotZombiePresentTank _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptRemark IsManager Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear400 NotTankAggro _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0 AutoIsNotScavenge AutoIsNotSurvival
 	ApplyContext "Saidc7m1_tankcar:1:0"
 	applycontexttoworld
 	Response PlayerRemarkc7m1_tankcarManager
@@ -4916,7 +4975,7 @@ Response PlayerRemarkc7m1_tankcarFrancisManager
 }
 Rule PlayerRemarkc7m1_tankcarFrancisManager
 {
-	criteria ConceptRemark IsManager Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkManager IsBikerAlive IsWorldTalkManager IsSubjectNear400 IsNotZombiePresentTank ChanceToFire20Percent _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0
+	criteria ConceptRemark IsManager Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkManager IsBikerAlive IsWorldTalkManager IsSubjectNear400 NotTankAggro ChanceToFire20Percent _auto_SaidC7M1OpenTankDoor IsNotSpeakingWeight0
 	ApplyContext "Saidc7m1_tankcar:1:0"
 	applycontexttoworld
 	Response PlayerRemarkc7m1_tankcarFrancisManager
@@ -5010,7 +5069,7 @@ Response L4D1SurvivorNearFinaleManager
 }
 Rule L4D1SurvivorNearFinaleManager
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorNearFinaleManager
@@ -5023,7 +5082,7 @@ Response L4D1PlayerNearFinaleC7M3Manager
 }
 Rule L4D1PlayerNearFinaleC7M3Manager
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager Ismapc7m3_port AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC7M3Manager
@@ -5036,7 +5095,7 @@ Response L4D1SurvivorFinaleAheadC8M5Manager
 }
 Rule L4D1SurvivorFinaleAheadC8M5Manager
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager IsNoMercy5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager IsNoMercy5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinaleAheadC8M5Manager
@@ -5044,7 +5103,7 @@ Rule L4D1SurvivorFinaleAheadC8M5Manager
 
 Rule L4D1SurvivorFinaleAheadC9M2Manager
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager IsCrashCourse2 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,SaidCreshendoStartNear:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -5058,7 +5117,7 @@ Response L4D1SurvivorFinaleAheadC11M5Manager
 }
 Rule L4D1SurvivorFinaleAheadC11M5Manager
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager IsDeadAir5 AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinaleAheadC11M5Manager
@@ -5071,7 +5130,7 @@ Response L4D1PlayerNearFinaleC12M5Manager
 }
 Rule L4D1PlayerNearFinaleC12M5Manager
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsBloodHarvest5 IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsBloodHarvest5 IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0,WarnMegaMob:1:60,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response L4D1PlayerNearFinaleC12M5Manager
@@ -5079,7 +5138,7 @@ Rule L4D1PlayerNearFinaleC12M5Manager
 
 Rule L4D1PlayerNearFinaleC14M2Manager
 {
-	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsLastStand2 IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsLastStand2 IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
 	ApplyContext "SaidFinaleAhead:1:0"
 	applycontexttoworld
 	Response NoResponse
@@ -5226,7 +5285,7 @@ Response L4D1PlayerCoverMeManager
 }
 Rule L4D1PlayerCoverMeManager
 {
-	criteria ConceptPlayerCoverMe IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerCoverMe IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerCoverMeManager
 }
 
@@ -5281,7 +5340,7 @@ Response L4D1PlayerHurryUpManager
 }
 Rule L4D1PlayerHurryUpManager
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerHurryUp IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerHurryUpManager
 }
 
@@ -5309,7 +5368,7 @@ Response L4D1PlayerLeadOnManager
 }
 Rule L4D1PlayerLeadOnManager
 {
-	criteria ConceptPlayerLeadOn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerLeadOn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerLeadOnManager
 }
 
@@ -5326,7 +5385,7 @@ Response L4D1PlayerMoveOnManager
 }
 Rule L4D1PlayerMoveOnManager
 {
-	criteria ConceptPlayerMoveOn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerMoveOn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerMoveOnManager
 }
 
@@ -5375,7 +5434,7 @@ Response L4D1PlayerAskReadyManager
 }
 Rule L4D1PlayerAskReadyManager
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerAskReady IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerAskReadyManager
 }
 
@@ -5387,7 +5446,7 @@ Response L4D1PlayerImWithYouManager
 }
 Rule L4D1PlayerImWithYouManager
 {
-	criteria ConceptPlayerImWithYou IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerImWithYou IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerImWithYouManager
 }
 
@@ -5417,7 +5476,7 @@ Response L4D1PlayerLaughManager
 }
 Rule L4D1PlayerLaughManager
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotVersus
+	criteria ConceptPlayerLaugh IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerLaughManager
 }
 
@@ -5447,7 +5506,7 @@ Response L4D1PlayerNiceJobResponseManager
 }
 Rule L4D1PlayerNiceJobResponseManager
 {
-	criteria ConceptPlayerNiceJob IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerNiceJob IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerNiceJobResponseManager
 }
 
@@ -5463,7 +5522,7 @@ Response L4D1PlayerNoManager
 }
 Rule L4D1PlayerNoManager
 {
-	criteria ConceptPlayerNo IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerNo IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerNoManager
 }
 
@@ -5485,7 +5544,7 @@ Response L4D1PlayerSorryManager
 }
 Rule L4D1PlayerSorryManager
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateManager IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerSorry IsNotCoughing IsNotShotTeammateManager IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerSorryManager
 }
 
@@ -5498,7 +5557,7 @@ Response L4D1PlayerSorryFFManager
 }
 Rule L4D1PlayerSorryFFManager
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsManager IsTalk IsTalkManager IsShotTeammateManager IsWorldTalkManager
+	criteria ConceptPlayerSorry IsNotCoughing IsManager IsTalk IsTalkManager IsShotTeammateManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerSorryFFManager
 }
 
@@ -5520,7 +5579,7 @@ Response L4D1PlayerThanksManager
 }
 Rule L4D1PlayerThanksManager
 {
-	criteria ConceptPlayerThanks IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerThanks IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerThanksManager
 }
 
@@ -5535,7 +5594,7 @@ Response L4D1PlayerYesManager
 }
 Rule L4D1PlayerYesManager
 {
-	criteria ConceptPlayerYes IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerYes IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerYesManager
 }
 
@@ -5590,7 +5649,7 @@ Response L4D1PlayerNegativeManager
 }
 Rule L4D1PlayerNegativeManager
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerNegative IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerNegativeManager
 }
 
@@ -5607,7 +5666,7 @@ Response L4D1PlayerAreaClearManager
 }
 Rule L4D1PlayerAreaClearManager
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerAreaClear IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1PlayerAreaClearManager
 }
 
@@ -5640,7 +5699,7 @@ Response PlayerHurrahManager
 }
 Rule PlayerHurrahManager
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerHurrah IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response PlayerHurrahManager
 }
 
@@ -5660,7 +5719,7 @@ Response PlayerWarnCarefulManager
 }
 Rule PlayerWarnCarefulManager
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response PlayerWarnCarefulManager
 }
 
@@ -5921,7 +5980,7 @@ Rule L4D1PlayerGrenadeManager
 //}
 //Rule L4D1PlayerGrenadeCarefulManager
 //{
-//	criteria ConceptGrenadeCareful IsNotCoughing IsManager IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkManager IsWorldTalkManager IsNotZombiePresentTank
+//	criteria ConceptGrenadeCareful IsNotCoughing IsManager IsWitchPresent NotInCombat IssuerClose IsTalk IsTalkManager IsWorldTalkManager NotTankAggro
 //	Response L4D1PlayerGrenadeCarefulManager
 //}
 
@@ -5939,6 +5998,33 @@ Rule L4D1PlayerIncapacitatedInitialManager
 	ApplyContext "TalkManager:1:2"
 	Response L4D1PlayerIncapacitatedInitialManager
 }
+
+//Response L4D1PlayerIncapacitatedInitialWitchManager
+//{
+//	scene "scenes/Manager/HurtCritical01.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical02.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical03.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical04.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical05.vcd" then self WitchDowned foo:0 0.5 //[Pain noise - loud major pain]
+//}
+//Rule L4D1PlayerIncapacitatedInitialWitchManager
+//{
+//	criteria ConceptPlayerIncapacitated IsManager IsWitchPresent IsWitchAggro IsCriticalPain
+//	ApplyContext "TalkManager:1:2"
+//	forceweight 30
+//	Response L4D1PlayerIncapacitatedInitialWitchManager
+//}
+
+//Response L4D1WitchDownedManager
+//{
+//	scene "scenes/Manager/GrabbedBySmoker01a.vcd"  //no, No, NO, NO!!!!!
+//	scene "scenes/Manager/GrabbedBySmoker02a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+//}
+//Rule L4D1WitchDownedManager
+//{
+//	criteria ConceptWitchDowned IsManager IsWitchPresent IsWitchAggro
+//	Response L4D1WitchDownedManager
+//}
 
 Response L4D1PlayerKillConfirmationManager
 {
@@ -6061,7 +6147,7 @@ Response L4D1PlayerLockTheDoorCheckPointManager
 }
 Rule L4D1PlayerLockTheDoorCheckPointManager
 {
-	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsManager IsInSafeSpot IsTalk IsTalkManager IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival
+	criteria ConceptPlayerLockTheDoorCheckPoint IsNotCoughing IsManager IsInSafeSpot IsNotAlone IsTalk IsTalkManager IsWorldTalkManager AutoIsNotScavenge AutoIsNotSurvival
 	Response L4D1PlayerLockTheDoorCheckPointManager
 }
 
@@ -6564,6 +6650,7 @@ Response L4D1SurvivorVocalizeGoingToDie3Manager
 	scene "scenes/Manager/GoingToDie22.vcd"  //[pain sound] Dammit.
 	scene "scenes/Manager/GoingToDie02.vcd"  //I don't, I don't know if I'm going to make it
 	scene "scenes/Manager/GoingToDieLight12.vcd" odds 2 //[quiet pep talk to self]C'mon Louis: you are NOT dyin' here.
+	scene "scenes/Manager/GoingToDieLight16.vcd"  //I don't wanna die. I know nobody wants to die, but I'm like, fifty times that.
 	scene "scenes/Manager/GoingToDie05.vcd"  //I really need to get some First Aid.
 	scene "scenes/Manager/GoingToDie15.vcd"  //I think I'm dyin'.
 	scene "scenes/Manager/GoingToDie07.vcd"  //I don't think I'm gonnna make it.
@@ -6630,7 +6717,7 @@ Response L4D1SurvivorVocalizeWaitHereManager
 }
 Rule L4D1SurvivorVocalizeWaitHereManager
 {
-	criteria ConceptPlayerWaitHere IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria ConceptPlayerWaitHere IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response L4D1SurvivorVocalizeWaitHereManager
 }
 
@@ -6820,8 +6907,7 @@ Response SurvivorPouncedByHunterManager
 }
 Rule SurvivorPouncedByHunterManager
 {
-	criteria ConceptScreamWhilePounced IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
-	ApplyContext "TalkManager:1:5"
+	criteria ConceptScreamWhilePounced IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSpeaking
 	Response SurvivorPouncedByHunterManager
 }
 
@@ -6922,17 +7008,27 @@ Rule L4D1DeathAloneManager
 
 Response L4D1TeamKillManager
 {
-	scene "scenes/Manager/TeamKillAccident01.vcd" predelay "1,1.75" //Woah man, you gotta be careful.
-	scene "scenes/Manager/TeamKillAccident02.vcd" predelay "1,1.75" //Woah man, you gotta be careful.
-	scene "scenes/Manager/TeamKillAccident03.vcd" predelay "1,1.75" //What the hell man?
-	scene "scenes/Manager/TeamKillAccident04.vcd" predelay "1,1.75" //Be careful, what are you doing?
+	print " " then any TeamKillResponse foo:0 1.5
 }
 Rule L4D1TeamKillManager
 {
-	criteria ConceptSurvivorDied IsNotCoughing SurvivorDiedReallyClose IsManager IsTalk IsTalkManager IsNotSaidSomeoneDied IsSaidFaultFriendlyFireGeneral IsNotSaidFaultFriendlyFireNamVet IsWorldTalkManager
+	criteria IsFaultConcept IsManager ShouldBeVoteKicked
 	ApplyContext "SaidSomeoneDied:1:10"
 	applycontexttoworld
 	Response L4D1TeamKillManager
+}
+
+Response L4D1TeamKillResponseManager
+{
+	scene "scenes/Manager/TeamKillAccident01.vcd" //Woah man, you gotta be careful.
+	scene "scenes/Manager/TeamKillAccident02.vcd" //Woah man, you gotta be careful.
+	scene "scenes/Manager/TeamKillAccident03.vcd" //What the hell man?
+	scene "scenes/Manager/TeamKillAccident04.vcd" //Be careful, what are you doing?
+}
+Rule L4D1TeamKillResponseManager
+{
+	criteria ConceptTeamKillResponse IsManager IsNotCoughing IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1TeamKillResponseManager
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -6948,14 +7044,14 @@ Response L4D1SurvivorPickupAutoShotgunManager
 }
 Rule L4D1SurvivorPickupAutoShotgunManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpAutoShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAutoShotgunManager
 }
 
 Rule L4D1SurvivorPickupSpasShotgunManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpShotgun_Spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpShotgun_Spas IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAutoShotgunManager
 }
@@ -6968,7 +7064,7 @@ Response L4D1SurvivorPickupFirstAidKitManager
 }
 Rule L4D1SurvivorPickupFirstAidKitManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpFirstAidKit IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupFirstAidKitManager
 }
@@ -6979,14 +7075,14 @@ Response L4D1SurvivorPickupAdrenalineManager
 }
 Rule L4D1SurvivorPickupAdrenalineManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpAdrenaline IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAdrenalineManager
 }
 
 Rule SurvivorPickupDefibrillatorManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpDefibrillator IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpDefibrillator IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupAdrenalineManager
 }
@@ -6998,28 +7094,28 @@ Response L4D1SurvivorPickupHuntingRifleManager
 }
 Rule L4D1SurvivorPickupHuntingRifleManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpHuntingRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupHuntingRifleManager
 }
 
 Rule L4D1SurvivorPickupMilitarySniperManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_Military IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupHuntingRifleManager
 }
 
 Rule L4D1SurvivorPickupScoutSniperManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_scout IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupHuntingRifleManager
 }
 
 Rule L4D1SurvivorPickupAWPSniperManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_awp IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupHuntingRifleManager
 }
@@ -7034,21 +7130,21 @@ Response L4D1SurvivorPickupLaserSightsManager
 }
 Rule L4D1SurvivorPickupLaserSightsManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpLaserSights IsNotSpeaking IsBotNotAvailable ChanceToFire50Percent NotPickedUpItem IsNotInSafeSpot IsNotInCheckpoint IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupLaserSightsManager
 }
 
 Rule L4D1SurvivorPickupUpIncendiaryAmmoManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpIncendiaryAmmo IsNotSpeaking IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpIncendiaryAmmo IsNotSpeaking IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupLaserSightsManager
 }
 
 Rule L4D1SurvivorPickupUpExplosiveAmmoManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpExplosiveAmmo IsNotSpeaking IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsPickedUpExplosiveAmmo IsNotSpeaking IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupLaserSightsManager
 }
@@ -7061,7 +7157,7 @@ Response L4D1SurvivorPickupMolotovManager
 }
 Rule L4D1SurvivorPickupMolotovManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpMolotov IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMolotovManager
 }
@@ -7074,7 +7170,7 @@ Response L4D1SurvivorPickupPainPillsManager
 }
 Rule L4D1SurvivorPickupPainPillsManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPainPills IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPainPillsManager
 }
@@ -7088,7 +7184,7 @@ Response L4D1SurvivorPickupPipeBombManager
 }
 Rule L4D1SurvivorPickupPipeBombManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPipeBomb IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPipeBombManager
 }
@@ -7099,7 +7195,7 @@ Response L4D1SurvivorPickupVomitJarManager
 }
 Rule L4D1SurvivorPickupVomitJarManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpVomitJar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpVomitJar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupVomitJarManager
 }
@@ -7110,14 +7206,14 @@ Response L4D1SurvivorPickupPumpShotgunManager
 }
 Rule L4D1SurvivorPickupPumpShotgunManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPumpShotgun IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPumpShotgunManager
 }
 
 Rule L4D1SurvivorPickupChromeShotgunManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpShotgun_Chrome IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupPumpShotgunManager
 }
@@ -7132,28 +7228,28 @@ Response L4D1SurvivorPickupRifleManager
 }
 Rule L4D1SurvivorPickupRifleManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleManager
 }
 
 Rule L4D1SurvivorPickupDesertRifleManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_Desert IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleManager
 }
 
 Rule L4D1SurvivorPickupAK47RifleManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_AK47 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleManager
 }
 
 Rule L4D1SurvivorPickupSG552RifleManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupRifleManager
 }
@@ -7164,21 +7260,21 @@ Response L4D1SurvivorPickupSMGManager
 }
 Rule L4D1SurvivorPickupSMGManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSMG IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGManager
 }
 
 Rule L4D1SurvivorPickupSilencedSMGManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSmg_silenced IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGManager
 }
 
 Rule L4D1SurvivorPickupMP5SMGManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupSMGManager
 }
@@ -7189,7 +7285,7 @@ Response L4D1SurvivorPickupCSSMP5SMGManager
 }
 Rule L4D1SurvivorPickupCSSMP5SMGManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSmg_mp5 IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	forceweight 500
 	Response L4D1SurvivorPickupCSSMP5SMGManager
@@ -7197,7 +7293,7 @@ Rule L4D1SurvivorPickupCSSMP5SMGManager
 
 Rule L4D1SurvivorPickupCSSSG552RifleManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpRifle_sg552 IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	forceweight 500
 	Response L4D1SurvivorPickupCSSMP5SMGManager
@@ -7205,7 +7301,7 @@ Rule L4D1SurvivorPickupCSSSG552RifleManager
 
 Rule L4D1SurvivorPickupCSSScoutSniperManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_scout IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_scout IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	forceweight 500
 	Response L4D1SurvivorPickupCSSMP5SMGManager
@@ -7213,7 +7309,7 @@ Rule L4D1SurvivorPickupCSSScoutSniperManager
 
 Rule L4D1SurvivorPickupCSSAWPSniperManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_awp IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSniper_awp IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	forceweight 500
 	Response L4D1SurvivorPickupCSSMP5SMGManager
@@ -7221,7 +7317,7 @@ Rule L4D1SurvivorPickupCSSAWPSniperManager
 
 Rule SurvivorPickupCSSKnifeManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpKnife IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpKnife IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	forceweight 500
 	Response L4D1SurvivorPickupCSSMP5SMGManager
@@ -7264,7 +7360,7 @@ Response SurvivorPickupSecondPistolManager
 }
 Rule SurvivorPickupSecondPistolManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpSecondPistol IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupSecondPistolManager
 }
@@ -7283,91 +7379,91 @@ Response L4D1SurvivorPickupMeleeManager
 
 Rule L4D1SurvivorPickupGolfClubManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpGolfClub IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpGolfClub IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupFireAxeManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpFireAxe IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpFireAxe IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupGuitarManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpelectric_guitar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpelectric_guitar IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupKatanaManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpKatana IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpKatana IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupMacheteManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpMachete IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpMachete IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupFryingPanManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpFryingPan IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpFryingPan IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupTonfaManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUptonfa IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUptonfa IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupCricketBatManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpcricket_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpcricket_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupBaseballBatManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpbaseball_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpbaseball_bat IsNotSpeaking NotPickedUpItem IsNotInSafeSpot ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupKnifeManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpKnife IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpKnife IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupShovelManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpShovel IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpShovel IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupPitchforkManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPitchfork IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpPitchfork IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
 
 Rule L4D1SurvivorPickupCrowBarManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpCrowBar IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
@@ -7378,7 +7474,7 @@ Response L4D1SurvivorPickupHLCrowBarManager
 }
 Rule L4D1SurvivorPickupHLCrowBarManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpCrowBar IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpCrowBar IsNotSpeaking ChanceToFire2Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	forceweight 500
 	Response L4D1SurvivorPickupHLCrowBarManager
@@ -7393,7 +7489,7 @@ Response L4D1SurvivorPickupChainSawManager
 }
 Rule L4D1SurvivorPickupChainSawManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpChainSaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpChainSaw IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupChainSawManager
 }
@@ -7404,7 +7500,7 @@ Response L4D1SurvivorPickupM60Manager
 }
 Rule L4D1SurvivorPickupM60Manager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpM60 IsNotSpeaking NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupM60Manager
 }
@@ -7416,7 +7512,7 @@ Response L4D1SurvivorPickupGrenadeLauncherManager
 }
 Rule L4D1SurvivorPickupGrenadeLauncherManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpGrenadeLauncher IsNotSpeaking NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpGrenadeLauncher IsNotSpeaking NotPickedUpItem IsNotInSafeSpot  IsNotInStartArea IsTalk IsTalkManager IsWorldTalkManager AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupGrenadeLauncherManager
 }
@@ -7443,7 +7539,7 @@ Rule L4D1PlayerChainSawUsedManager
 
 Rule L4D1SurvivorPickupUpIncendiaryManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupMeleeManager
 }
@@ -7454,7 +7550,7 @@ Response L4D1SurvivorPickupUpExplosivesManager
 }
 Rule L4D1SurvivorPickupUpExplosivesManager
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotInSafeSpot IsNotSpeaking  IsTalk IsTalkManager IsWorldTalkManager IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response L4D1SurvivorPickupUpExplosivesManager
 }
@@ -7522,7 +7618,7 @@ Response L4D1PlayerReviveFriendManager
 }
 Rule L4D1PlayerReviveFriendManager
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:2"
 	Response L4D1PlayerReviveFriendManager
 }
@@ -7537,7 +7633,7 @@ Response L4D1PlayerReviveFriendCriticalManager
 }
 Rule L4D1PlayerReviveFriendCriticalManager
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager NotInIntenseCombat _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:2"
 	Response L4D1PlayerReviveFriendCriticalManager
 }
@@ -7555,31 +7651,15 @@ Response L4D1PlayerReviveFriendLoudManager
 }
 Rule L4D1PlayerReviveFriendLoudManager
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager InIntenseCombat IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager ActiveCombatSituation IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:2"
-	Response L4D1PlayerReviveFriendLoudManager
-}
-
-Rule L4D1PlayerReviveFriendLoud2Manager
-{
-	criteria ConceptPlayerReviveFriend IsNotCoughing IsManager IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
-	ApplyContext "TalkManager:1:2"
-	forceweight 30
 	Response L4D1PlayerReviveFriendLoudManager
 }
 
 Rule L4D1PlayerReviveFriendLoudCritManager
 {
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsManager InIntenseCombat IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsManager ActiveCombatSituation IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:2"
-	Response L4D1PlayerReviveFriendLoudManager
-}
-
-Rule L4D1PlayerReviveFriendLoudCrit2Manager
-{
-	criteria ConceptPlayerReviveFriendCritical IsNotCoughing IsManager IsZombiePresentTank IsSaidTankWarn2 IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
-	ApplyContext "TalkManager:1:2"
-	forceweight 30
 	Response L4D1PlayerReviveFriendLoudManager
 }
 
@@ -7590,7 +7670,7 @@ Response L4D1PlayerReviveFriendLoudFrancisManager
 }
 Rule L4D1PlayerReviveFriendLoudFrancisManager
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager InIntenseCombat IsTalk IsTalkManager ChanceToFire10Percent SubjectIsBiker IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager ActiveCombatSituation IsTalk IsTalkManager ChanceToFire10Percent SubjectIsBiker IsWorldTalkManager _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:2"
 	Response L4D1PlayerReviveFriendLoudFrancisManager
 }
@@ -7601,7 +7681,7 @@ Response L4D1PlayerReviveFriendLoudZoeyManager
 }
 Rule L4D1PlayerReviveFriendLoudZoeyManager
 {
-	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager InIntenseCombat IsTalk IsTalkManager ChanceToFire10Percent SubjectIsTeenGirl IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerReviveFriend IsNotCoughing  IsManager ActiveCombatSituation IsTalk IsTalkManager ChanceToFire10Percent SubjectIsTeenGirl IsWorldTalkManager _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:2"
 	Response L4D1PlayerReviveFriendLoudZoeyManager
 }
@@ -7664,18 +7744,31 @@ Response PlayerLedgeSaveManager
 }
 Rule PlayerLedgeSaveManager
 {
-	criteria ConceptPlayerLedgeSave IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerLedgeSave IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:5"
 	Response PlayerLedgeSaveManager
 }
 
 Rule L4D1PlayerLedgeSaveCriticalManager
 {
-	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager _auto_NotSpottedVehicle
+	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager NotInIntenseCombat NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "TalkManager:1:5"
 	Response PlayerLedgeSaveManager
 }
 
+Rule PlayerLedgeSaveLoudManager
+{
+	criteria ConceptPlayerLedgeSave IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager ActiveCombatSituation _auto_NotSpottedVehicle
+	ApplyContext "TalkManager:1:5"
+	Response L4D1PlayerReviveFriendLoudManager
+}
+
+Rule L4D1PlayerLedgeSaveLoudCriticalManager
+{
+	criteria ConceptPlayerLedgeSaveCritical IsNotCoughing  IsManager IsTalk IsTalkManager IsWorldTalkManager ActiveCombatSituation _auto_NotSpottedVehicle
+	ApplyContext "TalkManager:1:5"
+	Response L4D1PlayerReviveFriendLoudManager
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // Vocalizer Convo
@@ -7861,6 +7954,22 @@ Rule SurvivorSpottedChainsawManager
 Rule SurvivorSpottedChainsawAutoManager
 {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsChainsaw IsWorldTalkManager IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawManager
+}
+
+Rule SurvivorSpottedGrenadeLauncherManager
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsNotSaidSomeoneDied IsNotSmartLookAuto Isgrenade_launcher IsWorldTalkManager _auto_NotSpottedVehicle
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedChainsawManager
+}
+
+Rule SurvivorSpottedGrenadeLauncherAutoManager
+{
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsNotSaidSomeoneDied IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot Isgrenade_launcher IsWorldTalkManager IsNotSpeakingWeight0 _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedChainsawManager
@@ -8691,7 +8800,7 @@ Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Manager
 }
 Rule L4D1SurvivorFinalVehicleSpottedBoatC14M2Manager
 {
-	criteria ConceptFinalVehicleSpotted IsManager IsLastStand2 _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsManager IsLastStand2 IsNotIncapacitated _auto_IsFinaleStarted
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockManager:1:30,_auto_Finale:2:0"
 	applycontexttoworld
 	Response L4D1SurvivorFinalVehicleSpottedBoatC14M2Manager
@@ -8716,10 +8825,34 @@ Rule L4D1SurvivorFinalInsideBoatC14M2Manager
 //--------------------------------------------------------------------------------------------------------------
 // Generic rules to keep track of contexts for all maps (Unless there's a seperate rule for special cases)
 //--------------------------------------------------------------------------------------------------------------
+Rule CampaignStartManager
+{
+	criteria ConceptTalkIdle IsManager IsInStartArea IsChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "Talk:1:60,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:20"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroChapter1Manager
+{
+	criteria ConceptTalkIdle IsManager NotInCombat IsInStartArea IsChapter1 IsNotSaidLeavingSafeArea IsNotSaidCXM1Intro AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,CXM1Intro:1:0,_auto_SafeRoomStart:2:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
 Rule SafeRoomStartManager
 {
-	criteria ConceptTalkIdle IsManager IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	criteria ConceptTalkIdle IsManager IsInStartArea IsNotChapter1 AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
 	ApplyContext "Talk:1:45,_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule NoIntroManager
+{
+	criteria ConceptTalkIdle IsManager NotInCombat IsInStartArea IsNotChapter1 IsNotSaidLeavingSafeArea AutoIsNotScavenge AutoIsNotSurvival _auto_IsSafeRoomStart _auto_NotSafeRoomQuiet IsNotSpeakingWeight0
+	ApplyContext "Talk:0:0,_auto_SafeRoomStart:2:0"
 	applycontexttoworld
 	Response NoResponse
 }

@@ -373,7 +373,7 @@ criterion "Concept_C1M1_ElevatorHello3AliveNickIntro2" "Concept" "_C1M1_Elevator
 criterion "Concept_C1M1_ElevatorHello3AliveRochelleIntro" "Concept" "_C1M1_ElevatorHello3AliveRochelleIntro" required
 criterion "Concept_C1M1_ElevatorHello3AliveName1" "Concept" "_C1M1_ElevatorHello3AliveName1" required
 criterion "Concept_C1M1_ElevatorHello3AliveName2" "Concept" "_C1M1_ElevatorHello3AliveName2" required
-criterion "Concept_C1M1_ElevatorHello3AliveWhoIsDead" "Concept" "_C1M1_ElevatorHello3WhoIsDead" required
+criterion "Concept_C1M1_ElevatorHello3AliveWhoIsDead" "Concept" "_C1M1_ElevatorHello3AliveWhoIsDead" required
 criterion "Concept_C1M1_ElevatorHello3AliveNameDead" "Concept" "_C1M1_ElevatorHello3AliveNameDead" required
 criterion "Concept_C1M1_ElevatorHello3AliveNameDead2" "Concept" "_C1M1_ElevatorHello3AliveNameDead2" required
 criterion "Concept_C1M1_ElevatorHello3AliveExtra1" "Concept" "_C1M1_ElevatorHello3AliveExtra1" required

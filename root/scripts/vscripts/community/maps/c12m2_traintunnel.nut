@@ -26,7 +26,6 @@ function DoRoundFixes()
 		make_clip( "_nav_wareshelf", "Survivors", 1, "-25 -85 -234", "44 80 252", "-8740 -6996 170" );
 
 		make_navblock( "_survival_navblock_stairs", "Everyone", "Apply", "-4 -101 0", "4 0 32", "-6688 -7711 -80" );
-
 	}
 
 	if ( HasPlayerControlledZombies() )

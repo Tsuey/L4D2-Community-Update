@@ -1,0 +1,11 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "info_remarkable"
+		"targetname" "c4m5_burgertank"
+		"origin" "-5822.072754 7442.701660 345.951202"
+		"angles" "0 172.1809997559 0"
+		"contextsubject" "c4m5_burgertank"
+	}
+}
