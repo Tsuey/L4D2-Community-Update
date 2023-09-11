@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+$baseTexture "models\props_exteriors/psds/GuardShack"
+$Envmap env_cubemap
+$EnvmapMask "models\props_exteriors\GuardShack_ref"
+}
