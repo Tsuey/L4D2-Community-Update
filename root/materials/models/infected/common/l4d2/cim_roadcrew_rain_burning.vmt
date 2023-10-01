@@ -5,6 +5,7 @@ insert
 {
 $basetexture "models/infected/common/l4d2/cim_roadcrew_rain"
 $detail "models/infected/common/l4d2/detail/ci_detail_mud"
+$phongboost 2
 $GRADIENTTEXTURE "models/infected/common/l4d2/ci_gradient_palette_roadcrew"
 $detailscale 2
 $EYEGLOW 1
