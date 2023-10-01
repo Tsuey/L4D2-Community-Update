@@ -1,0 +1,18 @@
+patch
+{
+include "materials/models/infected/common/l4d2/ci_body_include.vmt"
+insert
+{
+$basetexture "models/infected/common/l4d2/cim_riot"
+$detail "models/infected/common/l4d2/detail/ci_detail_dirt"
+$GRADIENTTEXTURE "models/infected/common/l4d2/ci_gradient_palette_riot"
+$phongtint "[1 1 1]"
+$phongfresnelranges "[1 1 1]"
+$phongboost 1
+$DEFAULTPHONGEXPONENT 15
+$EYEGLOW 1
+$WOUNDED 1
+$EYEGLOWCOLOR "[2 2 2]"
+$EYEGLOWFLASHLIGHTBOOST 10
+}
+}
