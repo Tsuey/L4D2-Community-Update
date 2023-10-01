@@ -1,0 +1,7 @@
+lightmappedgeneric
+{
+$baseTexture "TextureHub/destruction/destruct_stonetiles1_spi"
+//$bumpmap "TextureHub/destruction/destruct_stonetiles1_norm_spi"
+$surfaceprop tile
+"%keywords" TextureHub
+}
