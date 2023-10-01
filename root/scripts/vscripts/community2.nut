@@ -47,4 +47,50 @@ function OnGameEvent_round_start_post_nav( params )
 		else
 			spawner.Kill();
 	}
+
+	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
+		DirectorOptions.cm_MaxSpecials = 0;
+}
+
+function OnGameEvent_finale_start( params )
+{
+	if ( Director.GetMapName() == "c6m3_port" )
+		DirectorOptions.cm_MaxSpecials = 8;
+}
+
+function OnGameEvent_gauntlet_finale_start( params )
+{
+	if ( Director.GetMapName() == "c5m5_bridge" )
+		DirectorOptions.cm_MaxSpecials = 8;
+}
+
+function AllowTakeDamage( damageTable )
+{
+	if ( !damageTable.Attacker || !damageTable.Victim )
+		return true;
+
+	if ( damageTable.DamageType == 128 )
+	{
+		if ( damageTable.Attacker.IsPlayer() && damageTable.Victim.IsPlayer() )
+		{
+			if ( damageTable.Victim.IsSurvivor() )
+			{
+				if ( damageTable.Attacker.GetZombieType() == 2 )
+				{
+					switch ( GetDifficulty() )
+					{
+						case 0:
+							damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) / 2 ); break;
+						case 1:
+							damageTable.DamageDone = Convars.GetFloat( "boomer_pz_claw_dmg" ); break;
+						case 2:
+							damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 3 ); break;
+						case 3:
+							damageTable.DamageDone = ( Convars.GetFloat( "boomer_pz_claw_dmg" ) + 18 ); break;
+					}
+				}
+			}
+		}
+	}
+	return true;
 }

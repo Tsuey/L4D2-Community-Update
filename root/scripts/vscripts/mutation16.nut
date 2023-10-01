@@ -17,3 +17,21 @@ DirectorOptions <-
 	ChargerLimit = 0
 	JockeyLimit = 0
 }
+
+function OnGameEvent_round_start_post_nav( params )
+{
+	if ( Director.GetMapName() == "c5m5_bridge" || Director.GetMapName() == "c6m3_port" )
+		DirectorOptions.cm_MaxSpecials = 0;
+}
+
+function OnGameEvent_finale_start( params )
+{
+	if ( Director.GetMapName() == "c6m3_port" )
+		DirectorOptions.cm_MaxSpecials = 4;
+}
+
+function OnGameEvent_gauntlet_finale_start( params )
+{
+	if ( Director.GetMapName() == "c5m5_bridge" )
+		DirectorOptions.cm_MaxSpecials = 4;
+}
