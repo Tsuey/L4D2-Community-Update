@@ -58,10 +58,8 @@ function DoRoundFixes()
 		kill_funcinfclip( 2553.75 );		// Delete clips all around start area
 		kill_funcinfclip( 3752.27 );		// Delete clips all around end area
 		make_clip( "_ladder_generatorhouse_clip", "Everyone", 1, "-3 -37 0", "13 43 140", "6531 -13083 -58" );
-		make_clip( "_ladder_newtankperch_clip", "SI Players", 1, "-38 -16 0", "38 128 32", "3465 -10222 158", "0 3 30" );
+		make_clip( "_ladder_newtankperch_clip", "SI Players", 1, "-38 -16 0", "38 128 32", "3465 -10222 158", "0 4 30" );
 		make_clip( "_ladder_pinkstairwell_clip", "Survivors", 1, "-156 -3 0", "156 0 124", "1740 -12296 260" );
-		make_clip( "_ladder_rightquickcliff_clip", "SI Players", 1, "-32 -21 0", "32 21 17", "2032 -10510 232", "15 4 0" );
-		make_clip( "_ladder_rightquickcliff_rock", "SI Players", 1, "-20 -26 0", "56 26 8", "2101 -10514 17", "25 0 0" );
 		make_clip( "_ladder_startventshaft_clipleft", "Everyone", 1, "-10 -12 0", "0 0 233", "-1030 -10911 -32", "0 -47 0" );
 		make_clip( "_ladder_startventshaft_clipright", "Everyone", 1, "-10 -12 0", "0 0 233", "-1005 -10903 -32", "0 47 0" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-17 -515 -216", "150 721 1408", "-688 -10708 321" );
@@ -86,16 +84,16 @@ function DoRoundFixes()
 		make_clip( "_meticulous_funcinfclip20", "SI Players", 1, "-300 -21 -216", "1173 17 1408", "4998 -11810 321", "0 25 0" );
 		make_clip( "_meticulous_funcinfclip21", "SI Players", 1, "-711 -17 -216", "1717 17 1408", "3060 -12382 321", "0 15 0" );
 		make_clip( "_tunneltophill_wrongway_clip", "SI Players", 1, "-2 -128 -110", "100 290 1070", "3320 -12528 658" );
-		make_ladder( "_ladder_backtrains_cloned_midmound", "2438 -9808 60", "15702 -5728 -39", "0 -58.35 0", "0.53 -0.85 0" );
-		make_ladder( "_ladder_barnhousefront_cloned_treetrunkcliff", "982 -10596 116", "11972 -7767 -89", "0 -59.54 0", "-0.5 0.87 0" );
+		make_ladder( "_ladder_backtrains_cloned_midmound", "2438 -9808 60", "15697 -5734 -39", "0 -58.35 0", "0.53 -0.85 0" );
+		make_ladder( "_ladder_barnhousefront_cloned_treetrunkcliff", "982 -10596 116", "12019 -7835 -89", "0 -60 0", "-0.5 0.866 0" );
 		make_ladder( "_ladder_generatorhouse_cloned_doublerbottom", "-179.799 -10591.8 4", "14106 -5707 -673", "3.5 -45 -3.5", "1 0 0" );
 		make_ladder( "_ladder_leftcliffmini_cloned_startcliff", "982 -10596 116", "1185 669 -45", "4 0 0" );
-		make_ladder( "_ladder_lobsterrock_cloned_startcliff", "982 -10596 116", "11923 -11336 785", "32 -95 0", "0.09 1 0" );
-		make_ladder( "_ladder_newtankperchB_cloned_midmound", "2438 -9808 60", "13151 -7359 -26", "0 -87.35 0", "0 -1 0" );
-		make_ladder( "_ladder_newtankperchT_cloned_midmound", "2438 -9808 60", "13151 -7359 70", "0 -87.35 0", "0 -1 0" );
+		make_ladder( "_ladder_lobsterrock_cloned_startcliff", "982 -10596 116", "11879 -10403 788", "32 -90 0", "0 0.848 0.53" );
+		make_ladder( "_ladder_newtankperchB_cloned_midmound", "2438 -9808 60", "13082 -7131 -26", "0 -86 0", "0.07 -0.997 0" );
+		make_ladder( "_ladder_newtankperchT_cloned_midmound", "2438 -9808 60", "13082 -7131 70", "0 -86 0", "0.07 -0.997 0" );
 		make_ladder( "_ladder_peskyrooftopB_cloned_midmound", "2438 -9808 60", "-8232 -14251 232", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_peskyrooftopT_cloned_midmound", "2438 -9808 60", "-8232 -14359 360", "0 90 0", "0 1 0" );
-		make_ladder( "_ladder_rightquickcliff_cloned_trainshedpipe", "3630.5747 -14189.8496 37.2963", "-12203 -7403 -900", "0 63.31 -4", "1 0.06 0" );
+		make_ladder( "_ladder_rightquickcliff_cloned_underbridge", "5720 -12467 100", "-10398.45 -16202 4", "0 90 0", "0.967 0 0.255" );
 		make_ladder( "_ladder_startventshaft_cloned_treetrunkcliff", "982 -10596 116", "-11617 -11894 -32", "0 90 0", "0 -1 0" );
 		make_ladder( "_ladder_tunnelexittop1_cloned_midmound", "2438 -9808 60", "181 -3603 -64", "0 0 0", "1 0 0" );
 		make_ladder( "_ladder_tunnelexittop2_cloned_midmound", "2438 -9808 60", "181 -3603 32", "0 0 0", "1 0 0" );

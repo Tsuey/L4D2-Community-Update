@@ -55,8 +55,8 @@ function DoRoundFixes()
 		make_ladder( "_ladder_bridgetunnelB1_cloned_endfencedumpster", "-12168 -5667 -12", "-467 -4199 22" );
 		make_ladder( "_ladder_bridgetunnelB2_cloned_endfencesafehouse", "-10352 -4599 677.106", "-2912 -5267 -3532", "17 0 0" );
 		make_ladder( "_ladder_bridgetunnelT_cloned_firsttunnelhole", "-12352 -8413 56", "-115 -1411 320" );
-		make_ladder( "_ladder_trafficlightB_cloned_secondtunnelhole", "-13047.5 -6072 56", "-14008 4027 3239", "-16 72 -3", "0.32 0.95 0" );
-		make_ladder( "_ladder_trafficlightT_cloned_secondtunnelhole", "-13047.5 -6072 56", "-14053 3927 3628", "-16.8 72 -3", "0.32 0.95 0" );
+		make_ladder( "_ladder_trafficlightB_cloned_secondtunnelhole", "-13047.5 -6072 56", "-13928 3946 3627", "-17.5 71.5 -3", "0.303 0.904 0.301" );
+		make_ladder( "_ladder_trafficlightT_cloned_secondtunnelhole", "-13047.5 -6072 56", "-13951 3903 3779.5", "-17.5 71.5 -3", "0.303 0.904 0.301" );
 		make_prop( "dynamic", "_bridgetunnel_wrongway", "models/props_misc/wrongway_sign01_optimized.mdl", "-11988 -9752 544", "0 180 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_yesdrawcliff_rocks1", "models/props_wasteland/rock_cliff01.mdl", "-11723 -9966 520", "0 273 0", "shadow_no" );
 		make_prop( "dynamic", "_yesdrawcliff_rocks2", "models/props_wasteland/rock_cliff01.mdl", "-11429 -10350 520", "0 0 0", "shadow_no" );
