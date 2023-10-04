@@ -1756,7 +1756,7 @@ function SpawnGlobalFilters()
 // Convert any String to a Vector with floating-point precision.
 //////////////////////////////////////////////////////////////////////////////
 
-scripthelp StringToVector_Valve <- "Converts string of form 'float1{delimiter}float2{delimiter}float3' into Vector(float1, float2, float3)";
+scripthelp_StringToVector_Valve <- "Converts string of form 'float1{delimiter}float2{delimiter}float3' into Vector(float1, float2, float3)";
 function StringToVector_Valve( string, delimiter )
 {
 	local vector = Vector( 0, 0, 0 );
@@ -1839,5 +1839,5 @@ function devchap( mode )
 }
 
 if( developer() > 0 ) {
-	AddToScriptHelp(this); 
+	AddToScriptHelp(this);
 }
