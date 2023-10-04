@@ -31,6 +31,7 @@
 **  Entity functions almost always assume users give each entity a unique name.
 *****************************************************************************/
 
+scripthelp_make_clip <- "Creates env_physics_blocker. user_strBlockType: 'Everyone', 'Survivors', 'SI Players', 'SI Players and AI', 'All and Physics'";
 function make_clip ( user_strTargetname,
 		     user_strBlockType,
 		     user_intInitialState,
@@ -94,6 +95,7 @@ function make_clip ( user_strTargetname,
 **  ShowUpdate() draws in LT GREEN and rotation is unsupported by engine.
 *****************************************************************************/
 
+scripthelp_make_brush <- "Creates func_brush. Can block Alive Commons + Pipebomb + Molotov + SI vomit/tongue + bullet hitreg";
 function make_brush ( user_strTargetname,
 		      user_strMins,
 		      user_strMaxs,
@@ -134,6 +136,9 @@ function make_brush ( user_strTargetname,
 **  The engine automatically clears blocked attributes on round transition.
 *****************************************************************************/
 
+scripthelp_make_navblock <- @"Creates func_nav_blocker.
+	user_strTeamBlock: 'Everyone', 'Survivors', 'Infected'
+	user_strState: 'Apply', 'Remove'";
 function make_navblock ( user_strTargetname,
 			 user_strTeamBlock,
 			 user_strState,
@@ -209,6 +214,7 @@ function make_navblock ( user_strTargetname,
 **  mild enough influence to keep as an option -- but all-0 is recommended.
 *****************************************************************************/
 
+scripthelp_make_trigpush <- @"Creates trigger_push. user_strActivator: 'Everything', 'Survivor', 'Infected', 'Physics'"
 function make_trigpush ( user_strTargetname,
 			 user_strActivator,
 			 user_intSpeed,
@@ -294,6 +300,8 @@ function make_trigpush ( user_strTargetname,
 **  ShowUpdate() draws all triggers YELLOW and trigger_hurt CANNOT be rotated.
 *****************************************************************************/
 
+scripthelp_make_trighurt <- @"Creates trigger_hurt or trigger_hurt_ghost if Ghost activator specified.
+	user_strActivator: 'Everyone', 'Survivor', 'Infected', 'Ghost'";
 function make_trighurt ( user_strTargetname,
 			 user_strActivator,
 			 user_strMins,
@@ -377,6 +385,7 @@ function make_trighurt ( user_strTargetname,
 **  ShowUpdate() draws all triggers YELLOW with rotation irrelevant by nature.
 *****************************************************************************/
 
+scripthelp_make_trigduck <- "Creates trigger_auto_crouch.";
 function make_trigduck ( user_strTargetname,
 			 user_strMins,
 			 user_strMaxs,
@@ -419,6 +428,7 @@ function make_trigduck ( user_strTargetname,
 **  ShowUpdate() draws all triggers YELLOW and these CANNOT be rotated.
 *****************************************************************************/
 
+scripthelp_make_trigmove <- "Creates trigger_playermovement. user_strOption: 'Duck', 'Walk', 'Jump'";
 function make_trigmove ( user_strTargetname,
 			 user_strOption,
 			 user_strMins,
@@ -517,6 +527,11 @@ function make_trigmove ( user_strTargetname,
 **  are exact copies and only cause overlap artifacts if rendered twice.
 *****************************************************************************/
 
+scripthelp_make_prop <- @"Creates prop_dynamic, prop_physics, prop_dynamic_override or prop_physics_override based on passed user_strType.
+	user_strType: 'dynamic', 'physics', 'dynamic_ovr', 'physics_ovr'
+	user_strTargetname: if targetname starts with '_solidify' spawned prop will be invisible
+	user_strShadows: 'shadow_no', 'shadow_yes'
+	user_strSolidity: 'solid_no', 'solid_yes'";
 function make_prop ( user_strType,
 		     user_strTargetname,
 		     user_strModel,
@@ -649,6 +664,7 @@ function make_prop ( user_strType,
 **  See file "mapspawn.nut" for more details and all instant application calls.
 *****************************************************************************/
 
+scripthelp_make_decal <- "Creates infodecal that immediately applies strTexture decal. (see functions.nut for more information)";
 function make_decal( strTexture, strOrigin )
 {
 	SpawnEntityFromTable( "infodecal",
@@ -697,6 +713,7 @@ function make_decal( strTexture, strOrigin )
 **  Functions prefixed with "modify_" make necessary use of SafelyExists().
 *****************************************************************************/
 
+scripthelp_SafelyExists <- "Returns true if hndEntity is not null and is a valid entity";
 function SafelyExists( hndEntity )
 {
 	if ( hndEntity != null && hndEntity.IsValid() )
@@ -715,6 +732,7 @@ function SafelyExists( hndEntity )
 // and (2) script flow concludes entities exist by other means.
 ////////////////////////////////////////////////////////////////////////////////////
 
+scripthelp_kill_entity <- "Kills hndEntity if it safely exists.";
 function kill_entity( hndEntity )
 {
 	if ( SafelyExists( hndEntity ) )
@@ -744,6 +762,7 @@ function kill_entity( hndEntity )
 // explain what's going on instead, i.e. Dark Carnival 5 player-deleting trigger fix.
 ////////////////////////////////////////////////////////////////////////////////////
 
+scripthelp_clone_model <- "If hndEntity safely exists get its model name and return the model name if it's precached, otherwise return null";
 function clone_model( hndEntity )
 {
 	if ( SafelyExists( hndEntity ) )
@@ -900,6 +919,7 @@ function clone_model( hndEntity )
 // Again, can't use FindByClassnameNearest() because "origin" is not unique.
 //////////////////////////////////////////////////////////////////////////////
 
+scripthelp_kill_funcinfclip <- "Kill all func_playerinfected_clip where their 'm_Collision.m_flRadius' is equal to flDesiredRadius";
 function kill_funcinfclip( flDesiredRadius )
 {
 	local hndFuncInfClip	= null;
@@ -985,6 +1005,7 @@ function kill_funcinfclip( flDesiredRadius )
 // Function make_ladder() is greatly simplified and modularized by this.
 //////////////////////////////////////////////////////////////////////////////
 
+scripthelp_find_ladder <- "Returns func_simpleladder handle. (see functions.nut for more information.)";
 function find_ladder( strDesiredVSSM, flRadius = 1.4 )
 {
 	local hndLadder		= null;
@@ -1049,6 +1070,7 @@ function find_ladder( strDesiredVSSM, flRadius = 1.4 )
 // CAUTION: Move ladder sparingly if it's connected to navmesh.
 //////////////////////////////////////////////////////////////////////////////
 
+scripthelp_patch_ladder <- "Can change origin and normal vector of a func_simpleladder found by specifying user_strDesiredVSSM (see functions.nut for more information)";
 function patch_ladder ( user_strDesiredVSSM,
 			user_strOffsetOrigin,
 			user_strNormalOverride = null )
@@ -1123,6 +1145,7 @@ function patch_ladder ( user_strDesiredVSSM,
 // runs will not process cloned ladders because they're added to end of queue.
 //////////////////////////////////////////////////////////////////////////////
 
+scripthelp_make_ladder <- "Create func_simpleladder. (see functions.nut for more information)";
 function make_ladder ( user_strNewLadderName,
 		       user_strDesiredVSSM,
 		       user_strOffsetOrigin,
@@ -1322,6 +1345,7 @@ function InfectedHumEnts_Spawn()
 **  needs to run once since changes persist entire load session.
 *****************************************************************************/
 
+scripthelp_patch_nav_obscured <- "Add OBSCURED spawn attribute to a nav area found at user_strOrigin";
 function patch_nav_obscured( user_strOrigin )
 {
 	local hndNavAttr = SpawnEntityFromTable( "point_nav_attribute_region",
@@ -1373,6 +1397,7 @@ function patch_nav_obscured( user_strOrigin )
 **  inside safe rooms (like SACRIFICE 2 ceiling) are just that: hiding places.
 *****************************************************************************/
 
+scripthelp_patch_nav_checkpoint <- "Add CHECKPOINT spawn attribute to a nav area found at user_strOrigin";
 function patch_nav_checkpoint( user_strOrigin )
 {
 	local hndNavAttr = SpawnEntityFromTable( "point_nav_attribute_region",
@@ -1418,6 +1443,7 @@ function patch_nav_checkpoint( user_strOrigin )
 **  ShowUpdate() draws all trigger_once in YELLOW.
 *****************************************************************************/
 
+scripthelp_patch_spawninfront <- "Creates trigger_once which touching results in changing director option PreferredMobDirection to SPAWN_NO_PREFERENCE";
 function patch_spawninfront( strOrigin, strMins, strMaxs )
 {
 	local trigger = SpawnEntityFromTable( "trigger_once",
@@ -1477,6 +1503,7 @@ function patch_spawninfront( strOrigin, strMins, strMaxs )
 **  ShowUpdate() draws all trigger_multiple in YELLOW.
 *****************************************************************************/
 
+scripthelp_make_atomizer <- "Creates trigger_multiple that kills physical props that touch it after user_intKillTimer seconds.";
 function make_atomizer( user_strTargetname,
 			user_strOrigin,
 			user_strModel,
@@ -1536,6 +1563,7 @@ function make_atomizer( user_strTargetname,
 **  ShowUpdate() draws all trigger_multiple in YELLOW.
 *****************************************************************************/
 
+scripthelp_make_axiswarp <- "Creates trigger_multiple that teleports players along user_strAxis by user_intOffset units. user_strAxis: 'x+', 'x-', 'y+', 'y-'";
 function make_axiswarp ( user_strTargetname,
 			 user_strAxis,
 			 user_intOffset,
@@ -1602,6 +1630,7 @@ function make_axiswarp ( user_strTargetname,
 **  common but anything can be specified instead.
 *****************************************************************************/
 
+scripthelp_modify_trigfilter <- "Changes a filter of entity by classname strClassname found at strOrigin to strFiltername";
 function modify_trigfilter( strOrigin,
 			    strFiltername	=	"anv_globalfixes_filter_survivor",
 			    strClassname	=	"trigger_once" )
@@ -1646,6 +1675,7 @@ function modify_trigfilter( strOrigin,
 **  Just text dump, DebugDrawCircle() too fleeting to work with ShowUpdate().
 *****************************************************************************/
 
+scripthelp_unsolidify_prop <- "Makes the user_hndProp non-solid";
 function unsolidify_prop( user_hndProp )
 {
 	local strClassname = user_hndProp.GetClassname();
@@ -1667,6 +1697,7 @@ function unsolidify_prop( user_hndProp )
 	}
 }
 
+scripthelp_unsolidify_model <- "Makes all entities that use model user_strModel non-solid.";
 function unsolidify_model( user_strModel )
 {
 	local hndProp = null;
@@ -1694,6 +1725,7 @@ function unsolidify_model( user_strModel )
 **  and Scavenge Gascans cannot be detected by triggers.
 *****************************************************************************/
 
+scripthelp_SpawnGlobalFilters <- "Creates two filter_activator_team entities that filter survivor and infected team named anv_globalfixes_filter_survivor and anv_globalfixes_filter_infected";
 function SpawnGlobalFilters()
 {
 	SpawnEntityFromTable( "filter_activator_team",
@@ -1724,6 +1756,7 @@ function SpawnGlobalFilters()
 // Convert any String to a Vector with floating-point precision.
 //////////////////////////////////////////////////////////////////////////////
 
+scripthelp StringToVector_Valve <- "Converts string of form 'float1{delimiter}float2{delimiter}float3' into Vector(float1, float2, float3)";
 function StringToVector_Valve( string, delimiter )
 {
 	local vector = Vector( 0, 0, 0 );
@@ -1737,6 +1770,7 @@ function StringToVector_Valve( string, delimiter )
 	return vector;
 }
 
+scripthelp_VectorToString_Valve <- "Converts vector into keyvalue string";
 function VectorToString_Valve( vector )
 {
 	return vector.x + " " + vector.y + " " + vector.z;
@@ -1748,6 +1782,7 @@ function VectorToString_Valve( vector )
 // that require logic or trigger injection. Accompanies entity dumps.
 //////////////////////////////////////////////////////////////////////////////
 
+scripthelp_con_comment <- "Prints strComment if in dev mode";
 function con_comment( strComment )
 {
 	if ( developer() > 0 )
@@ -1801,4 +1836,8 @@ function devchap( mode )
 		printl( "Community Map Fixes: Restart with Launch Option -dev to reveal verbose entity debug dumps." );
 		printl( "Community Demo Mode: Run \"script_execute community/z_developer_showupdate\" >> \"script ShowUpdate()\"." );
 	}
+}
+
+if( developer() > 0 ) {
+	AddToScriptHelp(this); 
 }
