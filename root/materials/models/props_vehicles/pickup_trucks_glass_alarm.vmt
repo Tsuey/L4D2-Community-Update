@@ -1,0 +1,67 @@
+VertexLitGeneric
+{
+$baseTexture "models\props_vehicles/pickup_trucks_glass"
+$selfillum 1
+$selfillummask "models\props_vehicles/pickup_trucks_glass_alarm_illum_mask"
+$bumpmap "effects\flat_normal"
+$translucent 1
+$envmap env_cubemap
+$envmaptint "[.8 .8 .8]"
+$basemapalphaenvmapmask 1
+$envmapfresnel 1
+$invertphongmask 1
+$halflambert 1
+$phong 1
+$phongexponent 500
+$phongboost 1
+$phongfresnelranges "[.3 .6 4]"
+
+$redOscillation 1.0
+$greenOscillation 1.0
+$blueOscillation 1.0
+Proxies
+{
+Sine
+{
+resultVar $redOscillation
+sineperiod .8
+sinemin -2.7776 
+sinemax 1.2
+}
+Sine
+{
+resultVar $greenOscillation
+sineperiod .8
+sinemin -0.8
+sinemax 0.3
+}
+Sine
+{
+resultVar $blueOscillation
+sineperiod .8
+sinemin -0.48
+sinemax 0.2
+}
+Clamp
+{
+srcVar1 $redOscillation
+min 0
+max 1
+resultVar "$selfillumtint[0]"
+}
+Clamp
+{
+srcVar1 $greenOscillation
+min 0
+max 1
+resultVar "$selfillumtint[1]"
+}
+Clamp
+{
+srcVar1 $blueOscillation
+min 0
+max 1
+resultVar "$selfillumtint[2]"
+}
+}
+}
