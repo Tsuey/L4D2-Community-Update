@@ -2679,7 +2679,7 @@ Rule SurvivorSpottedVomitJarManager
 
 Rule SurvivorSpottedVomitJarAutoManager
 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpot IsVomitjar IsWorldTalkManager IsNotSpeakingWeight0
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotVomitJar IsNotSaidSpot IsVomitjar IsWorldTalkManager IsNotSpeakingWeight0
 	ApplyContext "SaidSpotVomitJar:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedVomitJarManager

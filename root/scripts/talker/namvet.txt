@@ -2214,7 +2214,7 @@ Rule SurvivorSpottedVomitJarNamVet
 
 Rule SurvivorSpottedVomitJarAutoNamVet
 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpot IsVomitJar IsWorldTalkNamVet IsNotSpeakingWeight0
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotVomitJar IsNotSaidSpot IsVomitJar IsWorldTalkNamVet IsNotSpeakingWeight0
 	ApplyContext "SaidSpotVomitJar:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedVomitJarNamVet

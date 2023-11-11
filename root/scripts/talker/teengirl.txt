@@ -2941,7 +2941,7 @@ Rule SurvivorSpottedVomitJarTeenGirl
 
 Rule SurvivorSpottedVomitJarAutoTeenGirl
 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpot IsVomitjar IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotVomitJar IsNotSaidSpot IsVomitjar IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotVomitJar:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedVomitJarTeenGirl
