@@ -7166,7 +7166,7 @@ Response L4D1SurvivorPickupPainPillsManager
 {
 	scene "scenes/Manager/TakePills01.vcd" odds 10 //Better grab everything I can [to self]
 	scene "scenes/Manager/TakePills02.vcd"  //Grabbing Pills.
-	scene "scenes/Manager/Taunt07.vcd." odds 1 //(Loud, Evil laughing)
+	scene "scenes/Manager/Taunt07.vcd" odds 1 //(Loud, Evil laughing)
 }
 Rule L4D1SurvivorPickupPainPillsManager
 {
