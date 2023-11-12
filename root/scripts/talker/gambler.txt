@@ -6312,8 +6312,8 @@ Response PlayerWitchChasingGambler
 	scene "scenes/Gambler/WitchChasing02.vcd"  //This bitch is chasing me!
 	scene "scenes/Gambler/WitchChasing03.vcd"  //Witch coming! Witch coming!
 	scene "scenes/Gambler/WitchChasing05.vcd"  //Shoot the witch! Shoot the witch! Shoot the witch! What are you doing? Shoot her!
-	scene "scenes/Gambler/Fall01.vcd" odds 10 //
-	scene "scenes/Gambler/Fall04.vcd" odds 10 //
+	scene "scenes/Gambler/LedgeHangFall01.vcd" odds 10 //
+	scene "scenes/Gambler/LedgeHangFall02.vcd" odds 10 //
 }
 Rule PlayerWitchChasingGambler
 {
