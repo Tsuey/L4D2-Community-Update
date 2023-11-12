@@ -6526,7 +6526,7 @@ Rule L4D1SurvivorPickupGolfClubNamvet
 	Response L4D1SurvivorPickupMeleeNamVet
 }
 
-Rule L4D1SurvivorPickupFireAxeBiker
+Rule L4D1SurvivorPickupFireAxeNamvet
 {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpFireAxe IsNotSpeaking NotPickedUpItem IsNotInSafeSpot IsNotInStartArea ChanceToFire30Percent IsTalk IsTalkNamVet IsWorldTalkNamVet AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
