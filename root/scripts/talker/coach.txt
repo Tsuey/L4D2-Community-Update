@@ -3620,8 +3620,8 @@ Rule C5M5_saferoom005Coach
 Response PlayerReviveParishCoach
 {
 	scene "scenes/Coach/WorldC5M5B20.vcd"  //Man, we are too close. I am NOT gonna let you die here.
-	scene "scenes/Coach/WorldC5M5B21.vcd"  //We are too close. I am NOT gonna let you die here.
-	scene "scenes/Coach/WorldC5M5B22.vcd"  //Man, we are too close. I am NOT gonna let you die here.
+	scene "scenes/Coach/WorldC5M5B21.vcd"  //Man, we are too close. I am NOT gonna let you die here.
+	scene "scenes/Coach/WorldC5M5B22.vcd"  //We are too close. I am NOT gonna let you die here.
 }
 Rule PlayerReviveParishCoach
 {
@@ -3646,7 +3646,7 @@ Rule PlayerLedgeSaveCriticalParishCoach
 
 Response PlayerReviveParishProducerCoach
 {
-	scene "scenes/Coach/WorldC5M5B21.vcd"  //We are too close. I am NOT gonna let you die here.
+	scene "scenes/Coach/WorldC5M5B22.vcd"  //We are too close. I am NOT gonna let you die here.
 	scene "scenes/Coach/WorldC5M5B23.vcd"  //Girl, I am NOT gonna let you die here.
 }
 Rule PlayerReviveParishProducerCoach
