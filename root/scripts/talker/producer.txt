@@ -15501,7 +15501,7 @@ Rule C13M3Tanker1Producer
 
 Response C13M3Tanker2Producer
 {
-	scene "scenes/Coach/LookOut03.vcd" then any C13M3Tanker3 foo:0 3 //Oh shit, watch out!
+	scene "scenes/Producer/LookOut03.vcd" then any C13M3Tanker3 foo:0 3 //Heads up!
 	scene "scenes/Producer/DLC1_L4D1Tank01.vcd" then any C13M3Tanker3 foo:0 3 //Holy shit!
 }
 Rule C13M3Tanker2Producer
