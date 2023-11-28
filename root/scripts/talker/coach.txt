@@ -12962,7 +12962,6 @@ Rule SurvivorPickupchainsawCoach
 
 Response SurvivorPickupcricket_batCoach
 {
-	scene "scenes/Coach/MeleeWeapons14.vcd"  //Paddle bat here.
 	scene "scenes/Coach/MeleeWeapons15.vcd"  //Got a paddle bat.
 	scene "scenes/Coach/MeleeWeapons16.vcd"  //I am gonna paddle the SHIT outta somethin'.
 	scene "scenes/Coach/TakeMelee07.vcd"  //Alright. Now I am ready.
@@ -12974,7 +12973,7 @@ Rule SurvivorPickupcricket_batCoach
 	Response SurvivorPickupcricket_batCoach
 }
 
-Response SurvivorPickupCricketBatCoach
+Response SurvivorPickupBaseballBatCoach
 {
 	scene "scenes/Coach/TakeMelee01.vcd"  //Oh yeah.
 	scene "scenes/Coach/TakeMelee02.vcd"  //Alright now, mm-hm. This is gonna work.
@@ -12984,18 +12983,25 @@ Response SurvivorPickupCricketBatCoach
 	scene "scenes/Coach/TakeMelee06.vcd"  //Shit. I'd pay cash money for this.
 	scene "scenes/Coach/TakeMelee07.vcd"  //Alright. Now I am ready.
 }
-Rule SurvivorPickupCricketBatCoach
+Rule SurvivorPickupBaseballBatCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpbaseball_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
-	Response SurvivorPickupCricketBatCoach
+	Response SurvivorPickupBaseballBatCoach
 }
 
 Rule SurvivorPickupShovelCoach
 {
 	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpShovel IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
-	Response SurvivorPickupCricketBatCoach
+	Response SurvivorPickupBaseballBatCoach
+}
+
+Rule SurvivorPickupFryingPanCoach
+{
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpFryingPan IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	ApplyContext "PickedUpItem:1:30"
+	Response SurvivorPickupBaseballBatCoach
 }
 
 Response SurvivorPickupKnifeCoach
@@ -13006,6 +13012,13 @@ Response SurvivorPickupKnifeCoach
 Rule SurvivorPickupKnifeCoach
 {
 	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpKnife IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	ApplyContext "PickedUpItem:1:30"
+	Response SurvivorPickupKnifeCoach
+}
+
+Rule SurvivorPickupFireAxeCoach
+{
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpFireAxe IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkCoach IsWorldTalkCoach IsNotInStartArea isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupKnifeCoach
 }

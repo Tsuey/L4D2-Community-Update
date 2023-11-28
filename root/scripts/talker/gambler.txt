@@ -13103,19 +13103,19 @@ Rule SurvivorPickupchainsawGambler
 	Response SurvivorPickupchainsawGambler
 }
 
-Response SurvivorPickupcricket_batGambler
-{
-	scene "scenes/Gambler/MeleeWeapons16.vcd"  //Gonna whack the shit outta somethin' with this.
-	scene "scenes/Gambler/MeleeWeapons18.vcd"  //Niiiiice.
-	scene "scenes/Gambler/TakeMelee03.vcd"  //This could be fun.
-	scene "scenes/Gambler/TakeMelee05.vcd"  //That'll come in handy.
-}
-Rule SurvivorPickupcricket_batGambler
-{
-	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
-	ApplyContext "PickedUpItem:1:30"
-	Response SurvivorPickupcricket_batGambler
-}
+//Response SurvivorPickupcricket_batGambler
+//{
+//	scene "scenes/Gambler/MeleeWeapons16.vcd"  //Gonna whack the shit outta somethin' with this.
+//	scene "scenes/Gambler/MeleeWeapons18.vcd"  //Niiiiice.
+//	scene "scenes/Gambler/TakeMelee03.vcd"  //This could be fun.
+//	scene "scenes/Gambler/TakeMelee05.vcd"  //That'll come in handy.
+//}
+//Rule SurvivorPickupcricket_batGambler
+//{
+//	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpcricket_bat IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsTalk IsTalkGambler IsWorldTalkGambler IsNotInStartArea AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+//	ApplyContext "PickedUpItem:1:30"
+//	Response SurvivorPickupcricket_batGambler
+//}
 
 Response SurvivorPickupCricketBatGambler
 {
@@ -16953,14 +16953,6 @@ Rule LeavingSafeRoomGambler
 {
 	criteria ConceptSurvivorLeavingInitialCheckpoint IsGambler IsNotSaidLeavingSafeArea
 	ApplyContext "SaidLeavingSafeArea:1:0,Talk:0:0"
-	applycontexttoworld
-	Response NoResponse
-}
-
-Rule FinaleTriggeredGambler
-{
-	criteria ConceptFinaleTriggered IsGambler IsTriggeredByGambler AutoIsNotScavenge AutoIsNotSurvival _auto_NotFinaleStarted
-	ApplyContext "_auto_Finale:1:0"
 	applycontexttoworld
 	Response NoResponse
 }
