@@ -8664,7 +8664,7 @@ Rule SurvivorSpottedPumpShotgunTeenGirl
 
 Rule SurvivorSpottedPumpShotgunAutoTeenGirl
 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsPumpShotgun IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsSmg_silenced IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsPumpShotgun IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedWeaponsTeenGirl
@@ -8680,7 +8680,7 @@ Rule SurvivorSpottedShotgun_ChromeTeenGirl
 
 Rule SurvivorSpottedShotgun_ChromeAutoTeenGirl
 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsShotgun_Chrome IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsSmg_silenced IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSaidSomeoneDied IsSmartLookAuto IsShotgun_Chrome IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpot IsWorldTalkTeenGirl IsNotSpeakingWeight0 _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedWeaponsTeenGirl
