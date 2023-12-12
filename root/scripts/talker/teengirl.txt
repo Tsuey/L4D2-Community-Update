@@ -7,6 +7,16 @@ Response _PlayerInfoRemarkableBlankTeenGirl
 	scene "scenes/TeenGirl/blank.vcd"
 }
 
+Response BlankCutoffTeenGirl
+{
+	scene "scenes/TeenGirl/blank.vcd" then all BlankCutoff foo:0 .1
+}
+Rule BlankCutoffTeenGirl
+{
+	criteria ConceptBlankCutoff IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival
+	Response _PlayerInfoRemarkableBlankTeenGirl
+}
+
 Response C6M3PlayerNiceShotTeenGirl
 {
 	scene "scenes/TeenGirl/NiceShot01.vcd"  //Good one!
@@ -3424,7 +3434,6 @@ Response L4D1PlayerFriendlyFire2TeenGirl
 {
 	scene "scenes/TeenGirl/TeamKillAccident03.vcd"  //You REALLY have to be more careful!
 	scene "scenes/TeenGirl/TeamKillAccident05.vcd"  //Be careful!
-	scene "scenes/TeenGirl/TeamKillAccident06.vcd"  //Stop Stop!
 	scene "scenes/TeenGirl/TeamKillAccident08.vcd"  //Woah.  Careful!
 }
 Rule L4D1PlayerFriendlyFire2TeenGirl
@@ -3432,6 +3441,17 @@ Rule L4D1PlayerFriendlyFire2TeenGirl
 	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2TeenGirl
+}
+
+Response L4D1PlayerFriendlyFireTankTeenGirl
+{
+	scene "scenes/TeenGirl/TeamKillAccident06.vcd"  //Stop Stop!
+}
+Rule L4D1PlayerFriendlyFireTankTeenGirl
+{
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsTeenGirl IsNotFriendlyFire IsNotIncapacitated IsNotDamageTypeExplosive IsNotOnThirdStrike IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsTankAggro _auto_NotSpottedVehicle
+	ApplyContext "FriendlyFire:1:10"
+	Response L4D1PlayerFriendlyFireTankTeenGirl
 }
 
 Response L4D1PlayerFriendlyFireFromBillTeenGirl

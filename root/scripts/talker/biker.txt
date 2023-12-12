@@ -7,6 +7,16 @@ Response _PlayerInfoRemarkableBlankBiker
 	scene "scenes/Biker/blank.vcd"
 }
 
+Response BlankCutoffBiker
+{
+	scene "scenes/Biker/blank.vcd" then all BlankCutoff foo:0 .1
+}
+Rule BlankCutoffBiker
+{
+	criteria ConceptBlankCutoff IsBiker AutoIsNotScavenge AutoIsNotSurvival
+	Response _PlayerInfoRemarkableBlankBiker
+}
+
 Response C6M3PlayerNiceShotBiker
 {
 	scene "scenes/Biker/NiceShot01.vcd"  //Nice shot.
@@ -3995,13 +4005,23 @@ Rule L4D1PlayerFriendlyFireBiker
 
 Response L4D1PlayerFriendlyFire2Biker
 {
-	scene "scenes/Biker/TeamKillAccident04.vcd"  //Pull yer head outta yer ass.
 	scene "scenes/Biker/TeamKillAccident05.vcd"  //Careful!
 	scene "scenes/Biker/TeamKillAccident06.vcd"  //Hey! Careful!
 }
 Rule L4D1PlayerFriendlyFire2Biker
 {
 	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker NotTankAggro _auto_NotSpottedVehicle
+	ApplyContext "FriendlyFire:1:10"
+	Response L4D1PlayerFriendlyFire2Biker
+}
+
+Response L4D1PlayerFriendlyFireTankBiker
+{
+	scene "scenes/Biker/TeamKillAccident04.vcd"  //Pull yer head outta yer ass.
+}
+Rule L4D1PlayerFriendlyFire2Biker
+{
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsBiker IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkBiker IsWorldTalkBiker IsTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2Biker
 }

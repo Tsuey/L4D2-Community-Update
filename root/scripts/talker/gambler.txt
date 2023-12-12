@@ -7,6 +7,16 @@ Response _PlayerInfoRemarkableBlankGambler
 	scene "scenes/Gambler/blank.vcd"
 }
 
+Response BlankCutoffGambler
+{
+	scene "scenes/Gambler/blank.vcd" then all BlankCutoff foo:0 .1
+}
+Rule BlankCutoffGambler
+{
+	criteria ConceptBlankCutoff IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response _PlayerInfoRemarkableBlankGambler
+}
+
 Response C1M1InSmokeGambler
 {
 	scene "scenes/Gambler/Cough01.vcd"  then any C1M1Cough foo:0 -1.560 //[Coughing from smoke]

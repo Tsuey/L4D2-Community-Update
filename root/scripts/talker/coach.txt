@@ -7,6 +7,16 @@ Response _PlayerInfoRemarkableBlankCoach
 	scene "scenes/Coach/blank.vcd"
 }
 
+Response BlankCutoffCoach
+{
+	scene "scenes/Coach/blank.vcd" then all BlankCutoff foo:0 .1
+}
+Rule BlankCutoffCoach
+{
+	criteria ConceptBlankCutoff IsCoach AutoIsNotScavenge AutoIsNotSurvival
+	Response _PlayerInfoRemarkableBlankCoach
+}
+
 Response C1M1InSmokeCoach
 {
 	scene "scenes/Coach/Cough01.vcd"  then any C1M1Cough foo:0 -0.584 //[Coughing from smoke]

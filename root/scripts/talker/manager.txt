@@ -7,6 +7,16 @@ Response _PlayerInfoRemarkableBlankManager
 	scene "scenes/Manager/blank.vcd"
 }
 
+Response BlankCutoffManager
+{
+	scene "scenes/Manager/blank.vcd" then all BlankCutoff foo:0 .1
+}
+Rule BlankCutoffManager
+{
+	criteria ConceptBlankCutoff IsManager AutoIsNotScavenge AutoIsNotSurvival
+	Response _PlayerInfoRemarkableBlankManager
+}
+
 Response C6M3PlayerNiceShotManager
 {
 	scene "scenes/Manager/NiceShot01.vcd"  //Nice shot!
@@ -3186,7 +3196,6 @@ Response L4D1PlayerFriendlyFire2Manager
 {
 	scene "scenes/Manager/TeamKillAccident01.vcd"  //Woah man, you gotta be careful.
 	scene "scenes/Manager/TeamKillAccident02.vcd"  //Woah man, you gotta be careful.
-	scene "scenes/Manager/TeamKillAccident03.vcd"  //What the hell man?
 	scene "scenes/Manager/TeamKillAccident04.vcd"  //Be careful, what are you doing?
 }
 Rule L4D1PlayerFriendlyFire2Manager
@@ -3194,6 +3203,17 @@ Rule L4D1PlayerFriendlyFire2Manager
 	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkManager IsWorldTalkManager NotTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFire2Manager
+}
+
+Response L4D1PlayerFriendlyFireTankManager
+{
+	scene "scenes/Manager/TeamKillAccident03.vcd"  //What the hell man?
+}
+Rule L4D1PlayerFriendlyFireTankManager
+{
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsManager IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkManager IsWorldTalkManager IsTankAggro _auto_NotSpottedVehicle
+	ApplyContext "FriendlyFire:1:10"
+	Response L4D1PlayerFriendlyFireTankManager
 }
 
 Response L4D1PlayerFriendlyFireFromBillManager

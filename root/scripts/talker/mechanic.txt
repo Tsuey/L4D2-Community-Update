@@ -7,6 +7,16 @@ Response _PlayerInfoRemarkableBlankMechanic
 	scene "scenes/Mechanic/blank.vcd"
 }
 
+Response BlankCutoffMechanic
+{
+	scene "scenes/Mechanic/blank.vcd" then all BlankCutoff foo:0 .1
+}
+Rule BlankCutoffMechanic
+{
+	criteria ConceptBlankCutoff IsMechanic AutoIsNotScavenge AutoIsNotSurvival
+	Response _PlayerInfoRemarkableBlankMechanic
+}
+
 Response C1M1InSmokeMechanic
 {
 	scene "scenes/Mechanic/Cough01.vcd"  then any C1M1Cough foo:0 -1.399 //[Coughing from smoke]

@@ -7,6 +7,16 @@ Response _PlayerInfoRemarkableBlankProducer
 	scene "scenes/Producer/blank.vcd"
 }
 
+Response BlankCutoffProducer
+{
+	scene "scenes/Producer/blank.vcd" then all BlankCutoff foo:0 .1
+}
+Rule BlankCutoffProducer
+{
+	criteria ConceptBlankCutoff IsProducer AutoIsNotScavenge AutoIsNotSurvival
+	Response _PlayerInfoRemarkableBlankProducer
+}
+
 Response C1M1InSmokeProducer
 {
 	scene "scenes/Producer/Cough01.vcd"  then any C1M1Cough foo:0 -2.638 //[Coughing from smoke]

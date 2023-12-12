@@ -7,6 +7,8 @@ Response NoResponse //Blank Response: Any rule with this as the response will fi
 	print " "
 }
 
+criterion "ConceptBlankCutoff" "Concept" "BlankCutoff" required
+
 criterion "Conceptcommentjockey" "Concept" "commentjockey" required
 criterion "Conceptcommentjockey2" "Concept" "commentjockey2" required
 criterion "IsNotSaidCommentJockey" "worldSaidCommentJockey" "!=1" required
