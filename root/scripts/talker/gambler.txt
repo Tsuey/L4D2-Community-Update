@@ -867,13 +867,13 @@ Rule ReviveMeInterruptedMajorGambler
 
 Response ReviveMeInterruptedCriticalGambler
 {
-	scene "scenes/Gambler/HurtCritical01.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical02.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical03.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical04.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical05.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical06.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical07.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical01.vcd" predelay "0.75"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical02.vcd" predelay "0.75"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical03.vcd" predelay "0.75"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical04.vcd" predelay "0.75"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical05.vcd" predelay "0.75"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical06.vcd" predelay "0.75"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical07.vcd" predelay "0.75"  //[pain noise - loud major pain]
 }
 Rule ReviveMeInterruptedCriticalGambler
 {

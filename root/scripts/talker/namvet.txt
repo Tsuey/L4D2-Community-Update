@@ -2688,7 +2688,7 @@ Response L4D1PlayerFriendlyFireTankNamVet
 }
 Rule L4D1PlayerFriendlyFireTankNamVet
 {
-	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkNamVet IsWorldTalkNamVet IsTankAggro _auto_NotSpottedVehicle
+	criteria ConceptPlayerFriendlyFire IsNotCoughing IsNamVet IsNotFriendlyFire IsNotIncapacitated IsNotOnThirdStrike IsNotDamageTypeExplosive IsTalk IsTalkNamVet IsWorldTalkNamVet IsTankAggro _auto_NotSpottedVehicle
 	ApplyContext "FriendlyFire:1:10"
 	Response L4D1PlayerFriendlyFireTankNamVet
 }

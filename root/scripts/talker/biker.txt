@@ -83,17 +83,17 @@ Rule L4D1ReviveMeInterruptedMinorBiker
 
 Response L4D1ReviveMeInterruptedMajorBiker
 {
-	scene "scenes/Biker/HurtMajor01.vcd"  //[Pain noise - ahh]
-	scene "scenes/Biker/HurtMajor02.vcd"  //[Pain noise - huh]
-	scene "scenes/Biker/HurtMajor03.vcd"  //[Pain noise - oy]
-	scene "scenes/Biker/HurtMajor04.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor05.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor06.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor07.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor08.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor09.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor10.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor11.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor01.vcd" predelay "0.75"  //[Pain noise - ahh]
+	scene "scenes/Biker/HurtMajor02.vcd" predelay "0.75"  //[Pain noise - huh]
+	scene "scenes/Biker/HurtMajor03.vcd" predelay "0.75"  //[Pain noise - oy]
+	scene "scenes/Biker/HurtMajor04.vcd" predelay "0.75"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor05.vcd" predelay "0.75"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor06.vcd" predelay "0.75"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor07.vcd" predelay "0.75"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor08.vcd" predelay "0.75"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor09.vcd" predelay "0.75"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor10.vcd" predelay "0.75"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor11.vcd" predelay "0.75"  //[Pain noise - ugh]
 }
 Rule L4D1ReviveMeInterruptedMajorBiker
 {

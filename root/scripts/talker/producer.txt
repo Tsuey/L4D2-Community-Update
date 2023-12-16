@@ -12552,7 +12552,7 @@ Response SurvivorPickupUpExplosiveAmmoProducer
 }
 Rule SurvivorPickupUpExplosiveAmmoProducer
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsPickedUpExplosiveAmmo IsNotSpeaking IsNotInStartArea IsTalk IsTalkProducer IsWorldTalkProducer AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsPickedUpExplosiveAmmo NotPickedUpItem IsNotSpeaking IsNotInStartArea IsTalk IsTalkProducer IsWorldTalkProducer AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpExplosiveAmmoProducer
 }
@@ -12563,7 +12563,7 @@ Response SurvivorPickupUpExplosivesProducer
 }
 Rule SurvivorPickupUpExplosivesProducer
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsPickedUpUpgradePack_Explosive IsNotSpeaking IsNotInStartArea IsTalk IsTalkProducer IsWorldTalkProducer AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsPickedUpUpgradePack_Explosive NotPickedUpItem IsNotSpeaking IsNotInStartArea IsTalk IsTalkProducer IsWorldTalkProducer AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpExplosivesProducer
 }
@@ -12574,7 +12574,7 @@ Response SurvivorPickupUpIncendiaryProducer
 }
 Rule SurvivorPickupUpIncendiaryProducer
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsPickedUpUpgradePack_Incendiary IsNotSpeaking IsNotInStartArea IsTalk IsTalkProducer IsWorldTalkProducer AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsProducer IsPickedUpUpgradePack_Incendiary NotPickedUpItem IsNotSpeaking IsNotInStartArea IsTalk IsTalkProducer IsWorldTalkProducer AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupUpIncendiaryProducer
 }

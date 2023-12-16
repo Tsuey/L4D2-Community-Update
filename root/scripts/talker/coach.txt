@@ -13189,7 +13189,7 @@ Response SurvivorPickupExplosiveAmmoCoach
 }
 Rule SurvivorPickupExplosiveAmmoCoach
 {
-	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpIncendiaryAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
+	criteria ConceptPlayerPickup IsNotCoughing IsCoach IsPickedUpExplosiveAmmo IsNotSpeaking ChanceToFire30Percent NotPickedUpItem IsNotInSafeSpot IsNotInStartArea IsTalk IsTalkCoach IsWorldTalkCoach isNotmap_c1m1_hotel AutoIsNotSurvival AutoIsNotScavenge _auto_NotSpottedVehicle
 	ApplyContext "PickedUpItem:1:30"
 	Response SurvivorPickupExplosiveAmmoCoach
 }
