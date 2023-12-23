@@ -22,14 +22,16 @@ function DoRoundFixes()
 	make_clip(	"_dispcrouch_rubblepipes",	"Everyone",	1,	"-32 -420 0",		"32 420 216",		"-6060 758 -125" );
 	make_clip(	"_clipgap_roof",		"Survivors",	1,	"-17 -54 0",		"18 54 1000",		"-2226 5494 825" );
 	make_clip(	"_permstuck_processortanks",	"Everyone",	1,	"-64 -32 -84",		"64 0 10",		"-3000 2129 103" );
-	make_clip(	"_cliprework_construction01",	"Survivors",	1,	"-666 -32 -176",	"780 8 1150",		"-6885 -2488 712" );
-	make_clip(	"_cliprework_construction02",	"Survivors",	1,	"-32 -32 -176",		"8 345 1150",		"-7518 -2488 712" );
-	make_clip(	"_cliprework_construction03",	"Survivors",	1,	"-386 -32 -176",	"460 8 741",		"-5645 -884 1118" );
-	make_clip(	"_cliprework_construction04",	"Survivors",	1,	"-8 -472 0",		"1337 488 888",		"-5384 -1528 1000" );
+	make_clip(	"_cliprework_construction01",	"Survivors",	1,	"-440 -376 -440",		"440 376 440",		"-5616 -2672 1416" );
+	make_clip(	"_cliprework_construction02",	"Survivors",	1,	"-540 -376 -636",		"540 376 636",		"-6644 -2856 1220" );
+	make_clip(	"_cliprework_construction03",	"Survivors",	1,	"-488 -372 -660",	"488 372 660",		"-7672 -2516 1196" );
+	make_clip(	"_cliprework_construction04",	"Survivors",	1,	"-386 -32 -176",	"460 8 741",		"-5645 -884 1118" );
 	make_clip(	"_cliprework_startarea02",	"Survivors",	1,	"-8 -360 0",		"8 360 1122",		"-5008 -2351 712" );
 	make_clip(	"_cliprework_startarea01",	"Survivors",	1,	"-8 -469 0",		"8 469 1313",		"-4232 -3186 548" );
 	make_clip( "_nav_constructwin", "Survivors", 1, "-64 -8 0", "64 8 128", "-5776 -1304 216" );
 	make_clip( "_permstuck_watertank", "Everyone", 1, "-16 -16 0", "16 16 111", "-4044 2880 16" );
+	make_clip( "_lmpedit18_brushid1738_endhalla", "Survivors", 1, "-516 -1476 -790", "375 1476 790", "-1044 4924 1066" );
+	make_clip( "_lmpedit18_brushid1738_endhallb", "Survivors", 1, "0 -1476 -640", "157 1476 790", "-669 4924 1066" );
 
 	make_prop( "dynamic", "_nav_constructwin_propper", "models/props_update/plywood_128.mdl", "-5776 -1302 280", "0 0 90", "shadow_no" );
 
@@ -37,6 +39,14 @@ function DoRoundFixes()
 
 	NetProps.SetPropInt( Entities.FindByName( null, "barricade_gas_can" ), "m_Collision.m_usSolidFlags", 2 );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip(	"_cliprework_construction05",	"Survivors",	1,	"-8 -472 0",		"1337 488 888",		"-5384 -1528 1000" );
+	}
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism")
+	{
+		EntFire( "construction_clip", "Kill", "", 1 );
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );

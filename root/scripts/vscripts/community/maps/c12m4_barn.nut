@@ -31,48 +31,6 @@ function DoRoundFixes()
 
 	make_prop( "dynamic", "_solidify_survivorchimney", "models/props/cs_militia/fireplacechimney01.mdl", "10862.2 -6085.53 120.492", "0 135 0", "shadow_no" );
 
-	// FIX: Prevent skipping bridge horde by forcing it even if fence is jumped.
-
-	con_comment( "TRIG:\tNew trigger will enforce onslaught even if fence is jumped." );
-
-	// Make blockers to (temporarily) prevent train car commonhop skip.
-
-	make_clip( "_eventskip_commonhopa", "Survivors", 1, "-70 -260 0", "70 300 1700", "10548 -4639 66", "0 -60 0" );
-	make_clip( "_eventskip_commonhopb", "Survivors", 1, "-70 -380 0", "70 290 1653", "10125 -4780 113", "0 -45 0" );
-
-	// Create new trigger to enforce onslaught even if Survivors alternatively jump fence.
-
-	SpawnEntityFromTable( "trigger_once",
-	{
-		targetname	= g_UpdateName + "_eventskip_fence_trigonce",
-		StartDisabled	= 0,
-		spawnflags	= 1,
-		filtername	= "anv_globalfixes_filter_survivor",
-		origin		= Vector( 10553, -3506, -452 )
-	} );
-
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "mins -8 -216 0" );
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "maxs 8 145 365" );
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "solid 2" );
-
-	// Inject I/O into original trigger_once (at the normal window path) to delete the
-	// blockers and also delete the (then-redundant) new trigger_once. If new trigger
-	// is touched first then delete original. New trigger deletes the blockers. Note that
-	// original uses "OnTrigger" instead of "OnStartTouch".
-
-	EntFire( "window_trigger", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_commonhop*:Kill::0:-1" );
-	EntFire( "window_trigger", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_fence_trigonce:Kill::0:-1" );
-
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_commonhop*:Kill::0:-1" );
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger window_trigger:Kill::0:-1" );
-
-	// Replicate the original trigger_once's "OnTrigger" Outputs to the new trigger.
-
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger director:EndScript::0:-1" );
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger zombie_spawn_relay:Trigger::1:-1" );
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger onslaught:GenerateGameEvent::1:-1" );
-	EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger director:BeginScript:c12m4_onslaught:1.5:-1" );
-
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -94,6 +52,48 @@ function DoRoundFixes()
 
 		make_clip(	"_shortcut_warehouse",		"Survivors",	1,	"0 -32 -32",		"8 64 256",		"10272 -7848 152" );
 		make_clip(	"_commonhop_traintruss",	"Survivors",	1,	"-160 -120 -55",	"160 120 1545",		"10879 -7463 116" );
+
+		// FIX: Prevent skipping bridge horde by forcing it even if fence is jumped.
+
+		con_comment( "TRIG:\tNew trigger will enforce onslaught even if fence is jumped." );
+
+		// Make blockers to (temporarily) prevent train car commonhop skip.
+
+		make_clip( "_eventskip_commonhopa", "Survivors", 1, "-70 -260 0", "70 300 1700", "10548 -4639 66", "0 -60 0" );
+		make_clip( "_eventskip_commonhopb", "Survivors", 1, "-70 -380 0", "70 290 1653", "10125 -4780 113", "0 -45 0" );
+
+		// Create new trigger to enforce onslaught even if Survivors alternatively jump fence.
+
+		SpawnEntityFromTable( "trigger_once",
+		{
+			targetname	= g_UpdateName + "_eventskip_fence_trigonce",
+			StartDisabled	= 0,
+			spawnflags	= 1,
+			filtername	= "anv_globalfixes_filter_survivor",
+			origin		= Vector( 10553, -3506, -452 )
+		} );
+
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "mins -8 -216 0" );
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "maxs 8 145 365" );
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "solid 2" );
+
+		// Inject I/O into original trigger_once (at the normal window path) to delete the
+		// blockers and also delete the (then-redundant) new trigger_once. If new trigger
+		// is touched first then delete original. New trigger deletes the blockers. Note that
+		// original uses "OnTrigger" instead of "OnStartTouch".
+
+		EntFire( "window_trigger", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_commonhop*:Kill::0:-1" );
+		EntFire( "window_trigger", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_fence_trigonce:Kill::0:-1" );
+
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_commonhop*:Kill::0:-1" );
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger window_trigger:Kill::0:-1" );
+
+		// Replicate the original trigger_once's "OnTrigger" Outputs to the new trigger.
+
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger director:EndScript::0:-1" );
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger zombie_spawn_relay:Trigger::1:-1" );
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger onslaught:GenerateGameEvent::1:-1" );
+		EntFire( g_UpdateName + "_eventskip_fence_trigonce", "AddOutput", "OnTrigger director:BeginScript:c12m4_onslaught:1.5:-1" );
 	}
 
 	if ( HasPlayerControlledZombies() )

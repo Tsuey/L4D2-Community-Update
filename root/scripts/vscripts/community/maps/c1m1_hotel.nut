@@ -4,13 +4,12 @@ devchap( "ALL MODES" );
 
 function DoRoundFixes()
 {
-	make_clip( "_cliphang_window",				"Survivors",	1,	"-72 -123 -12",		"127 14 44",	"2335 6420 2804" );
-	make_clip( "_cliphang_ledge",				"Survivors",	1,	"-450 -8 0",		"1130 8 216",	"1222 6232 2912" );
 	make_clip( "_barricadefire_bypass",			"Survivors",	1,	"-17 -96 -64",		"17 96 64",		"1326 5624 2528" );
 	make_clip( "_commentary_lower_windows_elevator", "Everyone", 1, "-4 -32 -237", "4 32 237", "2348 5624 2148" );
 
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
+		make_clip( "_cliphang_ledge",				"Survivors",	1,	"-450 -8 0",		"1130 8 216",	"1222 6232 2912" );
 		make_clip( "_commentary_lower_windows", "Everyone", 1, "-4 -560 -240", "4 560 240", "1652 6960 2144" );
 
 		// FIX: Prevent the earliest press-forward balcony window shortcut.
@@ -66,6 +65,7 @@ function DoRoundFixes()
 
 		// FIXES
 
+		make_clip( "_cliphang_window",				"Survivors",	1,	"-72 -123 -12",		"127 14 44",	"2335 6420 2804" );
 		make_clip( "_commentary_balconyjump",		"Survivors",	1,	"-2 -128 -280",		"2 128 112",	"1344 4880 2704" );
 		make_clip( "_commentary_elevator_window",	"Survivors",	1,	"-4 -32 -50",		"4 32 28",		"2352.5 5624 2644", "-10 0 0" );
 		make_clip( "_commentary_windowdrop_corner",	"Survivors",	1,	"-95 -8 -8",		"95 8 28",		"1504 6280 2788" );

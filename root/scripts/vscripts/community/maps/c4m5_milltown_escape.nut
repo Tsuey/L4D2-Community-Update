@@ -43,13 +43,6 @@ function DoRoundFixes()
 	make_clip( "_commentary_booster_burgertree_e", "Survivors", 1, "-178 -136 -608", "178 136 608", "-5397 7956 928" );
 	make_clip( "_commentary_booster_burgertree_f", "Survivors", 1, "-178 -134 -628", "178 134 628", "-6806 7205 908" );
 
-	// Non-1st rounds require a delay because this trigger_finale exists after "round_start".
-
-	con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is started." );
-
-	make_clip( "_point_of_no_return", "Survivors", 0, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
-	EntFire( "trigger_finale", "AddOutput", "FinaleStart " + g_UpdateName + "_point_of_no_return:Enable::0:-1", 1 );
-
 	if ( HasPlayerControlledZombies() )
 	{
 		make_brush( "_losfix_burger_gen",	"-24 -1 -8",	"24 1 8",	"-5448 6765 107" );

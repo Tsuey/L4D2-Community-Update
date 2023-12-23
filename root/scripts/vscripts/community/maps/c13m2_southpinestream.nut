@@ -19,14 +19,13 @@ function DoRoundFixes()
 	make_clip(	"_permstuck_tree_e",		"Everyone",	1,	"-17 -17 0",		"17 17 8",		"-1459 4319 330" );
 	make_clip(	"_permstuck_tree_f",		"Everyone",	1,	"-17 -17 0",		"17 17 8",		"723 6019 375" );
 	make_clip(	"_surfsup",			"Survivors",	1,	"-490 -420 0",		"420 420 2160",		"-1485 5630 404" );
-	make_clip(	"_dispcrouch_barrelstent",	"Everyone",	1,	"-17 -99 0",		"34 99 128",		"979 5656 272" );
+	make_clip(	"_dispcrouch_barrelstent",	"Everyone",	1,	"-16 -70 -50",		"16 70 50",		"996 5685 318",		"0 20 0" );
 	make_clip( "_permstuck_tree_g", "Everyone", 1, "-17 -17 -32", "17 17 0", "908 6871 697" );
 	make_clip( "_permstuck_tree_h", "Everyone", 1, "-17 -17 -32", "17 17 0", "984 6655 798" );
 	make_clip( "_permstuck_tree_i", "Everyone", 1, "-17 -17 -32", "17 17 0", "1151 6258 932" );
 	make_clip( "_permstuck_tree_j", "Everyone", 1, "-17 -17 -32", "17 17 0", "1153 5929 981" );
 	make_clip( "_stuckwarp_yellowbarrels", "Everyone", 1, "-108 -16 0", "59 13 128", "4861 2732 608", "0 -17 0" );
 	make_clip( "_permstuck_taito_ftw", "Everyone", 1, "-8 -8 -8", "28 24 28", "2552 2292 460" );
-	make_clip( "_shortcut_eventfence", "Survivors", 1, "-32 -80 0", "32 2 345", "928 5775 415" );
 	make_clip( "_permstuck_eventfence", "Everyone", 1, "-8 -40 0", "8 40 32", "905 5829 341" );
 	patch_spawninfront( "78 8574 -405", "-70 -8 0", "70 8 256" );
 
@@ -39,6 +38,7 @@ function DoRoundFixes()
 		make_clip( "_shortcut_easybigskip1", "Survivors", 1, "-8 -56 0", "8 56 2442", "506 4983 253", "0 46 0" );
 		make_clip( "_shortcut_easybigskip2", "Survivors", 1, "-64 -66 0", "8 260 2442", "503 4713 253", "0 -10 0" );
 		make_clip( "_shortcut_easybigskip3", "Survivors", 1, "-64 -316 0", "8 96 2442", "483 4553 253", "0 -4 0" );
+		make_clip( "_shortcut_eventfence", "Survivors", 1, "-32 -80 0", "32 2 345", "928 5775 415" );
 	}
 
 	if ( HasPlayerControlledZombies() )

@@ -13,31 +13,21 @@ PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_ghostgrief_tarpledge",	"Survivors",	1,	"-4 -313 -145",		"4 466 1337",		"1148 4257 96" );
+	
 	make_clip(	"_permstuck_tarptree",		"Everyone",	1,	"-17 -69 -17",		"17 17 17",		"1166 3794 191" );
 	make_clip(	"_commonhop_windowsill",	"Survivors",	1,	"-6 -216 0",		"6 216 800",		"539 2861 237" );
-	make_clip(	"_commonhop_awning",		"Survivors",	1,	"-106 -42 -1042",		"107 55 1042",		"3824 2666 1306" );
 	make_clip(	"_curvejump_pixelperfect",	"Survivors",	1,	"-24 -64 -128",		"24 64 128",		"4784 3785 83" );
 	make_clip(	"_permstuck_fence",		"Survivors",	1,	"-24 -48 0",		"24 48 92",		"-1391 1293 247" );
-	make_clip(	"_fence_onea",			"Survivors",	1,	"-450 -21 0",		"345 111 1216",		"96 1425 496" );
-	make_clip(	"_fence_oneb",			"Survivors",	1,	"-16 -325 0",		"16 325 1216",		"-356 1088 496" );
-	make_clip(	"_fence_two",			"Survivors",	1,	"-420 -177 0",		"24 177 1216",		"69 592 544" );
-	make_clip(	"_commonhop_endfence",		"Survivors",	1,	"-5 -128 0",		"5 128 1200",		"-3874 1647 716" );
+	make_clip(	"_commonhop_endfence",		"Survivors",	1,	"-8 -128 -600",		"8 128 600",		"-3880 1648 1308" );
 	make_clip(	"_commonhop_busa",		"Survivors",	1,	"-216 -20 0",		"216 20 1200",		"-3653 2324 705" );
-	make_clip(	"_commonhop_busb",		"Survivors",	1,	"-9 -777 -64",		"9 777 444",		"-3432 1527 926" );
 	make_clip(	"_sneaky_hunter",		"SI Players",	1,	"-144 -136 -368",	"144 136 368",		"5296 2488 1008" );
 	make_clip(	"_clipgap_fence",		"Survivors",	1,	"-32 -253 -360",	"32 256 360",		"584 2366 456" );
-	make_clip(	"_commonhop_windows",		"Survivors",	1,	"-700 -7 -72",		"700 7 800",		"1402 2659 393.1" );
+	make_clip(	"_commonhop_windows",		"Survivors",	1,	"-700 -8 -70",		"700 8 70",		"1400 2648 390" );
+	make_clip(	"_clipextend_parking",		"Survivors",	1,	"-88 -182 -256",		"88 182 256",		"4848 2826 448" );
 	make_clip(	"_cliprework_emptylargerooms",	"Survivors",	1,	"-440 -275 0",		"440 260 316",		"1072 1883 512" );
 	make_clip( "_dispcrouch_concretea", "Everyone", 1, "-8 -61 0", "8 61 375", "4035 1016 137", "0 -95 0" );
 	make_clip( "_dispcrouch_concreteb", "Everyone", 1, "-8 -150 0", "8 200 375", "4212 901 137", "0 -133 0" );
-	make_clip( "_booster_clipextend_mid", "Survivors", 1, "-405 -45 0", "403 43 1822", "-1963 373 1264" );
-	make_clip( "_booster_clipextend_end", "Survivors", 1, "-8 -945 0", "18 947 1202", "1856 -175 1920" );
-	make_clip( "_booster_gazebo", "Survivors", 1, "-184 -184 -94", "186 184 2122", "-1647 -365 999" );
 	make_clip( "_cliprework_startroof", "Survivors", 1, "-5 -1040 -60", "7 676 1200", "709 4088 344" );
-	make_clip( "_cliprework_bridgeroof", "Survivors", 1, "-218 -166 -4", "298 186 8", "927 4579 302" );
-	make_clip( "_cliprework_bridgewall", "Survivors", 1, "-218 -166 -4", "298 -154 1200", "927 4579 302" );
-	make_clip( "_cliprework_endfence", "Survivors", 1, "-5 -146 0", "27 200 779", "-2317 560 821" );
 	make_clip( "_cliprework_endroof", "Survivors", 1, "-9 -884 0", "9 461 839", "-3913 1061 1056" );
 	make_clip( "_cliprework_endwindows1", "Survivors", 1, "-15 -155 0", "7 151 90", "-3844 -270 1035" );
 	make_clip( "_cliprework_endwindows2", "Survivors", 1, "-8 -160 0", "8 158 129", "-3911 561 863" );
@@ -65,15 +55,18 @@ function DoRoundFixes()
 	make_prop( "dynamic", "_cosmetic_right_plywood", "models/props_highway/plywood_02.mdl", "1450 1615 621", "-3 0 90", "shadow_no", "solid_no" );
 	make_clip( "_cosmetic_right_collision", "SI Players and AI", 1, "-17 -18 -30", "73 14 6", "1400 1637 542" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
 	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		con_comment( "KILL:\tOut of bounds fences unpatched for Coop (popular request)." );
-
-		EntFire( g_UpdateName + "_fence*", "Kill" );
+		make_clip(	"_ghostgrief_tarpledge",	"Survivors",	1,	"-4 -313 -145",		"4 466 1337",		"1148 4257 96" );
+		make_clip( "_cliprework_bridgeroof", "Survivors", 1, "-218 -166 -4", "298 186 8", "927 4579 302" );
+		make_clip( "_cliprework_bridgewall", "Survivors", 1, "-218 -166 -4", "298 -154 1200", "927 4579 302" );
+		make_clip(	"_commonhop_awning",		"Survivors",	1,	"-106 -42 -1042",		"107 55 1042",		"3824 2666 1306" );
+		make_clip(	"_fence_onea",			"Survivors",	1,	"-394 -66 -376",		"394 66 376",		"50 1470 888" );
+		make_clip(	"_fence_oneb",			"Survivors",	1,	"-8 -322 -376",		"8 322 376",		"-352 1086 888" );
+		make_clip(	"_fence_two",			"Survivors",	1,	"-222 -174 -383",		"222 174 383",		"-122 590 881" );
+		make_clip( "_booster_gazebo", "Survivors", 1, "-184 -184 -94", "186 184 2122", "-1647 -365 999" );
+		make_clip( "_cliprework_endfence", "Survivors", 1, "-5 -146 0", "27 200 779", "-2317 560 821" );
+		make_clip(	"_commonhop_busb",		"Survivors",	1,	"-9 -777 -64",		"9 777 444",		"-3432 1527 926" );
 	}
 	if ( g_BaseMode == "survival" )
 	{

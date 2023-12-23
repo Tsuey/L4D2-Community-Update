@@ -6,37 +6,44 @@ PrecacheModel( "models/props_urban/gas_meter.mdl" );
 PrecacheModel( "models/props_rooftop/vent_large1.mdl" );
 
 function DoRoundFixes()
-{
-	make_clip(	"_permstuck_startfence",	"Survivors",	1,	"-80 -1 0",		"80 1 768",		"2384 -1280 0" );
-	make_clip(	"_cliphang_rooftop",		"Survivors",	1,	"-192 -490 0",		"208 476 420",		"224 2406 336" );
-	make_clip( "_cliprework_roofvent", "Survivors", 1, "-319 -182 0", "321 159 412", "1471 2017 352" );
-	make_clip( "_booster_bluestripes", "Survivors", 1, "-234 -92 0", "222 105 732", "1574 4577 32" );
+{	
 	make_clip( "_booster_dualwindows", "Survivors", 1, "-10 -168 -1", "10 140 89", "1953 561 178", "0 7 0" );
-	make_clip( "_booster_balcony1", "Survivors", 1, "-20 -146 0", "23 150 640", "537 46 209" );
-	make_clip( "_booster_balcony2", "Survivors", 1, "-24 -114 -98", "20 118 640", "1960 86 242" );
-	make_clip( "_booster_balcony3", "Survivors", 1, "-37 -25 0", "35 23 640", "1285 -151 384" );
-	make_clip( "_booster_balcony4", "Survivors", 1, "-9 -323 0", "39 327 640", "1497 798 317" );
-	make_clip( "_booster_balcony5", "Survivors", 1, "-325 -9 -112", "323 35 640", "1077 1293 420" );
-	make_clip( "_booster_balcony6", "Survivors", 1, "-182 -22 -74", "184 25 640", "342 1303 241" );
-	make_clip( "_booster_balcony7", "Survivors", 1, "-106 -23 -65", "112 24 640", "413 4566 157" );
-	make_clip( "_booster_bigescape", "Survivors", 1, "-233 -67 -92", "218 62 640", "903 2723 187" );
 	make_clip( "_frontloader_smoother", "Everyone", 1, "-14 -53 0", "27 53 32", "836 1612 -148" );
 	make_clip( "_ghostgrief_noio_gate1", "Everyone", 1, "-3 -39 0", "3 39 32", "2547 5704 -950" );
 	make_clip( "_ghostgrief_noio_gate2", "Everyone", 1, "-3 -39 0", "3 39 32", "5187 5445 -950" );
 	make_clip( "_booster_electricalbox", "Survivors", 1, "-28 -5 -20", "32 5 836", "917 3163 -4" );
-	make_clip( "_booster_acunit", "Survivors", 1, "-64 -32 0", "64 32 721", "743 3135 111" );
 	make_clip( "_dispsteps_smoother1", "Everyone", 1, "-95 -104 -4", "150 104 4", "2553 -936 -185", "34 0 0" );
 	make_clip( "_dispsteps_smoother2", "Everyone", 1, "-95 -104 -4", "135 104 4", "2201 -936 -57", "34 0 0" );
 	make_clip( "_plankescape_smoother", "Everyone", 1, "-82 -30 0", "143 31 8", "190 2976 120", "45 0 0" );
 	make_clip( "_permstuck_orangefence", "Everyone", 1, "-32 -32 0", "32 32 64", "2188 1856 -64" );
-	make_clip( "_booster_awningnlights", "Survivors", 1, "-124 -41 0", "129 56 762", "1264 3705 8" );
 	make_clip( "_nav_bagselecbox", "Survivors", 1, "-7 -34 0", "4 28 822", "636 2243 -70" );
 	make_clip( "_commentary_minifinale_clip", "Survivors", 1, "-4 -64 -80", "4 64 80", "2544 5288 -1000" );
 	make_trigduck( "_duckqol_poolhallwin", "-2 -34 -46.5", "4 34 46.5", "1480 986.4 38.5" );
 	make_trigduck( "_duckqol_missingpipe", "-117 -40 -28", "117 40 28", "1824 1528 -164" );
 
 	make_prop( "dynamic", "_permstuck_gasmeter", "models/props_urban/gas_meter.mdl", "2202 1859.8 -70.5", "0 0 0" );
+	make_prop( "dynamic", "_oneway_ladder_prop", "models/props/cs_assault/ladderaluminium128.mdl", "2322 -1340 -67", "10.5 180 0", "shadow_no" );
+	make_ladder( "_ladder_oneway", "1628 4576 -1132", "3753 3235 1306", "9 180 0", "0.98 0 0.15", 0 );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_start_rooftop1", "Survivors", 1, "-164 -164 -240", "164 164 240", "2144 -1200 528" );
+		make_clip( "_start_rooftop2", "Survivors", 1, "-164 -164 -208", "164 164 208", "2144 -672 544" );
+		make_clip( "_start_rooftop3", "Survivors", 1, "-226 -178 -292", "226 178 292", "1471 2017 352" );
+		make_clip( "_booster_balcony1", "Survivors", 1, "-20 -146 0", "23 150 640", "537 46 209" );
+		make_clip( "_booster_balcony2", "Survivors", 1, "-24 -114 -98", "20 118 640", "1960 86 242" );
+		make_clip( "_booster_balcony3", "Survivors", 1, "-37 -25 0", "35 23 640", "1285 -151 384" );
+		make_clip( "_booster_balcony4", "Survivors", 1, "-9 -323 0", "39 327 640", "1497 798 317" );
+		make_clip( "_booster_balcony5", "Survivors", 1, "-325 -9 -112", "323 35 640", "1077 1293 420" );
+		make_clip( "_booster_balcony6", "Survivors", 1, "-182 -22 -74", "184 25 640", "342 1303 241" );
+		make_clip( "_booster_balcony7", "Survivors", 1, "-106 -23 -65", "112 24 640", "413 4566 157" );
+		make_clip( "_cliprework_roofvent", "Survivors", 1, "-319 -182 0", "321 159 412", "1471 2017 352" );
+		make_clip( "_booster_bigescape", "Survivors", 1, "-233 -67 -92", "218 62 640", "903 2723 187" );
+		make_clip( "_booster_acunit", "Survivors", 1, "-64 -32 0", "64 32 721", "743 3135 111" );
+		make_clip( "_booster_awningnlights", "Survivors", 1, "-124 -41 0", "129 56 762", "1264 3705 8" );
+		make_clip( "_booster_bluestripes", "Survivors", 1, "-234 -92 0", "222 105 732", "1574 4577 32" );
+		make_clip(	"_cliphang_rooftop",		"Survivors",	1,	"-192 -490 0",		"208 476 420",		"224 2406 336" );
+	}
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );

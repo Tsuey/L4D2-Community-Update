@@ -94,7 +94,6 @@ function DoRoundFixes()
 		make_ladder( "_ladder_startsafehouse_cloned_shantyshop", "-4900 1094 229", "-1107 763 -85" );
 		make_ladder( "_ladder_tarptrailerwood_cloned_startouthouse", "-5121 306 229", "200 -1056 -175" );
 		make_prop( "dynamic", "_permstuck_cratebot", "models/props_crates/static_crate_40.mdl", "-3749.85 -183.67 -3.164", "0 0 0" );
-		make_prop( "dynamic", "_permstuck_cratetop", "models/props_crates/static_crate_40.mdl", "-3749.85 -182.67 36.837", "0 -30 0" );
 		make_prop( "dynamic", "_yesdraw_nodrawfence", "models/props_update/c3m3_nodrawfence.mdl", "-5212 1765 213.5", "0 -90 0", "shadow_no", "solid_no" );
 		make_prop( "dynamic_ovr", "_ladder_mehsurvival_boat", "models/props_canal/boat001a.mdl", "-3438 -612 42", "95 15 90", "shadow_no" );
 		make_prop( "physics",		"_hittable_fallentree",		"models/props_foliage/swamp_fallentree01_bare.mdl",	"-3935 -1120 -11",		"0 34 0" );

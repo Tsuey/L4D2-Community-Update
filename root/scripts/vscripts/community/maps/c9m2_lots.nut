@@ -32,15 +32,12 @@ function DoRoundFixes()
 	make_clip( "_collisionqol_finalebuses", "All and Physics", 1, "-236 -32 0", "236 32 108", "6675 6470 65" );
 	make_trigmove( "_duckqol_finalevent", "Duck", "0 -32 0", "8 32 1", "7568 7392 447" );
 
-	con_comment( "LOGIC:\tFinale switch will re-Lock when all Survivors aren't inside trigger." );
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		con_comment( "LOGIC:\tFinale switch will re-Lock when all Survivors aren't inside trigger." );
 
-	EntFire( "finale_button_unlocker", "AddOutput", "OnEntireTeamEndTouch finaleswitch_initial:Lock::0:-1" );
-
-	con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale switch is full." );
-
-	make_clip( "_point_of_no_return", "Survivors", 0, "-16 -169 -168", "58 169 784", "5750 7177 368" );
-	EntFire( "finaleswitch_initial", "AddOutput", "OnTimeUp " + g_UpdateName + "_point_of_no_return:Enable::0:-1" );
-
+		EntFire( "finale_button_unlocker", "AddOutput", "OnEntireTeamEndTouch finaleswitch_initial:Lock::0:-1" );
+	}
 	if ( HasPlayerControlledZombies() )
 	{
 		make_brush( "_losfix_gen1a",		"-1 -24 -8",	"1 24 8",	"6853 5881 50" );
