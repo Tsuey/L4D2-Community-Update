@@ -44,6 +44,9 @@ function DoRoundFixes()
 	make_clip( "_rubble_smoother2", "Everyone", 1, "-66 -6 0", "58 0 6", "2176 -4926 98", "0 -15 0" );
 	make_clip( "_rubble_smoother3", "Everyone", 1, "-58 -90 0", "61 45 13", "2055 -4931 97", "0 21 0" );
 	make_clip( "_rubble_smoother4", "Everyone", 1, "-138 -26 0", "79 16 11", "1966 -5174 99", "0 15 30" );
+	make_clip( "_elevator_softlock_topclip", "Survivors", 1, "-77 -63 -817", "77 63 817", "-1477 -9551 1712" );
+	make_clip( "_elevator_softlock_sideclip", "Survivors", 1, "-3 -46 -383", "3 46 383", "-1548 -9551 512" );
+	make_clip( "_elevator_softlock_signclip", "Survivors", 1, "-171 -103 -694", "171 103 694", "-1504 -13160 1835" );
 	make_clip( "_commentary_elevatorpipe", "Survivors", 1, "0 0 0", "50 50 500", "-1535 -9144.59 614.604" );
 	make_prop( "dynamic", "_spool_oneway1", "models/props_industrial/wire_spool_01.mdl", "228 -5204 96", "0 351 0", "shadow_no");
 	make_prop( "dynamic", "_spool_oneway2", "models/props_industrial/wire_spool_02.mdl", "232 -5276 97", "0 351 0", "shadow_no");

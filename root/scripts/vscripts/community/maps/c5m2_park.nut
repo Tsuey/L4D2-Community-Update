@@ -39,6 +39,7 @@ function DoRoundFixes()
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip( "_commentary_shortcut_station", "Survivors", 1, "-1 -1 -1", "64 4 120", "-6752 -6736 -120" );
+		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -47,7 +48,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_nav_eventsign",		"Survivors",	1,	"-4 -10 -908",		"4 10 908",		"-8552 -6310 756" );
-		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
 	if ( g_BaseMode == "scavenge" )
 	{
@@ -122,7 +122,6 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_yesdraw_billboard_nodraw", "models/props_update/c5m2_billboard_nodraw.mdl", "-9152 -6938 92", "0 -90 0", "shadow_no", "solid_no" );
 		make_prop( "dynamic", "_solidify_chimney007", "models/props_urban/chimney007.mdl", "-9076 -4300 150.405", "0 180 0", "shadow_no" );
 		make_prop( "physics", "_hittable_dumpster", "models/props_junk/dumpster_2.mdl", "-8095 -600 -246", "0 0 0", "shadow_no" );
-		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
 
 	// Resolve stuck Tank spawns for Taaannnk! Mutation.

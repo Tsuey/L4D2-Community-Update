@@ -12,8 +12,8 @@ function DoRoundFixes()
 	make_clip( "_ghostgrief_noio_gate1", "Everyone", 1, "-3 -39 0", "3 39 32", "2547 5704 -950" );
 	make_clip( "_ghostgrief_noio_gate2", "Everyone", 1, "-3 -39 0", "3 39 32", "5187 5445 -950" );
 	make_clip( "_booster_electricalbox", "Survivors", 1, "-28 -5 -20", "32 5 836", "917 3163 -4" );
-	make_clip( "_dispsteps_smoother1", "Everyone", 1, "-95 -104 -4", "150 104 4", "2553 -936 -185", "34 0 0" );
-	make_clip( "_dispsteps_smoother2", "Everyone", 1, "-95 -104 -4", "135 104 4", "2201 -936 -57", "34 0 0" );
+	make_clip( "_dispsteps_smoother1", "Everyone", 1, "-95 -104 -4", "150 104 4", "2553 -936 -184", "34 0 0" );
+	make_clip( "_dispsteps_smoother2", "Everyone", 1, "-95 -104 -4", "135 104 4", "2201 -936 -56", "34 0 0" );
 	make_clip( "_plankescape_smoother", "Everyone", 1, "-82 -30 0", "143 31 8", "190 2976 120", "45 0 0" );
 	make_clip( "_permstuck_orangefence", "Everyone", 1, "-32 -32 0", "32 32 64", "2188 1856 -64" );
 	make_clip( "_nav_bagselecbox", "Survivors", 1, "-7 -34 0", "4 28 822", "636 2243 -70" );

@@ -96,6 +96,13 @@ function DoRoundFixes()
 		make_ladder( "_ladder_postfloatlowroof_cloned_eventscaffoldright", "-1152 454 170", "-1472 569 244" );
 		make_ladder( "_ladder_prefloatalley_cloned_unusedwrongway", "-26 1728 234", "-1852 1566 -4", "0 -90 0", "0 -1 0" );
 		make_ladder( "_ladder_unusedareain_cloned_onewayvanfence", "-2512 2434 144", "270 765 0" );
+
+		// Versus-only: Reduce trigger_hurt from 25 damage (per touch, 75 total) to 2 damage
+		// per touch (5/2 = 2.5, rounded down) to match similar triggers. It's off to the
+		// right after the balcony drop. Survivors comment the strike was closer than others.
+		// Significant outlier since of 15 triggers all others deal only 1-2 damage per touch.
+
+		EntFire( "ds_ext-ds02_HURT", "SetDamage", "5" );
 	}
 
 	// Resolve stuck Tank spawns for Versus Survival & Taaannnk! Mutation.

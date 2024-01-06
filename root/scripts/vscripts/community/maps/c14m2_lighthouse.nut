@@ -28,17 +28,10 @@ function DoRoundFixes()
 			}
 		}
 	}
-	if ( g_BaseMode == "versus" )
-	{
-		devchap( "BASE VERSUS" );
-
-		// FIXES
-
-		make_clip( "_permstuck_treefence", "Everyone", 1, "-8 -8 -27", "8 8 27", "-2552 4572 482" );
-	}
 
 	if ( HasPlayerControlledZombies() )
 	{
+		make_clip( "_permstuck_treefence", "Everyone", 1, "-8 -8 -27", "8 8 27", "-2552 4572 482" );
 		make_clip( "_dispcrouch_cliffside", "SI Players", 1, "-120 -8 -80", "120 8 80", "127 -818 428", "0 8 -10" );
 	}
 }

@@ -18,6 +18,7 @@ function DoRoundFixes()
 	make_clip(	"_commonhop_windowsill",	"Survivors",	1,	"-6 -216 0",		"6 216 800",		"539 2861 237" );
 	make_clip(	"_curvejump_pixelperfect",	"Survivors",	1,	"-24 -64 -128",		"24 64 128",		"4784 3785 83" );
 	make_clip(	"_permstuck_fence",		"Survivors",	1,	"-24 -48 0",		"24 48 92",		"-1391 1293 247" );
+	make_clip(	"_permstuck_floodlight",	"Everyone",	1,	"-10 -8 -43",		"10 8 43",		"2012 1626 555" );
 	make_clip(	"_commonhop_endfence",		"Survivors",	1,	"-8 -128 -600",		"8 128 600",		"-3880 1648 1308" );
 	make_clip(	"_commonhop_busa",		"Survivors",	1,	"-216 -20 0",		"216 20 1200",		"-3653 2324 705" );
 	make_clip(	"_sneaky_hunter",		"SI Players",	1,	"-144 -136 -368",	"144 136 368",		"5296 2488 1008" );

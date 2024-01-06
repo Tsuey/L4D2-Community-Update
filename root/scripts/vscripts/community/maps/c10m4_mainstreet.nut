@@ -88,7 +88,7 @@ function DoRoundFixes()
 		make_clip( "_hellcade_clipa", "SI Players", 1, "-240 -8 0", "240 17 1792", "-5360 -504 -64" );
 		make_clip( "_hellcade_clipb", "SI Players", 1, "-17 -840 0", "8 507 1792", "-5605 -1001 -64" );
 		make_clip( "_hellcade_clipc", "SI Players", 1, "-240 -8 0", "275 17 1792", "-5360 -1857 -64" );
-		make_clip( "_hellcade_permstuck", "SI Players", 1, "-8 -216 0", "8 216 17", "-5115 -1028 -49" );
+		make_clip( "_permstuck_hellcade", "SI Players", 1, "-8 -216 0", "8 216 17", "-5115 -1028 -49" );
 		make_clip( "_ladder_eventskybridge_clip", "SI Players", 1, "-11 -23 0", "2 46 8", "-1314 -4766 296" );
 		make_clip( "_ladder_starthilltop_clip", "SI Players", 1, "-16 -8 0", "16 8 2", "-4620 -1900 520", "0 -17.7 0" );
 		make_clip( "_losblocker_deliveryclip", "Survivors", 1, "-57 -113 0", "56 171 1781", "583 -2463 -52", "0 -20 0" );
