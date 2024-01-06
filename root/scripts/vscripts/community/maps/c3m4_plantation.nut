@@ -5,12 +5,6 @@ devchap( "ALL MODES" );
 function DoRoundFixes()
 {
 	make_clip(	"_permstuck_housetarp",		"Everyone",	1,	"-24 -24 0",		"24 24 120",		"-1753 -996 16" );
-	make_clip(	"_commonhop_mansionroof",	"Survivors",	1,	"-711 -21 0",		"711 21 500",		"1856 -596 640" );
-	make_clip( "_stuckwarp_understairs", "Everyone", 1, "4 -55 -25", "39 57 21", "2816 119 162" );
-	make_clip( "_booster_mansionroofa", "Survivors", 1, "-204 -23 0", "212 105 533", "1660 527 640" );
-	make_clip( "_booster_mansionroofb", "Survivors", 1, "-580 -341 0", "588 105 533", "1660 399 640" );
-	make_clip( "_booster_mansionroofc", "Survivors", 1, "-924 -201 0", "736 152 533", "1660 -47 640" );
-	make_clip( "_booster_scaffoldpins", "Survivors", 1, "-199 -1 0", "146 9 909", "527 177 243" );
 	make_clip( "_booster_treeleft", "Survivors", 1, "-148 -116 0", "208 116 753", "735 1518 373" );
 	make_clip( "_booster_treeright", "Survivors", 1, "-130 -179 0", "145 156 753", "2558 1526 373" );
 	make_clip( "_nav_tinytree1", "Survivors", 1, "-108 -66 0", "68 66 842", "1485 997 311" );
@@ -23,13 +17,24 @@ function DoRoundFixes()
 	make_clip( "_commentary_floorcollapse", "Survivors", 1, "-8 -8 0", "25 115 172", "2600 -368 417" );
 	make_brush( "_defibtrick_undermap_dead", "-16 -58 -120", "24 54 0", "688 122 248" );
 
-	// For some maps the trigger_finale might exist after "round_start" and require delay -- but not this one!
-
-	con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is started." );
-
-	make_clip( "_point_of_no_return", "Survivors", 0, "-168 -164 12", "128 92 196", "2064 -412 396" );
-	EntFire( "trigger_finale", "AddOutput", "FinaleStart " + g_UpdateName + "_point_of_no_return:Enable::0:-1" );
-
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_booster_mansionroofa", "Survivors", 1, "-204 -23 0", "212 105 533", "1660 527 640" );
+		make_clip( "_booster_mansionroofb",	"Survivors", 1,	"-584 -560 -255.5", "584 560 255.5", "1664 -56 896" );
+		make_clip( "_booster_mansionroofc", "Survivors", 1, "-76 -231.5 -255.5", "76 231.5 255.5", "2324 -128 896" );
+		make_clip( "_booster_mansionroofd", "Survivors", 1, "-172 -243.5 0", "172 243.5 533", "908 -140 896" );
+		make_clip( "_stuckwarp_understairs", "Everyone", 1, "4 -55 -25", "39 57 21", "2816 119 162" );
+		make_clip( "_booster_scaffoldpins", "Survivors", 1, "-199 -1 0", "146 9 909", "527 177 243" );
+	}
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		// Get nav tiles by position because IDS can change if edited later on
+		local navMain = NavMesh.GetNearestNavArea(Vector(2377.853516, 161.838699, 194.000000), 16, true, true);
+		local navConnection1 = NavMesh.GetNearestNavArea(Vector(2300.000000, 162.500000, 131.307587), 16, true, true);
+		local navConnection2 = NavMesh.GetNearestNavArea(Vector(2337.500000, 120.000000, 232.031250), 16, true, true);
+		navConnection1.Disconnect(navMain);
+		navConnection2.Disconnect(navMain);
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -57,6 +62,7 @@ function DoRoundFixes()
 		make_brush( "_brickhome_chimney2_losblock", "-11 -19 0", "11 19 77", "-1298 -3712 454" );
 		make_brush( "_losfix_start_truck1",	"-54 -1 -12",	"54 1 12",	"-1733 -2751 10" );
 		make_brush( "_losfix_start_truck2",	"-1 -55 -12",	"1 54 12",	"-1785 -2695 10" );
+		make_clip( "_permstuck_enclosedhedges", "SI Players", 1, "-30 -85 -53", "30 85 53", "81 -4523 72" );
 		make_clip( "_brickhome_chimney1_collision", "Everyone", 1, "-11 -19 0", "11 19 77", "-1779 -3712 454" );
 		make_clip( "_brickhome_chimney2_collision", "Everyone", 1, "-11 -19 0", "11 19 77", "-1298 -3712 454" );
 		make_clip( "_ladder_houselow_clipl", "Everyone", 1, "-8 -2 0", "12 4 136", "-2054 -1026 1", "0 -45 0" );

@@ -13,78 +13,8 @@ function DoRoundFixes()
 
 	make_clip( "_boat_smoother", "Everyone", 1, "-16 -24 0", "16 24 30", "-7863 5391 -8", "-10 -30 0" );
 	make_clip( "_permstuck_behindrocks", "Everyone", 1, "-14 -40 -24", "14 40 24", "-5326 5524 16" );
+	make_clip( "_permstuck_cypressknees", "Everyone", 1, "-1 -1 -25", "1 1 25", "-4399 3202 9" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		// FIX: Prevent skipping the plane horde by forcing it even if the plane door is skipped.
-
-		con_comment( "TRIG:\tNew triggers will enforce panic event even if plane door is skipped." );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_a",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1798, 3860, 80 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_a", "AddOutput", "mins -82 -68 -104" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_a", "AddOutput", "maxs 82 68 104" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_a", "AddOutput", "solid 2" );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_b",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1798, 3752, 412 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_b", "AddOutput", "mins -82 -176 -228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_b", "AddOutput", "maxs 82 176 228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_b", "AddOutput", "solid 2" );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_c",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1762, 3136, 412 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "mins -46 -440 -228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "maxs 46 440 228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "solid 2" );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_d",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1497, 2283, 316 ),
-			angles		= Vector( 0, 30, 0 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_d", "AddOutput", "mins -46 -480 -324" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_d", "AddOutput", "maxs 46 480 324" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_d", "AddOutput", "solid 2" );
-
-		// Fire the door relay when triggered.
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce*", "AddOutput", "OnTrigger Blow_door:Trigger::0:-1" );
-
-		// Kill the trigger if the door is opened normally.
-
-		EntFire( "Blow_door", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_plane_trigonce*:Kill::0:-1" );
-	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );

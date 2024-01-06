@@ -5,9 +5,10 @@ devchap( "ALL MODES" );
 function DoRoundFixes()
 {
 	make_clip(	"_curvejump_fence",		"Survivors",	1,	"-1024 -51 -90",	"120 51 777",		"-10342 -8897 517" );
-	make_clip(	"_cliprework_unattackable",	"Survivors",	1,	"-112 -192 -335",	"0 274 1024",		"-8080 -8448 880.6" );
 	make_clip( "_permstuck_treeandrock", "Everyone", 1, "-19 -22 0", "26 32 46", "-11270 -9471 447" );
 	make_clip( "_tankpunch_deflector", "Survivors", 1, "-434 -46 0", "288 -19 1481", "-11503 -10981 375" );
+	make_clip( "_factory_rooftop1", "Survivors", 1, "-426 -504 -684", "426 504 684", "-8486 -7768 1172" );
+	make_clip( "_factory_rooftop2", "Survivors", 1, "-272 -232 -528", "272 232 528", "-7808 -8408 1340" );
 	make_clip( "_dispcrouch_smoker", "Everyone", 1, "4 -200 -64", "61 70 58", "-10650 -15068 -46", "0 -19 0" );
 
 	make_trighurt( "_instakill_longperimeter1", "Survivor", "-1158 -2015 0", "1158 2015 170", "-11827 -13824 -84" );

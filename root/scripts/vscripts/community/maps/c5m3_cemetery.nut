@@ -11,7 +11,6 @@ PrecacheModel( "models/props_urban/chimney007.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-48 -7 -208",		"48 7 208",		"3055.5 1410 432" );
 	make_clip(	"_sewer_holed",			"Survivors",	1,	"-4 -40 -44",		"4 40 44",		"5212 -112 -116" );
 	make_clip(	"_sewer_holec",			"Survivors",	1,	"-264 -4 -44",		"264 4 44",		"5968 -452 -116" );
 	make_clip(	"_sewer_holeb",			"Survivors",	1,	"-4 -376 -44",		"4 376 44",		"6532 224 -116" );
@@ -24,26 +23,26 @@ function DoRoundFixes()
 	make_clip(	"_manhole_fenced",		"Survivors",	1,	"-36.5 -151 -160",	"36.5 151 320",		"4399 33 326" );
 	make_clip(	"_manhole_fencee",		"Survivors",	1,	"-180 -40 -160",	"180 40 320",		"4182 -127 328" );
 	make_clip(	"_ladderqol_overpass",		"SI Players",	1,	"-18.5 -12 -95",	"18.5 12 95",		"5851 8704 192" );
-	make_clip(	"_stuckwarp_wrongwaya",		"SI Players",	1,	"-82.5 -201 -111",	"82.5 201 111",		"6275 9035 242" );
-	make_clip(	"_stuckwarp_wrongwayb",		"SI Players",	1,	"-21.5 -276 -111",	"21.5 276 111",		"6336 8960 242" );
 	make_clip(	"_permstuck_jetstrike",		"Everyone",	1,	"-46.5 -27.5 -25",	"46.5 27.5 25",		"6233 -2190 453" );
 	make_clip(	"_permstuck_cemetery",		"Everyone",	1,	"-145 -27 0",		"145 27 1234",		"7453 -6553 95" );
 	make_clip(	"_commonhop_endfence",		"Survivors",	1,	"-64 -4 -44",		"64 4 580",		"9152 -9004 380" );
-	make_clip(	"_stuckwarp_staircase",		"Everyone",	1,	"-32 -4 -64",		"64 4 12",		"3504 2668 182" );
-	make_clip(	"_permstuck_dualfence",		"Survivors",	1,	"-28 -445 0",		"28 445 654",		"3421 733 3.1" );
+	make_clip(	"_permstuck_dualfence",		"Survivors",	1,	"-28 -446 -108.5",		"28 446 108.5",		"3420 734 108" );
 	make_clip( "_cliprework_pinkhouse", "Survivors", 1, "-386 -270 0", "414 274 320", "3434 4094 360" );
-	make_clip( "_cliprework_perchroof", "Survivors", 1, "-136 -192 0", "136 192 487", "4856 3040 164" );
-	make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469", "2052 2534 160" );
 	make_clip( "_nav_opencrypt", "Survivors", 1, "-26 -47 0", "7 49 1000", "9604 -6659 344" );
 	make_clip( "_nav_cornertree", "Survivors", 1, "-83 -116 0", "97 180 935", "10459 -4981 409" );
-	make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
-	make_clip( "_commentary_nav_parkingtruck_a1", "Survivors", 1, "-8 -82 -8", "94 8 800", "5383 -1373 8" );
-	make_clip( "_commentary_nav_parkingtruck_a2", "Survivors", 1, "-8 -112 -8", "226 8 800", "5480 -1356 164" );
-	make_clip( "_commentary_nav_parkingtruck_b1", "Survivors", 1, "-8 -82 -8", "94 8 800", "5495 -1028 4" );
-	make_clip( "_commentary_nav_parkingtruck_b2", "Survivors", 1, "-8 -112 -8", "226 8 800", "5587 -1015 160" );
 	make_clip( "_commentary_oob_bridgeexplosion", "Everyone", 1, "-1338 -1128 -8", "8 8 857", "6489 -5161 103" );
 	make_clip( "_commentary_clipgap_bridge", "Survivors", 1, "-512 -8 -8", "8 8 735", "6969 -3864 225" );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
+	{
+		make_clip(	"_stuckwarp_wrongwaya",		"SI Players",	1,	"-82.5 -201 -111",	"82.5 201 111",		"6275 9035 242" );
+		make_clip(	"_stuckwarp_wrongwayb",		"SI Players",	1,	"-21.5 -276 -111",	"21.5 276 111",		"6336 8960 242" );
+		make_clip( "_cliprework_perchroof", "Survivors", 1, "-136 -192 0", "136 192 487", "4856 3040 164" );
+		make_clip(	"_stuckwarp_staircase",		"Everyone",	1,	"-32 -4 -64",		"64 4 12",		"3504 2668 182" );
+		make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469", "2052 2534 160" );
+		make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-48 -7 -208",		"48 7 208",		"3055.5 1410 432" );
+		make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );

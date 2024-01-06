@@ -7,7 +7,6 @@ function DoRoundFixes()
 	make_clip(	"_cliprework_startbricks",	"Survivors",	1,	"-177 -32 0",		"177 32 959",		"9800 1728 321" );
 	make_clip(	"_permstuck_flatnosecargo",	"Everyone",	1,	"-64 -32 0",		"64 32 121",		"5793 2568 130" );
 	make_clip(	"_curvejump_fenceledge",	"Survivors",	1,	"-64 -128 0",		"640 128 800",		"-1984 0 160" );
-	make_clip( "_stuckwarp_railwayoverpass", "Everyone", 1, "-30 -152 -45", "26 210 58", "2726 2775 374" );
 	make_clip( "_nav_windowrecess", "Survivors", 1, "-23 -4 0", "23 4 88", "-1944 1412 192" );
 	make_clip( "_ghostgrief_acunit", "Survivors", 1, "-60 -29 0", "60 33 894", "-10240 383 386" );
 	make_clip( "_ghostgrief_coalbarge", "Survivors", 1, "-22 -104 0", "3 316 177", "-8700 170 -78", "-15 47 0" );
@@ -20,6 +19,10 @@ function DoRoundFixes()
 	make_clip( "_booster_gravelacun", "Survivors", 1, "-33 -60 0", "29 61 947", "-6495 1144 333" );
 	make_clip( "_booster_solidify_windows", "Survivors", 1, "-152 -270 0", "152 270 168", "11032 606 336" );
 
+	if ( g_BaseMode == "versus" )
+	{
+		make_clip( "_stuckwarp_railwayoverpass", "Everyone", 1, "-30 -152 -45", "26 210 58", "2726 2775 374" );
+	}
 	if ( g_BaseMode == "scavenge" )
 	{
 		devchap( "BASE SCAVENGE" );

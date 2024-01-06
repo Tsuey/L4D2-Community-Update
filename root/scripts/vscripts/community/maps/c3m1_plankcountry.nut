@@ -17,6 +17,8 @@ PrecacheModel( "models/props/cs_office/shelves_metal.mdl" );
 
 function DoRoundFixes()
 {
+	EntFire( "worldspawn", "RunScriptFile", "community/c3m1_ferryfix" );
+
 	make_clip( "_hedge_behindtrains_a",	"Survivors",	1,	"-56 -520 -356",		"56 520 356",		"-10713 7656 668" );
 	make_clip( "_hedge_behindtrains_b",	"Survivors",	1,	"-431 -75 -356",		"431 75 356",		"-10237 8186 668" );
 	make_clip( "_hedge_behindtrains_c",	"Survivors",	1,	"-50.5 -174 -362",		"50.5 174 362",		"-9756.5 8114 662" );
@@ -24,16 +26,11 @@ function DoRoundFixes()
 	make_clip( "_commonhop_crossing",		"Survivors",	1,	"-99 -260 0",		"99 426 691",		"-1025 4859 332" );
 	make_clip( "_clipgap_fence",		"Survivors",	1,	"-4 -68 -376",		"4 68 376",		"-11100 7188 648" );
 	make_clip( "_permstuck_coolingtank",	"Everyone",	1,	"-62 -58 -56",		"21 21 56",		"-10754 8610 216" );
-	make_clip( "_commonhop_coolingtank", "Survivors", 1, "-74 -236 0", "70 156 880", "-6806 7572 144" );
 	make_clip( "_booster_treetop", "Survivors", 1, "-108 -186 0", "108 174 717", "-5696 7348 247" );
-	make_clip( "_chargerassist_trainwheel", "Survivors", 1, "-133 -444 -130", "28 131 765", "-12379 8416 259", "0 -19 0" );
-	make_clip( "_chargerassist_fenceladdy", "Survivors", 1, "-94 0 -41", "88 11 952", "-6248 5650 72" );
 	make_clip( "_cliprework_garage", "Survivors", 1, "-558 -274 0", "483 270 536", "-11106 10498 488" );
 	make_clip( "_cliprework_house", "Survivors", 1, "-259 -526 0", "257 530 704", "-11343 7758 320" );
 	make_clip( "_fallenlog_shrub_survivor", "Survivors", 1, "-182 -383 -99", "27 142 941", "560 9614 83", "0 19 0" );
 	make_clip( "_fallenlog_shrub_infected", "SI Players and AI", 1, "-182 -383 -99", "27 142 61", "560 9614 83", "0 19 0" );
-	make_clip( "_chargerassist_commonhop1", "Survivors", 1, "-155 -16 0", "117 5 864", "-7093 6280 160" );
-	make_clip( "_chargerassist_commonhop2", "Survivors", 1, "-49 -170 0", "63 134 864", "-7093 6452 160", "0 -3 0" );
 	make_clip( "_booster_powerpole", "Survivors", 1, "-9 -8 0", "9 10 582", "-7630 6718 444" );
 	make_clip( "_commentary_booster_crumpstore_a", "Survivors", 1, "-148 -336 -352", "148 336 352", "-6332 6536 672" );
 	make_clip( "_commentary_booster_crumpstore_b", "Survivors", 1, "-43 -147 -352", "43 147 352", "-6523 6352 672" );
@@ -44,7 +41,7 @@ function DoRoundFixes()
 	make_prop( "dynamic", "_commentary_dockprops_light", "models/props_urban/porch_light003.mdl", "-5380 6775 277.271", "0 270 0", "shadow_no", "solid_no", "255 255 255", "1000", "1200" );
 	make_prop( "dynamic", "_commentary_dockprops_boat", "models/props_urban/boat002.mdl", "-5411.46 6783.37 88.6317", "61.9321 199.129 4.5769", "shadow_no", "solid_yes", "255 255 255", "1700", "1900" );
 	make_prop( "dynamic", "_commentary_dockprops_shelf", "models/props/cs_office/shelves_metal.mdl", "-5274 6819 40", "-87.3817 282.627 73.4003", "shadow_no", "solid_yes", "255 255 255", "800", "1000" );
-	patch_ladder( "-6084.5 6272 90", "6 0 0" );
+	patch_ladder( "-6084.5 6272 90", "7 0 0" );
 
 	// Tsuey's note: Special thanks to the person who originally complained
 	// on the Steam Forums that there weren't any gators -- I'm unable to
@@ -66,6 +63,14 @@ function DoRoundFixes()
 	make_trighurt( "_fred_pain_cuddles", "Ghost", "-4 -4 -4", "4 4 4", "-5280 7375 -12" );
 	EntFire( g_UpdateName + "_fred_pain_cuddles", "SetDamage", 120 );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_commonhop_coolingtank", "Survivors", 1, "-74 -236 0", "70 156 880", "-6806 7572 144" );
+		make_clip( "_chargerassist_trainwheel", "Survivors", 1, "-133 -444 -130", "28 131 765", "-12379 8416 259", "0 -19 0" );
+		make_clip( "_chargerassist_fenceladdy", "Survivors", 1, "-94 0 -41", "88 11 952", "-6248 5650 72" );
+		make_clip( "_chargerassist_commonhop1", "Survivors", 1, "-155 -16 0", "117 5 864", "-7093 6280 160" );
+		make_clip( "_chargerassist_commonhop2", "Survivors", 1, "-49 -170 0", "63 134 864", "-7093 6452 160", "0 -3 0" );
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );

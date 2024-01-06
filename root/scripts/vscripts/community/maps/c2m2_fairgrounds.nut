@@ -15,15 +15,15 @@ PrecacheModel( "models/props/cs_assault/forklift.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_bunnyhop_roundtable",		"Survivors",	1,	"-45 -256 0",		"100 256 502",		"2360 -244 266" );
 	make_clip(	"_booster_unattackable",	"Survivors",	1,	"-100 -17 0",		"700 17 512",		"4000 -2304 268" );
+	make_clip(	"_bunnyhop_roundtable",		"Survivors",	1,	"-70 -246 -252",		"70 246 258",		"2390 -234 516" );
+	make_clip(	"_warehouse_oob",		"Survivors",	1,	"-726 -24 -252",		"726 24 258",		"1734 -504 516" );
 	make_clip(	"_forklift_roof",		"Survivors",	1,	"-7 -128 0",		"10 128 575",		"1750 -1660 193" );
 	make_clip(	"_commonhop_whitefence",	"Survivors",	1,	"-77 -5 0",		"77 5 777",		"-3903 -1141 -15" );
 	make_clip(	"_commonhop_carouselroofs",	"Survivors",	1,	"-230 -5 0",		"302 1142 666",		"-990 -5501 192" );
 	make_clip(	"_void_filler","Everyone",	1,	"-222 0 -125",		"222 16 55",		"-1792 -7311 250" );
 	make_clip(	"_charger_smoother",		"Everyone",	1,	"-56 -256 -6",		"56 256 6",		"-3119 -896 152",	"-40 0 0" );
 	make_clip( "_cliprework_unattackable", "Survivors", 1, "-8 -1009 0", "8 1007 128", "-504 -1535 128" );
-	make_clip( "_cliprework_beanbinninga", "Survivors", 1, "-8 -961 0", "8 959 128", "-888 -1535 128" );
 	make_clip( "_cliprework_beanbinningb", "Survivors", 1, "-178 -11 0", "190 5 128", "-702 -2549 128" );
 	make_clip( "_cliprework_unattackablea", "Survivors", 1, "-23 -1191 0", "29 177 597", "-3405 -6489 204" );
 	make_clip( "_cliprework_unattackableb", "Survivors", 1, "-178 -24 0", "82 24 597", "-3510 -6336 204" );
@@ -33,25 +33,25 @@ function DoRoundFixes()
 	make_clip( "_cliprework_wrongwaya", "Survivors", 1, "-207 -7 0", "218 1 578", "-481 -5505 192" );
 	make_clip( "_cliprework_wrongwayb", "Survivors", 1, "-8 -866 0", "8 799 578", "-258 -6303 192" );
 	make_clip( "_cliprework_wrongwayc", "Survivors", 1, "-2113 -10 0", "1219 5 578", "-1471 -7166 192" );
-	make_clip( "_nav_exitsign", "Survivors", 1, "-8 -11 0", "11 12 120", "1048 -1269 128" );
 	make_clip( "_cliprework_blockergap", "Survivors", 1, "-121 -8 0", "123 8 384", "-4235 -3968 384" );
 	make_clip( "_unattackable_traintunnel", "Survivors", 1, "-324 -1040 -171", "220 1040 342", "-604 -1536 428" );
 	make_clip( "_dispcollision_fairgrounds", "All and Physics", 1, "-1400 -1700 -2", "1400 1700 0", "-1903 -142 -128" );
 	make_clip( "_commentary_generatorlights", "Survivors", 1, "-8 -56 -8", "44 8 524", "2876 -1700 244" );
-	make_clip( "_commentary_traintunnel_track", "Survivors", 1, "-64 -256 -64", "64 256 64", "-704 -256 192" );
-	make_clip( "_commentary_traintunnel_entrance", "Survivors", 1, "-192 -16 -64", "192 16 64", "-704 -528 192" );
 	make_clip( "_commentary_carouselgate_stuck", "All and Physics", 1, "-4 -24 -80", "4 24 80", "-2764 -5452 -48" );
 	make_clip( "_commentary_blockergap", "Survivors", 1, "-4 -324 -192", "4 324 192", "-4352 -4284 576" );
-	make_clip( "_commentary_electricalbox", "Survivors", 1, "-8 -132 -8", "40 8 786", "-4336 -4209 -18" );
 
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 
 		// FIXES
-
+		make_clip( "_nav_exitsign", "Survivors", 1, "-8 -11 0", "11 12 120", "1048 -1269 128" );
+		make_clip( "_cliprework_beanbinninga", "Survivors", 1, "-8 -961 0", "8 959 128", "-888 -1535 128" );
+		make_clip( "_commentary_traintunnel_entrance", "Survivors", 1, "-192 -16 -64", "192 16 64", "-704 -528 192" );
+		make_clip( "_commentary_traintunnel_track", "Survivors", 1, "-64 -256 -64", "64 256 64", "-704 -256 192" );
 		make_clip(	"_booster_uppertrackb",		"Survivors",	1,	"-64 -448 -320",	"64 448 320",		"-1536 -2368 448" );
 		make_clip(	"_booster_uppertracka",		"Survivors",	1,	"-57 -313 -208.5",	"57 313 208.5",		"-2721 -825 337" );
+		make_clip( "_commentary_electricalbox", "Survivors", 1, "-8 -132 -8", "40 8 786", "-4336 -4209 -18" );
 		make_clip( "_clipextend_carouselboost", "Survivors", 1, "-234 -4 0", "234 4 666", "-1446 -5248 192" );
 
 		// Piggyback on Survivor-filtered trigger just beyond the carousel off switch.

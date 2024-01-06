@@ -9,10 +9,10 @@ PrecacheModel( "models/props_highway/plywood_01.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_cliprework_rooftop01",	"Survivors",	1,	"-10 -340 0",		"10 340 600",		"-5434 -9392 336" );
-	make_clip(	"_cliprework_rooftop02",	"Survivors",	1,	"-580 -10 -130",	"580 10 576",		"-4864 -9722 352" );
+	make_clip(	"_cliprework_rooftop01",	"Survivors",	1,	"-8 -300 -464",		"8 300 464",		"-5448 -8748 464" );
+	make_clip(	"_cliprework_rooftop02",	"Survivors",	1,	"-296 -8 -464",	"296 8 464",		"-5160 -8440 464" );
+	make_clip(	"_cliprework_rooftop03",	"Survivors",	1,	"-8 -120 -464",	"8 120 464",		"-4872 -8312 464" );
 	make_clip(	"_commonhop_window",		"Survivors",	1,	"-32 -8 0",		"32 8 88",		"-4480 -10632 144" );
-	make_clip(	"_clipgap_alley",		"Survivors",	1,	"-8 -128 0",		"8 128 700",		"-4295 -8320 256" );
 	make_clip(	"_curvejump_van",		"Survivors",	1,	"-42 -128 -32",		"42 128 1337",		"-3311 -4407 -345" );
 	make_clip(	"_cliprework_mirrorwarehouse",	"Everyone",	1,	"-77 -238 0",		"76 248 296",		"-5412 -10506 64" );
 	make_clip(	"_permstuck_treea",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"-3520 -4949 -242" );
@@ -23,10 +23,6 @@ function DoRoundFixes()
 	make_clip( "_cliprework_noladders", "Survivors", 1, "-8 -176 0", "8 176 72", "-7976 -10924 208" );
 	make_clip( "_solidify_acunit", "Everyone", 1, "-4 -59 -7", "4 59 136", "-708 -1224 23" );
 	make_clip( "_commonhop_van", "Survivors", 1, "-114 -54 0", "149 60 773", "-2312 -9675 155", "0 38 0" );
-	make_clip( "_booster_trafficlighta", "Survivors", 1, "-80 -40 -80", "80 40 698", "-1420 -7002 230" );
-	make_clip( "_booster_trafficlightb", "Survivors", 1, "-100 -60 -140", "140 40 561", "-1364 -6902 367" );
-	make_clip( "_booster_trafficlightc", "Survivors", 1, "-42 -140 -80", "10 148 619", "-1094 -6917 309" );
-	make_clip( "_booster_trafficlightd", "Survivors", 1, "-120 -34 -80", "148 10 619", "-1242 -6515 309" );
 	make_clip( "_booster_acunit", "Survivors", 1, "-28 -60 -80", "29 60 624", "-1631 -6152 304" );
 	make_clip( "_booster_brokenframe", "Survivors", 1, "-80 -8 -80", "81 9 514", "-1965 -6409 414" );
 	make_clip( "_booster_rentsign", "Survivors", 1, "-16 -19 -80", "17 19 637", "-1648 -5552 291" );
@@ -43,6 +39,13 @@ function DoRoundFixes()
 	EntFire( "fire_howitzer", "AddOutput", "OnPressed zombie_breakwall01:AddOutput:minhealthdmg 0:0:-1" );
 	EntFire( "fire_howitzer", "AddOutput", "OnPressed zombie_breakwall09:AddOutput:minhealthdmg 0:0:-1" );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_booster_trafficlighta", "Survivors", 1, "-80 -40 -80", "80 40 698", "-1420 -7002 230" );
+		make_clip( "_booster_trafficlightb", "Survivors", 1, "-100 -60 -140", "140 40 561", "-1364 -6902 367" );
+		make_clip( "_booster_trafficlightc", "Survivors", 1, "-42 -140 -80", "10 148 619", "-1094 -6917 309" );
+		make_clip( "_booster_trafficlightd", "Survivors", 1, "-120 -34 -80", "148 10 619", "-1242 -6515 309" );
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );

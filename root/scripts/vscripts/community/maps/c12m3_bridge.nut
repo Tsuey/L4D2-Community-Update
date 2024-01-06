@@ -13,10 +13,8 @@ function DoRoundFixes()
 	make_clip( "_dispcrouch_eventlever", "Everyone", 1, "-412 -8 -61", "380 42 120", "8302 -13946 21", "0 -149 0" );
 	make_clip( "_dispcrouch_recompilefail", "Everyone", 1, "-620 -17 0", "620 17 70", "5930 -14086 -70", "0 3 0" );
 	make_clip( "_permstuck_eventlever", "Everyone", 1, "-17 -17 -17", "17 17 17", "8150 -13811 57" );
-	make_clip( "_nav_bridgecollapsea", "Survivors", 1, "-9 -10 0", "19 19 310", "5854 -12656 -41.3", "5 0 0" );
-	make_clip( "_nav_bridgecollapseb", "Survivors", 1, "-9 -10 0", "19 19 310", "6000 -12656 -41.3", "-5 0 0" );
 	make_clip( "_stuckwarp_endtunnel", "Everyone", 1, "-18 -60 0", "48 68 84", "968 -12932 20" );
-	make_clip( "_permstuck_shedtree", "Everyone", 1, "-14 -14 -164", "14 14 1640", "3085 -14120 88" );
+	make_clip( "_permstuck_shedtree", "Everyone", 1, "-14 -14 -164", "14 14 58", "3085 -14120 88" );
 	make_clip( "_permstuck_terribadcliff", "Everyone", 1, "-68 -1 0", "68 46 148", "7317 -11487 451" );
 
 	con_comment( "MOVER:\tClip \"_bridge_dynamic_clip\" simulated to move when bridge collapses." );
@@ -24,6 +22,11 @@ function DoRoundFixes()
 	make_clip( "_bridge_dynamic_clip", "Survivors", 1, "-69 -926 0", "69 6 1450", "5932 -13314 272" );
 	EntFire( "train_engine_button", "AddOutput", "OnPressed " + g_UpdateName + "_bridge_dynamic_clip:AddOutput:origin 5932 -13784 272:0:-1" );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_nav_bridgecollapsea", "Survivors", 1, "-9 -10 0", "19 19 310", "5854 -12656 -41.3", "5 0 0" );
+		make_clip( "_nav_bridgecollapseb", "Survivors", 1, "-9 -10 0", "19 19 310", "6000 -12656 -41.3", "-5 0 0" );
+	}
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -84,6 +87,7 @@ function DoRoundFixes()
 		make_clip( "_meticulous_funcinfclip20", "SI Players", 1, "-300 -21 -216", "1173 17 1408", "4998 -11810 321", "0 25 0" );
 		make_clip( "_meticulous_funcinfclip21", "SI Players", 1, "-711 -17 -216", "1717 17 1408", "3060 -12382 321", "0 15 0" );
 		make_clip( "_tunneltophill_wrongway_clip", "SI Players", 1, "-2 -128 -110", "100 290 1070", "3320 -12528 658" );
+		make_clip( "_permstuck_startsaferoom", "SI Players", 1, "-16 -24 -18", "16 24 18", "-1088 -10479 -46" );
 		make_ladder( "_ladder_backtrains_cloned_midmound", "2438 -9808 60", "15697 -5734 -39", "0 -58.35 0", "0.53 -0.85 0" );
 		make_ladder( "_ladder_barnhousefront_cloned_treetrunkcliff", "982 -10596 116", "12019 -7835 -89", "0 -60 0", "-0.5 0.866 0" );
 		make_ladder( "_ladder_generatorhouse_cloned_doublerbottom", "-179.799 -10591.8 4", "14106 -5707 -673", "3.5 -45 -3.5", "1 0 0" );

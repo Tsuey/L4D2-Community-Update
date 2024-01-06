@@ -16,6 +16,7 @@ function DoRoundFixes()
 	make_clip(	"_permstuck_tanktreea",		"Everyone",	1,	"-24 -24 -64",		"24 24 17",		"4096 5123 -938" );
 	make_clip(	"_permstuck_tanktreeb",		"Everyone",	1,	"-24 -24 -64",		"24 24 17",		"4067 4930 -913" );
 	make_clip(	"_permstuck_tanktreec",		"Everyone",	1,	"-24 -24 -64",		"24 24 17",		"3911 3914 -941" );
+	make_clip( "_permstuck_cargocontainer", "SI Players", 1, "-216 -96 -96", "216 0 96", "2875 1388 -1822", "0 90 -45" );
 	make_clip( "_cargocontainer_oob_01", "SI Players", 1, "-32 -464 -376", "32 464 376", "3616 2512 -632" );
 	make_clip( "_cargocontainer_oob_02", "SI Players", 1, "-32 -192 -48", "32 192 48", "3616 1328 -1744" );
 	make_clip( "_cargocontainer_oob_03", "SI Players", 1, "-64 -96 -200", "64 96 200", "3136 2595 -1243", "0 0 -42" );
@@ -35,36 +36,29 @@ function DoRoundFixes()
 	make_clip( "_shoppingcart_tarpb", "Survivors", 1, "-51 -232 0", "48 258 711", "-1800 -2319 -967", "0 -21 0" );
 	make_clip( "_shoppingcart_tarpc", "Survivors", 1, "-78 -506 0", "8 518 711", "-1838 -1583 -952", "0 16 0" );
 	make_clip(	"_booster_clipgap",		"Survivors",	1,	"-20 -20 24",		"365 120 700",		"3632 5712 -880" );
-	make_clip( "_shortcut_start_trucka", "Survivors", 1, "-5 -174 0", "96 188 514", "4493 7285 -756", "0 16 0" );
-	make_clip( "_shortcut_start_truckb", "Survivors", 1, "36 -157 0", "96 76 514", "4388 7285 -756", "0 16 0" );
-	make_clip( "_shortcut_start_busblu", "Survivors", 1, "-236 -47 0", "251 66 500", "4379 7676 -756", "0 -45 0" );
-	make_clip( "_shortcut_start_shruba", "Survivors", 1, "-8 -114.5 -17", "8 67 514", "4779 7377 -756", "0 11 0" );
-	make_clip( "_shortcut_start_shrubb", "Survivors", 1, "-8 -105 -17", "8 71 514", "4669 7457 -756", "0 79 0" );
-	make_clip( "_shortcut_start_shrubc", "Survivors", 1, "-8 -91 -17", "8 59 514", "4626 7363 -756", "0 193 0" );
-	make_clip( "_shortcut_start_shrubd", "Survivors", 1, "-8 -105 -17", "8 47 514", "4736 7283 -756", "0 255 0" );
-	make_clip( "_booster_motelsign", "Survivors", 1, "-105 -13 -71", "132 17 252", "2932 4894 -507" );
 	make_clip( "_permstuck_startfence", "Everyone", 1, "-147 -34 0", "45 39 1206", "11140 7179 -566", "0 21 0" );
 	make_clip( "_longbush_booster", "Survivors", 1, "-205 -770 0", "379 1585 111", "4092 3921 -369", "0 -4 0" );
-	make_clip( "_longbush_undermapa", "SI Players", 1, "-42 -1313 -145", "3 1555 552", "4625 4099 -805" );
+	make_clip( "_longbush_undermapa", "SI Players", 1, "-42 -1313 -145", "3 2581 552", "4625 4099 -805" );
 	make_clip( "_longbush_undermapb", "SI Players", 1, "-174 -5 0", "475 5 822", "4142 2981 -983" );
-	make_clip( "_clipextend_poolwalla", "Survivors", 1, "-517 -10 0", "517 10 360", "2561 3843 -640" );
-	make_clip( "_clipextend_poolwallb", "Survivors", 1, "-6 -350 0", "6 350 360", "3067 4200 -640" );
 	make_clip( "_permstuck_endfence", "Everyone", 1, "-93 -28 0", "53 38 143", "547 -635 -1087", "0 -33 0" );
-	make_clip( "_clipextend_umbrella1", "Survivors", 1, "-48 -50 0", "50 48 522", "2683 4055 -773" );
-	make_clip( "_clipextend_umbrella2", "Survivors", 1, "-48 -50 0", "50 48 522", "2483 3989 -773" );
-	make_clip( "_clipextend_umbrella3", "Survivors", 1, "-48 -52 0", "50 50 522", "2243 4047 -773" );
 	make_clip( "_commentary_motelroof_survivors", "Survivors", 1, "-1095 -296 -196", "1095 296 196", "1879 3428 -451" );
-	make_clip( "_commentary_slopetruck", "Survivors", 1, "-8 -84 -8", "90 8 800", "-1251 -734 -1081" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		con_comment( "KILL:\tShrubwall shortcut unpatched for Coop (popular request)." );
-
-		EntFire( g_UpdateName + "_shortcut_start*", "Kill" );
+		make_clip( "_shortcut_start_trucka", "Survivors", 1, "-5 -174 0", "96 188 514", "4493 7285 -756", "0 16 0" );
+		make_clip( "_shortcut_start_truckb", "Survivors", 1, "36 -157 0", "96 76 514", "4388 7285 -756", "0 16 0" );
+		make_clip( "_shortcut_start_busblu", "Survivors", 1, "-236 -47 0", "251 66 500", "4379 7676 -756", "0 -45 0" );
+		make_clip( "_shortcut_start_shruba", "Survivors", 1, "-8 -114.5 -17", "8 67 514", "4779 7377 -756", "0 11 0" );
+		make_clip( "_shortcut_start_shrubb", "Survivors", 1, "-8 -105 -17", "8 71 514", "4669 7457 -756", "0 79 0" );
+		make_clip( "_shortcut_start_shrubc", "Survivors", 1, "-8 -91 -17", "8 59 514", "4626 7363 -756", "0 193 0" );
+		make_clip( "_shortcut_start_shrubd", "Survivors", 1, "-8 -105 -17", "8 47 514", "4736 7283 -756", "0 255 0" );
+		make_clip( "_clipextend_poolwalla", "Survivors", 1, "-517 -10 0", "517 10 360", "2561 3843 -640" );
+		make_clip( "_clipextend_poolwallb", "Survivors", 1, "-6 -350 0", "6 350 360", "3067 4200 -640" );
+		make_clip( "_clipextend_umbrella1", "Survivors", 1, "-48 -50 0", "50 48 522", "2683 4055 -773" );
+		make_clip( "_clipextend_umbrella2", "Survivors", 1, "-48 -50 0", "50 48 522", "2483 3989 -773" );
+		make_clip( "_clipextend_umbrella3", "Survivors", 1, "-48 -52 0", "50 50 522", "2243 4047 -773" );
+		make_clip( "_booster_motelsign", "Survivors", 1, "-105 -13 -71", "132 17 252", "2932 4894 -507" );
+		make_clip( "_commentary_slopetruck", "Survivors", 1, "-8 -84 -8", "90 8 800", "-1251 -734 -1081" );
 	}
 	if ( g_BaseMode == "versus" )
 	{

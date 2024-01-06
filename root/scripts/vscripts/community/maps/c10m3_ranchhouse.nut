@@ -13,7 +13,7 @@ function DoRoundFixes()
 	make_clip(	"_commonhop_stationroof",	"Survivors",	1,	"-184 -430 -200",	"174 380 470",		"-12632 -6040 500" );
 	make_clip(	"_dispcrouch_flatcartunnel",	"Everyone",	1,	"-100 -38 -64",		"38 38 256",		"-12534 -3574 -36" );
 	make_clip(	"_holdoutsafe_cabinmountain",	"Survivors",	1,	"-340 -50 -245",	"340 50 1122",		"-7518 -2770 307" );
-	make_clip(	"_cliprework_watchtower",	"Survivors",	1,	"0 -358 0",		"358 0 180",		"-10438 -6325 542" );
+	
 	make_clip(	"_cliprework_rockcliff01",	"Survivors",	1,	"-600 -160 -592",	"911 160 592",		"-6272 -2688 848" );
 	make_clip(	"_cliprework_roadblock",	"Survivors",	1,	"-45 -1200 0",		"45 455 512",		"-4585 -944 496" );
 	make_clip(	"_cliprework_churchlonga",	"Survivors",	1,	"-45 -9 -555",		"2310 9 944",		"-4533 -503 496" );
@@ -37,16 +37,21 @@ function DoRoundFixes()
 	make_clip( "_cliprework_corner1", "Survivors", 1, "-487 -60 39", "86 4 784", "-13282 -3756 240", "0 43 0" );
 	make_clip( "_cliprework_corner2", "Survivors", 1, "-550 -60 -17", "711 4 784", "-12651 -3566 400", "0 14 0" );
 	make_clip( "_tankpunch_booster", "Survivors", 1, "-8 -302 -110", "158 960 1322", "-8838 -4633 124", "0 51 0" );
-	make_clip( "_permstuck_triplerock", "Everyone", 1, "-78 -86 -80", "88 96 32", "-9539 -4313 16", "0 41 0" );
+	make_clip( "_permstuck_triplerocka", "Everyone", 1, "-78 -86 -80", "88 96 32", "-9539 -4313 16", "0 41 0" );
+	make_clip( "_permstuck_triplerockb", "Everyone", 1, "-14 -6 -187", "14 6 187", "-10147 -2993 -27" );
 	make_clip( "_cliprework_vulnerable", "Survivors", 1, "-1085 -16 -90", "1048 16 1192", "-8709 -3352 269", "0 34 0" );
 	make_clip( "_cliprework_churchwindows", "Survivors", 1, "-4 -120 0", "4 120 100", "-2372 192 194" );
 	make_clip( "_clipextend_padlockgate", "Survivors", 1, "-14 -311 0", "14 405 1102", "-8594 -5033 344" );
 	make_clip( "_permstuck_openedrockcliff", "SI Players", 1, "-17 -17 0", "17 17 32", "-9247 -3950 412" );
 	make_clip( "_permstuck_fatcliffladder1", "SI Players", 1, "-17 -34 0", "17 17 32", "-8302 -3322 383" );
 	make_clip( "_permstuck_fatcliffladder2", "SI Players", 1, "-17 -34 0", "17 17 32", "-8224 -3527 378" );
+	make_clip( "_permstuck_housesiderock", "Everyone", 1, "-13 -34 -37", "13 13 37", "-6869 -2445 15" );
 	make_clip( "_chargerassist_brokenwall", "Survivors", 1, "-128 0 0", "128 64 275", "-2480 1104 221" );
-	make_clip( "_booster_watertowerclip", "Survivors", 1, "-538 -16 0", "348 66 900", "-6472 -871 1024", "0 15 0" );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip(	"_cliprework_watchtower",	"Survivors",	1,	"0 -358 0",		"358 0 180",		"-10438 -6325 542" );
+	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );

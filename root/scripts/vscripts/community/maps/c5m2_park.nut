@@ -33,17 +33,13 @@ function DoRoundFixes()
 	make_clip( "_cliprework_missingno", "Survivors", 1, "-164 -272 0", "172 240 1626", "-10092 -5520 48" );
 	make_clip( "_commentary_fencegenerator", "Survivors", 1, "-8 -44 -8", "56 8 1672", "-8371 -3338 -8" );
 	make_clip( "_commentary_electricalbox", "Survivors", 1, "-4 -8 -8", "6 74 1800", "-7036 -5098 -239" );
-	make_clip( "_commentary_shortcut_station", "Survivors", 1, "-1 -1 -1", "64 4 120", "-6752 -6736 -120" );
+	
+	make_clip( "_commentary_shortcut_tent", "Survivors", 1, "-65 -65 -20", "65 65 1790", "-6853 -5598 -135.75" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the button to open the doors is pressed." );
-
-		EntFire( "finale_alarm_stop_button", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_shortcut_station:Kill::0:-1" );
+		make_clip( "_commentary_shortcut_station", "Survivors", 1, "-1 -1 -1", "64 4 120", "-6752 -6736 -120" );
+		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -52,7 +48,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip(	"_nav_eventsign",		"Survivors",	1,	"-4 -10 -908",		"4 10 908",		"-8552 -6310 756" );
-		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
 	if ( g_BaseMode == "scavenge" )
 	{
@@ -127,7 +122,6 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_yesdraw_billboard_nodraw", "models/props_update/c5m2_billboard_nodraw.mdl", "-9152 -6938 92", "0 -90 0", "shadow_no", "solid_no" );
 		make_prop( "dynamic", "_solidify_chimney007", "models/props_urban/chimney007.mdl", "-9076 -4300 150.405", "0 180 0", "shadow_no" );
 		make_prop( "physics", "_hittable_dumpster", "models/props_junk/dumpster_2.mdl", "-8095 -600 -246", "0 0 0", "shadow_no" );
-		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
 
 	// Resolve stuck Tank spawns for Taaannnk! Mutation.

@@ -14,7 +14,6 @@ function DoRoundFixes()
 	make_clip( "_eventskip_fence1", "Survivors", 1, "-59 -16 0", "60 16 910", "-4268 -8520 504" );
 	make_clip( "_eventskip_fence2", "Survivors", 1, "-151 -20 0", "849 20 914", "-3409 -7764 500" );
 	make_clip( "_cliprework_startbooster", "Survivors", 1, "-86 -520 -863", "203 361 226", "-4930 -5987 1188" );
-	make_clip( "_cliprework_endbooster", "Survivors", 1, "-72 -103 -175", "63 91 1415", "-1175 1405 57" );
 	make_clip( "_dispcrouch_onewaydrop", "Everyone", 1, "-402 -64 -64", "465 18 422", "-3893 -5852 -128" );
 	make_clip( "_cliprework_dispcrouch00", "SI Players and AI", 1, "-64 -149 -164", "18 87 146", "-4030 -5257 132", "0 -5 0" );
 	make_clip( "_cliprework_dispcrouch01", "Survivors", 1, "-64 -269 -64", "18 277 1446", "-4030 -5357 -32", "0 -5 0" );
