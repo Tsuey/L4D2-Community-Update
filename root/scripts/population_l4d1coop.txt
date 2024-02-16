@@ -36,80 +36,72 @@ Population
 
 	defaultmilltown
 	{
-		common_male01		30
-		common_female01		25
+		common_male_rural01	50
+		common_female_rural01	20
 		common_police_male01	10
 		common_military_male01	10
 		common_worker_male01	10
-		common_male_suit 	15
 	}
 
 	defaultmilltown_mob
 	{
-		common_male01		30
-		common_female01		25
+		common_male_rural01	50
+		common_female_rural01	20
 		common_police_male01	10
 		common_military_male01	10
 		common_worker_male01	10
-		common_male_suit 	15
 	}
 
 
 	defaultsugarmill
 	{
-		common_male_rural01 	50
+		common_male_rural01 	20
 		common_female_rural01	20
-		common_police_male01	10
 		common_military_male01	10
-		common_worker_male01	10
+		common_worker_male01	50
 	}
 
 	defaultsugarmill_mob
 	{
-		common_male_rural01 	50
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+
+	defaultmilltown_rain
+	{
+		common_male_rural01	50
 		common_female_rural01	20
 		common_police_male01	10
 		common_military_male01	10
 		common_worker_male01	10
 	}
 
-	defaultmilltown_rain
-	{
-		common_male01		30
-		common_female01		25
-		common_police_male01	10
-		common_military_male01	10
-		common_worker_male01	10
-		common_male_suit 	15
-	}
-
 	defaultmilltown_rain_mob
 	{
-		common_male01		30
-		common_female01		25
+		common_male_rural01	50
+		common_female_rural01	20
 		common_police_male01	10
 		common_military_male01	10
 		common_worker_male01	10
-		common_male_suit 	15
 	}
 
 
 	defaultsugarmill_rain
 	{
-		common_male_rural01 	50
+		common_male_rural01 	20
 		common_female_rural01	20
-		common_police_male01	10
 		common_military_male01	10
-		common_worker_male01	10
+		common_worker_male01	50
 	}
 
 	defaultsugarmill_rain_mob
 	{
-		common_male_rural01 	50
+		common_male_rural01 	20
 		common_female_rural01	20
-		common_police_male01	10
 		common_military_male01	10
-		common_worker_male01	10
+		common_worker_male01	50
 	}
 	
 	// C3 
@@ -197,7 +189,7 @@ Population
 		common_patient_male01 	40
 		common_worker_male01	15
 		common_female_nurse01	15
-		common_surgeon_male01	10
+		common_surgeon_male01	15
 	}
 
 		//------------------------------------------------------------------------
@@ -309,20 +301,22 @@ Population
 	//------------------------------------------------------------------------
 	whisperingoaks
 	{
-		common_male01		20
-		common_female01		20
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
 		common_military_male01	10
-		common_police_male01 	50
+		common_worker_male01	10
 	}
 
 	//Minimizing the types for memory in c3m1
 	//------------------------------------------------------------------------
 	gatorpark
 	{
-		common_male01		20
-		common_female01		20
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
 		common_military_male01	10
-		common_police_male01 	50
+		common_worker_male01	10
 	}
 
 
@@ -362,10 +356,10 @@ Population
 
 	redlight
 	{
-		common_male_rural01 	20
+		common_male_rural01 	50
 		common_female_rural01	20
 		common_military_male01	10
-		common_worker_male01	50
+		common_worker_male01	20
 	}
 
 	redlight_bikers
@@ -378,10 +372,11 @@ Population
 
 	port
 	{
-		common_worker_male01	35
-		common_female_rural01	10
-		common_male01			35
-		common_male_rural01		20
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
 		
 		survivor_teenangst	0
 		survivor_biker	0
@@ -435,10 +430,11 @@ Population
 
 	riverport
 	{
-		common_worker_male01	35
-		common_female_rural01	10
-		common_male01			35
-		common_male_rural01		20
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
 	}
 	
 	//------------------------------------------------------------------------
@@ -539,7 +535,7 @@ Population
 		common_patient_male01 	40
 		common_worker_male01	15
 		common_female_nurse01	15
-		common_surgeon_male01	10
+		common_surgeon_male01	15
 	}
 
 		//------------------------------------------------------------------------
@@ -559,7 +555,7 @@ Population
 			common_patient_male01 	40
 			common_worker_male01	15
 			common_female_nurse01	15
-			common_surgeon_male01	10
+			common_surgeon_male01	15
 		}
 
 
