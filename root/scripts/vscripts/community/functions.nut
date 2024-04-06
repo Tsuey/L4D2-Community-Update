@@ -174,6 +174,43 @@ function make_navblock ( user_strTargetname,
 	}
 }
 
+function make_trig_godspot(area_origins) {
+	local areas = []
+	foreach(origin in area_origins) {
+		local area = NavMesh.GetNearestNavArea(origin, 16, true, true);
+		if(area == null) {
+			printl("godspot couldn't be created because area at " + origin + " wasn't found")
+			return
+		}
+		areas.append(area)
+	}
+	local godspot = areas[0];
+	local disconnect = areas.slice(1)
+
+	local trigger = SpawnEntityFromTable("script_trigger_multiple", {
+		origin = godspot.GetCenter() + Vector(0,0,30),
+		extent = Vector(5 + godspot.GetSizeX() / 2, 5 + godspot.GetSizeY() / 2, 30),
+		entireteam = 2,
+		allowincap = 0,
+		spawnflags = 1,
+		OnEntireTeamStartTouch = "!self,CallScriptFunction,CreateGodspot",
+		OnEntireTeamEndTouch = "!self,CallScriptFunction,DestroyGodspot"
+	})
+	trigger.ValidateScriptScope()
+	local scope = trigger.GetScriptScope()
+	scope.CreateGodspot <- function() {
+		foreach(area in disconnect) {
+			area.Disconnect(godspot)
+		}
+	}
+	scope.DestroyGodspot <- function() {
+		foreach(area in disconnect) {
+			area.ConnectTo(godspot, -1)
+		}
+	}
+	DoEntFire("!self", "CallScriptFunction", "DestroyGodspot", 0, null, trigger)
+}
+
 /*****************************************************************************
 **  MAKE_TRIGPUSH
 **

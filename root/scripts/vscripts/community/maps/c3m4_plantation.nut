@@ -29,11 +29,11 @@ function DoRoundFixes()
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
-		local navMain = NavMesh.GetNearestNavArea(Vector(2377.853516, 161.838699, 194.000000), 16, true, true);
-		local navConnection1 = NavMesh.GetNearestNavArea(Vector(2300.000000, 162.500000, 131.307587), 16, true, true);
-		local navConnection2 = NavMesh.GetNearestNavArea(Vector(2337.500000, 120.000000, 232.031250), 16, true, true);
-		navConnection1.Disconnect(navMain);
-		navConnection2.Disconnect(navMain);
+		make_trig_godspot([
+			Vector(2378, 162, 194),
+			Vector(2300, 162, 131),
+			Vector(2337, 120, 232)
+		])
 	}
 	if ( g_BaseMode == "versus" )
 	{

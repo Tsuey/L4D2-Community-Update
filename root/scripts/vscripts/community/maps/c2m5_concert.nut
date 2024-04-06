@@ -89,11 +89,12 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
-		
+
 		// Get nav tiles by position because IDS can change if edited later on
-		local navConnection = NavMesh.GetNearestNavArea(Vector(-3400.000000, 3400.000000, -165.604355), 16, true, true);
-		local navMain = NavMesh.GetNearestNavArea(Vector(-3396.963867, 3449.818848, -112.538177), 16, true, true);
-		navConnection.Disconnect(navMain);
+		make_trig_godspot([
+			Vector(-3397, 3450, -112),
+			Vector(-3400, 3400, -166)
+		])
 	}
 	if ( g_BaseMode == "versus" )
 	{
