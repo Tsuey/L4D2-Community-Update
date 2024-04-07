@@ -9309,7 +9309,7 @@ Rule SurvivorSpottedM60AutoBiker
 
 Rule SurvivorSpottedGrenadeLauncherBiker
 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsProducer IsTalk IsTalkBiker IsNotSmartLookAuto Isgrenade_launcher IsWorldTalkBiker _auto_NotSpottedVehicle
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto Isgrenade_launcher IsWorldTalkBiker _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotgrenade_launcher:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedChainsawBiker
@@ -9317,7 +9317,7 @@ Rule SurvivorSpottedGrenadeLauncherBiker
 
 Rule SurvivorSpottedGrenadeLauncherAutoBiker
 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsProducer IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotgrenade_launcher IsNotSaidSpot Isgrenade_launcher IsWorldTalkBiker IsNotSpeakingWeight0 _auto_NotSpottedVehicle
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotgrenade_launcher IsNotSaidSpot Isgrenade_launcher IsWorldTalkBiker IsNotSpeakingWeight0 _auto_NotSpottedVehicle
 	ApplyContext "SaidSpotgrenade_launcher:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedChainsawBiker
