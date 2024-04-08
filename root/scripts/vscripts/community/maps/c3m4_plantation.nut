@@ -35,7 +35,7 @@ function DoRoundFixes()
 		navConnection1.Disconnect(navMain);
 		navConnection2.Disconnect(navMain);
 	}
-	if ( g_BaseMode == "versus" )
+	else if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 
@@ -43,7 +43,7 @@ function DoRoundFixes()
 
 		make_clip( "_commentary_shortcut_startfence", "Survivors", 1, "-8 -272 -80", "8 280 80", "-2380 -1616 78.2673" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

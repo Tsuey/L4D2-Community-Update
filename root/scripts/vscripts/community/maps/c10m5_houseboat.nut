@@ -89,7 +89,7 @@ function DoRoundFixes()
 		navConnection3.Disconnect(navMain);
 		navConnection4.Disconnect(navMain);
 	}
-	if ( g_BaseMode == "versus" )
+	else if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 
@@ -97,7 +97,7 @@ function DoRoundFixes()
 
 		make_clip(	"_indoor_roof",			"Survivors",	1,	"-60 -84 -28",		"60 84 28",		"2244 4076 100" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

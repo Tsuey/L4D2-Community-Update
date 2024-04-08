@@ -23,7 +23,7 @@ function DoRoundFixes()
 	{
 		make_clip( "_stuckwarp_railwayoverpass", "Everyone", 1, "-30 -152 -45", "26 210 58", "2726 2775 374" );
 	}
-	if ( g_BaseMode == "scavenge" )
+	else if ( g_BaseMode == "scavenge" )
 	{
 		devchap( "BASE SCAVENGE" );
 

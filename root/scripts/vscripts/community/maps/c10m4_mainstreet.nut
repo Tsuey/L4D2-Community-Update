@@ -49,7 +49,7 @@ function DoRoundFixes()
 		make_clip( "_cliprework_eventskip3", "Survivors", 1, "-156 -1 0", "141 1 1588", "372 -2717 140" );
 		make_clip( "_cliprework_eventskip4", "Survivors", 1, "-26 -59 0", "-24 41 1588", "242 -2757 140" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 
@@ -172,8 +172,7 @@ function DoRoundFixes()
 		make_clip( "_tankstuck_endbarricade", "SI Players", 1, "-400 -900 0", "400 900 1700", "3822 -3970 0" );
 		make_clip( "_tankstuck_excesscorner", "SI Players", 1, "-200 -100 0", "200 100 1700", "-2520 -5048 -64" );
 	}
-
-	if ( g_MutaMode == "mutation19" )
+	else if ( g_MutaMode == "mutation19" )
 	{
 		// Tons of possibilities to spawn behind the long row of houses
 		// so just block them all off, tons of NODRAW and hostile clips.

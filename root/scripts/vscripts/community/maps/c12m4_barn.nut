@@ -41,7 +41,7 @@ function DoRoundFixes()
 
 		EntFire( g_UpdateName + "_eventskip_commonhop*", "Kill", null, 4 );
 	}
-	if ( g_BaseMode == "versus" )
+	else if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 

@@ -40,7 +40,7 @@ function DoRoundFixes()
 		make_trighurt( "_finalstreet_trighurtc", "Survivor", "-781 -361 0", "359 599 32", "9101 4969 196" );
 		DoEntFire( "!self", "AddOutput", "OnTrigger " + g_UpdateName + "_finalstreet_trighurt*:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "trigger_once", Vector( 8616, 4320, 140 ), 1 ) );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 
@@ -87,8 +87,7 @@ function DoRoundFixes()
 
 		kill_funcinfclip( 1043.94 );	// Final street left barricade
 	}
-
-	if ( g_MutaMode == "mutation19" )
+	else if ( g_MutaMode == "mutation19" )
 	{
 		// Block an excess nav area that's quite far behind a fence.
 

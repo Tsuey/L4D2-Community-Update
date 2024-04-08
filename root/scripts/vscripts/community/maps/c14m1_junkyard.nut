@@ -84,7 +84,7 @@ function DoRoundFixes()
 			}
 		}
 	}
-	if ( g_BaseMode == "versus" )
+	else
 	{
 		EntFire( "car_alarm_prop", "Kill", null, 0 );
 		EntFire( "car_alarm_event", "Kill", null, 0 );

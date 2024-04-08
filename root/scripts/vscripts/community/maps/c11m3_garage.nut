@@ -43,11 +43,11 @@ function DoRoundFixes()
 	{
 		make_clip(	"_cliprework_construction05",	"Survivors",	1,	"-8 -472 0",		"1337 488 888",		"-5384 -1528 1000" );
 	}
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism")
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		EntFire( "construction_clip", "Kill", "", 1 );
 	}
-	if ( g_BaseMode == "versus" )
+	else if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 

@@ -71,7 +71,7 @@ function DoRoundFixes()
 
 		EntFire( "washer_lift_button2", "AddOutput", "OnPressed " + g_UpdateName + "_shortcut_booster_TMP*:Kill::0:-1" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

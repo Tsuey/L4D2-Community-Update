@@ -33,7 +33,7 @@ function DoRoundFixes()
 	make_clip( "_cliprework_missingno", "Survivors", 1, "-164 -272 0", "172 240 1626", "-10092 -5520 48" );
 	make_clip( "_commentary_fencegenerator", "Survivors", 1, "-8 -44 -8", "56 8 1672", "-8371 -3338 -8" );
 	make_clip( "_commentary_electricalbox", "Survivors", 1, "-4 -8 -8", "6 74 1800", "-7036 -5098 -239" );
-	
+
 	make_clip( "_commentary_shortcut_tent", "Survivors", 1, "-65 -65 -20", "65 65 1790", "-6853 -5598 -135.75" );
 
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
@@ -49,7 +49,7 @@ function DoRoundFixes()
 
 		make_clip(	"_nav_eventsign",		"Survivors",	1,	"-4 -10 -908",		"4 10 908",		"-8552 -6310 756" );
 	}
-	if ( g_BaseMode == "scavenge" )
+	else if ( g_BaseMode == "scavenge" )
 	{
 		devchap( "BASE SCAVENGE" );
 

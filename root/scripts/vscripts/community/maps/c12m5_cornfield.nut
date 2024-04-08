@@ -36,6 +36,7 @@ function DoRoundFixes()
 		make_clip( "_cooponly_idle_warp", "Survivors", 1, "-81 -37 0", "55 35 1102", "8849 3493 760" );
 		make_clip( "_nav_and_stuckwarp", "Everyone", 1, "-45 -2 -62", "163 6 58", "6485 1090 308" );
 	}
+
 	if ( HasPlayerControlledZombies() )
 	{
 		kill_funcinfclip( 3833.37 );		// Delete clip blocking access to vast start perimeter and one-way drop

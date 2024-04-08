@@ -36,7 +36,7 @@ function DoRoundFixes()
 	make_clip( "_ladderqol_orangebags", "SI Players and AI", 1, "-29 -23 27", "24 32 32", "10660 5215 16", "-45 0 0" );
 	make_clip( "_genroomrail_smoother1", "Everyone", 1, "-1 -33 0", "0 34 40", "7285 3633 248" );
 	make_clip( "_genroomrail_smoother2", "Everyone", 1, "-1 -65 0", "0 66 40", "7285 2878 248" );
-	
+
 	local rail01_model = "models/props_unique/handrail_subway01.mdl";
 	local rail02_model = "models/props_unique/handrail_subway02.mdl";
 	local rail_name = "_invisible_railing";
@@ -72,7 +72,7 @@ function DoRoundFixes()
 		make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
 		make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 
@@ -144,8 +144,7 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_cosmetic_oobstep", "models/props/cs_office/vending_machine.mdl", "7366 3801 270", "90 0 0", "shadow_no", "solid_no" );
 	}
-
-	if ( g_MutaMode == "mutation19" )
+	else if ( g_MutaMode == "mutation19" )
 	{
 		// Multiple tunnel stuck spawns that aren't accessible in Survival,
 		// that need to only be fixed for Taaannnk! Mutation. Navmesh is

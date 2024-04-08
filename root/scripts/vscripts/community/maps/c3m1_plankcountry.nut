@@ -79,7 +79,7 @@ function DoRoundFixes()
 
 		make_clip(	"_cliprework_jonesroof",	"Survivors",	1,	"-276 -296 -396",	"276 296 396",		"-8304 7216 628" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

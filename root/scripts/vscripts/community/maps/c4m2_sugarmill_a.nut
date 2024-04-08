@@ -94,7 +94,7 @@ function DoRoundFixes()
 		make_clip( "_commentary_factoryhopup_a", "Survivors", 1, "-70 -11 -8", "38 11 28", "1214 -4856 168" );
 		make_clip( "_commentary_factoryhopup_b", "Survivors", 1, "-48 -11 -8", "8 11 88", "1136 -4856 108" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

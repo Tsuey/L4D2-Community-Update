@@ -13,7 +13,6 @@ PrecacheModel( "models/props_misc/wrongway_sign01_optimized.mdl" );
 
 function DoRoundFixes()
 {
-	
 	make_clip(	"_permstuck_tarptree",		"Everyone",	1,	"-17 -69 -17",		"17 17 17",		"1166 3794 191" );
 	make_clip(	"_commonhop_windowsill",	"Survivors",	1,	"-6 -216 0",		"6 216 800",		"539 2861 237" );
 	make_clip(	"_curvejump_pixelperfect",	"Survivors",	1,	"-24 -64 -128",		"24 64 128",		"4784 3785 83" );
@@ -56,7 +55,7 @@ function DoRoundFixes()
 	make_prop( "dynamic", "_cosmetic_right_plywood", "models/props_highway/plywood_02.mdl", "1450 1615 621", "-3 0 90", "shadow_no", "solid_no" );
 	make_clip( "_cosmetic_right_collision", "SI Players and AI", 1, "-17 -18 -30", "73 14 6", "1400 1637 542" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip(	"_ghostgrief_tarpledge",	"Survivors",	1,	"-4 -313 -145",		"4 466 1337",		"1148 4257 96" );
 		make_clip( "_cliprework_bridgeroof", "Survivors", 1, "-218 -166 -4", "298 186 8", "927 4579 302" );

@@ -33,7 +33,7 @@ function DoRoundFixes()
 	make_clip( "_commentary_oob_bridgeexplosion", "Everyone", 1, "-1338 -1128 -8", "8 8 857", "6489 -5161 103" );
 	make_clip( "_commentary_clipgap_bridge", "Survivors", 1, "-512 -8 -8", "8 8 735", "6969 -3864 225" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip(	"_stuckwarp_wrongwaya",		"SI Players",	1,	"-82.5 -201 -111",	"82.5 201 111",		"6275 9035 242" );
 		make_clip(	"_stuckwarp_wrongwayb",		"SI Players",	1,	"-21.5 -276 -111",	"21.5 276 111",		"6336 8960 242" );

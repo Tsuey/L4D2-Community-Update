@@ -18,7 +18,7 @@ function DoRoundFixes()
 		make_clip( "_clipextend_arena_tree", "Survivors", 1, "-158 -137 0", "152 165 284", "9054 49 740" );
 		make_clip( "_booster_lonerpipe", "Survivors", 1, "-13 -12 0", "14 10 475", "9236 750 550" );
 	}
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	else
 	{
 		devchap( "BASE COOP" );
 

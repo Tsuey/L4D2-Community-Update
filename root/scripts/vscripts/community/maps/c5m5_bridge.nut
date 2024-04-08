@@ -66,7 +66,7 @@ function DoRoundFixes()
 		make_clip( "_solidify_alt_stuckwarp3", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6034 729" );
 		make_clip( "_solidify_alt_stuckwarp4", "Survivors", 1, "-86 -10 -37", "15 11 32", "7145 6617 729" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

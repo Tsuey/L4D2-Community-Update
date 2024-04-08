@@ -20,7 +20,7 @@ function DoRoundFixes()
 		make_clip( "_commentary_lower_windows_e", "Everyone", 1, "-8 -56 -570", "4 8 8", "1654 6584 2473" );
 		make_clip( "_commentary_lower_windows_f", "Everyone", 1, "-8 -56 -570", "4 8 8", "1654 6456 2473" );
 	}
-	if ( g_BaseMode == "versus" )
+	else if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 

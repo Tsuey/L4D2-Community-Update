@@ -66,7 +66,7 @@ function DoRoundFixes()
 		navConnection3.Disconnect(navMain2);
 		navConnection4.Disconnect(navMain2);
 	}
-	if ( g_BaseMode == "scavenge" )
+	else if ( g_BaseMode == "scavenge" )
 	{
 		devchap( "BASE SCAVENGE" );
 

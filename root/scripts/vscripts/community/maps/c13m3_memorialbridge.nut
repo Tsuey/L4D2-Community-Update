@@ -52,7 +52,7 @@ function DoRoundFixes()
 
 		patch_ladder( "-410.09 -4121.79 1386", "15 15 10" );
 	}
-	if ( g_BaseMode == "versus" )
+	else if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 

@@ -104,8 +104,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_versussurvivalfence2_cloned_tunnelmid", "-9478.5 -7280 -384", "155 0 -410" );
 		make_ladder( "_ladder_versussurvivalfence3_cloned_tunnelmid", "-9478.5 -7280 -384", "155 -45 -410" );
 	}
-
-	if ( g_MutaMode == "mutation19" )
+	else if ( g_MutaMode == "mutation19" )
 	{
 		// Excessively problematic map, most specifically the end area, so just
 		// delete all of these -- Tanks can get out of the map and venture to

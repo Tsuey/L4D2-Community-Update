@@ -6,7 +6,7 @@ PrecacheModel( "models/props_urban/gas_meter.mdl" );
 PrecacheModel( "models/props_rooftop/vent_large1.mdl" );
 
 function DoRoundFixes()
-{	
+{
 	make_clip( "_booster_dualwindows", "Survivors", 1, "-10 -168 -1", "10 140 89", "1953 561 178", "0 7 0" );
 	make_clip( "_frontloader_smoother", "Everyone", 1, "-14 -53 0", "27 53 32", "836 1612 -148" );
 	make_clip( "_ghostgrief_noio_gate1", "Everyone", 1, "-3 -39 0", "3 39 32", "2547 5704 -950" );
@@ -56,7 +56,7 @@ function DoRoundFixes()
 
 		EntFire( "button_minifinale", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_minifinale_clip:Kill::0:-1" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

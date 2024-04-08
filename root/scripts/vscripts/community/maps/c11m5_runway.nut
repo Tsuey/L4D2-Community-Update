@@ -19,6 +19,7 @@ function DoRoundFixes()
 	{
 		make_clip( "_nav_skybridge", "Survivors", 1, "-643 -102 0", "878 106 1427", "-6035 8761 32", "0 45 0" );
 	}
+
 	if ( HasPlayerControlledZombies() )
 	{
 		EntFire( "worldspawn", "RunScriptFile", "community/c11m5_versus_planecrash" );

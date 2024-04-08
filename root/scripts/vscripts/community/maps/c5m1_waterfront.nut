@@ -38,7 +38,7 @@ function DoRoundFixes()
 	make_clip( "_commentary_clipgap_endfence", "Survivors", 1, "-176 -32 -256", "176 32 256", "-4079 -1120 -120" );
 	make_prop( "dynamic", "_propladder_plankb", "models/props_swamp/plank001b_192.mdl", "-2176 -2538 -320", "0 0 35" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip( "_ledgehang_startfenceleft", "Survivors", 1, "-16 -48 0", "10 48 379", "589 -142 -251", "0 29 0" );
 		make_clip( "_ledgehang_startfenceright", "Survivors", 1, "-8 -24 0", "8 24 360", "599 45 -232", "0 -15 0" );

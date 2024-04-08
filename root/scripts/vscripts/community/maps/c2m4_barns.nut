@@ -59,7 +59,7 @@ function DoRoundFixes()
 
 		EntFire( g_UpdateName + "_outhouse_saferoof", "Kill" );
 	}
-	if ( g_BaseMode == "versus" )
+	else if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 
@@ -71,7 +71,7 @@ function DoRoundFixes()
 		make_clip( "_commentary_shortcut_generator_a", "Survivors", 1, "-5 -5 -98", "5 5 98", "-1721 373 -94" );
 		make_clip( "_commentary_shortcut_generator_b", "Survivors", 1, "-28 -20 -504", "28 20 504", "-1718.5 376 520" );
 	}
-	if ( g_BaseMode == "survival" )
+	else if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
 

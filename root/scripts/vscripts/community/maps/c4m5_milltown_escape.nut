@@ -50,6 +50,7 @@ function DoRoundFixes()
 		local navConnection = NavMesh.GetNearestNavArea(Vector(-7145.000000, 7415.000000, 116.481155), 16, true, true);
 		navConnection.Disconnect(navMain);
 	}
+
 	if ( HasPlayerControlledZombies() )
 	{
 		make_brush( "_losfix_burger_gen",	"-24 -1 -8",	"24 1 8",	"-5448 6765 107" );
