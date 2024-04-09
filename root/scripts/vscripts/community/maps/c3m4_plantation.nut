@@ -26,7 +26,7 @@ function DoRoundFixes()
 		make_clip( "_stuckwarp_understairs", "Everyone", 1, "4 -55 -25", "39 57 21", "2816 119 162" );
 		make_clip( "_booster_scaffoldpins", "Survivors", 1, "-199 -1 0", "146 9 909", "527 177 243" );
 	}
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	if ( g_MutaMode == "coop" || g_MutaMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
 		local navMain = NavMesh.GetNearestNavArea(Vector(2377.853516, 161.838699, 194.000000), 16, true, true);

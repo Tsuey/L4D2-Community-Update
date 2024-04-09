@@ -76,7 +76,7 @@ function DoRoundFixes()
 
 	EntFire( "trigger_finale", "AddOutput", "UseStart worldspawn:CallScriptFunction:c10m5_rockslide:0:-1" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	if ( g_MutaMode == "coop" || g_MutaMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
 		local navMain = NavMesh.GetNearestNavArea(Vector(1612.500000, -3662.500000, 26.890617), 16, true, true)

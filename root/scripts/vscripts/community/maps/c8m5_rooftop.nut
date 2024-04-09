@@ -54,17 +54,20 @@ function DoRoundFixes()
 
 		make_ladder( "_ladder_saferoomlulz_cloned_rooftopmain", "5924 8561.1 6018", "13896 2362 -447", "0 90 0", "0 1 0", 0 );
 
-		// Get nav tiles by position because IDS can change if edited later on
-		local navMain1 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8499.918945, 6097.730957), 16, true, true);
-		local navMain2 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8450.000000, 6097.730957), 16, true, true);
-		local navConnection1 = NavMesh.GetNearestNavArea(Vector(5518.500000, 8468.500000, 6000.031250), 16, true, true);
-		local navConnection2 = NavMesh.GetNearestNavArea(Vector(5627.500000, 8495.000000, 6153.142578), 16, true, true);
-		local navConnection3 = NavMesh.GetNearestNavArea(Vector(5627.500000, 8442.500000, 6153.142578), 16, true, true);
-		local navConnection4 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8412.500000, 6097.730957), 16, true, true);
-		navConnection1.Disconnect(navMain1);
-		navConnection2.Disconnect(navMain1);
-		navConnection3.Disconnect(navMain2);
-		navConnection4.Disconnect(navMain2);
+		if ( g_MutaMode == "coop" || g_MutaMode == "realism" )
+		{
+			// Get nav tiles by position because IDS can change if edited later on
+			local navMain1 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8499.918945, 6097.730957), 16, true, true);
+			local navMain2 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8450.000000, 6097.730957), 16, true, true);
+			local navConnection1 = NavMesh.GetNearestNavArea(Vector(5518.500000, 8468.500000, 6000.031250), 16, true, true);
+			local navConnection2 = NavMesh.GetNearestNavArea(Vector(5627.500000, 8495.000000, 6153.142578), 16, true, true);
+			local navConnection3 = NavMesh.GetNearestNavArea(Vector(5627.500000, 8442.500000, 6153.142578), 16, true, true);
+			local navConnection4 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8412.500000, 6097.730957), 16, true, true);
+			navConnection1.Disconnect(navMain1);
+			navConnection2.Disconnect(navMain1);
+			navConnection3.Disconnect(navMain2);
+			navConnection4.Disconnect(navMain2);
+		}
 	}
 	else if ( g_BaseMode == "scavenge" )
 	{

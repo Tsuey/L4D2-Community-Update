@@ -38,7 +38,7 @@ function DoRoundFixes()
 
 		EntFire( "finale_button_unlocker", "AddOutput", "OnEntireTeamEndTouch finaleswitch_initial:Lock::0:-1" );
 	}
-	else
+	else if ( g_MutaMode == "coop" || g_MutaMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
 		local navMain = NavMesh.GetNearestNavArea(Vector(4766.412109, 7269.738281, 96.031250), 16, true, true)

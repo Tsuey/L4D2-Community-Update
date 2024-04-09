@@ -43,7 +43,7 @@ function DoRoundFixes()
 	make_clip( "_commentary_booster_burgertree_e", "Survivors", 1, "-178 -136 -608", "178 136 608", "-5397 7956 928" );
 	make_clip( "_commentary_booster_burgertree_f", "Survivors", 1, "-178 -134 -628", "178 134 628", "-6806 7205 908" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	if ( g_MutaMode == "coop" || g_MutaMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
 		local navMain = NavMesh.GetNearestNavArea(Vector(-7188.924805, 7411.930664, 85.820847), 16, true, true);
