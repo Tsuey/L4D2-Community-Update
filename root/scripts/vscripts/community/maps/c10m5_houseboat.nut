@@ -79,8 +79,7 @@ function DoRoundFixes()
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
-		make_trig_godspot([
-			Vector(1623, -3652, 38),
+		make_trig_godspot( Vector(1623, -3652, 38), [
 			Vector(1750, -3655, -101),
 			Vector(1625, -3527, -62),
 			Vector(1537, -3650, -94),

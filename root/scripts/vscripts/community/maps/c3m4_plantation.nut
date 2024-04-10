@@ -29,11 +29,10 @@ function DoRoundFixes()
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
-		make_trig_godspot([
-			Vector(2378, 162, 194),
+		make_trig_godspot( Vector(2378, 162, 194), [
 			Vector(2300, 162, 131),
 			Vector(2337, 120, 232)
-		])
+		]);
 	}
 	if ( g_BaseMode == "versus" )
 	{

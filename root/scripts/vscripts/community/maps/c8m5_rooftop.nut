@@ -55,8 +55,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_saferoomlulz_cloned_rooftopmain", "5924 8561.1 6018", "13896 2362 -447", "0 90 0", "0 1 0", 0 );
 
 		// Get nav tiles by position because IDS can change if edited later on
-		make_trig_godspot([
-			Vector(5576, 8500, 6097),
+		make_trig_godspot( Vector(5576, 8500, 6097), [
 			Vector(5518, 8468, 6000),
 			Vector(5627, 8495, 6153),
 			Vector(5576, 8450, 6098)

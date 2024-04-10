@@ -91,10 +91,9 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
 
 		// Get nav tiles by position because IDS can change if edited later on
-		make_trig_godspot([
-			Vector(-3397, 3450, -112),
+		make_trig_godspot( Vector(-3397, 3450, -112), [
 			Vector(-3400, 3400, -166)
-		])
+		]);
 	}
 	if ( g_BaseMode == "versus" )
 	{

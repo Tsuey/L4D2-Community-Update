@@ -46,10 +46,9 @@ function DoRoundFixes()
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
-		make_trig_godspot([
-			Vector(-7189, 7412, 86),
+		make_trig_godspot(Vector(-7189, 7412, 86), [
 			Vector(-7145, 7415, 116)
-		])
+		]);
 	}
 	if ( HasPlayerControlledZombies() )
 	{
