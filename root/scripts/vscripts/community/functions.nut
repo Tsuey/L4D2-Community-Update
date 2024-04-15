@@ -178,7 +178,7 @@ function make_navblock ( user_strTargetname,
 			+ " w/ " + user_strState + " @ setpos_exact " + user_strOrigin + "\n" );
 	}
 }
-scripthelp_make_navblock <- @"Creates a trigger which activates/deactivates a godspot when all survivors start/end touching the trigger" 
+scripthelp_make_trig_godspot <- @"Creates a trigger which activates/deactivates a godspot when all survivors start/end touching the trigger" 
 function make_trig_godspot(godspot_area_origin, disconnect_areas_origins, name="_dynamic_godspot") {
 	local area_origins = [godspot_area_origin];
 	area_origins.extend(disconnect_areas_origins);
