@@ -93,7 +93,7 @@ function DoRoundFixes()
 		// Get nav tiles by position because IDS can change if edited later on
 		make_trig_godspot( Vector(-3397, 3450, -112), [
 			Vector(-3400, 3400, -166)
-		]);
+		], 30);
 	}
 	if ( g_BaseMode == "versus" )
 	{

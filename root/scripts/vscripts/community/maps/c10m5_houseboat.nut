@@ -84,7 +84,7 @@ function DoRoundFixes()
 			Vector(1625, -3527, -62),
 			Vector(1537, -3650, -94),
 			Vector(1600, -3735, -123)
-		]);
+		], 25, 25);
 	}
 	if ( g_BaseMode == "versus" )
 	{

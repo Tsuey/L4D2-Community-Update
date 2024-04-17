@@ -178,8 +178,8 @@ function make_navblock ( user_strTargetname,
 			+ " w/ " + user_strState + " @ setpos_exact " + user_strOrigin + "\n" );
 	}
 }
-scripthelp_make_trig_godspot <- @"Creates a trigger which activates/deactivates a godspot when all survivors start/end touching the trigger" 
-function make_trig_godspot(godspot_area_origin, disconnect_areas_origins, name="_dynamic_godspot") {
+scripthelp_make_trig_godspot <- @"Creates a trigger which activates/deactivates a godspot when all survivors start/end touching the trigger"
+function make_trig_godspot(godspot_area_origin, disconnect_areas_origins, xbloat=5, ybloat=5, name="_dynamic_godspot") {
 	local area_origins = [godspot_area_origin];
 	area_origins.extend(disconnect_areas_origins);
 	local areas = [];
@@ -196,8 +196,8 @@ function make_trig_godspot(godspot_area_origin, disconnect_areas_origins, name="
 
 	local trigger = SpawnEntityFromTable("script_trigger_multiple", {
 		targetname = g_UpdateName + name,
-		origin = godspot.GetCenter() + Vector(0,0,30),
-		extent = Vector(5 + godspot.GetSizeX() / 2, 5 + godspot.GetSizeY() / 2, 30),
+		origin = godspot.GetCenter() + Vector(0,0,50),
+		extent = Vector(xbloat + godspot.GetSizeX() / 2, ybloat + godspot.GetSizeY() / 2, 30),
 		entireteam = 2,
 		allowincap = 1,
 		spawnflags = 1,
