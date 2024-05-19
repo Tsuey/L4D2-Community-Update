@@ -36,7 +36,7 @@ Rule C6M3PlayerNiceShotBiker
 
 Rule PlayerNiceShotBiker
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsBiker IssuerNotSoClose IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking ChanceToFire30Percent
+	criteria ConceptPlayerNiceShot IsNotCoughing IsBiker IssuerClose IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeaking ChanceToFire30Percent
 	Response C6M3PlayerNiceShotBiker
 }
 
