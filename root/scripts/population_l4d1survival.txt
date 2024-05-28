@@ -1,0 +1,740 @@
+Population
+{
+	//------------------------------------------------------------------------
+	// Areas are defined in the map or the nav file.  Right now we're using
+	// nav place names.  If no place name is used, we look for 'default'.
+	// Populations are lists of models, with percentages adding up to 100.
+	// Model names should be specified without the .mdl extension, and
+	// without the directory name (this assumes all infected models are in
+	// models/infected).
+
+	
+
+	//------------------------------------------------------------------------
+	default
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	15
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+	}
+
+
+	defaultcemetery
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	15
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+	}
+
+
+
+	defaultmilltown
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+	defaultmilltown_mob
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+
+	defaultsugarmill
+	{
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+
+	defaultsugarmill_mob
+	{
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+
+	defaultmilltown_rain
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+	defaultmilltown_rain_mob
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+
+	defaultsugarmill_rain
+	{
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+
+	defaultsugarmill_rain_mob
+	{
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+	
+	// C3 
+	//------------------------------------------------------------------------
+	defaultswamp
+	{
+		common_male_rural01 	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+		deepswamp
+		{
+			common_male_rural01 	50
+			common_female_rural01	20
+			common_police_male01	10
+			common_military_male01	10
+			common_worker_male01	10
+		}
+		deepswamp_parachutist
+		{
+			common_male_rural01 	50
+			common_female_rural01	20
+			common_police_male01	10
+			common_military_male01	10
+			common_worker_male01	10
+		}
+	
+
+	//------------------------------------------------------------------------
+	test_common_male_suit
+	{
+		common_male_suit	100
+	}
+
+
+	//Urban Populations and sub-populations
+	//------------------------------------------------------------------------
+	defaulturban
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	15
+	}
+
+		//------------------------------------------------------------------------
+		police
+		{
+			common_male01		20
+			common_female01		20
+			common_military_male01	10
+			common_police_male01 	50
+		}
+
+		//------------------------------------------------------------------------
+		maintenance
+		{
+			common_male01		25
+			common_female01		20
+			common_military_male01	20
+			common_worker_male01	35
+		}
+
+		//------------------------------------------------------------------------
+		hospitalgrounds
+		{
+			common_male01		20
+			common_female01		20
+			common_police_male01	15
+			common_military_male01	15
+			common_worker_male01	15
+			common_male_suit 	15
+		}
+
+
+
+	//------------------------------------------------------------------------
+	hospital
+	{
+		common_male01		15
+		common_patient_male01 	40
+		common_worker_male01	15
+		common_female_nurse01	15
+		common_surgeon_male01	15
+	}
+
+		//------------------------------------------------------------------------
+		hospitalconstruction
+		{
+			common_patient_male01 	20
+			common_worker_male01	30
+			common_female_nurse01	20
+			common_surgeon_male01	10
+			common_male01	 	20
+		}
+
+
+
+	//------------------------------------------------------------------------
+	airport
+	{
+		common_female01			20
+		common_male_suit 		20
+		common_worker_male01		15
+		common_male_baggagehandler_01	15
+		common_tsaagent_male01		15
+		common_male_pilot		15
+	}
+	
+		//------------------------------------------------------------------------
+		airportfinale
+		{
+			common_female01			10
+			common_male_suit 		10
+			common_worker_male01		10
+			common_male_baggagehandler_01	30
+			common_tsaagent_male01		20
+			common_male_pilot		20
+		}
+	
+
+
+
+	//Rural Populations and sub-populations
+	//------------------------------------------------------------------------
+	defaultrural
+	{
+		common_male_rural01 	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+
+	//Adding CEDA for Campaign 5
+	//------------------------------------------------------------------------
+	crescentcity
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	15
+	}
+		busstation
+		{
+			common_male01		30
+			common_female01		25
+			common_police_male01	10
+			common_military_male01	10
+			common_worker_male01	10
+			common_male_suit 	15
+		}
+
+
+	//Minimizing the types for memory
+	//------------------------------------------------------------------------
+	frenchquarter
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	15
+	}
+		ceda
+		{
+			common_male01		30
+			common_female01		25
+			common_police_male01	10
+			common_military_male01	10
+			common_worker_male01	10
+			common_male_suit 	15
+		}
+
+	//Adding CEDA guys to Campaign 1
+	//------------------------------------------------------------------------
+	c1streets
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	15
+	}
+
+
+	//Adding Clown guys to Campaign 2
+	//------------------------------------------------------------------------
+	whisperingoaks
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+	//Minimizing the types for memory in c3m1
+	//------------------------------------------------------------------------
+	gatorpark
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+
+//------------------------------------------------------------------------
+//------------------------------------------------------------------------
+//		CAMPAIGN 6
+//------------------------------------------------------------------------
+//------------------------------------------------------------------------
+
+	riverbank
+	{
+		common_male_rural01 	50
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	20
+		
+		survivor_biker_light	0
+		survivor_teenangst_light	0
+	}
+		riverbank_police
+		{
+			common_male01		20
+			common_female01		20
+			common_military_male01	10
+			common_police_male01 	50
+		}
+
+		riverbank_wedding
+		{
+			common_male01			20
+			common_female01			15
+			common_police_male01	10
+			common_worker_male01	5
+			common_male_suit 		50
+		}
+
+
+	redlight
+	{
+		common_male_rural01 	50
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	20
+	}
+
+	redlight_bikers
+	{
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+
+	port
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		
+		survivor_teenangst	0
+		survivor_biker	0
+		survivor_manager 0
+	}
+
+
+
+//------------------------------------------------------------------------
+
+	//------------------------------------------------------------------------
+	// River Populations and sub-populations
+	//------------------------------------------------------------------------
+	river
+	{
+		common_male_rural01 	50
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	20
+	}
+	
+	riverintro
+	{
+		common_military_male01	100
+	}
+
+	riverarena
+	{
+		common_male_rural01 	10
+		common_female_rural01	5
+		common_military_male01	75
+		common_worker_male01	10
+	}
+	
+	riveratrium
+	{
+		common_male01			20
+		common_female01			15
+		common_police_male01	10
+		common_worker_male01	5
+		common_male_suit 		50
+	}
+	
+	riverfreighter
+	{
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+
+	riverport
+	{
+		common_male_rural01	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+	
+	//------------------------------------------------------------------------
+	default_l4d1
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	15
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+	}
+
+	defaultlots_l4d1
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	15
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+	}
+
+	//Urban Populations and sub-populations
+	//------------------------------------------------------------------------
+	defaulturban_l4d1
+	{
+		common_male01		30
+		common_female01		25
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	15
+	}
+
+		//------------------------------------------------------------------------
+		police_l4d1
+		{
+			common_male01		20
+			common_female01		20
+			common_military_male01	10
+			common_police_male01 	50
+		}
+
+		//------------------------------------------------------------------------
+		constructionzone_l4d1
+		{
+			common_male01		30
+			common_female01		25
+			common_police_male01	10
+			common_military_male01	10
+			common_worker_male01	10
+			common_male_suit 	15
+		}
+
+		//------------------------------------------------------------------------
+		maintenance_l4d1
+		{
+			common_male01		25
+			common_female01		20
+			common_military_male01	20
+			common_worker_male01	35
+		}
+
+		maintenancesewer_l4d1
+		{
+			common_male01		25
+			common_female01		20
+			common_military_male01	20
+			common_worker_male01	35
+		}
+
+		maintenancestreet_l4d1
+		{
+			common_male01		25
+			common_female01		20
+			common_military_male01	20
+			common_worker_male01	35
+		}
+
+		//------------------------------------------------------------------------
+		hospitalgrounds_l4d1
+		{
+			common_male01		20
+			common_female01		20
+			common_police_male01	15
+			common_military_male01	15
+			common_worker_male01	15
+			common_male_suit 	15
+		}
+
+
+
+	//------------------------------------------------------------------------
+	hospital_l4d1
+	{
+		common_male01		15
+		common_patient_male01 	40
+		common_worker_male01	15
+		common_female_nurse01	15
+		common_surgeon_male01	15
+	}
+
+		//------------------------------------------------------------------------
+		hospitalconstruction_l4d1
+		{
+			common_patient_male01 	20
+			common_worker_male01	30
+			common_female_nurse01	20
+			common_surgeon_male01	10
+			common_male01	 	20
+		}
+
+		//------------------------------------------------------------------------
+		hospitalrooftop_l4d1
+		{
+			common_male01		15
+			common_patient_male01 	40
+			common_worker_male01	15
+			common_female_nurse01	15
+			common_surgeon_male01	15
+		}
+
+
+
+	//------------------------------------------------------------------------
+	airport_l4d1
+	{
+		common_female01			20
+		common_male_suit 		20
+		common_worker_male01		15
+		common_male_baggagehandler_01	15
+		common_tsaagent_male01		15
+		common_male_pilot		15
+	}
+	
+		//------------------------------------------------------------------------
+		airportfinale_l4d1
+		{
+			common_female01			10
+			common_male_suit 		10
+			common_worker_male01		10
+			common_male_baggagehandler_01	30
+			common_tsaagent_male01		20
+			common_male_pilot		20
+		}
+	
+
+
+
+	//Rural Populations and sub-populations
+	//------------------------------------------------------------------------
+	defaultrural_l4d1
+	{
+		common_male_rural01 	50
+		common_female_rural01	20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+	}
+
+		ruralsewer_l4d1
+		{
+			common_male_rural01 	50
+			common_female_rural01	20
+			common_police_male01	10
+			common_military_male01	10
+			common_worker_male01	10
+		}
+
+		ruralstreet_l4d1
+		{
+			common_male_rural01 	50
+			common_female_rural01	20
+			common_police_male01	10
+			common_military_male01	10
+			common_worker_male01	10
+		}
+
+	//------------------------------------------------------------------------
+	// River Populations and sub-populations
+	//------------------------------------------------------------------------
+	river_l4d1
+	{
+		common_male_rural01 	50
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	20
+	}
+
+	riverintro_l4d1
+	{
+		common_military_male01	100
+	}
+
+	riverarena_l4d1
+	{
+		common_male_rural01 	10
+		common_female_rural01	5
+		common_military_male01	75
+		common_worker_male01	10
+	}
+	
+	riveratrium_l4d1
+	{
+		common_male01			20
+		common_female01			15
+		common_police_male01	10
+		common_worker_male01	5
+		common_male_suit 		50
+	}
+	
+	riverfreighter_l4d1
+	{
+		common_male_rural01 	20
+		common_female_rural01	20
+		common_military_male01	10
+		common_worker_male01	50
+	}
+
+	riverport_l4d1
+	{
+		common_worker_male01	35
+		common_female_rural01	10
+		common_male01			35
+		common_male_rural01		20
+	}
+
+	//------------------------------------------------------------------------
+	//Lighthouse Populations and sub-populations
+	//------------------------------------------------------------------------
+	junkyardrural_l4d1
+	{
+		common_male01		20
+		common_female01		20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+		common_male_rural01 	10
+		common_female_rural01	10
+	}
+
+	junkyard_l4d1
+	{
+		common_male01		20
+		common_female01		20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+		common_male_rural01 	10
+		common_female_rural01	10
+	}
+
+	junkyardroad_l4d1
+	{
+		common_male01		20
+		common_female01		20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+		common_male_rural01 	10
+		common_female_rural01	10
+	}
+
+	estuary_l4d1
+	{
+		common_male01		20
+		common_female01		20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+		common_male_rural01 	10
+		common_female_rural01	10
+	}
+
+	lighthouserural_l4d1
+	{
+		common_male01		20
+		common_female01		20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+		common_male_rural01 	10
+		common_female_rural01	10
+	}
+
+	lighthouse_l4d1
+	{
+		common_male01		20
+		common_female01		20
+		common_police_male01	10
+		common_military_male01	10
+		common_worker_male01	10
+		common_male_suit 	10
+		common_male_rural01 	10
+		common_female_rural01	10
+	}
+}
