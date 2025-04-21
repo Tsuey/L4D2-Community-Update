@@ -14910,8 +14910,14 @@ Response _C1M1_ElevatorHello2AliveName2Gambler
 }
 Rule _C1M1_ElevatorHello2AliveName2Gambler
 {
-	criteria Concept_C1M1_ElevatorHello2AliveName2 IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	criteria Concept_C1M1_ElevatorHello2AliveName2 IsGambler FromIsNotMechanic AutoIsNotScavenge AutoIsNotSurvival
 	Response _C1M1_ElevatorHello2AliveName2Gambler
+}
+
+Rule _C1M1_ElevatorHello2AliveName2FromEllisGambler
+{
+	criteria Concept_C1M1_ElevatorHello2AliveName2 IsGambler FromIsMechanic AutoIsNotScavenge AutoIsNotSurvival
+	Response NoResponse
 }
 
 Response _C1M1_ElevatorHello2AliveExtra1Gambler
