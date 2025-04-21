@@ -645,17 +645,6 @@ Rule PlayerWorldC3M1FerryCrossingE03Producer
 	Response PlayerWorldC3M1FerryCrossingE03Producer
 }
 
-Response PlayerWorldC3M1FerryCrossingN2Producer
-{
-	scene "scenes/Producer/WorldC3M109.vcd"  then mechanic _C3M1CrazyMilitants foo:0 0.1 //Yeah, let's just cut through the gator park and visit the crazy militants in the swamp, sound good?
-}
-Rule PlayerWorldC3M1FerryCrossingN2Producer
-{
-	criteria ConceptWorldC3M1FerryCrossingN2 IsProducer AutoIsNotScavenge AutoIsNotSurvival
-	Response PlayerWorldC3M1FerryCrossingN2Producer
-}
-
-
 //--------------------------------------------------------------------------------------------------------------
 // AutoResponder
 //--------------------------------------------------------------------------------------------------------------
@@ -8253,6 +8242,7 @@ Response PlayerRemarkWorldC3M1FerryNagProducer
 	scene "scenes/Producer/WorldC3M114.vcd"  //Right. We should try the village.
 	scene "scenes/Producer/WorldC3M116.vcd"  //Okay, let's get ready and then call the ferry.
 	scene "scenes/Producer/WorldC3M108.vcd"  //Earl's Gator Village? This just keeps getting better.
+	scene "scenes/Producer/WorldC3M109.vcd"  then mechanic _C3M1CrazyMilitants foo:0 0.1 //Yeah, let's just cut through the gator park and visit the crazy militants in the swamp, sound good?
 	scene "scenes/Producer/WorldC3M1B03.vcd" then mechanic WorldIntroC3f2 foo:0 0.1 //Based on the location of Whispering Oaks, our previous air speed and accounting for the wind speed, I would place us right at Earl's Gator Village.
 }
 Rule PlayerRemarkWorldC3M1FerryNagProducer
