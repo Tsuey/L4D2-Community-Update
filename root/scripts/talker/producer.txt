@@ -2126,7 +2126,7 @@ Response C5M1_intro004Producer
 {
 	scene "scenes/Producer/World02.vcd"  then any C5M1_intro005 foo:0 0.01 //I'm just happy to be off that boat.
 	scene "scenes/Producer/World01.vcd"  then Mechanic C5M1_intro009 foo:0 0.01 //There's the bridge You sure they're going to be there?
-	scene "scenes/Producer/World04.vcd"  then Mechanic C5M1_intro008 foo:0 0.01 //We're here. Crescent City. I'll tell you now, I'm not showing anyone my tits.
+	scene "scenes/Producer/World04.vcd"  then self IntroEnd foo:0 0.01 //We're here. Crescent City. I'll tell you now, I'm not showing anyone my tits.
 }
 Rule C5M1_intro004Producer
 {
