@@ -14904,6 +14904,16 @@ Rule _C1M1_ElevatorHello2AliveNickIntro1Gambler
 	Response _C1M1_ElevatorHello2AliveNickIntro1Gambler
 }
 
+Response _C1M1_ElevatorHello2AliveName2Gambler
+{
+	scene "scenes/Gambler/WorldC1M1B56.vcd"  then any _C1M1_ElevatorHello2AliveExtra1 foo:0 -0.647 //Name's Nick.
+}
+Rule _C1M1_ElevatorHello2AliveName2Gambler
+{
+	criteria Concept_C1M1_ElevatorHello2AliveName2 IsGambler AutoIsNotScavenge AutoIsNotSurvival
+	Response _C1M1_ElevatorHello2AliveName2Gambler
+}
+
 Response _C1M1_ElevatorHello2AliveExtra1Gambler
 {
 	scene "scenes/Gambler/TransitionClose06.vcd" then from _C1M1_ElevatorHello2AliveExtra2 foo:0 -1.264 //We got lucky!
