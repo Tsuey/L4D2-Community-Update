@@ -218,6 +218,16 @@ Rule C3M4Button202Virgil
 	Response C3M4Button202Virgil
 }
 
+Response C3M4RescueStartVirgil
+{
+	scene "scenes/npcs/Virgil_C3End49.vcd" //Alright, I'm comin'!
+}
+Rule C3M4RescueStartVirgil
+{
+	criteria ConceptC3M4RescueStart AutoIsNotScavenge AutoIsNotSurvival  
+	Response C3M4RescueStartVirgil
+}
+
 Response C3M4GateBlow02Virgil
 {
 	norepeat
@@ -229,7 +239,6 @@ Response C3M4GateBlow02Virgil
 	scene "scenes/npcs/Virgil_C3End46.vcd"  then orator C3M4GateBlow02 foo:0 5 //Come on now, they're comin' after ya now. Get on the boat!
 	scene "scenes/npcs/Virgil_C3End47.vcd"  then orator C3M4GateBlow02 foo:0 5 //Get on the boat, now!
 	scene "scenes/npcs/Virgil_C3End48.vcd"  then orator C3M4GateBlow02 foo:0 5 //Here they come, here they come. Get on the boat!
-	scene "scenes/npcs/Virgil_C3End49.vcd"  then orator C3M4GateBlow02 foo:0 5 //Alright, I'm comin'!
 	scene "scenes/npcs/Virgil_C3End51.vcd"  then orator C3M4GateBlow02 foo:0 5 //Now, come on, come on!
 	scene "scenes/npcs/Virgil_C3End52.vcd"  then orator C3M4GateBlow02 foo:0 5 //Now, come on, now!
 	scene "scenes/npcs/Virgil_C3End53.vcd"  then orator C3M4GateBlow02 foo:0 5 //Woo, now, hurry up, now! Hurry up!
