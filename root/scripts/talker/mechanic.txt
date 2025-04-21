@@ -2358,6 +2358,18 @@ Rule C3M4RescueStartMechanic
 	Response C3M4RescueStartMechanic
 }
 
+Response C3M4RescueStartAloneMechanic
+{
+	print " " then orator C3M4RescueStart foo:0 0
+}
+Rule C3M4RescueStartAloneMechanic
+{
+	criteria ConceptFinalVehicleSpotted IsMechanic IsAlone ismapc3m4_plantation _auto_IsFinaleStarted
+	ApplyContext "_auto_Finale:2:0"
+	applycontexttoworld
+	Response C3M4RescueStartAloneMechanic
+}
+
 Response C3M4BoatNagsMechanic
 {
 	norepeat
@@ -2487,32 +2499,6 @@ Rule C3M4Button203Mechanic
 {
 	criteria ConceptC3M4Button203 IsMechanic FromIsAnOrator _auto_IsTalkingMechanic AutoIsNotScavenge AutoIsNotSurvival
 	Response C3M4Button203Mechanic
-}
-
-Response C3M4ReloadingTankMechanic
-{
-	norepeat
-	scene "scenes/Mechanic/WorldC3M412.vcd"  //Hey, where in the hell is the boat?
-}
-Rule C3M4ReloadingTankMechanic
-{
-	criteria ConceptPlayerReloading IsSurvivor IsNotSpeaking IsMechanic IsNotIncapacitated IsTalk IsTalkMechanic IsNotSaidReloadingTank IsZombiePresentTank IsSaidTankWarn2 IsWorldTalkMechanic ismapc3m4_plantation _auto_IsFinaleStarted
-	ApplyContext "SaidReloadingTank:1:10,SaidTankWarn2:1:20"
-	applycontexttoworld
-	Response C3M4ReloadingTankMechanic
-}
-
-Response PlayerKillTankConfirmationC3M4Mechanic
-{
-	norepeat
-	scene "scenes/Mechanic/WorldC3M413.vcd"  //Where is he coming from that he's takin so long?
-}
-Rule PlayerKillTankConfirmationC3M4Mechanic
-{
-	criteria ConceptKilledZombie IsNotCoughing IsMechanic IsTalk IsTalkMechanic SubjectIsTank IsNotSaidTankDead IsNotAlone IsNotIncapacitated IsWorldTalkMechanic ismapc3m4_plantation IsNotSpeakingWeight0 _auto_IsFinaleStarted
-	ApplyContext "SaidTankDead:1:60,TalkMechanic:1:5"
-	applycontexttoworld
-	Response PlayerKillTankConfirmationC3M4Mechanic
 }
 
 Response C3M4GateBlow01Mechanic

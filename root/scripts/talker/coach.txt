@@ -2223,7 +2223,7 @@ Response C3M4RescueStartCoach
 }
 Rule C3M4RescueStartCoach
 {
-	criteria ConceptFinalVehicleSpotted IsProducer ismapc3m4_plantation _auto_IsFinaleStarted
+	criteria ConceptFinalVehicleSpotted IsCoach ismapc3m4_plantation _auto_IsFinaleStarted
 	ApplyContext "_auto_Finale:2:0"
 	applycontexttoworld
 	Response C3M4RescueStartCoach
