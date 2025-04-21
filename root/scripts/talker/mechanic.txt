@@ -2344,6 +2344,20 @@ Rule InfoRemC3M3Unsanitarya1Mechanic
 //--------------------------------------------------------------------------------------------------------------
 // C3M4
 //--------------------------------------------------------------------------------------------------------------
+Response C3M4RescueStartMechanic
+{
+	scene "scenes/Mechanic/WorldC3M412.vcd" predelay "2,3" //Hey, where in the hell is the boat?
+	scene "scenes/Mechanic/WorldC3M413.vcd" predelay "1" //Where is he coming from that he's takin so long?
+	print " " then orator C3M4RescueStart foo:0 1
+}
+Rule C3M4RescueStartMechanic
+{
+	criteria ConceptFinalVehicleSpotted IsMechanic ismapc3m4_plantation _auto_IsFinaleStarted
+	ApplyContext "_auto_Finale:2:0"
+	applycontexttoworld
+	Response C3M4RescueStartMechanic
+}
+
 Response C3M4BoatNagsMechanic
 {
 	norepeat

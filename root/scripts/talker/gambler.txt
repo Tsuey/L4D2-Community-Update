@@ -1990,6 +1990,18 @@ Rule InfoRemC3M3Unsanitarya2Gambler
 //--------------------------------------------------------------------------------------------------------------
 // C3M4
 //--------------------------------------------------------------------------------------------------------------
+Response C3M4RescueStartGambler
+{
+	print " " then orator C3M4RescueStart foo:0 0
+}
+Rule C3M4RescueStartGambler
+{
+	criteria ConceptFinalVehicleSpotted IsGambler ismapc3m4_plantation _auto_IsFinaleStarted
+	ApplyContext "_auto_Finale:2:0"
+	applycontexttoworld
+	Response C3M4RescueStartGambler
+}
+
 Response C3M4BoatNagsGambler
 {
 	norepeat
