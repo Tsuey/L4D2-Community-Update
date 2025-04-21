@@ -9764,17 +9764,6 @@ Rule PlayerRemarkWorldFootLockerGambler
 	Response PlayerRemarkWorldFootLockerGambler
 }
 
-Response PlayerWorldSignHurricane2Gambler
-{
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting06.vcd" then producer WorldSignHurricane3 foo:0 0.1 //What?
-	scene "scenes/Gambler/WorldC2M433.vcd" then producer WorldSignHurricane3 foo:0 0.1 //What?
-}
-Rule PlayerWorldSignHurricane2Gambler
-{
-	criteria ConceptWorldSignHurricane2 IsNotCoughing IsGambler IsTalk IsTalkGambler IssuerClose IsWorldTalkGambler
-	Response PlayerWorldSignHurricane2Gambler
-}
-
 Response PlayerRemarkWorldSignRestricted2Gambler
 {
 	scene "scenes/Gambler/WorldSigns01.vcd"  //Restricted area my ass (restricted area)

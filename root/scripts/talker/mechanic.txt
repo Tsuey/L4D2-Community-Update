@@ -2661,16 +2661,6 @@ Rule C5M1_intro007Mechanic
 	Response C5M1_intro007Mechanic
 }
 
-Response C5M1_intro008Mechanic
-{
-	scene "scenes/Mechanic/World01.vcd" then self IntroEnd foo:0 0.1 //I'm sorry, Rochelle.  The hell you talking about?
-}
-Rule C5M1_intro008Mechanic
-{
-	criteria ConceptC5M1_intro008 IsMechanic AutoIsNotScavenge AutoIsNotSurvival
-	Response C5M1_intro008Mechanic
-}
-
 Response C5M1_intro009Mechanic
 {
 	scene "scenes/Mechanic/World101.vcd" then self IntroEnd foo:0 0.1 //They better be
@@ -10430,6 +10420,16 @@ Rule PlayerRemarkWorldSignColdBeerMechanic
 	ApplyContext "SaidWorldSignColdBeer:1:0"
 	applycontexttoworld
 	Response PlayerRemarkWorldSignColdBeerMechanic
+}
+
+Response PlayerWorldSignHurricane2Mechanic
+{
+	scene "scenes/Mechanic/World01.vcd" then producer WorldSignHurricane3 foo:0 0.1 //I'm sorry, Rochelle.  The hell you talking about?
+}
+Rule PlayerWorldSignHurricane2Mechanic
+{
+	criteria ConceptWorldSignHurricane2 IsNotCoughing IsMechanic IsTalk IsTalkMechanic IssuerReallyClose IsWorldTalkMechanic
+	Response PlayerWorldSignHurricane2Mechanic
 }
 
 Response PlayerRemarkWorldSignPhotography2Mechanic

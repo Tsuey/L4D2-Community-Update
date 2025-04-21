@@ -12011,17 +12011,6 @@ Rule PlayerWorldSignColdBeer2Coach
 	Response PlayerWorldSignColdBeer2Coach
 }
 
-Response PlayerWorldSignHurricane2Coach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleChat01.vcd" then producer WorldSignHurricane3 foo:0 0.1 //WHAT??
-	scene "scenes/Coach/DLC1_C6M3_FinaleChat02.vcd" then producer WorldSignHurricane3 foo:0 0.1 //WHAT??
-}
-Rule PlayerWorldSignHurricane2Coach
-{
-	criteria ConceptWorldSignHurricane2 IsNotCoughing IsCoach IsTalk IsTalkCoach IssuerReallyClose IsWorldTalkCoach
-	Response PlayerWorldSignHurricane2Coach
-}
-
 Response SurvivorCaughtVomitCoach
 {
 	scene "scenes/Coach/BoomerReaction01.vcd"  //[Reaction noise to boomer vomit - gross and bad]
