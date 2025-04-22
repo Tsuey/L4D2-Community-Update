@@ -10979,7 +10979,7 @@ Rule C4M2LockTheDoorCheckPointGambler
 	Response C4M2LockTheDoorCheckPointGambler
 }
 
-Response GoingToDieCoachCoachGambler
+Response SurvivorVocalizeGoingToDieGambler
 {
 	scene "scenes/Gambler/GoingToDie01.vcd"  then coach coachcoaches foo:0 .5 //I really screwed the pooch back there.
 	scene "scenes/Gambler/GoingToDie02.vcd"  then coach coachcoaches foo:0 .5 //I gotta take better care of myself.
@@ -11004,11 +11004,11 @@ Response GoingToDieCoachCoachGambler
 	scene "scenes/Gambler/GoingToDie25.vcd"  then coach coachcoaches foo:0 .5 //I'm not going to die down here.
 	scene "scenes/Gambler/GoingToDie26.vcd"  then coach coachcoaches foo:0 .5 //I am not dying in the middle of nowhere.
 }
-Rule GoingToDieCoachCoachGambler
+Rule SurvivorVocalizeGoingToDieGambler
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotComplainBlock IsCoachAlive IsCoachNear200 ChanceToFire30Percent IsWorldTalkGambler IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotComplainBlock IsWorldTalkGambler IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
 	ApplyContext "IsComplain:1:25"
-	Response GoingToDieCoachCoachGambler
+	Response SurvivorVocalizeGoingToDieGambler
 }
 
 Response PlayerAlertGiveItemStopGambler
@@ -12676,45 +12676,13 @@ Rule SurvivorVocalizeEmphaticGoC4M2Gambler
 	Response SurvivorVocalizeEmphaticGoC4M2Gambler
 }
 
-Response SurvivorVocalizeGoingToDieGambler
-{
-	scene "scenes/Gambler/GoingToDie01.vcd"  //I really screwed the pooch back there.
-	scene "scenes/Gambler/GoingToDie02.vcd"  //I gotta take better care of myself.
-	scene "scenes/Gambler/GoingToDie03.vcd"  //Not dead yet, but not exactly healthy.
-	scene "scenes/Gambler/GoingToDie04.vcd"  //God damn it! God damn it.  God damn it.
-	scene "scenes/Gambler/GoingToDie05.vcd"  //If I go, you guys gonna miss me.
-	scene "scenes/Gambler/GoingToDie06.vcd"  //I have seriously felt better.
-	scene "scenes/Gambler/GoingToDie07.vcd"  //Pull yourself together man, you're falling apart.
-	scene "scenes/Gambler/GoingToDie08.vcd"  //Don't worry about me, I'll be okay.
-	scene "scenes/Gambler/GoingToDie09.vcd"  //This is not how it's going to end.
-	scene "scenes/Gambler/GoingToDie10.vcd"  //I'm not dead yet!
-	scene "scenes/Gambler/GoingToDie11.vcd"  //You're going to have to do better than that to kill me!
-	scene "scenes/Gambler/GoingToDie12.vcd"  //Quit being a baby, you've felt worse after a night of drinking.
-	scene "scenes/Gambler/GoingToDie13.vcd"  //Ain't this a bitch.
-	scene "scenes/Gambler/GoingToDie14.vcd"  //God damn it I can't believe this.
-	scene "scenes/Gambler/GoingToDie15.vcd"  //Well at least I didn't catch the flu.
-	scene "scenes/Gambler/GoingToDie16.vcd"  //This is some crap
-	scene "scenes/Gambler/GoingToDie17.vcd"  //Don't worry.  I'm not done yet.
-	scene "scenes/Gambler/GoingToDie18.vcd"  //I am sick and tired of being sick and tired.
-	scene "scenes/Gambler/GoingToDie23.vcd"  //What was I thinking coming down here?
-	scene "scenes/Gambler/GoingToDie24.vcd"  //Okay, all right, I can do this. I can do this.
-	scene "scenes/Gambler/GoingToDie25.vcd"  //I'm not going to die down here.
-	scene "scenes/Gambler/GoingToDie26.vcd"  //I am not dying in the middle of nowhere.
-}
-Rule SurvivorVocalizeGoingToDieGambler
-{
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotComplainBlock IsWorldTalkGambler IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
-	ApplyContext "IsComplain:1:25"
-	Response SurvivorVocalizeGoingToDieGambler
-}
-
 Response SurvivorVocalizeGoingToDie3Gambler
 {
-	scene "scenes/Gambler/GoingToDie301.vcd"  //I am not going to make it much longer my friends, I am seriously screwed up.
-	scene "scenes/Gambler/GoingToDie302.vcd"  //All right, I gotta call uncle here.   I need some help.
-	scene "scenes/Gambler/GoingToDie303.vcd"  //Well boys, this looks like its for me.
-	scene "scenes/Gambler/GoingToDie304.vcd"  //Doesn't this beat all.  I am about to die.
-	scene "scenes/Gambler/GoingToDie305.vcd"  //Man, man... It has been a long time since I have felt this bad.
+	scene "scenes/Gambler/GoingToDie301.vcd" then coach coachcoaches foo:0 .5 //I am not going to make it much longer my friends, I am seriously screwed up.
+	scene "scenes/Gambler/GoingToDie302.vcd" then coach coachcoaches foo:0 .5 //All right, I gotta call uncle here.   I need some help.
+	scene "scenes/Gambler/GoingToDie303.vcd" then coach coachcoaches foo:0 .5 //Well boys, this looks like its for me.
+	scene "scenes/Gambler/GoingToDie304.vcd" then coach coachcoaches foo:0 .5 //Doesn't this beat all.  I am about to die.
+	scene "scenes/Gambler/GoingToDie305.vcd" then coach coachcoaches foo:0 .5 //Man, man... It has been a long time since I have felt this bad.
 }
 Rule SurvivorVocalizeGoingToDie3Gambler
 {

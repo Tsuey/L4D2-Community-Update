@@ -11552,7 +11552,7 @@ Rule C4M2LockTheDoorCheckPointMechanic
 	Response C4M2LockTheDoorCheckPointMechanic
 }
 
-Response GoingToDieCoachCoachMechanic
+Response SurvivorVocalizeGoingToDieMechanic
 {
 	scene "scenes/Mechanic/GoingToDie01.vcd"  then coach coachcoaches foo:0 .5 //This was not in my plan.
 	scene "scenes/Mechanic/GoingToDie02.vcd"  then coach coachcoaches foo:0 .5 //I'm hurtin' real bad.
@@ -11579,11 +11579,11 @@ Response GoingToDieCoachCoachMechanic
 	scene "scenes/Mechanic/GoingToDie26.vcd"  then coach coachcoaches foo:0 .5 //Goddamn I hurt!
 	scene "scenes/Mechanic/GoingToDie27.vcd"  then coach coachcoaches foo:0 .5 //I could go for a nap, right now.
 }
-Rule GoingToDieCoachCoachMechanic
+Rule SurvivorVocalizeGoingToDieMechanic
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsNotComplainBlock IsCoachAlive IsCoachNear200 ChanceToFire30Percent IsWorldTalkMechanic IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsNotComplainBlock IsNotOnThirdStrike IsWorldTalkMechanic IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
 	ApplyContext "IsComplain:1:25"
-	Response GoingToDieCoachCoachMechanic
+	Response SurvivorVocalizeGoingToDieMechanic
 }
 
 Response PlayerAlertGiveItemStopMechanic
@@ -13268,46 +13268,12 @@ Rule SurvivorVocalizeEmphaticGoC4M2Mechanic
 	Response SurvivorVocalizeEmphaticGoC4M2Mechanic
 }
 
-Response SurvivorVocalizeGoingToDieMechanic
-{
-	scene "scenes/Mechanic/GoingToDie01.vcd"  //This was not in my plan.
-	scene "scenes/Mechanic/GoingToDie02.vcd"  //I'm hurtin' real bad.
-	scene "scenes/Mechanic/GoingToDie03.vcd"  //I hurt aplenty.
-	scene "scenes/Mechanic/GoingToDie04.vcd"  //I'm all torn up.
-	scene "scenes/Mechanic/GoingToDie05.vcd"  //This ain't right.
-	scene "scenes/Mechanic/GoingToDie06.vcd"  //They knocked the piss out of me.
-	scene "scenes/Mechanic/GoingToDie07.vcd"  //Ohh.....
-	scene "scenes/Mechanic/GoingToDie08.vcd"  //I've got a misery in my bones.
-	scene "scenes/Mechanic/GoingToDie09.vcd"  //I ain't lyin', this hurts!
-	scene "scenes/Mechanic/GoingToDie10.vcd"  //I don't feel right.
-	scene "scenes/Mechanic/GoingToDie11.vcd"  //I think I really hurt something.
-	scene "scenes/Mechanic/GoingToDie12.vcd"  //Oh man, oh man, oh man.
-	scene "scenes/Mechanic/GoingToDie13.vcd"  //Best be findin' me a health kit.
-	scene "scenes/Mechanic/GoingToDie14.vcd"  //I ain't just goin' on, I'm really hurt.
-	scene "scenes/Mechanic/GoingToDie15.vcd"  //Y'all , y'all I'm hurt!
-	scene "scenes/Mechanic/GoingToDie16.vcd"  //Ah hell no, ah hell no.
-	scene "scenes/Mechanic/GoingToDie17.vcd"  //These here zombies are tryin' to kill me.
-	scene "scenes/Mechanic/GoingToDie18.vcd"  //Ahh shit this hurts.
-	scene "scenes/Mechanic/GoingToDie19.vcd"  //Man, I ain't doin' too good.
-	scene "scenes/Mechanic/GoingToDie20.vcd"  //Oh, man, I'm hurtin'.
-	scene "scenes/Mechanic/GoingToDie21.vcd"  //Com come on. I gotta keep up, gotta keep up.
-	scene "scenes/Mechanic/GoingToDie25.vcd"  //I am all tuckered out.
-	scene "scenes/Mechanic/GoingToDie26.vcd"  //Goddamn I hurt!
-	scene "scenes/Mechanic/GoingToDie27.vcd"  //I could go for a nap, right now.
-}
-Rule SurvivorVocalizeGoingToDieMechanic
-{
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsNotComplainBlock IsWorldTalkMechanic IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
-	ApplyContext "IsComplain:1:25"
-	Response SurvivorVocalizeGoingToDieMechanic
-}
-
 Response SurvivorVocalizeGoingToDie3Mechanic
 {
-	scene "scenes/Mechanic/GoingToDie301.vcd"  //Well screw me.  I'm not gonna make it.
-	scene "scenes/Mechanic/GoingToDie302.vcd"  //I reckon if this keeps up, I'm gonna die.
-	scene "scenes/Mechanic/GoingToDie303.vcd"  //I don't mean to be cursing myself, but I think I'm gonna die.
-	scene "scenes/Mechanic/GoingToDie304.vcd"  //I hurt so bad, I don't see right.
+	scene "scenes/Mechanic/GoingToDie301.vcd" then coach coachcoaches foo:0 .5 //Well screw me.  I'm not gonna make it.
+	scene "scenes/Mechanic/GoingToDie302.vcd" then coach coachcoaches foo:0 .5 //I reckon if this keeps up, I'm gonna die.
+	scene "scenes/Mechanic/GoingToDie303.vcd" then coach coachcoaches foo:0 .5 //I don't mean to be cursing myself, but I think I'm gonna die.
+	scene "scenes/Mechanic/GoingToDie304.vcd" then coach coachcoaches foo:0 .5 //I hurt so bad, I don't see right.
 }
 Rule SurvivorVocalizeGoingToDie3Mechanic
 {

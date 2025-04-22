@@ -10103,7 +10103,7 @@ Rule C4M2LockTheDoorCheckPointProducer
 	Response C4M2LockTheDoorCheckPointProducer
 }
 
-Response GoingToDieCoachCoachProducer
+Response SurvivorVocalizeGoingToDieProducer
 {
 	scene "scenes/Producer/GoingToDie01.vcd"  then coach coachcoaches foo:0 .5 //Okay this was a mistake.
 	scene "scenes/Producer/GoingToDie02.vcd"  then coach coachcoaches foo:0 .5 //Okay, this seriously hurts.
@@ -10127,11 +10127,11 @@ Response GoingToDieCoachCoachProducer
 	scene "scenes/Producer/GoingToDie26.vcd"  then coach coachcoaches foo:0 .5 //You have got to be kidding me.
 	scene "scenes/Producer/GoingToDie27.vcd"  then coach coachcoaches foo:0 .5 //I got a plan, let's kill all the zombies. Sound good?
 }
-Rule GoingToDieCoachCoachProducer
+Rule SurvivorVocalizeGoingToDieProducer
 {
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsProducer IsTalk IsTalkProducer IsNotComplainBlock IsCoachAlive IsCoachNear200 ChanceToFire30Percent IsWorldTalkProducer IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
+	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsProducer IsNotOnThirdStrike IsTalk IsTalkProducer IsNotComplainBlock IsWorldTalkProducer IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
 	ApplyContext "IsComplain:1:25"
-	Response GoingToDieCoachCoachProducer
+	Response SurvivorVocalizeGoingToDieProducer
 }
 
 Response PlayerAlertGiveItemStopProducer
@@ -11683,45 +11683,14 @@ Rule SurvivorVocalizeEmphaticGoC4M2Producer
 	Response SurvivorVocalizeEmphaticGoC4M2Producer
 }
 
-Response SurvivorVocalizeGoingToDieProducer
-{
-	scene "scenes/Producer/GoingToDie01.vcd"  //Okay this was a mistake.
-	scene "scenes/Producer/GoingToDie02.vcd"  //Okay, this seriously hurts.
-	scene "scenes/Producer/GoingToDie03.vcd"  //Okay, okay  that one hurt.
-	scene "scenes/Producer/GoingToDie04.vcd" odds 20 //Girl, you should have stayed with Jacob. (to self)
-	scene "scenes/Producer/GoingToDie05.vcd" odds 50 //By the beard of Zeus this hurts!
-	scene "scenes/Producer/GoingToDie06.vcd"  //Son of a bee-sting. this hurts.
-	scene "scenes/Producer/GoingToDie08.vcd"  //This is not happening, This is not happening. This is not happening. (to self)
-	scene "scenes/Producer/GoingToDie09.vcd"  //Did this ever seem like a good idea?
-	scene "scenes/Producer/GoingToDie10.vcd"  //Knights of Columbus this hurts.
-	scene "scenes/Producer/GoingToDie11.vcd"  //I am too young to feel this old.
-	scene "scenes/Producer/GoingToDie13.vcd"  //This is not going well.
-	scene "scenes/Producer/GoingToDie14.vcd"  //One of you fellas want to carry the cute girl?
-	scene "scenes/Producer/GoingToDie15.vcd"  //I think I really hurt something.
-	scene "scenes/Producer/GoingToDie16.vcd"  //Anyone else feel like crap right now?
-	scene "scenes/Producer/GoingToDie17.vcd"  //This is some grim shit we got ourselves into.
-	scene "scenes/Producer/GoingToDie18.vcd"  //This is some grim shit we got ourselves into.
-	scene "scenes/Producer/GoingToDie20.vcd"  //Something's got to break our way.
-	scene "scenes/Producer/GoingToDie21.vcd"  //So this is how it's going to be.
-	scene "scenes/Producer/GoingToDie25.vcd"  //Girl, you should have stayed at home. (to self)
-	scene "scenes/Producer/GoingToDie26.vcd"  //You have got to be kidding me.
-	scene "scenes/Producer/GoingToDie27.vcd"  //I got a plan, let's kill all the zombies. Sound good?
-}
-Rule SurvivorVocalizeGoingToDieProducer
-{
-	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsProducer IsTalk IsTalkProducer IsNotComplainBlock IsWorldTalkProducer IsNotInStartArea IsNotInCheckpoint _auto_NotSpottedVehicle
-	ApplyContext "IsComplain:1:25"
-	Response SurvivorVocalizeGoingToDieProducer
-}
-
 Response SurvivorVocalizeGoingToDie3Producer
 {
-	scene "scenes/Producer/GoingToDie301.vcd"  //Tonight's top story, Rochelle isn't going to make it.
-	scene "scenes/Producer/GoingToDie302.vcd"  //In case anyone is wondering, I am about to die!
-	scene "scenes/Producer/GoingToDie303.vcd" odds 30 //Hey guys, unlike Ellis, I'm not a complainer, but I'm about to die.
-	scene "scenes/Producer/GoingToDie304.vcd" odds 40 //I am too young and too beautiful to die.
-	scene "scenes/Producer/GoingToDie305.vcd"  //I need to find some health.
-	scene "scenes/Producer/GoingToDie306.vcd"  //In case anyone is wondering, I am about to die!
+	scene "scenes/Producer/GoingToDie301.vcd" then coach coachcoaches foo:0 .5 //Tonight's top story, Rochelle isn't going to make it.
+	scene "scenes/Producer/GoingToDie302.vcd" then coach coachcoaches foo:0 .5 //In case anyone is wondering, I am about to die!
+	scene "scenes/Producer/GoingToDie303.vcd" odds 30 then coach coachcoaches foo:0 .5 //Hey guys, unlike Ellis, I'm not a complainer, but I'm about to die.
+	scene "scenes/Producer/GoingToDie304.vcd" odds 40 then coach coachcoaches foo:0 .5 //I am too young and too beautiful to die.
+	scene "scenes/Producer/GoingToDie305.vcd" then coach coachcoaches foo:0 .5 //I need to find some health.
+	scene "scenes/Producer/GoingToDie306.vcd" then coach coachcoaches foo:0 .5 //In case anyone is wondering, I am about to die!
 }
 Rule SurvivorVocalizeGoingToDie3Producer
 {
