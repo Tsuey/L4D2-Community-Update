@@ -3125,6 +3125,7 @@ Response L4D1PlayerShotCarNotBiker
 	scene "scenes/Biker/Swear08.vcd" predelay "0.1,0.7" //Ah bullshit.
 	scene "scenes/Biker/Swear09.vcd" predelay "0.1,0.7" //Dammit.
 	scene "scenes/Biker/Swear10.vcd" predelay "0.1,0.7" //Bullshit.
+	scene "scenes/Biker/DLC1_CommunityL4D106.vcd" predelay "2" //I hate car alarms.
 }
 Rule L4D1PlayerShotCarNotBiker
 {
@@ -3137,7 +3138,6 @@ Rule L4D1PlayerShotCarNotBiker
 Response L4D1PlayerShotCarBiker
 {
 	scene "scenes/Biker/NegativeNoise06.vcd"  //[Improv non-verbal displeasure & frustration sounds]
-	scene "scenes/Biker/ReactionApprehensive03.vcd"  //I don't like ths one damn bit.
 	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit
 	scene "scenes/Biker/ReactionNegative09.vcd"  //Ahhhhh.
 	scene "scenes/Biker/Swear12.vcd"  //Shit.
@@ -7390,6 +7390,14 @@ Rule L4D1PlayerKillConfirmationTankBiker
 {
 	criteria ConceptKilledZombie IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsTank ChanceToFire30Percent Isc6m3_port
 	Response L4D1PlayerKillConfirmationTankBiker
+}
+
+Rule PlayerRemarkremark_caralarmBiker
+{
+	criteria ConceptRemark IsBiker Isremark_caralarm IsNotSaidremark_caralarm IsNotCoughing NotInCombat IsTalk IsTalkBiker IsSubjectNear700 IsWorldTalkBiker AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	ApplyContext "Saidremark_caralarm:1:300"
+	applycontexttoworld
+	Response PlayerWarnCarefulBiker
 }
 
 Response L4D1C9M2KillTankBiker
