@@ -134,13 +134,13 @@ Response PlayerNiceShotProducer
 }
 Rule PlayerNiceShotProducer
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerClose IsTalk IsTalkProducer ChanceToFire30Percent IsWorldTalkProducer
+	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerClose IsTalk IsTalkProducer ChanceToFire30Percent IsWorldTalkProducer IsNotSpeaking
 	Response PlayerNiceShotProducer
 }
 
 Rule L4D1PlayerNiceShotProducer
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerNotSoClose IsC6M3_Port SubjectIsNotGambler SubjectIsNotMechanic SubjectIsNotCoach IsTalk IsTalkProducer ChanceToFire30Percent IsWorldTalkProducer
+	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerNotSoClose IsC6M3_Port SubjectIsNotGambler SubjectIsNotMechanic SubjectIsNotCoach IsTalk IsTalkProducer ChanceToFire30Percent IsWorldTalkProducer IsNotSpeaking
 	Response PlayerNiceShotProducer
 }
 
@@ -150,7 +150,7 @@ Response PlayerNiceShotCoachProducer
 }
 Rule PlayerNiceShotCoachProducer
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerClose IsTalk IsTalkProducer ChanceToFire10Percent IsWorldTalkProducer SubjectIsCoach
+	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerClose IsTalk IsTalkProducer ChanceToFire10Percent IsWorldTalkProducer SubjectIsCoach IsNotSpeaking
 	Response PlayerNiceShotCoachProducer
 }
 
@@ -161,7 +161,7 @@ Response PlayerNiceShotMechanicProducer
 }
 Rule PlayerNiceShotMechanicProducer
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerClose IsTalk IsTalkProducer ChanceToFire10Percent SubjectIsMechanic IsWorldTalkProducer
+	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerClose IsTalk IsTalkProducer ChanceToFire10Percent SubjectIsMechanic IsWorldTalkProducer IsNotSpeaking
 	ApplyContext "TalkProducer:1:3"
 	Response PlayerNiceShotMechanicProducer
 }

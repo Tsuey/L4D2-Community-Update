@@ -163,13 +163,13 @@ Response PlayerNiceShotMechanic
 }
 Rule PlayerNiceShotMechanic
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire30Percent IsWorldTalkMechanic
+	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire30Percent IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerNiceShotMechanic
 }
 
 Rule L4D1PlayerNiceShotMechanic
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerNotSoClose IsC6M3_Port SubjectIsNotProducer SubjectIsNotGambler SubjectIsNotCoach IsTalk IsTalkMechanic ChanceToFire30Percent IsWorldTalkMechanic
+	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerNotSoClose IsC6M3_Port SubjectIsNotProducer SubjectIsNotGambler SubjectIsNotCoach IsTalk IsTalkMechanic ChanceToFire30Percent IsWorldTalkMechanic IsNotSpeaking
 	Response PlayerNiceShotMechanic
 }
 
@@ -180,7 +180,7 @@ Response PlayerNiceShotCoachMechanic
 }
 Rule PlayerNiceShotCoachMechanic
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire10Percent IsWorldTalkMechanic SubjectIsCoach
+	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire10Percent IsWorldTalkMechanic SubjectIsCoach IsNotSpeaking
 	Response PlayerNiceShotCoachMechanic
 }
 
@@ -190,7 +190,7 @@ Response PlayerNiceShotGamblerMechanic
 }
 Rule PlayerNiceShotGamblerMechanic
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire10Percent IsWorldTalkMechanic SubjectIsGambler
+	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire10Percent IsWorldTalkMechanic SubjectIsGambler IsNotSpeaking
 	Response PlayerNiceShotGamblerMechanic
 }
 
@@ -200,7 +200,7 @@ Response PlayerNiceShotProducerMechanic
 }
 Rule PlayerNiceShotProducerMechanic
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire10Percent IsWorldTalkMechanic SubjectIsProducer
+	criteria ConceptPlayerNiceShot IsNotCoughing IsMechanic IssuerClose IsTalk IsTalkMechanic ChanceToFire10Percent IsWorldTalkMechanic SubjectIsProducer IsNotSpeaking
 	Response PlayerNiceShotProducerMechanic
 }
 

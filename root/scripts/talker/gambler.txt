@@ -83,7 +83,7 @@ Response PlayerNiceShotFrancisGambler
 }
 Rule PlayerNiceShotFrancisGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsBiker
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsBiker IsNotSpeaking
 	Response PlayerNiceShotFrancisGambler
 }
 
@@ -108,7 +108,7 @@ Response PlayerNiceShotLouisGambler
 }
 Rule PlayerNiceShotLouisGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsManager
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsManager IsNotSpeaking
 	Response PlayerNiceShotLouisGambler
 }
 
@@ -131,7 +131,7 @@ Response L4D1PlayerNiceShotZoeyC6M3Gambler
 }
 Rule L4D1PlayerNiceShotZoeyC6M3Gambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerNotSoClose IsC6M3_Port IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsTeenGirl ChanceToFire70Percent IsNotSpeaking
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerNotSoClose IsC6M3_Port IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsTeenGirl ChanceToFire70Percent IsNotSpeaking IsNotSpeaking
 	Response L4D1PlayerNiceShotZoeyC6M3Gambler
 }
 
@@ -142,7 +142,7 @@ Response PlayerNiceShotZoeyGambler
 }
 Rule PlayerNiceShotZoeyGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsTeenGirl
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsTeenGirl IsNotSpeaking
 	Response PlayerNiceShotZoeyGambler
 }
 
@@ -160,13 +160,13 @@ Response PlayerNiceShotGambler
 }
 Rule PlayerNiceShotGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire30Percent IsWorldTalkGambler
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire30Percent IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNiceShotGambler
 }
 
 Rule L4D1PlayerNiceShotGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerNotSoClose IsC6M3_Port IsTalk IsTalkGambler SubjectIsNotMechanic SubjectIsNotProducer SubjectIsNotCoach ChanceToFire30Percent IsWorldTalkGambler
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerNotSoClose IsC6M3_Port IsTalk IsTalkGambler SubjectIsNotMechanic SubjectIsNotProducer SubjectIsNotCoach ChanceToFire30Percent IsWorldTalkGambler IsNotSpeaking
 	Response PlayerNiceShotGambler
 }
 
@@ -177,7 +177,7 @@ Response PlayerNiceShotCoachGambler
 }
 Rule PlayerNiceShotCoachGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsCoach
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsCoach IsNotSpeaking
 	Response PlayerNiceShotCoachGambler
 }
 
@@ -188,7 +188,7 @@ Response PlayerNiceShotMechanicGambler
 }
 Rule PlayerNiceShotMechanicGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsMechanic
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsMechanic IsNotSpeaking
 	Response PlayerNiceShotMechanicGambler
 }
 
@@ -200,7 +200,7 @@ Response PlayerNiceShotProducerGambler
 }
 Rule PlayerNiceShotProducerGambler
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsProducer
+	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsTalk IsTalkGambler ChanceToFire10Percent IsWorldTalkGambler SubjectIsProducer IsNotSpeaking
 	Response PlayerNiceShotProducerGambler
 }
 

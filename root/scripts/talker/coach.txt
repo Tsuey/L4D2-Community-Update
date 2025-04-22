@@ -150,23 +150,23 @@ Response PlayerNiceShotCoach
 }
 Rule PlayerNiceShotCoach
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire30Percent IsWorldTalkCoach
+	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire30Percent IsWorldTalkCoach IsNotSpeaking
 	Response PlayerNiceShotCoach
 }
 
 Rule L4D1PlayerNiceShotCoach
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerNotSoClose IsC6M3_Port IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsNotProducer SubjectIsNotGambler SubjectIsNotMechanic IsNotSpeaking ChanceToFire30Percent
+	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerNotSoClose IsC6M3_Port IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsNotProducer SubjectIsNotGambler SubjectIsNotMechanic IsNotSpeaking ChanceToFire30Percent IsNotSpeaking
 	Response PlayerNiceShotCoach
 }
 
 Response PlayerNiceShotGamblerCoach
 {
-	scene "scenes/Coach/NiceShotGambler01.vcd"  //NIce kill Nick.
+	scene "scenes/Coach/NiceShotGambler01.vcd"  //Nice kill, Nick.
 }
 Rule PlayerNiceShotGamblerCoach
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire10Percent IsWorldTalkCoach SubjectIsGambler
+	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire10Percent IsWorldTalkCoach SubjectIsGambler IsNotSpeaking
 	Response PlayerNiceShotGamblerCoach
 }
 
@@ -178,7 +178,7 @@ Response PlayerNiceShotMechanicCoach
 }
 Rule PlayerNiceShotMechanicCoach
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire10Percent IsWorldTalkCoach SubjectIsMechanic
+	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire10Percent IsWorldTalkCoach SubjectIsMechanic IsNotSpeaking
 	Response PlayerNiceShotMechanicCoach
 }
 
@@ -188,7 +188,7 @@ Response PlayerNiceShotProducerCoach
 }
 Rule PlayerNiceShotProducerCoach
 {
-	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire10Percent IsWorldTalkCoach SubjectIsProducer
+	criteria ConceptPlayerNiceShot IsNotCoughing IsCoach IssuerClose IsTalk IsTalkCoach ChanceToFire10Percent IsWorldTalkCoach SubjectIsProducer IsNotSpeaking
 	Response PlayerNiceShotProducerCoach
 }
 
