@@ -9790,7 +9790,6 @@ Response PlayerHurrahProducer
 	scene "scenes/Producer/Hurrah10.vcd"  //Oh yeah, oh yeah, oh yeah.
 	scene "scenes/Producer/Hurrah11.vcd"  //Ha! Oh yeah, oh yeah!
 	scene "scenes/Producer/Hurrah12.vcd"  //Thanks to you guys, I am the baddest woman alive!
-	scene "scenes/Producer/Hurrah13.vcd"  //What, we're shutting the door already?
 	scene "scenes/Producer/Hurrah14.vcd"  //That is what we're here for!
 	scene "scenes/Producer/Hurrah15.vcd"  //Woo! Keep that up and we are out of here!
 }

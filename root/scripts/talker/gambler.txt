@@ -5928,6 +5928,7 @@ Rule PlayerFriendlyFire2Gambler
 Response PlayerFriendlyFireC1Gambler
 {
 	scene "scenes/Gambler/FriendlyFireC101.vcd"  //I don't know who started this shit, but lets just stop the friendly right now, 'kay?
+	scene "scenes/Gambler/FriendlyFireC102.vcd"  //II don't know who started this shit, 'kay? But let's just stop the friendly right now.
 	scene "scenes/Gambler/FriendlyFireC103.vcd"  //Never shoot me again.
 	scene "scenes/Gambler/FriendlyFireC104.vcd"  //You do not want to be shooting me!
 	scene "scenes/Gambler/FriendlyFireC105.vcd"  //Why would you think shooting me is a good idea?
