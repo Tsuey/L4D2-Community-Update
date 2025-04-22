@@ -8491,25 +8491,6 @@ Rule InfoReminfo_powerboat4TeenGirl
 	Response InfoReminfo_powerboat4TeenGirl
 }
 
-Response PlayerShotGasCanTeenGirl
-{
-	scene "scenes/TeenGirl/ReactionNegative01.vcd" predelay "1,1.5" //Uh oh
-	scene "scenes/TeenGirl/ReactionNegative11.vcd" predelay "1,1.5" //Are you kidding me?
-	scene "scenes/TeenGirl/ReactionNegative25.vcd" predelay "1,1.5" //Crap
-	scene "scenes/TeenGirl/Swear06.vcd" predelay "1,1.5" //Mother.
-	scene "scenes/TeenGirl/Swear09.vcd" predelay "1,1.5" //Ah bullshit.
-	scene "scenes/TeenGirl/Swear12.vcd" predelay "1,1.5" //Shit.
-	scene "scenes/TeenGirl/Swear13.vcd" predelay "1,1.5" //Goddammit.
-}
-Rule PlayerShotGasCanTeenGirl
-{
-	criteria ConceptPlayerShotGasCan IsTeenGirl IsNotSaidPlayerShotGasCan IsScavenge
-	ApplyContext "SaidPlayerShotGasCan1:10"
-	applycontexttoworld
-	Response PlayerShotGasCanTeenGirl
-}
-
-
 //--------------------------------------------------------------------------------------------------------------
 // Vocalizer Heal
 //--------------------------------------------------------------------------------------------------------------

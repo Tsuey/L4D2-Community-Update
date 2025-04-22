@@ -9211,24 +9211,6 @@ Rule InfoReminfo_powerboat4aBiker
 	Response InfoReminfo_powerboat4aBiker
 }
 
-Response PlayerShotGasCanBiker
-{
-	scene "scenes/Biker/ReactionNegative05.vcd" predelay "1,1.5" //Shit
-	scene "scenes/Biker/ReactionNegative07.vcd" predelay "1,1.5" //Damnit.
-	scene "scenes/Biker/ReactionNegative08.vcd" predelay "1,1.5" //Damnit.
-	scene "scenes/Biker/Swear03.vcd" predelay "1,1.5" //Ah shit.
-	scene "scenes/Biker/Swear08.vcd" predelay "1,1.5" //Ah bullshit.
-	scene "scenes/Biker/Swear17.vcd" predelay "1,1.5" //Dammit.
-	scene "scenes/Biker/Swear18.vcd" predelay "1,1.5" //Bullshit.
-}
-Rule PlayerShotGasCanBiker
-{
-	criteria ConceptPlayerShotGasCan IsBiker IsNotSaidPlayerShotGasCan IsScavenge
-	ApplyContext "SaidPlayerShotGasCan1:10"
-	applycontexttoworld
-	Response PlayerShotGasCanBiker
-}
-
 
 //--------------------------------------------------------------------------------------------------------------
 // Vocalizer Heal

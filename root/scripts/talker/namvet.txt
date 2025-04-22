@@ -7267,24 +7267,6 @@ Rule InfoReminfo_trailerboatruckNamVet
 	Response InfoReminfo_trailerboatruckNamVet
 }
 
-Response PlayerShotGasCanNamVet
-{
-	scene "scenes/NamVet/ReactionNegative07.vcd" predelay "1,1.5" //God dammit
-	scene "scenes/NamVet/ReactionNegative09.vcd" predelay "1,1.5" //Son of a bitch
-	scene "scenes/NamVet/ReactionNegative10.vcd" predelay "1,1.5" //Dammit
-	scene "scenes/NamVet/Swears04.vcd" predelay "1,1.5" //Bull-frickin-horseshit.
-	scene "scenes/NamVet/Swears09.vcd" predelay "1,1.5" //God DAMMIT.
-	scene "scenes/NamVet/Swears10.vcd" predelay "1,1.5" //Mother of mercy.
-	scene "scenes/NamVet/Swears19.vcd" predelay "1,1.5" //What a crock a' shit...
-}
-Rule PlayerShotGasCanNamVet
-{
-	criteria ConceptPlayerShotGasCan IsNamVet IsNotSaidPlayerShotGasCan IsScavenge
-	ApplyContext "SaidPlayerShotGasCan1:10"
-	applycontexttoworld
-	Response PlayerShotGasCanNamVet
-}
-
 
 //--------------------------------------------------------------------------------------------------------------
 // Vocalizer Heal

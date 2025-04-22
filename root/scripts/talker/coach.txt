@@ -15223,23 +15223,6 @@ Rule C1M2TankInfoCoach
 	Response C1M2TankInfoCoach
 }
 
-Response PlayerShotGasCanCoach
-{
-	scene "scenes/Coach/ReactionNegative01.vcd" predelay "1,1.5" //Shit.
-	scene "scenes/Coach/ReactionNegative03.vcd" predelay "1,1.5" //Damn!
-	scene "scenes/Coach/ReactionNegative08.vcd" predelay "1,1.5" //Goddamnit!
-	scene "scenes/Coach/ReactionNegative09.vcd" predelay "1,1.5" //Shiiit.
-	scene "scenes/Coach/ReactionNegative15.vcd" predelay "1,1.5" //Goddamn!
-	scene "scenes/Coach/ReactionNegative16.vcd" predelay "1,1.5" //Son of a bitch.
-}
-Rule PlayerShotGasCanCoach
-{
-	criteria ConceptPlayerShotGasCan IsCoach IsNotSaidPlayerShotGasCan IsScavenge
-	ApplyContext "SaidPlayerShotGasCan1:10"
-	applycontexttoworld
-	Response PlayerShotGasCanCoach
-}
-
 Response PlayerCr0wnedBrideCoach
 {
 	scene "scenes/Coach/DLC1_C6M1_WeddingWitchDead02.vcd" predelay "3" then gambler WeddingWitchDead03 foo:0 3.1 //Mm, now that's a shotgun wedding.

@@ -7817,27 +7817,6 @@ Rule L4D1PlayerHospitalIntro02Manager
 
 
 //--------------------------------------------------------------------------------------------------------------
-// Vocalizer Convo (AUTO)
-//--------------------------------------------------------------------------------------------------------------
-Response PlayerShotGasCanManager
-{
-	scene "scenes/Manager/Swears05.vcd" predelay "1,1.5" //Shit.
-	scene "scenes/Manager/Swears06.vcd" predelay "1,1.5" //Ah shit.
-	scene "scenes/Manager/Swears07.vcd" predelay "1,1.5" //Shit shit shit.
-	scene "scenes/Manager/Swears12.vcd" predelay "1,1.5" //Shit.
-	scene "scenes/Manager/Swears13.vcd" predelay "1,1.5" //Ah shit.
-	scene "scenes/Manager/Swears16.vcd" predelay "1,1.5" //That's some country-ass bullshit.
-}
-Rule PlayerShotGasCanManager
-{
-	criteria ConceptPlayerShotGasCan IsManager IsNotSaidPlayerShotGasCan IsScavenge
-	ApplyContext "SaidPlayerShotGasCan:1:10"
-	applycontexttoworld
-	Response PlayerShotGasCanManager
-}
-
-
-//--------------------------------------------------------------------------------------------------------------
 // Vocalizer Heal
 //--------------------------------------------------------------------------------------------------------------
 Response L4D1PlayerCoverMeHealManager
