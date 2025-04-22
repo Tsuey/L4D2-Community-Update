@@ -578,7 +578,7 @@ Response PlayercoachcoachesCoach
 }
 Rule PlayercoachcoachesCoach
 {
-	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches IsRocking IssuerClose IsWorldTalkCoach IsNotSpeaking
+	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches ChanceToFire30Percent IsRocking IssuerClose IsWorldTalkCoach IsNotSpeaking
 	ApplyContext "Saidcoachcoaches:1:20"
 	applycontexttoworld
 	Response PlayercoachcoachesCoach
@@ -592,7 +592,7 @@ Response PlayercoachcoachesGamblerCoach
 }
 Rule PlayercoachcoachesGamblerCoach
 {
-	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches FromIsGambler IssuerClose ChanceToFire30Percent IsNotIncapacitated IsRocking IsWorldTalkCoach IsNotSpeaking
+	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches FromIsGambler IssuerClose ChanceToFire10Percent IsNotIncapacitated IsRocking IsWorldTalkCoach IsNotSpeaking
 	ApplyContext "Saidcoachcoaches:1:20"
 	applycontexttoworld
 	Response PlayercoachcoachesGamblerCoach
@@ -605,7 +605,7 @@ Response PlayercoachcoachesMechanicCoach
 }
 Rule PlayercoachcoachesMechanicCoach
 {
-	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches FromIsMechanic IssuerClose ChanceToFire30Percent IsNotIncapacitated IsRocking IsWorldTalkCoach IsNotSpeaking
+	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches FromIsMechanic IssuerClose ChanceToFire10Percent IsNotIncapacitated IsRocking IsWorldTalkCoach IsNotSpeaking
 	ApplyContext "Saidcoachcoaches:1:20"
 	applycontexttoworld
 	Response PlayercoachcoachesMechanicCoach
@@ -619,7 +619,7 @@ Response PlayercoachcoachesProducerCoach
 }
 Rule PlayercoachcoachesProducerCoach
 {
-	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches FromIsProducer IssuerClose ChanceToFire30Percent IsNotIncapacitated IsRocking IsWorldTalkCoach IsNotSpeaking
+	criteria Conceptcoachcoaches IsCoach IsTalk IsTalkCoach IsNotSaidcoachcoaches FromIsProducer IssuerClose ChanceToFire10Percent IsNotIncapacitated IsRocking IsWorldTalkCoach IsNotSpeaking
 	ApplyContext "Saidcoachcoaches:1:20"
 	applycontexttoworld
 	Response PlayercoachcoachesProducerCoach
