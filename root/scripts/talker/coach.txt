@@ -8690,7 +8690,7 @@ Rule PlayerRemarkWorldC1M2UpStairsCoach
 
 Response PlayerRemarkWorldC3M1FerryCrossingCoach
 {
-	scene "scenes/Coach/WorldC3M1B12.vcd" then mechanic _C3M1Ceda foo:0 0.1 //Man. When you're forced to turn to people livin' in a swamp to help you get out of a city? I don't think CEDA's doing their job right.
+	scene "scenes/Coach/WorldC3M1B12.vcd"  //Man. When you're forced to turn to people livin' in a swamp to help you get out of a city? I don't think CEDA's doing their job right.
 }
 Rule PlayerRemarkWorldC3M1FerryCrossingCoach
 {

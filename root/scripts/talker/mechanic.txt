@@ -9315,17 +9315,6 @@ Rule _C3M1CrazyMilitantsMechanic
 	Response _C3M1CrazyMilitantsMechanic
 }
 
-Response _C3M1CedaMechanic
-{
-	scene "scenes/Mechanic/WorldC3M105.vcd"  //Well, when you put it like that, hell no!
-	scene "scenes/Mechanic/WorldC3M106.vcd"  //When you put it like that, no.
-}
-Rule _C3M1CedaMechanic
-{
-	criteria Concept_C3M1Ceda IsMechanic
-	Response _C3M1CedaMechanic
-}
-
 Response PlayerRemarkWorldC3M1FerryNagaMechanic
 {
 	scene "scenes/Mechanic/WorldC3M114.vcd"  //We gotta call it over to this side.
