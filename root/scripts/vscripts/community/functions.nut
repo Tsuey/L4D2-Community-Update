@@ -178,6 +178,46 @@ function make_navblock ( user_strTargetname,
 			+ " w/ " + user_strState + " @ setpos_exact " + user_strOrigin + "\n" );
 	}
 }
+scripthelp_make_trig_godspot <- @"Creates a trigger which activates/deactivates a godspot when all survivors start/end touching the trigger"
+function make_trig_godspot(godspot_area_origin, disconnect_areas_origins, xbloat=5, ybloat=5, name="_dynamic_godspot") {
+	local area_origins = [godspot_area_origin];
+	area_origins.extend(disconnect_areas_origins);
+	local areas = [];
+	foreach(origin in area_origins) {
+		local area = NavMesh.GetNearestNavArea(origin, 16, true, true);
+		if(area == null) {
+			printl("Godspot couldn't be created because area at " + origin + " wasn't found");
+			return;
+		}
+		areas.append(area);
+	}
+	local godspot = areas[0];
+	local disconnect = areas.slice(1);
+
+	local trigger = SpawnEntityFromTable("script_trigger_multiple", {
+		targetname = g_UpdateName + name,
+		origin = godspot.GetCenter() + Vector(0,0,50),
+		extent = Vector(xbloat + godspot.GetSizeX() / 2, ybloat + godspot.GetSizeY() / 2, 30),
+		entireteam = 2,
+		allowincap = 1,
+		spawnflags = 1,
+		OnEntireTeamStartTouch = "!self,CallScriptFunction,CreateGodspot",
+		OnEntireTeamEndTouch = "!self,CallScriptFunction,DestroyGodspot"
+	});
+	trigger.ValidateScriptScope();
+	local scope = trigger.GetScriptScope();
+	scope.CreateGodspot <- function() {
+		foreach(area in disconnect) {
+			area.Disconnect(godspot);
+		}
+	}
+	scope.DestroyGodspot <- function() {
+		foreach(area in disconnect) {
+			area.ConnectTo(godspot, -1);
+		}
+	}
+	DoEntFire("!self", "CallScriptFunction", "DestroyGodspot", 0, null, trigger);
+}
 
 /*****************************************************************************
 **  MAKE_TRIGPUSH

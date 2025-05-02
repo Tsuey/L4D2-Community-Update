@@ -41,9 +41,9 @@ function DoRoundFixes()
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		// Get nav tiles by position because IDS can change if edited later on
-		local navMain = NavMesh.GetNearestNavArea(Vector(4766.412109, 7269.738281, 96.031250), 16, true, true)
-		local navConnection = NavMesh.GetNearestNavArea(Vector(4803.833984, 7260.107422, 128.313324), 16, true, true)
-		navConnection.Disconnect(navMain);
+		make_trig_godspot( Vector(4766, 7270, 96), [
+			Vector(4804, 7260, 128)
+		]);
 	}
 	if ( HasPlayerControlledZombies() )
 	{
