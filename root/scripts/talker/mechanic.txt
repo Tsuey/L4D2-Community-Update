@@ -2377,7 +2377,7 @@ Response C3M4BoatNagsMechanic
 }
 Rule C3M4BoatNagsMechanic
 {
-	criteria ConceptGetToVehicle IsMechanic IsNotCoughing ismapc3m4_plantation IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsMechanic IsNotCoughing ismapc3m4_plantation IsNotIncapacitated IsMoving IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockMechanic IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockMechanic:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsMechanic

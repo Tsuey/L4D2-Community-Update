@@ -2237,7 +2237,7 @@ Response C3M4BoatNagsCoach
 }
 Rule C3M4BoatNagsCoach
 {
-	criteria ConceptGetToVehicle IsCoach ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsCoach ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsMoving IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockCoach IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockCoach:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsCoach

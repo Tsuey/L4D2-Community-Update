@@ -2009,7 +2009,7 @@ Response C3M4BoatNagsGambler
 }
 Rule C3M4BoatNagsGambler
 {
-	criteria ConceptGetToVehicle IsGambler ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsGambler ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsMoving IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockGambler IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockGambler:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsGambler

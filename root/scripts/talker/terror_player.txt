@@ -498,6 +498,7 @@ criterion "YesHasMolotov"   "HasMolotov" "1"	  required
 criterion "NoHasMolotov"   "HasMolotov" "!=1"	  required
 
 criterion "IsRunning"   "movementspeed" ">=200"	  required
+criterion "IsMoving"   "movementspeed" ">0"	  required
 
 
 criterion "ConceptPlayerSuggestHealth"   "concept" "PlayerSuggestHealth"	  required

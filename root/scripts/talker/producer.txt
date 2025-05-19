@@ -1929,7 +1929,7 @@ Response C3M4BoatNagsProducer
 }
 Rule C3M4BoatNagsProducer
 {
-	criteria ConceptGetToVehicle IsProducer ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsRunning IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
+	criteria ConceptGetToVehicle IsProducer ismapc3m4_plantation IsNotCoughing IsNotIncapacitated IsMoving IsNotAlone NoOneInSafeSpot IsTalk AutoIsNotScavenge AutoIsNotSurvival IsNotInRescueVehicle _auto_IsEscapeReady _auto_NotTimerLockA _auto_NotTimerLockProducer IsNotSpeakingWeight0
 	ApplyContext "_auto_TimerLockA:1:10,_auto_TimerLockProducer:1:30"
 	applycontexttoworld
 	Response C3M4BoatNagsProducer
