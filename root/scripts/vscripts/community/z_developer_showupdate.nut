@@ -216,6 +216,7 @@ function ShowUpdate( showGroup = "community" )
 			case "func_brush":
 			case "func_nav_blocker":
 			case "trigger_multiple":
+			case "script_trigger_multiple":
 			case "trigger_once":
 			case "trigger_push":
 			case "trigger_hurt":
@@ -490,6 +491,7 @@ function DebugRedraw()
 			// Restore Keyvalues from several "trigger_" entities to draw visible boxes for them.
 
 			case "trigger_multiple":
+			case "script_trigger_multiple":
 			case "trigger_once":
 			case "trigger_push":
 			case "trigger_hurt":
@@ -978,7 +980,7 @@ function FilterHelp()
 	printl( "2\tShows all nav blockers (including those with a brush model)" );
 
 	printl( "\n\"trigger\"" );
-	printl( "Sets filters for trigger entities: trigger_multiple, trigger_once, trigger_push, trigger_hurt,trigger_hurt_ghost, trigger_auto_crouch, trigger_playermovement, trigger_teleport" );
+	printl( "Sets filters for trigger entities: trigger_multiple, script_trigger_multiple, trigger_once, trigger_push, trigger_hurt,trigger_hurt_ghost, trigger_auto_crouch, trigger_playermovement, trigger_teleport" );
 	printl( "0\tHide all triggers" );
 	printl( "1\tShows all triggers created via scripting (without a brush model) (default)" );
 	printl( "2\tShows all triggers (including those with a brush model)" );
